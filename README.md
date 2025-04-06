@@ -57,4 +57,4 @@ root@linuxkit-965cbccc7c1e:/gpt-mission-planner# make run
 python3 ./app/mission_planner.py
 Enter the specifications for your mission plan: Take a thermal picture of every other tree on the farm.
 File sent successfully.
-```# LLM_project
+```
