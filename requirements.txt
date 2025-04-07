@@ -1,4 +1,6 @@
 openai
+ollama
+requests
 python-dotenv
 lxml
 lxml-stubs
