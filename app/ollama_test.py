@@ -65,7 +65,7 @@ class OllamaPlanner:
 
     def parse_xml(self, mp_out: str) -> str:
         xml_response_0: str = mp_out.split("```xml\n")
-        if len(xml_response_0 > 1):
+        if len(xml_response_0) > 1:
             xml_response = xml_response_0[1]
             xml_response = xml_response.split("```")[0]
         else:
