@@ -15,7 +15,7 @@ bash:
 	/bin/bash
 
 run:
-	python3 ./app/mission_planner.py
+	python3 ./app/mission_planner_ollama.py
 
 server:
 	nc -l 0.0.0.0 12345
