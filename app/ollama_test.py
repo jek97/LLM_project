@@ -185,10 +185,8 @@ def write_log(file_path, log):
 )
 def main(config: str):
     log_file_path = "./app/gpt_outputs/ollama_outputs.txt"
-    #models = ["gemma3:4b", "deepseek-r1:7b", "llama3.2:3b", "misral:7b",  "qwen2.5-coder:7b", "llava:7b"]
-    #multimodals_models = [True, False, False, False, False, True]
-    models = ["llava:7b"]
-    multimodals_models = [True]
+    models = ["gemma3:4b", "gemma3:4b", "deepseek-r1:7b", "llama3.2:3b", "misral:7b",  "qwen2.5-coder:7b", "llava:7b", "llava:7b"]
+    multimodals_models = [True, False, False, False, False, False, True, False]
     inputs = read_inputs("./app/inputs.txt")
     temp = [0, 0.25, 0.5, 0.75, 1.0]
     for m, mode in zip(models, multimodals_models):
@@ -226,7 +224,7 @@ def main(config: str):
                 question_time, asw_0, retry_times, asw_ret, succ_flag = mp.run(inp)
 
                 # prepere the log message
-                log_msg = "input " + str(i) + ", model " + m + ", temp " + str(t) + ", question_time " + str(question_time) + ", answer " + asw_0
+                log_msg = "input " + str(i) + ", model " + m + ", multimodal " + str(mode) + ", temp " + str(t) + ", question_time " + str(question_time) + ", answer " + asw_0
                 for rt, asw_rt in zip(retry_times, asw_ret):
                     log_msg += ", ret " + str(rt) + ", answer " + asw_rt
                 log_msg += ", succ " + str(succ_flag) + "\n"
