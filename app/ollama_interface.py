@@ -22,6 +22,7 @@
 
 import logging
 import ollama
+import base64
 from dotenv import load_dotenv
 from openai import OpenAI
 from openai.types.chat.chat_completion import ChatCompletion
@@ -42,6 +43,7 @@ class OllamaInterface:
         self.temperature: float = temperature
         self.model: str = model
         try:
+            self.logger.debug(f'pulling model {self.model}')
             ollama.pull(self.model)
         except:
             self.logger.error(f'error loading the model {self.model}')
@@ -90,6 +92,20 @@ class OllamaInterface:
 
         self.initial_context_length = len(self.context)
 
+    def init_context_image(self, image_path: str):
+        with open(image_path, 'rb') as img_file:
+            image_bytes = img_file.read()
+
+        image_base64 = base64.b64encode(image_bytes).decode('utf-8')
+        self.context.append({
+                "role": "user",
+                "content": "This is the orchard image for which you must generate mission plan XML documents. \
+                            In the image the vertical direction represent the north-south direction, with the north on the top \
+                            each tree is represented by a green dot. \
+                            The mission must be syntactically correct and validate using an XML linter: "
+                + image_base64,
+            })
+        
     def add_context(self, user: str, assistant: str) -> None:
         # generate new GPT API dict string context
         new_user_context = {"role": "user", "content": user}
@@ -121,7 +137,7 @@ class OllamaInterface:
         #     max_tokens=self.max_tokens,
         #     temperature=self.temperature,
         # )
-
+        
         response: str = completion['message']['content']
 
         if add_context:

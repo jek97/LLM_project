@@ -20,22 +20,26 @@ class OllamaPlanner:
         token_path: str,
         schema_path: str,
         farm_layout: str,
+        image_path: str,
         max_retries: int,
         max_tokens: int, 
         temperature: float,
         log_directory: str,
         logger: logging.Logger,
         model: str,
+        multimodal: bool,
     ):
         # logger instance
         self.logger: logging.Logger = logger
         # set schema and farm file paths
         self.schema_path: str = schema_path
         self.farm_layout: str = farm_layout
+        self.image_path = image_path
         # logging GPT output folder
         self.log_directory: str = log_directory
         # max number of times that GPT can try and fix the mission plan
         self.max_retries: int = max_retries
+        self.model_multimodal = multimodal
         
         if (model == "gpt"):
             self.logger.debug("Using GPT model")
@@ -49,6 +53,8 @@ class OllamaPlanner:
             # init ollama interface
             self.ollama: OllamaInterface = OllamaInterface(self.logger, max_tokens, temperature, model)
             self.ollama.init_context(self.schema_path, self.farm_layout)
+            if self.model_multimodal:
+                self.ollama.init_context_image(self.image_path)
             self.gpt_flag = False
         
     def configure_network(self, host: str, port: int) -> None:
@@ -58,8 +64,12 @@ class OllamaPlanner:
         self.nic.init_socket()
 
     def parse_xml(self, mp_out: str) -> str:
-        xml_response: str = mp_out.split("```xml\n")[1]
-        xml_response = xml_response.split("```")[0]
+        xml_response_0: str = mp_out.split("```xml\n")
+        if len(xml_response_0 > 1):
+            xml_response = xml_response_0[1]
+            xml_response = xml_response.split("```")[0]
+        else:
+            xml_response = xml_response_0[0]
 
         return xml_response
 
@@ -175,10 +185,13 @@ def write_log(file_path, log):
 )
 def main(config: str):
     log_file_path = "./app/gpt_outputs/ollama_outputs.txt"
-    models = ["gemma3:4b", "deepseek-r1:8b", "phi4", "llama3.2:3b", "llama:3.1:8b", "misral:7b", "qwen2.5:7b",  "qwen2.5-coder:7b"]
+    #models = ["gemma3:4b", "deepseek-r1:7b", "llama3.2:3b", "misral:7b",  "qwen2.5-coder:7b", "llava:7b"]
+    #multimodals_models = [True, False, False, False, False, True]
+    models = ["llava:7b"]
+    multimodals_models = [True]
     inputs = read_inputs("./app/inputs.txt")
     temp = [0, 0.25, 0.5, 0.75, 1.0]
-    for m in models:
+    for m, mode in zip(models, multimodals_models):
         for t in temp:
             with open(config, "r") as file:
                 config_yaml: yaml.Node = yaml.safe_load(file)
@@ -192,12 +205,14 @@ def main(config: str):
                     config_yaml["token"],
                     config_yaml["schema"],
                     config_yaml["farm_layout"],
+                    config_yaml["farm_image"],
                     config_yaml["max_retries"],
                     config_yaml["max_tokens"],
                     t,
                     config_yaml["log_directory"],
                     logger,
                     m,
+                    mode
                 )
                 if m == "gpt":
                     mp.configure_network(config_yaml["host"], int(config_yaml["port"]))
