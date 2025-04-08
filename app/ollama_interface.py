@@ -41,7 +41,11 @@ class OllamaInterface:
         # creativity of ChatGPT
         self.temperature: float = temperature
         self.model: str = model
-        ollama.pull(self.model)
+        try:
+            ollama.pull(self.model)
+        except:
+            self.logger.error(f'error loading the model {self.model}')
+            return
 
 
     def init_context(self, schema_path: str, farm_layout_path: str):

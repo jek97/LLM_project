@@ -1,37 +1,9 @@
-# from typing import Tuple
-# import logging
-# import tempfile
-# import os
-
-# import click
-# from lxml import etree
-# import yaml
-
-# from gpt_interface import GPTInterface
-# from network_interface import NetworkInterface
-# from ollama_interface import OllamaInterface
-
-# class OllamaChatBot:
-#     def __init__():
-
-#     def
-
-
-# def main():
-#     models = []
-#     inputs = []
-#     for m in models:
-#         # configure the chatvot with the given model
-#         for inp in inputs:
-#             # query the model with the given input
-#             # save results
-#             print("bob")
-
 from typing import Tuple
 import logging
 import tempfile
 import os
 import re
+import time
 
 import click
 from lxml import etree
@@ -122,45 +94,59 @@ class OllamaPlanner:
             return False, "An error occurred: " + str(e)
 
     def run(self, quary):
-        while True:
-            # ask user for their mission plan
-            #mp_input: str = input("Enter the specifications for your mission plan: ")
-            if self.gpt_flag:
-                mp_out: str = self.gpt.ask_gpt(quary, True)
-            else:
-                mp_out: str = self.ollama.ask_ollama(quary, True)
-                
-            self.logger.debug(mp_out)
-            mp_out = self.parse_xml(mp_out)
-            output_path = self.write_out_xml(mp_out)
-            self.logger.debug(f"GPT output written to {output_path}...")
-            ret, e = self.validate_output(output_path)
+        
+        # ask user for their mission plan
+        #mp_input: str = input("Enter the specifications for your mission plan: ")
+        question_time_0 = time.time()
+        if self.gpt_flag:
+            mp_out: str = self.gpt.ask_gpt(quary, True)
+        else:
+            mp_out: str = self.ollama.ask_ollama(quary, True)
+            
+        question_time = time.time() - question_time_0 # get the time to obtain the first answer
 
-            if not ret:
-                retry: int = 0
-                while not ret and retry < self.max_retries:
-                    self.logger.debug(f"Retrying after failed to validate GPT mission plan: {e}")
-                    if self.gpt_flag:
-                        mp_out: str = self.gpt.ask_gpt(e, True)
-                    else:
-                        mp_out: str = self.ollama.ask_ollama(e, True)
-                    mp_out = self.parse_xml(mp_out)
-                    output_path = self.write_out_xml(mp_out)
-                    self.logger.debug(f"Temp GPT output written to {output_path}...")
-                    ret, e = self.validate_output(output_path)
-                    retry += 1
-            # TODO: should we do this after every mission plan or leave them in context?
-            self.ollama.reset_context()
+        self.logger.debug(mp_out)
+        mp_out = self.parse_xml(mp_out)
+        output_path = self.write_out_xml(mp_out)
+        asw_0 = output_path # saave the name of the file where i will store the answer
+        self.logger.debug(f"GPT output written to {output_path}...")
+        ret, e = self.validate_output(output_path)
+        retry_times = [] # vector to store the time required for each adjustment
+        asw_ret = []
+        if not ret:
+            retry: int = 0
+            while not ret and retry < self.max_retries:
+                self.logger.debug(f"Retrying after failed to validate GPT mission plan: {e}")
+                ret_t_begin = time.time()
+                if self.gpt_flag:
+                    mp_out: str = self.gpt.ask_gpt(e, True)
+                else:
+                    mp_out: str = self.ollama.ask_ollama(e, True)
 
-            if not ret:
-                self.logger.error("Unable to generate mission plan from your prompt...")
-            else:
-                # TODO: send off mission plan to TCP client
-                self.nic.send_file(output_path)
-                self.logger.debug("Successful mission plan generation...")        
+                ret_t_end = time.time() - ret_t_begin
+                retry_times.append(ret_t_end)
+
+                mp_out = self.parse_xml(mp_out)
+                output_path = self.write_out_xml(mp_out)
+                asw_ret.append(output_path)
+                self.logger.debug(f"Temp GPT output written to {output_path}...")
+                ret, e = self.validate_output(output_path)
+                retry += 1
+        # TODO: should we do this after every mission plan or leave them in context?
+        self.ollama.reset_context()
+
+        if not ret:
+            self.logger.error("Unable to generate mission plan from your prompt...")
+            succ_flag = False
+        else:
+            # TODO: send off mission plan to TCP client
+            # self.nic.send_file(output_path)
+            self.logger.debug("Successful mission plan generation...")      
+            succ_flag = True  
             
         # TODO: decide how the reuse flow works
-        self.nic.close_socket()
+        # self.nic.close_socket()
+        return question_time, asw_0, retry_times, asw_ret, succ_flag
     
     def release_resources(self):
         self.ollama.release_resources()
@@ -175,6 +161,12 @@ def read_inputs(file_path):
     
     return quoted_strings
 
+def write_log(file_path, log):
+    with open(file_path, "w") as file:
+        file.write(log)
+
+    return
+
 @click.command()
 @click.option(
     "--config",
@@ -182,41 +174,53 @@ def read_inputs(file_path):
     help="YAML config file",
 )
 def main(config: str):
-    models = ["gemma3", "deepseek-r1"]
+    log_file_path = "./app/gpt_outputs/ollama_outputs.txt"
+    models = ["gemma3:4b", "deepseek-r1:8b", "phi4", "llama3.2:3b", "llama:3.1:8b", "misral:7b", "qwen2.5:7b",  "qwen2.5-coder:7b"]
     inputs = read_inputs("./app/inputs.txt")
+    temp = [0, 0.25, 0.5, 0.75, 1.0]
     for m in models:
-        
-        with open(config, "r") as file:
-            config_yaml: yaml.Node = yaml.safe_load(file)
+        for t in temp:
+            with open(config, "r") as file:
+                config_yaml: yaml.Node = yaml.safe_load(file)
 
-        try:
-            # configure logger
-            logging.basicConfig(level=logging._nameToLevel[config_yaml["logging"]])
-            logger: logging.Logger = logging.getLogger()
+            try:
+                # configure logger
+                logging.basicConfig(level=logging._nameToLevel[config_yaml["logging"]])
+                logger: logging.Logger = logging.getLogger()
 
-            mp: OllamaPlanner = OllamaPlanner(
-                config_yaml["token"],
-                config_yaml["schema"],
-                config_yaml["farm_layout"],
-                config_yaml["max_retries"],
-                config_yaml["max_tokens"],
-                config_yaml["temperature"],
-                config_yaml["log_directory"],
-                logger,
-                m,
-            )
-            if m == "gpt":
-                mp.configure_network(config_yaml["host"], int(config_yaml["port"]))
-                logger.debug("Using GPT model")
-        except yaml.YAMLError as exc:
-            logger.error(f"Improper YAML config: {exc}")
-        
-        print("Using model", m)
-        for inp in inputs:
-            print("input", inp)
+                mp: OllamaPlanner = OllamaPlanner(
+                    config_yaml["token"],
+                    config_yaml["schema"],
+                    config_yaml["farm_layout"],
+                    config_yaml["max_retries"],
+                    config_yaml["max_tokens"],
+                    t,
+                    config_yaml["log_directory"],
+                    logger,
+                    m,
+                )
+                if m == "gpt":
+                    mp.configure_network(config_yaml["host"], int(config_yaml["port"]))
+                    logger.debug("Using GPT model")
+            except yaml.YAMLError as exc:
+                logger.error(f"Improper YAML config: {exc}")
             
-            mp.run(inp)
-        mp.release_resources()
+            print("Using model", m)
+            for i, inp in enumerate(inputs):
+                print("input", inp)
+                question_time, asw_0, retry_times, asw_ret, succ_flag = mp.run(inp)
+
+                # prepere the log message
+                log_msg = "input " + str(i) + ", model " + m + ", temp " + str(t) + ", question_time " + str(question_time) + ", answer " + asw_0
+                for rt, asw_rt in zip(retry_times, asw_ret):
+                    log_msg += ", ret " + str(rt) + ", answer " + asw_rt
+                log_msg += ", succ " + str(succ_flag) + "\n"
+
+                # log the message
+                write_log(log_file_path, log_msg)
+
+            mp.release_resources()
+    return
 
 
 if __name__ == "__main__":
