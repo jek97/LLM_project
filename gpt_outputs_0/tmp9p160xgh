@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+  <xs:element name="MissionPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CompositeTaskInformation" type="CompositeTaskInformationType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="CompositeTaskInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TaskDescription" type="TaskDescriptionType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TaskDescription">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DrivingToLocation" type="DrivingToLocationType"/>
+        <xs:element name="Action" type="ActionType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="DrivingToLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="GPSLocation" type="GPSLocationType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Action">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TreeType" type="TreeType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="GPSLocationType">
+    <xs:restriction base="xs:decimal">
+      <xs:pattern value="[0-9]+(\.[0-9]+)?(-[0-9]+(\.[0-9]+)?)?"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="DrivingToLocationType">
+    <xs:sequence>
+      <xs:element name="GPSLocation" type="GPSLocationType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TaskDescriptionType">
+    <xs:sequence>
+      <xs:element name="DrivingToLocation" type="DrivingToLocationType"/>
+      <xs:element name="Action" type="ActionType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CompositeTaskInformationType">
+    <xs:sequence>
+      <xs:element name="TaskDescription" type="TaskDescriptionType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ActionType">
+    <xs:sequence>
+      <xs:element name="TreeType" type="TreeType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

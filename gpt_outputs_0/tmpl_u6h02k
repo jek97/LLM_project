@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:MissionPlan xmlns:tns="http://robotic-mission-planning.com/schema/mission_plan.xsd"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tns:CompositeTaskInformation>Drive to the middle of the orchard and take another picture</tns:CompositeTaskInformation>
+  <tns:DrivingTask>Drive to the middle of the eastern end and take a picture of two trees next to each other</tns:DrivingTask>
+  <tns:DriveTo>
+    <tns:GPSLocation>
+      <tns:latitude>37.36635688574164</tns:latitude>
+      <tns:longitude>-120.42302289785604</tns:longitude>
+    </tns:GPSLocation>
+  </tns:DriveTo>
+</tns:MissionPlan>

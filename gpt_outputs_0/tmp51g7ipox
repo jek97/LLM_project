@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="Mission">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="Header" minOccurs="1" maxOccurs="1"/>
+                <xsd:element ref="MissionInformation" minOccurs="0" maxOccurs="1"/>
+                <xsd:element ref="CompositeTaskInformation" minOccurs="1" maxOccurs="unbounded">
+                    <!-- Define sub-elements as needed -->
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+        <xsd:attribute name="ID" type="xsd:string"/>
+    </xsd:element>
+    <xsd:element name="Header">
+        <!-- Define sub-elements for the Header as needed -->
+    </xsd:element>
+    <xsd:element name="MissionInformation">
+        <!-- Define sub-elements for the MissionInformation as needed -->
+    </xsd:element>
+    <xsd:complexType name="GPSLocation">
+        <xsd:sequence>
+            <xsd:element name="Latitude" type="xsd:decimal"/>
+            <xsd:element name="Longitude" type="xsd:decimal"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <!-- Define additional complex types and elements as needed -->
+</xsd:schema>

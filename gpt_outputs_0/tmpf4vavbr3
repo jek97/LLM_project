@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission.xsd">
+    <Header>
+        <MissionName>Tree Inspection</MissionName>
+        <StartTime>YYYY-MM-DDTHH:MM:SS</StartTime>
+        <MissionType>Inspection</MissionType>
+        <MissionPlanner>RobotNavigator</MissionPlanner>
+    </Header>
+    <CompositeTaskInformation>
+        <Description>Visit as many points as possible within 100 meters and take pictures of each tree.</Description>
+        <Task>
+            <Type>DriveToLocation</Type>
+            <Coordinates><Latitude>Start Latitude</Latitude><Longitude>Start Longitude</Longitude></Coordinates>
+            <TargetPoint>First Point Coordinates from GeoJSON file</TargetPoint>
+            <TaskDescription>Ignoring start and end points, visit as many points as you can in 100 meters and take pictures of each tree.</TaskDescription>
+        </Task>
+        <!-- Repeat DriveToLocation and TakePicture tasks for each point in the GeoJSON file within 100 meters of the previous target point -->
+        <Task>
+            <Type>DriveToLocation</Type>
+            <Coordinates><Latitude>Target Point Latitude from GeoJSON file</Latitude><Longitude>Target Point Longitude from GeoJSON file</Longitude></Coordinates>
+            <TargetPoint>Next Target Point Coordinates from GeoJSON file</TargetPoint>
+        </Task>
+        <!-- ... -->
+        <Task>
+            <Type>TakePicture</Type>
+            <Coordinates><Latitude>Target Point Latitude from GeoJSON file</Latitude><Longitude>Target Point Longitude from GeoJSON file</Longitude></Coordinates>
+        </Task>
+    </CompositeTaskInformation>
+    <Outcome>Successfully inspected several trees within a certain radius. (Estimated distance: about 10 km)</Outcome>
+</Mission>

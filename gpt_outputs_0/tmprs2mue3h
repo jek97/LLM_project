@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:MissionPlan xmlns:local="http://example.com/local"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://example.com/local missionplan.xsd">
+
+    <local:CompositeTaskInformation TaskDescription="Sample Mission Plan">
+        <local:SequentialTasks>
+            <local:DriveToWaypoint WaypointID="WP1" />
+            <local:TakePicture />
+            <local:ConditionalTask>
+                <local:Condition>Temperature > 25</local:Condition>
+                <local:TrueBranch>
+                    <local:ReadTemperature />
+                </local:TrueBranch>
+                <local:FalseBranch>
+                    <local:TakeCO2Sample />
+                </local:FalseBranch>
+            </local:ConditionalTask>
+        </local:SequentialTasks>
+    </local:CompositeTaskInformation>
+
+    <local:Waypoints>
+        <local:Waypoint ID="WP1" />
+    </local:Waypoints>
+
+</local:MissionPlan>

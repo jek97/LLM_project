@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>CompositeTaskInformation</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>TaskDescription</ElementName>
+            <ElementName>DrivingTask</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="DrivingTask"/>
+    <AttributeGroup ref="DrivingTask"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>DrivingTask</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>StartLocation</ElementName>
+            <ElementName>EndLocation</ElementName>
+            <ElementName>DistanceToTravel</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="DrivingTask"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>StartLocation</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>ref</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="StartLocation"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>EndLocation</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>ref</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="EndLocation"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>DistanceToTravel</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>unit</ElementName>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="DistanceToTravel"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>value</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>unit</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="value"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>value</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>unit</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="value"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>value</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>unit</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="value"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>value</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>unit</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="value"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>value</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>unit</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="value"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>value</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>unit</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="value"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>value</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>unit</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="value"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>value</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>unit</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="value"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>value</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>unit</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="value"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType>
+    <AttributeGroup ref="unit"/>
+</Schema>
+
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <ElementName>unit</ElementName>
+    <ComplexType>
+        <Sequence>
+            <ElementName>value</ElementName>
+        </Sequence>
+    </ComplexType

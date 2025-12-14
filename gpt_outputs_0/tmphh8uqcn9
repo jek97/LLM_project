@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RoboticMissionPlan xmlns="http://example.com/robotics/missionplan">
+    <Header>
+        <MissionName>Temperature and CO2 Monitoring Mission</MissionName>
+        <StartTime>2023-04-15T10:00:00Z</StartTime>
+        <EndTime>2023-04-15T16:00:00Z</EndTime>
+    </Header>
+    <CompositeTaskInformation>
+        <TaskDescription>Initiate the Temperature and CO2 Monitoring Mission.</TaskDescription>
+        <SubTasks>
+            <Task>
+                <TaskID>1</TaskID>
+                <TaskName>Drive to First Tree</TaskName>
+                <TaskType>Driving</TaskType>
+                <LocationReference>
+                    <GPS>
+                        <Latitude>37.7749</Latitude>
+                        <Longitude>-122.4194</Longitude>
+                    </GPS>
+                </LocationReference>
+            </Task>
+            <Task>
+                <TaskID>2</TaskID>
+                <TaskName>Take a Picture at First Tree</TaskName>
+                <TaskType>Image Capture</TaskType>
+                <LocationReference>
+                    <GPS>
+                        <Latitude>37.7749</Latitude>
+                        <Longitude>-122.4194</Longitude>
+                    </GPS>
+                </LocationReference>
+            </Task>
+            <Task>
+                <TaskID>3</TaskID>
+                <TaskName>Check Temperature at First Tree</TaskName>
+                <TaskType>Temperature Reading</TaskType>
+                <LocationReference>
+                    <GPS>
+                        <Latitude>37.7749</Latitude>
+                        <Longitude>-122.4194</Longitude>
+                    </GPS>
+                </LocationReference>
+            </Task>
+            <Task>
+                <TaskID>4</TaskID>
+                <TaskName>Check CO2 at First Tree</TaskName>
+                <TaskType>CO2 Sampling</TaskType>
+                <LocationReference>
+                    <GPS>
+                        <Latitude>37.7749</Latitude>
+                        <Longitude>-122.4194</Longitude>
+                    </GPS>
+                </LocationReference>
+            </Task>
+            <!-- Repeat the above Tasks (2-4) for additional trees if necessary -->
+            <Task>
+                <TaskID>5</TaskID>
+                <TaskName>Drive to End</TaskName>
+                <TaskType>Driving</TaskType>
+                <!-- Place the estimated distance here, but don't show how it was computed -->
+                <Outcome>The estimated distance to the end is approximately 10 miles.</Outcome>
+            </Task>
+        </SubTasks>
+    </CompositeTaskInformation>
+</RoboticMissionPlan>

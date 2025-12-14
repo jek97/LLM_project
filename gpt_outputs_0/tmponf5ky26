@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <Task id="1" location_id="1" task="Take a soil sample"/>
+  <Task id="2" location_id="2" task="Measure tree height"/>
+  <!-- More tasks will be added here -->
+</MissionPlan>

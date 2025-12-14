@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompositeTaskInformation>
+        <TaskDescription>Orchard Exploration: Collect cos, CO2, and temperature data; Take pictures of trees with low cos.</TaskDescription>
+        <SequentialTasks>
+            <DriveToGPSLocation>
+                <TargetGpsCoordinates lat="37.3663048801105" lon="-120.4229925952979">Starting point</TargetGpsCoordinates>
+            </DriveToGPSLocation>
+            <TreeMeasureCos>
+                <TargetTreeId>1</TargetTreeId>
+            </TreeMeasureCos>
+            <TakePictures>
+                <TargetTreeId>1</TargetTreeId>
+            </TakePictures>
+            <DriveToGPSLocation>
+                <TargetGpsCoordinates lat="N/A" lon="N/A">Next location</TargetGpsCoordinates>
+            </DriveToGPSLocation>
+            <TreeMeasureCo2>
+                <TargetTreeId>2</TargetTreeId>
+            </TreeMeasureCo2>
+            <TakePictures>
+                <TargetTreeId>2</TargetTreeId>
+            </TakePictures>
+            <DriveToGPSLocation>
+                <TargetGpsCoordinates lat="N/A" lon="N/A">Next location</TargetGpsCoordinates>
+            </DriveToGPSLocation>
+            <TreeMeasureTemperature>
+                <TargetTreeId>3</TargetTreeId>
+            </TreeMeasureTemperature>
+            <TakePictures>
+                <TargetTreeId>3</TargetTreeId>
+            </TakePictures>
+            <DriveToGPSLocation>
+                <TargetGpsCoordinates lat="37.3663048801105" lon="-120.4229925952979">Starting point</TargetGpsCoordinates>
+            </DriveToGPSLocation>
+        </SequentialTasks>
+    </CompositeTaskInformation>
+    <Outcome>Successfully completed the Orchard Exploration mission. Mission covered considerable distance across the orchard.</Outcome>
+</MissionPlan>

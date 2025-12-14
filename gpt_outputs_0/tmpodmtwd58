@@ -1,0 +1,86 @@
+<MissionPlan xmlns="http://www.example.com/missionplan">
+  <MissionName>Sample Mission</MissionName>
+  <MissionDescription>A sample mission for navigating a robot to various tree locations and performing actions.</MissionDescription>
+  <CreatedBy>John Doe</CreatedBy>
+  <StartTime>2023-04-17T13:00:00Z</StartTime>
+  <EndTime>2023-04-17T14:00:00Z</EndTime>
+  <Version>1.0</Version>
+
+  <Tasks>
+    <CompositeTaskInformation id="task1">
+      <TaskDescription>Drive to Maple Tree #1 and take pictures.</TaskDescription>
+      <Tasks>
+        <ActionTask id="action_task1">
+          <Action>DriveTo</Action>
+          <Parameters>
+            <DestinationRef xsi:type="GPSLocation" idRef="Tree1"/>
+          </Parameters>
+          <!-- Drive to Tree 1 -->
+        </ActionTask>
+        <CameraActionTask id="action_task2">
+          <Action>TakePicture</Action>
+          <Parameters>
+            <SubjectRef xsi:type="GPSLocation" idRef="Tree1"/>
+            <Type>Maple</Type>
+          </Parameters>
+          <!-- Take picture of Tree 1 -->
+        </CameraActionTask>
+      </Tasks>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation id="task2">
+      <TaskDescription>Drive to Oak Tree #2 and collect saplings.</TaskDescription>
+      <Tasks>
+        <ActionTask id="action_task1">
+          <Action>DriveTo</Action>
+          <Parameters>
+            <DestinationRef xsi:type="GPSLocation" idRef="Tree2"/>
+          </Parameters>
+          <!-- Drive to Tree 2 -->
+        </ActionTask>
+        <SaplingCollectionTask id="action_task2">
+          <Action>CollectSaplings</Action>
+          <Parameters>
+            <SubjectRef xsi:type="GPSLocation" idRef="Tree2"/>
+          </Parameters>
+          <!-- Collect saplings from Tree 2 -->
+        </SaplingCollectionTask>
+      </Tasks>
+    </CompositeTaskInformation>
+
+    <!-- Add more tasks if needed, using CompositeTaskInformation elements with parent actions and child tasks -->
+  </Tasks>
+
+  <GPSLocations>
+    <FeatureCollection>
+      <Feature id="Start">
+        <Geometry>
+          <Point>
+            <coordinates>-87.6298, 41.8889</coordinates>
+          </Point>
+        </Geometry>
+      </Feature>
+
+      <!-- Define additional GPS locations as needed -->
+      <Feature id="Tree1">
+        <Geometry>
+          <Point>
+            <coordinates>-87.6301, 41.8925</coordinates>
+          </Point>
+        </Geometry>
+        <PropertyName>treeType</PropertyName>
+        <PropertyValue>Maple</PropertyValue>
+      </Feature>
+
+      <Feature id="Tree2">
+        <Geometry>
+          <Point>
+            <coordinates>-87.6305, 41.8935</coordinates>
+          </Point>
+        </Geometry>
+        <PropertyName>treeType</PropertyName>
+        <PropertyValue>Oak</PropertyValue>
+      </Feature>
+    </FeatureCollection>
+  </GPSLocations>
+</MissionPlan>

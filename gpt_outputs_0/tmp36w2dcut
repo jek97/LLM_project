@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <CompositeTaskInformation TaskDescription="Take pictures and perform actions based on temperature readings">
+        <SequentialTasks>
+            <!-- Drive to the first tree -->
+            <DriveToWaypoint WaypointID="1" />
+            
+            <!-- Take a picture at the first tree -->
+            <TakePicture />
+
+            <!-- Check if the picture shows low temperature -->
+            <ConditionalTask>
+                <Condition Type="TemperatureCheck">
+                    <Parameter Value="Low" />
+                </Condition>
+                <TrueBranch>
+                    <!-- If temperature is low, take a temperature reading -->
+                    <ReadTemperature />
+
+                    <!-- Check if the temperature reading is also low -->
+                    <ConditionalTask>
+                        <Condition Type="TemperatureCheck">
+                            <Parameter Value="Very Low" />
+                        </Condition>
+                        <TrueBranch>
+                            <!-- If temperature reading is very low, take a CO2 sample -->
+                            <TakeCO2Sample />
+                        </TrueBranch>
+                        <FalseBranch>
+                            <!-- If temperature reading isn't very low, drive to the end -->
+                            <DriveToWaypoint WaypointID="End" />
+                        </FalseBranch>
+                    </ConditionalTask>
+                </TrueBranch>
+                <FalseBranch>
+                    <!-- If picture doesn't show low temperature, drive to the end -->
+                    <DriveToWaypoint WaypointID="End" />
+                </FalseBranch>
+            </ConditionalTask>
+        </SequentialTasks>
+    </CompositeTaskInformation>
+
+    <!-- Define waypoints -->
+    <Waypoints>
+        <Waypoint ID="1">
+            <Coordinate X="X-coordinate of the first tree" Y="Y-coordinate of the first tree" />
+        </Waypoint>
+        <Waypoint ID="End">
+            <Coordinate X="X-coordinate of the end point" Y="Y-coordinate of the end point" />
+        </Waypoint>
+    </Waypoints>
+</MissionPlan>

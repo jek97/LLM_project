@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <name>Picture all 4 trees</name>
+    <sequence>
+        <action type="Movement">
+            <direction>North</direction>
+        </action>
+        <action type="Photography">
+            <location>1</location>
+        </action>
+        <action type="Movement">
+            <direction>East</direction>
+        </action>
+        <action type="Photography">
+            <location>4</location>
+        </action>
+        <action type="Movement">
+            <direction>South</direction>
+        </action>
+        <action type="Photography">
+            <location>7</location>
+        </action>
+        <action type="Movement">
+            <direction>West</direction>
+        </action>
+        <action type="Photography">
+            <location>0</location>
+        </action>
+    </sequence>
+</mission>

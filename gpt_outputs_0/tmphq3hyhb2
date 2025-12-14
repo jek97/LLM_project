@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan">
+    <CompositeTaskInformation>
+        <TaskDescription>Request from user to generate a mission plan for the robot</TaskDescription>
+        <SubTasks>
+            <DriveToLocation>
+                <Start>
+                    <Latitude>37.7749</Latitude>
+                    <Longitude>-122.4194</Longitude>
+                </Start>
+                <End>
+                    <Latitude>37.7749 + (random value between -0.005 and 0.005)</Latitude>
+                    <Longitude>-122.4194 + (random value between -0.005 and 0.005)</Longitude>
+                </End>
+            </DriveToLocation>
+            <MeasureCos>
+                <TreeID>Randomly selected tree ID</TreeID>
+            </MeasureCos>
+            <TakePictures>
+                <TreeID>Randomly selected nearby tree IDs (2)</TreeID>
+            </TakePictures>
+            <DriveToLocation>
+                <Start>
+                    <Latitude>New location after taking pictures</Latitude>
+                    <Longitude>New longitude after taking pictures</Longitude>
+                </Start>
+                <End>
+                    <Latitude>Randomly selected tree ID for CO2 measurement (far away)</Latitude>
+                    <Longitude>Randomly selected longitude for CO2 measurement (far away)</Longitude>
+                </End>
+            </DriveToLocation>
+            <MeasureCO2>
+                <TreeID>Selected tree ID for CO2 measurement</TreeID>
+            </MeasureCO2>
+            <TakePictures>
+                <TreeID>Randomly selected nearby tree IDs (2)</TreeID>
+            </TakePictures>
+            <DriveToLocation>
+                <Start>
+                    <Latitude>New location after taking CO2 pictures</Latitude>
+                    <Longitude>New longitude after taking CO2 pictures</Longitude>
+                </Start>
+                <End>
+                    <Latitude>Randomly selected northernmost tree ID</Latitude>
+                    <Longitude>Randomly selected northernmost longitude</Longitude>
+                </End>
+            </DriveToLocation>
+            <TakeTemperatureReading>
+                <TreeID>Selected northernmost tree ID</TreeID>
+            </TakeTemperatureReading>
+            <DriveToLocation>
+                <Start>
+                    <Latitude>Northernmost tree location</Latitude>
+                    <Longitude>Northernmost longitude</Longitude>
+                </Start>
+                <End>
+                    <Latitude>Initial starting point</Latitude>
+                    <Longitude>Initial starting longitude</Longitude>
+                </End>
+            </DriveToLocation>
+        </SubTasks>
+    </CompositeTaskInformation>
+    <Outcome>
+        The robot successfully completed the mission and collected data for cos, pictures of nearby trees, CO2 measurements, and temperature readings at a northernmost tree.
+    </Outcome>
+</MissionPlan>

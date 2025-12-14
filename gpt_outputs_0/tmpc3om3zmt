@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <Mission>
+    <Task id="1">
+      <Type>DriveTo</Type>
+      <Location>
+        <Coordinates>
+          -120.42300386899338, 37.366300703749474</Coordinates>
+        </Location>
+        <Description>Drive to the location of two trees standing adjacent to each other.</Description>
+      </Task>
+      <Task id="2">
+        <Type>CO2Reading</Type>
+        <Location>
+          <Coordinates>
+            -120.42300386899338, 37.366300703749474</Coordinates>
+          </Location>
+          <Description>Take a CO2 reading from the first tree.</Description>
+        </Task>
+        <Task id="3">
+          <Type>CO2Reading</Type>
+          <Location>
+            <Coordinates>
+              -120.42300386899338, 37.366300703749474</Coordinates>
+            </Location>
+            <Description>Take a CO2 reading from the second tree.</Description>
+          </Task>
+        </Task>
+      </Mission>
+    </MissionPlan>

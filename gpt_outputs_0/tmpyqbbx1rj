@@ -1,0 +1,14 @@
+<!DOCTYPE mission PUBLIC "-//MyMissionPlan//DTD mission.dtd">
+<html>
+<head>
+    <title>mission</title>
+    <style type="text/css">
+        /* Optional: You can add custom CSS styles here */
+    </style>
+</head>
+<body>
+    <mission>
+        <!-- XML content goes here -->
+    </mission>
+</body>
+</html>

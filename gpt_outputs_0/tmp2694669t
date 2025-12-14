@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskID>TreeCO2Measurement</TaskID>
+    <TaskDescription>Measure CO2 levels at two adjacent trees.</TaskDescription>
+    <TaskPriority>High</TaskPriority>
+  </CompositeTaskInformation>
+
+  <Task>
+    <TaskID>DriveToTrees</TaskID>
+    <TaskType>Navigation</TaskType>
+    <TaskDescription>Navigate to the location of two trees positioned next to each other.</TaskDescription>
+    <Waypoint>
+      <Latitude>37.366300703749474</Latitude>
+      <Longitude>-120.42299259529793</Longitude>
+    </Waypoint>
+  </Task>
+
+  <Task>
+    <TaskID>CO2Measurement_Tree1</TaskID>
+    <TaskType>SensorReading</TaskType>
+    <TaskDescription>Take a CO2 reading from the first tree.</TaskDescription>
+    <SensorType>CO2</SensorType>
+    <MeasurementUnit>ppm</MeasurementUnit>
+  </Task>
+
+  <Task>
+    <TaskID>CO2Measurement_Tree2</TaskID>
+    <TaskType>SensorReading</TaskType>
+    <TaskDescription>Take a CO2 reading from the second tree.</TaskDescription>
+    <SensorType>CO2</SensorType>
+    <MeasurementUnit>ppm</MeasurementUnit>
+    <Waypoint>
+      <Latitude>37.366300703749474</Latitude>
+      <Longitude>-120.42299259529793</Longitude>
+    </Waypoint>
+  </Task>
+</MissionPlan>

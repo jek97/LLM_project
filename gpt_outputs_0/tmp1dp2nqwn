@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="missionPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Define the elements and attributes of your mission plan -->
+        <xs:element name="CompositeTaskInformation" type="CompositeTaskInformationType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

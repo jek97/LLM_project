@@ -1,0 +1,41 @@
+<missionPlan>
+  <startingPoint>STARTING_POINT</startingPoint>
+
+  <drivePath>
+    <from>STARTING_POINT</from>
+    <to>MIDDLE_OF_THE_FIELD</to>
+    <actions>
+      <takePicture>TRUE</takePicture>
+      <checkTemperature>TRUE</checkTemperature>
+      <sampleCO2>TRUE</sampleCO2>
+    </actions>
+  </drivePath>
+
+  <drivePath>
+    <from>MIDDLE_OF_THE_FIELD</from>
+    <to=OTHERRANDOMPOINT5TREESDOWN>
+    <actions>
+      <takePicture>TRUE</takePicture>
+      <checkTemperature>TRUE</checkTemperature>
+      <sampleCO2>TRUE</sampleCO2>
+    </actions>
+  </drivePath>
+
+  <dataCollection>
+    <temperatureData>
+      <value id="T1">30.5</value>
+      <!-- Additional temperature data points -->
+    </temperatureData>
+    
+    <co2Data>
+      <value id="CO2_1">420</value>
+      <!-- Additional CO2 data points -->
+    </co2Data>
+  </dataCollection>
+
+  <missionSummary>
+    <totalDistance>XXXXXXX</totalDistance>
+    <averageTemperature>31.5</averageTemperature>
+    <maxCO2Level>450</maxCO2Level>
+  </missionSummary>
+</missionPlan>

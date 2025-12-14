@@ -1,0 +1,31 @@
+<Mission>
+  <Step>
+    <Action>TakePicture</Action>
+    <Location>Tree 1 (-120.423085679, 37.36633282)</Location>
+  </Step>
+
+  <Condition>
+    <CheckTemperatureLow>
+      <ResultTrue/False>
+        <If True>
+          <Action>CheckCO2</Action>
+          <Location>Tree 1 (-120.423085679, 37.36633282)</Location>
+          <If CO2Low True>
+            <Action>DriveToTree15</Action>
+            <Destination>Tree 15 (-120.423044218, 37.366269967)</Destination>
+            <RepeatMission/TrueFalse>
+              <If True>Repeat the process at Tree 15.</If>
+            </RepeatMission>
+          </If CO2Low False>
+          <Action>DriveToEndpoint</Action>
+          <Destination Endpoint (-120.422980514, 37.366289086)</Destination>
+        </If True>
+      </ResultTrue/False>
+    </CheckTemperatureLow>
+  </Condition>
+
+  <AlternativePath>
+    <DriveToEndpoint</DriveToEndpoint>
+    <Destination Endpoint (-120.422980514, 37.366289086)</Destination>
+  </AlternativePath>
+</Mission>

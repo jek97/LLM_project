@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <name>Pistachio Tree Visiting</name>
+    <description>Visit 5 pistachio trees in a row and take pictures of 3 of them.</description>
+    
+    <!-- Define the starting position -->
+    <position>
+        <latitude>37.81966666</latitude>
+        <longitude>-122.0349088</longitude>
+    </position>
+    
+    <!-- Define the waypoints -->
+    <waypoints>
+        <!-- Pistachio Tree 1 -->
+        <waypoint id="1">
+            <type>PictureTaking</type>
+            <description>Visit and take a picture of the first pistachio tree.</description>
+            <coordinates>
+                <latitude>37.81966666</latitude>
+                <longitude>-122.0349088</longitude>
+            </coordinates>
+        </waypoint>
+        
+        <!-- Pistachio Tree 2 -->
+        <waypoint id="2">
+            <type>PictureTaking</type>
+            <description>Visit and take a picture of the second pistachio tree.</description>
+            <coordinates>
+                <latitude>37.81966666</latitude>
+                <longitude>-122.0349088</longitude>
+            </coordinates>
+        </waypoint>
+        
+        <!-- Pistachio Tree 3 -->
+        <waypoint id="3">
+            <type>PictureTaking</type>
+            <description>Visit and take a picture of the third pistachio tree.</description>
+            <coordinates>
+                <latitude>37.81966666</latitude>
+                <longitude>-122.0349088</longitude>
+            </coordinates>
+        </waypoint>
+        
+        <!-- Pistachio Tree 4 -->
+        <waypoint id="4">
+            <type>PictureTaking</type>
+            <description>Visit and take a picture of the fourth pistachio tree.</description>
+            <coordinates>
+                <latitude>37.81966666</latitude>
+                <longitude>-122.0349088</longitude>
+            </coordinates>
+        </waypoint>
+        
+        <!-- Pistachio Tree 5 -->
+        <waypoint id="5">
+            <type>PictureTaking</type>
+            <description>Visit and take a picture of the fifth pistachio tree.</description>
+            <coordinates>
+                <latitude>37.81966666</latitude>
+                <longitude>-122.0349088</longitude>
+            </coordinates>
+        </waypoint>
+    </waypoints>
+    
+    <!-- Define the sequencing of waypoints -->
+    <sequence>
+        1,2,3,4,5
+    </sequence>
+</mission>

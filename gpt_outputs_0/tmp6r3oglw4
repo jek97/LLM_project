@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+  <CompositeTaskInformation>
+    <TaskDescription>Take a picture of the first tree and measure its CO2 level. If it is low, take another co2 sample. If that reading is still low, continue driving to another tree and take another co2 sample. Finally, go to end.</TaskDescription>
+    <Tasks>
+      <!-- Take a picture of the first tree -->
+      <Task>
+        <Action>TakePicture</Action>
+        <TargetTreeID>1</TargetTreeID>
+      </Task>
+      
+      <!-- Measure CO2 level and take another co2 sample if it is low -->
+      <Task>
+        <Action>MeasureCO2Level</Action>
+        <TargetTreeID>1</TargetTreeID>
+        <Condition>LowCO2Level</Condition>
+        <SubTasks>
+          <Task>
+            <Action>TakeCo2Sample</Action>
+            <TargetTreeID>1</TargetTreeID>
+          </Task>
+          
+          <!-- Take another co2 sample if the reading is still low -->
+          <Task>
+            <Action>MeasureCO2Level</Action>
+            <TargetTreeID>1</TargetTreeID>
+            <Condition>LowCO2Level</Condition>
+            <SubTasks>
+              <Task>
+                <Action>TakeCo2Sample</Action>
+                <TargetTreeID>1</TargetTreeID>
+              </Task>
+            </SubTasks>
+          </Task>
+        </SubTasks>
+      </Task>
+      
+      <!-- Measure temperature if CO2 level is not low -->
+      <Task>
+        <Action>MeasureTemperature</Action>
+        <TargetTreeID>1</TargetTreeID>
+        <Condition>NotLowCO2Level</Condition>
+      </Task>
+      
+      <!-- Take a picture of another tree and measure its CO2 level -->
+      <Task>
+        <Action>TakePicture</Action>
+        <TargetTreeID>2</TargetTreeID>
+      </Task>
+      
+      <!-- Measure CO2 level and take another co2 sample if it is low -->
+      <Task>
+        <Action>MeasureCO2Level</Action>
+        <TargetTreeID>2</TargetTreeID>
+        <Condition>LowCO2Level</Condition>
+        <SubTasks>
+          <Task>
+            <Action>TakeCo2Sample</Action>
+            <TargetTreeID>2</TargetTreeID>
+          </Task>
+          
+          <!-- Take another co2 sample if the reading is still low -->
+          <Task>
+            <Action>MeasureCO2Level</Action>
+            <TargetTreeID>2</TargetTreeID>
+            <Condition>LowCO2Level</Condition>
+            <SubTasks>
+              <Task>
+                <Action>TakeCo2Sample</Action>
+                <TargetTreeID>2</TargetTreeID>
+              </Task>
+            </SubTasks>
+          </Task>
+        </SubTasks>
+      </Task>
+    </Tasks>
+  </CompositeTaskInformation>
+</mission>

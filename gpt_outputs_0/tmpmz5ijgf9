@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>Generate a mission plan to visit as many points within 100 meters of each other as possible, taking a picture of each tree.  The mission aims to cover the provided GeoJSON points within a 100-meter radius.</TaskDescription>
+    <Tasks>
+      <Task id="1">
+        <Location x="120.42300386899338" y="37.36626996761184"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="2">
+        <Location x="120.42301000000001" y="37.36627700000001"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="3">
+        <Location x="120.42301720000002" y="37.36628416666667"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="4">
+        <Location x="120.42302346666667" y="37.36629133333333"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="5">
+        <Location x="120.42302963333333" y="37.36629850000001"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="6">
+        <Location x="120.42303573333333" y="37.36630566666667"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="7">
+        <Location x="120.42303999999999" y="37.36631183333333"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="8">
+        <Location x="120.42304573333333" y="37.36632000000001"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="9">
+        <Location x="120.42304989999999" y="37.36632716666667"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="10">
+        <Location x="120.42305173333333" y="37.36633333333333"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="11">
+        <Location x="120.42305773333333" y="37.36633950000001"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="12">
+        <Location x="120.42305989999999" y="37.36634566666667"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="13">
+        <Location x="120.42306196666667" y="37.36635183333333"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="14">
+        <Location x="120.42306673333333" y="37.36635800000001"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="15">
+        <Location x="120.42306996666667" y="37.36636316666667"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="16">
+        <Location x="120.42307593333333" y="37.36637026666667"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="17">
+        <Location x="120.42307803333333" y="37.36637740000001"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="18">
+        <Location x="120.42307999999999" y="37.36638416666667"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="19">
+        <Location x="120.42308573333333" y="37.36639133333333"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="20">
+        <Location x="120.42308789999999" y="37.36639850000001"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="21">
+        <Location x="120.42309006666667" y="37.36640466666667"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="22">
+        <Location x="120.42309573333333" y="37.36641183333333"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="23">
+        <Location x="120.42309803333333" y="37.36641790000001"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="24">
+        <Location x="120.42310273333333" y="37.36642333333333"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="25">
+        <Location x="120.42310696666667" y="37.36643050000001"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="26">
+        <Location x="120.42310893333333" y="37.36639999999999"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="27">
+        <Location x="120.42311273333333" y="37.36638616666667"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="28">
+        <Location x="120.42311506666667" y="37.36637240000001"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="29">
+        <Location x="120.42311793333333" y="37.36635850000001"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="30">
+        <Location x="120.42312033333333" y="37.36633483333333"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="31">
+        <Location x="120.42312350000001" y="37.36631026666667"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="32">
+        <Location x="120.42312673333333" y="37.36628616666667"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="33">
+        <Location x="120.42312813333333" y="37.36624240000001"/>
+        <Action>Take Picture</Action>
+      </Task>
+    </pre>
+  </main>
+</body>
+</html>`
+
+The code appears to be a dynamically generated HTML page, likely from a web application.  It contains a `<main>` element and within that, a `<pre>` tag which contains a string of 33 lines. Each line represents a single GPS coordinate.  The format of each coordinate seems to be in the format "latitude,longitude" - for example, "37.7749,-122.4194". The code seems to be designed for visualizing a location or route on a map.  Since it contains numerous GPS coordinates, it's likely intended to be integrated with a mapping service like Google Maps or Leaflet.

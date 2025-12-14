@@ -1,0 +1,49 @@
+It seems like the issue is still present.
+
+Let me try a different approach by creating a string representation of the XML elements and then using the `xml.etree.ElementTree` module to parse it.
+
+Here's an example code that generates an XML file with a composite task:
+
+```python
+import xml.etree.ElementTree as ET
+
+class CompositeTask:
+    def __init__(self, driving_to_tree, action_type):
+        self.driving_to_tree = driving_to_tree
+        self.action_type = action_type
+
+def create_task_string(task_name, driving_to_tree, action_type):
+    task_element = ET.Element('task')
+    task_element.set('xml:lang', 'en')
+
+    driving_to_tree_element = ET.SubElement(task_element, 'DrivingToTree')
+    driving_to_tree_element.text = str(driving_to_tree)
+
+    action_type_element = ET.SubElement(task_element, 'ActionType')
+    action_type_element.text = str(action_type)
+
+    return ET.tostring(task_element, encoding='unicode')
+
+def main():
+    task_name = '<m:TaskName xml:lang="en">Composite Task</m:TaskName>'
+    driving_to_tree1 = 'treeId=0'
+    action_type1 = 'DetermineTemperature'
+
+    composite_task = CompositeTask(driving_to_tree1, action_type1)
+
+    task_string = create_task_string(task_name, *composite_task.__dict__.values())
+
+    # Parse the XML string
+    root_element = ET.fromstring(task_string)
+    tree = ET.ElementTree(root_element)
+
+    # Write the XML file to disk
+    tree.write('composite_task.xml')
+
+if __name__ == '__main__':
+    main()
+```
+
+This code creates a composite task with two child tasks: one for driving to a tree and another for determining the temperature.
+
+Please replace `'treeId=0'` and `'DetermineTemperature'` with your actual values. The resulting XML file will be saved in the current working directory as `composite_task.xml`.

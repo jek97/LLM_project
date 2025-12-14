@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="mission.xsd">
+  <task>
+    <description>Going clockwise from the north most tree, take a picture of 4 trees.</description>
+    <actions>
+      <action type="drive" waypoint="0"/>
+      <action type="take_picture"/>
+      <action type="drive" waypoint="12"/>
+      <action type="take_picture"/>
+      <action type="drive" waypoint="18"/>
+      <action type="take_picture"/>
+      <action type="drive" waypoint="6"/>
+      <action type="take_picture"/>
+    </actions>
+  </task>
+</mission>

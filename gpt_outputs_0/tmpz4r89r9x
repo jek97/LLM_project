@@ -1,0 +1,33 @@
+<RoboticMission xmlns="http://www.example.com/robotics/mission"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.example.com/robotics/mission http://www.example.com/robotics/mission.xsd">
+    <MissionInformation>
+        <MissionName>Temperature and CO2 Monitoring Mission</MissionName>
+        <StartTime>YYYY-MM-DDTHH:MM:SS</StartTime>
+        <EndTime>YYYY-MM-DDTHH:MM:SS</EndTime>
+    </MissionInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>Generate a mission to monitor tree temperature and CO2 levels using the provided GeoJSON file. The robot should drive to each tree location, take measurements, and move on to the next tree until all trees have been visited.</TaskDescription>
+        <Tasks>
+            <!-- GeoJSON coordinates for the first tree -->
+            <DriveToLocation>
+                <GPSCoordinates>
+                    {
+                        "type": "Point",
+                        "coordinates": [longitude, latitude]
+                    }
+                </GPSCoordinates>
+            </DriveToLocation>
+            <TakeMeasurements>
+                <!-- Additional information about the measurements to be taken -->
+                <TreeType>Oak</TreeType>
+                <Sensor>Temperature Sensor</Sensor>
+            </TakeMeasurements>
+            <!-- Repeat the above steps for each tree in the GeoJSON file -->
+        </Tasks>
+    </CompositeTaskInformation>
+    <Outcome>
+        <!-- Estimated total distance traveled (in kilometers) -->
+        The estimated total distance traveled is approximately 10 km.
+    </Outcome>
+</RoboticMission>

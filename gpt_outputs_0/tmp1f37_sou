@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rmp:RoboticMissionPlan xmlns:rmp="http://www.example.com/RoboticMissionPlan">
+    <rmp:Header>
+        <!-- Optional information about the robot, mission parameters, etc. -->
+    </rmp:Header>
+    <rmp:CompositeTaskInformation>
+        <!-- Original Question -->
+        <rmp:TaskDescription>Starting point, go to a tree in the middle of the field and take a picture. If its average temperature is below 33 C, take a CO2 sample. After, move 5 trees down and repeat the process.</rmp:TaskDescription>
+        <rmp:Task>
+            <!-- Drive to the middle tree -->
+            <rmp:DriveToLocation>
+                <rmp:DestinationGPSCoordinates>
+                    <!-- { "type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"id": "MiddleTree", "tree_type": "Oak"}, "geometry": {"type": "Point", "coordinates": [-122.08, 47.65]}} ]} -->
+                </rmp:DestinationGPSCoordinates>
+            </rmp:DriveToLocation>
+            <!-- Take a picture at the middle tree -->
+            <rmp:ActionAtLocation>
+                <rmp:TakePicture />
+            </rmp:ActionAtLocation>
+            <!-- Check temperature at the middle tree -->
+            <rmp:ActionAtLocation>
+                <rmp:CheckTemperature>
+                    <rmp:AverageTemperatureThreshold>33</rmp:AverageTemperatureThreshold>
+                </rmp:CheckTemperature>
+            </rmp:ActionAtLocation>
+            <!-- Take a CO2 sample if temperature is below threshold -->
+            <rmp:ActionIf>
+                <rmp:ConditionRef rmp:href="#temperature_check" />
+                <rmp:ActionAtLocation>
+                    <rmp:TakeCO2Sample />
+                </rmp:ActionAtLocation>
+            </rmp:ActionIf>
+        </rmp:Task>
+        <!-- Repeat the process -->
+        <rmp:Task>
+            <!-- Drive to the next tree -->
+            <rmp:DriveToLocation>
+                <!-- { "type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"id": "NextTree"}, "geometry": {"type": "Point", "coordinates": [-122.08, 47.65]}} ]} -->
+            </rmp:DriveToLocation>
+            <rmp:ActionAtLocation>
+                <!-- Repeat the previous actions -->
+                <!-- Take a picture at the next tree -->
+                <rmp:TakePicture />
+                <!-- Check temperature at the next tree -->
+                <rmp:CheckTemperature>
+                    <rmp:AverageTemperatureThreshold>33</rmp:AverageTemperatureThreshold>
+                </rmp:CheckTemperature>
+                <!-- Take a CO2 sample if temperature is below threshold -->
+                <rmp:ActionIf>
+                    <rmp:ConditionRef rmp:href="#temperature_check" />
+                    <rmp:ActionAtLocation>
+                        <rmp:TakeCO2Sample />
+                    </rmp:ActionAtLocation>
+                </rmp:ActionIf>
+            </rmp:ActionAtLocation>
+        </rmp:Task>
+    </rmp:CompositeTaskInformation>
+    <rmp:Outcome>
+        This mission consists of visiting multiple trees in a linear fashion, moving 5 trees apart each time. The process involves taking pictures, checking the average temperature of the tree, and collecting CO2 samples if the temperature is below 33 C.
+    </rmp:Outcome>
+</rmp:RoboticMissionPlan>

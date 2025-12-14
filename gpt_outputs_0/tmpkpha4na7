@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <name>Tree Picture Mission</name>
+    <description>Visit as many points as possible in 100 meters and take pictures of each tree.</description>
+    <tasks>
+        <!-- Add tasks here -->
+    </tasks>
+</mission>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan schemaVersion="1.0">
+  <CompositeTaskInformation>
+    <TaskDescription>
+      User requested mission to collect data on trees and GPS locations.
+    </TaskDescription>
+    <EstimatedTotalDistance>
+      <DistanceUnit>kilometers</DistanceUnit>
+      <EstimatedValue>5.2</EstimatedValue>
+    </EstimatedTotalDistance>
+  </CompositeTaskInformation>
+  <mission>
+    <task id="1">
+      <taskType>Drive</taskType>
+      <destination>
+        <latitude>34.0522</latitude>
+        <longitude>-118.2437</longitude>
+      </destination>
+      <duration>60</duration>
+    </task>
+    <task id="2">
+      <taskType>CollectData</taskType>
+      <target>
+        <treeType>Oak</treeType>
+        <latitude>34.0530</latitude>
+        <longitude>-118.2440</longitude>
+      </target>
+    </task>
+  </mission>
+</missionPlan>

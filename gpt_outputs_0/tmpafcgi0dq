@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Robotic mission to measure CO2, temperature, and take pictures of trees in the orchard.
+    </TaskDescription>
+    <StartPoint>
+      <Latitude>37.36627570632085</Latitude>
+      <Longitude>-120.42298051393493</Longitude>
+    </StartPoint>
+  </CompositeTaskInformation>
+
+  <Tasks>
+    <Task id="1">
+      <TaskType>Navigation</TaskType>
+      <Waypoint id="1.1">
+        <Latitude>37.366304880110526</Latitude>
+        <Longitude>-120.4230246791031</Longitude>
+      </Waypoint>
+      <Instruction>Navigate to the waypoint. Measure CO2.</Instruction>
+    </Task>
+    <Task id="2">
+      <TaskType>ImageCapture</TaskType>
+      <Waypoint id="2.1">
+        <Latitude>37.36631785560332</Latitude>
+        <Longitude>-120.42303004014194</Longitude>
+      </Waypoint>
+      <Instruction>Take two pictures of the tree.</Instruction>
+    </Task>
+    <Task id="3">
+      <TaskType>Navigation</TaskType>
+      <Waypoint id="3.1">
+        <Latitude>37.36636077337479</Latitude>
+        <Longitude>-120.42307592599273</Longitude>
+      </Waypoint>
+      <Instruction>Navigate to the furthest tree. Measure CO2.</Instruction>
+    </Task>
+    <Task id="4">
+      <TaskType>TemperatureReading</TaskType>
+      <Waypoint id="4.1">
+        <Latitude>37.36636077337479</Latitude>
+        <Longitude>-120.42307592599273</Longitude>
+      </Waypoint>
+      <Instruction>Take a temperature reading at the northern most tree.</Instruction>
+    </Task>
+    <Task id="5">
+      <TaskType>Navigation</TaskType>
+      <Waypoint id="5.1">
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42298051393493</Longitude>
+      </Waypoint>
+      <Instruction>Return to the starting point.</Instruction>
+    </Task>
+  </Tasks>
+</MissionPlan>

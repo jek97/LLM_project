@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.com/missionplan http://example.com/missionplan/missionplan.xsd">
+    <Header>
+        <MissionName>Tree Inspection Mission</MissionName>
+        <CreatedBy>Robotic Mission Planner</CreatedBy>
+        <CreationDate>2023-04-15T12:00:00Z</CreationDate>
+    </Header>
+    <CompositeTaskInformation>
+        <TaskDescription>Original question: Ignoring start and end points, visit as many points as you can in 100 meters and take pictures of each tree. To accomplish most actions, first drive to the location. Therefore, tasks should almost always require driving to a tree and then doing an action unless doing multiple actions at the same tree.</TaskDescription>
+        <!-- Repeat the following tasks for each point in the GeoJSON file -->
+        <Tasks>
+            <Task>
+                <TaskID>1</TaskID>
+                <TaskType>DriveToLocation</TaskType>
+                <Parameters>
+                    <Parameter name="Destination">(Start Point)</Parameter>
+                </Parameters>
+            </Task>
+            <Task>
+                <TaskID>2</TaskID>
+                <TaskType>TakePicture</TaskType>
+                <Parameters>
+                    <Parameter name="Subject">Tree</Parameter>
+                </Parameters>
+            </Task>
+        </Tasks>
+        <!-- ... -->
+        <Tasks>
+            <Task>
+                <TaskID>3</TaskID>
+                <TaskType>DriveToLocation</TaskType>
+                <Parameters>
+                    <Parameter name="Destination">(Point Coordinates)</Parameter>
+                </Parameters>
+            </Task>
+            <Task>
+                <TaskID>4</TaskID>
+                <TaskType>TakePicture</TaskType>
+                <Parameters>
+                    <Parameter name="Subject">Tree</Parameter>
+                </Parameters>
+            </Task>
+        </Tasks>
+        <!-- ... -->
+    </CompositeTaskInformation>
+    <Outcome>
+        <EstimatedDistanceTraveled>Approximately (distance in meters)</EstimatedDistanceTraveled>
+    </Outcome>
+</MissionPlan>

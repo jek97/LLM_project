@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:MissionPlan xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <xs:CompositeTaskInformation>
+        <xs:TaskDescription>Test Task</xs:TaskDescription>
+        <xs:Tasks>
+            <xs:Task>
+                <xs:DrivingToPoint>
+                    <xs:PointRef>Task1</xs:PointRef>
+                </xs:DrivingToPoint>
+                <xs:SampleAction>
+                    <xs:Reward>10.0</xs:Reward>
+                </xs:SampleAction>
+            </xs:Task>
+        </xs:Tasks>
+    </xs:CompositeTaskInformation>
+</xs:MissionPlan>

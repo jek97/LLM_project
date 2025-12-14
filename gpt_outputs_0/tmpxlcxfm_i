@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlanSchema:Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           xmlns:xi="http://www.w3.org/2001/XInclude"
+                           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                           xmlns:missionPlanSchema="http://example.com/missionPlanSchema">
+    <Identification>
+        <Name>Robotic Fruit Collection Mission</Name>
+        <Description>Visit all the trees on the farm, prioritize points sampled longer ago.</Description>
+        <Author>Mission Planner</Author>
+        <Version>1.0</Version>
+    </Identification>
+    <Parameters>
+        <TimeResolution>60s</TimeResolution>
+    </Parameters>
+
+    <!-- Loop through GeoJSON features to create tasks -->
+    <xsl:for-each select="/FeatureCollection/Feature">
+        <missionPlanSchema:CompositeTaskInformation xsi:type="SequentialTask">
+            <missionPlanSchema:TaskDescription><xsl:value-of select="properties/description"/></missionPlanSchema:TaskDescription>
+
+            <Position>
+                <!-- Extract GPS coordinates from the GeoJSON feature -->
+                <missionPlanSchema:Coordinates>
+                    <Latitude><xsl:value-of select="geometry/coordinates/2"/></Latitude>
+                    <Longitude><xsl:value-of select="geometry/coordinates/1"/></Longitude>
+                </missionPlanSchema:Coordinates>
+            </Position>
+
+            <!-- Drive to the location before performing any action -->
+            <missionPlanSchema:CompositeTaskInformation xsi:type="SequentialTask">
+                <missionPlanSchema:Action><!-- Comment out for future updates --></missionPlanSchema:Action>
+                <missionPlanSchema:ActionType>Drive</missionPlanSchema:ActionType>
+            </missionPlanSchema:CompositeTaskInformation>
+
+            <!-- Perform the required action at the tree location -->
+            <missionPlanSchema:Action><!-- Comment out for future updates --></missionPlanSchema:Action>
+            <missionPlanSchema:ActionType><xsl:value-of select="properties/action_type"/></missionPlanSchema:ActionType>
+        </missionPlanSchema:CompositeTaskInformation>
+    </xsl:for-each>
+
+    <!-- Comment out the estimated total Haversine distance traveled from start to end in the Outcome -->
+    <Outcome>Estimated total Haversine distance traveled from start to end.</Outcome>
+</missionPlanSchema:Mission>

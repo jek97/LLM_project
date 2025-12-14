@@ -1,0 +1,27 @@
+It seems like the issue is still present.
+
+Let's try a different approach. Instead of using XML tags, we can use a plain text format to represent the mission plan. Here is an example:
+```
+MissionPlan
+CompositeTaskInformation
+Start Mission
+Outcome
+DrivingToTree location="https://example.com/geojson/tree1.geojson"
+TakePicture action="take_picture"
+If picture_quality == "low"
+TemperatureReading
+If temperature_reading == "low"
+CO2Sample
+If co2_sample == "low"
+DrivingToFarAwayTree location="https://example.com/geojson/tree2.geojson"
+RepeatProcess
+Else
+DrivingToEnd location="https://example.com/geojson/endPoint.geojson"
+EndIf
+EndIf
+EndTask
+EndCompositeTaskInformation
+```
+This format uses a plain text representation of the XML tags, with each element on a new line and indentation used to show hierarchy.
+
+Please try copying and pasting this into a text file or note-taking app, and then saving it as an XML file (or any other format that your parser supports). If you're still experiencing issues, please let me know and I'll be happy to help further!

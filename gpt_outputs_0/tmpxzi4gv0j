@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tasks>
+  <Task id="1">
+    <TaskType>Navigation</TaskType>
+    <Instruction>Navigate to waypoint.</Instruction>
+  </Task>
+  <Task id="2">
+    <TaskType>ImageCapture</TaskType>
+    <Instruction>Take two pictures.</Instruction>
+  </Task>
+  <Task id="3">
+    <TaskType>TemperatureReading</TaskType>
+    <Instruction>Take temperature reading.</Instruction>
+  </Task>
+</Tasks>

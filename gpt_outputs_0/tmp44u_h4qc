@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="RobotMission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="missionName" type="xs:string"/>
+        <xs:element name="steps">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="step">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="location" type="locationType"/>
+                    <xs:element name="action" type="actionType"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:simpleType name="locationType">
+    <xs:attribute name="type" type="xs:string"/>
+    <xs:attribute name="x" type="xs:integer"/>
+    <xs:attribute name="y" type="xs:integer"/>
+  </xs:simpleType>
+  
+  <xs:simpleType name="actionType">
+    <xs:attribute name="type" type="xs:string"/>
+  </xs:simpleType>
+</xs:schema>
+<RobotMission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission.xsd">
+  <missionName>Farm Mission</missionName>
+  <steps>
+    <step>
+      <location type="position" x="10" y="20"/>
+      <action type="takePhoto"/>
+    </step>
+    <step>
+      <location type="position" x="30" y="40"/>
+      <action type="takePhoto"/>
+    </step>
+    <!-- add more steps here -->
+  </steps>
+</RobotMission>

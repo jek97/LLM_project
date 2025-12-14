@@ -1,0 +1,101 @@
+It seems like the issue is with the XML declaration at the top of the file.
+
+Here's an updated version of the XML file with a correct XML declaration:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE missionPlan SYSTEM "missionPlan.xsd">
+<missionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://roboticmissionplan.xsd
+             http://localhost:8080/missionPlan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Take picture of northernmost tree</TaskDescription>
+    <DrivingTask>
+      <DriveTo>
+        <GPSLocation>
+          <Latitude>37.36635688574164</Latitude>
+          <Longitude>-120.42302289785604</Longitude>
+        </GPSLocation>
+      </DriveTo>
+    </DrivingTask>
+    <ActionTask>
+      <TakePicture />
+    </ActionTask>
+  </CompositeTaskInformation>
+
+  <!-- Add references to GeoJSON files for each tree -->
+  <ReferenceTree id="1">
+    <GeoJSONReference>https://example.com/tree1.geojson</GeoJSONReference>
+  </ReferenceTree>
+  <ReferenceTree id="2">
+    <GeoJSONReference>https://example.com/tree2.geojson</GeoJSONReference>
+  </ReferenceTree>
+
+  <!-- Add logging information -->
+  <LoggingInformation>
+    <TaskDescription>Take picture of northernmost tree</TaskDescription>
+    <Outcome>Total estimated haversine distance traveled: 0.00 km</Outcome>
+  </LoggingInformation>
+  <LoggingInformation>
+    <TaskDescription>Take picture of middle of orchard</TaskDescription>
+    <Outcome>Total estimated haversine distance traveled: 0.00 km</Outcome>
+  </LoggingInformation>
+  <LoggingInformation>
+    <TaskDescription>Take picture of eastern end middle and two trees next to each other</TaskDescription>
+    <Outcome>Total estimated haversine distance traveled: 0.00 km</Outcome>
+  </LoggingInformation>
+
+  <!-- XSLT stylesheet -->
+  <?xml-stylesheet type="text/xsl" href="missionPlan.xsd"?>
+</missionPlan>
+```
+However, I noticed that the `<?xml-stylesheet>` declaration is not necessary in this case, as you are already including the XSLT stylesheet at the top of the file.
+
+Here's an updated version of the XML file without the unnecessary `<?xml-stylesheet>` declaration:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE missionPlan SYSTEM "missionPlan.xsd">
+<missionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://roboticmissionplan.xsd
+             http://localhost:8080/missionPlan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Take picture of northernmost tree</TaskDescription>
+    <DrivingTask>
+      <DriveTo>
+        <GPSLocation>
+          <Latitude>37.36635688574164</Latitude>
+          <Longitude>-120.42302289785604</Longitude>
+        </GPSLocation>
+      </DriveTo>
+    </DrivingTask>
+    <ActionTask>
+      <TakePicture />
+    </ActionTask>
+  </CompositeTaskInformation>
+
+  <!-- Add references to GeoJSON files for each tree -->
+  <ReferenceTree id="1">
+    <GeoJSONReference>https://example.com/tree1.geojson</GeoJSONReference>
+  </ReferenceTree>
+  <ReferenceTree id="2">
+    <GeoJSONReference>https://example.com/tree2.geojson</GeoJSONReference>
+  </ReferenceTree>
+
+  <!-- Add logging information -->
+  <LoggingInformation>
+    <TaskDescription>Take picture of northernmost tree</TaskDescription>
+    <Outcome>Total estimated haversine distance traveled: 0.00 km</Outcome>
+  </LoggingInformation>
+  <LoggingInformation>
+    <TaskDescription>Take picture of middle of orchard</TaskDescription>
+    <Outcome>Total estimated haversine distance traveled: 0.00 km</Outcome>
+  </LoggingInformation>
+  <LoggingInformation>
+    <TaskDescription>Take picture of eastern end middle and two trees next to each other</TaskDescription>
+    <Outcome>Total estimated haversine distance traveled: 0.00 km</Outcome>
+  </LoggingInformation>
+
+  <!-- XSLT stylesheet -->
+  <?xml-stylesheet type="text/xsl" href="missionPlan.xsd"?>
+</missionPlan>
+```
+Please try this updated version and let me know if you still encounter any errors.

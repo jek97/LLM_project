@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<element-group>
+  <mission_plan>
+    <!-- Tasks go here -->
+  </mission_plan>
+</element-group>
+
+<element-group>
+  <!-- Define your element groups here -->
+</element-group>
+
+<![CDATA[Mission Plan Structure:]]]
+
+<m mission_plan type="MissionPlanType">
+  <task id="1" type="ImageTaskType" point="(-120.4230..., 37.3663...)" />
+  <!-- Add more tasks as needed -->
+</m>
+
+<group>
+  <!-- Define your groups here -->
+</group>

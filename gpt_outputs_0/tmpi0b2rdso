@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="mission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CompositeTaskInformation">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TaskDescription"/>
+              <xs:element name="tasks">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="task" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="parameters">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="parameter" maxOccurs="unbounded"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

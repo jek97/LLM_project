@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="MissionPlan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="MissionID" type="xs:string"/>
+                <xs:element name="StartTime" type="xs:dateTime"/>
+                <xs:element name="EndTime" type="xs:dateTime"/>
+                <xs:element name="Tasks">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Task" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="TaskID" type="xs:string"/>
+                                        <xs:element name="Description" type="xs:string"/>
+                                        <xs:element name="StartTime" type="xs:dateTime"/>
+                                        <xs:element name="EndTime" type="xs:dateTime"/>
+                                        <xs:element name="Actions">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Action" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="ActionID" type="xs:string"/>
+                                                                <xs:element name="Type" type="xs:string"/>
+                                                                <xs:element name="TargetLocation" type="xs:string" minOccurs="0"/>
+                                                                <xs:element name="TargetObject" type="xs:string" minOccurs="0"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission_plan.xsd">
+    <MissionID>Orchard_Mission_1</MissionID>
+    <StartTime>2023-04-01T10:00:00Z</StartTime>
+    <EndTime>2023-04-01T10:30:00Z</EndTime>
+    <Tasks>
+        <!-- Task 1: Go to the middle of the field and take a picture -->
+        <Task>
+            <TaskID>Task_1</TaskID>
+            <Description>Go to the middle of the field and take a picture of a tree</Description>
+            <StartTime>2023-04-01T10:00:00Z</StartTime>
+            <EndTime>2023-04-01T10:30:00Z</EndTime>
+            <Actions>
+                <Action>
+                    <ActionID>Action_1</ActionID>
+                    <Type>DriveToLocation</Type>
+                    <TargetLocation>MiddleOfField</TargetLocation>
+                </Action>
+                <Action>
+                    <ActionID>Action_2</ActionID>
+                    <Type>TakePicture</Type>
+                    <TargetObject>TreeAtMiddleOfField</TargetObject>
+                </Action>
+            </Actions>
+        </Task>
+
+        <!-- Task 2: Check temperature and take CO2 sample -->
+        <Task>
+            <TaskID>Task_2</TaskID>
+            <Description>Check temperature and take CO2 sample at the middle of the field</Description>
+            <StartTime>2023-04-01T10:30:00Z</StartTime>
+            <EndTime>2023-04-01T11:00:00Z</EndTime>
+            <Actions>
+                <Action>
+                    <ActionID>Action_3</ActionID>
+                    <Type>CheckTemperature</Type>
+                    <TargetObject>TreeAtMiddleOfField</TargetObject>
+                </Action>
+                <Action>
+                    <ActionID>Action_4</ActionID>
+                    <Type>TakeCO2Sample</Type>
+                    <TargetObject>TreeAtMiddleOfField</TargetObject>
+                </Action>
+            </Actions>
+        </Task>
+
+        <!-- Task 3: Go to another random point and repeat -->
+        <Task>
+            <TaskID>Task_3</TaskID>
+            <Description>Go to another random point and take a picture</Description>
+            <StartTime>2023-04-01T11:00:00Z</StartTime>
+            <EndTime>2023-04-01T11:30:00Z</EndTime>
+            <Actions>
+                <Action>
+                    <ActionID>Action_5</ActionID>
+                    <Type>DriveToLocation</Type>
+                    <TargetLocation>RandomPoint5TreesDown</TargetLocation>
+                </Action>
+                <Action>
+                    <ActionID>Action_6</ActionID>
+                    <Type>TakePicture</Type>
+                    <TargetObject>TreeAtRandomPoint5TreesDown</TargetObject>
+                </Action>
+            </Actions>
+        </Task>
+
+        <!-- Task 4: Check temperature and take CO2 sample at the new location -->
+        <Task>
+            <TaskID>Task_4</TaskID>
+            <Description>Check temperature and take CO2 sample at another random point</Description>
+            <StartTime>2023-04-01T11:30:00Z</StartTime>
+            <EndTime>2023-04-01T12:00:00Z</EndTime>
+            <Actions>
+                <Action>
+                    <ActionID>Action_7</ActionID>
+                    <Type>CheckTemperature</Type>
+                    <TargetObject>TreeAtRandomPoint5TreesDown</TargetObject>
+                </Action>
+                <Action>
+                    <ActionID>Action_8</ActionID>
+                    <Type>TakeCO2Sample</Type>
+                    <TargetObject>TreeAtRandomPoint5TreesDown</TargetObject>
+                </Action>
+            </Actions>
+        </Task>
+    </Tasks>
+</MissionPlan>

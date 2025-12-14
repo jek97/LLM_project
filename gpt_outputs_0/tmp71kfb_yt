@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns="http://example.com/schema">
+  <CompositeTaskInformation>
+    <MissionName>Orchard Mission</MissionName>
+    <TaskDescription>Take a picture of the northern most tree, drive to the middle of the orchard and take another, and then drive to the middle of the eastern end and take a picture of two trees next to each other.</TaskDescription>
+    <Tasks>
+      <Task>
+        <TaskType>Take Picture</TaskType>
+        <Parameters>
+          <Parameter>
+            <Name>Location</Name>
+            <Value>-120.42300386899338, 37.366300703749474</Value>
+          </Parameter>
+        </Parameters>
+      </Task>
+      <Task>
+        <TaskType>Drive to Location</TaskType>
+        <Parameters>
+          <Parameter>
+            <Name>Location</Name>
+            <Value>-120.422986947638, 37.3662922961585</Value>
+          </Parameter>
+        </Parameters>
+      </Task>
+      <Task>
+        <TaskType>Take Picture</TaskType>
+        <Parameters>
+          <Parameter>
+            <Name>Location</Name>
+            <Value>-120.423079477561, 37.36633028932054</Value>
+          </Parameter>
+        </Parameters>
+      </Task>
+      <Task>
+        <TaskType>Drive to Location</TaskType>
+        <Parameters>
+          <Parameter>
+            <Name>Location</Name>
+            <Value>-120.423089671755, 37.36637175000564</Value>
+          </Parameter>
+        </Parameters>
+      </Task>
+      <Task>
+        <TaskType>Take Picture</TaskType>
+        <Parameters>
+          <Parameter>
+            <Name>Location</Name>
+            <Value>-120.423078425669, 37.36637215570697</Value>
+          </Parameter>
+        </Parameters>
+      </Task>
+    </Tasks>
+  </CompositeTaskInformation>
+</mission>

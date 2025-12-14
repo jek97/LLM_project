@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <TaskSequence>
+    <Task id="1" type="Drive">
+      <Instruction>Drive to the first tree.</Instruction>
+    </Task>
+    <Task id="2" type="CaptureImage">
+      <Instruction>Take a picture of the tree.</Instruction>
+    </Task>
+    <Task id="3" type="End">
+      <Instruction>Mission Complete.</Instruction>
+    </Task>
+  </TaskSequence>
+</MissionPlan>

@@ -1,0 +1,33 @@
+<missionPlan xmlns="http://www.example.com/missionPlan">
+    <missionHeader>
+        <farmName>Pistachio Orchard</farmName>
+        <plannerName>Mission Planner 1.0</plannerName>
+        <dateTime>2023-04-15T12:30:00-07:00</dateTime>
+    </missionHeader>
+    <compositeTaskInformation>
+        <taskDescription>Requested mission to visit 5 pistachio trees in a row and take pictures of 3 of them from the original question.</taskDescription>
+        <subTasks>
+            <task sequence="1">
+                <moveTo location="{lat: 'coordinate_value', lon: 'coordinate_value'}">Pistachio Tree 1</moveTo>
+                <takePhoto cameraAngle="45"/>
+            </task>
+            <task sequence="2">
+                <moveTo location="{lat: 'coordinate_value', lon: 'coordinate_value'}">Pistachio Tree 2</moveTo>
+                <takePhoto cameraAngle="45"/>
+            </task>
+            <task sequence="3">
+                <moveTo location="{lat: 'coordinate_value', lon: 'coordinate_value'}">Pistachio Tree 3</moveTo>
+                <takePhoto cameraAngle="45"/>
+            </task>
+            <task sequence="4">
+                <moveTo location="{lat: 'coordinate_value', lon: 'coordinate_value'}">Pistachio Tree 4</moveTo>
+                <takePhoto cameraAngle="45"/>
+            </task>
+            <task sequence="5">
+                <moveTo location="{lat: 'coordinate_value', lon: 'coordinate_value'}">Pistachio Tree 5</moveTo>
+                <takePhoto cameraAngle="45"/>
+            </task>
+        </subTasks>
+    </compositeTaskInformation>
+    <outcome estimatedDistanceTraveled="large_distance"/>
+</missionPlan>

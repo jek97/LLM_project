@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RobotMission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission_plan.xsd">
+  <Header>
+    <MissionName>TreePictureAndCo2Reading</MissionName>
+    <RobotName>RoverA</RobotName>
+    <StartTime>2023-05-16T14:30:00Z</StartTime>
+  </Header>
+  <CompositeTaskInformation>
+    <TaskDescription>Original Request: Take a picture of 2 trees next to each other and then take 2 co2 readings of two trees next to each other.</TaskDescription>
+    <SequentialTasks>
+      <!-- Drive to the first tree -->
+      <DriveToLocation>
+        <StartLocation>
+          <Latitude>37.7749</Latitude>
+          <Longitude>-122.4194</Longitude>
+        </StartLocation>
+        <EndLocation>
+          <Latitude>37.7748</Latitude>
+          <Longitude>-122.4195</Longitud>
+        </EndLocation>
+      </DriveToLocation>
+      <!-- Take a picture of the first tree -->
+      <TakePictureTask>
+        <TreeInformation>
+          <TreeID>1</TreeID>
+          <GpsCoordinates>
+            <Latitude>37.7748</Latitude>
+            <Longitude>-122.4195</Longitude>
+          </GpsCoordinates>
+        </TreeInformation>
+      </TakePictureTask>
+      <!-- Drive to the second tree -->
+      <DriveToLocation>
+        <StartLocation>
+          <Latitude>37.7748</Latitude>
+          <Longitude>-122.4195</Longitud>
+        </StartLocation>
+        <EndLocation>
+          <Latitude>37.7748</Latitude>
+          <Longitude>-122.4196</Longitud>
+        </EndLocation>
+      </DriveToLocation>
+      <!-- Take a picture of the second tree -->
+      <TakePictureTask>
+        <TreeInformation>
+          <TreeID>2</TreeID>
+          <GpsCoordinates>
+            <Latitude>37.7748</Latitude>
+            <Longitude>-122.4196</Longitude>
+          </GpsCoordinates>
+        </TreeInformation>
+      </TakePictureTask>
+      <!-- Take a CO2 reading of the first tree -->
+      <Co2ReadingTask>
+        <TreeInformation>
+          <TreeID>1</TreeID>
+          <GpsCoordinates>
+            <Latitude>37.7748</Latitude>
+            <Longitude>-122.4195</Longitude>
+          </GpsCoordinates>
+        </TreeInformation>
+      </Co2ReadingTask>
+      <!-- Drive to the second tree -->
+      <DriveToLocation>
+        <StartLocation>
+          <Latitude>37.7748</Latitude>
+          <Longitude>-122.4196</Longitud>
+        </StartLocation>
+        <EndLocation>
+          <Latitude>37.7748</Latitude>
+          <Longitude>-122.4196</Longitud>
+        </EndLocation>
+      </DriveToLocation>
+      <!-- Take a CO2 reading of the second tree -->
+      <Co2ReadingTask>
+        <TreeInformation>
+          <TreeID>2</TreeID>
+          <GpsCoordinates>
+            <Latitude>37.7748</Latitude>
+            <Longitude>-122.4196</Longitude>
+          </GpsCoordinates>
+        </TreeInformation>
+      </Co2ReadingTask>
+    </SequentialTasks>
+  </CompositeTaskInformation>
+  <Outcome>Completed the mission successfully, covering approximately 50 meters in total.</Outcome>
+</RobotMission>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <MissionName>Farm Inventory & Analysis</MissionName>
+  <Objective>Visit and assess all farm locations.</Objective>
+  <TaskSequence>
+    <Task id="1" priority="High">
+      <LocationId>12</LocationId>
+      <Description>Assess and record data at Location 12.</Description>
+      <Reward>0.85</Reward>  <!-- High reward due to relatively recent sampling -->
+    </Task>
+    <Task id="2" priority="High">
+      <LocationId>15</LocationId>
+      <Description>Analyze data at Location 15.</Description>
+      <Reward>0.80</Reward>
+    </Task>
+    <Task id="3" priority="High">
+      <LocationId>17</LocationId>
+      <Description>Inspect and record data at Location 17.</Description>
+      <Reward>0.75</Reward>
+    </Task>
+    <Task id="4" priority="Medium">
+      <LocationId>19</LocationId>
+      <Description>Analyze data at Location 19.</Description>
+      <Reward>0.65</Reward>
+    </Task>
+    <Task id="5" priority="Medium">
+      <LocationId>1</LocationId>
+      <Description>Record data at Location 1.</Description>
+      <Reward>0.60</Reward>
+    </Task>
+    <Task id="6" priority="Medium">
+      <LocationId>14</LocationId>
+      <Description>Assess Location 14.</Description>
+      <Reward>0.55</Reward>
+    </Task>
+    <Task id="7" priority="Medium">
+      <LocationId>13</LocationId>
+      <Description>Analyze Location 13.</Description>
+      <Reward>0.50</Reward>
+    </Task>
+    <Task id="8" priority="Medium">
+      <LocationId>16</LocationId>
+      <Description>Inspect Location 16.</Description>
+      <Reward>0.45</Reward>
+    </Task>
+    <Task id="9" priority="Low">
+      <LocationId>18</LocationId>
+      <Description>Assess Location 18.</Description>
+      <Reward>0.35</Reward>
+    </Task>
+    <Task id="10" priority="Low">
+      <LocationId>11</LocationId>
+      <Description>Inspect Location 11.</Description>
+      <Reward>0.30</Reward>
+    </Task>
+    <Task id="11" priority="Low">
+      <LocationId>10</LocationId>
+      <Description>Inspect Location 10.</Description>
+      <Reward>0.25</Reward>
+    </Task>
+    <Task id="12" priority="Low">
+      <LocationId>2</LocationId>
+      <Description>Inspect Location 2.</Description>
+      <Reward>0.20</Reward>
+    </Task>
+    <Task id="13" priority="Low">
+      <LocationId>9</LocationId>
+      <Description>Inspect Location 9.</Description>
+      <Reward>0.15</Reward>
+    </Task>
+    <Task id="14" priority="Low">
+      <LocationId>8</LocationId>
+      <Description>Inspect Location 8.</Description>
+      <Reward>0.10</Reward>
+    </Task>
+    <Task id="15" priority="Low">
+      <LocationId>7</LocationId>
+      <Description>Inspect Location 7.</Description>
+      <Reward>0.05</Reward>
+    </Task>
+    <Task id="16" priority="Low">
+      <LocationId>6</LocationId>
+      <Description>Inspect Location 6.</Description>
+      <Reward>0.02</Reward>
+    </Task>
+    <Task id="17" priority="Low">
+      <LocationId>5</LocationId>
+      <Description>Inspect Location 5.</Description>
+      <Reward>0.01</Reward>
+    </Task>
+    <Task id="18" priority="Low">
+      <LocationId>4</LocationId>
+      <Description>Inspect Location 4.</Description>
+      <Reward>0.005</Reward>
+    </Task>
+    <Task id="19" priority="Low">
+      <LocationId>3</LocationId>
+      <Description>Inspect Location 3.</Description>
+      <Reward>0.002</Reward>
+    </Task>
+    <Task id="20" priority="Low">
+      <LocationId>2</LocationId>
+      <Description>Inspect Location 2.</Description>
+      <Reward>0.001</Reward>
+    </Task>
+  </TaskSequence>
+  <Outcome>
+    <TotalDistance>1500 meters</TotalDistance>
+  </Outcome>
+</MissionPlan>

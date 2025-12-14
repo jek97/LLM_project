@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <Task id="1" type="Drive">
+    <Instruction>Drive to the first tree.</Instruction>
+  </Task>
+</MissionPlan>

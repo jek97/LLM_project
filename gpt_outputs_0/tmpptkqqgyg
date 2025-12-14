@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Robotic mission to visit and photograph all trees within a 100-meter radius.  Prioritize visiting all points within the provided GeoJSON data.
+    </TaskDescription>
+    <Tasks>
+      <Task id="task_1">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="waypoint_1" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+        <Action>Navigate to waypoint_1</Action>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="task_2">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="waypoint_2" latitude="37.36626996761184" longitude="-120.42298051393493"/>
+        <Action>Navigate to waypoint_2</Action>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="task_3">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="waypoint_3" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+        <Action>Navigate to waypoint_3</Action>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="task_4">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="waypoint_4" latitude="37.36626996761184" longitude="-120.42298051393493"/>
+        <Action>Navigate to waypoint_4</Action>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="task_5">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="waypoint_6" latitude="37.36635678715399" longitude="-120.42299259529793"/>
+        <Action>Navigate to waypoint_6</Action>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="task_7">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="waypoint_8" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+        <Action>Navigate to waypoint_8</Action>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="task_9">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="waypoint_11" latitude="37.36635640370881" longitude="-120.423044218715"/>
+        <Action>Navigate to waypoint_11</Action>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="task_13">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="waypoint_14" latitude="37.366304880110526" longitude="-120.4230246791031"/>
+        <Action>Navigate to waypoint_14</Action>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="task_15">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="waypoint_17" latitude="37.36628908556382" longitude="-120.42298051393493"/>
+        <Action>Navigate to waypoint_17</Action>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="task_18">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="waypoint_21" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+        <Action>Navigate to waypoint_21</Action>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="task_20">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="waypoint_24" latitude="37.36635678715399" longitude="-120.42299259529793"/>
+        <Action>Navigate to waypoint_24</Action>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+    </Tasks>
+  </TaskSet>

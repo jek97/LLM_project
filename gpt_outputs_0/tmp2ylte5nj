@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <MissionID>1</MissionID>
+  <MissionName>Tree Monitoring Mission</MissionName>
+  <StartDate>2023-04-01T00:00:00Z</StartDate>
+  <EndDate>2023-04-01T05:00:00Z</EndDate>
+  <MissionStatus>Not Started</MissionStatus>
+  
+  <TaskList>
+    <Task>
+      <TaskID>1</TaskID>
+      <TaskName>Take a picture of the first tree.</TaskName>
+      <StartDate>2023-04-01T00:00:00Z</StartDate>
+      <EndDate>2023-04-01T00:05:00Z</EndDate>
+      <Location>
+        <Latitude>47.6568</Latitude>
+        <Longitude>-122.3281</Longitude>
+      </Location>
+      <SensorList>
+        <Camera/>
+      </SensorList>
+    </Task>
+
+    <Task>
+      <TaskID>2</TaskID>
+      <TaskName>Check CO2 levels at the first tree.</TaskName>
+      <StartDate>2023-04-01T00:05:00Z</StartDate>
+      <EndDate>2023-04-01T00:10:00Z</EndDate>
+      <Location>
+        <Latitude>47.6568</Latitude>
+        <Longitude>-122.3281</Longitude>
+      </Location>
+      <SensorList>
+        <CO2Sensor/>
+      </SensorList>
+    </Task>
+
+    <Task>
+      <TaskID>3</TaskID>
+      <TaskName>Measure temperature at the first tree.</TaskName>
+      <StartDate>2023-04-01T00:15:00Z</StartDate>
+      <EndDate>2023-04-01T00:20:00Z</EndDate>
+      <Location>
+        <Latitude>47.6568</Latitude>
+        <Longitude>-122.3281</Longitude>
+      </Location>
+      <SensorList>
+        <TemperatureSensor/>
+      </SensorList>
+    </Task>
+
+    <Task>
+      <TaskID>4</TaskID>
+      <TaskName>Take a picture of the second tree.</TaskName>
+      <StartDate>2023-04-01T00:25:00Z</StartDate>
+      <EndDate>2023-04-01T00:30:00Z</EndDate>
+      <Location>
+        <Latitude>47.6568</Latitude>
+        <Longitude>-122.3281</Longitude>
+      </Location>
+      <SensorList>
+        <Camera/>
+      </SensorList>
+    </Task>
+
+    <Task>
+      <TaskID>5</TaskID>
+      <TaskName>Check CO2 levels at the second tree.</TaskName>
+      <StartDate>2023-04-01T00:35:00Z</StartDate>
+      <EndDate>2023-04-01T00:40:00Z</EndDate>
+      <Location>
+        <Latitude>47.6568</Latitude>
+        <Longitude>-122.3281</Longitude>
+      </Location>
+      <SensorList>
+        <CO2Sensor/>
+      </SensorList>
+    </Task>
+
+    <Task>
+      <TaskID>6</TaskID>
+      <TaskName>Drive to the next location.</TaskName>
+      <StartDate>2023-04-01T00:45:00Z</StartDate>
+      <EndDate>2023-04-01T00:50:00Z</EndDate>
+      <Location>
+        <Latitude>47.6568</Latitude>
+        <Longitude>-122.3281</Longitude>
+      </Location>
+    </Task>
+
+    <Task>
+      <TaskID>7</TaskID>
+      <TaskName>End of mission.</TaskName>
+      <StartDate>2023-04-01T00:55:00Z</StartDate>
+      <EndDate>2023-04-01T01:00:00Z</EndDate>
+    </Task>
+
+  </TaskList>
+
+</MissionPlan>

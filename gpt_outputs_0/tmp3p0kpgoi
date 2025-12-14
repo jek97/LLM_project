@@ -1,0 +1,51 @@
+<Mission>
+    <MissionInformation>
+        <MissionID>1</MissionID>
+        <StartTime>2023-04-01T09:00:00Z</StartTime>
+        <EndTime>2023-04-01T17:00:00Z</EndTime>
+    </MissionInformation>
+    <CompositeTaskInformation>
+        <TaskID>1</TaskID>
+        <TaskDescription>Select 5 pistachio trees in a row to visit and take a picture of 3 of them (GeoJSON provided)</TaskDescription>
+        <SubTasks>
+            <Task>
+                <TaskID>2</TaskID>
+                <TaskType>DriveToLocation</TaskType>
+                <Location>
+                    <Latitude>37.36635678715399</Latitude>
+                    <Longitude>-120.42299259529793</Longitude>
+                </Location>
+            </Task>
+            <Task>
+                <TaskID>3</TaskID>
+                <TaskType>TakePicture</TaskType>
+                <Location>
+                    <Latitude>37.36635678715399</Latitude>
+                    <Longitude>-120.42299259529793</Longitude>
+                </Location>
+            </Task>
+            <!-- Repeat the following tasks for the next 4 trees -->
+            <Task>
+                <TaskID>4</TaskID>
+                <TaskType>DriveToLocation</TaskType>
+                <Location>
+                    <Latitude>37.36635678715399</Latitude>
+                    <Longitude>-120.42299259529793 + 5 meters</Longitude>
+                </Location>
+            </Task>
+            <Task>
+                <TaskID>5</TaskID>
+                <TaskType>TakePicture</TaskType>
+                <Location>
+                    <Latitude>37.36635678715399</Latitude>
+                    <Longitude>-120.42299259529793 + 5 meters</Longitude>
+                </Location>
+            </Task>
+            <!-- ... -->
+        </SubTasks>
+    </CompositeTaskInformation>
+    <Outcome>
+        <EstimatedDistance>Approximately X miles</EstimatedDistance>
+        <Status>Successful</Status>
+    </Outcome>
+</Mission>

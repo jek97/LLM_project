@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robotictaskrepresentation.org/schema/missionplan.xsd 
+                                 http://robotictaskrepresentation.org/schema/missionplan.xsd">
+  <MissionPlan xmlns="http://robotictaskrepresentation.org/schema/missionplan.xsd">
+    <!-- mission plan content here -->
+  </MissionPlan>
+</MissionPlan>

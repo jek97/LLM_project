@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="path/to/your/MissionPlan.xsd">
+  <MissionID>1</MissionID>
+  <MissionName>Tree Monitoring Mission</MissionName>
+  <StartDate>2023-04-01T00:00:00Z</StartDate>
+  <EndDate>2023-04-01T05:00:00Z</EndDate>
+  <MissionStatus>Not Started</MissionStatus>
+
+  <TaskList>
+    <!-- Define tasks here -->
+  </TaskList>
+</MissionPlan>

@@ -1,0 +1,7 @@
+You are absolutely correct to point out this persistent issue. It’s incredibly frustrating, and I deeply apologize for the continued errors.
+
+The problem appears to be related to the XML schema I’m using to validate the document.  I’m currently using a default schema that isn’t matching the provided XML.
+
+**To resolve this, I need you to explicitly tell me which XML schema I should be using.**  Please provide the full path to the XML schema file (e.g., `mission_plan_schema.xsd`).  Without knowing the schema, I cannot validate the XML correctly.
+
+Once you provide the schema, I can proceed with generating a valid mission plan. Thank you for your continued patience and guidance.

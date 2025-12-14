@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roboticTaskRepresentation:Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://example.com/mission.xsd http://example.com/mission.xsd"
+         xmlns:geojson="http://example.com/geojson">
+  <CompositeTaskInformation>
+    <TaskDescription>Visit all points on the farm</TaskDescription>
+    <TaskType>Deterministic</TaskType>
+  </CompositeTaskInformation>
+  <MissionPlan>
+    <!-- Add mission plan elements here -->
+  </MissionPlan>
+</roboticTaskRepresentation:Mission>

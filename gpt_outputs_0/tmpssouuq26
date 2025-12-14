@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GeoJSON>
+  <features>
+    <feature id="0" type="Point">
+      <properties>
+        <id>0</id>
+        <action>0</action>
+      </properties>
+    </feature>
+    <feature id="4" type="Point">
+      <properties>
+        <id>4</id>
+        <action>0</action>
+      </properties>
+    </feature>
+    <feature id="8" type="Point">
+      <properties>
+        <id>8</id>
+        <action>0</action>
+      </properties>
+    </feature>
+  </features>
+</GeoJSON>
+
+<mission xmlns:ns="http://ns.efforcedemo.org/mission"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://ns.efforcedemo.org/mission
+                                http://ns.efforcedemo.org/mission.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to select pistachio trees in a row and take pictures</TaskDescription>
+    <StartPoint xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+                 id="0"/>
+  </CompositeTaskInformation>
+</mission>

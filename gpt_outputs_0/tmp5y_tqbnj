@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<declare xmlns="http://www.yourcompany.com/missionplan">
+    <MISSIONPLAN type="string" />
+</declare>
+<MISSIONPLAN>
+    <!-- Mission plan element -->
+    <Action type="string" />
+    <!-- More mission plan elements -->
+</MISSIONPLAN>
+<!-- Extra content here -->

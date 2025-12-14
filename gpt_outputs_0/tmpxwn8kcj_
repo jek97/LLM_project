@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <task name="start">
+        <sub-task id="1">
+            <navigation move-to-command>move_to(0, 0, 30)</navigation>
+            <action action-type="navigate">navigate_to(0, 0, 45)</action>
+            <sensor-reading>read-sensor-data</sensor-reading>
+            <task-result>success</task-result>
+        </sub-task>
+    </task>
+
+    <!-- Navigation from North to East -->
+    <task name="navigate-north-to-east">
+        <navigation move-to-command>move_to(10, 50, 30)</navigation>
+        <action action-type="navigate">navigate_to(10, 50, 45)</action>
+        <sensor-reading>read-sensor-data</sensor-reading>
+        <task-result>success</task-result>
+    </task>
+
+    <!-- Navigation from East to South -->
+    <task name="navigate-east-to-south">
+        <navigation move-to-command>move_to(10, 45, 30)</navigation>
+        <action action-type="navigate">navigate_to(10, 45, 45)</action>
+        <sensor-reading>read-sensor-data</sensor-reading>
+        <task-result>success</task-result>
+    </task>
+
+    <!-- Navigation from South to West -->
+    <task name="navigate-south-to-west">
+        <navigation move-to-command>move_to(10, 40, 30)</navigation>
+        <action action-type="navigate">navigate_to(10, 40, 45)</action>
+        <sensor-reading>read-sensor-data</sensor-reading>
+        <task-result>success</task-result>
+    </task>
+
+    <!-- Final Task -->
+    <task name="final-task">
+        <sub-task id="2">
+            <navigation move-to-command>move_to(0, 45, 30)</navigation>
+            <action action-type="navigate">navigate_to(0, 45, 45)</action>
+            <sensor-reading>read-sensor-data</sensor-reading>
+            <task-result>success</task-result>
+        </sub-task>
+    </task>
+
+    <!-- Finalize Mission -->
+    <finalization action="end-mission"/>
+</mission>

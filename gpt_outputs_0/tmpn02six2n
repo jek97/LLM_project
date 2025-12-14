@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robustrobotics.com/mission-plan schema.xsd">
+    <CompositeTaskInformation>
+        <!-- Task to drive to a tree -->
+        <Task id="DriveToTree" type="DrivingTask"/>
+        
+        <!-- Task to take pictures of nearby trees if cos low reading -->
+        <Task id="TakeNearbyPictures" type="PictureTakingTask">
+            <TaskParameter name="cosThreshold" value="0.1"/>
+            <NextTaskRef>DriveToTree</NextTaskRef>
+        </Task>
+        
+        <!-- Task to measure another tree as far away as possible for CO2 -->
+        <Task id="MeasureFarTree" type="CO2MeasurementTask">
+            <NextTaskRef>DriveToTree</NextTaskRef>
+        </Task>
+        
+        <!-- Task to repeat the same process if necessary -->
+        <Task id="RepeatProcess" type="LoopTask">
+            <TaskParameter name="numIterations" value="1"/>
+            <TaskSequence>
+                <NextTaskRef id="TakeNearbyPictures"/>
+                <NextTaskRef id="MeasureFarTree"/>
+            </TaskSequence>
+        </Task>
+        
+        <!-- Task to take a temperature reading at any one of the northernmost trees -->
+        <Task id="TakeTemperature" type="ThermalReadingTask">
+            <NextTaskRef>RepeatProcess</NextTaskRef>
+        </Task>
+        
+        <!-- Task to drive back to the end point -->
+        <Task id="DriveToEnd" type="DrivingTask"/>
+    </CompositeTaskInformation>
+
+    <DrivingTaskInfo>
+        <startLocation ref="#StartingPoint"/>
+        <endLocation ref="#EndPoint"/>
+        < estimatedTravelDistance>0.5</estimatedTravelDistance>
+    </DrivingTaskInfo>
+
+    <!-- References for tree measurements -->
+    <TreeMeasurementReference>
+        <tree id="Tree1" coordinates="-120.42302289785604, 37.36635688574164"/>
+        <tree id="Tree2" coordinates="-120.42309252722157, 37.36631509745154"/>
+        <!-- ... add references for all trees in the orchard ... -->
+    </TreeMeasurementReference>
+
+    <TaskInformation id="StartingPoint">
+        <description>Start point</description>
+    </TaskInformation>
+
+    <TaskInformation id="EndPoint">
+        <description>End point</description>
+    </TaskInformation>
+
+    <TaskInformation id="EndingTemperature">
+        <description>Taken at Northernmost Tree</description>
+    </TaskInformation>
+
+    <!-- Add more details as needed (e.g., sensor calibration, error handling) -->
+</MissionPlan>

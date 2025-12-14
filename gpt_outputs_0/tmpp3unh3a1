@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan">
+    <Steps>
+        <Step id="1">
+            <Action>NavigateTo</Action>
+            <Target>PistachioTree1</Target>
+        </Step>
+    </Steps>
+</MissionPlan>

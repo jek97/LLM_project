@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+    <xs:element name="CompositeTaskInformation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="FeatureCollection" type="FeatureCollectionType"/>
+                <xs:element name="DrivingTask" type="DrivingTaskType"/>
+                <!-- ... other elements ... -->
+                <xs:element name="LoopTask" type="LoopTaskType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="FeatureCollectionType">
+        <xs:sequence>
+            <xs:element name="Feature" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DrivingTaskType">
+        <xs:attribute name="id" type="xs:string"/>
+        <xs:attribute name="type" type="xs:string"/>
+        <xs:element name="startLocation" type="LocationType"/>
+        <xs:element name="endLocation" type="LocationType"/>
+        <!-- ... other attributes and elements ... -->
+    </xs:complexType>
+
+    <xs:complexType name="LoopTaskType">
+        <xs:sequence>
+            <xs:element name="DrivingTask" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="LocationType">
+        <xs:simpleContent>
+            <xs:extension base="Point">
+                <xs:attribute name="coordinates" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+</xs:schema>
+
+<CompositeTaskInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              xsi:noNamespaceSchemaLocation="composite_task_information.xsd">
+    <FeatureCollection>
+        <!-- Feature for starting point -->
+        <Feature>
+            <Name>Starting Point</Name>
+            <Coordinate>
+                <x>0</x>
+                <y>0</y>
+            </Coordinate>
+        </Feature>
+        <!-- ... other features ... -->
+    </FeatureCollection>
+    <DrivingTask id="task1" type="Drive">
+        <startLocation>
+            <coordinates>0, 0</coordinates>
+        </startLocation>
+        <endLocation>
+            <coordinates>10, 10</coordinates>
+        </endLocation>
+    </DrivingTask>
+    <!-- ... other elements ... -->
+    <LoopTask id="loop1">
+        <DrivingTask id="task2" type="Drive"/>
+        <DrivingTask id="task3" type="Drive"/>
+    </LoopTask>
+</CompositeTaskInformation>

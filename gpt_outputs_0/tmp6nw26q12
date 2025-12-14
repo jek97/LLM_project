@@ -1,0 +1,7 @@
+<m Missions>
+  <m MissionType="Picture" Name="Capture Picture of Northern Most Tree">
+    <t TaskType="Picture">Take a photo at the northernmost tree location.</t>
+  </m>
+
+  <!-- More mission steps follow... -->
+</m Missions>

@@ -1,0 +1,41 @@
+<Mission>
+    <CompositeTaskInformation>
+        <TaskDescription>Generate a clockwise image sequence of 4 trees from north to south. Start with the northernmost tree.</TaskDescription>
+        <Tasks>
+            <Task>
+                <TaskID>1</TaskID>
+                <ActionType>Drive</ActionType>
+                <StartLocation>
+                    <GPS>
+                        <Latitude>37.36635678715399</Latitude>
+                        <Longitude>-120.42299259529793</Longitude>
+                    </GPS>
+                </StartLocation>
+                <EndLocation>
+                    <!-- Leave empty as the end location is defined in the next task -->
+                </EndLocation>
+            </Task>
+            <Task>
+                <TaskID>2</TaskID>
+                <ActionType>TakePicture</ActionType>
+                <StartLocation>
+                    <!-- Provide the GPS location of the tree to be photographed -->
+                    <GPS>
+                        <Latitude>37.36635678715399</Latitude>
+                        <Longitude>-120.42299259529793</Longitude>
+                    </GPS>
+                </StartLocation>
+                <EndLocation>
+                    <!-- Define the next task's start location -->
+                    <GPS>
+                        <Latitude>37.366304880110526</Latitude>
+                        <Longitude>-120.4230246791031</Longitude>
+                    </GPS>
+                </EndLocation>
+            </Task>
+            <!-- Repeat the above pattern for the remaining tasks -->
+            ...
+        </Tasks>
+    </CompositeTaskInformation>
+    <Outcome>The mission was successful. The robot traveled a reasonable distance and captured images of the specified trees in the desired order.</Outcome>
+</Mission>

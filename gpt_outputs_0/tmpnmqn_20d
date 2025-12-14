@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/schemas"
+           xmlns="http://example.com/schemas"
+           elementFormDefault="qualified">
+
+    <!-- Define complex types -->
+    <xs:complexType name="Location">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="latitude" type="xs:float"/>
+                <xs:attribute name="longitude" type="xs:float"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="TaskParameters">
+        <xs:sequence>
+            <xs:element name="latitude" type="xs:float"/>
+            <xs:element name="longitude" type="xs:float"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Define elements -->
+    <xs:element name="MissionPlan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="MissionID" type="xs:string"/>
+                <xs:element name="MissionName" type="xs:string"/>
+                <xs:element name="TaskDescription" type="xs:string"/>
+                <xs:element name="StartLocation" type="Location"/>
+                <xs:element name="Tasks">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Task" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="TaskID" type="xs:string"/>
+                                        <xs:element name="Action" type="xs:string"/>
+                                        <xs:element name="Parameters" type="TaskParameters" minOccurs="0"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="EndLocation" type="Location"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
+
+<MissionPlan xmlns="http://example.com/schemas">
+    <MissionID>12345</MissionID>
+    <MissionName>Select Pistachio Trees</MissionName>
+    <TaskDescription>From the farm, select 5 pistachio trees in a row to visit and take a picture of 3 of them.</TaskDescription>
+    <StartLocation latitude="-120.42302289785604" longitude="37.36631785560332"/>
+    <Tasks>
+        <Task>
+            <TaskID>task_1</TaskID>
+            <Action>DriveToLocation</Action>
+            <Parameters>
+                <latitude>-120.42302289785604</latitude>
+                <longitude>37.36631785560332</longitude>
+            </Parameters>
+        </Task>
+        <Task>
+            <TaskID>task_2</TaskID>
+            <Action>TakePicture</Action>
+        </Task>
+        <!-- Add more tasks as needed -->
+    </Tasks>
+    <EndLocation latitude="-120.42302289785604" longitude="37.36631785560332"/>
+</MissionPlan>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://robust-mission-planning.com/missionPlanningSchema.xsd"
+           elementFormDefault="qualified">
+    <xs:element name="Mission">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="TaskInformation" type="task:CompositeTaskInformation"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="CompositeTaskInformation">
+        <xs:sequence>
+            <xs:element name="TaskDescription" type="task:TaskDescription"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TaskDescription">
+        <xs:sequence>
+            <xs:element name="TaskType" type="xs:string"/>
+            <xs:element name="Action" type="xs:string"/>
+            <xs:element name="Outcome">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="DrivingToLocation" type="task:DrivingToLocation"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DrivingToLocation">
+        <xs:sequence>
+            <xs:element name="GPSLocation" type="task:GPSLocation"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="GPSLocation">
+        <xs:sequence>
+            <xs:element name="Latitude" type="xs:string"/>
+            <xs:element name="Longitude" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

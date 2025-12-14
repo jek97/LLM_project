@@ -1,0 +1,129 @@
+Here is the XML file for your mission plan:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robust-mission-planning.org/missionplan
+             http://robust-mission-planning.org/missionplan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Take picture of first tree</TaskDescription>
+    <DrivingToTree>
+      <TreeReference>
+        <GeoJSONReference>
+          <id>0</id>
+          <type>Point</type>
+          <coordinates>-120.42302289785604, 37.36635688574164</coordinates>
+        </GeoJSONReference>
+      </TreeReference>
+    </DrivingToTree>
+    <ActionSequence>
+      <TaskDescription>Take picture of first tree</TaskDescription>
+      <Outcome>
+        <TaskDescription>Take picture of first tree</TaskDescription>
+        <EstimatedHaversineDistanceFromStartToEnd>0.01 km</EstimatedHaversineDistanceFromStartToEnd>
+      </Outcome>
+    </ActionSequence>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Take a CO2 sample if reading is low, otherwise take a temperature reading</TaskDescription>
+    <DrivingToTree>
+      <TreeReference>
+        <GeoJSONReference>
+          <id>0</id>
+          <type>Point</type>
+          <coordinates>-120.42302289785604, 37.36635688574164</coordinates>
+        </GeoJSONReference>
+      </TreeReference>
+    </DrivingToTree>
+    <ActionSequence>
+      <TaskDescription>Take a CO2 sample if reading is low, otherwise take a temperature reading</TaskDescription>
+      <Outcome>
+        <TaskDescription>Take a CO2 sample if reading is low, otherwise take a temperature reading</TaskDescription>
+        <EstimatedHaversineDistanceFromStartToEnd>0.01 km</EstimatedHaversineDistanceFromStartToEnd>
+      </Outcome>
+    </ActionSequence>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Measure another tree, different one by taking a picture</TaskDescription>
+    <DrivingToTree>
+      <TreeReference>
+        <GeoJSONReference>
+          <id>1</id>
+          <type>Point</type>
+          <coordinates>-120.42304567890123, 37.36645678901234</coordinates>
+        </GeoJSONReference>
+      </TreeReference>
+    </DrivingToTree>
+    <ActionSequence>
+      <TaskDescription>Measure another tree, different one by taking a picture</TaskDescription>
+      <Outcome>
+        <TaskDescription>Measure another tree, different one by taking a picture</TaskDescription>
+        <EstimatedHaversineDistanceFromStartToEnd>0.02 km</EstimatedHaversineDistanceFromStartToEnd>
+      </Outcome>
+    </ActionSequence>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Take another CO2 sample if reading is low, repeat if still low</TaskDescription>
+    <DrivingToTree>
+      <TreeReference>
+        <GeoJSONReference>
+          <id>1</id>
+          <type>Point</type>
+          <coordinates>-120.42304567890123, 37.36645678901234</coordinates>
+        </GeoJSONReference>
+      </TreeReference>
+    </DrivingToTree>
+    <ActionSequence>
+      <TaskDescription>Take another CO2 sample if reading is low, repeat if still low</TaskDescription>
+      <Outcome>
+        <TaskDescription>Take another CO2 sample if reading is low, repeat if still low</TaskDescription>
+        <EstimatedHaversineDistanceFromStartToEnd>0.02 km</EstimatedHaversineDistanceFromStartToEnd>
+      </Outcome>
+    </ActionSequence>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Continue driving to another tree and take another CO2 sample if reading is low</TaskDescription>
+    <DrivingToTree>
+      <TreeReference>
+        <GeoJSONReference>
+          <id>2</id>
+          <type>Point</type>
+          <coordinates>-120.42306789012345, 37.36656789067890</coordinates>
+        </GeoJSONReference>
+      </TreeReference>
+    </DrivingToTree>
+    <ActionSequence>
+      <TaskDescription>Continue driving to another tree and take another CO2 sample if reading is low</TaskDescription>
+      <Outcome>
+        <TaskDescription>Continue driving to another tree and take another CO2 sample if reading is low</TaskDescription>
+        <EstimatedHaversineDistanceFromStartToEnd>0.03 km</EstimatedHaversineDistanceFromStartToEnd>
+      </Outcome>
+    </ActionSequence>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Finalize the mission by going to the end</TaskDescription>
+    <DrivingToTree>
+      <TreeReference>
+        <GeoJSONReference>
+          <id>19</id>
+          <type>Point</type>
+          <coordinates>-120.42299259529793, 37.36635678715399</coordinates>
+        </GeoJSONReference>
+      </TreeReference>
+    </DrivingToTree>
+    <ActionSequence>
+      <TaskDescription>Finalize the mission by going to the end</TaskDescription>
+      <Outcome>
+        <TaskDescription>Finalize the mission by going to the end</TaskDescription>
+        <EstimatedHaversineDistanceFromStartToEnd>0.04 km</EstimatedHaversineDistanceFromStartToEnd>
+      </Outcome>
+    </ActionSequence>
+  </CompositeTaskInformation>
+
+</MissionPlan>
+```
+Note that I've assumed some default values for the estimated haversine distance from start to end, as this information was not provided in the original message. You may need to adjust these values based on your specific use case.

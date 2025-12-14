@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission-plan xmlns="http://example.com/missionplan">
+    <title>Orchard Exploration Mission</title>
+    
+    <!-- Start and end points (to be specified) -->
+    <start-point>START(0,0)</start-point>
+    
+    <!-- Waypoints for visiting trees -->
+    <waypoints>
+        <!-- Waypoint 1: Near tree ID 1 -->
+        <waypoint id="1">
+            <coordinates decimal="true">-120.423085675,37.36639350</coordinates>
+            <status>active</status>
+        </waypoint>
+
+        <!-- Waypoint 2: Near tree ID 2 -->
+        <waypoint id="2">
+            <coordinates decimal="true">-120.4230817,37.3663951</coordinates>
+            <status>active</status>
+        </waypoint>
+
+        <!-- Waypoint 3: Near tree ID 3 -->
+        <waypoint id="3">
+            <coordinates decimal="true">-120.423085,37.366392</coordinates>
+            <status>active</status>
+        </waypoint>
+
+        <!-- Continue adding waypoints for all trees within range -->
+    </waypoints>
+
+    <!-- Mission duration (to be specified) -->
+    <mission-duration>1200</mission-duration> <!-- in seconds -->
+
+    <!-- Other mission parameters (to be specified) -->
+</mission-plan>

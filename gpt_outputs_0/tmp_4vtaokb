@@ -1,0 +1,85 @@
+<Mission xmlns="http://www.example.com/mission-plan">
+    <MissionInformation>
+        <MissionName>TreePictureAndCO2Reading</MissionName>
+        <StartTime>YYYY-MM-DDThh:mm:ssZ</StartTime>
+        <EndTime>YYYY-MM-DDThh:mm:ssZ</EndTime>
+    </MissionInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>Take a picture of 2 trees next to each other and then take 2 CO2 readings of two trees next to each other.</TaskDescription>
+        <Tasks>
+            <Task>
+                <TaskID>1</TaskID>
+                <TaskType>DriveToLocation</TaskType>
+                <Parameters>
+                    <Parameter name="Destination">
+                        <GPSLocation>
+                            <Latitude>LATITUDE_VALUE</Latitude>
+                            <Longitude>LONGITUDE_VALUE</Longitude>
+                        </GPSLocation>
+                    </Parameter>
+                </Parameters>
+            </Task>
+            <Task>
+                <TaskID>2</TaskID>
+                <TaskType>TakePicture</TaskType>
+                <Parameters>
+                    <Parameter name="Subject">
+                        <Tree>
+                            <ID>TREE_ID_1</ID>
+                            <Type>TREE_TYPE_1</Type>
+                        </Tree>
+                    </Parameter>
+                </Parameters>
+            </Task>
+            <Task>
+                <TaskID>3</TaskID>
+                <TaskType>DriveToLocation</TaskType>
+                <Parameters>
+                    <Parameter name="Destination">
+                        <GPSLocation>
+                            <Latitude>LATITUDE_VALUE</Latitude>
+                            <Longitude>LONGITUDE_VALUE</Longitude>
+                        </GPSLocation>
+                    </Parameter>
+                </Parameters>
+            </Task>
+            <Task>
+                <TaskID>4</TaskID>
+                <TaskType>TakeCO2Reading</TaskType>
+                <Parameters>
+                    <Parameter name="Subject">
+                        <Tree>
+                            <ID>TREE_ID_1</ID>
+                            <Type>TREE_TYPE_1</Type>
+                        </Tree>
+                    </Parameter>
+                </Parameters>
+            </Task>
+            <Task>
+                <TaskID>5</TaskID>
+                <TaskType>DriveToLocation</TaskType>
+                <Parameters>
+                    <Parameter name="Destination">
+                        <GPSLocation>
+                            <Latitude>LATITUDE_VALUE</Latitude>
+                            <Longitude>LONGITUDE_VALUE</Longitude>
+                        </GPSLocation>
+                    </Parameter>
+                </Parameters>
+            </Task>
+            <Task>
+                <TaskID>6</TaskID>
+                <TaskType>TakeCO2Reading</TaskType>
+                <Parameters>
+                    <Parameter name="Subject">
+                        <Tree>
+                            <ID>TREE_ID_2</ID>
+                            <Type>TREE_TYPE_2</Type>
+                        </Tree>
+                    </Parameter>
+                </Parameters>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+    <!-- Comment the total estimated haversine distance traveled from start to end here -->
+</Mission>

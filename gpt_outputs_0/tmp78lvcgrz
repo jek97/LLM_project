@@ -1,0 +1,23 @@
+<mission>
+  <task name="Take a picture of the first tree">
+    <action name="Picture" />
+  </task>
+  <task name="Measure CO2">
+    <condition name="CO2 reading is low" />
+    <action name="CO2 sample" />
+  </task>
+  <task name="Take a temperature reading">
+    <condition name="Temperature reading is normal" />
+    <action name="Picture" />
+  </task>
+  <task name="Drive to next tree">
+    <condition name="CO2 reading is low" />
+    <action name="Take another CO2 sample" />
+    <condition name="Confirmation of previous CO2 readings are low" />
+    <action name="Continue driving to another tree" />
+  </task>
+  <task name="Finaly, go to end">
+    <condition name="All necessary tasks completed" />
+    <action name="End mission" />
+  </task>
+</mission>

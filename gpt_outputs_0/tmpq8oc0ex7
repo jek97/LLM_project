@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompositeTaskInformation xmlns:ro="http://robotic-task-representation.org/mission/4.0"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xsi:schemaLocation="http://robotic-task-representation.org/mission/4.0 
+   http://robotic-task-representation.org/mission/mission.xsd">
+  <!-- ... -->
+</CompositeTaskInformation>

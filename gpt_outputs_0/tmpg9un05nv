@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RobustMissionPlan xmlns:robust-mission-plan="http://example.com/robust-mission-plan"
+                   targetNamespace="http://example.com/robust-mission-plan">
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the first pistachio tree and take a picture of 3 trees in a row</TaskDescription>
+        <Action>
+            <DrivingToTree>
+                <LocationRef>orchard/0</LocationRef>
+                <GPSLatitude>37.36635688574164</GPSLatitude>
+                <GPSLongitude>-120.42302289785604</GPSLongitude>
+            </DrivingToTree>
+            <PictureTaking>
+                <TreeIDs>0,1,2</TreeIDs>
+            </PictureTaking>
+        </Action>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the second pistachio tree and take a picture of 3 trees in a row</TaskDescription>
+        <Action>
+            <DrivingToTree>
+                <LocationRef>orchard/1</LocationRef>
+                <GPSLatitude>37.36631509745154</GPSLatitude>
+                <GPSLongitude>-120.42309252722157</GPSLongitude>
+            </DrivingToTree>
+            <PictureTaking>
+                <TreeIDs>1,2,3</TreeIDs>
+            </PictureTaking>
+        </Action>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the third pistachio tree and take a picture of 3 trees in a row</TaskDescription>
+        <Action>
+            <DrivingToTree>
+                <LocationRef>orchard/2</LocationRef>
+                <GPSLatitude>37.36635015674898</GPSLatitude>
+                <GPSLongitude>-120.4230350832969</GPSLongitude>
+            </DrivingToTree>
+            <PictureTaking>
+                <TreeIDs>2,3,4</TreeIDs>
+            </PictureTaking>
+        </Action>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the fourth pistachio tree and take a picture of 3 trees in a row</TaskDescription>
+        <Action>
+            <DrivingToTree>
+                <LocationRef>orchard/3</LocationRef>
+                <GPSLatitude>37.366300236834725</GPSLatitude>
+                <GPSLongitude>-120.42308819251039</GPSLongitude>
+            </DrivingToTree>
+            <PictureTaking>
+                <TreeIDs>3,4,5</TreeIDs>
+            </PictureTaking>
+        </Action>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the fifth pistachio tree and take a picture of 3 trees in a row</TaskDescription>
+        <Action>
+            <DrivingToTree>
+                <LocationRef>orchard/4</LocationRef>
+                <GPSLatitude>37.366304880110526</GPSLatitude>
+                <GPSLongitude>-120.4230246791031</GPSLongitude>
+            </DrivingToTree>
+            <PictureTaking>
+                <TreeIDs>4,5,6</TreeIDs>
+            </PictureTaking>
+        </Action>
+    </CompositeTaskInformation>
+
+</RobustMissionPlan>

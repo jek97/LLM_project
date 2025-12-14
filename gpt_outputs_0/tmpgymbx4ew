@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      This mission plan instructs a robotic agent to assess tree conditions. The agent will initially approach a tree, take a picture, and if the picture indicates a low temperature, take a temperature reading. If the temperature reading is also low, a CO2 sample will be taken. If the temperature reading is low, the agent will drive to a distant tree and repeat the process. If the initial reading is not low, the agent will drive to the end point.
+    </TaskDescription>
+    <Goal>Assess tree conditions and collect data.</Goal>
+  </CompositeTaskInformation>
+  <TaskSequence>
+    <Task id="1" type="Drive">
+      <Waypoint x="120.42300386899338" y="37.366300703749474"/>
+      <Instruction>Drive to the first tree.</Instruction>
+    </Task>
+    <Task id="2" type="CaptureImage">
+      <Instruction>Take a picture of the tree.</Instruction>
+    </Task>
+    <Task id="3" type="EvaluateTemperature">
+      <Condition>Temperature detected in image is low.</Condition>
+      <Instruction>Take a temperature reading.</Instruction>
+    </Task>
+    <Task id="4" type="EvaluateCO2">
+      <Condition>Temperature reading is low.</Condition>
+      <Instruction>Take a CO2 sample.</Instruction>
+    </Task>
+    <Task id="5" type="Drive">
+      <Waypoint x="120.42307592599273" y="37.36636077337479"/>
+      <Instruction>Drive to a far away tree.</Instruction>
+    </Task>
+    <Task id="6" type="CaptureImage">
+      <Instruction>Take a picture of the tree.</Instruction>
+    </Task>
+    <Task id="7" type="EvaluateTemperature">
+      <Condition>Temperature detected in image is low.</Condition>
+      <Instruction>Take a temperature reading.</Instruction>
+    </Task>
+    <Task id="8" type="EvaluateCO2">
+      <Condition>Temperature reading is low.</Condition>
+      <Instruction>Take a CO2 sample.</Instruction>
+    </Task>
+    <Task id="9" type="End">
+      <Instruction>Mission Complete.</Instruction>
+    </Task>
+  </TaskSequence>
+</MissionPlan>

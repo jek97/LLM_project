@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompositeTaskInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xsi:schemaLocation="http://robotic-task-representation.org/mission/4.0 
+   http://robotic-task-representation.org/mission/mission.xsd">
+  
+  <!-- Use the ro namespace prefix for robot-related elements -->
+  <ro:Task description="Drive to Tree and inspect it">
+    <ro:Action name="DriveToTree"/>
+    <ro:Action name="InspectTree"/>
+  </ro:Task>
+  
+</CompositeTaskInformation>

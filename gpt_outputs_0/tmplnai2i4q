@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <Tasks>
+    <Task id="1">
+      <TaskType>Navigation</TaskType>
+      <Instruction>Navigate to tree ID 14.</Instruction>
+      <TargetTreeId>14</TargetTreeId>
+    </Task>
+    <Task id="2">
+      <TaskType>Measurement</TaskType>
+      <Instruction>Measure CO2 at tree ID 14.</Instruction>
+      <TargetTreeId>14</TargetTreeId>
+    </Task>
+  </Tasks>
+</MissionPlan>

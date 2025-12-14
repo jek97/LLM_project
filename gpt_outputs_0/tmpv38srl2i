@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Generate a mission plan to visit as many points as possible within a 100-meter radius, taking a picture of each tree encountered. Prioritize visiting all points within range.
+    </TaskDescription>
+    <TaskList>
+      <Task id="1">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="1.1" latitude="37.36627570632085" longitude="-120.42307272278255" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="2">
+        <Waypoint id="2.1" latitude="37.36626996761184" longitude="-120.42298051393493" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="3">
+        <Waypoint id="3.1" latitude="37.3662730362294" longitude="-120.42301417901265" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="4">
+        <Waypoint id="4.1" latitude="37.36628908556382" longitude="-120.42307592599273" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="5">
+        <Waypoint id="5.1" latitude="37.366300703749474" longitude="-120.4230246791031" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="6">
+        <Waypoint id="6.1" latitude="37.366304880110526" longitude="-120.423044218715" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="7">
+        <Waypoint id="7.1" latitude="37.36631785560332" longitude="-120.42303004014194" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="8">
+        <Waypoint id="8.1" latitude="37.36635640370881" longitude="-120.42302669537153" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="9">
+        <Waypoint id="9.1" latitude="37.36635678715399" longitude="-120.42299259529793" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="10">
+        <Waypoint id="10.1" latitude="37.36636077337479" longitude="-120.42307592599273" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="11">
+        <Waypoint id="11.1" latitude="37.36636996761184" longitude="-120.42308051393493" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="12">
+        <Waypoint id="12.1" latitude="37.36637570632085" longitude="-120.42308617901265" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="13">
+        <Waypoint id="13.1" latitude="37.366384480110526" longitude="-120.4230921428571" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="14">
+        <Waypoint id="14.1" latitude="37.3663913528571" longitude="-120.42309805139349" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="15">
+        <Waypoint id="15.1" latitude="37.36639722444444" longitude="-120.4231039375" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="16">
+        <Waypoint id="16.1" latitude="37.36639999999999" longitude="-120.42310989473684" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="17">
+        <Waypoint id="17.1" latitude="37.36640505285714" longitude="-120.42311571428571" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="18">
+        <Waypoint id="18.1" latitude="37.36641081818182" longitude="-120.42311962857143" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="19">
+        <Waypoint id="19.1" latitude="37.36641636363636" longitude="-120.4231234567905" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="20">
+        <Waypoint id="20.1" latitude="37.36642105263158" longitude="-120.42312734375" distance="100" />
+        <Action>Take Picture</Action>
+      </Task>
+    </TaskList>
+    </Task>
+    </TaskList>
+  </Task>
+</Task>

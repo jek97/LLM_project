@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RobotMissionPlan xmlns="http://example.com/robot_mission_plan">
+    <MissionDetails>
+        <!-- Original Question -->
+        <TaskDescription>Visit as many trees as possible within a 100-meter radius and take pictures of each tree.</TaskDescription>
+        <MissionName>TreePictureMission</MissionName>
+        <StartTime>2023-04-01T08:00:00Z</StartTime>
+        <EndTime>2023-04-01T17:00:00Z</EndTime>
+    </MissionDetails>
+    <RobotDetails>
+        <RobotName>ExplorerBot</RobotName>
+        <MaxSpeed>5.0</MaxSpeed>
+        <BatteryCapacity>100</BatteryCapacity>
+    </RobotDetails>
+    <CompositeTaskInformation>
+        <!-- Task to drive to the starting point -->
+        <Task>
+            <TaskName>DriveToStart</TaskName>
+            <TaskDetails>
+                <Location x="{start_longitude}" y="{start_latitude}"/>
+            </TaskDetails>
+        </Task>
+        <!-- Loop through tasks for each tree -->
+        <Tasks>
+            {% for tree in geojson.features %}
+            <Task>
+                <TaskName>DriveToTree{{ loop.index }}</TaskName>
+                <TaskDetails>
+                    <Location x="{{ tree.geometry.coordinates[0] }}" y="{{ tree.geometry.coordinates[1] }}"/>
+                </TaskDetails>
+            </Task>
+            <Task>
+                <TaskName>TakePicture{{ loop.index }}</TaskName>
+                <TaskDetails>
+                    <TreeType>{{ tree.properties.tree_type }}</TreeType>
+                    <Location x="{{ tree.geometry.coordinates[0] }}" y="{{ tree.geometry.coordinates[1] }}"/>
+                </TaskDetails>
+            {% endfor %}
+        </Tasks>
+    </CompositeTaskInformation>
+    <!-- Replace this with the actual GPS coordinates of the starting point -->
+    <MissionArea>
+        <StartLocation x="{start_longitude}" y="{start_latitude}"/>
+    </MissionArea>
+</RobotMissionPlan>

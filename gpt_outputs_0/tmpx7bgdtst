@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <MissionID>1</MissionID>
+  <MissionName>Tree Monitoring Mission</MissionName>
+  <MissionStartTime>2023-04-01T00:00:00Z</MissionStartTime>
+  <MissionEndTime>2023-04-01T01:00:00Z</MissionEndTime>
+  <StartLocation>47.6568, -122.3281</StartLocation>
+  <EndLocation>47.6568, -122.3281</EndLocation>
+  <TaskList>
+    <TaskID>1</TaskID>
+    <TaskName>Take picture of first tree</TaskName>
+    <TaskStartTime>2023-04-01T00:00:00Z</TaskStartTime>
+    <TaskEndTime>2023-04-01T00:05:00Z</TaskEndTime>
+    <Location>47.6568, -122.3281</Location>
+    <SensorList>
+      <SensorID>1</SensorID>
+      <SensorName>Camera</SensorName>
+      <Action>TakePicture</Action>
+      <ReadingType>Image</ReadingType>
+    </SensorList>
+  </TaskList>
+  <TaskList>
+    <TaskID>2</TaskID>
+    <TaskName>CHECK CO2 LEVELS</TaskName>
+    <TaskStartTime>2023-04-01T00:05:00Z</TaskStartTime>
+    <TaskEndTime>2023-04-01T00:10:00Z</TaskEndTime>
+    <Location>47.6568, -122.3281</Location>
+    <SensorList>
+      <SensorID>2</SensorID>
+      <SensorName>CO2 Sensor</SensorName>
+      <Action>CheckLevel</Action>
+      <ReadingType>CO2</ReadingType>
+    </SensorList>
+  </TaskList>
+  <TaskList>
+    <TaskID>3</TaskID>
+    <TaskName>TAKING TEMPERATURE READING</TaskName>
+    <TaskStartTime>2023-04-01T00:15:00Z</TaskStartTime>
+    <TaskEndTime>2023-04-01T00:20:00Z</TaskEndTime>
+    <Location>47.6568, -122.3281</Location>
+    <SensorList>
+      <SensorID>3</SensorID>
+      <SensorName>Temperature Sensor</SensorName>
+      <Action>CheckLevel</Action>
+      <ReadingType>Temperature</ReadingType>
+    </SensorList>
+  </TaskList>
+  <TaskList>
+    <TaskID>4</TaskID>
+    <TaskName>MEASURING ANOTHER TREE</TaskName>
+    <TaskStartTime>2023-04-01T00:25:00Z</TaskStartTime>
+    <TaskEndTime>2023-04-01T00:30:00Z</TaskEndTime>
+    <Location>47.6568, -122.3281</Location>
+    <SensorList>
+      <SensorID>4</SensorID>
+      <SensorName>Camera</SensorName>
+      <Action>TakePicture</Action>
+      <ReadingType>Image</ReadingType>
+    </SensorList>
+  </TaskList>
+  <TaskList>
+    <TaskID>5</TaskID>
+    <TaskName>CHECK CO2 LEVELS AGAIN</TaskName>
+    <TaskStartTime>2023-04-01T00:35:00Z</TaskStartTime>
+    <TaskEndTime>2023-04-01T00:40:00Z</TaskEndTime>
+    <Location>47.6568, -122.3281</Location>
+    <SensorList>
+      <SensorID>5</SensorID>
+      <SensorName>CO2 Sensor</SensorName>
+      <Action>CheckLevel</Action>
+      <ReadingType>CO2</ReadingType>
+    </SensorList>
+  </TaskList>
+  <TaskList>
+    <TaskID>6</TaskID>
+    <TaskName>CHECK CO2 LEVELS AGAIN FOR CONFIRMATION</TaskName>
+    <TaskStartTime>2023-04-01T00:45:00Z</TaskStartTime>
+    <TaskEndTime>2023-04-01T00:50:00Z</TaskEndTime>
+    <Location>47.6568, -122.3281</Location>
+    <SensorList>
+      <SensorID>6</SensorID>
+      <SensorName>CO2 Sensor</SensorName>
+      <Action>CheckLevel</Action>
+      <ReadingType>CO2</ReadingType>
+    </SensorList>
+  </TaskList>
+  <TaskList>
+    <TaskID>7</TaskID>
+    <TaskName>DRIVING TO NEXT LOCATION</TaskName>
+    <TaskStartTime>2023-04-01T00:55:00Z</TaskStartTime>
+    <TaskEndTime>2023-04-01T01:00:00Z</TaskEndTime>
+    <Location>47.6568, -122.3281</Location>
+  </TaskList>
+  <TaskList>
+    <TaskID>8</TaskID>
+    <TaskName>END OF MISSION</TaskName>
+    <TaskStartTime>2023-04-01T01:00:00Z</TaskStartTime>
+    <TaskEndTime>2023-04-01T01:05:00Z</TaskEndTime>
+  </TaskList>
+</Mission>
+
+This XML code represents a mission to monitor trees. The mission includes tasks such as taking pictures of trees, checking CO2 levels, and measuring temperatures. The task list is structured with a unique TaskID for each task, a TaskName describing what the task does, a start and end time for when the task should be completed, and the location where the task will take place. Each task may also include a SensorList that specifies which sensors are required to complete the task.
+
+The first task in this mission involves taking a picture of the first tree. The second task checks the CO2 levels at the same location. If the CO2 levels are high, the third task measures the temperature. After that, the fourth task takes another picture of a different tree. The fifth and sixth tasks check the CO2 levels again to confirm if they have changed.
+
+The seventh task involves driving to the next location, which in this case is the same as the starting location. Finally, the eighth task marks the end of the mission.
+
+This XML code can be used by a computer program or device that controls the sensors and executes the tasks according to the schedule. The data collected during the mission can then be analyzed and reported on to determine if any action needs to be taken to protect the trees.

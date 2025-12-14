@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://example.com/MissionInformation">
+    <CompositeMissionInformation>
+        <TaskDescription>Original question goes here.</TaskDescription>
+    </CompositeMissionInformation>
+</html>

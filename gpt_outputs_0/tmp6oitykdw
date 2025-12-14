@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Robotic mission to measure CO2, temperature, and take pictures.
+      Prioritize trees in the middle and farthest locations.
+    </TaskDescription>
+  </CompositeTaskInformation>
+  <Task>
+    <TaskID>1</TaskID>
+    <TaskName>Initial Navigation &amp; Tree Measurement</TaskName>
+    <TaskType>Navigation &amp; Measurement</TaskType>
+    <TaskDetails>
+      <Objective>Navigate to a tree located approximately in the middle of the orchard.</Objective>
+      <Instructions>
+        1.  Begin at the initial starting point.
+        2.  Navigate towards the tree with ID 14.
+        3.  Once at Tree 14, measure CO2.
+        4. If CO2 reading is low, proceed to take 2 pictures of nearby trees.
+      </Instructions>
+      <ExpectedDuration>60 seconds</ExpectedDuration>
+    </TaskDetails>
+  </Task>
+  <Task>
+    <TaskID>2</TaskID>
+    <TaskName>Long-Range CO2 Measurement</TaskName>
+    <TaskType>Measurement</TaskType>
+    <TaskDetails>
+      <Objective>Find the farthest tree from the starting point and measure CO2.</Objective>
+      <Instructions>
+        1.  Navigate to the tree with ID 19.
+        2.  Measure CO2 at the tree.
+      </Instructions>
+      <ExpectedDuration>90 seconds</ExpectedDuration>
+    </TaskDetails>
+  </Task>
+  <Task>
+    <TaskID>3</TaskID>
+    <TaskName>Northern-Most Temperature Reading</TaskName>
+    <TaskType>Measurement</TaskType>
+    <TaskDetails>
+      <Objective>Take a temperature reading at the northernmost tree.</Objective>
+      <Instructions>
+        1. Navigate to the tree with ID 17.
+        2. Take a temperature reading.
+      </Instructions>
+      <ExpectedDuration>30 seconds</ExpectedDuration>
+    </TaskDetails>
+  </Task>
+    <Task>
+    <TaskID>4</TaskID>
+    <TaskName>Return to Start</TaskName>
+    <TaskType>Navigation</TaskType>
+    <TaskDetails>
+      <Objective>Return to the initial starting point.</Objective>
+      <Instructions>
+        1. Navigate back to the initial starting point.
+      </Instructions>
+      <ExpectedDuration>120 seconds</ExpectedDuration>
+    </TaskDetails>
+  </Task>
+</MissionPlan>

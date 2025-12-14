@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission_plan.xsd">
+    <MissionInformation>
+        <MissionName>TreePictureMission</MissionName>
+        <StartTime>2023-04-15T10:00:00Z</StartTime>
+        <EndTime>2023-04-15T11:00:00Z</EndTime>
+    </MissionInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>Going clockwise from the north most tree, take a picture of 4 trees. (Original Question)</TaskDescription>
+        <Tasks>
+            <Task>
+                <TaskID>1</TaskID>
+                <TaskName>Drive to Northmost Tree</TaskName>
+                <TaskType>DriveToLocation</TaskType>
+                <LocationReference>NorthmostTree</LocationReference>
+            </Task>
+            <Task>
+                <TaskID>2</TaskID>
+                <TaskName>Take Picture of Northmost Tree</TaskName>
+                <TaskType>TakePicture</TaskType>
+                <LocationReference>NorthmostTree</LocationReference>
+            </Task>
+            <Task>
+                <TaskID>3</TaskID>
+                <TaskName>Drive to Eastmost Tree</TaskName>
+                <TaskType>DriveToLocation</TaskType>
+                <LocationReference>EastmostTree</LocationReference>
+            </Task>
+            <Task>
+                <TaskID>4</TaskID>
+                <TaskName>Take Picture of Eastmost Tree</TaskName>
+                <TaskType>TakePicture</TaskType>
+                <LocationReference>EastmostTree</LocationReference>
+            </Task>
+            <Task>
+                <TaskID>5</TaskID>
+                <TaskName>Drive to Southmost Tree</TaskName>
+                <TaskType>DriveToLocation</TaskType>
+                <LocationReference>SouthmostTree</LocationReference>
+            </Task>
+            <Task>
+                <TaskID>6</TaskID>
+                <TaskName>Take Picture of Southmost Tree</TaskName>
+                <TaskType>TakePicture</TaskType>
+                <LocationReference>SouthmostTree</LocationReference>
+            </Task>
+            <Task>
+                <TaskID>7</TaskID>
+                <TaskName>Drive to Westmost Tree</TaskName>
+                <TaskType>DriveToLocation</TaskType>
+                <LocationReference>WestmostTree</LocationReference>
+            </Task>
+            <Task>
+                <TaskID>8</TaskID>
+                <TaskName>Take Picture of Westmost Tree</TaskName>
+                <TaskType>TakePicture</TaskType>
+                <LocationReference>WestmostTree</LocationReference>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+    <Outcome>Mission completed successfully. Pictures taken of the Northmost, Eastmost, Southmost, and Westmost trees. Approximately 10 km traveled from start to end.</Outcome>
+</Mission>

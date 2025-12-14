@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>Viewing this farm as a rectangle, take pictures of trees at the four corners of the farm in any order.</TaskDescription>
+  </CompositeTaskInformation>
+  <Outcome>
+    <TotalDistance>Approximately 1.2 kilometers</TotalDistance>
+  </Outcome>
+  <Tasks>
+    <Task id="1">
+      <TaskType>Drive</TaskType>
+      <Waypoint>
+        <Latitude>37.7749</Latitude>
+        <Longitude>-122.4194</Longitude>
+        <Description>Drive to the North-West corner of the farm.</Description>
+      </Waypoint>
+      <Action>Take Picture</Action>
+    </Task>
+    <Task id="2">
+      <TaskType>Drive</TaskType>
+      <Waypoint>
+        <Latitude>37.7780</Latitude>
+        <Longitude>-122.4130</Longitude>
+        <Description>Drive to the North-East corner of the farm.</Description>
+      </Waypoint>
+      <Action>Take Picture</Action>
+    </Task>
+    <Task id="3">
+      <TaskType>Drive</TaskType>
+      <Waypoint>
+        <Latitude>37.7715</Latitude>
+        <Longitude>-122.4160</Longitude>
+        <Description>Drive to the South-East corner of the farm.</Description>
+      </Waypoint>
+      <Action>Take Picture</Action>
+    </Task>
+    <Task id="4">
+      <TaskType>Drive</TaskType>
+      <Waypoint>
+        <Latitude>37.7690</Latitude>
+        <Longitude>-122.4120</Longitude>
+        <Description>Drive to the South-West corner of the farm.</Description>
+      </Waypoint>
+      <Action>Take Picture</Action>
+    </Task>
+  </Tasks>
+</MissionPlan>

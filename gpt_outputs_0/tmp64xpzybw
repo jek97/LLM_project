@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<task:Mission xmlns:task="http://robust-mission-planning.com/missionPlanningSchema.xsd"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://robust-mission-planning.com/missionPlanningSchema.xsd 
+                                  http://robust-mission-planning.com/missionPlanningSchema.xsd">
+    <task:TaskInformation>
+        <task:CompositeTaskInformation>
+            <task:TaskDescription>
+                <task:TaskType>Picture</task:TaskType>
+                <task:Action>Take picture of northernmost tree</task:Action>
+                <task:Outcome>
+                    <task:DrivingToLocation>
+                        <task:GPSLocation>
+                            <task:Latitude>37.36635688574164</task:Latitude>
+                            <task:Longitude>-120.42302289785604</task:Longitude>
+                        </task:GPSLocation>
+                    </task:DrivingToLocation>
+                    <task:PictureTaken/>
+                    <task:TotalEstimatedHaversineDistanceFromStartToEnd>Approximately 0.5 km</task:TotalEstimatedHaversineDistanceFromStartToEnd>
+                </task:Outcome>
+            </task:TaskDescription>
+        </task:CompositeTaskInformation>
+    </task:TaskInformation>
+
+    <!-- Include the schema file -->
+    <?xml:include href="missionPlanningSchema.xsd"?>
+</task:Mission>

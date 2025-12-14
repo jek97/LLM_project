@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompositeTaskInformation>
+  <TaskDescription>
+    <TaskType>Navigation and Data Collection</TaskType>
+    <TaskPriority>High</TaskPriority>
+    <TaskDescription>Collect data on 5 pistachio trees.</TaskDescription>
+  </TaskDescription>
+  <MissionPlan>
+    <Step id="1">
+      <Action>Drive to Tree ID 12</Action>
+      <Waypoint>
+        <Latitude>37.366300703749474</Latitude>
+        <Longitude>-120.42300386899338</Longitude>
+      </Waypoint>
+    </Step>
+    <Step id="2">
+      <Action>Take Picture</Action>
+      <ImageCount>1</ImageCount>
+    </Step>
+  </MissionPlan>
+</CompositeTaskInformation>

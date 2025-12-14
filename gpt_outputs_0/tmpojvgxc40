@@ -1,0 +1,6 @@
+<CompositeTaskInformation xmlns="http://www.example.com/namespace">
+  <TaskDescription>Take pictures of trees at the four corners of the farm in any order.</TaskDescription>
+  <Tasks>
+    ...
+  </Tasks>
+</CompositeTaskInformation>

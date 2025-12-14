@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+  <xs:element name="MissionPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CompositeTaskInformation" type="CompositeTaskInformationType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="CompositeTaskInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TaskDescription" type="TaskDescriptionType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TaskDescription">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DrivingToLocation" type="DrivingToLocationType"/>
+        <xs:element name="Action" type="ActionType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="DrivingToLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="GPSLocation" type="GPSLocationType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Action">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TreeType" type="TreeType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="GPSLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="latitude" type="xs:decimal"/>
+        <xs:element name="longitude" type="xs:decimal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TreeType">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Oak"/>
+        <xs:enumeration value="Maple"/>
+        <xs:enumeration value="Pine"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="Outcome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DrivingToLocation" type="DrivingToLocationType"/>
+        <xs:element name="Action" type="ActionType"/>
+        <xs:element name="EstimatedHaversineDistance" type="EstimatedHaversineDistanceType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="DrivingToLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="GPSLocation" type="GPSLocationType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="EstimatedHaversineDistance">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="[0-9]+(\.[0-9]+)?"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="CompositeTaskInformationType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TaskDescription" type="TaskDescriptionType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TaskDescriptionType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DrivingToLocation" type="DrivingToLocationType"/>
+        <xs:element name="Action" type="ActionType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="DrivingToLocationType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="GPSLocation" type="GPSLocationType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ActionType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TreeType" type="TreeType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="GPSLocationType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="latitude" type="xs:decimal"/>
+        <xs:element name="longitude" type="xs:decimal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

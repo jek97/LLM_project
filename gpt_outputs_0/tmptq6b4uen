@@ -1,0 +1,36 @@
+<RoboticMission xmlns="http://www.example.com/robotics/mission"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.example.com/robotics/mission http://www.example.com/robotics/mission.xsd">
+    <MissionInformation>
+        <MissionName>Temperature and CO2 Monitoring Mission</MissionName>
+        <StartTime>YYYY-MM-DDTHH:MM:SS</StartTime>
+        <EndTime>YYYY-MM-DDTHH:MM:SS</EndTime>
+    </MissionInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to tree with GPS coordinates (latitude, longitude) from GeoJSON file. Take a picture of the tree. If that picture shows low temperature, take a temperature reading. If that reading is also low, take a CO2 sample. If that reading is also low, drive to another tree and repeat the process. If the very first reading isn't low, drive to end.</TaskDescription>
+        <Tasks>
+            <!-- GeoJSON coordinates for the first tree -->
+            <DriveToLocation>
+                <GPSCoordinates>
+                    {
+                        "type": "Point",
+                        "coordinates": [longitude, latitude]
+                    }
+                </GPSCoordinates>
+            </DriveToLocation>
+            <TakePicture>
+                <!-- Additional information about the picture, such as camera settings -->
+            </TakePicture>
+            <CheckTemperature>
+                <!-- Additional information about the temperature sensor and how to read the data -->
+            </CheckTemperature>
+            <CheckCO2>
+                <!-- Additional information about the CO2 sensor and how to read the data -->
+            </CheckCO2>
+            <!-- Repeat the above steps for each tree in the GeoJSON file -->
+        </Tasks>
+    </CompositeTaskInformation>
+    <Outcome>
+        <!-- Estimated total distance traveled (in kilometers) -->
+    </Outcome>
+</RoboticMission>

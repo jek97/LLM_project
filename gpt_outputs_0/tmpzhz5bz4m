@@ -1,0 +1,31 @@
+<Mission xmlns="http://example.com/mission-plan" xmlns:vocab="http://purl.ieee.org/NS/dcterms#" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://example.com/mission-plan" elementFormDefault="qualified">
+    <TaskDescription>Drive to GPS Location 1, Inspect Oak Tree, Drive to GPS Location 2, Inspect Maple Tree, and Return to Start (Repeat if required)</TaskDescription>
+    <Version>1.0</Version>
+    <MissionName>Example Mission Plan for Tree Inspection</MissionName>
+    <StartLocation>
+        <Latitude>51.493676</Latitude>
+        <Longitudue>-0.298387</Longitudute>
+    </StartLocation>
+    <EndLocation>
+        <Latitude>51.493676</Latitude>
+        <Longitudue>-0.298387</Longitudute>
+    </EndLocation>
+    <TaskInformation>
+        <CompositeTaskInformation>
+            <DriveTo>
+                <Location>
+                    <!-- The first GPS Location goes here -->
+                    <Latitude>51.493687</Latitude>
+                    <Longitudue>-0.298386</Longitudute>
+                </Location>
+                <DistanceEstimate>0.01</DistanceEstimate>
+            </DriveTo>
+            <ActionInformation>
+                <!-- Tree type and other measurements go here -->
+                <TreeType>Oak</TreeType>
+            </ActionInformation>
+        </CompositeTaskInformation>
+    </TaskInformation>
+    <!-- Add as many repeating CompositeTaskInformation elements as required -->
+    <!-- Include a condition to stop the mission if necessary (e.g., task complete or battery level critical) -->
+</Mission>

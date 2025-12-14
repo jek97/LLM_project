@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RoboticMission xmlns="http://example.com/missionplan">
+    <MissionInfo>
+        <MissionName>Temperature and CO2 Monitoring</MissionName>
+        <StartTime>YYYY-MM-DDThh:mm:ssZ</StartTime>
+    </MissionInfo>
+    <CompositeTaskInformation>
+        <TaskDescription>Generate a mission to inspect and collect data from trees for temperature and CO2 levels.</TaskDescription>
+        <TaskSequence>
+            <Task>
+                <TaskName>Drive to starting location</TaskName>
+                <Action>Drive</Action>
+            </Task>
+            <Task>
+                <TaskName>Take a picture at Tree-0</TaskName>
+                <Action>Camera</Action>
+                <Location ref="#Tree-0" />
+            </Task>
+            <Task>
+                <TaskName>Check temperature at Tree-0</TaskName>
+                <Action>Thermometer</Action>
+                <Location ref="#Tree-0" />
+            </Task>
+            <Task>
+                <TaskName>Check CO2 level at Tree-0</TaskName>
+                <Action>CO2Sensor</Action>
+                <Location ref="#Tree-0" />
+            </Task>
+            <!-- If the temperature and CO2 levels are low, repeat the following tasks -->
+            <Conditional TaskRef="#Loop">
+                <Condition>
+                    <LowTemperature ref="#Tree-0"/>
+                    <LowCO2 ref="#Tree-0"/>
+                </Condition>
+                <TaskRef>#Loop</TaskRef>
+            </Conditional>
+            <Task>
+                <TaskName>Drive to a far away tree</TaskName>
+                <Action>Drive</Action>
+            </Task>
+            <!-- Repeat the following tasks for the new tree -->
+            <Loop>
+                <Task>
+                    <TaskName>Take a picture at current tree</TaskName>
+                    <Action>Camera</Action>
+                    <Location ref="currentTree"/>
+                </Task>
+                <!-- ... -->
+            </Loop>
+            <!-- If the temperature and CO2 levels are not low at the first tree, move to end -->
+            <Conditional TaskRef="#End">
+                <NotCondition>
+                    <LowTemperature ref="#Tree-0"/>
+                    <LowCO2 ref="#Tree-0"/>
+                </NotCondition>
+                <TaskRef>#End</TaskRef>
+            </Conditional>
+        </TaskSequence>
+    </CompositeTaskInformation>
+    <!-- Add references to the GeoJSON tree locations -->
+    <Locations>
+        <Location id="Tree-0">
+            <Latitude>xx.xxxxxx</Latitude>
+            <Longitude>yy.xxxxxx</Longitude>
+        </Location>
+        <!-- Add more Location elements for each tree in the GeoJSON file -->
+    </Locations>
+    <!-- Add an optional Outcome element to give a brief summary of the expected outcome -->
+    <Outcome>The robot will travel a considerable distance and inspect multiple trees for temperature and CO2 levels.</Outcome>
+</RoboticMission>

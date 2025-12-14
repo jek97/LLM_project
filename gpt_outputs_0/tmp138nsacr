@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="mission">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CompositeTaskInformation">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TaskDescription" type="xs:string"/>
+                            <xs:element name="Tasks">
+                                <xs:complexType>
+                                    <xs:sequence maxOccurs="unbounded">
+                                        <xs:choice>
+                                            <xs:element ref="DriveTo"/>
+                                            <xs:element ref="TakePicture"/>
+                                            <xs:element ref="CO2Reading"/>
+                                        </xs:choice>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="DriveTo">
+        <xs:complexType>
+            <xs:attribute name="latitude" type="xs:decimal" use="required"/>
+            <xs:attribute name="longitude" type="xs:decimal" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="TakePicture"/>
+
+    <xs:element name="CO2Reading"/>
+
+</xs:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://www.example.com/missionplan">
+  <CompositeTaskInformation>
+    <Task id="1" type="Drive">
+      <TaskDescription>Drive to the northernmost tree.</TaskDescription>
+      <Target id="1" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+    </Task>
+    <Task id="2" type="Drive">
+      <TaskDescription>Drive to the middle of the orchard.</TaskDescription>
+      <Target id="2" latitude="37.36631785560332" longitude="-120.42303004014194"/>
+    </Task>
+    <Task id="3" type="Drive">
+      <TaskDescription>Drive to the middle of the eastern end.</TaskDescription>
+      <Target id="3" latitude="37.36635640370881" longitude="-120.423044218715"/>
+    </Task>
+    <Task id="4" type="TakePicture">
+      <TaskDescription>Take a picture of two trees next to each other.</TaskDescription>
+      <Target id="4" latitude="37.36635640370881" longitude="-120.423044218715"/>
+    </Task>
+  </CompositeTaskInformation>
+</MissionPlan>

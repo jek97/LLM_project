@@ -1,0 +1,102 @@
+Here is the XML file for your robotic mission plan:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robust-mission-planning.org/mission-plan.xsd
+             http://robust-mission-planning.org/mission-plan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Take picture of first tree</TaskDescription>
+    <DrivingTo>0.00 km</DrivingTo>
+    <Outcome>
+      <Action>TakePicture</Action>
+      <LocationRef>Feature#0</LocationRef>
+      <EstimatedHaversineDistanceFromStart>0.00 km</EstimatedHaversineDistanceFromStart>
+    </Outcome>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription>Check CO2 reading, take temperature if low</TaskDescription>
+    <DrivingTo>0.00 km</DrivingTo>
+    <Outcome>
+      <Action>CheckCO2Reading</Action>
+      <LocationRef>Feature#0</LocationRef>
+      <EstimatedHaversineDistanceFromStart>0.00 km</EstimatedHaversineDistanceFromStart>
+      <TaskDescription>Take temperature reading if CO2 is low</TaskDescription>
+      <DrivingTo>0.00 km</DrivingTo>
+      <Outcome>
+        <Action>TakeTemperatureReading</Action>
+        <LocationRef>Feature#0</LocationRef>
+        <EstimatedHaversineDistanceFromStart>0.00 km</EstimatedHaversineDistanceFromStart>
+      </Outcome>
+    </Outcome>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription>Take picture of another tree</TaskDescription>
+    <DrivingTo>0.00 km</DrivingTo>
+    <Outcome>
+      <Action>TakePicture</Action>
+      <LocationRef>Feature#1</LocationRef>
+      <EstimatedHaversineDistanceFromStart>0.00 km</EstimatedHaversineDistanceFromStart>
+    </Outcome>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription>Check CO2 reading, take temperature if low</TaskDescription>
+    <DrivingTo>0.00 km</DrivingTo>
+    <Outcome>
+      <Action>CheckCO2Reading</Action>
+      <LocationRef>Feature#1</LocationRef>
+      <EstimatedHaversineDistanceFromStart>0.00 km</EstimatedHaversineDistanceFromStart>
+      <TaskDescription>Take temperature reading if CO2 is low</TaskDescription>
+      <DrivingTo>0.00 km</DrivingTo>
+      <Outcome>
+        <Action>TakeTemperatureReading</Action>
+        <LocationRef>Feature#1</LocationRef>
+        <EstimatedHaversineDistanceFromStart>0.00 km</EstimatedHaversineDistanceFromStart>
+      </Outcome>
+    </Outcome>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription>Check CO2 reading, take temperature if low</TaskDescription>
+    <DrivingTo>0.00 km</DrivingTo>
+    <Outcome>
+      <Action>CheckCO2Reading</Action>
+      <LocationRef>Feature#1</LocationRef>
+      <EstimatedHaversineDistanceFromStart>0.00 km</EstimatedHaversineDistanceFromStart>
+      <TaskDescription>Take temperature reading if CO2 is low</TaskDescription>
+      <DrivingTo>0.00 km</DrivingTo>
+      <Outcome>
+        <Action>TakeTemperatureReading</Action>
+        <LocationRef>Feature#1</LocationRef>
+        <EstimatedHaversineDistanceFromStart>0.00 km</EstimatedHaversineDistanceFromStart>
+      </Outcome>
+    </Outcome>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to next tree and take CO2 sample if necessary</TaskDescription>
+    <DrivingTo>0.00 km</DrivingTo>
+    <Outcome>
+      <Action>DriveToNextTree</Action>
+      <LocationRef>Feature#1</LocationRef>
+      <EstimatedHaversineDistanceFromStart>0.00 km</EstimatedHaversineDistanceFromStart>
+    </Outcome>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription>Take CO2 sample</TaskDescription>
+    <DrivingTo>0.00 km</DrivingTo>
+    <Outcome>
+      <Action>TakeCO2Sample</Action>
+      <LocationRef>Feature#1</LocationRef>
+      <EstimatedHaversineDistanceFromStart>0.00 km</EstimatedHaversineDistanceFromStart>
+    </Outcome>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to end</TaskDescription>
+    <DrivingTo>0.00 km</DrivingTo>
+    <Outcome>
+      <Action>ArriveAtEnd</Action>
+      <LocationRef>Feature#1</LocationRef>
+      <EstimatedHaversineDistanceFromStart>0.00 km</EstimatedHaversineDistanceFromStart>
+    </Outcome>
+  </CompositeTaskInformation>
+</MissionPlan>
+```
+Note that I've assumed the location of each tree is stored in a `Feature#X` format, where X is the tree ID. You may need to adjust this to match your actual data structure.

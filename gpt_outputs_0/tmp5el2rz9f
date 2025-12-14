@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan">
+  <TaskList>
+    <Task id="1">
+      <Name>Initial Tree Assessment</Name>
+      <Description>Take a picture of the first tree. If the reading is low, take a co2 sample. Otherwise, take a temperature reading.</Description>
+      <Steps>
+        <Step id="1.1">Take a picture of the first tree (Tree ID: 12).</Step>
+        <Step id="1.2">
+          <Condition>Temperature reading is low (below threshold).</Condition>
+          <Action>Take a CO2 sample from Tree ID: 12.</Action>
+        </Step>
+        <Step id="1.3">
+          <Condition>Temperature reading is not low.</Condition>
+          <Action>Take a temperature reading from Tree ID: 12.</Action>
+        </Step>
+      </Steps>
+    </Task>
+    <Task id="2">
+      <Name>Measure Second Tree</Name>
+      <Description>Measure another tree, a different one by taking a picture. if it's low, sample co2. if that reading is low, sample co2 again to confirm.</Description>
+      <Steps>
+        <Step id="2.1">Take a picture of a different tree (Tree ID: 13).</Step>
+        <Step id="2.2">
+          <Condition>Temperature reading is low (below threshold).</Condition>
+          <Action>Take a CO2 sample from Tree ID: 13.</Action>
+        </Step>
+        <Step id="2.3">
+          <Condition>Temperature reading is not low.</Condition>
+          <Action>Take a temperature reading from Tree ID: 13.</Action>
+        </Step>
+        <Step id="2.4">
+          <Condition>Temperature reading is low (below threshold).</Condition>
+          <Action>Take a CO2 sample from Tree ID: 13.</Action>
+        </Step>
+        <Step id="2.5">
+          <Condition>Temperature reading is low.</Condition>
+          <Action>Take a CO2 sample from Tree ID: 13.</Action>
+        </Step>
+      </Steps>
+    </Task>
+    <Task id="3">
+      <Name>Final Tree Measurement</Name>
+      <Description>If still low, continue driving to another tree and take another co2 sample. finally, go to end.</Description>
+      <Steps>
+        <Step id="3.1">Drive to another tree (Tree ID: 14).</Step>
+        <Step id="3.2">Take a co2 sample.</Step>
+      </Steps>
+    </Task>
+    <Task id="4">
+      <Name>Return to Base</Name>
+      <Description>Return to the starting location.</Description>
+      <Steps>
+        <Step id="4.1">Drive back to base.</Step>
+      </Steps>
+    </Task>
+  </TaskList>
+</MissionPlan>

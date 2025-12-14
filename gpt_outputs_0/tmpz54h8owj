@@ -1,0 +1,17 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="your_namespace" xmlns="your_namespace">
+  <xs:element name="mission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="starting_point" type="xs:string"/>
+        <xs:element name="tasks">
+          <xs:complexType>
+            <xs:sequence>
+              <!-- Define each task -->
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="end_point" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

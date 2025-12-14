@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="MissionPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="MissionPlanHeader" type="MissionPlanHeaderType"/>
+        <xs:element name="CompositeTaskInformation" type="CompositeTaskInformationType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="MissionPlanHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="MissionName" type="xs:string"/>
+        <xs:element name="StartLatitude" type="xs:decimal"/>
+        <xs:element name="StartLongitude" type="xs:decimal"/>
+        <xs:element name="EndLatitude" type="xs:decimal"/>
+        <xs:element name="EndLongitude" type="xs:decimal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="CompositeTaskInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TaskDescription" type="TaskDescriptionType"/>
+        <xs:element name="Outcome" type="OutcomeType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TaskDescription">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TreeId" type="xs:integer"/>
+        <xs:element name="GPSLatitude" type="xs:decimal"/>
+        <xs:element name="GPSLongitude" type="xs:decimal"/>
+        <xs:element name="DistanceTraveled" type="xs:decimal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Outcome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DrivingTo" type="DrivingToType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="DrivingTo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TreeId" type="xs:integer"/>
+        <xs:element name="GPSLatitude" type="xs:decimal"/>
+        <xs:element name="GPSLongitude" type="xs:decimal"/>
+        <xs:element name="DistanceTraveled" type="xs:decimal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
+
+<MissionPlan>
+  <MissionPlanHeader>
+    <MissionName>Sample Mission</MissionName>
+    <StartLatitude>37.366304880110526</StartLatitude>
+    <StartLongitude>-120.4230246791031</StartLongitude>
+    <EndLatitude>37.36636077337479</EndLatitude>
+    <EndLongitude>-120.42299259529793</EndLongitude>
+  </MissionPlanHeader>
+
+  <CompositeTaskInformation>
+    <TaskDescription>
+      <TreeId>18</TreeId>
+      <GPSLatitude>37.36636077337479</GPSLatitude>
+      <GPSLongitude>-120.42307592599273</GPSLongitude>
+      <DistanceTraveled>0 km</DistanceTraveled>
+    </TaskDescription>
+    <Outcome>
+      <DrivingTo>
+        <TreeId>19</TreeId>
+        <GPSLatitude>37.36635678715399</GPSLatitude>
+        <GPSLongitude>-120.42299259529793</GPSLongitude>
+        <DistanceTraveled>0 km</DistanceTraveled>
+      </DrivingTo>
+    </Outcome>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>
+      <TreeId>19</TreeId>
+      <GPSLatitude>37.36635678715399</GPSLatitude>
+      <GPSLongitude>-120.42299259529793</GPSLongitude>
+      <DistanceTraveled>0 km</DistanceTraveled>
+    </TaskDescription>
+    <Outcome>
+      <DrivingTo>
+        <TreeId>18</TreeId>
+        <GPSLatitude>37.36636077337479</GPSLatitude>
+        <GPSLongitude>-120.42307592599273</GPSLongitude>
+        <DistanceTraveled>0 km</DistanceTraveled>
+      </DrivingTo>
+    </Outcome>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>
+      <TreeId>18</TreeId>
+      <GPSLatitude>37.36636077337479</GPSLatitude>
+      <GPSLongitude>-120.42307592599273</GPSLongitude>
+      <DistanceTraveled>0 km</DistanceTraveled>
+    </TaskDescription>
+    <Outcome>
+      <DrivingTo>
+        <TreeId>19</TreeId>
+        <GPSLatitude>37.36635678715399</GPSLatitude>
+        <GPSLongitude>-120.42299259529793</GPSLongitude>
+        <DistanceTraveled>0 km</DistanceTraveled>
+      </DrivingTo>
+    </Outcome>
+  </CompositeTaskInformation>
+
+</MissionPlan>

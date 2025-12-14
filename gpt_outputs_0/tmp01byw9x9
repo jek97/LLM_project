@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<nsmap xmlns="http://example.com/mission/1.0">
+
+  <task name="Capture Northmost Tree">
+    <coordinates>
+      <x>-120.42305</x>
+      <y>37.36638</y>
+    </coordinates>
+  </task>
+
+  <!-- Add more tasks as needed -->
+</nsmap>

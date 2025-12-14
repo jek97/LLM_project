@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan" version="1.0">
+  <CompositeTask name="PhotoSequence">
+    <Task name="DriveToTree1" description="Drive to Tree ID 1">
+      <Waypoint x=" -120.42300386899338" y="37.36628908556382" />
+    </Task>
+    <Task name="TakePicture1" description="Take picture at Tree 1">
+      <Action type="TakePicture" target="Tree_1" />
+    </Task>
+
+    <Task name="DriveToTree2" description="Drive to Tree ID 2">
+      <Waypoint x=" -120.42302669537153" y="37.366300703749474" />
+    </Task>
+    <Task name="TakePicture2" description="Take picture at Tree 2">
+      <Action type="TakePicture" target="Tree_2" />
+    </Task>
+
+    <Task name="DriveToTree3" description="Drive to Tree ID 3">
+      <Waypoint x=" -120.423044218715" y="37.36626996761184" />
+    </Task>
+    <Task name="TakePicture3" description="Take picture at Tree 3">
+      <Action type="TakePicture" target="Tree_3" />
+    </Task>
+
+    <Task name="DriveToTree4" description="Drive to Tree ID 4">
+      <Waypoint x=" -120.42307592599273" y="37.36636077337479" />
+    </Task>
+    <Task name="TakePicture4" description="Take picture at Tree 4">
+      <Action type="TakePicture" target="Tree_4" />
+    </Task>
+  </CompositeTask>
+</MissionPlan>

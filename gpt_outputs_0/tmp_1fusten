@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<farm_mission:mission xmlns:farm_mission="http://www.example.com/farm_mission">
+  <name>Farm Visit - All Points</name>
+  <objective>Visit all points on the farm, prioritizing those sampled more recently.</objective>
+  <waypoints>
+    <!-- Waypoint 0: Starting Point (No specific location, just a marker) -->
+    <waypoint id="0">
+      <name>Start</name>
+      <latitude>37.366300</latitude>
+      <longitude>-120.423000</longitude>
+      <reward>0.0</reward>
+    </waypoint>
+
+    <!-- Waypoint 1: Point 1 -->
+    <waypoint id="1">
+      <name>Point 1</name>
+      <latitude>37.366300</latitude>
+      <longitude>-120.423000</longitude>
+      <reward>0.0</reward>
+    </waypoint>
+
+    <!-- Waypoint 2: Point 2 -->
+    <waypoint id="2">
+      <name>Point 2</name>
+      <latitude>37.366300</latitude>
+      <longitude>-120.423000</longitude>
+      <reward>0.0</reward>
+    </waypoint>
+
+    <!-- ... (Continue for all points) ... -->
+
+    <!-- Waypoint 17: Point 17 -->
+    <waypoint id="17">
+      <name>Point 17</name>
+      <latitude>37.366361</latitude>
+      <longitude>-120.423076</longitude>
+      <reward>0.0</reward>
+    </waypoint>
+
+    <!-- Waypoint 18: Point 18 -->
+    <waypoint id="18">
+      <name>Point 18</name>
+      <latitude>37.366361</latitude>
+      <longitude>-120.423076</longitude>
+      <reward>0.0</reward>
+    </waypoint>
+
+    <!-- Waypoint 19: Point 19 -->
+    <waypoint id="19">
+      <name>Point 19</name>
+      <latitude>37.366357</latitude>
+      <longitude>-120.422993</longitude>
+      <reward>0.0</reward>
+    </waypoint>
+  </waypoints>
+</farm_mission:mission>

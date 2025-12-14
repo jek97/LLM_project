@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://robust-mission-planning.com/missionplan"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CompositeTaskInformation xmlns="http://robust-mission-planning.com/compositetaskinfo">
+    <TaskDescription>Find a tree somewhere in the middle of the orchard and measure cos.</TaskDescription>
+    <DrivingTask>
+      <LocationRef Type="GPS" GeoJSONReference="orchard-start.geojson">orchard-start</LocationRef>
+      <Action>DriveToTree</Action>
+      <TreeId xmlns="http://robust-mission-planning.com/treeid">5</TreeId>
+    </DrivingTask>
+  </CompositeTaskInformation>
+  <!-- ... rest of the XML remains the same ... -->
+</MissionPlan>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <CompositeTaskInformation>
+        <TaskDescription>At the first tree, take a picture. If that picture shows low temperature, take a temperature reading. If that reading is also low, take a CO2 sample. If that reading is also low, drive to a far away tree and repeat the process. If the very first reading isn't low, drive to end.</TaskDescription>
+        <Tasks>
+            <!-- First Tree -->
+            <Task>
+                <Type>TakePicture</Type>
+                <TargetTreeID>1</TargetTreeID>
+                <Conditions>
+                    <Condition>
+                        <Type>LowTemperature</Type>
+                        <Actions>
+                            <!-- Temperature is Low -->
+                            <Action>
+                                <Type>TakeTemperatureReading</Type>
+                                <Conditions>
+                                    <Condition>
+                                        <Type>LowTemperatureReading</Type>
+                                        <Actions>
+                                            <!-- CO2 Sample -->
+                                            <Action>
+                                                <Type>TakeCO2Sample</Type>
+                                                <TargetTreeID>1</TargetTreeID>
+                                            </Action>
+                                        </Conditions>
+                                    </Condition>
+                                </Conditions>
+                            </Action>
+                        </Conditions>
+                    </Condition>
+                </Conditions>
+            </Task>
+
+            <!-- Drive to a far away tree and repeat the process -->
+            <Task>
+                <Type>DriveToTree</Type>
+                <TargetTreeID>10</TargetTreeID>
+                <RepeatMission>true</RepeatMission>
+            </Task>
+
+            <!-- If the very first reading isn't low, drive to end -->
+            <Task>
+                <Type>CheckTemperature</Type>
+                <TargetTreeID>1</TargetTreeID>
+                <Conditions>
+                    <Condition>
+                        <Type>NotLowTemperature</Type>
+                        <Actions>
+                            <Action>
+                                <Type>DriveToEnd</Type>
+                            </Action>
+                        </Actions>
+                    </Condition>
+                </Conditions>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+</MissionPlan>

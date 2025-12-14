@@ -1,0 +1,63 @@
+<Mission xmlns="http://www.example.com/robotics/mission" xsi:schemaLocation="http://www.example.com/robotics/mission http://example.com/schemas/mission_v1.xsd">
+    <Header>
+        <MissionName>Photograph Oak Trees at Four Corners of the Farm</MissionName>
+        <CreatedBy>Robotic Mission Planner</CreatedBy>
+        <CreationDate>2023-05-15T14:30:00Z</CreationDate>
+    </Header>
+    <CompositeTaskInformation>
+        <OriginalRequest>Originally requested to photograph oak trees at the four corners of the farm in any order.</OriginalRequest>
+        <Tasks>
+            <!-- Task 1: Drive to and take a picture of oak tree at corner A -->
+            <Task id="task_a">
+                <DriveToLocation>
+                    <GPSLocation x="{GeoJSON coordinates for corner A}" y="{GeoJSON coordinates for corner A}"/>
+                </DriveToLocation>
+                <Action>
+                    <TakePicture>
+                        <TreeType>Oak</TreeType>
+                    </TakePicture>
+                </Action>
+            </Task>
+
+            <!-- Task 2: Drive to and take a picture of oak tree at corner B -->
+            <Task id="task_b">
+                <DriveToLocation>
+                    <GPSLocation x="{GeoJSON coordinates for corner B}" y="{GeoJSON coordinates for corner B}"/>
+                </DriveToLocation>
+                <Action>
+                    <TakePicture>
+                        <TreeType>Oak</TreeType>
+                    </TakePicture>
+                </Action>
+            </Task>
+
+            <!-- Task 3: Drive to and take a picture of oak tree at corner C -->
+            <Task id="task_c">
+                <DriveToLocation>
+                    <GPSLocation x="{GeoJSON coordinates for corner C}" y="{GeoJSON coordinates for corner C}"/>
+                </DriveToLocation>
+                <Action>
+                    <TakePicture>
+                        <TreeType>Oak</TreeType>
+                    </TakePicture>
+                </Action>
+            </Task>
+
+            <!-- Task 4: Drive to and take a picture of oak tree at corner D -->
+            <Task id="task_d">
+                <DriveToLocation>
+                    <GPSLocation x="{GeoJSON coordinates for corner D}" y="{GeoJSON coordinates for corner D}"/>
+                </DriveToLocation>
+                <Action>
+                    <TakePicture>
+                        <TreeType>Oak</TreeType>
+                    </TakePicture>
+                </Action>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+    <!-- Outcome -->
+    <Outcome>
+        <!-- The estimated travel distance is considerable, but it will be an adventure! -->
+    </Outcome>
+</Mission>

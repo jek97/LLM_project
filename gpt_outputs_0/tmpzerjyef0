@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      This mission aims to assess orchard conditions, focusing on temperature and CO2 levels. The robot will initially take a picture at the first tree.  If the picture indicates a low temperature, a temperature reading will be taken. If this reading is also low, a CO2 sample will be taken. If all readings are low, the robot will drive to a distant tree and repeat the process. If the initial reading is not low, the robot will proceed to the final destination.
+    </TaskDescription>
+    <InitialTreeId>1</InitialTreeId>
+  </CompositeTaskInformation>
+  <Tasks>
+    <Task id="1">
+      <Action>TakePicture</Action>
+      <TargetId>1</TargetId>
+      <Result>
+        <Temperature>25.5</Temperature>
+        <CO2>400 ppm</CO2>
+        <PictureAnalysis>
+          <TemperatureDetected>false</TemperatureDetected>
+        </PictureAnalysis>
+      </Result>
+    </Task>
+    <Task id="2">
+      <Action>DriveTo</Action>
+      <TargetId>19</TargetId>
+    </Task>
+    <Task id="3">
+      <Action>TakePicture</Action>
+      <TargetId>19</TargetId>
+      <Result>
+        <Temperature>22.0</Temperature>
+        <CO2>380 ppm</CO2>
+        <PictureAnalysis>
+          <TemperatureDetected>true</TemperatureDetected>
+        </PictureAnalysis>
+      </Result>
+    </Task>
+    <Task id="4">
+      <Action>TakeTemperatureReading</Action>
+      <TargetId>19</TargetId>
+      <Result>
+        <Temperature>21.8</Temperature>
+        <CO2>375 ppm</CO2>
+      </Result>
+    </Task>
+     <Task id="5">
+      <Action>DriveTo</Action>
+      <TargetId>12</TargetId>
+    </Task>
+    <Task id="6">
+      <Action>TakePicture</Action>
+      <TargetId>12</TargetId>
+      <Result>
+        <Temperature>18.5</Temperature>
+        <CO2>390 ppm</CO2>
+        <PictureAnalysis>
+          <TemperatureDetected>true</TemperatureDetected>
+        </PictureAnalysis>
+      </Result>
+    </Task>
+    <Task id="7">
+      <Action>TakeTemperatureReading</Action>
+      <TargetId>12</TargetId>
+      <Result>
+        <Temperature>18.2</Temperature>
+        <CO2>385 ppm</CO2>
+      </Result>
+    </Task>
+     <Task id="8">
+      <Action>DriveTo</Action>
+      <TargetId>1</TargetId>
+    </Task>
+  </Tasks>
+</MissionPlan>

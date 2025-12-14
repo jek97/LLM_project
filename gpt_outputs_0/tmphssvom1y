@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="mission">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="task"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="task" maxOccurs="unbounded">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="location">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="latitude" type="xs:double"/>
+                            <xs:element name="longitude" type="xs:double"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="action">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="drive"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="distance" type="xs:double"/>
+                <xs:element name="duration" type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+<mission>
+    <task id="1">
+        <name>Take a picture of the northern most tree</name>
+        <location>
+            <latitude>37.36635640370881</latitude>
+            <longitude>-120.42304700637999</longitude>
+        </location>
+    </task>
+    <task id="2">
+        <name>Drive to the middle of the orchard and take another picture</name>
+        <action>drive</action>
+        <distance>100</distance>
+        <duration>30</duration>
+    </task>
+    <task id="3">
+        <name>Take a picture of two trees next to each other</name>
+        <location>
+            <latitude>37.36628908556382</latitude>
+            <longitude>-120.42307592599273</longitude>
+        </location>
+    </task>
+    <task id="4">
+        <name>Drive to the middle of the eastern end</name>
+        <action>drive</action>
+        <distance>100</distance>
+        <duration>30</duration>
+    </task>
+</mission>

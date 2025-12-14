@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>Generate mission plan to visit all points within 100 meters, taking a picture of each tree.</TaskDescription>
+    <MissionDuration>100</MissionDuration>
+    <MaxDistance>100</MaxDistance>
+  </CompositeTaskInformation>
+  <Tasks>
+    <!-- Task definitions will go here.  Example: -->
+    <Task id="1">
+      <Name>Visit Point 1</Name>
+      <GeoPoint>
+        <Latitude>37.366300703749474</Latitude>
+        <Longitude>-120.42299259529793</Longitude>
+      </GeoPoint>
+      <Action>Take Picture</Action>
+    </Task>
+  </Tasks>
+</MissionPlan>

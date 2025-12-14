@@ -1,0 +1,53 @@
+<think>
+Alright, so I'm trying to figure out why my XML mission plan is causing this "Extra content at the end of the document" error. The user mentioned that the problem started after changing some GeoJSON data, and they provided an error message pointing to line 5, column 6 in their XML file.
+
+First off, I need to understand what kind of issue could result in extra content being present without any corresponding tags. This error usually happens when there's trailing text or characters that don't match the expected structure of your XML document. It can be caused by several factors:
+
+1. **Duplicate Characters**: Maybe there are duplicate `&` symbols or other special characters at the end of the file.
+2. **Comment Errors**: If there are comments in the last line, even though they're not properly closed, it might leave some text trailing.
+3. **Invalid Characters**: Sometimes, if the data includes unexpected characters that XML doesn't recognize after the root element is closed.
+
+To fix this, I'll follow a systematic approach:
+
+1. **Validate the XML Document:**
+   Using an XML validator can catch many syntax issues and sometimes trailing content. Tools like `xmlsh` or online validators can help identify if there's extra data beyond what's expected.
+   
+2. **Inspect the GeoJSON Data:**
+   Ensure that all features in the GeoJSON file have matching tags in the XML mission plan template. Any extra text in the GeoJSON might be causing issues when processed.
+
+3. **Check for Trailing Characters:**
+   Look at the end of your XML file to see if there's any unexpected text or characters left after the root element ends. This could include trailing commas, quotes, or other punctuation marks.
+
+4. **Compare Data Structures:**
+   Make sure that each feature in the GeoJSON is correctly mapped and referenced in the XML structure. Any mismatches here can lead to extra content being included inadvertently.
+
+5. **Clean Up the Output:**
+   After generating the XML mission plan, remove any temporary files or unnecessary outputs that might contain the trailing content.
+
+6. **Re-run the Generation Process:**
+   If changes are needed, reprocess the GeoJSON data and regenerate the mission plan to see if the issue persists.
+
+By following these steps, I should be able to identify and eliminate the extra content causing the error in the XML mission plan.
+</think>
+
+To resolve the "Extra content at the end of the document" error in your XML mission plan, follow these steps:
+
+1. **Validate Your XML Document:**
+   Ensure that your XML is well-formed by using an XML validator or tool like `xmlsh`. This will help identify any syntax errors or trailing content.
+
+2. **Inspect the GeoJSON File:**
+   Check for any extra text at the end of your GeoJSON file, as this might be causing the issue when processed into the XML mission plan.
+
+3. **Check Trailing Characters in XML:**
+   Look at the last line(s) of your XML mission plan to ensure there are no trailing commas, quotes, or other characters that don't match the expected structure.
+
+4. **Map GeoJSON Features Correctly:**
+   Ensure each feature (e.g., tree, task) from the GeoJSON file has corresponding tags in your XML mission plan template and is properly referenced without any extra text.
+
+5. **Remove Temporary Files:**
+   After processing, delete any temporary files generated during the creation of the mission plan that might contain trailing content.
+
+6. **Reprocess Data if Necessary:**
+   If adjustments are needed, regenerate the mission plan with the corrected GeoJSON data to verify if the error is resolved.
+
+By systematically addressing each potential cause, you can eliminate the extra content and successfully generate a valid XML mission plan.

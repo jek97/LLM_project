@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RoboticMissionPlan xmlns="http://example.com/robotics/missionplan">
+  <Header>
+    <MissionDescription>Visit as many points within 100 meters and take pictures of each tree.</MissionDescription>
+    <CreatedBy>Your Name</CreatedBy>
+    <CreatedOn>YYYY-MM-DDThh:mm:ssZ</CreatedOn>
+    <ModifiedBy>Your Name</ModifiedBy>
+    <ModifiedOn>YYYY-MM-DDThh:mm:ssZ</ModifiedOn>
+  </Header>
+  <RobotInformation>
+    <StartLocation x="start_longitude" y="start_latitude"/>
+    <EndLocation x="end_longitude" y="end_latitude"/>
+    <MaxDistance>100</MaxDistance>
+  </RobotInformation>
+  <TaskList>
+    <CompositeTaskInformation>
+      <Question>Original Question: Visit as many points within 100 meters and take pictures of each tree.</Question>
+      <SubTasks>
+        <!-- Drive to the starting location -->
+        <DriveToLocation x="start_longitude" y="start_latitude"/>
+
+        <!-- Repeat the following subtasks for all trees within the specified distance -->
+        <DriveToLocation x="tree1_longitude" y="tree1_latitude"/>
+        <TakePictureOfTree type="tree1_type"/>
+
+        <!-- Add more DriveToLocation and TakePictureOfTree subtasks as needed for other trees -->
+      </SubTasks>
+    </CompositeTaskInformation>
+  </TaskList>
+  <Outcome>Visited multiple points within the specified distance and took pictures of each tree.</Outcome>
+</RoboticMissionPlan>

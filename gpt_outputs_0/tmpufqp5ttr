@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.com/missionPlan">
+    <xsd:element name="Mission" namespace="http://www.example.com/missionPlan">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="Header" minOccurs="1" maxOccurs="1"/>
+                <xsd:element ref="MissionInformation" minOccurs="0" maxOccurs="1"/>
+                <xsd:element name="CompositeTaskInformation">
+                    <!-- Define sub-elements for the CompositeTaskInformation as needed -->
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+        <xsd:attribute name="ID" type="xsd:string"/>
+    </xsd:element>
+    <!-- Include GeoJSON data file using xsd:include -->
+    <xsd:include schemaLocation="trees.geojson" namespace="http://www.opengis.net/gml"/>
+    <!-- Define new complex types and elements as needed -->
+    <xsd:complexType name="GPSLocation">
+        <xsd:sequence>
+            <xsd:element name="Latitude" type="xsd:decimal"/>
+            <xsd:element name="Longitude" type="xsd:decimal"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

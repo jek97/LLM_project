@@ -1,0 +1,43 @@
+<think>
+Okay, so I'm trying to help this user fix an error in their XML mission plan file. The error message they provided says there's a problem with the element `<mms:Mission>`, specifically that there's no matching global declaration available for the validation root. This means that the XML validator can't find the schema or DTD document that defines the structure of the XML.
+
+First, I need to understand why this error is happening. The user mentioned they're generating a mission plan using robotic task representation and creating an XML file based on a known schema. If their XML file doesn't match the declared schema correctly, the validator will throw an error because it can't find the corresponding global declaration for the `<mms:Mission>` element.
+
+Looking at the error message, it says there's no matching global declaration for the validation root. This suggests that either the schema document isn't properly referenced in their XML file, or the schema itself is missing entirely. The user might have forgotten to include the correct schema location or filename when declaring the `<mms:Mission>` element.
+
+I should consider possible reasons why this error occurs:
+
+1. **Missing Schema Document**: The XML schema (e.g., `http://www.heliom.com/schemas/2014/MiMML.xsd`) might not exist, causing the validator to fail when it tries to validate against it.
+
+2. **Incorrect Reference in XML File**: The `<mms:Mission>` element's attribute might be referencing a schema that doesn't match the actual schema document used.
+
+3. **Schema Not Properly Imported or Referenced**: If using an external schema, ensure that it's correctly imported and referenced in the project.
+
+To resolve this error, I can suggest the following steps:
+
+1. **Verify the Schema Document**: Ensure that the XML schema file referenced in your `<mms:Mission>` element actually exists and is correct. Check the path and filename to make sure they match exactly what you expect.
+
+2. **Check XML Validation Settings**: Make sure that your project's build settings or validation rules include the correct schema document so that the validator knows where to find it.
+
+3. **Use a Default Schema if Necessary**: If the user is using a default schema, ensure that all elements and attributes are properly defined according to that schema.
+
+4. **Test the XML File Independently**: Sometimes, running the validator directly from the command line can help identify issues with the schema or XML structure before integrating it into any build process.
+
+5. **Consult Documentation or Support**: If unsure about how to reference schemas correctly, consult the project's documentation or reach out to support for clarification on the expected schema format and location.
+
+By addressing these potential issues, the user should be able to resolve the validation error related to the `<mms:Mission>` element.
+</think>
+
+The error you're encountering indicates that there is no matching global declaration available for the XML validation root. This typically means that the XML schema or DTD file referenced in your `<mms:Mission>` element does not exist, is improperly referenced, or is missing.
+
+To resolve this issue:
+
+1. **Ensure the Schema Document Exists**: Verify that the schema document (e.g., `http://www.heliom.com/schemas/2014/MiMML.xsd`) exists and is correctly referenced in your XML file.
+
+2. **Check the Reference in Your XML File**: Make sure that the `<mms:Mission>` element's attribute references the correct schema location or filename.
+
+3. **Properly Import or Reference the Schema**: If using an external schema, ensure it is properly imported or referenced in your project's build process.
+
+4. **Test Independently**: Run a standalone XML validator to check if the issue persists before integrating with any build system.
+
+If you're unsure about how to reference schemas correctly, consult the documentation for your project or contact support for clarification on the expected schema format and location.

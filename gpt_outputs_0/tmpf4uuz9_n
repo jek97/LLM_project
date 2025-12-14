@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>Viewing this farm as a rectangle, take pictures of trees at the four corners of the farm in any order.</TaskDescription>
+  </CompositeTaskInformation>
+  <Outcome>
+    <TotalDistance>Approximately 1.2 miles traveled.</TotalDistance>
+  </Outcome>
+  <Tasks>
+    <Task id="task1">
+      <TaskType>Drive</TaskType>
+      <Waypoint>
+        <Latitude>37.7749</Latitude>
+        <Longitude>-122.4194</Longitude>
+        <Distance>0.2 miles</Distance>
+        <Description>Drive to the North-West corner of the farm.</Description>
+      </Waypoint>
+    </Task>
+    <Task id="task2">
+      <TaskType>Photograph</TaskType>
+      <Waypoint>
+        <Latitude>37.7755</Latitude>
+        <Longitude>-122.4160</Longitude>
+        <Distance>0.1 miles</Distance>
+        <Description>Photograph tree at the North-West corner.</Description>
+      </Waypoint>
+    </Task>
+    <Task id="task3">
+      <TaskType>Drive</TaskType>
+      <Waypoint>
+        <Latitude>37.7735</Latitude>
+        <Longitude>-122.4205</Longitude>
+        <Distance>0.3 miles</Distance>
+        <Description>Drive to the South-East corner of the farm.</Description>
+      </Waypoint>
+    </Task>
+    <Task id="task4">
+      <TaskType>Photograph</TaskType>
+      <Waypoint>
+        <Latitude>37.7720</Latitude>
+        <Longitude>-122.4180</Longitude>
+        <Distance>0.1 miles</Distance>
+        <Description>Photograph tree at the South-East corner.</Description>
+      </Waypoint>
+    </Task>
+    <Task id="task5">
+      <TaskType>Drive</TaskType>
+      <Waypoint>
+        <Latitude>37.7765</Latitude>
+        <Longitude>-122.4215</Longitude>
+        <Distance>0.3 miles</Distance>
+        <Description>Drive to the North-East corner of the farm.</Description>
+      </Waypoint>
+    </Task>
+    <Task id="task6">
+      <TaskType>Photograph</TaskType>
+      <Waypoint>
+        <Latitude>37.7750</Latitude>
+        <Longitude>-122.4190</Longitude>
+        <Distance>0.1 miles</Distance>
+        <Description>Photograph tree at the North-East corner.</Description>
+      </Waypoint>
+    </Task>
+    <Task id="task7">
+      <TaskType>Drive</TaskType>
+      <Waypoint>
+        <Latitude>37.7740</Latitude>
+        <Longitude>-122.4200</Longitude>
+        <Distance>0.3 miles</Distance>
+        <Description>Drive to the South-West corner of the farm.</Description>
+      </Waypoint>
+    </Task>
+    <Task id="task8">
+      <TaskType>Photograph</TaskType>
+      <Waypoint>
+        <Latitude>37.7725</Latitude>
+        <Longitude>-122.4175</Longitude>
+        <Distance>0.1 miles</Distance>
+        <Description>Photograph tree at the South-West corner.</Description>
+      </Waypoint>
+    </Task>
+  </Tasks>
+</MissionPlan>

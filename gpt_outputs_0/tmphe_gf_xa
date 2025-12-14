@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://myrobotics.com/schemas/missionplan MissionPlan.xsd">
+    <Header>
+        <MissionName>IdentifyTreeSpecies</MissionName>
+        <Version>1.0</Version>
+        <Author>RoboticsAI</Author>
+    </Header>
+    <TaskList>
+        <!-- Start of the mission -->
+        <CompositeTaskInformation id="Start">
+            <TaskDescription>Begin the mission (IdentifyTreeSpecies)</TaskDescription>
+        </CompositeTaskInformation>
+
+        <!-- Loop through all points and generate tasks for each tree -->
+        <ForEach id="VisitTrees" IterationList="TreeList">
+            <CompositeTaskInformation id="${CurrentTree.id}">
+                <TaskDescription>Drive to ${CurrentTree.coordinates.longitude}, ${CurrentTree.coordinates.latitude}. Identify tree species at ${CurrentTree.properties.commonName}</TaskDescription>
+                <Action id="ArriveAtLocation">
+                    <PerformAt>${CurrentTree.timeStamp}</PerformAt>
+                </Action>
+                <!-- Add additional actions as needed for each tree -->
+            </CompositeTaskInformation>
+        </ForEach>
+
+        <!-- End of the mission -->
+        <CompositeTaskInformation id="End">
+            <TaskDescription>End the mission (IdentifyTreeSpecies)</TaskDescription>
+        </CompositeTaskInformation>
+    </TaskList>
+    <Data>
+        <TreeList>
+            <!-- Insert all trees from GeoJSON here -->
+            <Tree id="${0}">
+                <coordinates>
+                    <longitude>${tree.coordinates.longitude}</longitude>
+                    <latitude>${tree.coordinates.latitude}</latitude>
+                </coordinates>
+                <commonName>${tree.properties.commonName}</commonName>
+                <timeStamp>${tree.properties.lastSampled}</timeStamp>
+            </Tree>
+            <!-- ... -->
+        </TreeList>
+    </Data>
+    <Outcome>
+        <!-- Comment the total estimated haversine distance traveled from start to end here -->
+        <TotalEstimatedDistance>The robot will travel a significant but manageable distance during this mission</TotalEstimatedDistance>
+    </Outcome>
+</MissionPlan>

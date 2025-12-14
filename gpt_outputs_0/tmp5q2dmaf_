@@ -1,0 +1,30 @@
+<MissionPlan xmlns="http://example.com/mission-plan">
+    <Version>1.0</Version>
+    <TaskList>
+        <CompositeTaskInformation id="1" TaskDescription="Take a picture of the first tree, take CO2 sample if low reading, and measure temperature if not low.">
+            <DriveToLocation id="1.1">
+                <GPSReference x="<GeoJSON_longitude_of_the_first_tree>" y="<GeoJSON_latitude_of_the_first_tree>" />
+            </DriveToLocation>
+            <Task id="1.2" Type="TakePicture">
+                <GPSReference x="<GeoJSON_longitude_of_the_first_tree>" y="<GeoJSON_latitude_of_the_first_tree>" />
+            </Task>
+            <Condition id="1.3" Type="ReadingValue">
+                <Parameter Name="CO2_reading" Value="low" />
+                <IfTrue>
+                    <Task id="1.4" Type="SampleCO2">
+                        <GPSReference x="<GeoJSON_longitude_of_the_first_tree>" y="<GeoJSON_latitude_of_the_first_tree>" />
+                    </Task>
+                </IfTrue>
+            </Condition>
+            <Else>
+                <Task id="1.5" Type="TakeTemperatureReading">
+                    <GPSReference x="<GeoJSON_longitude_of_the_first_tree>" y="<GeoJSON_latitude_of_the_first_tree>" />
+                </Task>
+            </Else>
+        </CompositeTaskInformation>
+        <!-- Repeat the same structure for additional trees as described in the original question -->
+    </TaskList>
+    <Outcome>
+        The mission will cover a relatively short distance compared to the total area of the forest, given that it follows a linear path.
+    </Outcome>
+</MissionPlan>

@@ -1,0 +1,9 @@
+<mission>
+  <task>
+    <action>
+      <move_to coordinates="Tree 1 coordinates">
+        <take_picture comment="Capture an image of Tree 1"/>
+      </move_to>
+    </action>
+  </task>
+</mission>

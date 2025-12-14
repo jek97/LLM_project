@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns="yournamespace">
+  <!-- ... (the rest of your XML remains the same) -->
+</Mission>

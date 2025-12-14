@@ -1,0 +1,35 @@
+<MissionPlan>
+    <CompositeTaskInformation>
+        <TaskDescription>Orchard Exploration: Collect cos, CO2, and temperature data; Take pictures of trees with low cos.</TaskDescription>
+        <SequentialTasks>
+            <DriveToGPSLocation>
+                <TargetGpsCoordinates lat="37.3663048801105" lon="-120.4229925952979">Starting point</TargetGpsCoordinates>
+            </DriveToGPSLocation>
+            <TreeMeasureCos>
+                <TargetTreeId>N/A (Find a tree near the middle of the orchard)</TargetTreeId>
+            </TreeMeasureCos>
+            <TakePictures>
+                <TargetTreeId>N/A (The nearby trees of the selected cos measuring tree)</TargetTreeId>
+            </TakePictures>
+            <DriveToGPSLocation>
+                <TargetGpsCoordinates lat="N/A" lon="N/A">Current position after taking pictures</TargetGpsCoordinates>
+            </DriveToGPSLocation>
+            <TreeMeasureCo2>
+                <TargetTreeId>N/A (Find a tree as far away as possible)</TargetTreeId>
+            </TreeMeasureCo2>
+            <TakePictures>
+                <TargetTreeId>N/A (The nearby trees of the selected CO2 measuring tree)</TargetTreeId>
+            </TakePictures>
+            <DriveToGPSLocation>
+                <TargetGpsCoordinates lat="N/A" lon="N/A">Current position after taking pictures</TargetGpsCoordinates>
+            </DriveToGPSLocation>
+            <TreeMeasureTemperature>
+                <TargetTreeId>N/A (Find any one of the northernmost trees)</TargetTreeId>
+            </TreeMeasureTemperature>
+            <DriveToGPSLocation>
+                <TargetGpsCoordinates lat="37.3663048801105" lon="-120.4229925952979">Starting point</TargetGpsCoordinates>
+            </DriveToGPSLocation>
+        </SequentialTasks>
+    </CompositeTaskInformation>
+    <Outcome>Successfully completed the Orchard Exploration mission. Mission covered considerable distance across the orchard.</Outcome>
+</MissionPlan>

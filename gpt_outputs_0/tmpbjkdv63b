@@ -1,0 +1,74 @@
+<MissionPlan xmlns="http://www.example.com/missionplan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.com/missionplan http://www.example.com/missionplan/missionplan.xsd">
+  <MissionName>Robot Forest Exploration Mission</MissionName>
+  <MissionDescription>This mission plan involves navigating the robot to various tree locations and performing actions such as taking pictures or collecting saplings. The original question is placed in the TaskDescription element for logging purposes.</MissionDescription>
+  <CreatedBy>John Doe</CreatedBy>
+  <StartTime>2023-04-17T13:00:00Z</StartTime>
+  <EndTime>2023-04-17T14:00:00Z</EndTime>
+  <Version>1.0</Version>
+
+  <!-- Define the total estimated distance traveled from start to end somewhere in the Outcome -->
+  <Outcome>Total estimated distance: moderate</Outcome>
+
+  <Tasks>
+    <CompositeTaskInformation id="task1">
+      <TaskDescription>Drive to Maple Tree #1, take pictures and collect saplings.</TaskDescription>
+
+      <!-- Task 1: Drive to the first tree -->
+      <Tasks>
+        <ActionTask id="action_task1">
+          <Action>DriveTo</Action>
+          <Parameters>
+            <DestinationRef xsi:type="GPSLocation" idRef="Tree1"/>
+          </Parameters>
+        </ActionTask>
+      </Tasks>
+
+      <!-- Task 2: Take pictures at the first tree -->
+      <Tasks>
+        <CameraActionTask id="action_task2">
+          <Action>TakePicture</Action>
+          <Parameters>
+            <SubjectRef xsi:type="GPSLocation" idRef="Tree1"/>
+            <Type>Maple</Type>
+          </Parameters>
+        </CameraActionTask>
+      </Tasks>
+
+      <!-- Task 3: Collect saplings at the first tree -->
+      <Tasks>
+        <SaplingCollectionTask id="action_task3">
+          <Action>CollectSaplings</Action>
+          <Parameters>
+            <SubjectRef xsi:type="GPSLocation" idRef="Tree1"/>
+          </Parameters>
+        </SaplingCollectionTask>
+      </Tasks>
+    </CompositeTaskInformation>
+
+    <!-- Add more tasks if needed, using CompositeTaskInformation elements with parent actions and child tasks -->
+  </Tasks>
+
+  <GPSLocations>
+    <!-- Define GPS locations for the trees based on GeoJSON format -->
+    <FeatureCollection>
+      <Feature id="Start">
+        <Geometry>
+          <Point>
+            <coordinates>-87.6298, 41.8889</coordinates>
+          </Point>
+        </Geometry>
+      </Feature>
+
+      <!-- Define additional GPS locations as needed -->
+      <Feature id="Tree1">
+        <Geometry>
+          <Point>
+            <coordinates>-87.6301, 41.8925</coordinates>
+          </Point>
+          <PropertyName>tree_type</PropertyName>
+          <Value>Maple</Value>
+        </Geometry>
+      </Feature>
+    </FeatureCollection>
+  </GPSLocations>
+</MissionPlan>

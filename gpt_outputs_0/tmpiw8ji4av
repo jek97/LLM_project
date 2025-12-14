@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTask id="MainMission">
+    <Task id="Task1" targetId="1">
+      <Description>Visit Point 1</Description>
+      <Waypoint id="1">
+        <Latitude>37.36626996761184</Latitude>
+        <Longitude>-120.42298051393493</Longitude>
+      </Waypoint>
+      <Reward>0.85</Reward>
+    </Task>
+    <Task id="Task2" targetId="2">
+      <Description>Visit Point 2</Description>
+      <Waypoint id="2">
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42300386899338</Longitude>
+      </Waypoint>
+      <Reward>0.78</Reward>
+    </Task>
+    <Task id="Task3" targetId="3">
+      <Description>Visit Point 4</Description>
+      <Waypoint id="3">
+        <Latitude>37.366300703749474</Latitude>
+        <Longitude>-120.4230246791031</Longitude>
+      </Waypoint>
+      <Reward>0.62</Reward>
+    </Task>
+    <Task id="Task4" targetId="4">
+      <Description>Visit Point 5</Description>
+      <Waypoint id="4">
+        <Latitude>37.366304880110526</Latitude>
+        <Longitude>-120.42302669537153</Longitude>
+      </Waypoint>
+      <Reward>0.55</Reward>
+    </Task>
+    <Task id="Task5" targetId="5">
+      <Description>Visit Point 6</Description>
+      <Waypoint id="5">
+        <Latitude>37.36631785560332</Latitude>
+        <Longitude>-120.42303004014194</Longitude>
+      </Waypoint>
+      <Reward>0.48</Reward>
+    </Task>
+    <Task id="Task6" targetId="6">
+      <Description>Visit Point 7</Description>
+      <Waypoint id="6">
+        <Latitude>37.36635640370881</Latitude>
+        <Longitude>-120.423044218715</Longitude>
+      </Waypoint>
+      <Reward>0.41</Reward>
+    </Task>
+    <Task id="Task7" targetId="7">
+      <Description>Visit Point 8</Description>
+      <Waypoint id="7">
+        <Latitude>37.36635678715399</Latitude>
+        <Longitude>-120.42299259529793</Longitude>
+      </Waypoint>
+      <Reward>0.34</Reward>
+    </Task>
+    <Task id="Task8" targetId="8">
+      <Description>Visit Point 9</Description>
+      <Waypoint id="8">
+        <Latitude>37.36635678715399</Latitude>
+        <Longitude>-120.423044218715</Longitude>
+      </Waypoint>
+      <Reward>0.27</Reward>
+    </Task>
+    <Task id="Task9" targetId="9">
+      <Description>Visit Point 10</Description>
+      <Waypoint id="9">
+        <Latitude>37.36635678715399</Latitude>
+        <Longitude>-120.423044218715</Longitude>
+      </Waypoint>
+      <Reward>0.19</Reward>
+    </Task>
+    <Task id="Task10" targetId="10">
+      <Description>Visit Point 11</Description>
+      <Waypoint id="10">
+        <Latitude>37.36631785560332</Latitude>
+        <Longitude>-120.42303004014194</Longitude>
+      </Waypoint>
+      <Reward>0.12</Reward>
+    </Task>
+    <Task id="Task11" targetId="11">
+      <Description>Visit Point 12</Description>
+      <Waypoint id="11">
+        <Latitude>37.36626996761184</Latitude>
+        <Longitude>-120.42298051393493</Longitude>
+      </Waypoint>
+      <Reward>0.05</Reward>
+    </Task>
+    <Task id="Task12" targetId="12">
+      <Description>Visit Point 13</Description>
+      <Waypoint id="12">
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42300386899338</Longitude>
+      </Waypoint>
+      <Reward>0.02</Reward>
+    </Task>
+  </Task>
+</Task>

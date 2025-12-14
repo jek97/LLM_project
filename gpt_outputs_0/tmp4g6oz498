@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/missionplan"
+           elementFormDefault="qualified">
+    <xs:element name="MissionPlan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CompositeTaskInformation" type="CompositeTaskInformationType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="CompositeTaskInformationType">
+        <xs:sequence>
+            <xs:element name="TaskDescription" type="xs:string"/>
+            <xs:element name="Sequence">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="DrivingTask" minOccurs="0" maxOccurs="unbounded"/>
+                        <xs:element ref="PictureTask" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DrivingTaskType">
+        <xs:sequence>
+            <xs:element name="location" type="LocationType"/>
+            <xs:element name="action" type="ActionType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="LocationType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9._-]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ActionType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="DriveToTree"/>
+            <xs:enumeration value="TakePicture"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

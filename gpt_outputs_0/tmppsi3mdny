@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>Visit all points on the farm</TaskDescription>
+    <Tasks>
+      <DriveToWaypoint>
+        <WaypointID>1</WaypointID>
+        <Reward>0.95</Reward>
+      </DriveToWaypoint>
+      <DriveToWaypoint>
+        <WaypointID>2</WaypointID>
+        <Reward>0.85</Reward>
+      </DriveToWaypoint>
+      <DriveToWaypoint>
+        <WaypointID>3</WaypointID>
+        <Reward>0.75</Reward>
+      </DriveToWaypoint>
+      <DriveToWaypoint>
+        <WaypointID>4</WaypointID>
+        <Reward>0.65</Reward>
+      </DriveToWaypoint>
+      <DriveToWaypoint>
+        <WaypointID>5</WaypointID>
+        <Reward>0.55</Reward>
+      </DriveToWaypoint>
+      <DriveToWaypoint>
+        <WaypointID>6</WaypointID>
+        <Reward>0.45</Reward>
+      </DriveToWaypoint>
+      <DriveToWaypoint>
+        <WaypointID>7</WaypointID>
+        <Reward>0.35</Reward>
+      </DriveToWaypoint>
+      <DriveToWaypoint>
+        <WaypointID>8</WaypointID>
+        <Reward>0.25</Reward>
+      </DriveToWaypoint>
+      <DriveToWaypoint>
+        <WaypointID>9</WaypointID>
+        <Reward>0.15</Reward>
+      </DriveToWaypoint>
+      <DriveToWaypoint>
+        <WaypointID>10</WaypointID>
+        <Reward>0.05</Reward>
+      </DriveToWaypoint>
+    </Tasks>
+  </CompositeTaskInformation>
+</MissionPlan>

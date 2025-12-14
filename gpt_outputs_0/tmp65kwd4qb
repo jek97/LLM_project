@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <Task id="1" type="Drive">
+      <TaskDescription>Drive to the northernmost tree.</TaskDescription>
+      <Target id="tree_1" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+    </Task>
+    <Task id="2" type="Drive">
+      <TaskDescription>Drive to the middle of the orchard.</TaskDescription>
+      <Target id="middle" latitude="37.36631785560332" longitude="-120.42303004014194"/>
+    </Task>
+    <Task id="3" type="Drive">
+      <TaskDescription>Drive to the middle of the eastern end.</TaskDescription>
+      <Target id="eastern_middle" latitude="37.36631785560332" longitude="-120.42303004014194"/>
+    </Task>
+    <Task id="4" type="Drive">
+      <TaskDescription>Drive to two trees next to each other at the eastern end.</TaskDescription>
+      <Target id="eastern_trees" latitude="37.36631785560332" longitude="-120.42303004014194"/>
+    </Task>
+  </CompositeTaskInformation>
+</MissionPlan>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Select 5 pistachio trees in a row to visit and take a picture of 3 of them.
+      <OriginalTask>Select 5 pistachio trees in a row to visit and take a picture of 3 of them.</OriginalTask>
+    </TaskDescription>
+    <MissionDuration>15 minutes</MissionDuration>
+  </CompositeTaskInformation>
+  <Tasks>
+    <Task id="1">
+      <TaskType>Navigation</TaskType>
+      <Location>Point: (-120.42300386899338, 37.366300703749474)</Location>
+      <Instruction>Navigate to the first pistachio tree in the row.</Instruction>
+    </Task>
+    <Task id="2">
+      <TaskType>Navigation</TaskType>
+      <Location>Point: (-120.42301417901265, 37.366304880110526)</Location>
+      <Instruction>Navigate to the second pistachio tree in the row.</Instruction>
+    </Task>
+    <Task id="3">
+      <TaskType>Navigation</TaskType>
+      <Location>Point: (-120.4230246791031, 37.366304880110526)</Location>
+      <Instruction>Navigate to the third pistachio tree in the row.</Instruction>
+    </Task>
+    <Task id="4">
+      <TaskType>Navigation</TaskType>
+      <Location>Point: (-120.42302669537153, 37.36631785560332)</Location>
+      <Instruction>Navigate to the fourth pistachio tree in the row.</Instruction>
+    </Task>
+    <Task id="5">
+      <TaskType>Navigation</TaskType>
+      <Location>Point: (-120.42303004014194, 37.36631785560332)</Location>
+      <Instruction>Navigate to the fifth pistachio tree in the row.</Instruction>
+    </Task>
+    <Task id="6">
+      <TaskType>ImageCapture</TaskType>
+      <Location>Point: (-120.42303004014194, 37.36631785560332)</Location>
+      <Instruction>Take a picture of 3 of the pistachio trees.</Instruction>
+    </Task>
+  </Tasks>
+</MissionPlan>

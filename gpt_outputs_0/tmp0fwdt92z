@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan">
+  <Tasks>
+    <Task id="1" TaskType="DriveTo">
+      <Destination>
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42298051393493</Longitude>
+      </Destination>
+      <Instructions>Drive to the specified coordinates.</Instructions>
+    </Task>
+    <Task id="2" TaskType="TakePhoto">
+      <Instructions>Take a photograph.</Instructions>
+    </Task>
+    <Task id="3" TaskType="TemperatureCheck">
+      <Instructions>Measure the temperature. If below 33C, proceed.</Instructions>
+    </Task>
+    <Task id="4" TaskType="CollectCO2Sample">
+      <Instructions>Collect a CO2 sample.</Instructions>
+    </Task>
+    <Task id="5" TaskType="DriveTo">
+      <Destination>
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42298051393493</Longitude>
+      </Destination>
+      <Instructions>Drive 5 trees down.</Instructions>
+    </Task>
+    <Task id="6" TaskType="Repeat">
+      <Instructions>Repeat Tasks 2-6.</Instructions>
+    </Task>
+  </Tasks>
+</MissionPlan>

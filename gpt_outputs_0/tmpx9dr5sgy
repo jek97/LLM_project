@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://www.example.com/robotics/missionplan">
+  <Header>
+    <Name>Visit all points on the farm</Name>
+    <Version>1.0</Version>
+  </Header>
+  <CompositeTaskInformation>
+    <TaskDescription>Generate a mission plan to visit all points on the farm.</TaskDescription>
+    <Tasks>
+      <!-- Tasks for each point -->
+      <Task>
+        <Name>Visit Point {0}</Name>
+        <Reward>{1}</Reward>
+        <Location>
+          <Latitude>{2}</Latitude>
+          <Longitude>{3}</Longitude>
+        </Location>
+        <Action>Drive to location</Action>
+      </Task>
+      <!-- Repeat for each point -->
+    </Tasks>
+  </CompositeTaskInformation>
+  <!-- Placeholder for the actual points -->
+  <PointsToVisit>
+    <!-- Replace with your GeoJSON points -->
+  </PointsToVisit>
+</MissionPlan>

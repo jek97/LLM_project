@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      This mission involves driving to a central tree, taking a photograph, assessing temperature, and collecting a CO2 sample. Subsequently, it navigates to a point five trees down and repeats the process.
+    </TaskDescription>
+    <StartLocation>
+      <Latitude>37.36627570632085</Latitude>
+      <Longitude>-120.42298051393493</Longitude>
+    </StartLocation>
+  </CompositeTaskInformation>
+
+  <Tasks>
+    <Task id="1">
+      <TaskType>Drive</TaskType>
+      <Destination>
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42298051393493</Longitude>
+      </Destination>
+      <Instruction>Drive to the center of the field.</Instruction>
+    </Task>
+    <Task id="2">
+      <TaskType>Photograph</TaskType>
+      <Instruction>Take a picture of the nearest tree.</Instruction>
+    </Task>
+    <Task id="3">
+      <TaskType>TemperatureAssessment</TaskType>
+      <Instruction>Measure the average temperature. If below 33°C, proceed to CO2 sampling.</Instruction>
+    </Task>
+    <Task id="4">
+      <TaskType>CO2Sampling</TaskType>
+      <Instruction>Collect a CO2 sample.</Instruction>
+    </Task>
+    <Task id="5">
+      <TaskType>Drive</TaskType>
+      <Instruction>Navigate 5 trees down from the current location.</Instruction>
+    </Task>
+    <Task id="6">
+      <TaskType>Photograph</TaskType>
+      <Instruction>Take a picture of the nearest tree.</Instruction>
+    </Task>
+    <Task id="7">
+      <TaskType>TemperatureAssessment</TaskType>
+      <Instruction>Measure the average temperature. If below 33°C, proceed to CO2 sampling.</Instruction>
+    </Task>
+    <Task id="8">
+      <TaskType>CO2Sampling</TaskType>
+      <Instruction>Collect a CO2 sample.</Instruction>
+    </Task>
+  </Tasks>
+</MissionPlan>

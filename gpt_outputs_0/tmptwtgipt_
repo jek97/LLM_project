@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Take a picture of 4 trees going clockwise from the north most tree, as far a part as possible, locationwise.
+    </TaskDescription>
+  </CompositeTaskInformation>
+  <Tasks>
+    <Task id="1">
+      <TaskType>ImageCapture</TaskType>
+      <TargetTreeId>1</TargetTreeId>
+      <Instructions>Take picture of Tree ID 1.</Instructions>
+    </Task>
+    <Task id="2">
+      <TaskType>Navigation</TaskType>
+      <Instructions>Navigate to Tree ID 17. Move as far as possible from Tree ID 1, locationwise.</Instructions>
+    </Task>
+    <Task id="3">
+      <TaskType>ImageCapture</TaskType>
+      <TargetTreeId>17</TargetTreeId>
+      <Instructions>Take picture of Tree ID 17.</Instructions>
+    </Task>
+    <Task id="4">
+      <TaskType>Navigation</TaskType>
+      <Instructions>Navigate to Tree ID 14. Move as far as possible from Tree ID 17, locationwise.</Instructions>
+    </Task>
+    <Task id="5">
+      <TaskType>ImageCapture</TaskType>
+      <TargetTreeId>14</TargetTreeId>
+      <Instructions>Take picture of Tree ID 14.</Instructions>
+    </Task>
+    <Task id="6">
+      <TaskType>Navigation</TaskType>
+      <Instructions>Navigate to Tree ID 10. Move as far as possible from Tree ID 14, locationwise.</Instructions>
+    </Task>
+    <Task id="7">
+      <TaskType>ImageCapture</TaskType>
+      <TargetTreeId>10</TargetTreeId>
+      <Instructions>Take picture of Tree ID 10.</Instructions>
+    </Task>
+    <Task id="8">
+      <TaskType>Navigation</TaskType>
+      <Instructions>Navigate to Tree ID 1. Move as far as possible from Tree ID 10, locationwise.</Instructions>
+    </Task>
+    <Task id="9">
+      <TaskType>ImageCapture</TaskType>
+      <TargetTreeId>1</TargetTreeId>
+      <Instructions>Take picture of Tree ID 1.</Instructions>
+    </Task>
+  </Tasks>
+</MissionPlan>

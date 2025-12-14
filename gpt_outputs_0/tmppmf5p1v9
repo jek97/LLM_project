@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<MissionPlan>
+    <Version>2</Version>
+
+    <Task name="start">
+        <Sub-task id="1">
+            <Navigation move-to-command="0, 0, 30">move_to(0, 0, 30)</Navigation>
+            <Action action-type="navigate">navigate_to(0, 0, 45)</Action>
+        </Sub-task>
+    </Task>
+
+    <Task name="start">
+        <Sub-task id="2">
+            <Navigation move-to-command="10, 10, 30">move_to(10, 10, 30)</Navigation>
+            <Action action-type="navigate">navigate_to(10, 10, 45)</Action>
+        </Sub-task>
+    </Task>
+
+    <!-- Additional tasks and sub-tasks can be added here -->
+</MissionPlan>

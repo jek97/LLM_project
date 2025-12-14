@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://example.org/missionplanner">
+    <Version>1.0</Version>
+    <MissionDescription xsi:type="string">From the starting point, find a tree somewhere in the middle of the orchard and measure cos. If low reading, go to and take 2 pictures of nearby trees. From there, measure another tree as far away as possible for CO2 and repeat the same process. Once done, take a temperature reading at any one of the northern most trees. Finally, return to end.</MissionDescription>
+    <TaskInformation>
+        <!-- Include original question in TaskDescription -->
+        <CompositeTaskInformation>
+            <TaskDescription xsi:type="string">From the starting point, find a tree somewhere in the middle of the orchard and measure cos. If low reading, go to and take 2 pictures of nearby trees. From there, measure another tree as far away as possible for CO2 and repeat the same process.</TaskDescription>
+            <SubTasks>
+                <!-- Include tasks here -->
+            </SubTasks>
+        </CompositeTaskInformation>
+    </TaskInformation>
+    <!-- Add GPS coordinates, tree types, etc. in separate elements below -->
+</MissionPlan>

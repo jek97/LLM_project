@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="MissionPlan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="MissionID" type="xs:string"/>
+                <xs:element name="TaskDescription" type="xs:string"/>
+                <xs:element name="Waypoints">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Waypoint" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ID" type="xs:string"/>
+                                        <xs:element name="Latitude" type="xs:decimal"/>
+                                        <xs:element name="Longitude" type="xs:decimal"/>
+                                        <xs:element name="ActionType" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

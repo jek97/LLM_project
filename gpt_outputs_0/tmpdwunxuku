@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robust-mission-planning.com/mission-plan.xsd 
+                                 http://robust-mission-planning.com/mission-plan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to the first corner and take a picture of the tree</TaskDescription>
+    <DrivingTask>
+      <StartLocation ref="corner1"/>
+      <EndLocation ref="corner1"/>
+      <Distance unit="meters">0.0</Distance>
+      <Action>TakePicture</Action>
+    </DrivingTask>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to the second corner and take a picture of the tree</TaskDescription>
+    <DrivingTask>
+      <StartLocation ref="corner2"/>
+      <EndLocation ref="corner2"/>
+      <Distance unit="meters">0.0</Distance>
+      <Action>TakePicture</Action>
+    </DrivingTask>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to the third corner and take a picture of the tree</TaskDescription>
+    <DrivingTask>
+      <StartLocation ref="corner3"/>
+      <EndLocation ref="corner3"/>
+      <Distance unit="meters">0.0</Distance>
+      <Action>TakePicture</Action>
+    </DrivingTask>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to the fourth corner and take a picture of the tree</TaskDescription>
+    <DrivingTask>
+      <StartLocation ref="corner4"/>
+      <EndLocation ref="corner4"/>
+      <Distance unit="meters">0.0</Distance>
+      <Action>TakePicture</Action>
+    </DrivingTask>
+  </CompositeTaskInformation>
+
+  <!-- Composite task to drive between all four corners -->
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to the next corner and take a picture of the tree</TaskDescription>
+    <DrivingTask>
+      <StartLocation ref="corner1"/>
+      <EndLocation ref="corner2"/>
+      <Distance unit="meters">0.0</Distance>
+      <Action>TakePicture</Action>
+    </DrivingTask>
+  </CompositeTaskInformation>
+
+  <!-- Composite task to drive between all four corners -->
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to the next corner and take a picture of the tree</TaskDescription>
+    <DrivingTask>
+      <StartLocation ref="corner2"/>
+      <EndLocation ref="corner3"/>
+      <Distance unit="meters">0.0</Distance>
+      <Action>TakePicture</Action>
+    </DrivingTask>
+  </CompositeTaskInformation>
+
+  <!-- Composite task to drive between all four corners -->
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to the next corner and take a picture of the tree</TaskDescription>
+    <DrivingTask>
+      <StartLocation ref="corner3"/>
+      <EndLocation ref="corner4"/>
+      <Distance unit="meters">0.0</Distance>
+      <Action>TakePicture</Action>
+    </DrivingTask>
+  </CompositeTaskInformation>
+
+  <!-- Composite task to drive between all four corners -->
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to the next corner and take a picture of the tree</TaskDescription>
+    <DrivingTask>
+      <StartLocation ref="corner4"/>
+      <EndLocation ref="corner1"/>
+      <Distance unit="meters">0.0</Distance>
+      <Action>TakePicture</Action>
+    </DrivingTask>
+  </CompositeTaskInformation>
+
+</MissionPlan>

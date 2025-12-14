@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:tns="http://example.com/mission"
+           targetNamespace="http://example.com/mission"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="mission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CompositeTaskInformation" type="tns:CompositeTaskInfoType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

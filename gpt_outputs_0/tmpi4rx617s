@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<element-group>
+  <mission_plan type="MissionPlanType">
+    <task id="1" type="ImageTaskType" point="(-120.4230..., 37.3663...)" />
+    <!-- Add more tasks as needed -->
+  </mission_plan>
+</element-group>
+
+<group>
+  <!-- Define your groups here -->
+</group>
+
+<![CDATA[Mission Plan Structure:]]>
+
+<m mission_plan type="MissionPlanType">
+  <task id="1" type="ImageTaskType" point="(-120.4230..., 37.3663...)" />
+  <!-- Add more tasks as needed -->
+</m>
+
+<group>
+  <!-- Define your groups here -->
+</group>
+
+<![CDATA[Schema Definitions:]]]
+
+<!-- MissionPlan.xsd -->
+schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" target="false">
+  <complexType name="MissionPlan">
+    <complexContent>
+      <sequence>
+        <element ref="TaskTypeElement"/>
+      </sequence>
+    </,Nopaces>
+  </complexType>
+
+  <complexType name="TaskTypeElement">
+    <complexContent>
+      <required member="id" type="xs:string" use="local"/>
+      <required member="type" type="xs:string" use="local"/>
+      <required member="point" type="xs:string" use="local"/>
+    </,Nopaces>
+  </complexType>
+
+  <complexType name="Group">
+    <complexContent>
+      <sequence>
+        <element ref="AnyElement"/>
+      </sequence>
+    </,Nopaces>
+  </complexType>
+</schema>
+
+<!-- SimpleTypes.xsd -->
+schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" target="false">
+  <complexType name="MissionPlanType">
+    <complexContent>
+      <required member="tasks" type="TaskTypeElementList"/>
+    </,Nopaces>
+  </complexType>
+
+  <complexType name="TaskTypeElementList">
+    <sequence>
+      <many ref="TaskTypeElement"/>
+    </sequence>
+  </complexType>
+</schema>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:local="http://example.com/local"
+           xsi:schemaLocation="http://example.com/local missionplan.xsd">
+
+    <!-- Define the MissionPlan element -->
+    <xs:element name="MissionPlan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="CompositeTaskInformation" />
+                <xs:element ref="Waypoints" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Define the CompositeTaskInformation element -->
+    <xs:element name="CompositeTaskInformation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="SequentialTasks" />
+            </xs:sequence>
+            <xs:attribute name="TaskDescription" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Define the SequentialTasks element -->
+    <xs:element name="SequentialTasks">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice maxOccurs="unbounded">
+                    <xs:element ref="DriveToWaypoint" />
+                    <xs:element ref="TakePicture" />
+                    <xs:element ref="ConditionalTask" />
+                    <xs:element ref="ReadTemperature" />
+                    <xs:element ref="TakeCO2Sample" />
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Define the DriveToWaypoint element -->
+    <xs:element name="DriveToWaypoint">
+        <xs:complexType>
+            <xs:attribute name="WaypointID" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Define the TakePicture element -->
+    <xs:element name="TakePicture" />
+
+    <!-- Define the ConditionalTask element -->
+    <xs:element name="ConditionalTask">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Condition" />
+                <xs:choice minOccurs="2" maxOccurs="2">
+                    <xs:element ref="TrueBranch" />
+                    <xs:element ref="FalseBranch" />
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Define the Condition element -->
+    <xs:element name="Condition" type="xs:string" />
+
+    <!-- Define the TrueBranch and FalseBranch elements -->
+    <xs:element name="TrueBranch">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:any minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="FalseBranch">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:any minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Define the ReadTemperature and TakeCO2Sample elements -->
+    <xs:element name="ReadTemperature" />
+    <xs:element name="TakeCO2Sample" />
+
+</xs:schema>

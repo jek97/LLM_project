@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rmp:RoboticMissionPlan xmlns:rmp="http://www.example.com/RoboticMissionPlan">
+    <rmp:Header>
+        <rmp:StartTime>YYYY-MM-DDThh:mm:ss</rmp:StartTime>
+        <rmp:EndTime>YYYY-MM-DDThh:mm:ss</rmp:EndTime>
+    </rmp:Header>
+    <rmp:CompositeTaskInformation>
+        <!-- Original Question -->
+        <rmp:TaskDescription>Starting point, go to a tree in the middle of the field and take a picture. If its average temperature is below 33 C, take a CO2 sample. After, move 5 trees down and repeat.</rmp:TaskDescription>
+        <rmp:TaskList>
+            <!-- Drive to the middle of the field -->
+            <rmp:DriveToLocation>
+                <rmp:DestinationGPSCoordinates>
+                    <!-- Insert middle of the field GPS coordinates -->
+                    <!-- { "type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"id": "MiddleTree", "tree_type": "Oak"}, "geometry": {"type": "Point", "coordinates": [-122.08, 47.65]}} ]} -->
+                </rmp:DestinationGPSCoordinates>
+            </rmp:DriveToLocation>
+            <!-- Take a picture at the current location -->
+            <rmp:CameraAction>
+                <!-- Take a picture -->
+            </rmp:CameraAction>
+            <!-- Check temperature and CO2 levels if required -->
+            <rmp:TemperatureSensorAction>
+                <rmp:AverageTemperatureThreshold>33</rmp:AverageTemperatureThreshold>
+                <rmp:TakeSampleWhenBelowThreshold>true</rmp:TakeSampleWhenBelowThreshold>
+            </rmp:TemperatureSensorAction>
+            <!-- Move to the next tree -->
+            <rmp:DriveToLocation>
+                <!-- Insert GPS coordinates of the next location (5 trees down from the current one) -->
+                <!-- { "type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"id": "NextTree"}, "geometry": {"type": "Point", "coordinates": [-122.08, 47.65]}} ]} -->
+            </rmp:DriveToLocation>
+            <!-- Repeat previous actions for multiple tree samples -->
+        </rmp:TaskList>
+    </rmp:CompositeTaskInformation>
+</rmp:RoboticMissionPlan>

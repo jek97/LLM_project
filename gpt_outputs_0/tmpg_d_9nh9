@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <TaskDescription>
+        <TaskName>Simple Navigation Task</TaskName>
+        <Objective>Drive to a specified location.</Objective>
+    </TaskDescription>
+    <MissionSegments>
+        <MissionSegment id="1">
+            <TaskType>Navigation</TaskType>
+            <Waypoint id="1.1">
+                <Latitude>37.36627570632085</Latitude>
+                <Longitude>-120.42298051393493</Longitude>
+                <Altitude>0</Altitude>
+                <Description>Start Point</Description>
+            </Waypoint>
+            <Waypoint id="1.2">
+                <Latitude>37.366300703749474</Latitude>
+                <Longitude>-120.4230246791031</Longitude>
+                <Altitude>0</Altitude>
+                <Description>Destination</Description>
+            </Waypoint>
+        </MissionSegment>
+    </MissionSegments>
+</MissionPlan>

@@ -1,0 +1,29 @@
+ Here is an example of a mission plan generated in XML format based on the GeoJSON file provided:
+```php
+<Mission>
+  <CompositeTaskInformation>
+    <TaskDescription>Move to Tree and Pick Leaves</TaskDescription>
+  </CompositeTaskInformation>
+  <DriveToLocation>
+    <StartingLocation>{"type": "Point", "coordinates": [0.1,0.2]}</StartingLocation>
+    <EndingLocation>{"type": "Point", "coordinates": [0.3,0.4]}</EndingLocation>
+  </DriveToLocation>
+  <PerformTask>
+    <TaskDescription>Collect Leaves from Tree</TaskDescription>
+    <PerformedAction>Pick Leaves</PerformedAction>
+  </PerformTask>
+  <Move to Location and Perform Task Again>
+    <StartingLocation>{"type": "Point", "coordinates": [0.4,0.5]}</StartingLocation>
+    <EndingLocation>{"type": "Point", "coordinates": [0.5,0.6]}</EndingLocation>
+  </Move to Location and Perform Task Again>
+  <DriveToLocation>
+    <StartingLocation>{"type": "Point", "coordinates": [0.4,0.5]}</StartingLocation>
+    <EndingLocation>{"type": "Point", "coordinates": [0.6,0.7]}</EndingLocation>
+  </DriveToLocation>
+  <PerformTask>
+    <TaskDescription>Collect Leaves from Tree</TaskDescription>
+    <PerformedAction>Pick Leaves</PerformedAction>
+  </PerformTask>
+</Mission>
+```
+This mission plan consists of three main tasks: Driving to a tree, performing an action (picking leaves), and then driving to another tree and performing the same action again. The starting and ending locations for each drive are provided using GeoJSON format, which includes a type and coordinates for the location. The task description for each action is included in the `TaskDescription` element of the `CompositeTaskInformation` element for logging purposes. 

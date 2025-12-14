@@ -1,0 +1,51 @@
+<mission_plan>
+  <task>
+    <location id="1" coordinates="-120.42305,37.3663"/>
+    <action>drive</action>
+  </task>
+
+  <!-- Repeat for each pair of adjacent trees -->
+  
+  <task>
+    <location id="2" coordinates="-120.42308,37.3663"/>
+    <action>drive</action>
+  </task>
+
+  <task>
+    <location id="3" coordinates="-120.42305,37.3663"/>
+    <action>picture_near_tree</action>
+    <parameters>
+      <parameter name="number_of_pictures">2</parameter>
+    </parameters>
+  </task>
+
+  <!-- Repeat for each pair of adjacent trees -->
+  
+  <task>
+    <location id="4" coordinates="-120.42308,37.3663"/>
+    <action>picture_near_tree</action>
+    <parameters>
+      <parameter name="number_of_pictures">2</parameter>
+    </parameters>
+  </task>
+
+  <task>
+    <location id="5" coordinates="-120.42305,37.3663"/>
+    <action>measure_co2</action>
+    <parameters>
+      <parameter name="number_of_measurements">2</parameter>
+    </parameters>
+  </task>
+
+  <!-- Repeat for each pair of adjacent trees -->
+  
+  <task>
+    <location id="6" coordinates="-120.42308,37.3663"/>
+    <action>measure_co2</action>
+    <parameters>
+      <parameter name="number_of_measurements">2</parameter>
+    </parameters>
+  </task>
+
+  <!-- Continue for all adjacent tree pairs -->
+</mission_plan>

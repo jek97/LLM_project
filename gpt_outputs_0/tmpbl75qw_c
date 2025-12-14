@@ -1,0 +1,21 @@
+<MissionPlan>
+    <CompositeTaskInformation>
+        <TaskDescription>
+            <Task id="0">
+                <Subtask id="0">
+                    <MovementCost>10</MovementCost>
+                    <Action>visitPoint_0</Action>
+                </Subtask>
+                <Reward>0.4762</Reward>
+            </Task>
+            <Task id="1">
+                <Subtask id="1">
+                    <MovementCost>5</MovementCost>
+                    <Action>moveToPoint_1</Action>
+                </Subtask>
+                <Reward>0.9386</Reward>
+            </Task>
+            <!-- Repeat for all 19 points -->
+        </TaskDescription>
+    </CompositeTaskInformation>
+</MissionPlan>

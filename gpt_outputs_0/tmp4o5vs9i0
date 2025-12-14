@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <CompositeTaskInformation>
+        <TaskDescription>Take a picture of the northern most tree, drive to the middle of the orchard and take another, then drive to the middle of the eastern end and take a picture of two trees next to each other.</TaskDescription>
+        <Tasks>
+            <!-- Task 1: Take a picture of the northernmost tree -->
+            <Task>
+                <Type>TakePicture</Type>
+                <Target>Tree</Target>
+                <Location>NorthernMost</Location>
+            </Task>
+
+            <!-- Task 2: Drive to the middle of the orchard -->
+            <Task>
+                <Type>DriveTo</Type>
+                <Location>MiddleOfOrchard</Location>
+            </Task>
+
+            <!-- Task 3: Take a picture at the middle of the orchard -->
+            <Task>
+                <Type>TakePicture</Type>
+                <Target>Tree</Target>
+                <Location>MiddleOfOrchard</Location>
+            </Task>
+
+            <!-- Task 4: Drive to the middle of the eastern end -->
+            <Task>
+                <Type>DriveTo</Type>
+                <Location>MiddleOfEasternEnd</Location>
+            </Task>
+
+            <!-- Task 5: Take a picture of two trees next to each other at the middle of the eastern end -->
+            <Task>
+                <Type>TakePicture</Type>
+                <Target>Trees</Target>
+                <Location>MiddleOfEasternEnd</Location>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+</MissionPlan>

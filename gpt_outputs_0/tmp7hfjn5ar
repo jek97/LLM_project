@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="path/to/your/schema.xsd">
+  <TaskDescription>Take a picture of 2 trees next to each other and then take 2 co2 readings of two trees next to each other.</TaskDescription>
+  <CompositeTaskInformation>
+    <!-- Drive to the first tree -->
+    <DriveAction>
+      <TargetTreeID>1</TargetTreeID>
+    </DriveAction>
+    
+    <!-- Take a picture of the first tree -->
+    <TakePictureAction>
+      <TargetTreeID>1</TargetTreeID>
+    </TakePictureAction>
+    
+    <!-- Drive to the second tree -->
+    <DriveAction>
+      <TargetTreeID>2</TargetTreeID>
+    </DriveAction>
+    
+    <!-- Take a picture of the second tree -->
+    <TakePictureAction>
+      <TargetTreeID>2</TargetTreeID>
+    </TakePictureAction>
+    
+    <!-- Drive to the third tree -->
+    <DriveAction>
+      <TargetTreeID>3</TargetTreeID>
+    </DriveAction>
+    
+    <!-- Take a CO2 reading from the third tree -->
+    <CO2ReadingAction>
+      <TargetTreeID>3</TargetTreeID>
+    </CO2ReadingAction>
+    
+    <!-- Drive to the fourth tree -->
+    <DriveAction>
+      <TargetTreeID>4</TargetTreeID>
+    </DriveAction>
+    
+    <!-- Take a CO2 reading from the fourth tree -->
+    <CO2ReadingAction>
+      <TargetTreeID>4</TargetTreeID>
+    </CO2ReadingAction>
+  </CompositeTaskInformation>
+</mission>

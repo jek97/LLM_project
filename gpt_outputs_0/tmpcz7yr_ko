@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Mission Plan</title>
+    <meta http-equiv="Content-Type" content="text/xml; charset=UTF-8"/>
+</head>
+<body>
+    <gtms:mission_plan xmlns:gtms="http://example.com/gtms">
+        <!-- Mission Plan Summary -->
+        <gtms:MissionPlanSummary>
+            <gtms:TotalTreesVisited>6</gtms:TotalTreesVisited>
+            <gtms:TotalPicturesTaken>4</gtms:TotalPicturesTaken>
+            <gtms:TotalCO2Measurements>4</gtms:TotalCO2Measurements>
+        </gtms:MissionPlanSummary>
+
+        <!-- Task 1 -->
+        <gtms:Task id="1">
+            <gtms:Location id="L1" coordinates="-120.42305,37.3663"/>
+            <gtms:Action>drive</gtms:Action>
+        </gtms:Task>
+
+        <!-- Task 2 -->
+        <gtms:Task id="2">
+            <gtms:Location id="L2" coordinates="-120.42308,37.3663"/>
+            <gtms:Action>drive</gtms:Action>
+        </gtms:Task>
+
+        <!-- Task 3 -->
+        <gtms:Task id="3">
+            <gtms:Location id="L3" coordinates="-120.42305,37.3663"/>
+            <gtms:Action>picture_near_tree</gtms:Action>
+            <gtms:Parameters>
+                <gtms:Parameter name="number_of_pictures">2</gtms:Parameter>
+            </gtms:Parameters>
+        </gtms:Task>
+
+        <!-- Task 4 -->
+        <gtms:Task id="4">
+            <gtms:Location id="L4" coordinates="-120.42308,37.3663"/>
+            <gtms:Action>picture_near_tree</gtms:Action>
+            <gtms:Parameters>
+                <gtms:Parameter name="number_of_pictures">2</gtms:Parameter>
+            </gtms:Parameters>
+        </gtms:Task>
+
+        <!-- Task 5 -->
+        <gtms:Task id="5">
+            <gtms:Location id="L5" coordinates="-120.42305,37.3663"/>
+            <gtms:Action>measure_co2</gtms:Action>
+            <gtms:Parameters>
+                <gtms:Parameter name="number_of_measurements">2</gtms:Parameter>
+            </gtms:Parameters>
+        </gtms:Task>
+
+        <!-- Task 6 -->
+        <gtms:Task id="6">
+            <gtms:Location id="L6" coordinates="-120.42308,37.3663"/>
+            <gtms:Action>measure_co2</gtms:Action>
+            <gtms:Parameters>
+                <gtms:Parameter name="number_of_measurements">2</gtms:Parameter>
+            </gtms:Parameters>
+        </gtms:Task>
+    </gtms:mission_plan>
+</body>
+</html>

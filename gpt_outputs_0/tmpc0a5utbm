@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan>
+    <tasks>
+        <task id="1">
+            <name>Drive to Tree &amp; Photograph</name>
+            <instruction>Drive to the middle of the field and take a picture of a tree.</instruction>
+            <location>Middle of the Field</location>
+            <action>Take Photograph</action>
+        </task>
+        <task id="2">
+            <name>Temperature Check &amp; CO2 Sample (Conditional)</name>
+            <instruction>If its average temperature is below 33 C, take a CO2 sample.</instruction>
+            <condition>Average Temperature &lt; 33 C</condition>
+            <action>Take CO2 Sample</action>
+        </task>
+        <task id="3">
+            <name>Drive to Random Point</name>
+            <instruction>Go to another random point 5 trees down.</instruction>
+            <location>5 Trees Down from Previous Location</location>
+            <action>Take Photograph</action>
+        </task>
+        <task id="4">
+            <name>Temperature Check &amp; CO2 Sample (Conditional)</name>
+            <instruction>If its average temperature is below 33 C, take a CO2 sample.</instruction>
+            <condition>Average Temperature &lt; 33 C</condition>
+            <action>Take CO2 Sample</action>
+        </task>
+    </tasks>
+</missionPlan>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RoboticMissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission_plan_schema.xsd">
+  <Header>
+    <Title>Orchard Photo Mission</Title>
+    <Description>Take pictures of the northernmost tree, middle tree(s) and eastern trees.</Description>
+  </Header>
+  <MissionBody>
+    <CompositeTaskInformation id="Task1">
+      <TaskDescription>Originate at (0,0). Drive to the northernmost tree. Take a picture of the northernmost tree.</TaskDescription>
+      <Tasks>
+        <DriveToGPSLocation>
+          <FromGPSLocation x="0" y="0"/>
+          <DestinationGPSLocation>
+            <Longitude>[Northernmost tree's longitude from GeoJSON file]</Longitude>
+            <Latitude>[Northernmost tree's latitude from GeoJSON file]</Latitude>
+          </DestinationGPSLocation>
+        </DriveToGPSLocation>
+        <TakePicture/>
+      </Tasks>
+    </CompositeTaskInformation>
+    <CompositeTaskInformation id="Task2">
+      <TaskDescription>Drive to the middle of the orchard. Take a picture of two trees next to each other in the middle of the orchard.</TaskDescription>
+      <Tasks>
+        <DriveToGPSLocation>
+          <FromGPSLocation x="0" y="0"/>
+          <DestinationGPSLocation x="[Middle of the orchard's longitude]" y="[Middle of the orchard's latitude]"/>
+        </DriveToGPSLocation>
+        <FindNearbyTreesNumber="2">
+          <DistanceThreshold>1</DistanceThreshold> <!-- 1 meter -->
+        </FindNearbyTrees>
+        <TakePicture/>
+      </Tasks>
+    </CompositeTaskInformation>
+    <CompositeTaskInformation id="Task3">
+      <TaskDescription>Drive to the middle of the eastern end. Take a picture of two trees next to each other in the eastern end.</TaskDescription>
+      <Tasks>
+        <DriveToGPSLocation>
+          <FromGPSLocation x="[Middle of the orchard's longitude]" y="[Middle of the orchard's latitude]"/>
+          <DestinationGPSLocation x="[Eastern end middle's longitude]" y="[Eastern end middle's latitude]"/>
+        </DriveToGPSLocation>
+        <FindNearbyTreesNumber="2">
+          <DistanceThreshold>1</DistanceThreshold> <!-- 1 meter -->
+        </FindNearbyTrees>
+        <TakePicture/>
+      </Tasks>
+    </CompositeTaskInformation>
+  </MissionBody>
+  <Outcome>
+    Estimated total distance traveled: [Total estimated Haversine distance]
+  </Outcome>
+</RoboticMissionPlan>

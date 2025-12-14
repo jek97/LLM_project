@@ -1,0 +1,56 @@
+<Mission>
+    <Version>1</Version>
+    <Name>Pistachio Tree Visit and Picture Taking Mission</Name>
+    <Description>Visit 5 pistachio trees in a row and take a picture of 3 of them. Original request: "From the farm, select 5 pistachio trees in a row to visit and take a picture of 3 of them."</Description>
+    <CompositeTaskInformation>
+        <TaskInformation>
+            <Name>Drive to start location</Name>
+            <Description>Initially drive to the starting location.</Description>
+            <Action>
+                <MoveTo>
+                    <Coordinates>
+                        <!-- Start location coordinates go here -->
+                    </Coordinates>
+                </MoveTo>
+            </Action>
+        </TaskInformation>
+        <TaskInformation>
+            <Name>Visit and Take Picture of Tree 1</Name>
+            <Description>Drive to the first pistachio tree, take a picture, and then move on.</Description>
+            <Action>
+                <MoveTo>
+                    <Coordinates>
+                        <!-- First tree coordinates go here -->
+                    </Coordinates>
+                </MoveTo>
+                <TakePicture>
+                    <!-- Add any necessary parameters for taking the picture here -->
+                </TakePicture>
+            </Action>
+        </TaskInformation>
+        <TaskInformation>
+            <Name>Visit and Take Picture of Tree 2</Name>
+            <Description>Drive to the second pistachio tree, take a picture, and then move on.</Description>
+            <Action>
+                <MoveTo>
+                    <Coordinates>
+                        <!-- Second tree coordinates go here -->
+                    </Coordinates>
+                </MoveTo>
+                <TakePicture>
+                    <!-- Add any necessary parameters for taking the picture here -->
+                </TakePicture>
+            </Action>
+        </TaskInformation>
+        <!-- Repeat the above TaskInformation block for each tree until you have visited all 5 trees -->
+        <TaskInformation>
+            <Name>Drive to end location</Name>
+            <Description>Finally, drive back to the farm.</Description>
+            <Action>
+                <MoveTo>
+                    <!-- End location coordinates go here -->
+                </MoveTo>
+            </Action>
+        </TaskInformation>
+    </CompositeTaskInformation>
+</Mission>

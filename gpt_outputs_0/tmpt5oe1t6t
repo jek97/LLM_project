@@ -1,0 +1,11 @@
+<MissionPlan>
+    <Task>
+        <task_id>task1</task_id>
+        <action>MeasureTreeHeight</action>
+        <location>
+            <latitude>34.0522</latitude>
+            <longitude>-118.2437</longitude>
+        </location>
+        <tree_type>Oak</tree_type>
+    </Task>
+</MissionPlan>

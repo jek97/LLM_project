@@ -1,0 +1,19 @@
+ I apologize for the error in my previous response. Here is an updated example that should work correctly:
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <task id="1">
+        <name>Take a picture of 2 trees next to each other</name>
+        <type>Camera</type>
+        <target>[17,369] [18,369]</target>
+    </task>
+    <task id="2">
+        <name>Take 2 CO2 readings of two trees next to each other</name>
+        <type>Sensor</type>
+        <target>[17,369] [18,369]</target>
+    </task>
+</mission>
+```
+In this example, the mission consists of two tasks. The first task is to take a picture of two trees next to each other using the camera. The second task is to take CO2 readings of two trees next to each other using a sensor. Both tasks target the same pair of trees ([17,369] and [18,369]).
+
+You can adjust the coordinates in the `<target>` element to match the actual location of the trees you want to take pictures of and measure CO2 levels from. 

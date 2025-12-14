@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <Task id="1" name="Photograph Trees">
+      <Description>Take a photograph of two trees located adjacent to each other.</Description>
+      <Steps>
+        <Step id="1.1">Navigate to the location of the two adjacent trees.</Step>
+        <Step id="1.2">Capture a photograph of the two trees.</Step>
+      </Steps>
+    </Task>
+    <Task id="2" name="Measure CO2">
+      <Description>Take two CO2 readings of the two adjacent trees.</Description>
+      <Steps>
+        <Step id="2.1">Navigate to the location of the two adjacent trees.</Step>
+        <Step id="2.2">Take a CO2 reading of the first tree.</Step>
+        <Step id="2.3">Take a CO2 reading of the second tree.</Step>
+      </Steps>
+    </Task>
+  </CompositeTaskInformation>
+</MissionPlan>

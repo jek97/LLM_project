@@ -1,0 +1,16 @@
+<m Missions>
+  <m MissionType="Picture" Name="Capture Picture of Northern Most Tree">
+    <t TaskType="Picture">Take a photo at the northernmost tree location.</t>
+  </m>
+
+  <m MissionType="Drive and Picture" Name="Drive to Orchard Center and Take Another Photo">
+    <t TaskType="Drive">Drive to the central point of the orchard.</t>
+    <t TaskType="Picture">Take a photo at the central point.</t>
+  </m>
+
+  <m MissionType="Drive, Picture1, and Picture2" Name="Drive to Eastern End and Capture Two Trees">
+    <t TaskType="Drive">Drive to the easternmost part of the orchard.</t>
+    <t TaskType="Picture">Take a photo at this location. Ensure two trees are visible next to each other.</t>
+    <t TaskType="PhotoAnalysis">Verify that two trees can be seen and captured in one frame or use two separate pictures if needed.</t>
+  </m>
+</m Missions>

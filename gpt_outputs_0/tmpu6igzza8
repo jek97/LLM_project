@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <Task id="1" type="DriveToLocation">
+      <TaskName>Corner 1</TaskName>
+      <Location>
+        <Latitude>37.36635678715399</Latitude>
+        <Longitude>-120.42299259529793</Longitude>
+      </Location>
+      <Action>Take Photo</Action>
+    </Task>
+    <Task id="2" type="DriveToLocation">
+      <TaskName>Corner 2</TaskName>
+      <Location>
+        <Latitude>37.36635678715399</Latitude>
+        <Longitude>-120.42302669537153</Longitude>
+      </Location>
+      <Action>Take Photo</Action>
+    </Task>
+    <Task id="3" type="DriveToLocation">
+      <TaskName>Corner 3</TaskName>
+      <Location>
+        <Latitude>37.36635678715399</Latitude>
+        <Longitude>-120.42307592599273</Longitude>
+      </Location>
+      <Action>Take Photo</Action>
+    </Task>
+    <Task id="4" type="DriveToLocation">
+      <TaskName>Corner 4</TaskName>
+      <Location>
+        <Latitude>37.36635678715399</Latitude>
+        <Longitude>-120.4230246791031</Longitude>
+      </Location>
+      <Action>Take Photo</Action>
+    </Task>
+  </CompositeTaskInformation>
+</MissionPlan>

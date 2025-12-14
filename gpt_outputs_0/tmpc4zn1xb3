@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="missionPlan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="CompositeTaskInformation"/>
+                <xs:element maxOccurs="unbounded" ref="DriveTask"/>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="TakePictureTask"/>
+                <xs:element minOccurs="0" ref="ReturnToStartTask"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CompositeTaskInformation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Outcome" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="DriveTask">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="StartLocation" type="xs:string"/>
+                <xs:element name="EndLocation" type="xs:string"/>
+                <xs:element name="Distance" type="xs:decimal"/>
+                <xs:element name="Duration" type="xs:duration"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="TakePictureTask">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="TreeID" type="xs:string"/>
+                <xs:element name="NumberOfPictures" type="xs:int"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ReturnToStartTask">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="EndLocation" type="xs:string"/>
+                <xs:element name="Distance" type="xs:decimal"/>
+                <xs:element name="Duration" type="xs:duration"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RoboticMission xmlns="http://example.com/missionplan"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://example.com/missionplan missionplan.xsd">
+
+    <MissionInfo>
+        <MissionName>Temperature and CO2 Monitoring</MissionName>
+        <StartTime>YYYY-MM-DDThh:mm:ssZ</StartTime>
+    </MissionInfo>
+
+    <CompositeTaskInformation>
+        <!-- Original question -->
+        <TaskDescription>Generate a mission to inspect and collect data from trees for temperature and CO2 levels.</TaskDescription>
+        <TaskSequence>
+            <!-- Drive to starting location -->
+            <Task>
+                <TaskName>Drive to starting location</TaskName>
+                <Action>Drive</Action>
+            </Task>
+
+            <!-- Take a picture at the first tree and check temperature -->
+            <Task>
+                <TaskName>Inspect Tree-0 for Temperature and CO2 Levels</TaskName>
+                <Action>Camera, Thermometer, CO2Sensor</Action>
+                <Location ref="Tree0" />
+            </Task>
+
+            <!-- If the temperature and CO2 levels are low, repeat the following tasks -->
+            <Conditional TaskRef="#Loop">
+                <Condition>
+                    <LowTemperature ref="Tree0"/>
+                    <LowCO2 ref="Tree0"/>
+                </Condition>
+                <TaskRef>#Tree-Loop</TaskRef>
+            </Conditional>
+
+            <!-- If the temperature and CO2 levels are not low at Tree-0, move to next tree -->
+            <Conditional TaskRef="#NextTree">
+                <NotCondition>
+                    <LowTemperature ref="Tree0"/>
+                    <LowCO2 ref="Tree0"/>
+                </NotCondition>
+                <TaskRef>#NextTree</TaskRef>
+            </Conditional>
+        </TaskSequence>
+
+        <!-- Loop to inspect multiple trees -->
+        <Loop ref="Tree-Loop">
+            <Task>
+                <TaskName>Drive to current tree</TaskName>
+                <Action>Drive</Action>
+            </Task>
+            <Task>
+                <TaskName>Take a picture at current tree</TaskName>
+                <Action>Camera</Action>
+                <Location ref="$currentTree" />
+            </Task>
+            <Task>
+                <TaskName>Check temperature at current tree</TaskName>
+                <Action>Thermometer</Action>
+                <Location ref="$currentTree" />
+            </Task>
+            <Task>
+                <TaskName>Check CO2 level at current tree</TaskName>
+                <Action>CO2Sensor</Action>
+                <Location ref="$currentTree" />
+            </Task>
+        </Loop>
+
+        <!-- Move to the next tree -->
+        <Loop ref="NextTree">
+            <Task>
+                <TaskName>Drive to next tree</TaskName>
+                <Action>Drive</Action>
+            </Task>
+            <Task>
+                <TaskName>Update current tree</TaskName>
+                <Action>UpdateTree</Action>
+                <Location ref="$currentTree" />
+            </Task>
+        </Loop>
+    </CompositeTaskInformation>
+
+    <GeoJSON>
+        <!-- Define the starting point and trees to inspect -->
+        <FeatureCollection>
+            <Feature>
+                <Type>Point</Type>
+                <Properties>
+                    <longitude>-87.6298</longitude>
+                    <latitude>43.0747</latitude>
+                    <name>Start</name>
+                </Properties>
+            </Feature>
+            <Feature>
+                <Type>Point</Type>
+                <Properties>
+                    <longitude>-87.6295</longitude>
+                    <latitude>43.0745</latitude>
+                    <name>Tree0</name>
+                    <treeType>Oak</treeType>
+                </Properties>
+            </Feature>
+            <!-- More trees can be added as needed -->
+        </FeatureCollection>
+    </GeoJSON>
+
+    <Outcome/>
+</RoboticMission>

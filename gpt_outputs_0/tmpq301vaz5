@@ -1,0 +1,31 @@
+Sure! Here's an example XML mission plan that visits as many points as possible within a 100-meter radius and takes pictures of each tree:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+  <CompositeTaskInformation>
+    <TaskDescription>Visit as many trees as possible in a 100-meter radius and take pictures</TaskDescription>
+    <TaskList>
+      <Task>
+        <Type>Drive</Type>
+        <Location>-120.423000, 37.366300</Location>
+      </Task>
+      <Task>
+        <Type>TakePicture</Type>
+        <Location>-120.423000, 37.366300</Location>
+      </Task>
+      <Task>
+        <Type>Drive</Type>
+        <Location>-120.423050, 37.366350</Location>
+      </Task>
+      <Task>
+        <Type>TakePicture</Type>
+        <Location>-120.423050, 37.366350</Location>
+      </Task>
+      <!-- Add more tasks as needed -->
+    </TaskList>
+  </CompositeTaskInformation>
+</mission>
+```
+
+In this example, the mission starts by driving to the first point and taking a picture of the tree there. Then it drives to another point within a 100-meter radius and takes a picture. This process is repeated until all points have been visited.
+You can modify the locations and number of tasks as needed to meet your specific requirements.

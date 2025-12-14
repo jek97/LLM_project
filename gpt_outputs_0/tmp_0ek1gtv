@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan>
+    <CompositeTaskInformation>
+        <!-- Total estimated haversine distance traveled from start to end: [Compute the total distance] -->
+        <Outcome>Completed mission successfully.</Outcome>
+    </CompositeTaskInformation>
+
+    <DriveTask id="task1">
+        <StartLocation>farm</StartLocation>
+        <EndLocation>tree_1</EndLocation>
+        <Distance>[Calculate Distance from farm to tree 1]</Distance>
+        <Duration>[Estimate Duration for the drive]</Duration>
+    </DriveTask>
+
+    <TakePictureTask id="task2">
+        <TreeID>tree_1</TreeID>
+        <NumberOfPictures>3</NumberOfPictures>
+    </TakePictureTask>
+
+    <DriveTask id="task3">
+        <StartLocation>tree_1</StartLocation>
+        <EndLocation>tree_2</EndLocation>
+        <Distance>[Calculate Distance from tree 1 to tree 2]</Distance>
+        <Duration>[Estimate Duration for the drive]</Duration>
+    </DriveTask>
+
+    <TakePictureTask id="task4">
+        <TreeID>tree_2</TreeID>
+        <NumberOfPictures>3</NumberOfPictures>
+    </TakePictureTask>
+
+    <DriveTask id="task5">
+        <StartLocation>tree_2</StartLocation>
+        <EndLocation>tree_3</EndLocation>
+        <Distance>[Calculate Distance from tree 2 to tree 3]</Distance>
+        <Duration>[Estimate Duration for the drive]</Duration>
+    </DriveTask>
+
+    <TakePictureTask id="task6">
+        <TreeID>tree_3</TreeID>
+        <NumberOfPictures>3</NumberOfPictures>
+    </TakePictureTask>
+
+    <DriveTask id="task7">
+        <StartLocation>tree_3</StartLocation>
+        <EndLocation>tree_4</EndLocation>
+        <Distance>[Calculate Distance from tree 3 to tree 4]</Distance>
+        <Duration>[Estimate Duration for the drive]</Duration>
+    </DriveTask>
+
+    <TakePictureTask id="task8">
+        <TreeID>tree_4</TreeID>
+        <NumberOfPictures>3</NumberOfPictures>
+    </TakePictureTask>
+
+    <DriveTask id="task9">
+        <StartLocation>tree_4</StartLocation>
+        <EndLocation>tree_5</EndLocation>
+        <Distance>[Calculate Distance from tree 4 to tree 5]</Distance>
+        <Duration>[Estimate Duration for the drive]</Duration>
+    </DriveTask>
+
+    <TakePictureTask id="task10">
+        <TreeID>tree_5</TreeID>
+        <NumberOfPictures>3</NumberOfPictures>
+    </TakePictureTask>
+    
+    <ReturnToStartTask>
+        <EndLocation>farm</EndLocation>
+        <Distance>[Calculate Distance from tree 5 to farm]</Distance>
+        <Duration>[Estimate Duration for the return drive]</Duration>
+    </ReturnToStartTask>
+
+</missionPlan>

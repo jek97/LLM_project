@@ -1,0 +1,49 @@
+It seems that the issue is still present.
+
+Let's try a different approach. Since you mentioned that I should use GeoJSON to provide references in the mission plan for things such as GPS location, tree type, etc., I'll create a simple XML file with the required structure and add some sample data:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<RobotMission>
+  <TaskDescription>Drive to first tree and inspect</TaskDescription>
+  <CompositeTaskInformation>
+    <!-- Driving to first tree -->
+    <DrivingToTree id="1">
+      <Coordinates>
+        <geo:Point xmlns:geo="http://www.w3.org/2003/07 GeoJSON">
+          <geo:x>-120.42302289785604</geo:x>
+          <geo:y>37.36635688574164</geo:y>
+        </geo:Point>
+      </Coordinates>
+    </DrivingToTree>
+    
+    <!-- Inspect first tree -->
+    <Inspect id="1" locationRef="#1">
+      <TaskDescription>Inspect tree with ID 1</TaskDescription>
+    </Inspect>
+  </CompositeTaskInformation>
+  
+  <!-- Drive to second tree and inspect -->
+  <DrivingToTree id="2">
+    <Coordinates>
+      <geo:Point xmlns:geo="http://www.w3.org/2003/07 GeoJSON">
+        <geo:x>-120.42411109725654</geo:x>
+        <geo:y>37.36745697894234</geo:y>
+      </geo:Point>
+    </Coordinates>
+  </DrivingToTree>
+  
+  <Inspect id="2" locationRef="#2">
+    <TaskDescription>Inspect tree with ID 2</TaskDescription>
+  </Inspect>
+</RobotMission>
+```
+This XML file defines a `RobotMission` with two tasks: driving to the first tree and inspecting it, and driving to the second tree and inspecting it. The coordinates of each location are provided in GeoJSON format.
+
+Please note that you'll need to include the GeoJSON schema in your XML file for this to work properly. I can provide an example of how to do this if needed.
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:geo="http://www.w3.org/2003/07 GeoJSON">
+  <!-- ... -->
+</xs:schema>
+```

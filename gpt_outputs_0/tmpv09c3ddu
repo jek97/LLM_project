@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  < missions list="5" repetitions="1">
+    <!-- Mission 1 -->
+    < mission id="Tree1">
+      < actions>
+        < moveToCoordinates lat="37.36628908556382" lon="-120.42298051393493"/>
+        < takePictures number="3" treeId="1"/>
+      </ actions>
+    </ mission>
+
+    <!-- Mission 2 -->
+    < mission id="Tree2">
+      < actions>
+        < moveToCoordinates lat="37.3662730362294" lon="-120.42301417901265"/>
+        < takePictures number="3" treeId="2"/>
+      </ actions>
+    </ mission>
+
+    <!-- Mission 3 -->
+    < mission id="Tree3">
+      < actions>
+        < moveToCoordinates lat="37.36628908556382" lon="-120.42298051393493"/>
+        < takePictures number="3" treeId="3"/>
+      </ actions>
+    </ mission>
+
+    <!-- Mission 4 -->
+    < mission id="Tree4">
+      < actions>
+        < moveToCoordinates lat="37.3662730362294" lon="-120.42301417901265"/>
+        < takePictures number="3" treeId="4"/>
+      </ actions>
+    </ mission>
+
+    <!-- Mission 5 -->
+    < mission id="Tree5">
+      < actions>
+        < moveToCoordinates lat="37.36628908556382" lon="-120.42298051393493"/>
+        < takePictures number="3" treeId="5"/>
+      </ actions>
+    </ mission>
+  </ missions>
+</MissionPlan>

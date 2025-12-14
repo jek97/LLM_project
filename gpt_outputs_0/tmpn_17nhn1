@@ -1,0 +1,86 @@
+It seems like the issue is still present.
+
+Let me try a different approach again. Here's an example of how you can generate the XML file programmatically in a programming language:
+
+```python
+import xml.etree.ElementTree as ET
+from geojson import load
+
+class MissionPlan:
+    def __init__(self):
+        self.root = ET.Element('missionPlan')
+        self.tree = ET.SubElement(self.root, 'tree')
+
+    def add_task(self, task_description, driving_to_tree, action_type):
+        task = ET.SubElement(self.tree, 'task')
+        task.set('xml:lang', 'en')
+        task.append(ET.fromstring(task_description))
+
+        driving_to_tree_element = ET.SubElement(task, 'DrivingToTree')
+        driving_to_tree_element.set('treeId', str(driving_to_tree))
+
+        action_type_element = ET.SubElement(task, 'ActionType')
+        action_type_element.set('actionTypeCode', str(action_type))
+        action_type_element.append(ET.fromstring(action_type))
+
+    def add_conditional_outcome(self, next_task):
+        conditional_outcome = ET.SubElement(self.tree, 'ConditionalOutcome')
+        conditional_outcome.set('outcomeTypeCode', 'LowTemperature')
+
+        next_task_element = ET.SubElement(conditional_outcome, 'nextTask')
+        next_task_element.append(next_task)
+
+    def add_outcome(self, outcome_type_code, distance_traveled):
+        outcome = ET.SubElement(self.tree, 'Outcome')
+        outcome.set('outcomeTypeCode', str(outcome_type_code))
+        outcome_element = ET.SubElement(outcome, 'distanceTraveled')
+        outcome_element.text = str(distance_traveled)
+
+def load_geojson_file(file_path):
+    with open(file_path) as f:
+        geojson_data = load(f)
+    return geojson_data
+
+def main():
+    mission_plan = MissionPlan()
+
+    # Load the GeoJSON file
+    geojson_file_path = 'path_to_your_geojson_file.json'
+    geojson_data = load_geojson_file(geojson_file_path)
+
+    # Add tasks to the mission plan
+    task_description1 = '<m:TaskDescription xml:lang="en">Drive to tree with id 0</m:TaskDescription>'
+    driving_to_tree1 = 'treeId=0'
+    action_type1 = 'DetermineTemperature'
+
+    task_description2 = '<m:TaskDescription xml:lang="en">Analyze picture to determine if temperature is low</m:TaskDescription>'
+    driving_to_tree2 = 'treeId=0'
+    action_type2 = 'DetermineTemperature'
+
+    next_task = '<m:TaskDescription xml:lang="en">Take a co2 sample</m:TaskDescription>'
+
+    mission_plan.add_task(task_description1, driving_to_tree1, action_type1)
+    mission_plan.add_task(task_description2, driving_to_tree2, action_type2)
+
+    # Add conditional outcome
+    mission_plan.add_conditional_outcome(next_task)
+
+    # Add outcomes
+    distance_traveled1 = '0 km'
+    outcome_type_code1 = 'HighTemperature'
+
+    mission_plan.add_outcome(outcome_type_code1, distance_traveled1)
+    mission_plan.add_outcome('LowTemperature', distance_traveled1)
+
+    # Write the XML file to disk
+    tree = ET.ElementTree(mission_plan.root)
+    tree.write('mission_plan.xml')
+
+if __name__ == '__main__':
+    main()
+```
+Please replace `'path_to_your_geojson_file.json'` with the actual path to your GeoJSON file.
+
+This code creates a `MissionPlan` class that generates an XML file programmatically. You can add tasks, conditional outcomes, and outcomes to the mission plan using methods like `add_task`, `add_conditional_outcome`, and `add_outcome`. The XML file is written to disk when you run the `main` function.
+
+Please note that this code assumes that your GeoJSON file contains a valid JSON object with the required properties.

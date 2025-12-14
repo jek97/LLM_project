@@ -1,0 +1,92 @@
+<mission>
+  <name>Robotic Tree Picture Mission</name>
+  <description>Mission to take a picture of 4 trees in the given direction (north, east, south, west)</description>
+  <!-- Define the robot's starting position -->
+  <start>
+    <x>-120.4230759</x>
+    <y>37.366360</y>
+    <z>1.0</z>
+    <heading>0.0</heading>
+  </start>
+  
+  <!-- Define the mission steps -->
+  <steps>
+    <step id="1">
+      <name>North most tree picture</name>
+      <action type="picture" target="north_most" />
+      <position>
+        <x>-120.4230759</x>
+        <y>37.366360</y>
+        <z>1.0</z>
+        <heading>0.0</heading>
+      </position>
+    </step>
+    
+    <step id="2">
+      <name>East most tree picture</name>
+      <action type="picture" target="east_most" />
+      <position>
+        <x>-120.4230759</x>
+        <y>37.366360</y>
+        <z>1.0</z>
+        <heading>0.0</heading>
+      </position>
+    </step>
+    
+    <step id="3">
+      <name>South most tree picture</name>
+      <action type="picture" target="south_most" />
+      <position>
+        <x>-120.4230759</x>
+        <y>37.366360</y>
+        <z>1.0</z>
+        <heading>0.0</heading>
+      </position>
+    </step>
+    
+    <step id="4">
+      <name>West most tree picture</name>
+      <action type="picture" target="west_most" />
+      <position>
+        <x>-120.4230759</x>
+        <y>37.366360</y>
+        <z>1.0</z>
+        <heading>0.0</heading>
+      </position>
+    </step>
+  </steps>
+  
+  <!-- Define the target locations for each picture -->
+  <targets>
+    <target id="north_most">
+      <x>-120.4230759</x>
+      <y>37.366360</y>
+      <z>1.0</z>
+    </target>
+    
+    <target id="east_most">
+      <x>-120.4230759</x>
+      <y>37.366360</y>
+      <z>1.0</z>
+    </target>
+    
+    <target id="south_most">
+      <x>-120.4230759</x>
+      <y>37.366360</y>
+      <z>1.0</z>
+    </target>
+    
+    <target id="west_most">
+      <x>-120.4230759</x>
+      <y>37.366360</y>
+      <z>1.0</z>
+    </target>
+  </targets>
+  
+  <!-- Define the robot's actions for each picture -->
+  <actions>
+    <action id="picture">
+      <description>Take a picture using the onboard camera.</description>
+    </action>
+  </actions>
+</mission>

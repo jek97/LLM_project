@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:missionplan="http://example.com/missionplan">
+  <CompositeTaskInformation>
+    <Task id="1" type="DriveToLocation">
+      <TaskDescription>Drive to tree ID 0.</TaskDescription>
+      <Location id="0" latitude="37.366300703749474" longitude="-120.42299259529793"/>
+      <Action>Photograph</Action>
+    </Task>
+    <Task id="2" type="DriveToLocation">
+      <TaskDescription>Drive to tree ID 12.</TaskDescription>
+      <Location id="12" latitude="37.366300703749474" longitude="-120.42299259529793"/>
+      <Action>Photograph</Action>
+    </Task>
+    <Task id="3" type="DriveToLocation">
+      <TaskDescription>Drive to tree ID 1.</TaskDescription>
+      <Location id="1" latitude="37.366300703749474" longitude="-120.42299259529793"/>
+      <Action>Photograph</Action>
+    </Task>
+    <Task id="4" type="DriveToLocation">
+      <TaskDescription>Drive to tree ID 13.</TaskDescription>
+      <Location id="13" latitude="37.36634636896467" longitude="-120.42302669537153"/>
+      <Action>Photograph</Action>
+    </Task>
+  </CompositeTaskInformation>
+</MissionPlan>

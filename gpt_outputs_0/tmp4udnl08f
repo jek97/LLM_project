@@ -1,0 +1,32 @@
+ Here is an example of a mission plan XML document that visits as many trees as possible within 100 meters and takes pictures of each tree:
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <name>Tree Picture Mission</name>
+    <description>Visit as many trees as possible within 100 meters and take pictures of each tree.</description>
+    <start_point>
+        <x>0.42307592599273</x>
+        <y>0.36636077337479</y>
+    </start_point>
+    <end_point>
+        <x>0.42307592599273</x>
+        <y>0.36636077337479</y>
+    </end_point>
+    <tasks>
+        <task id="1">
+            <name>Visit Tree 1 and Take Picture</name>
+            <description>Visit tree 1 and take a picture of it.</description>
+            <position>
+                <x>0.42307592599273</x>
+                <y>0.36636077337479</y>
+            </position>
+        </task>
+        <!-- Add more tasks here -->
+    </tasks>
+</mission>
+```
+This XML file defines a mission with a name and description, as well as start and end points. The `<tasks>` element contains one or more `<task>` elements, each of which represents a specific task to be performed by the robot. In this example, there is only one task defined: visiting tree 1 and taking a picture of it.
+
+You can add more tasks as needed, following the same structure as the first task. Each task should have a unique `id` attribute for identification purposes. The `<position>` element within each task specifies the location of the tree to be visited and photographed.
+
+Note that this is just an example, and you can customize it according to your specific requirements and mission objectives. 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan"
+             xmlns:xs="http://www.w3.org/2001/XMLSchema"
+             xsi:schemaLocation="http://example.com/missionplan http://example.com/missionplan.xsd">
+    <CompositeTaskInformation>
+        <TaskDescription>Test Task</TaskDescription>
+        <Tasks>
+            <Task>
+                <DrivingToPoint>
+                    <PointRef>Task1</PointRef>
+                </DrivingToPoint>
+                <SampleAction>
+                    <Reward>10.0</Reward>
+                </SampleAction>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+</MissionPlan>

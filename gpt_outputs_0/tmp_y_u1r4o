@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      This mission plan instructs a robot to systematically assess tree health based on temperature and CO2 levels. The robot will initially take a picture at the first tree. If the picture indicates a low temperature, a temperature reading will be taken. If the temperature reading is also low, a CO2 sample will be taken. If the CO2 reading is also low, the robot will drive to a distant tree and repeat this process. If the initial reading is not low, the robot will proceed directly to the final destination.
+    </TaskDescription>
+    <TaskSequence>
+      <Task id="1">
+        <Action>Take Picture</Action>
+        <Dependency>None</Dependency>
+      </Task>
+      <Task id="2">
+        <Action>Evaluate Picture for Low Temperature</Action>
+        <Dependency>1</Dependency>
+        <Condition>Picture indicates low temperature</Condition>
+        <Action>Take Temperature Reading</Action>
+      </Task>
+      <Task id="3">
+        <Action>Evaluate Temperature Reading for Low Temperature</Action>
+        <Dependency>2</Dependency>
+        <Condition>Temperature reading is low</Condition>
+        <Action>Take CO2 Sample</Action>
+      </Task>
+      <Task id="4">
+        <Action>Evaluate CO2 Sample for Low Temperature</Action>
+        <Dependency>3</Dependency>
+        <Condition>CO2 reading is low</Condition>
+        <Action>Drive to Far Away Tree</Action>
+        <Action>Repeat Task 3</Action>
+      </Task>
+      <Task id="5">
+        <Action>If initial reading is not low, drive to end</Action>
+        <Dependency>1</Dependency>
+      </Task>
+    </TaskSequence>
+  </CompositeTaskInformation>
+</MissionPlan>

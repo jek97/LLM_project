@@ -1,0 +1,82 @@
+It seems that the XML parser is expecting a starting tag (`<`) at the beginning of the file. Here is the corrected version:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robotic-mission-planner.com/mission-plan.xsd
+             http://robotic-mission-planner.com/mission-plan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>
+      <Action>DriveToTree</Action>
+      <Arguments>
+        <Argument name="treeId">1</Argument>
+      </Arguments>
+      <Outcome>
+        <DrivingDistance>0.25 km</DrivingDistance>
+        <GPSLocation>-120.42309252722157, 37.36631509745154</GPSLocation>
+      </Outcome>
+    </TaskDescription>
+    <TaskDescription>
+      <Action>TakePictureOfTree</Action>
+      <Arguments>
+        <Argument name="treeId">1</Argument>
+      </Arguments>
+      <Condition>
+        <Temperature below="33.0°C"/>
+      </Condition>
+      <Outcome>
+        <GPSLocation>-120.42309252722157, 37.36631509745154</GPSLocation>
+      </Outcome>
+    </TaskDescription>
+    <TaskDescription>
+      <Action>TakeCo2Sample</Action>
+      <Arguments>
+        <Argument name="treeId">1</Argument>
+      </Arguments>
+      <Condition>
+        <Temperature below="33.0°C"/>
+      </Condition>
+      <Outcome>
+        <GPSLocation>-120.42309252722157, 37.36631509745154</GPSLocation>
+      </Outcome>
+    </TaskDescription>
+  </CompositeTaskInformation>
+  
+  <CompositeTaskInformation>
+    <TaskDescription>
+      <Action>DriveToTree</Action>
+      <Arguments>
+        <Argument name="treeId">6</Argument>
+      </Arguments>
+      <Outcome>
+        <DrivingDistance>0.30 km</DrivingDistance>
+        <GPSLocation>-120.42306783300766, 37.366308661662266</GPSLocation>
+      </Outcome>
+    </TaskDescription>
+    <TaskDescription>
+      <Action>TakePictureOfTree</Action>
+      <Arguments>
+        <Argument name="treeId">6</Argument>
+      </Arguments>
+      <Condition>
+        <Temperature below="33.0°C"/>
+      </Condition>
+      <Outcome>
+        <GPSLocation>-120.42306783300766, 37.366308661662266</GPSLocation>
+      </Outcome>
+    </TaskDescription>
+    <TaskDescription>
+      <Action>TakeCo2Sample</Action>
+      <Arguments>
+        <Argument name="treeId">6</Argument>
+      </Arguments>
+      <Condition>
+        <Temperature below="33.0°C"/>
+      </Condition>
+      <Outcome>
+        <GPSLocation>-120.42306783300766, 37.366308661662266</GPSLocation>
+      </Outcome>
+    </TaskDescription>
+  </CompositeTaskInformation>
+</MissionPlan>
+```
+I added the opening `<` character to the beginning of the file. This should fix the error and allow you to parse the XML correctly.

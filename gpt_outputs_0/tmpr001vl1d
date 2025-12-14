@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<MissionID>1</MissionID>
+<TaskDescription>
+  From the starting point, go to the middle of the field and take a picture of a tree.
+  If its average temperature is below 33 C, take a CO2 sample.
+  After, go to another random point 5 trees down and do the same thing.
+</TaskDescription>
+
+<CompositeTaskInformation>
+  <TaskDescription>Take pictures of trees at multiple locations.</TaskDescription>
+  <StartPoint Latitude="your_starting_latitude" Longitude="your_starting_longitude"/></StartPoint>
+</CompositeTaskInformation>
+
+Targets:
+1. Target Point: [lat1, lon1] - Action: Take picture
+2. Target Point: [lat2, lon2] - Action: Take CO2 sample if temperature <33°C
+
+Outcomes:
+- Distance traveled from start to first target: X km
+- Total estimated distance (start to end): Y km

@@ -1,0 +1,6 @@
+<m>
+  <DriveToLocation longitude="12.345" latitude="-67.890"></DriveToLocation>
+  <Picture location="...", size="..." .../Picture>
+  
+  <!-- Add more mission elements -->
+</m>

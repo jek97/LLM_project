@@ -1,0 +1,36 @@
+ Sure! Based on your instructions, here's an example XML file for your mission plan:
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <starting_point>
+        <latitude>37.366294</latitude>
+        <longitude>-120.4230530</longitude>
+    </starting_point>
+    <destination>
+        <latitude>37.366294</latitude>
+        <longitude>-120.4230530</longitude>
+    </destination>
+    <action type="take_picture">
+        <description>Take a picture of the middle tree in the field.</description>
+    </action>
+    <condition>
+        <type>average_temperature</type>
+        <value>33</value>
+    </condition>
+    <destination>
+        <latitude>37.366294</latitude>
+        <longitude>-120.4230530</longitude>
+    </destination>
+    <action type="take_co2_sample">
+        <description>Take a CO2 sample of the tree at the middle of the field.</description>
+    </action>
+    <random_destination>
+        <latitude>37.366294</latitude>
+        <longitude>-120.4230530</longitude>
+    </random_destination>
+    <distance>5</distance>
+</mission>
+```
+In this XML file, the starting point is defined at the beginning along with the first destination and action (taking a picture of a tree). The condition for taking a CO2 sample is also specified. After that, the robot will move to another random point 5 trees down from the current location and perform the same action again.
+
+Note that this XML file is just an example and can be modified to suit your specific requirements. You can add more destinations, actions, and conditions as needed. 

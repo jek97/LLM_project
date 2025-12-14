@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://example.com/mission.xsd http://example.com/mission.xsd"
+         xmlns="http://example.com/mission.xsd">
+  <CompositeTaskInformation>
+    <!-- Composite task information -->
+    <TaskDescription xml:lang="en-US">Drive to the northern most tree and take a picture</TaskDescription>
+    <DrivingAction>
+      <StartLocation ref="#tree_18"/>
+      <EndLocation ref="#eastern_middle_point"/>
+      <Distance unit="kilometers">0.01</Distance>
+    </DrivingAction>
+    <TaskDescription xml:lang="en-US">Take a picture of the northern most tree</TaskDescription>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <!-- Composite task information -->
+    <TaskDescription xml:lang="en-US">Drive to the middle of the orchard and take another picture</TaskDescription>
+    <DrivingAction>
+      <StartLocation ref="#eastern_middle_point"/>
+      <EndLocation ref="#orchard_middle_point"/>
+      <Distance unit="kilometers">0.005</Distance>
+    </DrivingAction>
+    <TaskDescription xml:lang="en-US">Take a picture of the middle of the orchard</TaskDescription>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <!-- Composite task information -->
+    <TaskDescription xml:lang="en-US">Drive to the middle of the eastern end and take a picture of two trees next to each other</TaskDescription>
+    <DrivingAction>
+      <StartLocation ref="#eastern_middle_point"/>
+      <EndLocation ref="#eastern_eastern_end"/>
+      <Distance unit="kilometers">0.02</Distance>
+    </DrivingAction>
+    <TaskDescription xml:lang="en-US">Take a picture of two trees next to each other</TaskDescription>
+  </CompositeTaskInformation>
+
+  <!-- Tree locations -->
+  <Tree id="tree_18" x="-120.42307592599273" y="37.36636077337479"/>
+  <Tree id="eastern_middle_point" x="-120.4229834754946" y="37.36631305549599"/>
+  <Tree id="orchard_middle_point" x="-120.423044218715" y="37.36626996761184"/>
+  <Tree id="eastern_eastern_end" x="-120.42307592599273" y="37.36636077337479"/>
+</Mission>

@@ -1,0 +1,33 @@
+<MissionPlan xmlns="http://example.com/missionplan">
+    <Mission>
+        <Name>Tree Inspection Mission</Name>
+        <Description>Inspect trees of specified types at the given locations.</Description>
+        <CompositeTaskInformation>
+            <TaskDescription>Original Question: Inspect trees of specified types at the given locations.</TaskDescription>
+            <Tasks>
+                <!-- Task for Tree Type 1, Location 1 -->
+                <Task>
+                    <Name>Tree Type 1 - Location 1</Name>
+                    <Action>InspectTree</Action>
+                    <Location>
+                        <Latitude>37.36628908556382</Latitude>
+                        <Longitude>-120.42298051393493</Longitude>
+                    </Location>
+                    <TreeType>Oak</TreeType>
+                </Task>
+                <!-- Repeat the following Task block for each tree inspection task -->
+                <Task>
+                    <Name>Tree Type 1 - Location 2</Name>
+                    <Action>InspectTree</Action>
+                    <Location>
+                        <Latitude>37.36636077337479</Latitude>
+                        <Longitude>-120.42307592599273</Longitude>
+                    </Location>
+                    <TreeType>Oak</TreeType>
+                </Task>
+                <!-- ... -->
+            </Tasks>
+        </CompositeTaskInformation>
+        <Outcome>The robot will travel to the specified locations, inspect trees of given types, and perform other necessary actions. The total distance traveled is estimated to be significant.</Outcome>
+    </Mission>
+</MissionPlan>

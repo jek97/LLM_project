@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <CompositeTaskInformation>
+        <TaskDescription>From the starting point, go to the middle of the field and take a picture of a tree. If its average temperature is below 33 C, take a CO2 sample. After, go to another random point 5 trees down and do the same thing.</TaskDescription>
+        <Tasks>
+            <!-- Task 1: Go to the middle of the field -->
+            <Task>
+                <Type>Move</Type>
+                <Parameters>
+                    <Parameter name="Location">MiddleOfField</Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task 2: Take a picture of a tree and check temperature -->
+            <Task>
+                <Type>TakePictureAndCheckTemperature</Type>
+                <Parameters>
+                    <Parameter name="TreeID">RandomTree1</Parameter>
+                    <Parameter name="Threshold">33C</Parameter>
+                </Parameters>
+                <SubTasks>
+                    <!-- Sub-task 2.1: Take a picture -->
+                    <Task>
+                        <Type>TakePicture</Type>
+                        <Parameters>
+                            <Parameter name="TreeID">RandomTree1</Parameter>
+                        </Parameters>
+                    </Task>
+
+                    <!-- Sub-task 2.2: Check temperature and take CO2 sample if below threshold -->
+                    <Task>
+                        <Type>CheckTemperatureAndSampleCO2</Type>
+                        <Parameters>
+                            <Parameter name="TreeID">RandomTree1</Parameter>
+                            <Parameter name="Threshold">33C</Parameter>
+                        </Parameters>
+                    </Task>
+                </SubTasks>
+            </Task>
+
+            <!-- Task 3: Go to another random point 5 trees down -->
+            <Task>
+                <Type>Move</Type>
+                <Parameters>
+                    <Parameter name="Location">RandomPoint5TreesDown</Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task 4: Take a picture of a tree and check temperature -->
+            <Task>
+                <Type>TakePictureAndCheckTemperature</Type>
+                <Parameters>
+                    <Parameter name="TreeID">RandomTree2</Parameter>
+                    <Parameter name="Threshold">33C</Parameter>
+                </Parameters>
+                <SubTasks>
+                    <!-- Sub-task 4.1: Take a picture -->
+                    <Task>
+                        <Type>TakePicture</Type>
+                        <Parameters>
+                            <Parameter name="TreeID">RandomTree2</Parameter>
+                        </Parameters>
+                    </Task>
+
+                    <!-- Sub-task 4.2: Check temperature and take CO2 sample if below threshold -->
+                    <Task>
+                        <Type>CheckTemperatureAndSampleCO2</Type>
+                        <Parameters>
+                            <Parameter name="TreeID">RandomTree2</Parameter>
+                            <Parameter name="Threshold">33C</Parameter>
+                        </Parameters>
+                    </Task>
+                </SubTasks>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+</MissionPlan>

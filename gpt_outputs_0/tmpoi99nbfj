@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <CompositeTaskInformation>
+        <TaskDescription>Visit 5 pistachio trees in a row and take a picture of 3 of them</TaskDescription>
+        <Tasks>
+            <DriveToWaypoint>
+                <WaypointID>0</WaypointID>
+            </DriveToWaypoint>
+            <DriveToWaypoint>
+                <WaypointID>1</WaypointID>
+            </DriveToWaypoint>
+            <DriveToWaypoint>
+                <WaypointID>2</WaypointID>
+            </DriveToWaypoint>
+            <DriveToWaypoint>
+                <WaypointID>3</WaypointID>
+            </DriveToWaypoint>
+            <DriveToWaypoint>
+                <WaypointID>4</WaypointID>
+            </DriveToWaypoint>
+            <TakePicture>
+                <WaypointID>0</WaypointID>
+            </TakePicture>
+            <TakePicture>
+                <WaypointID>1</WaypointID>
+            </TakePicture>
+            <TakePicture>
+                <WaypointID>2</WaypointID>
+            </TakePicture>
+        </Tasks>
+    </CompositeTaskInformation>
+</mission>

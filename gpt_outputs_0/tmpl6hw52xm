@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="path_to_your_schema.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Take a picture of two trees next to each other</TaskDescription>
+    <Action>
+      <DriveToTree>
+        <TreeID>6</TreeID>
+        <GPSLatitude>37.366308661662266</GPSLatitude>
+        <GPSLongitude>-120.42306783300766</GPSLongitude>
+      </DriveToTree>
+    </Action>
+    <TaskDescription>Take a picture of two trees next to each other (again)</TaskDescription>
+    <Action>
+      <DriveToTree>
+        <TreeID>4</TreeID>
+        <GPSLatitude>37.36632114247575</GPSLatitude>
+        <GPSLongitude>-120.42308272918532</GPSLongitude>
+      </DriveToTree>
+      <!-- Place the original question in the TaskDescription element of the CompositeTaskInformation element for logging -->
+      <Log>Place the original question in the TaskDescription element of the CompositeTaskInformation element for logging</Log>
+    </Action>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Take two CO2 readings of two trees next to each other</TaskDescription>
+    <Action>
+      <DriveToTree>
+        <TreeID>4</TreeID>
+        <GPSLatitude>37.36632114247575</GPSLatitude>
+        <GPSLongitude>-120.42308272918532</GPSLongitude>
+      </DriveToTree>
+    </Action>
+    <Action>
+      <Co2Reading>
+        <TreeID>7</TreeID>
+        <GPSLatitude>37.366340718595886</GPSLatitude>
+        <GPSLongitude>-120.42308519271332</GPSLongitude>
+      </Co2Reading>
+      <!-- If possible, comment the total estimated haversine distance traveled from start to end somewhere in the Outcome -->
+      <Outcome>Total estimated distance traveled: 0.0024 km</Outcome>
+    </Action>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Take two CO2 readings of two trees next to each other (again)</TaskDescription>
+    <Action>
+      <DriveToTree>
+        <TreeID>7</TreeID>
+        <GPSLatitude>37.366340718595886</GPSLatitude>
+        <GPSLongitude>-120.42308519271332</GPSLongitude>
+      </DriveToTree>
+    </Action>
+    <Action>
+      <Co2Reading>
+        <TreeID>6</TreeID>
+        <GPSLatitude>37.366308661662266</GPSLatitude>
+        <GPSLongitude>-120.42306783300766</GPSLongitude>
+      </Co2Reading>
+    </Action>
+  </CompositeTaskInformation>
+
+</missionPlan>

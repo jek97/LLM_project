@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GeoJSON version="3">
+  < missions > 
+    < mission ID="mission_0" created_date="2024-01-01T00:00:00Z">
+      <MissionInformation>
+        <CompositeTaskInformation>
+          <TaskDescription>Drive to the location of northmost tree and capture an image using camera 0.</TaskDescription>
+          <TaskExecutionOrder>1</TaskExecutionOrder>
+        </CompositeTaskInformation>
+        <!-- Repeat for the second task -->
+        <CompositeTaskInformation>
+          <TaskDescription>Drive to the location of southmost tree and capture an image using camera 1.</TaskDescription>
+          <TaskExecutionOrder>2</TaskExecutionOrder>
+        </CompositeTaskInformation>
+      </MissionInformation>
+    </mission>
+    <!-- Repeat similar steps for other missions -->
+  </missions>
+</GeoJSON>

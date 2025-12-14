@@ -1,0 +1,55 @@
+It seems like the issue persists.
+
+Let me try to use a different approach by generating an XML file from scratch. Here's an updated code:
+
+```python
+import xml.etree.ElementTree as ET
+
+class Task:
+    def __init__(self, name, driving_to_tree, action_type):
+        self.name = name
+        self.driving_to_tree = driving_to_tree
+        self.action_type = action_type
+
+def create_task(task_name, driving_to_tree, action_type):
+    task_element = ET.Element('task')
+    task_element.set('xml:lang', 'en')
+
+    driving_to_tree_element = ET.SubElement(task_element, 'DrivingToTree')
+    driving_to_tree_element.text = str(driving_to_tree)
+
+    action_type_element = ET.SubElement(task_element, 'ActionType')
+    action_type_element.text = str(action_type)
+
+    return task_element
+
+def create_driving_task(driving_to_tree):
+    driving_task = Task('Drive to Tree', driving_to_tree, 'Drive to Location')
+    driving_task_element = create_task(driving_task.name, driving_task.driving_to_tree, driving_task.action_type)
+    return driving_task_element
+
+def create_inspection_task(action_type):
+    inspection_task = Task('Inspect Tree', None, action_type)
+    inspection_task_element = create_task(inspection_task.name, inspection_task.driving_to_tree, inspection_task.action_type)
+    return inspection_task_element
+
+def main():
+    root_element = ET.Element('missionPlan')
+    driving_task_element = create_driving_task('treeId=0')
+    inspection_task_element = create_inspection_task('InspectTree')
+
+    root_element.append(driving_task_element)
+    root_element.append(inspection_task_element)
+
+    tree = ET.ElementTree(root_element)
+    tree.write('mission_plan.xml')
+
+if __name__ == '__main__':
+    main()
+```
+
+This code defines a `Task` class with attributes for task name, driving to tree location, and action type. It then creates two tasks: one for driving to a tree and another for inspecting a tree.
+
+The `create_task` function generates an XML element for a task, and the `main` function uses this function to create two tasks and append them to the root element of the mission plan.
+
+Please replace `'treeId=0'`, `'InspectTree'` with your actual values. The resulting XML file will be saved in the current working directory as `mission_plan.xml`.

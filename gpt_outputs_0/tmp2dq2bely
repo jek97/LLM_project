@@ -1,0 +1,42 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Mission">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="MissionInformation" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="TaskList" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element ref="Outcome" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- Define other elements as needed -->
+</xs:schema>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission_plan.xsd">
+    <MissionInformation>
+        <MissionName>TreePictureMission</MissionName>
+        <StartTime>2023-04-15T10:00:00Z</StartTime>
+        <EndTime>2023-04-15T11:00:00Z</EndTime>
+    </MissionInformation>
+    <TaskList>
+        <CompositeTaskInformation>
+            <TaskID>1</TaskID>
+            <TaskDescription>Take a picture of the northern most tree. Drive to the middle of the orchard and take another.</TaskDescription>
+            <SubTasks>
+                <DriveToLocation>
+                    <!-- Use GeoJSON data to provide GPS coordinates -->
+                    <GPSLocation>
+                        <Latitude>...</Latitude>
+                        <Longitude>...</Longitude>
+                    </GPSLocation>
+                </DriveToLocation>
+                <TakePicture>
+                    <TreeID>1</TreeID>
+                </TakePicture>
+                <!-- Add more subtasks as needed -->
+            </SubTasks>
+        </CompositeTaskInformation>
+        <!-- Add more CompositeTaskInformation elements as needed -->
+    </TaskList>
+    <Outcome>
+        The robot successfully completed its mission and took pictures of the specified trees.
+    </Outcome>
+</Mission>

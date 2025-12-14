@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://www.example.com/missionplan"
+           xsi:noNamespaceSchemaLocation="missionplan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>
+      This mission involves assessing orchard conditions. The robot will initially investigate the first tree, taking a picture and assessing temperature. If the temperature is low, a CO2 sample will be taken. If both readings are low, the robot will drive to a distant tree and repeat the process. If the initial temperature reading is not low, the robot will drive to the designated end point.
+    </TaskDescription>
+    <Goal>
+      Assess orchard conditions, prioritizing areas with low temperature and CO2.
+    </Goal>
+  </CompositeTaskInformation>
+  <Tasks>
+    <Task id="1">
+      <Action>DriveTo</Action>
+      <Target>Tree_1</Target>
+    </Task>
+    <Task id="2">
+      <Action>TakePicture</Action>
+      <Target>Tree_1</Target>
+      <Condition>
+        <TemperatureThreshold>Low</TemperatureThreshold>
+      </Condition>
+    </Task>
+    <Task id="3">
+      <Action>ReadTemperature</Action>
+      <Target>Tree_1</Target>
+      <Condition>
+        <TemperatureThreshold>Low</TemperatureThreshold>
+      </Condition>
+    </Task>
+    <Task id="4">
+      <Action>ReadCO2</Action>
+      <Target>Tree_1</Target>
+      <Condition>
+        <CO2Threshold>Low</CO2Threshold>
+      </Condition>
+    </Task>
+    <Task id="5">
+      <Action>DriveTo</Action>
+      <Target>Tree_10</Target>
+      <Condition>
+        <TemperatureThreshold>Low</TemperatureThreshold>
+        <CO2Threshold>Low</CO2Threshold>
+      </Condition>
+    </Task>
+    <Task id="6">
+      <Action>TakePicture</Action>
+      <Target>Tree_10</Target>
+    </Task>
+    <Task id="7">
+      <Action>ReadTemperature</Action>
+      <Target>Tree_10</Target>
+    </Task>
+    <Task id="8">
+      <Action>ReadCO2</Action>
+      <Target>Tree_10</Target>
+    </Task>
+    <Task id="9">
+      <Action>DriveTo</Action>
+      <Target>End_Point</Target>
+    </Task>
+  </Tasks>
+</MissionPlan>

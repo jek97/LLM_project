@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlanSchema:Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           xmlns:xi="http://www.w3.org/2001/XInclude"
+                           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                           xmlns:missionPlanSchema="http://example.com/missionPlanSchema">
+    <Identification>
+        <Name>Robotic Fruit Collection Mission</Name>
+        <Description>Visit all the trees on the farm, prioritize points sampled longer ago.</Description>
+        <Author>Robot Planner</Author>
+        <Version>1.0</Version>
+    </Identification>
+    <Parameters>
+        <TimeResolution>60s</TimeResolution>
+    </Parameters>
+    <missionPlanSchema:CompositeTaskInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SequentialTask">
+        <!-- Original Question -->
+        <TaskDescription>Visit all the trees on the farm, prioritize points sampled longer ago.</TaskDescription>
+        <Tasks>
+            <missionPlanSchema:CompositeTaskInformation xsi:type="SequentialTask">
+                <TaskReference TaskName="DriveToLocation" />
+                <!-- This task should contain action at target location -->
+                <!-- Use TreeType instead of "CheckTreeSample" as it could refer to other actions as well -->
+                <missionPlanSchema:CompositeTaskInformation xsi:type="SequentialTask">
+                    <Position>
+                        <!-- Add a new element, such as 'Coordinates', to include GPS coordinates -->
+                        <missionPlanSchema:Coordinates>
+                            <Latitude>...</Latitude>
+                            <Longitude>...</Longitude>
+                        </missionPlanSchema:Coordinates>
+                    </Position>
+                    <Action>
+                        <TaskName>TreeType</TaskName>
+                        <!-- Other task specific details -->
+                    </Action>
+                </missionPlanSchema:CompositeTaskInformation>
+            </missionPlanSchema:CompositeTaskInformation>
+            <!-- Other tasks for each tree in the GeoJSON file -->
+        </Tasks>
+    </missionPlanSchema:CompositeTaskInformation>
+</missionPlanSchema:Mission>

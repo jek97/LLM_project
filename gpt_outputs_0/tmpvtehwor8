@@ -1,0 +1,47 @@
+<think>
+Alright, I'm trying to fix this "error occurred: Extra content at the end of the document" in my XML mission plan. Let me see what's going on here.
+
+I know that XML documents must have a well-defined structure with matching opening and closing tags. The error suggests there might be extra or unexpected content after line 31, which is close to the end of the file.
+
+First, I'll check if all my elements are properly closed before the document ends. Maybe there's an element or attribute that wasn't closed correctly towards the end of the mission plan.
+
+I'll look at line 31 and see what kind of content might be causing this issue. Perhaps there's a leftover comment, extra text, or an unclosed tag that's not supposed to be there.
+
+To fix this:
+
+1. **Review the Entire Document:**
+   Go through your entire XML mission plan from start to finish to ensure every opening tag has a corresponding closing tag and nothing is left hanging at the end.
+
+2. **Check for Trailing Characters:**
+   Look for any extra spaces, characters, or comments that might be appended after line 31 without being part of the intended structure.
+
+3. **Validate with an XML Editor:**
+   Use an online XML validator or editor to check if there are any trailing content issues at the end of your document.
+
+4. **Inspect Line 31 and Beyond:**
+   Focus specifically on lines around 31 to see if there's anything unexpected that shouldn't be there, like extra attributes or tags.
+
+5. **Ensure Proper Closure:**
+   Make sure all elements are closed in the correct order before reaching line 31 so nothing is left open at the end of the file.
+
+By carefully reviewing these aspects, you can identify and eliminate any extra content causing issues at the end of your XML mission plan.
+</think>
+
+To fix the "extra content at the end of the document" error in your XML mission plan:
+
+1. **Check for Proper Tag Closure:**
+   Ensure that every opening tag has a corresponding closing tag throughout your XML file.
+
+2. **Validate with an XML Validator:**
+   Use an online XML validator to check for any syntax errors or unexpected content at the end of your document.
+
+3. **Inspect Line 31 and Beyond:**
+   Look specifically at lines around 31 to identify if there's any trailing text, comments, or unclosed tags that shouldn't be present.
+
+4. **Remove Trailing Characters:**
+   If you find any extra characters or comments after line 31, remove them to ensure the XML structure is clean and valid.
+
+5. **Revalidate After Changes:**
+   After making these adjustments, revalidate your XML mission plan to confirm that there are no more trailing content issues at the end of the file.
+
+By following these steps, you can resolve the "extra content at the end of the document" error in your XML mission plan and ensure it adheres strictly to the required schema.

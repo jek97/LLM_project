@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+  <name>Exploring Tree Health and Temperature</name>
+  
+  <startingPoint>
+    <x>0</x>
+    <y>0</y>
+  </startingPoint>
+  
+  <tasks>
+    <task name="Find Tree in Middle of Orchard">
+      <action type="Move" distance="10" direction="N"/>
+      <sensor sensorType="Cosimeter">
+        <reading name="Cos reading" value="Read Cos"/>
+      </sensor>
+      <decision decisionType="If">
+        <condition conditionType="LessThan">
+          <variable varName="Cos reading"/>
+          <threshold thresholdValue="50"/>
+        </condition>
+        <action type="Move" distance="10" direction="S"/>
+      </decision>
+    </task>
+    
+    <task name="Take Pictures of Nearby Trees">
+      <action type="Move" distance="20" direction="W"/>
+      <sensor sensorType="Camera">
+        <takePicture/>
+      </sensor>
+      <sensor sensorType="Camera">
+        <takePicture/>
+      </sensor>
+    </task>
+    
+    <task name="Find Furthest Tree for CO2">
+      <action type="Move" distance="50"/>
+      <sensor sensorType="CO2 Meter">
+        <reading name="CO2 reading" value="Read CO2"/>
+      </sensor>
+      <decision decisionType="If">
+        <condition conditionType="GreaterThan">
+          <variable varName="CO2 reading"/>
+          <threshold thresholdValue="100"/>
+        </condition>
+        <action type="Move" distance="50" direction="N"/>
+      </decision>
+    </task>
+    
+    <task name="Repeat Process">
+      <action type="Move" distance="50"/>
+      <sensor sensorType="Camera">
+        <takePicture/>
+      </sensor>
+      <sensor sensorType="CO2 Meter">
+        <reading name="CO2 reading" value="Read CO2"/>
+      </sensor>
+    </task>
+    
+    <task name="Take Temperature Reading">
+      <action type="Move" distance="30" direction="N"/>
+      <sensor sensorType="Thermometer">
+        <reading name="Temperature reading" value="Read Temperature"/>
+      </sensor>
+    </task>
+    
+    <task name="Return to Starting Point">
+      <action type="Move" distance="30"/>
+      <action type="End Mission"/>
+    </task>
+  </tasks>
+</mission>

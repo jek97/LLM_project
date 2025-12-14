@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>From the starting point, go to the middle of the field and take a picture of a tree. If its average temperature is below 33 C, take a CO2 sample. After that, go to another random point 5 trees down and do the same thing.</TaskDescription>
+    <Tasks>
+      <Task>
+        <Action>GoTo</Action>
+        <Parameters>
+          <Parameter name="lat" value="-18.493778"/>
+          <Parameter name="lon" value="169.0625"/>
+          <Parameter name="alt" value="122"/>
+        </Parameters>
+      </Task>
+      <Task>
+        <Action>TakePicture</Action>
+        <Parameters>
+          <Parameter name="tree_id" value="middle_tree"/>
+        </Parameters>
+      </Task>
+      <Task>
+        <Action>MeasureTemperature</Action>
+        <Parameters>
+          <Parameter name="tree_id" value="middle_tree"/>
+        </Parameters>
+      </Task>
+      <Task>
+        <IfCondition>
+          <Expression>
+            <Operator>lt</Operator>
+            <Operand1>
+              <Variable>temperature</Variable>
+            </Operand1>
+            <Operand2>33</Operand2>
+          </Expression>
+          <ThenAction>
+            <Action>TakeCO2Sample</Action>
+            <Parameters>
+              <Parameter name="tree_id" value="middle_tree"/>
+            </Parameters>
+          </ThenAction>
+        </IfCondition>
+      </Task>
+      <Task>
+        <Action>GoTo</Action>
+        <Parameters>
+          <Parameter name="lat" value="-18.493765"/>
+          <Parameter name="lon" value="169.0626"/>
+          <Parameter name="alt" value="122"/>
+        </Parameters>
+      </Task>
+      <Task>
+        <Action>TakePicture</Action>
+        <Parameters>
+          <Parameter name="tree_id" value="random_tree_5_down"/>
+        </Parameters>
+      </Task>
+      <Task>
+        <Action>MeasureTemperature</Action>
+        <Parameters>
+          <Parameter name="tree_id" value="random_tree_5_down"/>
+        </Parameters>
+      </Task>
+      <Task>
+        <IfCondition>
+          <Expression>
+            <Operator>lt</Operator>
+            <Operand1>
+              <Variable>temperature</Variable>
+            </Operand1>
+            <Operand2>33</Operand2>
+          </Expression>
+          <ThenAction>
+            <Action>TakeCO2Sample</Action>
+            <Parameters>
+              <Parameter name="tree_id" value="random_tree_5_down"/>
+            </Parameters>
+          </ThenAction>
+        </IfCondition>
+      </Task>
+    </Tasks>
+  </CompositeTaskInformation>
+</mission>

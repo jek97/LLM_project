@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionPlanningSchema.xsd 
+                              http://robust-mission-planning.com/missionPlanningSchema.xsd">
+    <TaskInformation>
+        <TaskDescription>
+            <TaskType>Picture</TaskType>
+            <Action>Take picture of northernmost tree</Action>
+            <Outcome>
+                <DrivingToLocation>
+                    <GPSLocation>
+                        <Latitude>37.36635688574164</Latitude>
+                        <Longitude>-120.42302289785604</Longitude>
+                    </GPSLocation>
+                </DrivingToLocation>
+            </Outcome>
+        </TaskDescription>
+    </TaskInformation>
+</Mission>

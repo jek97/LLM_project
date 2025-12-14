@@ -1,0 +1,14 @@
+ Here's an example XML file conformant to the schema, based on your instructions:
+```php
+<mission>
+    <name>Orchard Exploration</name>
+    <instructions>
+        <step id="1">Take a picture of the northern most tree.</step>
+        <step id="2">Drive to the middle of the orchard.</step>
+        <step id="3">Take another picture.</step>
+        <step id="4">Drive to the middle of the eastern end.</step>
+        <step id="5">Take a picture of two trees next to each other.</step>
+    </instructions>
+</mission>
+```
+This XML file defines a mission with five steps, each represented by a `<step>` element. The `id` attribute is used to uniquely identify each step for reference in the code that will execute these instructions. 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <StartPoint>
+    <Latitude>37.36627570632085</Latitude>
+    <Longitude>-120.42298051393493</Longitude>
+  </StartPoint>
+  <Tasks>
+    <Task id="1">
+      <TaskType>DriveToTree</TaskType>
+      <TargetTreeId>7</TargetTreeId>
+      <Instructions>Drive to tree with ID 7.</Instructions>
+    </Task>
+    <Task id="2">
+      <TaskType>MeasureCO2</TaskType>
+      <TargetTreeId>7</TargetTreeId>
+      <Instructions>Take CO2 measurement.</Instructions>
+    </Task>
+  </Tasks>
+</MissionPlan>

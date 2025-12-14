@@ -1,0 +1,41 @@
+<Mission xmlns="http://example.com/mission-plan" xmlns:vocab="http://purl.ieee.org/NS/dcterms#" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://example.com/mission-plan" elementFormDefault="qualified">
+    <TaskDescription>Drive to GPS Location 1, Inspect Tree 1, Drive to GPS Location 2, Inspect Tree 2, and Return to Start</TaskDescription>
+    <Version>1.0</Version>
+    <MissionName>Example Mission Plan</MissionName>
+    <StartLocation>
+        <Latitude>51.493676</Latitude>
+        <Longitudue>-0.298387</Longitudue>
+    </StartLocation>
+    <EndLocation>
+        <Latitude>51.493693</Latitude>
+        <Longitudue>-0.298381</Longitudue>
+    </EndLocation>
+    <TaskInformation>
+        <CompositeTaskInformation>
+            <DriveTo>
+                <Location>
+                    <Latitude>51.493676</Latitude>
+                    <Longitudue>-0.298387</Longitudue>
+                </Location>
+                <DistanceEstimate>0.01</DistanceEstimate>
+            </DriveTo>
+            <ActionInformation>
+                <TreeType>Oak</TreeType>
+                <!-- Other measurements go here -->
+            </ActionInformation>
+        </CompositeTaskInformation>
+        <CompositeTaskInformation>
+            <DriveTo>
+                <Location>
+                    <Latitude>51.493693</Latitude>
+                    <Longitudue>-0.298381</Longitudue>
+                </Location>
+                <DistanceEstimate>0.01</DistanceEstimate>
+            </DriveTo>
+            <ActionInformation>
+                <TreeType>Maple</TreeType>
+                <!-- Other measurements go here -->
+            </ActionInformation>
+        </CompositeTaskInformation>
+    </TaskInformation>
+</Mission>

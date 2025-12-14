@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <Task id="1" description="Initial Tree Assessment">
+    <Action type="TakePicture" target="Tree 1" description="Capture an image of the first tree."/>
+    <Condition type="SensorReading" sensor="Temperature" reading="Low" threshold="0.5" unit="degrees Celsius"/>
+    <Action type="TakeSample" target="Tree 1" description="Take a CO2 sample if temperature reading is low."/>
+    <Condition type="SensorReading" sensor="CO2" reading="Low" threshold="400" unit="ppm"/>
+    <Action type="TakeSample" target="Tree 1" description="Take a second CO2 sample to confirm low reading."/>
+  </Task>
+
+  <Task id="2" description="Measure Second Tree">
+    <Action type="TakePicture" target="Tree 2" description="Capture an image of the second tree."/>
+    <Condition type="SensorReading" sensor="Temperature" reading="Low" threshold="0.5" unit="degrees Celsius"/>
+    <Action type="TakeSample" target="Tree 2" description="Take a CO2 sample if temperature reading is low."/>
+    <Condition type="SensorReading" sensor="CO2" reading="Low" threshold="400" unit="ppm"/>
+    <Action type="TakeSample" target="Tree 2" description="Take a second CO2 sample to confirm low reading."/>
+  </Task>
+
+  <Task id="3" description="Continue to Other Trees">
+    <Action type="DriveTo" target="Tree 3" description="Navigate to the next tree."/>
+    <Action type="TakePicture" target="Tree 3" description="Capture an image of the third tree."/>
+    <Action type="DriveTo" target="Tree 4" description="Navigate to the next tree."/>
+    <Action type="DriveTo" target="Tree 5" description="Navigate to the next tree."/>
+    <Action type="DriveTo" target="End" description="Navigate to the end point."/>
+  </Task>
+
+  <Task id="4" description="Final Destination">
+    <Action type="Arrive" target="End" description="Arrive at the final destination."/>
+  </Task>
+</MissionPlan>

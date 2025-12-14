@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+  <xs:element name="MissionPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="MissionName" type="xs:string"/>
+        <xs:element name="MissionDuration" type="xs:integer"/>
+        <xs:element name="TaskList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Task">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Waypoint" type="WaypointType"/>
+                    <xs:element name="TaskDescription" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="WaypointType">
+    <xs:sequence>
+      <xs:element name="Latitude" type="xs:double"/>
+      <xs:element name="Longitude" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

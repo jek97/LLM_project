@@ -1,0 +1,26 @@
+ Here's an example XML file for your mission plan:
+```php
+<mission>
+  <task name="Take a picture of the first tree">
+    <step name="Take a picture of the first tree"/>
+  </task>
+  <task name="Measure the CO2 level in the first tree">
+    <step name="Check the CO2 reading in the first tree"/>
+    <if condition="CO2 reading is low">
+      <step name="Take a CO2 sample"/>
+      <step name="Confirm the CO2 reading by taking another CO2 sample"/>
+    </if>
+  </task>
+  <task name="Measure another tree, a different one">
+    <step name="Take a picture of the second tree"/>
+    <if condition="CO2 reading is low">
+      <step name="Take a CO2 sample"/>
+      <if condition="Confirmation CO2 reading is low">
+        <step name="Continue driving to another tree and take another CO2 sample"/>
+      </if>
+    </if>
+  </task>
+  <end/>
+</mission>
+```
+This XML file describes a mission with three tasks: taking a picture of the first tree, measuring the CO2 level in the first tree, and measuring another tree. The `<if>` elements are used to conditionally execute steps based on the results of previous steps. 

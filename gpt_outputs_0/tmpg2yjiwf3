@@ -1,0 +1,3 @@
+<visit_points>
+    <point task_number="1" reward="10" poi="Tree ID 1, Location E-12S"> <!-- Reward = 1 / (12 + 1) -->
+</visit_points>

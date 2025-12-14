@@ -1,0 +1,5 @@
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              targetNamespace="http://example.com/missionplan"
+              xmlns:mp="http://example.com/missionplan"
+              elementFormDefault="qualified">
+   

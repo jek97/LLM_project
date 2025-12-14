@@ -1,0 +1,35 @@
+<Mission xmlns="http://myrobot.com/schemas/missionPlan">
+    <MissionInfo>
+        <MissionName>PictureTour</MissionName>
+        <MissionDescription>Going clockwise from the north most tree, take a picture of 4 trees.</MissionDescription>
+    </MissionInfo>
+    <CompositeTaskInformation>
+        <TaskDescription>Receive initial instructions to tour and take pictures of 4 trees in a clockwise direction</TaskDescription>
+        <DrivingAndPictureTakingTask>
+            <TaskNumber>1</TaskNumber>
+            <DriveToGPSLocation>
+                <Latitude>37.36635678715399</Latitude>
+                <Longitude>-120.42299259529793</Longitude>
+            </DriveToGPSLocation>
+            <PictureTakingAction>
+                <TaskNumber>1</TaskNumber>
+                <TreeID>1</TreeID>
+                <EstimatedEffort>Medium</EstimatedEffort>
+            </PictureTakingAction>
+        </DrivingAndPictureTakingTask>
+        <!-- Repeat the following blocks for the remaining 3 trees in a clockwise direction -->
+        <DrivingAndPictureTakingTask>
+            <TaskNumber>2</TaskNumber>
+            <DriveToGPSLocation>
+                <Latitude>37.36628908556382</Latitude>
+                <Longitude>-120.42307592599273</Longitude>
+            </DriveToGPSLocation>
+            <PictureTakingAction>
+                <TaskNumber>2</TaskNumber>
+                <TreeID>2</TreeID>
+                <EstimatedEffort>Medium</EstimatedEffort>
+            </PictureTakingAction>
+        </DrivingAndPictureTakingTask>
+        <!-- ... -->
+    </CompositeTaskInformation>
+</Mission>

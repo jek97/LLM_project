@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/MissionPlanSchema"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://example.com/MissionPlanSchema http://example.com/MissionPlanSchema.xsd">
+    <Header>
+        <!-- Include the original question in the Name element for logging -->
+        <Name xsi:type="Question">What is the objective of this mission?</Name>
+        <Description>Identify and gather information on oak trees at specified GPS locations.</Description>
+    </Header>
+
+    <CompositeTaskInformation>
+        <!-- Include the original question in the TaskDescription element -->
+        <TaskDescription xsi:type="Question">What is the objective of this mission?</TaskDescription>
+
+        <SequentialTask>
+            <NavigationTask>
+                <!-- MoveToCoordinates element references a GeoJSON file for GPS coordinates -->
+                <MoveToCoordinates href="geofence.geojson#Tree1">
+                    <!-- You can add additional details about the navigation here if needed -->
+                </MoveToCoordinates>
+            </NavigationTask>
+            <OakIdentificationActionTask>
+                <!-- Add any other actions you want to perform at this tree -->
+            </OakIdentificationActionTask>
+        </SequentialTask>
+        <!-- Repeat the SequentialTask section for each tree, adjusting the href attribute of MoveToCoordinates as needed -->
+    </CompositeTaskInformation>
+    <Outcome xsi:nil="false">The mission successfully identified oak trees at specified GPS locations. Estimated distance traveled was approximately [XX miles].</Outcome>
+</MissionPlan>

@@ -1,0 +1,15 @@
+<RoboticMission xmlns="http://www.example.com/robotics/mission"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.example.com/robotics/mission http://www.example.com/robotics/mission.xsd">
+    <MissionInformation>
+        <MissionName>Temperature and CO2 Monitoring Mission</MissionName>
+        <StartTime>YYYY-MM-DDTHH:MM:SS</StartTime>
+        <EndTime>YYYY-MM-DDTHH:MM:SS</EndTime>
+    </MissionInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>At the first tree, take a picture. If that picture shows low temperature, take a temperature reading. If that reading is also low, take a CO2 sample. If that reading is also low, drive to a far away tree and repeat the process. If the very first reading isn't low, drive to end.</TaskDescription>
+        <Tasks>
+            <!-- Tasks go here -->
+        </Tasks>
+    </CompositeTaskInformation>
+</RoboticMission>

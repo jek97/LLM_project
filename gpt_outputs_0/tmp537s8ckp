@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://robust-mission-planning.com/missionplan"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:dt="http://robust-mission-planning.com/driftaskinfo"
+             xmlns:geojson="http://www.geojjson.org/geojson">
+  <CompositeTaskInformation>
+    <TaskDescription dt:Action="Find a tree somewhere in the middle of the orchard and measure cos." xmlns:dt="http://robust-mission-planning.com/driftaskinfo">Find a tree somewhere in the middle of the orchard and measure cos.</TaskDescription>
+    <DrivingTask dt:Action="DriveToTree" geojson:LocationRef="orchard-start">
+      <LocationRef geojson:Type="GPS" geojson:GeoJSONReference="orchard-start.geojson">
+        <geojson:geometry/>
+        <geojson:coordinates>-122.084051,37.385348</geojson:coordinates>
+      </LocationRef>
+      <TreeId xmlns="http://robust-mission-planning.com/treeid">5</TreeId>
+    </DrivingTask>
+  </CompositeTaskInformation>
+  <!-- ... rest of the XML remains the same ... -->
+</MissionPlan>

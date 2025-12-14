@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      This mission begins at tree ID 19. The robot will first take a picture.
+      If the picture indicates a low temperature, a temperature reading will be taken.
+      If the temperature is low, a CO2 sample will be taken. If the temperature is also low,
+      the robot will drive to a distant tree (ID 1) and repeat the process. If the initial reading is not low,
+      the robot will drive to a far away tree (ID 1) and repeat the process.
+    </TaskDescription>
+    <Goal>Complete all tasks, collecting temperature and CO2 data if necessary.</Goal>
+  </CompositeTaskInformation>
+  <TaskSequence>
+    <Task ID="1" Type="Photograph">
+      <Location ID="19"/>
+      <Action>Take a picture.</Action>
+    </Task>
+    <Task ID="2" Type="Temperature">
+      <Location ID="19"/>
+      <Condition>Temperature in picture is low</Condition>
+      <Action>Take a temperature reading.</Action>
+    </Task>
+    <Task ID="3" Type="CO2">
+      <Location ID="19"/>
+      <Condition>Temperature reading is low</Condition>
+      <Action>Take a CO2 sample.</Action>
+    </Task>
+    <Task ID="4" Type="DriveTo">
+        <Location ID="1"/>
+        <Action>Drive to tree ID 1.</Action>
+    </Task>
+    <Task ID="5" Type="DriveTo">
+        <Location ID="1"/>
+        <Action>Drive to tree ID 1.</Action>
+    </Task>
+    <Task ID="6" Type="End">
+      <Action>Complete Mission</Action>
+    </Task>
+  </TaskSequence>
+</MissionPlan>

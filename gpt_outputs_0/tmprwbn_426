@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/mission"
+           xmlns:m="http://example.com/mission">
+
+    <xs:element name="missionPlan" type="m:MissionType"/>
+
+    <xs:complexType name="MissionType">
+        <xs:sequence>
+            <xs:element name="missionID" type="xs:string"/>
+            <xs:element name="startTime" type="xs:dateTime"/>
+            <xs:element name="endTime" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="taskDescription" type="xs:string"/>
+            <xs:choice>
+                <xs:sequence>
+                    <xs:element name="driveTask">
+                        <xs:complexType>
+                            <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                    <xs:attribute name="target" use="required" type="xs:string"/>
+                                </xs:extension>
+                            </xs:simpleContent>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:any namespace="##any" processContents="lax"/>
+                </xs:sequence>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

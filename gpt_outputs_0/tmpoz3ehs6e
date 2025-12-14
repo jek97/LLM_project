@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>Generate a mission plan to visit all trees within a 100-meter radius, taking a picture at each location.</TaskDescription>
+    <Steps>
+      <Step id="1">Drive to tree ID 12. Take picture.</Step>
+      <Step id="2">Drive to tree ID 13. Take picture.</Step>
+      <Step id="3">Drive to tree ID 14. Take picture.</Step>
+      <Step id="4">Drive to tree ID 15. Take picture.</Step>
+      <Step id="5">Drive to tree ID 16. Take picture.</Step>
+      <Step id="6">Drive to tree ID 17. Take picture.</Step>
+      <Step id="7">Drive to tree ID 18. Take picture.</Step>
+      <Step id="8">Drive to tree ID 19. Take picture.</Step>
+      <Step id="9">Drive to tree ID 12. Take picture.</Step>
+      <Step id="10">Drive to tree ID 13. Take picture.</Step>
+      <Step id="11">Drive to tree ID 14. Take picture.</Step>
+      <Step id="12">Drive to tree ID 15. Take picture.</Step>
+      <Step id="13">Drive to tree ID 16. Take picture.</Step>
+      <Step id="14">Drive to tree ID 17. Take picture.</Step>
+      <Step id="15">Drive to tree ID 18. Take picture.</Step>
+      <Step id="16">Drive to tree ID 19. Take picture.</Step>
+    </Steps>
+  </CompositeTaskInformation>
+</MissionPlan>

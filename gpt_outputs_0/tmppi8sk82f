@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <task id="1">
+        <name>Travel to a tree in the middle of the orchard</name>
+        <distance_unit>feet</distance_unit>
+        <duration_unit>seconds</duration_unit>
+        <distance>50</distance>
+    </task>
+    <task id="2">
+        <name>Take a cos reading</name>
+        <duration>30</duration>
+    </task>
+    <task id="3">
+        <name>Take 2 pictures of nearby trees</name>
+        <distance_unit>feet</distance_unit>
+        <duration_unit>seconds</duration_unit>
+        <distance>100</distance>
+    </task>
+    <task id="4">
+        <name>Travel to a tree as far away as possible for co2 measurement</name>
+        <distance_unit>feet</distance_unit>
+        <duration_unit>seconds</duration_unit>
+        <distance>150</distance>
+    </task>
+    <task id="5">
+        <name>Take another cos reading</name>
+        <duration>30</duration>
+    </task>
+    <task id="6">
+        <name>Repeat the same process for co2 measurement</name>
+        <distance_unit>feet</distance_unit>
+        <duration_unit>seconds</duration_unit>
+        <distance>150</distance>
+    </task>
+    <task id="7">
+        <name>Take a temperature reading at any one of the northern most trees</name>
+        <duration>30</duration>
+    </task>
+    <task id="8">
+        <name>Return to end</name>
+        <distance_unit>feet</distance_unit>
+        <duration_unit>seconds</duration_unit>
+        <distance>150</distance>
+    </task>
+</mission>

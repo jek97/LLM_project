@@ -1,0 +1,5 @@
+<mission_plan>
+  <task id="1" type="image" point="(-120.4230..., 37.3663...)" /> <!-- Northernmost tree -->
+  <task id="2" type="move" point="(-120.4230..., 37.3662...)" /> <!-- Middle of the orchard -->
+  <task id="3" type="image" point="(easternmost_point...)" /> <!-- Easternmost point -->
+</mission_plan>

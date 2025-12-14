@@ -1,0 +1,59 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <MissionInformation>
+ <MissionId>1</MissionId>
+ <MissionName>Tree Corner Inspection</MissionName>
+ <TaskDescription>Viewing this farm as a rectangle, take pictures of trees at the four corners in any order.</TaskDescription>
+ </MissionInformation>
+ <SequenceOfTasks>
+ <CompositeTaskInformation>
+ <TaskId>1</TaskId>
+ <TaskType>DriveToLocation</TaskType>
+ <TaskDescription>Drive to the farm</TaskDescription>
+ </CompositeTaskInformation>
+ <MoveToTaskInformation>
+ <StartPosition>
+ <X>0.00000</X>
+ <Y>0.00000</Y>
+ <Z>0.00000</Z>
+ <Radius>10.0</Radius>
+ </StartPosition>
+ <EndPosition>
+ <X>5.00000</X>
+ <Y>5.00000</Y>
+ <Z>0.00000</Z>
+ <Radius>10.0</Radius>
+ </EndPosition>
+ </MoveToTaskInformation>
+ <CompositeTaskInformation>
+ <TaskId>2</TaskId>
+ <TaskType>TakePicture</TaskType>
+ <TaskDescription>Take a picture of the tree in the upper left corner of the farm.</TaskDescription>
+ <InputParameter>
+ <Name>TreeType</Name>
+ <ValueType>String</ValueType>
+ <Value>Oak</Value>
+ </InputParameter>
+ </CompositeTaskInformation>
+ <MoveToTaskInformation>
+ <StartPosition>
+ <X>0.00000</X>
+ <Y>0.00000</Y>
+ <Z>0.00000</Z>
+ <Radius>10.0</Radius>
+ </StartPosition>
+ <EndPosition>
+ <X>-5.00000</X>
+ <Y>2.00000</Y>
+ <Z>0.00000</Z>
+ <Radius>10.0</Radius>
+ </EndPosition>
+ </MoveToTaskInformation>
+ <CompositeTaskInformation>
+ <TaskId>3</TaskId>
+ <TaskType>TakePicture</TaskType>
+ <TaskDescription>Take a picture of the tree in the upper right corner of the farm.</TaskDescription>
+ <InputParameter>
+ <Name>TreeType</Name>
+ <ValueType>String</Value> 

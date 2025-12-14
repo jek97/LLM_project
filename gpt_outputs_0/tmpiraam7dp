@@ -1,0 +1,48 @@
+Okay, I understand. The error message indicates a problem with the XML structure, specifically a mismatch between opening and closing tags. This usually happens when there's an unclosed tag or a tag is closed out of order.
+
+To help me generate the correct XML mission plan, I need the following:
+
+1.  **The Robotic Task Representation:**  Please provide the detailed task representation. This is the core data that defines what the robot needs to do.  I need this in a structured format (e.g., JSON, YAML, or a clear text description) that I can translate into the XML.  This should include:
+    *   A list of tasks.
+    *   For each task:
+        *   Task ID (unique identifier)
+        *   Task Description (the original question)
+        *   Action Type (e.g., "Drive", "Inspect", "Collect Sample", "Photograph")
+        *   Target Object (e.g., "Oak Tree", "Red Maple", "Specific GPS Coordinates")
+        *   Priority (e.g., High, Medium, Low)
+        *   Any relevant parameters (e.g., distance to target, specific inspection criteria)
+
+2.  **The GeoJSON File:**  Please provide the GeoJSON file. This file will contain geographic data (coordinates, tree types, etc.) that the robot will use to locate and identify objects.
+
+Once I have these two pieces of information, I will generate the XML mission plan, ensuring the structure is correct and conforms to the expected schema.  I will also include the estimated haversine distance traveled in a comment within the `Outcome` element.
+
+**Example of the kind of Robotic Task Representation I need (JSON):**
+
+```json
+{
+  "tasks": [
+    {
+      "task_id": "T1",
+      "task_description": "Inspect Oak Tree near GPS 34.0522, -118.2437",
+      "action_type": "Drive",
+      "target_object": "Oak Tree",
+      "priority": "High",
+      "parameters": {
+        "distance_to_target": 0.5
+      }
+    },
+    {
+      "task_id": "T2",
+      "task_description": "Collect leaf sample from Red Maple at GPS 34.0530, -118.2440",
+      "action_type": "Drive",
+      "target_object": "Red Maple",
+      "priority": "Medium",
+      "parameters": {
+        "distance_to_target": 0.3
+      }
+    }
+  ]
+}
+```
+
+**Please provide the Robotic Task Representation and the GeoJSON file so I can start generating the XML mission plan.**

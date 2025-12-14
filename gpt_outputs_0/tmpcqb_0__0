@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission_plan_schema.xsd">
+    <Mission>
+        <!-- Original Question -->
+        <Description>{Original Question}</Description>
+
+        <!-- Loop through the first 5 pistachio trees -->
+        <CompositeTaskInformation>
+            <LoopFromTo startIndex="1" endIndex="5">
+                <!-- Drive to tree location, then perform task -->
+                <Task>
+                    <DriveToLocation>
+                        <TreeType xsi:type="Pistachio">
+                            <Id>{index}</Id>
+                            <GPS_Location xsi:type="Point">
+                                <!-- GeoJSON location data here -->
+                            </GPS_Location>
+                        </TreeType>
+                    </DriveToLocation>
+                    <TaskDescription>Logging Tree {index}</TaskDescription>
+                </Task>
+
+                <!-- Perform additional tasks if necessary -->
+                <CompositeTaskInformation>
+                    <!-- Tasks here would be specific to the tree being visited -->
+                </CompositeTaskInformation>
+            </LoopFromTo>
+        </CompositeTaskInformation>
+
+        <!-- Estimate the total distance traveled -->
+        <Outcome>The estimated travel distance was significant.</Outcome>
+    </Mission>
+</MissionPlan>

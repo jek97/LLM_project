@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to Tree 1 and inspect.</TaskDescription>
+        <Tasks>
+            <Task>
+                <Action>Inspect</Action>
+                <Preconditions/>
+                <Outcomes>
+                    <Outcome name="Inspection" description="Inspect the tree." action="None"/>
+                </Outcomes>
+            </Task>
+            <Task>
+                <Action>Pick fruit</Action>
+                <Preconditions/>
+                <Outcomes>
+                    <Outcome name="Fruit picked" description="Pick some fruit from the tree." action="None"/>
+                </Outcomes>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+</MissionPlan>

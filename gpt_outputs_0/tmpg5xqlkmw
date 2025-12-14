@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+    <complexType>
+        <complexContent>
+            <sequence>
+                <element ref="CompositeTaskInformation"/>
+            </sequence>
+        </-uppercase>
+    </complexType>
+</MissionPlan>
+
+<CompositeTaskInformation>
+    <taskDescription MovementCost="10" Action="visitPoint_0" Reward="0.4762"/>
+    <!-- Add more task descriptions as needed -->
+</CompositeTaskInformation>

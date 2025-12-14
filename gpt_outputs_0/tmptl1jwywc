@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://example.com/mission.xsd mission.xsd">
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Take a picture of the first tree.</TaskDescription>
+        <DriveToTree locationURI="https://example.com/orchard/0.json"/>
+        
+        <TaskDescription xml:lang="en">If the reading is low, take a co2 sample. Otherwise, take a temperature reading.</TaskDescription>
+        <DrivingStatus totalEstimatedHaversineDistanceFromStart="0km" />
+        <TakePicture locationURI="https://example.com/orchard/0.json"/>
+        
+        <Sequence>
+            <Repeat name="co2Sample">
+                <RepeatTask condition="resultIsLow"/>
+                <TaskDescription xml:lang="en">If that reading is low, sample co2 again to confirm.</TaskDescription>
+                <DrivingStatus totalEstimatedHaversineDistanceFromStart="Xkm" />
+                <Co2Sample/>
+            </RepeatTask>
+        </Sequence>
+        
+        <!-- Repeat task until result is not low -->
+        <Repeat name="co2SampleUntilLow">
+            <Condition expression="resultIsLow"/>
+            <DriveToTree locationURI="https://example.com/orchard/2.json"/>
+            <DrivingStatus totalEstimatedHaversineDistanceFromStart="Xkm" />
+            <TaskDescription xml:lang="en">Continue driving to another tree and take another co2 sample.</TaskDescription>
+            <Repeat name="co2Sample">
+                <RepeatTask condition="resultIsLow"/>
+                <TaskDescription xml:lang="en">If that reading is low, sample co2 again to confirm.</TaskDescription>
+                <DrivingStatus totalEstimatedHaversineDistanceFromStart="Xkm" />
+                <Co2Sample/>
+            </RepeatTask>
+        </Repeat>
+        
+        <!-- Repeat until the condition is met -->
+    </Sequence>
+    
+    <!-- Define a sequence of tasks to repeat until result is not low -->
+    <Sequence>
+        <TaskDescription xml:lang="en">Measure another tree, a different one by taking a picture.</TaskDescription>
+        <DriveToTree locationURI="https://example.com/orchard/1.json"/>
+        
+        <TaskDescription xml:lang="en">If it's low, sample co2. If that reading is low, sample co2 again to confirm.</TaskDescription>
+        <DrivingStatus totalEstimatedHaversineDistanceFromStart="0km" />
+        <TakePicture locationURI="https://example.com/orchard/1.json"/>
+        
+        <!-- Define a condition to check if resultIsLow -->
+        <Condition expression="resultIsLow"/>
+    </Sequence>
+    
+    <!-- Take picture of the final tree -->
+    <TaskDescription xml:lang="en">Take a picture of the final tree.</TaskDescription>
+    <DriveToTree locationURI="https://example.com/orchard/3.json"/>
+    <TakePicture locationURI="https://example.com/orchard/3.json"/>
+</CompositeTaskInformation>
+    
+    <!-- Use an external function (XSLT) to repeat task -->
+    <ExternalFunction name="RepeatCo2Sample">
+        <XslFunction select="{local-name()}" />
+    </ExternalFunction>
+    
+    <EndLocation locationURI="https://example.com/orchard/4.json"/>
+</Mission>

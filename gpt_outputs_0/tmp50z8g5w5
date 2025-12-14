@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      <!-- Original question here -->
+    </TaskDescription>
+  </CompositeTaskInformation>
+  <Tasks>
+    <!-- Individual tasks will be added here -->
+  </Tasks>
+</MissionPlan>

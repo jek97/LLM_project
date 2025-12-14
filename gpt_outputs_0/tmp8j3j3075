@@ -1,0 +1,41 @@
+<mission>
+    <startPosition coordinates="start_position however you want to start"/>
+    <!-- Task sequence starts here -->
+    
+    <!-- Take a picture of the first tree -->
+    <task name="Take Picture">
+        <action>Take a photo of Tree 1 at coordinates: -120.4230095, 37.3663018</action>
+    </task>
+
+    <task name="Temperature Reading">
+        <condition>Check temperature reading near Tree 1.</condition>
+        <reading value="25 degrees Celsius"/>
+        <action>If low (below 24°C), take action X; else, proceed to next task.</action>
+    </task>
+
+    <!-- Move on to the next tree -->
+    <task name="Move to Next Tree">
+        <action>Trajectory towards Tree 2 at coordinates: -120.4230789, 37.3663514</action>
+    </task>
+
+    <task name="Check CO2 Levels on Tree 2">
+        <sensors>
+            <sensor type="Temperature">25 degrees Celsius</sensor>
+            <sensor type="CO2">1000 ppm</sensor>
+        </sensors>
+        <condition>If both sensors are normal, proceed to next task.</condition>
+    </task>
+
+    <!-- Repeat the process for subsequent trees -->
+    <!-- Continue driving and checking CO2 levels until safe to continue -->
+    
+    <!-- Final step -->
+    <task name="Measure CO2 Levels at End Point">
+        <sensors>
+            <sensor type="CO2">Reading available</sensor>
+        </sensors>
+        <action>Terminate mission or take further action if needed.</action>
+    </task>
+
+    <endMission/>
+</mission>

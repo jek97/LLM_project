@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Generate a mission plan to visit all trees within a 100-meter radius, taking a picture at each location.
+    </TaskDescription>
+    <TaskList>
+      <Task id="1">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="WP1" x=" -120.42300386899338" y="37.366300703749474" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="2">
+        <Waypoint id="WP2" x=" -120.4230246791031" y="37.366304880110526" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="3">
+        <Waypoint id="WP3" x=" -120.42302669537153" y="37.36634636896467" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="4">
+        <Waypoint id="WP4" x=" -120.42303004014194" y="37.36631785560332" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="5">
+        <Waypoint id="WP5" x=" -120.4230246791031" y="37.366304880110526" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="6">
+        <Waypoint id="WP6" x=" -120.42302669537153" y="37.36634636896467" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="7">
+        <Waypoint id="WP7" x=" -120.42303004014194" y="37.36631785560332" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="8">
+        <Waypoint id="WP8" x=" -120.4230246791031" y="37.366304880110526" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="9">
+        <Waypoint id="WP9" x=" -120.42302669537153" y="37.36634636896467" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="10">
+        <Waypoint id="WP10" x=" -120.42303004014194" y="37.36631785560332" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="11">
+        <Waypoint id="WP11" x=" -120.42307272278255" y="37.36627570632085" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="12">
+        <Waypoint id="WP12" x=" -120.42300386899338" y="37.366300703749474" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="13">
+        <Waypoint id="WP13" x=" -120.42302669537153" y="37.36634636896467" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="14">
+        <Waypoint id="WP14" x=" -120.42303004014194" y="37.36631785560332" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="15">
+        <Waypoint id="WP15" x=" -120.4230246791031" y="37.366304880110526" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="16">
+        <Waypoint id="WP16" x=" -120.42302669537153" y="37.36634636896467" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="17">
+        <Waypoint id="WP17" x=" -120.42303004014194" y="37.36631785560332" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="18">
+        <Waypoint id="WP18" x=" -120.4230246791031" y="37.366304880110526" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="19">
+        <Waypoint id="WP19" x=" -120.42302669537153" y="37.36634636896467" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="20">
+        <Waypoint id="WP20" x=" -120.42303004014194" y="37.36631785560332" distance="100"/>
+        <Action>Take Picture</Action>
+      </Task>
+    </TaskList>
+  </Task>
+</Task>
+</Task>

@@ -1,0 +1,41 @@
+Here is an example of the XML mission plan:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="urn:robust-mission-planning-namespace v1.0
+         http://www.example.com/robust-mission-planning-namespace/v1.0/mission.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Start Mission</TaskDescription>
+    <Outcome>
+      <DrivingToTree location="Feature #0" />
+      <TakePicture action="take_picture" />
+      <If condition="picture_quality == 'low'">
+        <TemperatureReading />
+        <If condition="temperature_reading == 'low'">
+          <CO2Sample />
+          <If condition="co2_sample == 'low'">
+            <DrivingToFarAwayTree location="Feature #10" />
+            <RepeatProcess />
+          </If>
+        </If>
+      </If>
+      <Else>
+        <DrivingToEnd location="EndPoint" />
+      </If>
+    </Outcome>
+  </CompositeTaskInformation>
+</Mission>
+```
+Note that I've used the following elements and attributes:
+
+* `Feature #0` is a reference to the first tree in the GeoJSON file.
+* `location` attribute specifies the location of the driving task.
+* `take_picture` action is performed at the first tree.
+* `picture_quality` condition checks if the picture quality is low.
+* `temperature_reading` condition checks if the temperature reading is low.
+* `co2_sample` condition checks if the CO2 sample is low.
+* `DrivingToTree`, `TakePicture`, `TemperatureReading`, `CO2Sample`, and `DrivingToFarAwayTree` are custom task elements that represent the respective actions.
+* `RepeatProcess` is a composite task that repeats the process at a far-away tree.
+* `EndPoint` is the final location of the mission.
+
+Please note that this is just an example, and you may need to modify it to fit your specific requirements.

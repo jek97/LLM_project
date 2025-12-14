@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Mission>
+        <Name>Visit and photograph pistachio trees</Name>
+        <Description>From the farm, select 5 pistachio trees in a row to visit and take a picture of 3 of them.</Description>
+
+        <CompositeTaskInformation>
+            <DriveToLocation TaskID="1">
+                <Location xsi:type="GPS">
+                    <Latitude>Start Latitude</Latitude>
+                    <Longitude>Start Longitude</Longitude>
+                </Location>
+            </DriveToLocation>
+
+            <!-- Loop through the first 5 pistachio trees -->
+            <CompositeTaskInformation>
+                <LoopFromTo startIndex="1" endIndex="5">
+                    <DriveToLocation TaskID="{{LoopIndex}}">
+                        <TreeType xsi:type="Pistachio">
+                            <!-- Use the index to select the correct tree -->
+                            <Id>{{LoopIndex}}</Id>
+                        </TreeType>
+                        <Location xsi:type="GPS">
+                            <!-- The GPS location should be obtained from the GeoJSON file -->
+                            <Latitude>Tree Latitude {{LoopIndex}</Latitude>
+                            <Longitude>Tree Longitude {{LoopIndex}</Longitude>
+                        </Location>
+                    </DriveToLocation>
+
+                    <!-- Take a picture of the tree if it's within the selected range -->
+                    <Task ID="{{LoopIndex}}">
+                        <TakePicture>
+                            <TreeType xsi:type="Pistachio">
+                                <Id>{{LoopIndex}</Id>
+                            </TreeType>
+                        </TakePicture>
+                    </Task>
+                </LoopFromTo>
+            </CompositeTaskInformation>
+
+            <!-- Drive back to the farm -->
+            <DriveToLocation TaskID="1">
+                <Location xsi:type="GPS">
+                    <Latitude>Start Latitude</Latitude>
+                    <Longitude>Start Longitude</Longitude>
+                </Location>
+            </DriveToLocation>
+    </Mission>
+</MissionPlan>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <Tasks>
+    <Task id="1">Navigate</Task>
+    <Task id="2">Measure</Task>
+    <Task id="3">Photograph</Task>
+    <Task id="4">Return</Task>
+  </Tasks>
+</MissionPlan>

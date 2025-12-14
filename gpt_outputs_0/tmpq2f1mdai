@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/missionPlanningSchema.xsd"
+         xmlns:task="http://robust-mission-planning.com/taskDescription">
+    <TaskInformation>
+        <CompositeTaskInformation>
+            <TaskDescription>
+                <TaskType>Picture</TaskType>
+                <Action>Take picture of northernmost tree</Action>
+                <Outcome>
+                    <DrivingToLocation>
+                        <GPSLocation>
+                            <Latitude>37.36635688574164</Latitude>
+                            <Longitude>-120.42302289785604</Longitude>
+                        </GPSLocation>
+                    </DrivingToLocation>
+                    <PictureTaken/>
+                    <TotalEstimatedHaversineDistanceFromStartToEnd>Approximately 0.5 km</TotalEstimatedHaversineDistanceFromStartToEnd>
+                </Outcome>
+            </TaskDescription>
+        </CompositeTaskInformation>
+    </TaskInformation>
+
+    <TaskInformation>
+        <CompositeTaskInformation>
+            <TaskDescription>
+                <TaskType>Drive</TaskType>
+                <Action>Drive to middle of orchard</Action>
+                <Outcome>
+                    <DrivingToLocation>
+                        <GPSLocation>
+                            <Latitude>37.36635688574164</Latitude>
+                            <Longitude>-120.42309252722157</Longitude>
+                        </GPSLocation>
+                    </DrivingToLocation>
+                    <PictureTaken/>
+                    <TotalEstimatedHaversineDistanceFromStartToEnd>Approximately 0.2 km</TotalEstimatedHaversineDistanceFromStartToEnd>
+                </Outcome>
+            </TaskDescription>
+        </CompositeTaskInformation>
+    </TaskInformation>
+
+    <TaskInformation>
+        <CompositeTaskInformation>
+            <TaskDescription>
+                <TaskType>Picture</TaskType>
+                <Action>Take picture of eastern end trees</Action>
+                <Outcome>
+                    <DrivingToLocation>
+                        <GPSLocation>
+                            <Latitude>37.36631509745154</Latitude>
+                            <Longitude>-120.4230350832969</Longitude>
+                        </GPSLocation>
+                    </DrivingToLocation>
+                    <PictureTaken/>
+                    <TotalEstimatedHaversineDistanceFromStartToEnd>Approximately 0.3 km</TotalEstimatedHaversineDistanceFromStartToEnd>
+                </Outcome>
+            </TaskDescription>
+        </CompositeTaskInformation>
+    </TaskInformation>
+
+    <TaskInformation>
+        <CompositeTaskInformation>
+            <TaskDescription>
+                <TaskType>Picture</TaskType>
+                <Action>Take picture of two trees next to each other</Action>
+                <Outcome>
+                    <DrivingToLocation>
+                        <GPSLocation>
+                            <Latitude>37.36628908556382</Latitude>
+                            <Longitude>-120.423044218715</Longitude>
+                        </GPSLocation>
+                    </DrivingToLocation>
+                    <PictureTaken/>
+                    <TotalEstimatedHaversineDistanceFromStartToEnd>Approximately 0.4 km</TotalEstimatedHaversineDistanceFromStartToEnd>
+                </Outcome>
+            </TaskDescription>
+        </CompositeTaskInformation>
+    </TaskInformation>
+</Mission>

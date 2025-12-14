@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <!-- Add your GeoJSON file references within the <taskDescription> element -->
+    <element name="mission">
+        <complexType>
+            <sequence>
+                <element ref="compositeTask"/>
+                <element ref="compositeTask"/>
+                <!-- Add more compositeTask elements as needed -->
+            </sequence>
+        </complexType>
+    </element>
+    <element name="compositeTask">
+        <complexType>
+            <sequence>
+                <element name="taskInfo">
+                    <complexType>
+                        <sequence>
+                            <element name="name" type="string"/>
+                            <element name="distance_unit">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <enumeration value="feet"/>
+                                        <enumeration value="meter"/>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <element name="distance" type="double"/>
+                        </sequence>
+                    </complexType>
+                </element>
+                <element ref="compositeTaskInformation"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="compositeTaskInformation">
+        <complexType>
+            <sequence>
+                <element name="taskDescription" type="string"/>
+                <element name="outcome">
+                    <complexType>
+                        <sequence>
+                            <element name="distanceTraveled">
+                                <simpleType>
+                                    <restriction base="double">
+                                        <maxInclusive value="10000"/>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                        </sequence>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</xsd:schema>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <compositeTask>
+        <taskInfo>
+            <name>Travel to a tree in the middle of the orchard</name>
+            <distance_unit>feet</distance_unit>
+            <distance>50</distance>
+        </taskInfo>
+        <compositeTaskInformation>
+            <taskDescription>From the starting point, find a tree somewhere in the middle of the orchard and measure cos. if low reading, go to and take 2 pictures of nearby trees.</taskDescription>
+        </compositeTaskInformation>
+    </compositeTask>
+    <compositeTask>
+        <taskInfo>
+            <name>Measure CO2 levels in the tree</name>
+            <distance_unit>feet</distance_unit>
+            <distance>100</distance>
+        </taskInfo>
+        <compositeTaskInformation>
+            <taskDescription>Use a device to measure CO2 levels in the selected tree.</taskDescription>
+        </compositeTaskInformation>
+    </compositeTask>
+    <!-- Add more compositeTask elements as needed -->
+</mission>

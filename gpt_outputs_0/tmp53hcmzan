@@ -1,0 +1,45 @@
+<think>
+Okay, so I'm trying to help create a mission plan that involves capturing images from four trees located in different directions around an orchard—northmost, eastmost, southmost, and westmost. The issue is that when I look at the GeoJSON data provided, it seems like all 20 trees are clustered very closely together geographically. That makes it hard to distinguish between them because their positions aren't spread out enough.
+
+First, I need to understand what "northmost," "eastmost," etc., mean in this context. From what I know, northmost refers to the tree with the highest latitude value since latitudes increase as you move northward. Similarly, eastmost would be the tree with the highest longitude value because longitudes increase as you go east. Southmost is likely the tree with the lowest latitude (since latitudes decrease as you move south), and westmost would have the lowest longitude.
+
+But looking at the coordinates provided, all trees seem to share very similar longitude values (-120.423 to -120.42308) and latitude ranges are minimal too. That means they're clustered in a small area within the orchard. Without more spread-out locations, it's tough to select four distinct trees from different directions because all options for these directions might be very close together.
+
+Maybe I need to consider that "eastmost" and "westmost" could mean something slightly different if we're talking about relative positions rather than strict longitude values. Perhaps they refer to the tree that is farthest east or west within the orchard, not just based on absolute coordinates but also considering their position relative to an imaginary center point.
+
+Also, I need to ensure that these four trees are as far apart from each other as possible geographically. If all 20 trees are bunched closely together, selecting four that are maximally distant would mean choosing those located at the outer edges of this cluster in north, east, south, and west directions.
+
+But how can I define the boundaries of this cluster? Maybe by finding the maximum and minimum latitude and longitude within the dataset to determine where each direction's extremity lies. Once I have these values, I can pick the trees that fall at those extremes.
+
+However, there might be cases where multiple trees share the same latitude or longitude value—so in such instances, how do I decide which tree to choose? Perhaps in that case, I'd need to select the first one I encounter or consider additional factors like tree height or species for differentiation.
+
+Another thing is ensuring consistency with mission requirements. If capturing images from all four directions adds significant complexity without providing much benefit due to their close proximity, it might be necessary to reassess whether this part of the mission is worthwhile.
+
+In summary:
+
+1. **Identify Extreme Points:** Determine the maximum and minimum latitude and longitude values within the dataset.
+2. **Select Trees at Extremes:** Choose the tree with the highest latitude (northmost), highest longitude (eastmost), lowest latitude (southmost), and lowest longitude (westmost).
+3. **Handle Close Proximity:** If multiple trees are too close to each other in these directions, prioritize based on additional criteria like height or species.
+4. **Assess Mission Value:** Evaluate if capturing images from all four directions adds significant value without causing unnecessary complexity.
+
+If I follow this approach, maybe I can manage to select four distinct trees even within the clustered data by focusing on their extremal positions in latitude and longitude. Additionally, if some trees are equally extreme (i.e., share the same maximum or minimum values), I'll need a clear strategy to choose among them.
+</think>
+
+To create an effective mission plan for capturing images from four trees located in different directions around an orchard—northmost, eastmost, southmost, and westmost—you can follow this structured approach:
+
+1. **Determine Geographical Extremes:**
+   - **Northmost:** Identify the tree with the highest latitude value (maximum y-coordinate).
+   - **Eastmost:** Identify the tree with the highest longitude value (maximum x-coordinate) within the dataset.
+   - **Southmost:** Identify the tree with the lowest latitude value (minimum y-coordinate), which is furthest south.
+   - **Westmost:** Identify the tree with the lowest longitude value (minimum x-coordinate), located further west.
+
+2. **Select Trees at Extreme Positions:**
+   - Use the identified maximum and minimum latitude and longitude values to select the trees that fall into these extremal positions. This ensures that you are capturing images from points that are as far apart as possible within your dataset, even if the data is clustered closely together.
+
+3. **Resolve Close Proximity Conflicts:**
+   - If multiple trees share the same extreme position (e.g., multiple trees have the maximum longitude), use additional criteria such as tree height or species to select among them. This ensures consistency and differentiates between trees that are otherwise too close in geographical terms.
+
+4. **Evaluate Mission Value:**
+   - Assess whether capturing images from all four directions adds significant value to the mission without causing unnecessary complexity. If the added benefit outweighs any potential complexities, proceed with the plan; otherwise, consider revising the mission requirements or focusing on areas where trees are more spread out geographically.
+
+By following this approach, you can effectively select four distinct trees that are as far apart from each other as possible within your dataset, ensuring a well-rounded and strategic execution of your mission.

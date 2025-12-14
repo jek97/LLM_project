@@ -1,0 +1,59 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="Mission">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="MissionInformation"/>
+                <xs:element ref="TaskList" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="Outcome" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- Define custom types for GPSLocation and TreeType -->
+    <xs:simpleType name="Point">
+        <xs:annotation>
+            <xs:appinfo>
+                <xs:doc>Represents a GeoJSON Point</xs:doc>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="type" type="xs:string" fixed="Point"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:simpleType>
+    <xs:simpleType name="TreeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Oak"/>
+            <xs:enumeration value="Maple"/>
+            <!-- Add more tree types as needed -->
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission_plan.xsd">
+    <MissionInformation>
+        <MissionName>TreeInspectionMission</MissionName>
+        <StartTime>2023-04-15T10:00:00Z</StartTime>
+        <EndTime>2023-04-15T11:00:00Z</EndTime>
+    </MissionInformation>
+    <TaskList>
+        <!-- Task 1: Drive to GPS location (37.7749, -122.4194) and inspect the oak tree -->
+        <CompositeTaskInformation>
+            <TaskID>1</TaskID>
+            <TaskDescription>Drive to GPS location (37.7749, -122.4194) and inspect the oak tree.</TaskDescription>
+            <SubTasks>
+                <DriveToLocation>
+                    <GPSLocation xsi:type="Point">
+                        <coordinates>37.7749, -122.4194</coordinates>
+                    </GPSLocation>
+                </DriveToLocation>
+                <InspectTree>
+                    <TreeType>Oak</TreeType>
+                </InspectTree>
+            </SubTasks>
+        </CompositeTaskInformation>
+        <!-- Add more tasks as needed -->
+    </TaskList>
+    <Outcome>
+        The robot successfully completed its mission and inspected the specified trees. (Estimated total distance: approximately X meters)
+    </Outcome>
+</Mission>

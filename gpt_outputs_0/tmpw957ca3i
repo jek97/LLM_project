@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://robotic-mission-planning.com/schema/mission_plan.xsd"
+           xmlns:tns="http://robotic-mission-planning.com/schema/mission_plan.xsd">
+  <xs:element name="MissionPlan" type="tns:MissionPlanType"/>
+</xs:schema>

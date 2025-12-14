@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="mission_plan.xsd">
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+        <xs:element name="MissionPlan">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="CompositeTaskInformation">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="TaskDescription" type="xs:string"/>
+                                <xs:element name="Tasks">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="Task" maxOccurs="unbounded">
+                                                <xs:complexType>
+                                                    <xs:sequence>
+                                                        <xs:element name="Type" type="xs:string"/>
+                                                        <xs:element name="Target" type="xs:string"/>
+                                                        <xs:element name="Location" type="xs:string"/>
+                                                    </xs:sequence>
+                                                </xs:complexType>
+                                            </xs:element>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+    </xs:schema>
+</MissionPlan>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <Task id="1" description="Initial Assessment - Tree 1">
+    <Action type="DriveTo" target="Tree 1" description="Navigate to Tree 1"/>
+    <Action type="TakePicture" target="Tree 1" description="Capture image of Tree 1"/>
+    <Condition type="SensorReading" sensor="Temperature" reading="Low" threshold="0.5" unit="degrees Celsius"/>
+    <Action type="TakeSample" target="Tree 1" description="Take CO2 sample if temperature is low"/>
+    <Condition type="SensorReading" sensor="CO2" reading="Low" threshold="400" unit="ppm"/>
+  </Task>
+  <Task id="2" description="Measure Second Tree">
+    <Action type="DriveTo" target="Tree 2" description="Navigate to Tree 2"/>
+    <Action type="TakePicture" target="Tree 2" description="Capture image of Tree 2"/>
+    <Condition type="SensorReading" sensor="Temperature" reading="Low" threshold="0.5" unit="degrees Celsius"/>
+    <Action type="TakeSample" target="Tree 2" description="Take CO2 sample if temperature is low"/>
+    <Condition type="SensorReading" sensor="CO2" reading="Low" threshold="400" unit="ppm"/>
+  </Task>
+  <Task id="3" description="Final Destination">
+    <Action type="DriveTo" target="End" description="Navigate to End"/>
+  </Task>
+</MissionPlan>

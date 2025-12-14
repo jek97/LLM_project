@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+  <name>Farm Visit - All Points</name>
+  <objective>Visit all farm points, prioritizing those sampled most recently.</objective>
+  <waypoints>
+    <waypoint id="1">
+      <name>Point 1</name>
+      <latitude>37.366300703749474</latitude>
+      <longitude>-120.42299259529793</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="2">
+      <name>Point 2</name>
+      <latitude>37.366300703749474</latitude>
+      <longitude>-120.42300386899338</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="3">
+      <name>Point 3</name>
+      <latitude>37.366300703749474</latitude>
+      <longitude>-120.42301417901265</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="4">
+      <name>Point 4</name>
+      <latitude>37.366300703749474</latitude>
+      <longitude>-120.4230246791031</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="5">
+      <name>Point 5</name>
+      <latitude>37.366304880110526</latitude>
+      <longitude>-120.42302669537153</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="6">
+      <name>Point 6</name>
+      <latitude>37.36631785560332</latitude>
+      <longitude>-120.42303004014194</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="7">
+      <name>Point 7</name>
+      <latitude>37.36631785560332</latitude>
+      <longitude>-120.42303004014194</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="8">
+      <name>Point 8</name>
+      <latitude>37.36634636896467</latitude>
+      <longitude>-120.42302669537153</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="9">
+      <name>Point 9</name>
+      <latitude>37.36635640370881</latitude>
+      <longitude>-120.423044218715</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="10">
+      <name>Point 10</name>
+      <latitude>37.36635678715399</latitude>
+      <longitude>-120.42299259529793</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="11">
+      <name>Point 11</name>
+      <latitude>37.36627570632085</latitude>
+      <longitude>-120.42307272278255</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="12">
+      <name>Point 12</name>
+      <latitude>37.366300703749474</latitude>
+      <longitude>-120.423044218715</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="13">
+      <name>Point 13</name>
+      <latitude>37.366300703749474</latitude>
+      <longitude>-120.4230246791031</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="14">
+      <name>Point 14</name>
+      <latitude>37.366300703749474</latitude>
+      <longitude>-120.42302669537153</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="15">
+      <name>Point 15</name>
+      <latitude>37.366300703749474</latitude>
+      <longitude>-120.42302669537153</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="16">
+      <name>Point 16</name>
+      <latitude>37.366300703749474</latitude>
+      <longitude>-120.42302669537153</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="17">
+      <name>Point 17</name>
+      <latitude>37.366300703749474</latitude>
+      <longitude>-120.42302669537153</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="18">
+      <name>Point 18</name>
+      <latitude>37.366300703749474</latitude>
+      <longitude>-120.42302669537153</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="19">
+      <name>Point 19</name>
+      <latitude>37.366300703749474</latitude>
+      <longitude>-120.42302669537153</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+    <waypoint id="20">
+      <name>Point 20</name>
+      <latitude>37.366300703749474</latitude>
+      <longitude>-120.42302669537153</longitude>
+      <reward>0.15</reward>
+    </waypoint>
+  </waypoints>
+</mission>

@@ -1,0 +1,54 @@
+<Mission xmlns="http://example.com/mission-plan" xmlns:vocab="http://purl.ieee.org/NS/dcterms#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://example.com/mission-plan http://example.com/mission-plan_v1_0.xsd">
+  <TaskDescription>Generate a mission to inspect trees of different types.</TaskDescription>
+  <Start>
+    <Latitude>40.7128</Latitude>
+    <Longitudue>-74.006</Longitudute>
+    <!-- Start location coordinates taken from the GeoJSON file -->
+  </Start>
+  <End>
+    <Latitude>40.7128</Latitude>
+    <Longitudue>-74.006</Longitudute>
+    <!-- End location coordinates taken from the Start location in the GeoJSON file -->
+  </End>
+  <!-- Add as many CompositeTaskInformation elements as required -->
+  <TaskInformation>
+    <DriveTo>
+      <Location>
+        <Latitude>40.7131</Latitude>
+        <Longitudue>-74.0062</Longitudute>
+      </Location>
+    </DriveTo>
+    <ActionInformation>
+      <TreeType>Oak</TreeType>
+      <Task>Inspect Tree</Task> <!-- Include any other relevant information or actions here -->
+    </ActionInformation>
+  </TaskInformation>
+  <TaskInformation>
+    <DriveTo>
+      <Location>
+        <Latitude>40.7133</Latitude>
+        <Longitudue>-74.0058</Longitudute>
+      </Location>
+    </DriveTo>
+    <ActionInformation>
+      <TreeType>Maple</TreeType>
+      <Task>Inspect Tree</Task> <!-- Include any other relevant information or actions here -->
+    </ActionInformation>
+  </TaskInformation>
+  <TaskInformation>
+    <DriveTo>
+      <Location>
+        <Latitude>40.7135</Latitude>
+        <Longitudue>-74.0052</Longitudute>
+      </Location>
+    </DriveTo>
+    <ActionInformation>
+      <TreeType>Cherry</TreeType>
+      <Task>Inspect Tree</Task> <!-- Include any other relevant information or actions here -->
+    </ActionInformation>
+  </TaskInformation>
+  <Outcome>
+    <!-- Optional, but useful for logging total estimated haversine distance traveled from start to end (don't show how you computed it) -->
+    <TotalDistance>0.23</TotalDistance>
+  </Outcome>
+</Mission>

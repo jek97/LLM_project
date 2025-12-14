@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.com/missionplan http://example.com/missionplan.xsd">
+    <CompositeTaskInformation>
+        <TaskDescription>Requested Mission: Find a tree in the middle of the orchard, measure CO2 and Cos, take pictures of nearby trees, and take temperature reading at a northernmost tree.</TaskDescription>
+        <SubTasks>
+            <Task>
+                <TaskType>DriveToLocation</TaskType>
+                <TargetLocation>
+                    <GPSCoordinates>
+                        <Latitude>37.7749</Latitude>
+                        <Longitude>-122.4194</Longitude>
+                    </GPSCoordinates>
+                </TargetLocation>
+            </Task>
+            <Task>
+                <TaskType>MeasureCos</TaskType>
+                <TargetTree>
+                    [Tree ID in GeoJSON data]
+                </TargetTree>
+            </Task>
+            <Task>
+                <TaskType>TakePictures</TaskType>
+                <TargetTrees>
+                    [List of nearby tree IDs in GeoJSON data]
+                </TargetTrees>
+            </Task>
+            <Task>
+                <TaskType>DriveToLocation</TaskType>
+                <TargetLocation>
+                    <GPSCoordinates>
+                        [Latitude and Longitude of tree with CO2 measurement in GeoJSON data]
+                    </GPSCoordinates>
+                </TargetLocation>
+            </Task>
+            <Task>
+                <TaskType>MeasureCO2</TaskType>
+                <TargetTree>
+                    [Tree ID in GeoJSON data with CO2 measurement]
+                </TargetTree>
+            </Task>
+            <Task>
+                <TaskType>TakePictures</TaskType>
+                <TargetTrees>
+                    [List of trees as far away as possible in GeoJSON data]
+                </TargetTrees>
+            </Task>
+            <Task>
+                <TaskType>DriveToLocation</TaskType>
+                <TargetLocation>
+                    <GPSCoordinates>
+                        [Latitude and Longitude of northernmost tree in GeoJSON data]
+                    </GPSCoordinates>
+                </TargetLocation>
+            </Task>
+            <Task>
+                <TaskType>TakeTemperatureReading</TaskType>
+                <TargetTree>
+                    [Tree ID in GeoJSON data of northernmost tree]
+                </TargetTree>
+            </Task>
+            <Task>
+                <TaskType>DriveToLocation</TaskType>
+                <TargetLocation>
+                    <GPSCoordinates>
+                        <Latitude>37.7749</Latitude>
+                        <Longitude>-122.4194</Longitude>
+                    </GPSCoordinates>
+                </TargetLocation>
+            </Task>
+        </SubTasks>
+    </CompositeTaskInformation>
+    <Outcome>Mission completed successfully.</Outcome>
+</MissionPlan>

@@ -1,0 +1,99 @@
+<Mission>
+    <MissionInformation>
+        <MissionName>Tree Picture and CO2 Reading Mission</MissionName>
+        <StartTime>YYYY-MM-DDThh:mm:ss</StartTime>
+        <EndTime>YYYY-MM-DDThh:mm:ss</EndTime>
+    </MissionInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>Original Question: Take a picture of 2 trees next to each other and then take 2 co2 readings of two trees next to each other.</TaskDescription>
+        <Tasks>
+            <Task>
+                <TaskName>Drive to Tree Location</TaskName>
+                <Location>
+                    <Latitude>LATITUDE</Latitude>
+                    <Longitude>LONGITUDE</Longitude>
+                </Location>
+                <Actions>
+                    <Action>
+                        <ActionType>Drive</ActionType>
+                        <Destination>
+                            <Latitude>LATITUDE</Latitude>
+                            <Longitude>LONGITUDE</Longitude>
+                        </Destination>
+                    </Action>
+                </Actions>
+            </Task>
+            <Task>
+                <TaskName>Take Picture of Tree 1</TaskName>
+                <Location>
+                    <Latitude>LATITUDE</Latitude>
+                    <Longitude>LONGITUDE</Longitude>
+                </Location>
+                <Actions>
+                    <Action>
+                        <ActionType>TakePicture</ActionType>
+                        <TreeID>TREE_ID_1</TreeID>
+                    </Action>
+                </Actions>
+            </Task>
+            <Task>
+                <TaskName>Take CO2 Reading of Tree 1</TaskName>
+                <Location>
+                    <Latitude>LATITUDE</Latitude>
+                    <Longitude>LONGITUDE</Longitude>
+                </Location>
+                <Actions>
+                    <Action>
+                        <ActionType>TakeCO2Reading</ActionType>
+                        <TreeID>TREE_ID_1</TreeID>
+                    </Action>
+                </Actions>
+            </Task>
+            <Task>
+                <TaskName>Drive to Tree Location 2</TaskName>
+                <Location>
+                    <Latitude>LATITUDE</Latitude>
+                    <Longitude>LONGITUDE</Longitude>
+                </Location>
+                <Actions>
+                    <Action>
+                        <ActionType>Drive</ActionType>
+                        <Destination>
+                            <Latitude>LATITUDE</Latitude>
+                            <Longitude>LONGITUDE</Longitude>
+                        </Destination>
+                    </Action>
+                </Actions>
+            </Task>
+            <Task>
+                <TaskName>Take Picture of Tree 2</TaskName>
+                <Location>
+                    <Latitude>LATITUDE</Latitude>
+                    <Longitude>LONGITUDE</Longitude>
+                </Location>
+                <Actions>
+                    <Action>
+                        <ActionType>TakePicture</ActionType>
+                        <TreeID>TREE_ID_2</TreeID>
+                    </Action>
+                </Actions>
+            </Task>
+            <Task>
+                <TaskName>Take CO2 Reading of Tree 2</TaskName>
+                <Location>
+                    <Latitude>LATITUDE</Latitude>
+                    <Longitude>LONGITUDE</Longitude>
+                </Location>
+                <Actions>
+                    <Action>
+                        <ActionType>TakeCO2Reading</ActionType>
+                        <TreeID>TREE_ID_2</TreeID>
+                    </Action>
+                </Actions>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+    <Outcome>
+        <!-- Comment the total estimated haversine distance traveled from start to end here -->
+    </Outcome>
+</Mission>

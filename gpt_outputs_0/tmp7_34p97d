@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="missionplan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Take a picture of the northern most tree, drive to the middle of the orchard and take another, then drive to the middle of the eastern end and take a picture of two trees next to each other.</TaskDescription>
+    <Tasks>
+      <Task>
+        <Type>Drive</Type>
+        <Destination>Northernmost Tree</Destination>
+      </Task>
+      <Task>
+        <Type>TakePicture</Type>
+        <Target>Northernmost Tree</Target>
+      </Task>
+      <Task>
+        <Type>Drive</Type>
+        <Destination>Middle of the Orchard</Destination>
+      </Task>
+      <Task>
+        <Type>TakePicture</Type>
+        <Target>Middle of the Orchard</Target>
+      </Task>
+      <Task>
+        <Type>Drive</Type>
+        <Destination>Middle of the Eastern End</Destination>
+      </Task>
+      <Task>
+        <Type>TakePicture</Type>
+        <Target>Two Trees Next to Each Other</Target>
+      </Task>
+    </Tasks>
+  </CompositeTaskInformation>
+</MissionPlan>

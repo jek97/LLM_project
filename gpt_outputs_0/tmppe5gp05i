@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roboticTaskRepresentation:Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://example.com/mission.xsd http://example.com/mission.xsd"
+         xmlns:geojson="http://example.com/geojson">
+  <!-- Rest of the XML file remains the same -->
+</roboticTaskRepresentation:Mission>

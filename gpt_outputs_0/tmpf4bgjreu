@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Mission Plan</title>
+</head>
+<body>
+    <gtms:mission_plan xmlns:gtms="http://example.com/miitionplan">
+        <!-- Task 1 -->
+        <gtms:task id="1" location="-120.42305,37.3663">
+            <gtms:action>drive</gtms:action>
+            <gtms:parameters>
+                <gtms:parameter name="duration">2 hours</gtms:parameter>
+            </gtms:parameters>
+        </gtms:task>
+
+        <!-- Task 2 -->
+        <gtms:task id="2" location="-120.42308,37.3663">
+            <gtms:action>picture_near_tree</gtms:action>
+            <gtms:parameters>
+                <gtms:parameter name="number_of_pictures">5</gtms:parameter>
+            </gtms:parameters>
+        </gtms:task>
+
+        <!-- Task 3 -->
+        <gtms:task id="3" location="-120.42310,37.3664">
+            <gtms:action>measure_co2</gtms:action>
+            <gtms:parameters>
+                <gtms:parameter name="number_of_measurements">3</gtms:parameter>
+            </gtms:parameters>
+        </gtms:task>
+
+        <!-- Summary Section -->
+        <gtms:summary>
+            <gtms:total_trees_visited>10</gtms:total_trees_visited>
+            <gtms:total_pictures_taken>5</gtms:total_pictures_taken>
+            <gtms:total_co2_measurements>3</gtms:total_co2_measurements>
+        </gtms:summary>
+    </gtms:mission_plan>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Select 5 pistachio trees in a row to visit and take a picture of 3 of them.
+      <OriginalTask>Select 5 pistachio trees in a row to visit and take a picture of 3 of them.</OriginalTask>
+    </TaskDescription>
+    <MissionDuration>PT10M</MissionDuration>
+  </CompositeTaskInformation>
+  <Tasks>
+    <Task id="1">
+      <TaskType>Navigation</TaskType>
+      <Waypoint id="1.1" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+      <Waypoint id="1.2" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+      <Waypoint id="1.3" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+      <Waypoint id="1.4" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+      <Waypoint id="1.5" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+      <TaskPriority>1</TaskPriority>
+    </Task>
+    <Task id="2">
+      <TaskType>ImageCapture</TaskType>
+      <TargetTree id="2.1" count="3"/>
+      <TargetTree id="2.2" count="3"/>
+      <TargetTree id="2.3" count="3"/>
+      <TaskPriority>2</TaskPriority>
+    </Task>
+  </Tasks>
+</MissionPlan>

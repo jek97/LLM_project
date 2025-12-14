@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:geo="http://www.opengis.net/gml/3.2"
+    targetNamespace="http://example.com/mission">
+
+    <xsd:element name="Mission">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="MissionInformation"/>
+                <xsd:element ref="TaskPlan" minOccurs="1"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="MissionInformation">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="StartLocation" />
+                <xsd:element ref="EndLocation" />
+                <xsd:element ref="EstimatedDuration" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:simpleType name="CoordinateType">
+        <xsd:restriction base="xsd:decimal">
+            <xsd:pattern value="-?\d+(\.\d*)?"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="GeoJSONCoordinatesType">
+        <xsd:sequence>
+            <xsd:element ref="geo:Point" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="GeoJSONLocationType">
+        <xsd:sequence>
+            <xsd:element ref="geo:Point" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="TreeType" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="StartLocation">
+        <xsd:complexType>
+            <xsd:attribute ref="geo:srsName" use="required"/>
+            <xsd:attribute ref="geo:latdeg" type="CoordinateType" use="required"/>
+            <xsd:attribute ref="geo:longdeg" type="CoordinateType" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="EndLocation">
+        <xsd:complexType>
+            <xsd:attribute ref="geo:srsName" use="required"/>
+            <xsd:attribute ref="geo:latdeg" type="CoordinateType" use="required"/>
+            <xsd:attribute ref="geo:longdeg" type="CoordinateType" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="EstimatedDuration">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:duration"/>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <xsd:element name="Location" type="geoJSONCoordinatesType"/>
+
+    <xsd:complexType name="CompositeTaskInformation">
+        <xsd:sequence>
+            <xsd:element ref="Name" />
+            <xsd:element ref="Description" />
+            <xsd:element ref="Preconditions" minOccurs="0"/>
+            <xsd:element ref="Effects" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="TaskInformation">
+        <xsd:sequence>
+            <xsd:element ref="CompositeTaskInformation" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="TaskPlan">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="TaskInformation" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

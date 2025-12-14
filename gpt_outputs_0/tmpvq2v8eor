@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/mission_plan">
+  <VisitSequence>
+    <TreeID>Tree1</TreeID>
+    <Action>
+      <Photograph>photo1.jpg</Photograph>
+    </Action>
+  </VisitSequence>
+  <!-- Add more VisitSequence elements as needed -->
+</MissionPlan>

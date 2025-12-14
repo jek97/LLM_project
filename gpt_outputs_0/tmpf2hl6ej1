@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionplan xmlns="http://example.com/missionplan">
+  <!-- Start of MissionPlan content -->
+  
+  <CompositeTaskInformation>
+    <TaskDescription>This is a task description.</TaskDescription>
+    <!-- Add more tasks as needed -->
+  </CompositeTaskInformation>
+  
+  <GeographicReference>
+    <PointRef>point_ref_1</PointRef>
+    <LocationType>tree</LocationType>
+    <TreeSpecies>oak</TreeSpecies>
+  </GeographicReference>
+  
+  <!-- End of MissionPlan content -->
+</missionplan>

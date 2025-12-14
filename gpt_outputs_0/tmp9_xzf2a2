@@ -1,0 +1,24 @@
+<Task>
+  <CompositeTask>
+    <Task id="1" reward="0.8">
+      <Waypoint latitude="37.36626996761184" longitude="-120.42298051393493"/>
+    </Task>
+    <Task id="2" reward="0.7">
+      <Waypoint latitude="37.36627570632085" longitude="-120.42300386899338"/>
+    </Task>
+    <Task id="3" reward="0.6">
+      <Waypoint latitude="37.36631785560332" longitude="-120.42303004014194"/>
+    </Task>
+    <Task id="4" reward="0.5">
+      <Waypoint latitude="37.36635678715399" longitude="-120.423044218715"/>
+    </Task>
+    <Task id="5" reward="0.4">
+      <Waypoint latitude="37.36635678715399" longitude="-120.423044218715"/>
+    </Task>
+    <Task id="6" reward="0.3">
+      <Waypoint latitude="37.36631785560332" longitude="-120.42303004014194"/>
+    </Task>
+    <Task id="7" reward="0.2">
+      <Waypoint latitude="37.36626996761184" longitude="-120.42298051393493"/>
+    </Task>
+</Task>

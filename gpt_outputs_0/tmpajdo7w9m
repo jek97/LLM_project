@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>Going clockwise from the north most tree, take a picture of 4 trees.</TaskDescription>
+    <Tasks>
+      <DriveToWaypoint>
+        <WaypointID>0</WaypointID>
+      </DriveToWaypoint>
+      <TakePicture />
+      <DriveToWaypoint>
+        <WaypointID>12</WaypointID>
+      </DriveToWaypoint>
+      <TakePicture />
+      <DriveToWaypoint>
+        <WaypointID>18</WaypointID>
+      </DriveToWaypoint>
+      <TakePicture />
+      <DriveToWaypoint>
+        <WaypointID>6</WaypointID>
+      </DriveToWaypoint>
+      <TakePicture />
+    </Tasks>
+  </CompositeTaskInformation>
+</MissionPlan>

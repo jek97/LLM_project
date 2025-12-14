@@ -1,0 +1,19 @@
+   <CompositeTaskInformation>
+       <!-- Your entire XML document content goes here -->
+       <TaskDescription>
+           Your original task description here
+       </TaskDescription>
+       <Task>
+           <TaskName>Example Task</TaskName>
+           <TaskSteps>
+               <TaskStep>
+                   <TaskName>Drive to Tree</TaskName>
+                   <TaskType>Navigation</TaskType>
+                   <tmpoq_7aoi6>
+                       <tree_type>Oak</tree_type>
+                   </tmpoq_7aoi6>
+               </TaskStep>
+           </TaskSteps>
+       </Task>
+   </CompositeTaskInformation>
+   

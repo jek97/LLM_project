@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.example.com/missionplan"
+           xmlns="http://www.example.com/missionplan"
+           elementFormDefault="qualified">
+
+    <!-- Define complex types -->
+    <xs:complexType name="CoordinatesType">
+        <xs:sequence>
+            <xs:element name="Latitude" type="xs:double"/>
+            <xs:element name="Longitude" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TaskParameterType">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="Value" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TaskParametersType">
+        <xs:sequence>
+            <xs:element name="Parameter" type="TaskParameterType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="WaypointType">
+        <xs:sequence>
+            <xs:element name="ID" type="xs:int"/>
+            <xs:element name="Coordinates" type="CoordinatesType"/>
+            <xs:element name="TaskParameters" type="TaskParametersType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="MissionPlanType">
+        <xs:sequence>
+            <xs:element name="MissionStartTime" type="xs:string"/>
+            <xs:element name="MissionEndTime" type="xs:string"/>
+            <xs:element name="Waypoints" type="WaypointType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Define the root element -->
+    <xs:element name="MissionPlan" type="MissionPlanType"/>
+
+</xs:schema>

@@ -1,0 +1,51 @@
+It seems like the issue is with the way we're trying to create the XML elements.
+
+Here's a revised version of the code that should work:
+
+```python
+import xml.etree.ElementTree as ET
+from geojson import load
+
+class MissionPlan:
+    def __init__(self):
+        self.root = ET.Element('missionPlan')
+
+    def add_task(self, task_description, driving_to_tree, action_type):
+        task_element = ET.SubElement(self.root, 'task')
+        task_element.set('xml:lang', 'en')
+
+        driving_to_tree_element = ET.SubElement(task_element, 'DrivingToTree')
+        driving_to_tree_element.text = str(driving_to_tree)
+
+        action_type_element = ET.SubElement(task_element, 'ActionType')
+        action_type_element.text = str(action_type)
+
+def load_geojson_file(file_path):
+    with open(file_path) as f:
+        geojson_data = load(f)
+    return geojson_data
+
+def main():
+    mission_plan = MissionPlan()
+
+    geojson_file_path = 'path_to_your_geojson_file.json'
+    geojson_data = load_geojson_file(geojson_file_path)
+
+    driving_to_tree1 = 'treeId=0'
+    action_type1 = 'DetermineTemperature'
+
+    task_description1 = '<m:TaskDescription xml:lang="en">Drive to tree with id 0</m:TaskDescription>'
+
+    mission_plan.add_task(task_description1, driving_to_tree1, action_type1)
+
+    # Write the XML file to disk
+    tree = ET.ElementTree(mission_plan.root)
+    tree.write('mission_plan.xml')
+
+if __name__ == '__main__':
+    main()
+```
+
+This code creates an XML element for each task in the `MissionPlan` class. The `DrivingToTree` and `ActionType` elements are created as children of the `task` element.
+
+Please replace `'path_to_your_geojson_file.json'` with the actual path to your GeoJSON file.

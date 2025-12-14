@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RoboticMissionPlan>
+    <Task id="1">
+        <Description>Take a picture of the northmost tree.</Description>
+        <Location x="-120.42307592599273" y="37.36636077337479"/>
+    </Task>
+    <Task id="2">
+        <Description>Take a picture of the eastmost tree.</Description>
+        <Location x="-120.42307272278255" y="37.36627570632085"/>
+    </Task>
+    <Task id="3">
+        <Description>Take a picture of the southmost tree.</Description>
+        <Location x="-120.423044218715" y="37.36626996761184"/>
+    </Task>
+    <Task id="4">
+        <Description>Take a picture of the westmost tree.</Description>
+        <Location x="-120.42301417901265" y="37.3662730362294"/>
+    </Task>
+</RoboticMissionPlan>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mMissionPlan>
+  <!-- Mission plan content here -->
+  
+</mMissionPlan>
+
+<!-- Repeat actions from far tree -->
+$start_at_tree id="1" coordinates="lat1, lng1"/>
+<take_picture />
+<!-- Add conditions and further actions as needed -->
+</if_not_low_temp/>

@@ -1,0 +1,84 @@
+Here is the XML mission plan:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robotic-mission-planner.com/mission-plan.xsd
+             http://robotic-mission-planner.com/mission-plan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>
+      <Action>DriveToTree</Action>
+      <Arguments>
+        <Argument name="treeId">1</Argument>
+      </Arguments>
+      <Outcome>
+        <DrivingDistance>0.25 km</DrivingDistance>
+        <GPSLocation>-120.42309252722157, 37.36631509745154</GPSLocation>
+      </Outcome>
+    </TaskDescription>
+    <TaskDescription>
+      <Action>TakePictureOfTree</Action>
+      <Arguments>
+        <Argument name="treeId">1</Argument>
+      </Arguments>
+      <Condition>
+        <Temperature below="33.0°C"/>
+      </Condition>
+      <Outcome>
+        <GPSLocation>-120.42309252722157, 37.36631509745154</GPSLocation>
+      </Outcome>
+    </TaskDescription>
+    <TaskDescription>
+      <Action>TakeCo2Sample</Action>
+      <Arguments>
+        <Argument name="treeId">1</Argument>
+      </Arguments>
+      <Condition>
+        <Temperature below="33.0°C"/>
+      </Condition>
+      <Outcome>
+        <GPSLocation>-120.42309252722157, 37.36631509745154</GPSLocation>
+      </Outcome>
+    </TaskDescription>
+  </CompositeTaskInformation>
+  
+  <CompositeTaskInformation>
+    <TaskDescription>
+      <Action>DriveToTree</Action>
+      <Arguments>
+        <Argument name="treeId">6</Argument>
+      </Arguments>
+      <Outcome>
+        <DrivingDistance>0.30 km</DrivingDistance>
+        <GPSLocation>-120.42306783300766, 37.366308661662266</GPSLocation>
+      </Outcome>
+    </TaskDescription>
+    <TaskDescription>
+      <Action>TakePictureOfTree</Action>
+      <Arguments>
+        <Argument name="treeId">6</Argument>
+      </Arguments>
+      <Condition>
+        <Temperature below="33.0°C"/>
+      </Condition>
+      <Outcome>
+        <GPSLocation>-120.42306783300766, 37.366308661662266</GPSLocation>
+      </Outcome>
+    </TaskDescription>
+    <TaskDescription>
+      <Action>TakeCo2Sample</Action>
+      <Arguments>
+        <Argument name="treeId">6</Argument>
+      </Arguments>
+      <Condition>
+        <Temperature below="33.0°C"/>
+      </Condition>
+      <Outcome>
+        <GPSLocation>-120.42306783300766, 37.366308661662266</GPSLocation>
+      </Outcome>
+    </TaskDescription>
+  </CompositeTaskInformation>
+</MissionPlan>
+```
+Note that I assumed the starting point is not provided in the GeoJSON file, so I didn't include it in the XML mission plan. Also, I used a random tree ID of 6 for the second task, but you can replace it with any other tree ID.
+
+Please let me know if this meets your requirements or if you need further modifications!

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://example.com/mission">
+
+    <xsd:element name="Mission">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="MissionInformation"/>
+                <xsd:element ref="TaskPlan" minOccurs="1" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="MissionInformation">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="StartLocation" />
+                <xsd:element ref="EndLocation" />
+                <xsd:element ref="EstimatedDistance" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="StartLocation">
+        <xsd:complexType>
+            <xsd:attribute name="lat" type="xsd:decimal" use="required"/>
+            <xsd:attribute name="lon" type="xsd:decimal" use="required"/>
+            <xsd:attribute name="srsName" type="xSD:NMTOKEN" default="EPSG:4326" />
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="EndLocation">
+        <xsd:complexType>
+            <xsd:attribute name="lat" type="xsd:decimal" use="required"/>
+            <xsd:attribute name="lon" type="xsd:decimal" use="required"/>
+            <xsd:attribute name="srsName" type="XSD:NMTOKEN" default="EPSG:4326" />
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:simpleType name="Distance">
+        <xsd:restriction base="nonNegativeInteger"/>
+    </xsd:simpleType>
+
+    <xsd:element name="EstimatedDistance" type="Distance"/>
+
+    <xsd:element name="TaskPlan">
+        <xsd:complexType>
+            <xsd:sequence>
+                <!-- Add Task elements here -->
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="Task">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="Action" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="Action">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="DriveTo" minOccurs="0"/>
+                <xsd:element ref="TaskDescription" />
+                <!-- Add any other necessary elements here -->
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="DriveTo">
+        <xsd:complexType>
+            <xsd:attribute name="lat" type="xsd:decimal" use="required"/>
+            <xsd:attribute name="lon" type="xsd:decimal" use="required"/>
+            <xsd:attribute name="srsName" type="XSD:NMTOKEN" default="EPSG:4326" />
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TaskDescription">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="OriginalQuestion"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="OriginalQuestion" type="xsd:string"/>
+
+</xsd:schema>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http:// robotictaskrepresentation.org/ns/missionplan MissionPlan.xsd"
+             type="missionPlan">
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Find a tree in the middle of the orchard and take pictures if low reading</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42302289785604, 37.36635688574164]" />
+            <TaskDescription xml:lang="en">Take two pictures of nearby trees</TaskDescription>
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42309252722157, 37.36631509745154]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.4230350832969, 37.36635015674898]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42308819251039, 37.366300236834725]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42308272918532, 37.36632114247575]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42301043689258, 37.36630655255463]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.423044218715, 37.36626996761184]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42307592599273, 37.36636077337479]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42299259529793, 37.36635678715399]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42301417901265, 37.3662730362294]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.4230246791031, 37.366304880110526]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42307592599273, 37.36636077337479]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42299259529793, 37.36635678715399]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42301417901265, 37.3662730362294]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.4230246791031, 37.366304880110526]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42299259529793, 37.36635678715399]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42299259529793, 37.36635678715399]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42301417901265, 37.3662730362294]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42301417901265, 37.3662730362294]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42301417901265, 37.3662730362294]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42301417901265, 37.3662730362294]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42301417901265, 37.3662730362294]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.4230246791031, 37.366304880110526]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42301417901265, 37.3662730362294]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.4230246791031, 37.366304880110526]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42301417901265, 37.3662730362294]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42301417901265, 37.3662730362294]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42301417901265, 37.3662730362294]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.4230246791031, 37.366304880110526]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42301417901265, 37.3662730362294]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.4230246791031, 37.366304880110526]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42301417901265, 37.3662730362294]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.4230246791031, 37.366304880110526]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42301417901265, 37.3662730362294]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.4230246791031, 37.366304880110526]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42301417901265, 37.3662730362294]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.4230246791031, 37.366304880110526]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.42301417901265, 37.3662730362294]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if low reading</TaskDescription>
+            <DrivingTask location="[-120.4230246791031, 37.366304880110526]" />
+        </Sequence>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Measure cos of a tree as far away as possible for co2 and repeat the same process</TaskDescription>
+        <Sequence>
+            <DrivingTask location="[-120.42298051393493, 37.36628908556382]" />
+            <TaskDescription xml:lang="en">Take pictures if

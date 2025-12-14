@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns="http://example.com/mission.xsd">
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+             targetNamespace="http://example.com/mission.xsd"
+             xmlns="http://example.com/mission.xsd">
+    <!-- schema definitions go here -->
+  </xs:schema>
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  <ns:mission xmlns:ns="http://example.com/mission.xsd">
+    <!-- mission content goes here -->
+  </ns:mission>
+</mission>

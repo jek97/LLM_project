@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission_plan.xsd">
+  <TaskInformation>
+    <CompositeTaskInformation>
+      <TaskDescription>Drive to Tree A, Measure Cosine, Take Pictures, and Measure Co2 at Tree A</TaskDescription>
+      <SubTasks>
+        <SubTaskInformation>
+          <Action xsi:type="string">Navigate</Action>
+          <Goal xsi:type="GeoPoint">40.7128,-74.0060</Goal>
+          <!-- Add any additional parameters here -->
+        </SubTaskInformation>
+        <SubTaskInformation>
+          <Action xsi:type="string">MeasureCos</Action>
+          <Goal xsi:type="GeoPoint">40.7128,-74.0060</Goal>
+          <!-- Add any additional parameters here -->
+        </SubTaskInformation>
+        <SubTaskInformation>
+          <Action xsi:type="string">TakePictures</Action>
+          <Goal xsi:type="GeoPoint">40.7128,-74.0060</Goal>
+          <!-- Add any additional parameters here -->
+        </SubTaskInformation>
+        <SubTaskInformation>
+          <Action xsi:type="string">MeasureCo2</Action>
+          <Goal xsi:type="GeoPoint">40.7128,-74.0060</Goal>
+          <!-- Add any additional parameters here -->
+        </SubTaskInformation>
+      </SubTasks>
+    </CompositeTaskInformation>
+  </TaskInformation>
+  <Outcome>The robot has successfully completed the mission.</Outcome>
+</MissionPlan>

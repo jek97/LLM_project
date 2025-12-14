@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan" version="1.0">
+  <CompositeTask name="PhotoSequence">
+    <Task name="DriveToTree1" description="Drive to Tree ID 1">
+      <Waypoint x=" -120.42300386899338" y="37.36628908556382" />
+    </Task>
+    <Task name="TakePicture1" description="Take picture at Tree 1">
+      <Action type="TakePicture" target="Tree_1" />
+    </Task>
+  </CompositeTask>
+</MissionPlan>

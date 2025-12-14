@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <DrivingCommand>
+        <StartPoint>
+            <Latitude>37.36635688574164</Latitude>
+            <Longitude>-120.42302289785604</Longitude>
+        </StartPoint>
+        <EndPoint>
+            <Latitude>37.36635688574164</Latitude>
+            <Longitude>-120.4230350832969</Longitude>
+        </EndPoint>
+    </DrivingCommand>
+    <TaskDescription>Drive to the first tree and take a picture</TaskDescription>
+    <!-- more task information -->
+</MissionPlan>

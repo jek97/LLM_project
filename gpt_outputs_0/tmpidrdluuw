@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Analyze tree health and document tree types in a designated area.
+    </TaskDescription>
+    <Outcome>
+      Successfully completed tree analysis and documentation.
+    </Outcome>
+  </CompositeTaskInformation>
+  <tasks>
+    <task id="1">
+      <taskType>Drive</taskType>
+      <destination>
+        <latitude>37.7749</latitude>
+        <longitude>-122.4194</longitude>
+        <description>Drive to the first tree location.</description>
+      </destination>
+      <duration>5 minutes</duration>
+    </task>
+    <task id="2">
+      <taskType>Drive</taskType>
+      <destination>
+        <latitude>37.7755</latitude>
+        <longitude>-122.4188</longitude>
+        <description>Drive to the second tree location.</description>
+      </destination>
+      <duration>7 minutes</duration>
+    </task>
+    <task id="3">
+      <taskType>Inspect</taskType>
+      <location>
+        <latitude>37.7750</latitude>
+        <longitude>-122.4190</longitude>
+        <description>Inspect the tree for signs of disease and record tree type (Oak).</description>
+      </location>
+      <duration>10 minutes</duration>
+    </task>
+    <task id="4">
+      <taskType>Drive</taskType>
+      <destination>
+        <latitude>37.7746</latitude>
+        <longitude>-122.4185</longitude>
+        <description>Drive to the third tree location.</description>
+      </destination>
+      <duration>6 minutes</duration>
+    </task>
+    <task id="5">
+      <taskType>Inspect</taskType>
+      <location>
+        <latitude>37.7748</latitude>
+        <longitude>-122.4192</longitude>
+        <description>Inspect the tree for signs of disease and record tree type (Pine).</description>
+      </location>
+      <duration>12 minutes</duration>
+    </task>
+  </tasks>

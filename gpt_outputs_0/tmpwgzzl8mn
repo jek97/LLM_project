@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <Task id="1" name="Photograph Trees">
+      <Instruction step="1" type="Navigation">
+        <Action>Navigate to Tree 1</Action>
+      </Instruction>
+      <Instruction step="2" type="Capture">
+        <Action>Take Picture</Action>
+      </Instruction>
+      <Instruction step="3" type="Navigation">
+        <Action>Navigate to Tree 2</Action>
+      </Instruction>
+    </Task>
+    <Task id="2" name="Measure CO2">
+      <Instruction step="1" type="Navigation">
+        <Action>Navigate to Tree 1</Action>
+      </Instruction>
+      <Instruction step="2" type="Measurement">
+        <Action>Take CO2 Reading</Action>
+      </Instruction>
+      <Instruction step="3" type="Navigation">
+        <Action>Navigate to Tree 2</Action>
+      </Instruction>
+    </Task>
+  </CompositeTaskInformation>
+</MissionPlan>

@@ -1,0 +1,10 @@
+Okay, I understand. The error message indicates a problem with the nesting of XML elements, specifically between the `CompositeTaskInformation` and `Task` elements. This usually happens when the closing tag isn't correctly aligned with the opening tag.
+
+I need the task description and the GeoJSON file to generate the XML mission plan. Please provide them.  I'll carefully construct the XML, ensuring the nesting is correct and that the GeoJSON references are properly integrated.
+
+**To help me create the best mission plan, please also tell me:**
+
+*   **What is the overall goal of the mission?** (e.g., "Assess tree health," "Map a specific area," "Collect data on specific tree types")
+*   **Are there any specific constraints or priorities?** (e.g., "Prioritize tasks near the river," "Minimize driving distance," "Focus on mature trees")
+
+Once you provide the task description and GeoJSON file, I'll generate the XML mission plan.

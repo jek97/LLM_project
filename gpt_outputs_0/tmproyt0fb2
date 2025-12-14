@@ -1,0 +1,10 @@
+ I apologize for the confusion earlier. It seems that there is an issue with the formatting of your XML file. Please ensure that your XML file is well-formed and correctly encoded (typically UTF-8).
+
+Please also make sure that you have included the correct namespace declarations at the beginning of your XML file:
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:robotics:missionPlan" xmlns="urn:robotics:missionPlan">
+    <!-- your schema definition here -->
+</xs:schema>
+```
+In addition, please make sure that you have closed all tags properly in your XML file. Check for any unclosed tags or missing `</tag>` endings in your file. 

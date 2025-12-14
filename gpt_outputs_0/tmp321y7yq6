@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robustml.org/schema/mission_plan.xsd http://robustml.org/schema/mission_plan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to tree with GPS location (43.1234, -72.3456)</TaskDescription>
+    <Action>Inspect Tree</Action>
+    <DrivingLocation>43.1234, -72.3456</DrivingLocation>
+  </CompositeTaskInformation>
+  
+  <!-- Add more tasks as needed -->
+  
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to tree with GPS location (43.2345, -72.4567)</TaskDescription>
+    <Action>Pick Fruit</Action>
+    <DrivingLocation>43.2345, -72.4567</DrivingLocation>
+  </CompositeTaskInformation>
+  
+  <!-- Add more tasks as needed -->
+</MissionPlan>

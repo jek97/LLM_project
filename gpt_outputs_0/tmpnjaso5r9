@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://example.com/schemas/mission" xsi:schemaLocation="http://example.com/schemas/mission http://example.com/schemas/mission/mission.xsd">
+  <name>Exploring Tree Health and Temperature</name>
+  
+  <!-- Add any additional elements you may need here -->
+  
+  <tasks>
+    <task id="task1">
+      <name>Task One</name>
+      <description>Task description for Task One.</description>
+    </task>
+    <task id="task2">
+      <name>Task Two</name>
+      <description>Task description for Task Two.</description>
+    </task>
+  </tasks>
+  
+  <!-- Add any additional elements you may need here -->
+</mission>

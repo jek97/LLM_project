@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="path/to/schema/file.xsd">
+    <title>Farm Robotic Mission</title>
+    <description>A mission plan to visit all the points on your farm.</description>
+    <waypoints>
+        <!-- Point 1 -->
+        <waypoint id="1">
+            <coordinates>-120.42300386899338,37.366300703749474</coordinates>
+            <reward>0.5</reward> <!-- Reward based on last sampled -->
+        </waypoint>
+        
+        <!-- Point 2 -->
+        <waypoint id="2">
+            <coordinates>-120.42307272278255,37.36627570632085</coordinates>
+            <reward>0.4</reward> <!-- Reward based on last sampled -->
+        </waypoint>
+        
+        <!-- Point 3 -->
+        <waypoint id="3">
+            <coordinates>-120.42301417901265,37.3662730362294</coordinates>
+            <reward>0.3</reward> <!-- Reward based on last sampled -->
+        </waypoint>
+        
+        <!-- Point 4 -->
+        <waypoint id="4">
+            <coordinates>-120.423018519567,37.3662810773177</coordinates>
+            <reward>0.2</reward> <!-- Reward based on last sampled -->
+        </waypoint>
+        
+        <!-- Point 5 -->
+        <waypoint id="5">
+            <coordinates>-120.423068924579,37.3663169864345</coordinates>
+            <reward>0.1</reward> <!-- Reward based on last sampled -->
+        </waypoint>
+        
+        <!-- Point 6 -->
+        <waypoint id="6">
+            <coordinates>-120.423028956970,37.3663575004418</coordinates>
+            <reward>0.9</reward> <!-- Reward based on last sampled -->
+        </waypoint>
+        
+        <!-- Point 7 -->
+        <waypoint id="7">
+            <coordinates>-120.423085670521,37.366389288961</coordinates>
+            <reward>0.1</reward> <!-- Reward based on last sampled -->
+        </waypoint>
+        
+        <!-- Point 8 -->
+        <waypoint id="8">
+            <coordinates>-120.423059048732,37.36638196736</coordinates>
+            <reward>0.1</reward> <!-- Reward based on last sampled -->
+        </waypoint>
+        
+        <!-- Point 9 -->
+        <waypoint id="9">
+            <coordinates>-120.423059048732,37.36638196736</coordinates>
+            <reward>0.1</reward> <!-- Reward based on last sampled -->
+        </waypoint>
+        
+        <!-- Point 10 -->
+        <waypoint id="10">
+            <coordinates>-120.423059048732,37.36638196736</coordinates>
+            <reward>0.1</reward> <!-- Reward based on last sampled -->
+        </waypoint>
+    </waypoints>
+</mission>

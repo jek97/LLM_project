@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://example.com/mission" xmlns="http://example.com/mission">
+    <element name="Mission">
+        <complexType>
+            <sequence>
+                <element ref="MissionInformation" />
+                <element ref="CompositeTaskInformation" />
+                <element ref="Outcome" minOccurs="0" />
+            </sequence>
+        </complexType>
+    </element>
+    <!-- ... (The rest of the schema definition is omitted for brevity) -->
+</xsd:schema>
+
+<Mission xmlns:gml="http://www.opengis.net/gml" xmlns:geojson="http://geojson.org/geometry">
+    <MissionInformation>
+        <!-- Add mission-specific information here, such as the start and end times -->
+    </MissionInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>Generate a mission plan to measure tree diameters and take pictures of specified trees using the provided GeoJSON file.</TaskDescription>
+        <Tasks>
+            <!-- Task 1: Drive to Tree 1 -->
+            <DriveToLocation gml:id="Tree1">
+                <gml:Point srsName="EPSG:4326" x="longitude_of_Tree1" y="latitude_of_Tree1"/>
+            </DriveToLocation>
+            <!-- Task 2: Measure the diameter of Tree 1 -->
+            <MeasureTreeDiameter gml:id="Tree1">
+                <gml:Point srsName="EPSG:4326" x="longitude_of_Tree1" y="latitude_of_Tree1"/>
+            </MeasureTreeDiameter>
+            <!-- Task 3: Take a picture of Tree 1 -->
+            <TakePicture gml:id="Tree1">
+                <gml:Point srsName="EPSG:4326" x="longitude_of_Tree1" y="latitude_of_Tree1"/>
+            </TakePicture>
+            <!-- Repeat the following tasks for each tree in the GeoJSON file -->
+            <DriveToLocation gml:id="Tree2">
+                <gml:Point srsName="EPSG:4326" x="longitude_of_Tree2" y="latitude_of_Tree2"/>
+            </DriveToLocation>
+            <MeasureTreeDiameter gml:id="Tree2">
+                <gml:Point srsName="EPSG:4326" x="longitude_of_Tree2" y="latitude_of_Tree2"/>
+            </MeasureTreeDiameter>
+            <TakePicture gml:id="Tree2">
+                <gml:Point srsName="EPSG:4326" x="longitude_of_Tree2" y="latitude_of_Tree2"/>
+            </TakePicture>
+            <!-- ... (Add more tasks for each tree in the GeoJSON file) -->
+        </Tasks>
+    </CompositeTaskInformation>
+    <Outcome>
+        <!-- Estimate the total haversine distance traveled from start to end here, but don't show how you computed it -->
+        Total estimated distance: 12.3 km
+    </Outcome>
+</Mission>

@@ -1,0 +1,39 @@
+<RoboticMissionPlan xmlns="http://example.com/missionplan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="RoboticMissionPlan.xsd">
+    <Header>
+        <MissionName>Temperature and CO2 Monitoring Mission</MissionName>
+        <StartTime>2023-04-15T10:00:00Z</StartTime>
+        <EndTime>2023-04-15T16:00:00Z</EndTime>
+    </Header>
+    <CompositeTaskInformation>
+        <TaskDescription>Generate a mission plan to drive to the first tree, take a picture, check temperature and CO2 levels. If they are low, drive to another tree and repeat the process. If not, drive to end.</TaskDescription>
+        <SubTasks>
+            <Task>
+                <TaskID>1</TaskID>
+                <TaskName>Drive to First Tree (GPS: [37.7749, -122.4194])</TaskName>
+                <TaskType>Driving</TaskType>
+            </Task>
+            <Task>
+                <TaskID>2</TaskID>
+                <TaskName>Take a Picture at First Tree (Tree Type: Oak)</TaskName>
+                <TaskType>Image Capture</TaskType>
+            </Task>
+            <Task>
+                <TaskID>3</TaskID>
+                <TaskName>Check Temperature at First Tree (Tree Type: Oak)</TaskName>
+                <TaskType>Temperature Reading</TaskType>
+            </Task>
+            <Task>
+                <TaskID>4</TaskID>
+                <TaskName>Check CO2 at First Tree (Tree Type: Oak)</TaskName>
+                <TaskType>CO2 Sampling</TaskType>
+            </Task>
+            <!-- Repeat the above Tasks for additional trees if necessary -->
+            <Task>
+                <TaskID>5</TaskID>
+                <TaskName>Drive to End</TaskName>
+                <TaskType>Driving</TaskType>
+                <Outcome>The estimated distance traveled is approximately 10 miles.</Outcome>
+            </Task>
+        </SubTasks>
+    </CompositeTaskInformation>
+</RoboticMissionPlan>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robotictaskrepresentation.org/schema/missionplan.xsd 
+                                 http://robotictaskrepresentation.org/schema/missionplan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Take picture of first tree</TaskDescription>
+    <DrivingTask location="{"type": "Feature", "properties": {"id": 0, "action": 0, "last_sampled": 0}, "geometry": {"type": "Point", "coordinates": [-120.42302289785604, 37.36635688574164]}}"/>
+    <TaskDescription>Take picture of second tree</TaskDescription>
+    <DrivingTask location="{"type": "Feature", "properties": {"id": 1, "action": 0, "last_sampled": 10}, "geometry": {"type": "Point", "coordinates": [-120.42309252722157, 37.36631509745154]}}"/>
+    <TaskDescription>Take picture of third tree</TaskDescription>
+    <DrivingTask location="{"type": "Feature", "properties": {"id": 2, "action": 0, "last_sampled": 201}, "geometry": {"type": "Point", "coordinates": [-120.4230350832969, 37.36635015674898]}}"/>
+    <TaskDescription>Take picture of fourth tree</TaskDescription>
+    <DrivingTask location="{"type": "Feature", "properties": {"id": 3, "action": 0, "last_sampled": 159}, "geometry": {"type": "Point", "coordinates": [-120.42308819251039, 37.366300236834725]}}"/>
+    <TaskDescription>Take picture of fifth tree</TaskDescription>
+    <DrivingTask location="{"type": "Feature", "properties": {"id": 4, "action": 0, "last_sampled": 153}, "geometry": {"type": "Point", "coordinates": [-120.42308272918532, 37.36632114247575]}}"/>
+    <TaskDescription>Take picture of sixth tree</TaskDescription>
+    <DrivingTask location="{"type": "Feature", "properties": {"id": 5, "action": 0, "last_sampled": 287}, "geometry": {"type": "Point", "coordinates": [-120.423044218715, 37.36626996761184]}}"/>
+    <TaskDescription>Take picture of seventh tree</TaskDescription>
+    <DrivingTask location="{"type": "Feature", "properties": {"id": 6, "action": 0, "last_sampled": 312}, "geometry": {"type": "Point", "coordinates": [-120.42298051393493, 37.36628908556382]}}"/>
+    <TaskDescription>Take picture of eighth tree</TaskDescription>
+    <DrivingTask location="{"type": "Feature", "properties": {"id": 7, "action": 0, "last_sampled": 180}, "geometry": {"type": "Point", "coordinates": [-120.42301417901265, 37.3662730362294]}}"/>
+    <TaskDescription>Take picture of ninth tree</TaskDescription>
+    <DrivingTask location="{"type": "Feature", "properties": {"id": 8, "action": 0, "last_sampled": 309}, "geometry": {"type": "Point", "coordinates": [-120.42307592599273, 37.36636077337479]}}"/>
+    <TaskDescription>Take picture of tenth tree</TaskDescription>
+    <DrivingTask location="{"type": "Feature", "properties": {"id": 9, "action": 0, "last_sampled": 29}, "geometry": {"type": "Point", "coordinates": [-120.42299259529793, 37.36635678715399]}}"/>
+    <TaskDescription>Take co2 sample of tree</TaskDescription>
+    <DrivingTask location="{"type": "Feature", "properties": {"id": 10, "action": 0, "last_sampled": 67}, "geometry": {"type": "Point", "coordinates": [-120.4230246791031, 37.366304880110526]}}"/>
+    <TaskDescription>Take co2 sample of tree</TaskDescription>
+    <DrivingTask location="{"type": "Feature", "properties": {"id": 11, "action": 0, "last_sampled": 187}, "geometry": {"type": "Point", "coordinates": [-120.42302669537153, 37.36634636896467]}}"/>
+    <TaskDescription>Take co2 sample of tree</TaskDescription>
+    <DrivingTask location="{"type": "Feature", "properties": {"id": 12, "action": 0, "last_sampled": 309}, "geometry": {"type": "Point", "coordinates": [-120.42307592599273, 37.36636077337479]}}"/>
+    <TaskDescription>Take co2 sample of tree</TaskDescription>
+    <DrivingTask location="{"type": "Feature", "properties": {"id": 13, "action": 0, "last_sampled": 29}, "geometry": {"type": "Point", "coordinates": [-120.42299259529793, 37.36635678715399]}}"/>
+    <TaskDescription>Take co2 sample of tree</TaskDescription>
+    <DrivingTask location="{"type": "Feature", "properties": {"id": 14, "action": 0, "last_sampled": 312}, "geometry": {"type": "Point", "coordinates": [-120.42298051393493, 37.36628908556382]}}"/>
+    <TaskDescription>Take temperature reading</TaskDescription>
+    <DrivingTask location="{"type": "Feature", "properties": {"id": 15, "action": 0, "last_sampled": 180}, "geometry": {"type": "Point", "coordinates": [-120.42301417901265, 37.3662730362294]}}"/>
+    <TaskDescription>Final destination reached</TaskDescription>
+    <DrivingTask location="{"type": "Feature", "properties": {"id": 16, "action": 0, "last_sampled": 309}, "geometry": {"type": "Point", "coordinates": [-120.42307592599273, 37.36636077337479]}}"/>
+  </CompositeTaskInformation>
+</MissionPlan>

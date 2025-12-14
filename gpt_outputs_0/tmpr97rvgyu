@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Initial task: Drive to the first tree (ID 12), take a picture, if the picture shows low temperature, take a temperature reading. If that reading is also low, take a CO2 sample. If the reading is also low, drive to a far away tree and repeat the process. If the very first reading isn't low, drive to end.
+    </TaskDescription>
+    <TaskSequence>
+      <Task id="1">
+        <Action>DriveTo</Action>
+        <TargetID>12</TargetID>
+      </Task>
+      <Task id="2">
+        <Action>TakePicture</Action>
+      </Task>
+      <Task id="3">
+        <Condition>
+          <TemperatureLow>PictureTemperatureLow</TemperatureLow>
+        </Condition>
+        <Action>TakeTemperatureReading</Action>
+      </Task>
+      <Task id="4">
+        <Condition>
+          <TemperatureLow>TemperatureReadingLow</TemperatureLow>
+        </Condition>
+        <Action>TakeCO2Sample</Action>
+      </Task>
+      <Task id="5">
+        <Condition>
+          <TemperatureLow>CO2ReadingLow</TemperatureLow>
+        </Condition>
+        <Action>DriveTo</Action>
+        <TargetID>18</TargetID>
+      </Task>
+      <Task id="6">
+        <Condition>
+          <NoLowTemperature>NoLowTemperatureCondition</NoLowTemperature>
+        </Condition>
+        <Action>DriveToEnd</Action>
+      </Task>
+    </TaskSequence>
+  </CompositeTaskInformation>
+</MissionPlan>

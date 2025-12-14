@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <MissionName>Visit All Points</MissionName>
+    <Tasks>
+        <!-- Task 1 -->
+        <Task>
+            <TaskID>1</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.42300386899338, 37.366300703749474</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.95</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 2 -->
+        <Task>
+            <TaskID>2</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.42302669537153, 37.36634636896467</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.90</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 3 -->
+        <Task>
+            <TaskID>3</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.4230246791031, 37.366304880110526</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.85</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 4 -->
+        <Task>
+            <TaskID>4</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.423044218715, 37.36626996761184</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.80</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 5 -->
+        <Task>
+            <TaskID>5</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.42298051393493, 37.36628908556382</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.75</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 6 -->
+        <Task>
+            <TaskID>6</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.42301417901265, 37.3662730362294</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.70</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 7 -->
+        <Task>
+            <TaskID>7</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.42307592599273, 37.36636077337479</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.65</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 8 -->
+        <Task>
+            <TaskID>8</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.42299259529793, 37.36635678715399</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.60</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 9 -->
+        <Task>
+            <TaskID>9</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.42300000000001, 37.36630000000001</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.55</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 10 -->
+        <Task>
+            <TaskID>10</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.42300000000001, 37.36630000000001</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.50</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 11 -->
+        <Task>
+            <TaskID>11</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.42300000000001, 37.36630000000001</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.45</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 12 -->
+        <Task>
+            <TaskID>12</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.42300000000001, 37.36630000000001</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.40</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 13 -->
+        <Task>
+            <TaskID>13</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.42300000000001, 37.36630000000001</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.35</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 14 -->
+        <Task>
+            <TaskID>14</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.42300000000001, 37.36630000000001</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.30</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 15 -->
+        <Task>
+            <TaskID>15</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.42300000000001, 37.36630000000001</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.25</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 16 -->
+        <Task>
+            <TaskID>16</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.42300000000001, 37.36630000000001</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.20</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 17 -->
+        <Task>
+            <TaskID>17</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.42300000000001, 37.36630000000001</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.15</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 18 -->
+        <Task>
+            <TaskID>18</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.42300000000001, 37.36630000000001</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.10</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 19 -->
+        <Task>
+            <TaskID>19</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.42300000000001, 37.36630000000001</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.05</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+        
+        <!-- Task 20 -->
+        <Task>
+            <TaskID>20</TaskID>
+            <TaskType>MoveTo</TaskType>
+            <Parameters>
+                <Parameter>
+                    <Name>Location</Name>
+                    <Value>-120.42300000000001, 37.36630000000001</Value>
+                </Parameter>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.00</Value>
+                </Parameter>
+            </Parameters>
+        </Task>
+    </Tasks>
+</Mission>

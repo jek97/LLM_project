@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<ns xmlns="http://example.com/MissionInformation">
+    <CompositeMissionInformation>
+        <!-- Other elements -->
+    </CompositeMissionInformation>
+</ns>

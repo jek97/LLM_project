@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan" xsi:schemaLocation="http://example.com/missionplan http://example.com/missionplan_schema.xsd">
+    <Header>
+        <StartLocation>
+            <!-- Replace with actual coordinates -->
+            <Latitude>37.7749</Latitude>
+            <Longitude>-122.4194</Longitud
+e>
+        </StartLocation>
+        <EndLocation>
+            <!-- Replace with actual coordinates -->
+            <Latitude>37.7750</Latitude>
+            <Longitude>-122.4186</Longitude>
+        </EndLocation>
+    </Header>
+    <CompositeTaskInformation>
+        <TaskDescription>Take a picture of the first tree, then measure its height and diameter, and finally check if it's a Redwood tree. Then move to the second tree and repeat the process.</TaskDescription>
+        <Tasks>
+            <!-- Task 1: First Tree -->
+            <Task id="1">
+                <Action id="1.1">
+                    <Type>Drive</Type>
+                    <Destination>
+                        <Latitude>37.7750</Latitude>
+                        <Longitude>-122.4186</Longitude>
+                    </Destination>
+                </Action>
+                <Action id="1.2">
+                    <Type>TakePicture</Type>
+                    <Tree>
+                        <Latitude>37.7750</Latitude>
+                        <Longitude>-122.4186</Longitude>
+                        <TreeType>[tree type]</TreeType>
+                    </Tree>
+                </Action>
+                <Action id="1.3">
+                    <Type>MeasureHeight</Type>
+                    <Tree>
+                        <Latitude>37.7750</Latitude>
+                        <Longitude>-122.4186</Longitude>
+                        <TreeType>[tree type]</TreeType>
+                    </Tree>
+                </Action>
+                <Action id="1.4">
+                    <Type>MeasureDiameter</Type>
+                    <Tree>
+                        <Latitude>37.7750</Latitude>
+                        <Longitude>-122.4186</Longitude>
+                        <TreeType>[tree type]</TreeType>
+                    </Tree>
+                </Action>
+                <Action id="1.5">
+                    <Type>CheckTreeType</Type>
+                    <Tree>
+                        <Latitude>37.7750</Latitude>
+                        <Longitude>-122.4186</Longitude>
+                        <TreeType>[tree type]</TreeType>
+                    </Tree>
+                </Action>
+            </Task>
+            <!-- Task 2: Second Tree -->
+            <Task id="2">
+                <Action id="2.1">
+                    <Type>Drive</Type>
+                    <Destination>
+                        <Latitude>[second tree latitude]</Latitude>
+                        <Longitude>[second tree longitude]</Longitude>
+                    </Destination>
+                </Action>
+                <Action id="2.2">
+                    <Type>TakePicture</Type>
+                    <Tree>
+                        <Latitude>[second tree latitude]</Latitude>
+                        <Longitude>[second tree longitude]</Longitude>
+                        <TreeType>[tree type]</TreeType>
+                    </Tree>
+                </Action>
+                <Action id="2.3">
+                    <Type>MeasureHeight</Type>
+                    <Tree>
+                        <Latitude>[second tree latitude]</Latitude>
+                        <Longitude>[second tree longitude]</Longitude>
+                        <TreeType>[tree type]</TreeType>
+                    </Tree>
+                </Action>
+                <Action id="2.4">
+                    <Type>MeasureDiameter</Type>
+                    <Tree>
+                        <Latitude>[second tree latitude]</Latitude>
+                        <Longitude>[second tree longitude]</Longitude>
+                        <TreeType>[tree type]</TreeType>
+                    </Tree>
+                </Action>
+                <Action id="2.5">
+                    <Type>CheckTreeType</Type>
+                    <Tree>
+                        <Latitude>[second tree latitude]</Latitude>
+                        <Longitude>[second tree longitude]</Longitude>
+                        <TreeType>[tree type]</TreeType>
+                    </Tree>
+                </Action>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+    <!-- Outcome element is optional and can be included if possible -->
+    <Outcome>Estimated distance traveled: [distance in miles]</Outcome>
+</MissionPlan>

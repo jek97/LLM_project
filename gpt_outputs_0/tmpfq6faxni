@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<m:MissionPlan xmlns:m="http://example.com/missionplan">
+    <m:Task action="TakePicture" class="TestAttribute">
+        Take picture of first tree
+    </m:Task>
+</m:MissionPlan>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="mission">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CompositeTaskInformation">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TaskDescription" type="xs:string"/>
+                            <xs:element name="Tasks">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Task" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Action" type="xs:string"/>
+                                                    <xs:element name="Target">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="Type" type="xs:string"/>
+                                                                <xs:choice minOccurs="0">
+                                                                    <xs:element name="Location" type="xs:string"/>
+                                                                    <xs:element name="Quantity" type="xs:int"/>
+                                                                </xs:choice>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="embedded_xsd.xml">
+    <CompositeTaskInformation>
+        <TaskDescription>Take a picture of the northern most tree. Drive to the middle of the orchard and take another. Drive to the middle of the eastern end and take a picture of two trees next to each other.</TaskDescription>
+        <Tasks>
+            <!-- Task 1: Take a picture of the northern most tree -->
+            <Task>
+                <Action>TakePicture</Action>
+                <Target>
+                    <Type>Tree</Type>
+                    <Location>NorthernMost</Location>
+                </Target>
+            </Task>
+            
+            <!-- Task 2: Drive to the middle of the orchard and take another picture -->
+            <Task>
+                <Action>DriveTo</Action>
+                <Target>
+                    <Type>Location</Type>
+                    <Description>MiddleOfOrchard</Description>
+                </Target>
+                <SubTasks>
+                    <Task>
+                        <Action>TakePicture</Action>
+                        <Target>
+                            <Type>Tree</Type>
+                            <Location>MiddleOfOrchard</Location>
+                        </Target>
+                    </Task>
+                </SubTasks>
+            </Task>
+
+            <!-- Task 3: Drive to the middle of the eastern end and take a picture of two trees next to each other -->
+            <Task>
+                <Action>DriveTo</Action>
+                <Target>
+                    <Type>Location</Type>
+                    <Description>MiddleOfEasternEnd</Description>
+                </Target>
+                <SubTasks>
+                    <Task>
+                        <Action>TakePicture</Action>
+                        <Target>
+                            <Type>Trees</Type>
+                            <Location>MiddleOfEasternEnd</Location>
+                            <Quantity>2</Quantity>
+                        </Target>
+                    </Task>
+                </SubTasks>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+</mission>

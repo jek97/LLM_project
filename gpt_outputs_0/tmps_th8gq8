@@ -1,0 +1,3 @@
+It looks like there may be an issue with the XML schema that you are using to validate the mission plan. The error message indicates that there is no global declaration available for the root element "mission".
+To resolve this issue, you will need to ensure that the XML schema that you are using is correct and that it includes a global declaration for the "mission" element.
+You can also try using a different XML schema or validating your mission plan against a different schema.

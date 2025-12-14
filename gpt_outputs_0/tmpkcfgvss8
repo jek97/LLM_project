@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>Generate a mission plan to visit as many points within 100 meters of each other as possible, taking a picture of each tree.  The mission aims to cover the provided GeoJSON points within a 100-meter radius.</TaskDescription>
+    <Tasks>
+      <Task id="1">
+        <Location x="120.42300386899338" y="37.366300703749474"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="2">
+        <Location x="120.4230246791031" y="37.366304880110526"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="3">
+        <Location x="120.42302669537153" y="37.36634636896467"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="4">
+        <Location x="120.42303004014194" y="37.36631785560332"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="5">
+        <Location x="120.42303868899338" y="37.36635640370881"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="6">
+        <Location x="120.423044218715" y="37.36626996761184"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="7">
+        <Location x="120.4230246791031" y="37.366304880110526"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="8">
+        <Location x="120.42303004014194" y="37.36631785560332"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="9">
+        <Location x="120.42302669537153" y="37.36634636896467"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="10">
+        <Location x="120.42303868899338" y="37.36635640370881"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="11">
+        <Location x="120.423044218715" y="37.36626996761184"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="12">
+        <Location x="120.4230246791031" y="37.366304880110526"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="13">
+        <Location x="120.42303004014194" y="37.36631785560332"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="14">
+        <Location x="120.42302669537153" y="37.36634636896467"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="15">
+        <Location x="120.42303868899338" y="37.36635640370881"/>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="16">
+        <Location x="120.423044218715" y="37.36626996761184"/>
+        <Action>Take Picture</Action>
+      </Task>
+    </Tasks>
+  </Task>
+
+</Task>
+
+<!--  No need for start and end point. The objective is to cover all available points. -->
+</Task>

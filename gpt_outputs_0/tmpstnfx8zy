@@ -1,0 +1,71 @@
+<Mission>
+    <MissionInformation>
+        <MissionName>TreePictureAndCO2Readings</MissionName>
+        <StartTime>YYYY-MM-DDTHH:MM:SS</StartTime>
+        <EndTime>YYYY-MM-DDTHH:MM:SS</EndTime>
+    </MissionInformation>
+    <TaskPlan>
+        <CompositeTaskInformation>
+            <TaskDescription>Original Request: Take a picture of 2 trees next to each other and then take 2 CO2 readings of two trees next to each other.</TaskDescription>
+            <SubTasks>
+                <!-- Task 1: Drive to the location -->
+                <DriveToLocation>
+                    <Location>
+                        <Latitude>LATITUDE</Latitude>
+                        <Longitude>LONGITUDE</Longitude>
+                    </Location>
+                </DriveToLocation>
+                <!-- Task 2: Take a picture of the first tree -->
+                <CameraTask>
+                    <ImageType>Picture</ImageType>
+                    <Target>
+                        <Latitude>LATITUDE</Latitude>
+                        <Longitude>LONGITUDE</Longitude>
+                    </Target>
+                    <TreeDetails>
+                        <TreeType>TREE_TYPE</TreeType>
+                    </TreeDetails>
+                </CameraTask>
+                <!-- Task 3: Drive to the second tree location -->
+                <DriveToLocation>
+                    <Location>
+                        <Latitude>LATITUDE</Latitude>
+                        <Longitude>LONGITUDE</Longitude>
+                    </Location>
+                </DriveToLocation>
+                <!-- Task 4: Take a picture of the second tree -->
+                <CameraTask>
+                    <ImageType>Picture</ImageType>
+                    <Target>
+                        <Latitude>LATITUDE</Latitude>
+                        <Longitude>LONGITUDE</Longitude>
+                    </Target>
+                    <TreeDetails>
+                        <TreeType>TREE_TYPE</TreeType>
+                    </TreeDetails>
+                </CameraTask>
+                <!-- Task 5: Take a CO2 reading of the first tree -->
+                <Co2Reading>
+                    <Target>
+                        <Latitude>LATITUDE</Latitude>
+                        <Longitude>LONGITUDE</Longitude>
+                    </Target>
+                    <TreeDetails>
+                        <TreeType>TREE_TYPE</TreeType>
+                    </TreeDetails>
+                </Co2Reading>
+                <!-- Task 6: Take a CO2 reading of the second tree -->
+                <Co2Reading>
+                    <Target>
+                        <Latitude>LATITUDE</Latitude>
+                        <Longitude>LONGITUDE</Longitude>
+                    </Target>
+                    <TreeDetails>
+                        <TreeType>TREE_TYPE</TreeType>
+                    </TreeDetails>
+                </Co2Reading>
+            </SubTasks>
+        </CompositeTaskInformation>
+    </TaskPlan>
+    <!-- Comment: Estimated total distance traveled from start to end is approximately 150 meters -->
+</Mission>

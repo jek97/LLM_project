@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/missionplan"
+           xmlns:mp="http://example.com/missionplan"
+           elementFormDefault="qualified">
+
+    <!-- Define the MissionPlan element -->
+    <xs:element name="MissionPlan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CompositeTaskInformation">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TaskDescription" type="xs:string"/>
+                            <xs:element name="Tasks">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element maxOccurs="unbounded" ref="mp:Task"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Define the Task element -->
+    <xs:element name="Task">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Type" type="xs:string"/>
+                <xs:element name="Parameters">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" ref="mp:Parameter"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Define the Parameter element -->
+    <xs:element name="Parameter">
+        <xs:complexType mixed="true">
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="name" type="xs:string" use="required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

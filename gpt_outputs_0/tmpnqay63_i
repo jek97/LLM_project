@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/CompositeTaskInformationType"
+           elementFormDefault="qualified">
+  <xs:element name="CompositeTaskInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TaskDescription" type="xs:string"/>
+        <xs:element name="Action">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DriveToTree">
+                <xs:complexType>
+                  <xs:attribute name="TreeID" type="xs:integer"/>
+                  <xs:attribute name="GPSLatitude" type="xs:string"/>
+                  <xs:attribute name="GPSLongitude" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

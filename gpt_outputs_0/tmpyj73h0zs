@@ -1,0 +1,4 @@
+<CompositeTaskInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="mission_plan_schema.xsd">
+  <!-- Mission plan elements go here -->
+</CompositeTaskInformation>

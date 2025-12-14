@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<task:Mission xmlns:task="http://robust-mission-planning.com/missionPlanningSchema.xsd"
+              xsi:schemaLocation="http://robust-mission-planning.com/missionPlanningSchema.xsd 
+                                  http://robust-mission-planning.com/missionPlanningSchema.xsd">
+    <task:TaskInformation>
+        <task:CompositeTaskInformation>
+            <task:TaskDescription>
+                <task:TaskType>Picture</task:TaskType>
+                <task:Action>Take picture of northernmost tree</task:Action>
+                <task:Outcome>
+                    <task:DrivingToLocation>
+                        <task:GPSLocation>
+                            <task:Latitude>37.36635688574164</task:Latitude>
+                            <task:Longitude>-120.42302289785604</task:Longitude>
+                        </task:GPSLocation>
+                    </task:DrivingToLocation>
+                    <task:PictureTaken/>
+                    <task:TotalEstimatedHaversineDistanceFromStartToEnd>Approximately 0.5 km</task:TotalEstimatedHaversineDistanceFromStartToEnd>
+                </task:Outcome>
+            </task:TaskDescription>
+        </task:CompositeTaskInformation>
+    </task:TaskInformation>
+
+    <task:TaskInformation>
+        <task:CompositeTaskInformation>
+            <task:TaskDescription>
+                <task:TaskType>Drive</task:TaskType>
+                <task:Action>Drive to middle of orchard</task:Action>
+                <task:Outcome>
+                    <task:DrivingToLocation>
+                        <task:GPSLocation>
+                            <task:Latitude>37.36635688574164</task:Latitude>
+                            <task:Longitude>-120.42309252722157</task:Longitude>
+                        </task:GPSLocation>
+                    </task:DrivingToLocation>
+                    <task:PictureTaken/>
+                    <task:TotalEstimatedHaversineDistanceFromStartToEnd>Approximately 0.2 km</task:TotalEstimatedHaversineDistanceFromStartToEnd>
+                </task:Outcome>
+            </task:TaskDescription>
+        </task:CompositeTaskInformation>
+    </task:TaskInformation>
+
+    <task:TaskInformation>
+        <task:CompositeTaskInformation>
+            <task:TaskDescription>
+                <task:TaskType>Picture</task:TaskType>
+                <task:Action>Take picture of eastern end trees</task:Action>
+                <task:Outcome>
+                    <task:DrivingToLocation>
+                        <task:GPSLocation>
+                            <task:Latitude>37.36631509745154</task:Latitude>
+                            <task:Longitude>-120.4230350832969</task:Longitude>
+                        </task:GPSLocation>
+                    </task:DrivingToLocation>
+                    <task:PictureTaken/>
+                    <task:TotalEstimatedHaversineDistanceFromStartToEnd>Approximately 0.3 km</task:TotalEstimatedHaversineDistanceFromStartToEnd>
+                </task:Outcome>
+            </task:TaskDescription>
+        </task:CompositeTaskInformation>
+    </task:TaskInformation>
+
+    <task:TaskInformation>
+        <task:CompositeTaskInformation>
+            <task:TaskDescription>
+                <task:TaskType>Picture</task:TaskType>
+                <task:Action>Take picture of two trees next to each other</task:Action>
+                <task:Outcome>
+                    <task:DrivingToLocation>
+                        <task:GPSLocation>
+                            <task:Latitude>37.36628908556382</task:Latitude>
+                            <task:Longitude>-120.423044218715</task:Longitude>
+                        </task:GPSLocation>
+                    </task:DrivingToLocation>
+                    <task:PictureTaken/>
+                    <task:TotalEstimatedHaversineDistanceFromStartToEnd>Approximately 0.4 km</task:TotalEstimatedHaversineDistanceFromStartToEnd>
+                </task:Outcome>
+            </task:TaskDescription>
+        </task:CompositeTaskInformation>
+    </task:TaskInformation>
+</task:Mission>

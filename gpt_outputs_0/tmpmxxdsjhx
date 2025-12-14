@@ -1,0 +1,55 @@
+<mission>
+    <version>1</version>
+
+    <description>
+        An XML-based mission plan for measuring CO2 levels in an orchard.
+    </description>
+
+    <tasks>
+
+        <!-- Task 1: Start at the starting point -->
+        <task name="Initialize">
+            <moveFromCoordinate>0,0</moveFromCoordinate>
+        </task>
+
+        <!-- Task 2: Measure CO2 at a middle tree -->
+        <task name="MeasureCO2AtMiddleTree">
+            <takeMeasurement type="CO2">[middle_tree_coordinates]</takeMeasurement>
+        </task>
+
+        <!-- Task 3: If CO2 reading is low, take nearby pictures -->
+        <task name="TakePicturesIfCO2IsLow">
+            <condition>CO2_value < 50</condition>
+                <moveFromCoordinate>[middle_tree_coordinates]</moveFromCoordinate>
+                <moveToCoordinate>[nearby_tree_coordinates_1]</moveToCoordinate>
+                <!-- Capture first picture -->
+                <takePicture orientation="NORTHWEST" id="pic1"/>
+                
+                <!-- Capture second picture -->
+                <takePicture orientation="Northeast" id="Northeast pic2"/>
+            </condition>
+        </task>
+
+        <!-- Task 4: Move to another tree as far away as possible for CO2 measurement -->
+        <task name="MeasureCO2AtFarTree">
+            <findFarthestTree distance="max_distance" coordinates="far_tree_coordinates"/>
+            <moveToCoordinate>far_tree_coordinates</moveToCoordinate>
+            <takeMeasurement type="CO2">[new_CO2_value]</takeMeasurement>
+        </task>
+
+        <!-- Task 5: Take a temperature reading at the northernmost tree -->
+        <task name="TakeTemperatureReading">
+            <findNorthernmostTree coordinates="northernmost_tree_coordinates"/>
+            <moveToCoordinate>northernmost_tree_coordinates</moveToCoordinate>
+            <takeMeasurement type="TEMPERATURE">[temperature_value]</takeMeasurement>
+        </task>
+
+        <!-- Task 6: Return to the endpoint -->
+        <task name="ReturnToEndpoint">
+            <moveFromCoordinate>[last_measurement_position]</moveFromCoordinate>
+            <moveToCoordinate>0,0</moveToCoordinate>
+        </task>
+
+    </tasks>
+
+</mission>

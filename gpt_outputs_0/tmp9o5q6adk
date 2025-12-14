@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Task: Take a picture of 4 trees going clockwise from the north most tree, maximizing location distance between each picture.
+    </TaskDescription>
+    <TaskSequence>
+      <Task id="1">
+        <Action>NavigateTo</Action>
+        <TargetID>1</TargetID>
+      </Task>
+      <Task id="2">
+        <Action>TakePicture</Action>
+        <TargetID>1</TargetID>
+      </Task>
+      <Task id="3">
+        <Action>NavigateTo</Action>
+        <TargetID>2</TargetID>
+      </Task>
+      <Task id="4">
+        <Action>TakePicture</Action>
+        <TargetID>2</TargetID>
+      </Task>
+      <Task id="5">
+        <Action>NavigateTo</Action>
+        <TargetID>3</TargetID>
+      </Task>
+      <Task id="6">
+        <Action>TakePicture</Action>
+        <TargetID>3</TargetID>
+      </Task>
+      <Task id="7">
+        <Action>NavigateTo</Action>
+        <TargetID>4</TargetID>
+      </Task>
+      <Task id="8">
+        <Action>TakePicture</Action>
+        <TargetID>4</TargetID>
+      </Task>
+      <Task id="9">
+        <Action>NavigateTo</Action>
+        <TargetID>10</TargetID>
+      </Task>
+      <Task id="10">
+        <Action>TakePicture</Action>
+        <TargetID>10</TargetID>
+      </Task>
+    </TaskSequence>
+  </CompositeTaskInformation>
+</MissionPlan>

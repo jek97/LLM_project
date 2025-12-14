@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:uuid:123e4567-e89b-12d3-a456-426655440000"
+           xmlns="urn:uuid:123e4567-e89b-12d3-a456-426655440000"
+           elementFormDefault="qualified">
+
+    <xs:element name="Mission">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="CompositeTaskInformation"/>
+                <xs:element ref="Sequence"/>
+                <xs:element ref="EndLocation"/>
+            </xs:sequence>
+        </xsd:complexType>
+    </xs:element>
+
+    <xs:complexType name="CompositeTaskInformation">
+        <xs:sequence>
+            <!-- ... other tasks and conditions ... -->
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="Sequence">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="DriveToTree"/>
+                <xs:element ref="TaskDescription"/>
+                <xs:element ref="DrivingStatus"/>
+                
+                <!-- ... other tasks and conditions ... -->
+            </xs:sequence>
+        </xsd:complexType>
+    </xs:element>
+
+    <xs:complexType name="Repeat">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="name" type="xs:string"/>
+                <xs:attribute name="test" type="xs:string"/>
+            </xs:extension>
+        </xsd:simpleContent>
+        <xs:sequence>
+            <xs:element ref="TaskDescription"/>
+            <xs:element ref="When"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="DriveToTree">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="name" type="xs:string"/>
+                    <xs:attribute name="test" type="xs:string"/>
+                </xsd:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

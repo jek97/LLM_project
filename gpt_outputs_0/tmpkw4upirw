@@ -1,0 +1,29 @@
+<mission>
+    <task name="Take picture">
+        <target id="1" x="x-coordinate of first tree" y="y-coordinate of first tree"/>
+    </task>
+    <decision>
+        <condition name="Low temperature">
+            <sensor name="Temperature sensor">
+                <reading>Temperature reading</reading>
+            </sensor>
+            <threshold value="low temperature threshold"/>
+        </condition>
+    </decision>
+    <action>
+        <type name="Take co2 sample">
+            <target id="1" x="x-coordinate of first tree" y="y-coordinate of first tree"/>
+        </action>
+    </action>
+    <condition name="Low co2 reading">
+        <sensor name="Co2 sensor">
+            <reading>Co2 reading</reading>
+        </sensor>
+        <threshold value="low co2 threshold"/>
+    </condition>
+    <action>
+        <type name="Drive to farthest tree">
+            <target id="20" x="x-coordinate of far away tree" y="y-coordinate of far away tree"/>
+        </action>
+    </action>
+</mission>

@@ -1,0 +1,38 @@
+<mission>
+  <name>Robotic Tree Exploration Mission</name>
+  <description>Mission to explore and document all trees within a 100-meter radius.</description>
+  <startPosition>Point A (Initial Position)</startPosition>
+  
+  <task>
+    <taskId>T1</taskId>
+    <taskDescription>Move from Point A to the nearest tree within 100 meters.</taskDescription>
+    <fromPoint>Point A</fromPoint>
+    <toPoint>Tree B</toPoint>
+    <duration>5 minutes</duration>
+    <pictureTaking>true</pictureTaking>
+  </task>
+  
+  <!-- Repeat similar tasks for each subsequent movement -->
+  
+  <task>
+    <taskId>T2</taskId>
+    <taskDescription>Move from Tree B to the nearest tree within 100 meters.</taskDescription>
+    <fromPoint>Tree B</fromPoint>
+    <toPoint>Tree C</toPoint>
+    <duration>5 minutes</duration>
+    <pictureTaking>true</pictureTaking>
+  </task>
+  
+  <!-- Continue until all reachable trees are visited -->
+  
+  <task>
+    <taskId>Tn</taskId>
+    <taskDescription>Move from Tree Y to Point Z.</taskDescription>
+    <fromPoint>Tree Y</fromPoint>
+    <toPoint>Point Z</toPoint>
+    <duration>5 minutes</duration>
+    <pictureTaking>true</pictureTaking>
+  </task>
+  
+  <endPosition(Point Z)</endPosition>
+</mission>

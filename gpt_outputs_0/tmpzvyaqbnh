@@ -1,0 +1,55 @@
+It seems that I made an incorrect assumption about the XML schema.
+
+Let's try a different approach. Here is a simple XML file with a GeoJSON reference:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to the middle of the field and take a picture of a tree.</TaskDescription>
+    <DrivingLocation>
+      <GPSLocation>
+        <reference geojson="https://example.com/field.geojson"/>
+      </GPSLocation>
+    </DrivingLocation>
+  </CompositeTaskInformation>
+
+  <Outcome>
+    <DrivingDistance>0 km</DrivingDistance>
+    <ActionDescription>Take a picture of a tree.</ActionDescription>
+    <Condition>
+      <TemperatureThreshold>33 C</TemperatureThreshold>
+    </Condition>
+    <AdditionalActions>
+      <TakeCO2Sample/>
+    </AdditionalActions>
+  </Outcome>
+
+  <!-- Randomly select another point 5 trees down -->
+  <RandomPointSelection>
+    <TreeID>6</TreeID>
+  </RandomPointSelection>
+</missionPlan>
+```
+This XML file includes a `reference` element that points to a GeoJSON file. The GeoJSON file would contain the location of the field, and this reference is used in the `DrivingLocation` element.
+
+Please note that you will need to replace the `https://example.com/field.geojson` URL with the actual URL of your GeoJSON file.
+
+Also, please make sure that the GeoJSON file is in a format that can be understood by the XML parser. The GeoJSON file should contain the location data in a format such as:
+```
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -120.42302289785604, 37.36635688574164 ]
+      },
+      "properties": {}
+    }
+  ]
+}
+```
+This is just an example of a GeoJSON file that contains the location data for the field.
+
+Please try this version and let me know if you're still having trouble.

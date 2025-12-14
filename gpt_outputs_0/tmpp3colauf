@@ -1,0 +1,64 @@
+<MissionPlan xmlns="http://example.com/MissionPlanSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <Name>Corner Tree Imaging Mission</Name>
+        <Description>Take pictures of the trees at each corner of the farm.</Description>
+    </Header>
+    <CompositeTaskInformation>
+        <TaskDescription xsi:type="Question">What is the objective of this mission?</TaskDescription>
+        <SequentialTask>
+            <NavigationTask>
+                <MoveToCoordinates>
+                    <Latitude>37.36628908556382</Latitude>
+                    <Longitude>-120.42298051393493</Longitude>
+                </MoveToCoordinates>
+                <TaskDescription xsi:type="Question">Moving to the first corner.</TaskDescription>
+            </NavigationTask>
+            <ImageTreeTask>
+                <TreeType>Not Specified</TreeType>
+                <TaskDescription xsi:type="Question">Taking an image of the tree at the first corner.</TaskDescription>
+            </ImageTreeTask>
+        </SequentialTask>
+        <!-- Repeat the following SequentialTask for each remaining corner -->
+        <SequentialTask>
+            <NavigationTask>
+                <MoveToCoordinates>
+                    <Latitude>37.3662730362294</Latitude>
+                    <Longitude>-120.42301417901265</Longitude>
+                </MoveToCoordinates>
+                <TaskDescription xsi:type="Question">Moving to the second corner.</TaskDescription>
+            </NavigationTask>
+            <ImageTreeTask>
+                <TreeType>Not Specified</TreeType>
+                <TaskDescription xsi:type="Question">Taking an image of the tree at the second corner.</TaskDescription>
+            </ImageTreeTask>
+        </SequentialTask>
+        <!-- ... -->
+        <SequentialTask>
+            <NavigationTask>
+                <MoveToCoordinates>
+                    <Latitude>37.36626996761184</Latitude>
+                    <Longitude>-120.423044218715</Longitude>
+                </MoveToCoordinates>
+                <TaskDescription xsi:type="Question">Moving to the third corner.</TaskDescription>
+            </NavigationTask>
+            <ImageTreeTask>
+                <TreeType>Not Specified</TreeType>
+                <TaskDescription xsi:type="Question">Taking an image of the tree at the third corner.</TaskDescription>
+            </ImageTreeTask>
+        </SequentialTask>
+        <!-- ... -->
+        <SequentialTask>
+            <NavigationTask>
+                <MoveToCoordinates>
+                    <Latitude>37.36627570632085</Latitude>
+                    <Longitude>-120.42307272278255</Longitude>
+                </MoveToCoordinates>
+                <TaskDescription xsi:type="Question">Moving to the fourth corner.</TaskDescription>
+            </NavigationTask>
+            <ImageTreeTask>
+                <TreeType>Not Specified</TreeType>
+                <TaskDescription xsi:type="Question">Taking an image of the tree at the fourth corner.</TaskDescription>
+            </ImageTreeTask>
+        </SequentialTask>
+    </CompositeTaskInformation>
+</MissionPlan>

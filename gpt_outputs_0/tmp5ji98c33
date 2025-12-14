@@ -1,0 +1,83 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://example.com/mission-plan" xmlns:vocab="http://purl.ieee.org/NS/dcterms#" xmlns="http://example.com/mission-plan" elementFormDefault="qualified">
+    <xs:element name="Mission">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="MissionName" />
+                <xs:element ref="Version" minOccurs="0"/>
+                <xs:element ref="TaskDescription"/>
+                <xs:element ref="StartLocation">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Latitude" />
+                            <xs:element ref="Longitudue" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="EndLocation">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Latitude" />
+                            <xs:element ref="Longitudue" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TaskInformation">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                                <xs:element ref="CompositeTaskInformation"/>
+                            </xs:choice>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        <!-- Define all sub-elements -->
+        <xs:element name="MissionName" type="xs:string"/>
+        <xs:element name="Version" type="xs:integer"/>
+        <xs:element name="TaskDescription" type="xs:string"/>
+        <xs:simpleType name="Latitude">
+            <xs:restriction base="xs:decimal">
+                <xs:minInclusive value="-90.0"/>
+                <xs:maxInclusive value="90.0"/>
+            </xs:restriction>
+        </xs:simpleType>
+        <xs:simpleType name="Longitudue">
+            <xs:restriction base="xs:decimal">
+                <xs:minInclusive value="-180.0"/>
+                <xs:maxInclusive value="180.0"/>
+            </xs:restriction>
+        </xs:simpleType>
+        <!-- CompositeTaskInformation is repeated multiple times to account for multiple actions at a single location -->
+        <xs:complexType name="CompositeTaskInformation">
+            <xs:sequence>
+                <xs:element ref="DriveTo" />
+                <xs:element ref="ActionInformation" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:complexType name="DriveTo">
+            <xs:sequence>
+                <xs:element ref="Location" />
+                <xs:element ref="DistanceEstimate"/>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:simpleType name="Location">
+            <xs:restriction base="xs:string">
+                <!-- Add constraints based on GeoJSON format -->
+            </xs:restriction>
+        </xs:simpleType>
+        <xs:element name="ActionInformation">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element ref="TreeType" minOccurs="0"/>
+                    <xs:element ref="Measurement" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        <xs:simpleType name="TreeType">
+            <!-- Add Tree Type constraints based on your system's requirements -->
+        </xs:simpleType>
+        <xs:complexType name="Measurement">
+            <!-- Add Measurement data type and structure based on the measurements you want to collect -->
+        </xs:complexType>
+</xs:schema>

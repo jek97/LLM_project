@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <Task id="1" Action="NavigateTo">
+    <Waypoint>
+      <Latitude>37.36635640370881</Latitude>
+      <Longitude>-120.42300386899338</Longitude>
+    </Waypoint>
+  </Task>

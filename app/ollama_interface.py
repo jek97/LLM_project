@@ -23,10 +23,9 @@
 import logging
 import ollama
 import base64
-from dotenv import load_dotenv
-from openai import OpenAI
-from openai.types.chat.chat_completion import ChatCompletion
 
+logging.getLogger("httpx").setLevel(logging.ERROR)
+logging.getLogger("httpcore").setLevel(logging.ERROR)
 
 class OllamaInterface:
     def __init__(
@@ -43,8 +42,12 @@ class OllamaInterface:
         self.temperature: float = temperature
         self.model: str = model
         try:
-            self.logger.debug(f'pulling model {self.model}')
-            ollama.pull(self.model)
+            
+            if (self.model in ollama.list()):
+                self.logger.debug(f'model {self.model} already available')
+            else:
+                self.logger.debug(f'pulling model {self.model}')
+                ollama.pull(self.model)
         except:
             self.logger.error(f'error loading the model {self.model}')
             return
@@ -121,27 +124,22 @@ class OllamaInterface:
     def ask_ollama(self, prompt: str, add_context: bool = False) -> str:
         message: list = self.context.copy()
         message.append({"role": "user", "content": prompt})
+        try:
+            completion = ollama.chat(
+            model = self.model,
+            messages = message,
+            options = {
+                'temperature': self.temperature,
+                'num_predict': self.max_tokens
+            }
+            )
+            
+            response: str = completion['message']['content']
 
-        completion = ollama.chat(
-        model = self.model,
-        messages = message,
-        options = {
-            'temperature': self.temperature,
-            'num_predict': self.max_tokens
-        }
-        )
-
-        # completion: ChatCompletion = self.client.chat.completions.create(
-        #     model="gpt-4o",
-        #     messages=message,
-        #     max_tokens=self.max_tokens,
-        #     temperature=self.temperature,
-        # )
-        
-        response: str = completion['message']['content']
-
-        if add_context:
-            self.add_context(prompt, response)
+            if add_context:
+                self.add_context(prompt, response)
+        except:
+            response = ' '
 
         return response
 

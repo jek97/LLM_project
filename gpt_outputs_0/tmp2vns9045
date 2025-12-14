@@ -1,0 +1,41 @@
+<think>
+Okay, so I'm trying to help fix an XML validation error that someone encountered. The error message says there's "extra content" at the end of tmpmswxnshd.xml on line 21, column 1.
+
+First off, I need to understand what this means. XML is a markup language with strict structural rules—every opening tag must have a corresponding closing tag in the correct order. The error suggests that there's something extra at the end of the document, which might mean an unexpected character or piece of text that wasn't properly enclosed within any element.
+
+The user mentioned they're working on mission planning, where XML files represent navigation tasks and references to GeoJSON data for locations like GPS coordinates or tree types. The error occurs in tmpmswxnshd.xml at line 21. Without seeing the exact content around this area, it's a bit tricky to pinpoint the issue, but I can offer some general advice based on common XML validation problems.
+
+Here are the steps they might consider:
+
+1. **Inspect the File**: Look at the XML file up to line 21 and beyond to see if there's any unexpected text or characters at the end that shouldn't be there.
+
+2. **Check for Trailing Characters**: Sometimes, extra spaces, comments, or other unintended data can remain at the end of a file without being properly enclosed in an element.
+
+3. **Validate with Tools**: Use online XML validators like XMLLint or XMLAPE to check for mismatched tags and any issues at the end of the document.
+
+4. **Ensure Proper Structure**: Verify that all elements are correctly opened before they're closed, especially looking out for any unclosed tags around line 21.
+
+5. **Seek Assistance**: If possible, share the specific XML file or provide more context so that a detailed check can be performed on tmpmswxnshd.xml.
+
+By carefully examining tmpmswxnshd.xml and ensuring proper tag closure throughout the document, they should be able to resolve the validation error.
+</think>
+
+To fix the "extra content" error in tmpmswxnshd.xml:
+
+1. **Locate Line 21**: Open tmpmswxnshd.xml and examine line 21.
+
+2. **Check for Trailing Characters**: Look at characters after line 21 to ensure there's no unexpected data or spaces left.
+
+3. **Validate with Tools**:
+   - Use XML validators like XMLLint or online tools such as [XMLValidator](https://www.xmlvalidator.com/) to check the entire file.
+   
+4. **Ensure Proper Closure**:
+   - Look for unclosed tags, especially those before line 21 and beyond.
+
+5. **Inspect tmpmswxnshd.xml**:
+   - Share the XML file if possible for a detailed review, focusing on areas around line 21.
+   - Manually check each opening tag's corresponding closing tag.
+
+6. **Revalidate**: After making necessary adjustments to close any unclosed tags or remove extra content, run the validation again.
+
+By addressing these steps, tmpmswxnshd.xml should pass structural checks and resolve the XML error.

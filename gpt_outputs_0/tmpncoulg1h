@@ -1,0 +1,63 @@
+It seems that I still haven't fixed the issue.
+
+Let's try a different approach. Instead of defining each element manually, we can use an XSLT transformation to generate the XML file based on a predefined schema. This will make it easier to manage the complexity of the XML structure.
+
+Here is an example of how you could define the XML schema using XSLT:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:template match="/">
+    <mission>
+      <CompositeTaskInformation>
+        <!-- Task to drive to the starting point -->
+        <DrivingToPoint id="{generate-guid()}">
+          <description>Starting Point</description>
+          <reference>GeoJSON Reference for Location = (52.5207, 13.4050)</reference>
+        </DrivingToPoint>
+        
+        <!-- Task to take a picture of a tree at the starting point -->
+        <DrivingToPoint id="{generate-guid()}" ref="{'location': (52.5207 + 100m), 'tree_id': 1}">
+          <description>Middle of Field</description>
+          <reference>GeoJSON Reference for Location = (52.5207, 13.4050 + 100m) and Tree ID = 1</reference>
+          <xsl:apply-templates select="task_description"/>
+        </DrivingToPoint>
+        
+        <!-- Task to take a co2 sample if the condition is met -->
+        <IfCondition id="{generate-guid()}">
+          <description>Average Temperature Below 33 C</description>
+          <conditionType xml:lang="en">Temperature</conditionType>
+          <operator xml:lang="en">LessThan</operator>
+          <value>33.0</value>
+          <xsl:apply-templates select="task_description"/>
+        </IfCondition>
+        
+        <!-- Task to drive to the next random point -->
+        <DrivingToPoint id="{generate-guid()}" ref="{'location': (52.5207 + 100m), 'tree_id': [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]}">
+          <description>Next Random Point</description>
+          <reference>GeoJSON Reference for Location = (52.5207 + 100m, 13.4050) and Tree ID = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]</reference>
+          <xsl:apply-templates select="task_description"/>
+        </DrivingToPoint>
+      </CompositeTaskInformation>
+    </mission>
+  </xsl:template>
+  
+  <xsl:template match="task_description">
+    <TaskDescription>
+      <question xml:lang="en">Take a picture of a tree</question>
+      <answer xml:lang="en">The average temperature is below 33C</answer>
+      <reference>GeoJSON Reference for Tree ID = 0</reference>
+    </TaskDescription>
+  </xsl:template>
+  
+  <xsl:template match="task_description">
+    <TaskDescription>
+      <question xml:lang="en">Take a co2 sample</question>
+      <answer xml:lang="en"></answer>
+      <reference>GeoJSON Reference for Tree ID = 0</reference>
+    </TaskDescription>
+  </xsl:template>
+</xsl:stylesheet>
+```
+This XSLT transformation will generate the XML file with the desired structure and content.
+
+You can use an XSLT processor like `xsltproc` to transform the input data into the output XML.

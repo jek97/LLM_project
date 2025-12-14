@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Task: Take pictures of 4 trees going clockwise from the north most tree, maximizing location distance between each photo.
+    </TaskDescription>
+  </CompositeTaskInformation>
+  <MissionSegments>
+    <MissionSegment id="1">
+      <TaskType>ImageCapture</TaskType>
+      <Location>
+        <Coordinates>
+          <Latitude>37.36635640370881</Latitude>
+          <Longitude>-120.42300386899338</Longitude>
+        </Coordinates>
+      </Location>
+      <Instructions>Take picture of tree 1.</Instructions>
+    </MissionSegment>
+    <MissionSegment id="2">
+      <TaskType>Navigate</TaskType>
+      <Instructions>Navigate to the next tree, maximizing distance.</Instructions>
+    </MissionSegment>
+    <MissionSegment id="3">
+      <TaskType>ImageCapture</TaskType>
+      <Location>
+        <Coordinates>
+          <Latitude>37.36631785560332</Latitude>
+          <Longitude>-120.42303004014194</Longitude>
+        </Coordinates>
+      </Location>
+      <Instructions>Take picture of tree 2.</Instructions>
+    </MissionSegment>
+    <MissionSegment id="4">
+      <TaskType>Navigate</TaskType>
+      <Instructions>Navigate to the next tree, maximizing distance.</Instructions>
+    </MissionSegment>
+    <MissionSegment id="5">
+      <TaskType>ImageCapture</TaskType>
+      <Location>
+        <Coordinates>
+          <Latitude>37.36634636896467</Latitude>
+          <Longitude>-120.42302669537153</Longitude>
+        </Coordinates>
+      </Location>
+      <Instructions>Take picture of tree 3.</Instructions>
+    </MissionSegment>
+    <MissionSegment id="6">
+      <TaskType>Navigate</TaskType>
+      <Instructions>Navigate to the next tree, maximizing distance.</Instructions>
+    </MissionSegment>
+    <MissionSegment id="7">
+      <TaskType>ImageCapture</TaskType>
+      <Location>
+        <Coordinates>
+          <Latitude>37.36627570632085</Latitude>
+          <Longitude>-120.42307272278255</Longitude>
+        </Coordinates>
+      </Location>
+      <Instructions>Take picture of tree 4.</Instructions>
+    </MissionSegment>
+  </MissionSegments>
+</MissionPlan>

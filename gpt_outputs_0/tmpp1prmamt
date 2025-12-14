@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Analyze tree health and document species at various locations.
+    </TaskDescription>
+    <MissionDuration>
+      <Hours>2</Hours>
+    </MissionDuration>
+  </CompositeTaskInformation>
+  <Task>
+    <TaskID>T001</TaskID>
+    <TaskName>Drive to Oak Tree, Document</TaskName>
+    <TaskType>DriveAndAnalyze</TaskType>
+    <GeoJSONReference>
+      <LocationType>Tree</LocationType>
+      <Latitude>37.7749</Latitude>
+      <Longitude>-122.4194</Longitude>
+      <TreeType>Oak</TreeType>
+    </GeoJSONReference>
+    <Action>
+      <ActionType>AnalyzeTreeHealth</ActionType>
+      <Priority>1</Priority>
+    </Action>
+  </Task>
+  <Task>
+    <TaskID>T002</TaskID>
+    <TaskName>Drive to Pine Tree, Document</TaskName>
+    <TaskType>DriveAndAnalyze</TaskType>
+    <GeoJSONReference>
+      <LocationType>Tree</LocationType>
+      <Latitude>37.7833</Latitude>
+      <Longitude>-122.4167</Longitude>
+      <TreeType>Pine</TreeType>
+    </GeoJSONReference>
+    <Action>
+      <ActionType>AnalyzeTreeHealth</ActionType>
+      <Priority>1</Priority>
+    </Action>
+  </Task>
+</Root>

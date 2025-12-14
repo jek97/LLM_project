@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan SchemaVersion="1.0">
+  <Tasks>
+    <Task id="1">
+      <TaskType>Navigation</TaskType>
+      <Instructions>Navigate to GPS coordinates 37.7749, -122.4194</Instructions>
+    </Task>
+  </Tasks>
+</MissionPlan>

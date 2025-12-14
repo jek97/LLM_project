@@ -1,0 +1,43 @@
+<MissionPlan xmlns="http://example.com/mission-planning" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.com/mission-planning MissionPlan.xsd">
+  <MissionDescription>
+    Original Request: At the first tree, take a picture. If that picture shows low temperature, take a temperature reading. If that reading is also low, take a CO2 sample. If that reading is also low, drive to a far away tree and repeat the process. If the very first reading isn't low, drive to end.
+  </MissionDescription>
+
+  <CompositeTaskInformation>
+    <!-- Tasks are grouped by location -->
+
+    <!-- Drive to the first tree -->
+    <Tasks>
+      <DriveToLocation>
+        <StartPosition>
+          <Latitude>Start Latitude</Latitude>
+          <Longitude>Start Longitude</Longitude>
+        </StartPosition>
+        <DestinationGeoJsonReference xlink:href="FirstTree.geojson"/>
+      </DriveToLocation>
+    </Tasks>
+
+    <!-- Take picture, measure temperature and CO2 at the first tree -->
+    <Tasks>
+      <TreeInformation>
+        <TreeType xlink:href="FirstTree.geojson#tree_type"/>
+      </TreeInformation>
+      <TakePicture/>
+      <MeasureTemperature/>
+      <MeasureCO2/>
+    </Tasks>
+
+    <!-- Repeat the above tasks for each additional tree -->
+
+    <!-- Drive to the end point -->
+    <Tasks>
+      <DriveToLocation>
+        <DestinationGeoJsonReference xlink:href="EndPoint.geojson"/>
+      </DriveToLocation>
+    </Tasks>
+  </CompositeTaskInformation>
+
+  <Outcome>
+    The mission was successful in completing all tasks. The robot traveled a significant distance during this mission.
+  </Outcome>
+</MissionPlan>

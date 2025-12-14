@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="RoboticMissionPlan">
+        <xsd:complexType>
+            <xsd:sequence>
+                <!-- Repeat this sequence for each step in the mission plan -->
+                <xsd:element ref="MissionStep"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <!-- Define the MissionStep element here -->
+    <xsd:element name="MissionStep">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="NavigationCommand"/>
+                <xsd:element ref="RobotAction"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <!-- Define the NavigationCommand element here -->
+    <xsd:element name="NavigationCommand">
+        <xsd:complexType>
+            <xsd:attribute name="angle" type="xsd:float"/>
+            <xsd:attribute name="clockwise" type="xsd:boolean"/>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <!-- Define the RobotAction element here -->
+    <xsd:element name="RobotAction">
+        <xsd:complexType>
+            <xsd:attribute name="command" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <!-- Define additional schema elements here if needed -->
+    
+</xsd:schema>

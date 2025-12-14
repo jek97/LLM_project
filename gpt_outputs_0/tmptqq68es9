@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <Task id="1">
+    <Action>Take Picture</Action>
+  </Task>
+  <Task id="2">
+    <Action>Evaluate Picture for Low Temperature</Action>
+    <Dependency>1</Dependency>
+    <Condition>Picture indicates low temperature</Condition>
+  </Task>
+  <Task id="3">
+    <Action>Take Temperature Reading</Action>
+    <Dependency>2</Dependency>
+  </Task>
+  <Task id="4">
+    <Action>Evaluate Temperature Reading for Low Temperature</Action>
+    <Dependency>3</Dependency>
+    <Condition>Temperature reading is low</Condition>
+    <Action>Take CO2 Sample</Action>
+  </Task>
+  <Task id="5">
+    <Action>Drive to Far Away Tree</Action>
+  </Task>
+</MissionPlan>

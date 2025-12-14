@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RobustMissions>
+  <CompositeTaskInformation>
+    <TaskDescription xml:lang="en">Find a tree somewhere in the middle of the orchard and measure cos.</TaskDescription>
+    <DrivingTo> 
+      <GPSLocation>
+        <Latitude>37.36635688574164</Latitude>
+        <Longitude>-120.42302289785604</Longitude>
+      </GPSLocation>
+      <TreeReference>
+        <id>0</id>
+        <type>orchard_tree</type>
+        <action>measure_cos</action>
+      </TreeReference>
+    </DrivingTo>
+  </CompositeTaskInformation>
+</RobustMissions>

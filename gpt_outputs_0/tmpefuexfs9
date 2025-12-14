@@ -1,0 +1,37 @@
+<Mission xmlns="http://example.com/mission-plan">
+    <MissionName>Go to the middle and collect data</MissionName>
+    <Version>1.0</Version>
+    <StartLocation>
+        <Latitude>{{latitude_start}}</Latitude>
+        <Longitude>{{longitude_start}}</Longitude>
+    </StartLocation>
+    <EndLocation>
+        <Latitude>{{end_latitude}}</Latitude>
+        <Longitude>{{end_longitude}}</Longitude>
+    </EndLocation>
+    <TaskInformation>
+        <CompositeTaskInformation>
+            <TaskDescription>From the starting point, go to the middle of the field and take a picture of a tree. if its average temperature is below 33 C, take a CO2 sample.</TaskDescription>
+            <SequentialTasks>
+                <DriveTo Location="{middle_latitude} {middle_longitude}" DistanceEstimate="short">
+                    <ActionInformation>
+                        <TakeAPicture />
+                    </ActionInformation>
+                </DriveTo>
+                <ConditionTask>
+                    <ConditionExpression>
+                        <LessThan>
+                            <AttributeRef name="tree_average_temperature" />
+                            <Value>33</Value>
+                        </LessThan>
+                    </ConditionExpression>
+                    <DriveTo Location="{next_tree_latitude} {next_tree_longitude}" DistanceEstimate="short">
+                        <ActionInformation>
+                            <TakeCO2Sample />
+                        </ActionInformation>
+                    </DriveTo>
+                </ConditionTask>
+            </SequentialTasks>
+        </CompositeTaskInformation>
+    </TaskInformation>
+</Mission>

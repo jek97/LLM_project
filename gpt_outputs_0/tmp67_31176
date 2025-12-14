@@ -1,0 +1,21 @@
+ <Mission xmlns="http://www.w3.org/2001/XMLSchema-instance">
+ <Description>A robot mission plan.</Description>
+ <Start>[0.42299259529793, 37.36635678715399]</Start>
+ <Tasks>
+ <Task>
+ <Name>Find a tree somewhere in the middle of the orchard and measure cos.</Name>
+ <Action>Take a picture of a nearby tree if low reading.</Action>
+ </Task>
+ <Task>
+ <Name>Go to a nearby tree and take 2 pictures of it.</Name>
+ </Task>
+ <Task>
+ <Name>Measure another tree as far away as possible for co2</Name>
+ <Repeat count="2" />
+ </Task>
+ <Task>
+ <Name>Take temperature readings at any one of the northern most trees</Name>
+ </Task>
+ </Tasks>
+ <End>[0.42301417901265, 37.3662730362294]</End>
+</Mission> 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missions xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <mission>
+    <name>Orchard Exploration</name>
+    <description>Explore the orchard and take pictures of specific trees.</description>
+    
+    <activity name="Capture Image and Drive to Middle of Orchard">
+      <task name="Picture Northernmost Tree">
+        <coordinates>Northernmost tree coordinates</coordinates>
+        <image_format>jpg</image_format>
+      </task>
+      
+      <task name="Drive to Middle of Orchard">
+        <action>Drive straight</action>
+      </task>
+      
+      <task name="Capture Image">
+        <coordinates>Middle of the orchard coordinates</coordinates>
+        <image_format>jpg</image_format>
+      </task>
+    </activity>
+    
+    <activity name="Capture Images of Two Trees Next to Each Other and Drive to Middle of Eastern End">
+      <task name="Capture Images of Two Trees Next to Each Other">
+        <coordinates>Eastern end tree coordinates</coordinates>
+        <image_format>jpg</image_format>
+      </task>
+      
+      <task name="Drive to Middle of Eastern End">
+        <action>Turn left and drive straight</action>
+      </task>
+    </activity>
+  </mission>
+</missions>

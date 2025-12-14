@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GeoJSON>
+    <FeatureCollection>
+        <!-- Feature for starting point -->
+        <Feature id="StartingPoint">
+            <type>Point</type>
+            <properties />
+            <coordinates>-120.42302289785604, 37.36635688574164</coordinates>
+        </Feature>
+
+        <!-- Feature for Tree 1 -->
+        <Feature id="Tree1">
+            <type>Point</type>
+            <properties />
+            <coordinates>-120.42309252722157, 37.36631509745154</coordinates>
+        </Feature>
+
+        <!-- Feature for Tree N+1 -->
+        <Feature id="TreeN+1">
+            <type>Point</type>
+            <properties />
+            <coordinates>-120.42309252722157, 37.36631509745154</coordinates>
+        </Feature>
+
+        <!-- ... add more tree features as needed -->
+
+        <!-- Feature for Ending Temperature -->
+        <Feature id="EndingTemperature">
+            <type>Point</type>
+            <properties />
+            <coordinates>-120.42309252722157, 37.36631509745154</coordinates>
+        </Feature>
+    </FeatureCollection>
+
+    <!-- Task Information -->
+    <CompositeTaskInformation>
+        <!-- Task to drive to a tree -->
+        <DrivingTask id="DriveToTree" type="DrivingTask">
+            <startLocation ref="#StartingPoint"/>
+            <endLocation ref="#Tree1"/> <!-- Replace with actual tree ID -->
+            <estimatedTravelDistance>0.5</estimatedTravelDistance>
+        </DrivingTask>
+
+        <!-- Task to take pictures of nearby trees if cos low reading -->
+        <DrivingTask id="DriveToNearby" type="DrivingTask">
+            <startLocation ref="#Tree1"/>
+            <endLocation ref="#Tree2"/> <!-- Replace with actual tree ID -->
+            <estimatedTravelDistance>0.5</estimatedTravelDistance>
+        </DrivingTask>
+
+        <!-- Task to measure another tree as far away as possible for CO2 -->
+        <DrivingTask id="DriveToFar" type="DrivingTask">
+            <startLocation ref="#Tree1"/>
+            <endLocation ref="#TreeN+1"/> <!-- Replace with actual tree ID -->
+            <estimatedTravelDistance>10.0</estimatedTravelDistance>
+        </DrivingTask>
+
+        <!-- Task to repeat the same process if necessary -->
+        <LoopTask id="RepeatProcess" type="CompositeTask">
+            <TaskSequence>
+                <DrivingTask id="DriveToNearby"/>
+                <DrivingTask id="DriveToFar"/>
+            </TaskSequence>
+        </LoopTask>
+
+        <!-- Task to take a temperature reading at any one of the northernmost trees -->
+        <DrivingTask id="DriveToNorthern" type="DrivingTask">
+            <startLocation ref="#TreeN+1"/>
+            <endLocation ref="#EndingTemperature"/> <!-- Replace with actual tree ID -->
+            <estimatedTravelDistance>10.0</estimatedTravelDistance>
+        </DrivingTask>
+
+        <!-- Task to drive back to the end point -->
+        <DrivingTask id="DriveToEnd" type="DrivingTask">
+            <startLocation ref="#EndingTemperature"/>
+            <endLocation ref="#StartingPoint"/> <!-- Replace with actual tree ID -->
+            <estimatedTravelDistance>10.0</estimatedTravelDistance>
+        </DrivingTask>
+    </CompositeTaskInformation>
+
+    <!-- References for tree measurements -->
+    <TreeMeasurementReference>
+        <tree id="Tree1" coordinates="-120.42309252722157, 37.36631509745154"/>
+        <tree id="Tree2" coordinates="-120.42302289785604, 37.36635688574164"/>
+        <!-- ... add references for all trees in the orchard ... -->
+    </TreeMeasurementReference>
+
+    <!-- Task Information -->
+    <TaskInformation id="EndingTemperature">
+        <description>Taken at Northernmost Tree</description>
+    </TaskInformation>
+
+    <!-- Add more details as needed (e.g., sensor calibration, error handling) -->
+</GeoJSON>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      This mission plan outlines a process for collecting environmental data at orchard trees. It begins with a picture capture and subsequent temperature and CO2 readings. If initial readings are low, the mission will continue to drive to distant trees, repeating the data collection process. If initial readings are not low, the mission will proceed to the designated end point.
+    </TaskDescription>
+    <Steps>
+      <Step id="1">
+        <Action>Drive to Tree ID 12</Action>
+        <Instruction>Capture a picture of Tree ID 12.</Instruction>
+      </Step>
+      <Step id="2">
+        <Action>Analyze Picture for Low Temperature</Action>
+        <Instruction>Assess the image to determine if the temperature is low.</Instruction>
+      </Step>
+      <Step id="3">
+        <Condition>Picture shows low temperature</Condition>
+        <Action>Take a temperature reading at Tree ID 12</Action>
+        <Instruction>If picture confirms low temperature, record a temperature reading.</Instruction>
+      </Step>
+      <Step id="4">
+        <Condition>Temperature reading is low</Condition>
+        <Action>Take a CO2 sample at Tree ID 12</Action>
+        <Instruction>If temperature is low, collect a CO2 sample.</Instruction>
+      </Step>
+      <Step id="5">
+        <Condition>Temperature reading is low AND CO2 reading is low</Condition>
+        <Action>Drive to Tree ID 13</Action>
+        <Instruction>Navigate to Tree ID 13, repeating the data collection process.</Instruction>
+      </Step>
+      <Step id="6">
+        <Condition>Initial picture does not show low temperature</Condition>
+        <Action>Drive to End Point</Action>
+        <Instruction>If the initial picture does not indicate low temperature, proceed directly to the designated end point.</Instruction>
+      </Step>
+    </Steps>
+  </CompositeTaskInformation>
+</MissionPlan>

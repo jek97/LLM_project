@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:Mission xmlns:ns="http://example.com/mission.xsd"
+             xsi:schemaLocation="http://example.com/mission.xsd http://example.com/mission.xsd#"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CompositeTaskInformation>
+    <!-- Task 1: Drive to the northern most tree and take a picture -->
+    <ns:DrivingAction>
+      <StartLocation ref="#tree_18"/>
+      <EndLocation ref="#eastern_middle_point"/>
+      <Distance unit="kilometers">0.01</Distance>
+      <TaskDescription xml:lang="en-US">Drive to the northern most tree and take a picture</TaskDescription>
+    </ns:DrivingAction>
+
+    <!-- Task 2: Take another task -->
+    <ns:DrivingAction>
+      <StartLocation ref="#tree_20"/>
+      <EndLocation ref="#eastern_middle_point_2"/>
+      <Distance unit="kilometers">0.02</Distance>
+      <TaskDescription xml:lang="en-US">Take another task</TaskDescription>
+    </ns:DrivingAction>
+
+  </CompositeTaskInformation>
+
+  <!-- Tree locations -->
+  <Tree id="3" x="4" y="5"/>
+  <Tree id="18" x="10" y="20"/>
+  <Tree id="20" x="15" y="25"/>
+  <Point coordinates="-0.01, 0.01" />
+  <Point coordinates="-0.02, -0.02" />
+
+</ns:Mission>

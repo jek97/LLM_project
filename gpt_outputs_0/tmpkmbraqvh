@@ -1,0 +1,3 @@
+ It seems that there is an issue with your mission\_schema\_v1.0.xsd file. To resolve this issue, please provide me with the contents of your schema file, which should be located at the beginning of your XML document as the root element (`<MissionPlan>`).
+
+Once I have the schema content, I can help you identify and fix any potential issues that may be causing the error. 

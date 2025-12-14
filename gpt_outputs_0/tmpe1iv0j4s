@@ -1,0 +1,43 @@
+Here is the XML mission plan:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/mission.xsd
+         http://robust-mission-planning.com/mission.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Start Mission</TaskDescription>
+    <Outcome>
+      <DrivingToTree location="${tree1}" />
+      <TakePicture action="picture" />
+      <If condition="${pictureLowTemperature}">
+        <TakeTemperatureReading />
+        <If condition="${temperatureLow}">
+          <TakeCO2Sample />
+          <DriveToFarAwayTree location="${farawayTree}" />
+          <RepeatTaskDescription>
+            <TaskDescription>Start Mission</TaskDescription>
+            <Outcome>
+              <DrivingToTree location="${tree1}" />
+              <TakePicture action="picture" />
+              <If condition="${pictureLowTemperature}">
+                <TakeTemperatureReading />
+                <If condition="${temperatureLow}">
+                  <TakeCO2Sample />
+                  <DriveToFarAwayTree location="${farawayTree}" />
+                  <!-- repeat indefinitely -->
+                </If>
+              </If>
+            </Outcome>
+          </RepeatTaskDescription>
+        </If>
+      </If>
+      <If condition="${!pictureLowTemperature}">
+        <DrivingToEnd location="${end}" />
+      </If>
+    </Outcome>
+  </CompositeTaskInformation>
+</Mission>
+```
+Note that I've used the `xsi:schemaLocation` attribute to reference the schema for this XML document. Also, I've assumed that the `tree1`, `farawayTree`, and `end` locations are defined in the GeoJSON file.
+
+Please note that I've also added a comment to indicate where the repeat loop would start if the temperature reading is low. This will continue indefinitely until the mission is stopped or an error occurs.

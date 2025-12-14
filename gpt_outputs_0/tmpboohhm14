@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.example.com/mission.xsd http://www.example.com/mission.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Take a picture of two trees next to each other</TaskDescription>
+    <Preconditions>
+      <DrivingToLocation>
+        <GPSLocation ref="#tree1" />
+      </DrivingToLocation>
+    </Preconditions>
+    <Actions>
+      <PictureTree>
+        <GPSLocation ref="#tree2" />
+      </PictureTree>
+    </Actions>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription>Take two CO2 readings of two trees next to each other</TaskDescription>
+    <Preconditions>
+      <DrivingToLocation>
+        <GPSLocation ref="#tree3" />
+      </DrivingToLocation>
+    </Preconditions>
+    <Actions>
+      <DriveTo>
+        <GPSLocation ref="#tree4" />
+      </DriveTo>
+      <CO2ReadingTree1>
+        <Description>Take CO2 reading from tree 5</Description>
+      </CO2ReadingTree1>
+      <DriveTo>
+        <Description>Drive to the next tree</Description>
+      </DriveTo>
+      <CO2ReadingTree2>
+        <Description>Take CO2 reading from tree 6</Description>
+      </CO2ReadingTree2>
+    </Actions>
+  </CompositeTaskInformation>
+</Mission>
+
+<Feature id="tree1" type="Point">
+  <geometry>
+    <coordinates>-120.42302289785604, 37.36635688574164</coordinates>
+  </geometry>
+</Feature>
+
+<Feature id="tree2" type="Point">
+  <geometry>
+    <coordinates>-120.42309252722157, 37.36631509745154</coordinates>
+  </geometry>
+</Feature>
+
+<Feature id="tree3" type="Point">
+  <geometry>
+    <coordinates>-120.4230350832969, 37.36635015674898</coordinates>
+  </geometry>
+</Feature>
+
+<Feature id="tree4" type="Point">
+  <geometry>
+    <coordinates>-120.42308819251039, 37.366300236834725</coordinates>
+  </geometry>
+</Feature>
+
+<Feature id="tree5" type="Point">
+  <geometry>
+    <coordinates>-120.42308272918532, 37.36632114247575</coordinates>
+  </geometry>
+</Feature>
+
+<Feature id="tree6" type="Point">
+  <geometry>
+    <coordinates>-120.42308444444444, 37.36632222222222</coordinates>
+  </geometry>
+</Feature>

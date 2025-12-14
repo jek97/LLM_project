@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/MissionPlanSchema">
+    <Header>
+        <Name>Corner Tree Imaging Mission</Name>
+        <Description>Take pictures of the trees at each corner of the farm.</Description>
+    </Header>
+    <!-- Your schema does not include a namespace for xsi. -->
+    <!-- To include xsi in your XML file, add the following line at the beginning:
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     -->
+
+    <CompositeTaskInformation>
+        <!-- Include the original question in the TaskDescription element -->
+        <TaskDescription xsi:type="Question">What is the objective of this mission?</TaskDescription>
+
+        <SequentialTask>
+            <!-- Sequence of tasks: Navigate to the first corner, take a picture of the tree, move to the second corner, etc. -->
+            <NavigationTask>
+                <!-- MoveToCoordinates element uses GPS coordinates from GeoJSON data -->
+                <MoveToCoordinates>
+                    <Latitude>37.36628908556382</Latitude>
+                    <Longitude>-120.42298051393493</Longitude>
+                </MoveToCoordinates>
+
+                <!-- Include a question for logging -->
+                <TaskDescription xsi:type="Question">Moving to the first corner.</TaskDescription>
+            </NavigationTask>
+
+            <ImageTreeTask>
+                <!-- Include TreeType here, if known from GeoJSON data or any other source -->
+                <TreeType>Not Specified</TreeType>
+
+                <!-- Include a question for logging -->
+                <TaskDescription xsi:type="Question">Taking an image of the tree at the first corner.</TaskDescription>
+            </ImageTreeTask>
+        </SequentialTask>
+
+        <!-- Repeat the following SequentialTask for each remaining corner -->
+        <SequentialTask>
+            <NavigationTask>
+                <!-- MoveToCoordinates element uses GPS coordinates from GeoJSON data -->
+                <MoveToCoordinates>
+                    <Latitude>37.3662730362294</Latitude>
+                    <Longitude>-120.42301417901265</Longitude>
+                </MoveToCoordinates>
+
+                <!-- Include a question for logging -->
+                <TaskDescription xsi:type="Question">Moving to the second corner.</TaskDescription>
+            </NavigationTask>
+
+            <ImageTreeTask>
+                <!-- Include TreeType here, if known from GeoJSON data or any other source -->
+                <TreeType>Not Specified</TreeType>
+
+                <!-- Include a question for logging -->
+                <TaskDescription xsi:type="Question">Taking an image of the tree at the second corner.</TaskDescription>
+            </ImageTreeTask>
+        </SequentialTask>
+
+        <!-- ... -->
+
+        <SequentialTask>
+            <NavigationTask>
+                <!-- MoveToCoordinates element uses GPS coordinates from GeoJSON data -->
+                <MoveToCoordinates>
+                    <Latitude>37.36626996761184</Latitude>
+                    <Longitude>-120.423044218715</Longitude>
+                </MoveToCoordinates>
+
+                <!-- Include a question for logging -->
+                <TaskDescription xsi:type="Question">Moving to the third corner.</TaskDescription>
+            </NavigationTask>
+
+            <ImageTreeTask>
+                <!-- Include TreeType here, if known from GeoJSON data or any other source -->
+                <TreeType>Not Specified</TreeType>
+
+                <!-- Include a question for logging -->
+                <TaskDescription xsi:type="Question">Taking an image of the tree at the third corner.</TaskDescription>
+            </ImageTreeTask>
+        </SequentialTask>
+
+        <!-- ... -->
+    </CompositeTaskInformation>
+
+    <!-- Outcome element is optional. Include if possible, with a general estimate of traveled distance without showing the calculation method. -->
+    <Outcome xsi:type="Question">Total estimated Haversine distance traveled from start to end: [Distance]</Outcome>
+</MissionPlan>

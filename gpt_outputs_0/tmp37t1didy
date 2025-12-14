@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionplan:MissionPlan xmlns:missionplan="http://example.com/missionplan">
+  <Tasks>
+    <Waypoint id="1" latitude="37.36636077337479" longitude="-120.42307592599273" reward="0.92"/>
+    <Waypoint id="2" latitude="37.36631785560332" longitude="-120.42303004014194" reward="0.92"/>
+    <Waypoint id="3" latitude="37.36635678715399" longitude="-120.42298051393493" reward="0.92"/>
+    <Waypoint id="4" latitude="37.36631785560332" longitude="-120.42303004014194" reward="0.92"/>
+    <Waypoint id="5" latitude="37.36636077337479" longitude="-120.42307592599273" reward="0.92"/>
+    <Waypoint id="6" latitude="37.36635678715399" longitude="-120.42298051393493" reward="0.92"/>
+    <Waypoint id="7" latitude="37.36631785560332" longitude="-120.42303004014194" reward="0.92"/>
+    <Waypoint id="8" latitude="37.36636077337479" longitude="-120.42307592599273" reward="0.92"/>
+    <Waypoint id="9" latitude="37.36635678715399" longitude="-120.42298051393493" reward="0.92"/>
+    <Waypoint id="10" latitude="37.36631785560332" longitude="-120.42303004014194" reward="0.92"/>
+    <Waypoint id="11" latitude="37.36636077337479" longitude="-120.42307592599273" reward="0.92"/>
+    <Waypoint id="12" latitude="37.36635678715399" longitude="-120.42298051393493" reward="0.92"/>
+  </Tasks>
+</missionplan:MissionPlan>

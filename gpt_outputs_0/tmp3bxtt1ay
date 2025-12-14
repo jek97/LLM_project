@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://robotic-task-representation.org/mission/4.0 
+   http://robotic-task-representation.org/mission/mission.xsd">
+  <TaskInformation>
+    <!-- Task to take picture of the northernmost tree -->
+    <CompositeTaskInformation>
+      <name>TakePictureAtNorthernmostTree</name>
+      <description>Drive to the location of the northernmost tree and take a picture.</description>
+      <type>CameraAction</type>
+      <precondition>None</precondition>
+      <outcome>
+        <DrivingAction>DriveToLocation</-drivingAction>
+        <PictureTakingAction>TakePicture</picture-taking-action>
+        <log>
+          <TaskDescription>
+            <!-- Place the original question in the TaskDescription element -->
+            Take picture at tree with id 0, action 0
+          </TaskDescription>
+        </log>
+      </outcome>
+    </CompositeTaskInformation>
+
+    <!-- Drive to the middle of the orchard -->
+    <DrivingAction name="DriveToMiddleOfOrchard" type="Navigation"/>
+    
+    <!-- Task to take picture at the location -->
+    <CompositeTaskInformation>
+      <name>TakePictureAtLocation</name>
+      <description>Drive to the location and take a picture.</description>
+      <type>CameraAction</type>
+      <precondition>Must arrive at middle of orchard</precondition>
+      <outcome>
+        <DrivingAction>StopAtLocation</driving-action>
+        <PictureTakingAction>TakePicture</picture-taking-action>
+        <log>
+          <TaskDescription>
+            Take picture at tree with id 6, action 0
+          </TaskDescription>
+          <!-- Add estimated haversine distance traveled from start to end -->
+          Total estimated haversine distance: 500 km
+        </log>
+      </outcome>
+    </CompositeTaskInformation>
+
+    <!-- Task to take pictures of two trees next to each other -->
+    <CompositeTaskInformation>
+      <name>TakePicturesOfAdjacentTrees</name>
+      <description>Drive to the eastern end of the orchard and take pictures of two trees next to each other.</description>
+      <type>CameraAction</type>
+      <precondition>Must arrive at eastern end of orchard</precondition>
+      <outcome>
+        <DrivingAction>StopAtLocation</driving-action>
+        <PictureTakingAction>TakePicturesOfAdjacentTrees</picture-taking-action>
+        <log>
+          <TaskDescription>
+            Take picture at trees with ids 14 and 15, actions 0 and 1
+          </TaskDescription>
+          Total estimated haversine distance: 700 km
+        </log>
+      </outcome>
+    </CompositeTaskInformation>
+
+  </TaskInformation>
+</Mission>

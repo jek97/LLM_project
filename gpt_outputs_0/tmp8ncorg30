@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:gml="http://www.opengis.net/gml" xsi:schemaLocation="http://example.com/missionplan MissionPlan.xsd">
+    <CompositeTaskInformation>
+        <TaskDescription>Generate mission plan to visit all trees on the farm</TaskDescription>
+    </CompositeTaskInformation>
+    <CompositeTaskList>
+        <!-- Task 1: Drive to Point_0 -->
+        <DriveToLocation>
+            <LocationReference>gml:Point gml:id="Point_0">
+                <gml:coordinates>${latitude_0} ${longitude_0}</gml:coordinates>
+            </LocationReference>
+        </DriveToLocation>
+        <DoAction>
+            <ActionType>VisitTree</ActionType>
+            <Reward>0.5 - (LastSampled_0 / 365)</Reward> <!-- Adjust the multiplier as needed to make the reward more or less sensitive to last sampled -->
+        </DoAction>
+
+        <!-- Task 2: Drive from Point_0 to Point_1 -->
+        <DriveToLocation>
+            <LocationReference>gml:Point gml:id="Point_1">
+                <gml:coordinates>${latitude_1} ${longitude_1}</gml:coordinates>
+            </LocationReference>
+        </DriveToLocation>
+        <DoAction>
+            <ActionType>VisitTree</ActionType>
+            <Reward>0.5 - (LastSampled_1 / 365)</Reward>
+        </DoAction>
+
+        <!-- Continue this pattern for all points -->
+
+        <!-- Last Task: Drive back to the starting location -->
+        <DriveToLocation>
+            <LocationReference>gml:Point gml:id="StartingLocation">
+                <gml:coordinates>${latitude_start} ${longitude_start}</gml:coordinates>
+            </LocationReference>
+        </DriveToLocation>
+    </CompositeTaskList>
+    <!-- Outcome should not be displayed in the output -->
+</MissionPlan>

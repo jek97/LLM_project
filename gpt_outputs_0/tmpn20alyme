@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RobotTask xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://robotictask.org/schemas/taskDescription.xsd 
+                               http://robotictask.org/schemas/taskDescription.xsd">
+  <MissionPlan>
+    <CompositeTaskInformation>
+      <!-- rest of the document -->
+    </CompositeTaskInformation>
+  </MissionPlan>
+</RobotTask>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <Steps>
+        <Step id="1">
+            <Action>NavigateTo</Action>
+            <Target>Pistachio Tree 1</Target>
+        </Step>
+    </Steps>
+</MissionPlan>

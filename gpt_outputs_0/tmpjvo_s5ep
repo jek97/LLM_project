@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom_namespace:mission xmlns:custom_namespace="http://www.yourdomain.com/missions">
+    <!-- Your XML mission plan -->
+</custom_namespace:mission>

@@ -1,0 +1,20 @@
+ Below is an example of a simplified XML file structure that follows the schema and visits as many trees as possible within 100 meters. You may want to add more details depending on your requirements.
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <target id="1">[120.42298051393493, 37.36628908556382]</target>
+    <target id="2">[120.42299259529793, 37.36635678715399]</target>
+    <!-- ... more targets -->
+    <robot>
+        <position x="0" y="0" heading="0"/>
+        <capability name="photography"/>
+    </robot>
+    <distance_threshold value="100"/>
+    <movementStrategy type="sequential">
+        <!-- ... your movement strategy -->
+    </movementStrategy>
+</mission>
+```
+In this example, the mission has 2 targets (id=1 and id=2) with their respective coordinates. You can add more `<target>` elements to include additional trees in the mission. The robot is equipped with a capability for photography. The movement strategy is set to sequential, which means the robot will visit each target in sequence. You can modify this strategy based on your requirements.
+
+Please note that this is just a starting point and you may need to adapt or expand upon it depending on the specifics of your robotic mission. 

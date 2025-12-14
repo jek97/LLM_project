@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.com/missionplan" xmlns="http://www.example.com/missionplan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.com/missionplan http://www.example.com/missionplan.xsd">
+    <xs:element name="RoboticMissionPlan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="MissionStep" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Include any additional schema elements here -->
+    
+</xs:schema>

@@ -1,0 +1,35 @@
+Here is an example of a mission plan XML document based on the provided GeoJSON data:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robotic-task-representation.org/schema/mission_plan.xsd
+                                 http://robotic-task-representation.org/schema/mission_plan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Visit as many points as possible in 100 meters and take pictures of each tree.</TaskDescription>
+    <Outcome>
+      <DrivingToLocation>
+        <TreeId>6</TreeId>
+      </DrivingToLocation>
+      <TakePictureOfTree>
+        <TreeId>6</TreeId>
+      </TakePictureOfTree>
+      <DrivingToLocation>
+        <TreeId>7</TreeId>
+      </DrivingToLocation>
+      <TakePictureOfTree>
+        <TreeId>7</TreeId>
+      </TakePictureOfTree>
+      <!-- Add more DrivingToLocation and TakePictureOfTree elements for each tree visited -->
+    </Outcome>
+  </CompositeTaskInformation>
+  <GeoJSONReference>
+    <id>orchard-geojson</id>
+    <uri>https://example.com/orchard.geojson</uri>
+  </GeoJSONReference>
+</MissionPlan>
+```
+Note that this is just an example, and you may need to modify it based on your specific requirements. Additionally, the `DrivingToLocation` and `TakePictureOfTree` elements are assumed to be part of a larger schema for robotic task representation.
+
+Also, I've commented out some of the `DrivingToLocation` and `TakePictureOfTree` elements to show how you can add more trees to visit. You'll need to update these elements with the actual tree IDs from your GeoJSON data.
+
+Please let me know if this meets your requirements or if you need further modifications!

@@ -1,0 +1,65 @@
+<robotics-mission xmlns="http://www.example.com/robotics-mission"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://www.example.com/robotics-mission http://www.example.com/robotics-mission.xsd">
+    <Mission>
+        <MissionHeader>
+            <MissionID>TreePictureMission</MissionID>
+            <StartTime>2023-04-15T10:00:00Z</StartTime>
+            <EndTime>2023-04-15T12:00:00Z</EndTime>
+        </MissionHeader>
+        <TaskList>
+            <CompositeTaskInformation>
+                <TaskDescription>Going clockwise from the north most tree, take a picture of 4 trees. Original question: Going clockwise from the north most tree, take a picture of 4 trees.</TaskDescription>
+                <SubTaskList>
+                    <SingleTaskInformation>
+                        <TaskID>1</TaskID>
+                        <Action>DriveToLocation</Action>
+                        <TargetLocation xsi:type="Point">{{north_most_tree.coordinates}}</TargetLocation>
+                    </SingleTaskInformation>
+                    <SingleTaskInformation>
+                        <TaskID>2</TaskID>
+                        <Action>TakePicture</Action>
+                        <TargetLocation xsi:type="Point">{{north_most_tree.coordinates}}</TargetLocation>
+                    </SingleTaskInformation>
+                    <CompositeTaskInformation>
+                        <TaskID>3</TaskID>
+                        <Action>DriveToLocation</Action>
+                        <TargetLocation xsi:type="Point">{{east_most_tree.coordinates}}</TargetLocation>
+                        <SubTaskList>
+                            <SingleTaskInformation>
+                                <TaskID>4</TaskID>
+                                <Action>TakePicture</Action>
+                                <TargetLocation xsi:type="Point">{{east_most_tree.coordinates}}</TargetLocation>
+                            </SingleTaskInformation>
+                        </SubTaskList>
+                    </CompositeTaskInformation>
+                    <CompositeTaskInformation>
+                        <TaskID>5</TaskID>
+                        <Action>DriveToLocation</Action>
+                        <TargetLocation xsi:type="Point">{{south_most_tree.coordinates}}</TargetLocation>
+                        <SubTaskList>
+                            <SingleTaskInformation>
+                                <TaskID>6</TaskID>
+                                <Action>TakePicture</Action>
+                                <TargetLocation xsi:type="Point">{{south_most_tree.coordinates}}</TargetLocation>
+                            </SingleTaskInformation>
+                        </SubTaskList>
+                    </CompositeTaskInformation>
+                    <CompositeTaskInformation>
+                        <TaskID>7</TaskID>
+                        <Action>DriveToLocation</Action>
+                        <TargetLocation xsi:type="Point">{{west_most_tree.coordinates}}</TargetLocation>
+                        <SubTaskList>
+                            <SingleTaskInformation>
+                                <TaskID>8</TaskID>
+                                <Action>TakePicture</Action>
+                                <TargetLocation xsi:type="Point">{{west_most_tree.coordinates}}</TargetLocation>
+                            </SingleTaskInformation>
+                        </SubTaskList>
+                    </CompositeTaskInformation>
+                </SubTaskList>
+            </CompositeTaskInformation>
+        </TaskList>
+        <Outcome>The robot successfully completed the mission. The estimated total distance traveled is significant, but it was a long journey to capture all the tree images.</Outcome>
+    </Mission>
+</robotics-mission>

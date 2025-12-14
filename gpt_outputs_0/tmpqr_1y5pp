@@ -1,0 +1,35 @@
+<mission>
+    <name>Picture Taking Mission</name>
+    <instructions>Take a picture of each tree as you move around them in a clockwise direction. Make sure to capture the most distant locations possible.</instructions>
+    
+    <waypoints>
+        <waypoint id="1" name="North most tree">
+            <coordinates lat="37.36635640370881" lon="-120.42304700637999"/>
+            <image>Northmost_tree.jpg</image>
+        </waypoint>
+        
+        <waypoint id="2" name="East most tree">
+            <coordinates lat="37.36631785560332" lon="-120.42300386899338"/>
+            <image>Eastmost_tree.jpg</image>
+        </waypoint>
+        
+        <waypoint id="3" name="South most tree">
+            <coordinates lat="37.366300703749474" lon="-120.42304700637999"/>
+            <image>Southmost_tree.jpg</image>
+        </waypoint>
+        
+        <waypoint id="4" name="West most tree">
+            <coordinates lat="37.36635678715399" lon="-120.42298051393493"/>
+            <image>Westmost_tree.jpg</image>
+        </waypoint>
+    </waypoints>
+    
+    <starting_position id="start">
+        <coordinates lat="37.36635640370881" lon="-120.42304700637999"/>
+    </starting_position>
+    
+    <ending_position id="end">
+        <coordinates lat="37.36635678715399" lon="-120.42298051393493"/>
+    </ending_position>
+    
+</mission>

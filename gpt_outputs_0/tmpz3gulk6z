@@ -1,0 +1,41 @@
+<MissionPlan <?xml version="1.0" encoding="UTF-8"?>
+  <Task id="1">
+    <Description>Take a picture of the first tree.</Description>
+    <Action>TakePicture</Action>
+    <Target>Tree_1</Target>
+  </Task>
+  <Task id="2">
+    <Description>If the reading is low, take a co2 sample.</Description>
+    <Action>CheckReading</Action>
+    <Condition>ReadingLow</Condition>
+    <Action>TakeCO2Sample</Action>
+    <Target>Tree_2</Target>
+  </Task>
+  <Task id="3">
+    <Description>Otherwise, take a temperature reading.</Description>
+    <Action>CheckReading</Action>
+    <Condition>ReadingNotLow</Condition>
+    <Action>TakeTemperatureReading</Action>
+    <Target>Tree_1</Target>
+  </Task>
+  <Task id="4">
+    <Description>Measure another tree, a different one by taking a picture.</Description>
+    <Action>TakePicture</Action>
+    <Target>Tree_2</Target>
+  </Task>
+  <Task id="5">
+    <Description>If it’s low, sample co2. if that reading is low, sample co2 again to confirm.</Description>
+    <Action>CheckReading</Action>
+    <Condition>ReadingLow</Condition>
+    <Action>TakeCO2Sample</Action>
+    <Target>Tree_2</Target>
+  </Task>
+  <Task id="6">
+    <Description>if still low, continue driving to another tree and take another co2 sample.</Description>
+    <Action>DriveToNextTree</Action>
+  </Task>
+  <Task id="7">
+    <Description>Finally, go to end.</Description>
+    <Action>GoToEnd</Action>
+  </Task>
+</MissionPlan>

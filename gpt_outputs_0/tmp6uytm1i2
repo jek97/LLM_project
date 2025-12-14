@@ -1,0 +1,10 @@
+   <mission>
+     <initialPosition>0, 0</initialPosition>
+     <task>
+       <action>MOVE</action>
+       <parameters>x1,y1</parameters>
+       <description>Moving from initial position to first tree location.</description>
+     </task>
+     <!-- Repeat for other tasks -->
+   </mission>
+   

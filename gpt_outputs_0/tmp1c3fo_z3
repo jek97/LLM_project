@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlanSchema:Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           xmlns:xi="http://www.w3.org/2001/XInclude"
+                           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                           xmlns:missionPlanSchema="http://example.com/missionPlanSchema">
+    <Identification>
+        <Name>Robotic Fruit Collection Mission</Name>
+        <Description>Visit all the trees on the farm, prioritize points sampled longer ago.</Description>
+        <Author>Robot Planner</Author>
+        <Version>1.0</Version>
+    </Identification>
+    <Parameters>
+        <TimeResolution>60s</TimeResolution>
+    </Parameters>
+    <!-- Mission Plan -->
+    <missionPlanSchema:CompositeTaskInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SequentialTask">
+        <!-- Original Question -->
+        <TaskDescription>Visit all the trees on the farm, prioritize points sampled longer ago.</TaskDescription>
+
+        <!-- Loop through GeoJSON features to create tasks -->
+        <xsl:for-each select="/FeatureCollection/Feature">
+            <missionPlanSchema:CompositeTaskInformation xsi:type="SequentialTask">
+                <Position>
+                    <!-- Extract GPS coordinates from the GeoJSON feature -->
+                    <missionPlanSchema:Coordinates>
+                        <Latitude><xsl:value-of select="geometry/coordinates/2"/></Latitude>
+                        <Longitude><xsl:value-of select="geometry/coordinates/1"/></Longitude>
+                    </missionPlanSchema:Coordinates>
+                </Position>
+
+                <!-- Drive to the location -->
+                <missionPlanSchema:CompositeTaskInformation xsi:type="SequentialTask">
+                    <TaskName>DriveToLocation</TaskName>
+                    <Position>
+                        <missionPlanSchema:Coordinates>
+                            <Latitude><xsl:value-of select="geometry/coordinates/2"/></Latitude>
+                            <Longitude><xsl:value-of select="geometry/coordinates/1"/></Longitude>
+                        </missionPlanSchema:Coordinates>
+                    </Position>
+                </missionPlanSchema:CompositeTaskInformation>
+
+                <!-- Do the task at target location -->
+                <missionPlanSchema:CompositeTaskInformation xsi:type="SequentialTask">
+                    <Action>
+                        <xsl:attribute name="name">TreeType</xsl:attribute>
+                        <Position>
+                            <missionPlanSchema:Coordinates>
+                                <Latitude><xsl:value-of select="geometry/coordinates/2"/></Latitude>
+                                <Longitude><xsl:value-of select="geometry/coordinates/1"/></Longitude>
+                            </missionPlanSchema:Coordinates>
+                        </Position>
+                    </Action>
+                </missionPlanSchema:CompositeTaskInformation>
+            </missionPlanSchema:CompositeTaskInformation>
+        </xsl:for-each>
+    </missionPlanSchema:CompositeTaskInformation>
+
+    <!-- Add a task to return home -->
+    <missionPlanSchema:CompositeTaskInformation xsi:type="SequentialTask">
+        <Position>
+            <missionPlanSchema:Coordinates>
+                <Latitude><xsl:value-of select="/HomeLocation/coordinates/2"/></Latitude>
+                <Longitude><xsl:value-of select="/HomeLocation/coordinates/1"/></Longitude>
+            </missionPlanSchema:Coordinates>
+        </Position>
+        <missionPlanSchema:CompositeTaskInformation xsi:type="SequentialTask">
+            <TaskName>DriveToLocation</TaskName>
+            <Position>
+                <missionPlanSchema:Coordinates>
+                    <Latitude><xsl:value-of select="/HomeLocation/coordinates/2"/></Latitude>
+                    <Longitude><xsl:value-of select="/HomeLocation/coordinates/1"/></Longitated</Longitude>
+                </missionPlanSchema:Coordinates>
+            </Position>
+        </missionPlanSchema:CompositeTaskInformation>
+    </missionPlanSchema:CompositeTaskInformation>
+
+    <Outcome>Estimated total Haversine distance traveled from start to end.</Outcome>
+</missionPlanSchema:Mission>

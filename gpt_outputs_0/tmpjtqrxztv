@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan schema="Pistachio_Row_Plan.xsd" version="1.0">
+  <TaskDescription>
+    <TaskID>Mission_Pistachio_Row</TaskID>
+    <TaskName>Select and Photograph Pistachio Trees in a Row</TaskName>
+    <Description>Drive to the farm and select 5 pistachio trees in a row to visit and take a picture of 3 of them.</Description>
+    <Objective>Photograph 3 out of 5 selected pistachio trees in a row.</Objective>
+  </TaskDescription>
+</MissionPlan>

@@ -1,0 +1,24 @@
+<mission>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Original question: An error occurred: Extra content at the end of the document, line 9, column 1 (tmpi4rx617s, line 9)
+    </TaskDescription>
+  </CompositeTaskInformation>
+
+  <!-- Mission Plan -->
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Task description goes here for logging purposes.
+    </TaskDescription>
+    
+    <Action>
+      <DriveToTree longitude="..." latitude="...">
+        <TreeType>...</TreeType>
+      </DriveToTree>
+      
+      <PerformAction action="...">
+        <!-- Perform the action -->
+      </PerformAction>
+    </Action>
+  </CompositeTaskInformation>
+</mission>

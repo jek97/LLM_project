@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns="http://example.com/mission">
+    <mission>
+        <task name="Take a picture of two trees next to each other">
+            <location id="9"/>
+            <location id="10"/>
+        </task>
+        <task name="Take CO2 readings of two trees next to each other">
+            <location id="9"/>
+            <location id="11"/>
+        </task>
+    </mission>
+</robot>

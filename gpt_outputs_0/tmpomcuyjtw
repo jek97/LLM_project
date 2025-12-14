@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompositeTaskInformation xmlns:ro="http://robotic-task-representation.org/mission/4.0"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://robotic-task-representation.org/mission/4.0 
+   http://robotic-task-representation.org/mission/mission.xsd">
+  
+  <!-- Add the namespace prefix for GeoJSON -->
+  <xsd:element name="waypoint" type="ro:Waypoint"/>
+  
+  <!-- Add the namespace prefix for ro -->
+  <ro:Task description="Drive to Tree and inspect it">
+    <ro:Action name="DriveToTree"/>
+    <ro:Action name="InspectTree"/>
+  </ro:Task>
+  
+</CompositeTaskInformation>

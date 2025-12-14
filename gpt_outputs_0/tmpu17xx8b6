@@ -1,0 +1,53 @@
+Here is the generated XML document based on the provided GeoJSON data:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<RobotMission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://robotmission.org/2012/XMLSchema 
+    http://robotmission.org/2012/XMLSchema.xsd"
+  name="OrchardVisit" description="Visit the orchard and take readings from trees">
+  
+  <!-- Composite task that includes driving to a tree, taking a picture, and then taking two CO2 readings -->
+  <CompositeTaskInformation name="VisitTrees">
+    <precondition>None</precondition>
+    
+    <!-- Drive to a tree next to two other trees -->
+    <DrivingToTree id="1" coordinates="[-120.42302289785604, 37.36635688574164]" />
+    <outcome><State name="Driven">Driven to tree 1</State></outcome>
+    <taskInformation>
+      <TaskDescription>Drive to the two trees next to each other and take a picture of one.</TaskDescription>
+    </taskInformation>
+    
+    <!-- Take a picture of one of the trees -->
+    <Picture id="2" location="tree 1">
+      <outcome><State name="PictureTaken">Picture taken at tree 1</State></outcome>
+    </Picture>
+    
+    <!-- Drive to another tree next to these two trees -->
+    <DrivingToTree id="3" coordinates="[-120.42309252722157, 37.36631509745154]" />
+    <outcome><State name="Driven">Driven to tree 2</State></outcome>
+    <taskInformation>
+      <TaskDescription>Drive to the two trees next to each other and take two CO2 readings.</TaskDescription>
+    </taskInformation>
+    
+    <!-- Take two CO2 readings of one of the trees -->
+    <CO2Readings id="4" location="tree 1">
+      <outcome><State name="ReadingsTaken">Two CO2 readings taken at tree 1</State></outcome>
+    </CO2Readings>
+    
+    <DrivingToTree id="5" coordinates="[-120.4230350832969, 37.36635015674898]" />
+    <outcome><State name="Driven">Driven to tree 3</State></outcome>
+    <taskInformation>
+      <TaskDescription>Drive to the two trees next to each other and take another CO2 reading.</TaskDescription>
+    </taskInformation>
+    
+    <!-- Take a CO2 reading of one of the trees -->
+    <CO2Readings id="6" location="tree 3">
+      <outcome><State name="ReadingTaken">CO2 reading taken at tree 3</State></outcome>
+    </CO2Readings>
+  </CompositeTaskInformation>
+
+</RobotMission>
+```
+This XML document includes a composite task that drives to two trees next to each other, takes a picture of one of the trees, and then takes two CO2 readings of one of the trees. After driving to another pair of trees, it takes another CO2 reading of one of the trees. The document also includes precondition and outcome states for each task in the composite task.
+
+Note that this is just an example XML document based on your request, and you may need to modify it to suit your specific robotic mission plan requirements.

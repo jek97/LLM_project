@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Version>1.0</Version>
+    <MissionDescription>Navigate to a tree in the middle of the orchard, take a cos reading, find nearby trees with low cos reading and take 2 pictures each, find a distant tree for CO2 measurement, repeat the process for another set of trees, take a temperature reading at any northernmost tree, and return to starting point.</MissionDescription>
+    <TaskInformation>
+        <CompositeTaskInformation>
+            <TaskDescription>From the starting point, find a tree somewhere in the middle of the orchard and measure cos. If low reading, go to and take 2 pictures of nearby trees. From there, measure another tree as far away as possible for CO2 and repeat the same process.</TaskDescription>
+            <SubTasks>
+                <MovementTask>
+                    <Action>DriveToGPSLocation</Action>
+                    <TargetLocation x="Your_Middle_Tree_Latitude" y="Your_Middle_Tree_Longitude"/>
+                </MovementTask>
+                <MeasurementTask>
+                    <Action>CosineMeasurement</Action>
+                </MeasurementTask>
+                <Condition>
+                    <TestComparisonOperation xmlns:ci="http://example.org/missionplanner">
+                        <Left ci:type="NumericValue" idref="cosValue"/>
+                        <Right ci:type="Threshold" value="0.3"/>
+                        <Operator ci:type="LessThan"/>
+                    </TestComparisonOperation>
+                </Condition>
+                <CompositeTaskInformation>
+                    <TaskDescription>Go to nearby trees with low cos reading and take 2 pictures each.</TaskDescription>
+                    <SubTasks>
+                        <LoopTask>
+                            <Action>DriveToGPSLocation</Action>
+                            <Condition>
+                                <TestAndOperation>
+                                    <Left><Reference idref="Condition"/></Left>
+                                    <Right>
+                                        <MovementTask>
+                                            <Action>DistanceMeasurement</Action>
+                                            <TargetLocation x="Your_Current_Tree_Latitude" y="Your_Current_Tree_Longitude"/>
+                                        </MovementTask>
+                                    </Right>
+                                </TestAndOperation>
+                            </Condition>
+                            <LoopBody>
+                                <CompositeTaskInformation>
+                                    <TaskDescription>Take pictures of nearby trees and move to next tree.</TaskDescription>
+                                    <SubTasks>
+                                        <MovementTask>
+                                            <Action>DriveToGPSLocation</Action>
+                                            <TargetLocation x="Your_Neighboring_Tree_Latitude" y="Your_Neighboring_Tree_Longitude"/>
+                                        </MovementTask>
+                                        <PhotographyTask>
+                                            <Action>TakePicture</Action>
+                                            <TargetObject idref="Your_Neighboring_Tree"/>
+                                        </PhotographyTask>
+                                    </SubTasks>
+                                </CompositeTaskInformation>
+                            </LoopBody>
+                        </LoopTask>
+                    </SubTasks>
+                </CompositeTaskInformation>
+                <!-- Repeat the same process for CO2 measurement -->
+                <CompositeTaskInformation>
+                    <TaskDescription>Measure a distant tree for CO2 and repeat the process.</TaskDescription>
+                    <!-- Add subtasks here for measuring CO2, taking pictures, and moving to next trees -->
+                </CompositeTaskInformation>
+                <TemperatureReadingTask>
+                    <Action>TemperatureReading</Action>
+                    <TargetLocation x="Your_Northernmost_Tree_Latitude" y="Your_Northernmost_Tree_Longitude"/>
+                </TemperatureReadingTask>
+                <MovementTask>
+                    <Action>DriveToGPSLocation</Action>
+                    <TargetLocation x="Your_Starting_Point_Latitude" y="Your_Starting_Point_Longitude"/>
+                </MovementTask>
+            </SubTasks>
+        </CompositeTaskInformation>
+    </TaskInformation>
+    <GPSLocations>
+        <!-- Add GPS coordinates for the starting point, trees, and northernmost tree here -->
+    </GPSLocations>
+</MissionPlan>

@@ -1,0 +1,19 @@
+ <Mission>
+ <CompositeTaskInformation>
+ <TaskDescription>Take a picture of 2 trees next to each other and then take 2 CO2 readings of two trees next to each other.</TaskDescription>
+ </CompositeTaskInformation>
+ <Tasks>
+ <Task>
+ <Type>PictureTaking</Type>
+ <Parameters>
+ <Parameter name="Target" value="2 trees next to each other"/>
+ </Parameters>
+ </Task>
+ <Task>
+ <Type>CO2Reading</Type>
+ <Parameters>
+ <Parameter name="Target" value="2 trees next to each other"/>
+ </Parameters>
+ </Task>
+ </Tasks>
+</Mission> 

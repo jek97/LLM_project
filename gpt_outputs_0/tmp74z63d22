@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://robotic-mission-planning.com/schema/mission_plan.xsd"
+           xmlns:tns="http://robotic-mission-planning.com/schema/mission_plan.xsd">
+  <xs:element name="MissionPlan" type="tns:MissionPlanType"/>
+  
+  <xs:complexType name="MissionPlanType">
+    <xs:sequence>
+      <xs:element name="CompositeTaskInformation" type="xs:string"/>
+      <xs:element name="DrivingTask" type="xs:string"/>
+      <xs:element name="DriveTo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="GPSLocation">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="latitude" type="xs:decimal"/>
+                  <xs:element name="longitude" type="xs:decimal"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

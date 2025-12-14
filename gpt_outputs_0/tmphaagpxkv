@@ -1,0 +1,45 @@
+It seems that I forgot to include the opening tags for the XML elements.
+
+Here is the corrected XML mission plan:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robust-mission-planning.com/mission.xsd
+         http://robust-mission-planning.com/mission.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Start Mission</TaskDescription>
+    <Outcome>
+      <DrivingToTree location="${tree1}" />
+      <TakePicture action="picture" />
+      <If condition="${pictureLowTemperature}">
+        <TakeTemperatureReading />
+        <If condition="${temperatureLow}">
+          <TakeCO2Sample />
+          <DriveToFarAwayTree location="${farawayTree}" />
+          <RepeatTaskDescription>
+            <TaskDescription>Start Mission</TaskDescription>
+            <Outcome>
+              <DrivingToTree location="${tree1}" />
+              <TakePicture action="picture" />
+              <If condition="${pictureLowTemperature}">
+                <TakeTemperatureReading />
+                <If condition="${temperatureLow}">
+                  <TakeCO2Sample />
+                  <DriveToFarAwayTree location="${farawayTree}" />
+                  <!-- repeat indefinitely -->
+                </If>
+              </If>
+            </Outcome>
+          </RepeatTaskDescription>
+        </If>
+      </If>
+      <If condition="${!pictureLowTemperature}">
+        <DrivingToEnd location="${end}" />
+      </If>
+    </Outcome>
+  </CompositeTaskInformation>
+</Mission>
+```
+I added the opening `<` tag to the `Mission`, `CompositeTaskInformation`, and other elements. This should resolve the error.
+
+Please note that I also assumed that `${tree1}`, `${farawayTree}`, `${end}`, `${pictureLowTemperature}`, `${temperatureLow}` are defined somewhere in your GeoJSON file or elsewhere in your codebase, as they are used as variables in the XML template.

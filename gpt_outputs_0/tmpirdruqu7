@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roboticstask:RobotMission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://roboticstask.org/schema/CompositeTaskInformation 
+   http://roboticstask.org/schema/CompositeTaskInformation.xsd" xmlns:roboticstask="http://roboticstask.org/schema/CompositeTaskInformation.xsd"
+   id="farmMission">
+   
+   <!-- Import the schema -->
+   <roboticstask:schemaLocation xsi:noNamespaceSchemaLocation="http://roboticstask.org/schema/CompositeTaskInformation.xsd"/>
+   
+   <missionDescription>
+      A mission to photograph trees at the four corners of an orchard.
+   </missionDescription>
+
+   <!-- Composite task information: a sequence of tasks -->
+   <roboticstask:compositeTaskInformation id="composite" description="Photograph trees at corners">
+      
+      <!-- Task 1: Drive to corner 1 -->
+      <roboticstask:task id="drive-to-corner-1" type="DriveToLocation">
+         <locationReference>Corner 1</locationReference>
+         <!-- GeoJSON for Corner 1 coordinates -->
+         <geoJSONReference location="https://example.com/corner-1.json"/>
+         <outcome xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://roboticstask.org/schema/CompositeTaskInformation.xsd
+            http://roboticstask.org/schema/CompositeTaskInformation.xsd">
+            <outcomeDescription>
+               Arrived at Corner 1, proceed to photograph.
+               Total estimated haversine distance from start: [insert value here]
+            </outcomeDescription>
+         </outcome>
+      </roboticstask:task>
+
+      <!-- Task 2: Photograph tree -->
+      <roboticstask:task id="photograph-tree-1" type="PhotographTree">
+         <treeType>Unknown</treeType>
+         <!-- Photo taken at the location of Corner 1 -->
+         <geoJSONReference location="https://example.com/corner-1.json"/>
+      </roboticstask:task>
+
+   </roboticstask:compositeTaskInformation>
+
+   <!-- Composite task information: a sequence of tasks -->
+   <roboticstask:compositeTaskInformation id="composite2" description="Photograph trees at corners">
+      
+      <!-- Task 3: Drive to corner 2 -->
+      <roboticstask:task id="drive-to-corner-2" type="DriveToLocation">
+         <locationReference>Corner 2</locationReference>
+         <!-- GeoJSON for Corner 2 coordinates -->
+         <geoJSONReference location="https://example.com/corner-2.json"/>
+         <outcome xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://roboticstask.org/schema/CompositeTaskInformation.xsd
+            http://roboticstask.org/schema/CompositeTaskInformation.xsd">
+            <outcomeDescription>
+               Arrived at Corner 2, proceed to photograph.
+               Total estimated haversine distance from start: [insert value here]
+            </outcomeDescription>
+         </outcome>
+      </roboticstask:task>
+
+      <!-- Task 4: Photograph tree -->
+      <roboticstask:task id="photograph-tree-2" type="PhotographTree">
+         <treeType>Unknown</treeType>
+         <!-- Photo taken at the location of Corner 2 -->
+         <geoJSONReference location="https://example.com/corner-2.json"/>
+      </roboticstask:task>
+
+   </roboticstask:compositeTaskInformation>
+
+   <!-- Composite task information: a sequence of tasks -->
+   <roboticstask:compositeTaskInformation id="composite3" description="Photograph trees at corners">
+      
+      <!-- Task 5: Drive to corner 3 -->
+      <roboticstask:task id="drive-to-corner-3" type="DriveToLocation">
+         <locationReference>Corner 3</locationReference>
+         <!-- GeoJSON for Corner 3 coordinates -->
+         <geoJSONReference location="https://example.com/corner-3.json"/>
+         <outcome xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://roboticstask.org/schema/CompositeTaskInformation.xsd
+            http://roboticstask.org/schema/CompositeTaskInformation.xsd">
+            <outcomeDescription>
+               Arrived at Corner 3, proceed to photograph.
+               Total estimated haversine distance from start: [insert value here]
+            </outcomeDescription>
+         </outcome>
+      </roboticstask:task>
+
+      <!-- Task 6: Photograph tree -->
+      <roboticstask:task id="photograph-tree-3" type="PhotographTree">
+         <treeType>Unknown</treeType>
+         <!-- Photo taken at the location of Corner 3 -->
+         <geoJSONReference location="https://example.com/corner-3.json"/>
+      </roboticstask:task>
+
+   </roboticstask:compositeTaskInformation>
+
+   <!-- Composite task information: a sequence of tasks -->
+   <roboticstask:compositeTaskInformation id="composite4" description="Photograph trees at corners">
+      
+      <!-- Task 7: Drive to corner 4 -->
+      <roboticstask:task id="drive-to-corner-4" type="DriveToLocation">
+         <locationReference>Corner 4</locationReference>
+         <!-- GeoJSON for Corner 4 coordinates -->
+         <geoJSONReference location="https://example.com/corner-4.json"/>
+         <outcome xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://roboticstask.org/schema/CompositeTaskInformation.xsd
+            http://roboticstask.org/schema/CompositeTaskInformation.xsd">
+            <outcomeDescription>
+               Arrived at Corner 4, proceed to photograph.
+               Total estimated haversine distance from start: [insert value here]
+            </outcomeDescription>
+         </outcome>
+      </roboticstask:task>
+
+      <!-- Task 8: Photograph tree -->
+      <roboticstask:task id="photograph-tree-4" type="PhotographTree">
+         <treeType>Unknown</treeType>
+         <!-- Photo taken at the location of Corner 4 -->
+         <geoJSONReference location="https://example.com/corner-4.json"/>
+      </roboticstask:task>
+
+   </roboticstask:compositeTaskInformation>
+
+</roboticstask:compositeTaskInformation>
+</xml>

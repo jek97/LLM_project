@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/MissionPlanSchema"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://example.com/MissionPlanSchema http://example.com/MissionPlanSchema.xsd">
+    <Header>
+        <Name>Corner Tree Imaging Mission</Name>
+        <Description>Take pictures of the trees at each corner of the farm.</Description>
+    </Header>
+
+    <CompositeTaskInformation>
+        <!-- Include the original question in the TaskDescription element -->
+        <TaskDescription xsi:type="Question">What is the objective of this mission?</TaskDescription>
+
+        <SequentialTask>
+            <NavigationTask>
+                <!-- MoveToCoordinates element references a GeoJSON file for GPS coordinates -->
+                <MoveToCoordinates xsi:nil="false">
+                    <Latitude xsi:type="xsd:double">37.36628908556382</Latitude>
+                    <Longitude xsi:type="xsd:double">-120.42298051393493</Longitude>
+                </MoveToCoordinates>
+
+                <!-- Include a question for logging -->
+                <TaskDescription xsi:type="Question">Moving to the first corner tree.</TaskDescription>
+            </NavigationTask>
+            <TreeActionTask>
+                <!-- TreeType provides the type of tree in this location -->
+                <TreeType>Oak</TreeType>
+                <TakePictureTask>
+                    <!-- Add any other actions you want to perform at this tree -->
+                </TakePictureTask>
+            </TreeActionTask>
+        </SequentialTask>
+        <!-- Add more sequential tasks as needed for the remaining corners and any additional actions -->
+    </CompositeTaskInformation>
+    <Outcome xsi:nil="false">The mission successfully imaged all corner trees. Estimated distance traveled was approximately 2 km (1.24 mi).</Outcome>
+</MissionPlan>

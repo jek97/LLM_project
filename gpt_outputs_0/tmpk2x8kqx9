@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <MissionName>Farm Visit - All Points</MissionName>
+  <MissionDuration>60</MissionDuration>  <!-- Estimated duration in minutes -->
+  <TaskList>
+    <Task id="1">
+      <Waypoint id="1" latitude="37.36636077337479" longitude="-120.42307592599273" reward="0.85"/>
+      <TaskDescription>Visit Point 18</TaskDescription>
+    </Task>
+    <Task id="2">
+      <Waypoint id="2" latitude="37.36636077337479" longitude="-120.42307592599273" reward="0.85"/>
+      <TaskDescription>Visit Point 1</TaskDescription>
+    </Task>
+    <Task id="3">
+      <Waypoint id="4" latitude="37.36631785560332" longitude="-120.42303004014194" reward="0.75"/>
+      <TaskDescription>Visit Point 10</TaskDescription>
+    </Task>
+    <Task id="4">
+      <Waypoint id="5" latitude="37.36627570632085" longitude="-120.42307272278255" reward="0.65"/>
+      <TaskDescription>Visit Point 11</TaskDescription>
+    </Task>
+    <Task id="5">
+      <Waypoint id="6" latitude="37.36634636896467" longitude="-120.42302669537153" reward="0.55"/>
+      <TaskDescription>Visit Point 13</TaskDescription>
+    </Task>
+    <Task id="6">
+      <Waypoint id="7" latitude="37.366304880110526" longitude="-120.4230246791031" reward="0.45"/>
+      <TaskDescription>Visit Point 14</TaskDescription>
+    </Task>
+    <Task id="7">
+      <Waypoint id="8" latitude="37.36626996761184" longitude="-120.42298051393493" reward="0.35"/>
+      <TaskDescription>Visit Point 15</TaskDescription>
+    </Task>
+    <Task id="8">
+      <Waypoint id="9" latitude="37.36628908556382" longitude="-120.42299259529793" reward="0.25"/>
+      <TaskDescription>Visit Point 16</TaskDescription>
+    </Task>
+    <Task id="10">
+      <Waypoint id="11" latitude="37.36635678715399" longitude="-120.42299259529793" reward="0.15"/>
+      <TaskDescription>Visit Point 19</TaskDescription>
+    </Task>
+    <Task id="12">
+      <Waypoint id="12" latitude="37.36631785560332" longitude="-120.42303004014194" reward="0.05"/>
+      <TaskDescription>Visit Point 10</TaskDescription>
+    </Task>
+  </TaskList>
+</MissionPlan>

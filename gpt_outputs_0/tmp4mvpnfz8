@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      <TaskName>CO2 Measurement - Adjacent Trees</TaskName>
+      <TaskDetails>Drive to two trees next to each other. Take a CO2 reading from each tree.</TaskDetails>
+      <Priority>High</Priority>
+    </TaskDescription>
+    <Steps></Steps>
+  </CompositeTaskInformation>
+</MissionPlan>

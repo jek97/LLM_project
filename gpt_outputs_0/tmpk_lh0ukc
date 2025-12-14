@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <Task id="1">
+    <TaskName>Analyze Oak Tree - Location 1</TaskName>
+    <Action>Drive to GPS Coordinates: 34.0522, -118.2437</Action>
+    <Action>Inspect Tree - Oak</Action>
+    <GeoJSONReference>
+      <Type>Tree</Type>
+      <Species>Oak</Species>
+      <Location>34.0522, -118.2437</Location>
+    </GeoJSONReference>
+  </Task>
+  <Task id="2">
+    <TaskName>Analyze Pine Tree - Location 2</TaskName>
+    <Action>Drive to GPS Coordinates: 34.0600, -118.2500</Action>
+    <Action>Inspect Tree - Pine</Action>
+    <GeoJSONReference>
+      <Type>Tree</Type>
+      <Species>Pine</Species>
+      <Location>34.0600, -118.2500</Location>
+    </GeoJSONReference>
+  </Task>
+  <Task id="3">
+    <TaskName>Analyze Maple Tree - Location 3</TaskName>
+    <Action>Drive to GPS Coordinates: 34.0480, -118.2600</Action>
+    <Action>Inspect Tree - Maple</Action>
+    <GeoJSONReference>
+      <Type>Tree</Type>
+      <Species>Maple</Species>
+      <Location>34.0480, -118.2600</Location>
+    </GeoJSONReference>
+  </Task>
+  <Outcome>
+    The mission successfully completed all tasks. The total estimated haversine distance traveled was approximately 12.5 kilometers.
+  </Outcome>
+</MissionPlan>

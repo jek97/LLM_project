@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns="yournamespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Header>
+    <MissionID>TreeAnalysis</MissionID>
+    <Timestamp>2023-05-19T12:45:00Z</Timestamp>
+  </Header>
+  <MissionInformation>
+    <Question>Requested by User to analyze trees in the field</Question>
+  </MissionInformation>
+  <CompositeTaskInformation>
+    <TaskDescription>Requested by User: Analyze trees in the field</TaskDescription>
+    <!-- ... (the rest of your XML remains the same) -->
+  </CompositeTaskInformation>
+  <!-- ... (additional tasks if necessary) -->
+  <DriveToLocation xsi:type="GPSLocation">
+    <Latitude>[latitude of end location from GeoJSON]</Latitude>
+    <Longitude>[longitude of end location from GeoJSON]</Longitude>
+  </DriveToLocation>
+</Mission>

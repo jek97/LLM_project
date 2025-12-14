@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <MissionInfo xmlns:tns="http://example.com/mission.xsd">
+        <TaskDescription>Drive to the first pistachio tree and select it</TaskDescription>
+        <drivingToLocation>
+            <GPSLocation>
+                <latitude>37.36635688574164</latitude>
+                <longitude>-120.42302289785604</longitude>
+            </GPSLocation>
+        </drivingToLocation>
+    </MissionInfo>
+    <!-- ... -->
+</mission>

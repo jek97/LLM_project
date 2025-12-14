@@ -1,0 +1,55 @@
+ I apologize for the error in my previous response. Here is an updated XML file that should work correctly:
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <name>Temperature and CO2 Sampling Mission</name>
+    <description>A mission to take temperature and CO2 readings at various trees in the orchard.</description>
+    <tasks>
+        <task id="1">
+            <name>Take a picture of the first tree</name>
+            <action>Take a picture of the first tree</action>
+            <conditions>
+                <condition type="picture" status="success"/>
+            </conditions>
+            <nextAction>
+                <action>Take a temperature reading at the first tree</action>
+            </nextAction>
+        </task>
+        <task id="2">
+            <name>Take a temperature reading at the first tree</name>
+            <action>Take a temperature reading at the first tree</action>
+            <conditions>
+                <condition type="picture" status="success"/>
+                <condition type="temperature" status="low"/>
+            </conditions>
+            <nextAction>
+                <action>Take a CO2 sample at the first tree</action>
+            </nextAction>
+        </task>
+        <task id="3">
+            <name>Take a CO2 sample at the first tree</name>
+            <action>Take a CO2 sample at the first tree</action>
+            <conditions>
+                <condition type="picture" status="success"/>
+                <condition type="temperature" status="low"/>
+                <condition type="co2" status="low"/>
+            </conditions>
+            <nextAction>
+                <action>Drive to a far away tree and repeat the process</action>
+            </nextAction>
+        </task>
+        <task id="4">
+            <name>Drive to a far away tree and repeat the process</name>
+            <action>Drive to a far away tree and repeat the process</action>
+            <conditions>
+                <condition type="picture" status="success"/>
+                <condition type="temperature" status="not low"/>
+            </conditions>
+            <nextAction>
+                <action>End the mission</action>
+            </nextAction>
+        </task>
+    </tasks>
+</mission>
+```
+This XML file defines a mission with four tasks. The first task is to take a picture of the first tree. If the picture is successful, the next task is to take a temperature reading at the first tree. If both the picture and temperature reading are successful, the next task is to take a CO2 sample at the first tree. If all three conditions are met, the mission will drive to a far away tree and repeat the process. If any of the conditions for taking a picture or temperature reading are not met, the mission will end. 

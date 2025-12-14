@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTask id="1">
+    <Task id="1" name="Take Pictures of Trees">
+      <SubTask id="1" name="Drive to Northmost Tree">
+        <Waypoint x="120.42300386899338" y="37.36628908556382" />
+      </SubTask>
+      <SubTask id="2" name="Take Picture 1">
+        <Action type="ImageCapture">
+          <Target x="120.42300386899338" y="37.36628908556382" description="Picture 1 - Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42300386899338" y="37.36628908556382" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.42302669537153" y="37.366300703749474" description="Picture 2 - South of Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="5" name="Drive to Third Tree">
+        <Waypoint x="120.423044218715" y="37.36626996761184" />
+      </SubTask>
+      <SubTask id="6" name="Take Picture 3">
+        <Action type="ImageCapture">
+          <Target x="120.423044218715" y="37.36626996761184" description="Picture 3 - East of Second Tree" />
+        </Action>
+        <Waypoint x="120.423044218715" y="37.36626996761184" />
+      </SubTask>
+      <SubTask id="7" name="Drive to Fourth Tree">
+        <Waypoint x="120.4230246791031" y="37.366304880110526" />
+      </SubTask>
+      <SubTask id="8" name="Take Picture 4">
+        <Action type="ImageCapture">
+          <Target x="120.4230246791031" y="37.366304880110526" description="Picture 4 - West of Third Tree" />
+        </Action>
+        <Waypoint x="120.4230246791031" y="37.366304880110526" />
+      </SubTask>
+      <SubTask id="9" name="Return to Starting Point">
+        <Waypoint x="120.42300386899338" y="37.36628908556382" />
+      </SubTask>
+    </Task>
+  </CompositeTask>
+</MissionPlan>

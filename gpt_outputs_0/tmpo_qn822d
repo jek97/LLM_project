@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Robotic mission to collect data on trees, prioritizing distance and CO2 measurements.
+    </TaskDescription>
+    <StartingPoint>
+      <Latitude>37.36635640370881</Latitude>
+      <Longitude>-120.42300386899338</Longitude>
+    </StartingPoint>
+  </CompositeTaskInformation>
+  <TaskSequence>
+    <Task id="1">
+      <TaskType>Navigation</TaskType>
+      <Description>Navigate to a tree approximately in the middle of the orchard.</Description>
+      <TargetTreeId>7</TargetTreeId>
+    </Task>
+    <Task id="2">
+      <TaskType>DataCollection</TaskType>
+      <Description>Measure CO2 at Target Tree.</Description>
+      <MeasurementType>CO2</MeasurementType>
+      <TargetTreeId>7</TargetTreeId>
+    </Task>
+    <Task id="3">
+      <TaskType>Navigation</TaskType>
+      <Description>Navigate to the furthest tree from the starting point.</Description>
+      <TargetTreeId>16</TargetTreeId>
+    </Task>
+    <Task id="4">
+      <TaskType>DataCollection</TaskType>
+      <Description>Measure CO2 at Target Tree.</Description>
+      <MeasurementType>CO2</MeasurementType>
+      <TargetTreeId>16</TargetTreeId>
+    </Task>
+    <Task id="5">
+      <TaskType>Navigation</TaskType>
+      <Description>Navigate to the northern most tree.</Description>
+      <TargetTreeId>18</TargetTreeId>
+    </Task>
+    <Task id="6">
+      <TaskType>DataCollection</TaskType>
+      <Description>Take a temperature reading.</Description>
+      <MeasurementType>Temperature</MeasurementType>
+      <TargetTreeId>18</TargetTreeId>
+    </Task>
+    <Task id="7">
+      <TaskType>Navigation</TaskType>
+      <Description>Return to the starting point.</Description>
+      <TargetTreeId>1</TargetTreeId>
+    </Task>
+  </TaskSequence>
+</MissionPlan>

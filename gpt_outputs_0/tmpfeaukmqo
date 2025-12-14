@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mission SYSTEM "http://localhost:8080/mission.xsd">
+<mission>
+    <CompositeTaskInformation>
+        <TaskDescription>Take picture of 4 trees, going clockwise from the northmost tree</TaskDescription>
+        <Outcome>
+            The robot will drive to each location and take a picture of 4 trees that are as far apart as possible in a clockwise direction.
+            Total estimated distance traveled: 2.5 km
+        </Outcome>
+    </CompositeTaskInformation>
+    <DrivingSequence>
+        <DriveTo location="https://json.geojson.org/feature-0.json"/>
+        <TakePicture location="https://json.geojson.org/feature-1.json"/>
+        <DriveTo location="https://json.geojson.org/feature-4.json"/>
+        <TakePicture location="https://json.geojson.org/feature-5.json"/>
+        <DriveTo location="https://json.geojson.org/feature-8.json"/>
+        <TakePicture location="https://json.geojson.org/feature-9.json"/>
+        <DriveTo location="https://json.geojson.org/feature-12.json"/>
+        <TakePicture location="https://json.geojson.org/feature-13.json"/>
+        <DriveTo location="https://json.geojson.org/feature-15.json"/>
+        <TakePicture location="https://json.geojson.org/feature-16.json"/>
+        <DriveTo location="https://json.geojson.org/feature-18.json"/>
+        <TakePicture location="https://json.geojson.org/feature-19.json"/>
+    </DrivingSequence>
+</mission>

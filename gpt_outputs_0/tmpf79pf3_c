@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://www.example.com/missionplan">
+    <CompositeTaskInformation>
+        <TaskDescription>Visit as many points as possible within a 100-meter radius and take pictures of each tree.</TaskDescription>
+        <Tasks>
+            <DriveToWaypoint>
+                <WaypointID>1</WaypointID>
+                <Latitude>37.36635640370881</Latitude>
+                <Longitude>-120.42303004014194</Longitude>
+            </DriveToWaypoint>
+            <TakePicture />
+            <DriveToWaypoint>
+                <WaypointID>2</WaypointID>
+                <Latitude>37.36631785560332</Latitude>
+                <Longitude>-120.42307272278255</Longitude>
+            </DriveToWaypoint>
+            <TakePicture />
+            <DriveToWaypoint>
+                <WaypointID>3</WaypointID>
+                <Latitude>37.36627570632085</Latitude>
+                <Longitude>-120.42300386899338</Longitude>
+            </DriveToWaypoint>
+            <TakePicture />
+            <DriveToWaypoint>
+                <WaypointID>4</WaypointID>
+                <Latitude>37.366300703749474</Latitude>
+                <Longitude>-120.42302669537153</Longitude>
+            </DriveToWaypoint>
+            <TakePicture />
+            <DriveToWaypoint>
+                <WaypointID>5</WaypointID>
+                <Latitude>37.36634636896467</Latitude>
+                <Longitude>-120.4230246791031</Longitude>
+            </DriveToWaypoint>
+            <TakePicture />
+        </Tasks>
+    </CompositeTaskInformation>
+</MissionPlan>

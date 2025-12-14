@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/mission.xsd"
+           elementFormDefault="qualified">
+    <xs:element name="Mission">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="CompositeTaskInformation"/>
+                <xs:element ref="Sequence"/>
+                <xs:element ref="EndLocation"/>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:attribute name="xmlns" type="xs:string"/>
+    </xs:element>
+    
+    <xs:element name="CompositeTaskInformation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Repeat"/>
+                <!-- ... other tasks and conditions ... -->
+            </xs:sequence>
+        </xs:complexType>
+        <xs:attribute name="xmlns" type="xs:string"/>
+    </xs:element>
+    
+    <xs:element name="Sequence">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Task 1 -->
+                <xs:element ref="DriveToTree"/>
+                <xs:element ref="TaskDescription"/>
+                <xs:element ref="DrivingStatus"/>
+                
+                <!-- ... other tasks and conditions ... -->
+            </xs:sequence>
+        </xs:complexType>
+        <xs:attribute name="xmlns" type="xs:string"/>
+    </xs:element>
+    
+    <xs:element name="Repeat">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="name" type="xs:string"/>
+                    <xs:attribute name="test" type="xs:string"/>
+                </xs:extension>
+            </xs:simpleContent>
+            <xs:sequence>
+                <!-- Task inside the loop -->
+                <xs:element ref="TaskDescription"/>
+                
+                <!-- Check if task should be repeated -->
+                <xs:element ref="When"/>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:attribute name="xmlns" type="xs:string"/>
+    </xs:element>
+    
+    <xs:element name="RepeatTask">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="name" type="xs:string"/>
+                    <xs:attribute name="test" type="xs:string"/>
+                </xs:extension>
+            </xs:simpleContent>
+            <xs:sequence>
+                <!-- Task inside the loop -->
+                <xs:element ref="TaskDescription"/>
+                
+                <!-- Check if task should be repeated -->
+                <xs:element ref="When"/>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:attribute name="xmlns" type="xs:string"/>
+    </xs:element>
+    
+    <xs:element name="EndLocation">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="xmlns" type="xs:string"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+        <xs:attribute name="xmlns" type="xs:string"/>
+    </xs:element>
+    
+    <xs:element name="TaskDescription">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="xmlns" type="xs:string"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+        <xs:attribute name="xmlns" type="xs:string"/>
+    </xs:element>
+    
+    <xs:element name="When">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="xmlns" type="xs:string"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+        <xs:attribute name="xmlns" type="xs:string"/>
+    </xs:element>
+    
+    <xs:element name="DrivingStatus">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="xmlns" type="xs:string"/>
+                    <xs:attribute name="totalEstimatedHaversineDistanceFromStart" type="xs:string"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+        <xs:attribute name="xmlns" type="xs:string"/>
+    </xs:element>
+    
+    <xs:element name="Condition">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="name" type="xs:string"/>
+                    <xs:attribute name="expression" type="xs:string"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+        <xs:attribute name="xmlns" type="xs:string"/>
+    </xs:element>
+    
+    <xs:element name="DrivingToTree">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="name" type="xs:string"/>
+                    <xs:attribute name="test" type="xs:string"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+        <xs:attribute name="xmlns" type="xs:string"/>
+    </xs:element>
+    
+    <xs:attribute name="xmlns" type="xs:string"/>
+</xs:schema>

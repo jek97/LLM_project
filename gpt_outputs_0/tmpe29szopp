@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/MissionPlanSchema"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://example.com/MissionPlanSchema http://example.com/MissionPlanSchema.xsd">
+    <Header>
+        <Name>Corner Tree Imaging Mission</Name>
+        <Description>Take pictures of the trees at each corner of the farm.</Description>
+    </Header>
+
+    <CompositeTaskInformation>
+        <!-- Include the original question in the TaskDescription element -->
+        <TaskDescription xsi:type="Question">What is the objective of this mission?</TaskDescription>
+
+        <SequentialTask>
+            <NavigationTask>
+                <!-- MoveToCoordinates element references a GeoJSON file for GPS coordinates -->
+                <MoveToCoordinates>
+                    <Latitude xsi:type="xsd:double">37.36628908556382</Latitude>
+                    <Longitude xsi:type="xsd:double">-120.42298051393493</Longitude>
+                </MoveToCoordinates>
+
+                <!-- Include a question for logging -->
+                <TaskDescription xsi:type="Question">Moving to the first corner.</TaskDescription>
+            </NavigationTask>
+
+            <ImageTreeTask>
+                <!-- TreeType element references a GeoJSON feature containing tree information -->
+                <TreeType xsi:type="xsd:string" xsi:nil="true"/>
+
+                <!-- Include a question for logging -->
+                <TaskDescription xsi:type="Question">Taking an image of the tree at the first corner.</TaskDescription>
+            </ImageTreeTask>
+        </SequentialTask>
+
+        <!-- Repeat the following SequentialTask for each remaining corner -->
+        <SequentialTask>
+            <NavigationTask>
+                <!-- MoveToCoordinates element references a GeoJSON file for GPS coordinates -->
+                <MoveToCoordinates>
+                    <Latitude xsi:type="xsd:double">37.3662730362294</Latitude>
+                    <Longitude xsi:type="xsd:double">-120.42301417901265</Longitude>
+                </MoveToCoordinates>
+
+                <!-- Include a question for logging -->
+                <TaskDescription xsi:type="Question">Moving to the second corner.</TaskDescription>
+            </NavigationTask>
+
+            <ImageTreeTask>
+                <!-- TreeType element references a GeoJSON feature containing tree information -->
+                <TreeType xsi:type="xsd:string" xsi:nil="true"/>
+
+                <!-- Include a question for logging -->
+                <TaskDescription xsi:type="Question">Taking an image of the tree at the second corner.</TaskDescription>
+            </ImageTreeTask>
+        </SequentialTask>
+    </CompositeTaskInformation>
+
+    <GeoJSON xmlns="http://www.opengis.net/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/gml http://json.org">
+        <!-- Include the GeoJSON features here, one for each tree location -->
+        <FeatureCollection>
+            <Feature>
+                <geometry>
+                    <Point>
+                        <pos>
+                            <xsi:type="xsd:double">37.36628908556382</xsi:type>
+                            <y si:type="xsd:double">-120.42298051393493</y>
+                        </pos>
+                    </Point>
+                </geometry>
+                <!-- Add any other properties you want to associate with this tree -->
+            </Feature>
+            <Feature>
+                <geometry>
+                    <Point>
+                        <pos>
+                            <xsi:type="xsd:double">37.3662730362294</xsi:type>
+                            <y si:type="xsd:double">-120.42301417901265</y>
+                        </pos>
+                    </Point>
+                </geometry>
+                <!-- Add any other properties you want to associate with this tree -->
+            </Feature>
+            <!-- ... more features as needed ... -->
+        </FeatureCollection>
+    </GeoJSON>
+</MissionPlan>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roboticTaskRepresentation xmlns:rt="http://robotic-task-representation.org/schema/mission_plan.xsd"
+                              xsi:schemaLocation="http://robotic-task-representation.org/schema/mission_plan.xsd 
+                                                   http://robotic-task-representation.org/schema/mission_plan.xsd">
+    <CompositeTaskInformation>
+        <TaskDescription>Start mission</TaskDescription>
+        <Outcome>
+            <DrivingToTree location="https://example.com/tree1.geojson"/>
+            <Action type="Inspect" treeType="Oak" />
+        </Outcome>
+    </CompositeTaskInformation>
+    
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to next location</TaskDescription>
+        <Outcome>
+            <DrivingToTree location="https://example.com/tree2.geojson"/>
+            <Action type="CollectSample" treeType="Maple" />
+        </Outcome>
+    </CompositeTaskInformation>
+    
+    <CompositeTaskInformation>
+        <TaskDescription>End mission</TaskDescription>
+        <Outcome>
+            <DrivingToTree location="https://example.com/end_location.geojson"/>
+        </Outcome>
+    </CompositeTaskInformation>
+</roboticTaskRepresentation>

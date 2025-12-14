@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <FeatureCollection>
+        <Feature id="corner1" type="Point">
+            <geometry>
+                <coordinates>-120.42302289785604, 37.36635688574164</coordinates>
+            </geometry>
+            <properties>
+                <id>0</id>
+                <action>0</action>
+                <last_sampled>0</last_sampled>
+            </properties>
+        </Feature>
+        <Feature id="corner2" type="Point">
+            <geometry>
+                <coordinates>-120.42309252722157, 37.36631509745154</coordinates>
+            </geometry>
+            <properties>
+                <id>1</id>
+                <action>0</action>
+                <last_sampled>0</last_sampled>
+            </properties>
+        </Feature>
+        <Feature id="corner3" type="Point">
+            <geometry>
+                <coordinates>-120.42307592599273, 37.36636077337479</coordinates>
+            </geometry>
+            <properties>
+                <id>2</id>
+                <action>0</action>
+                <last_sampled>0</last_sampled>
+            </properties>
+        </Feature>
+        <Feature id="corner4" type="Point">
+            <geometry>
+                <coordinates>-120.42298051393493, 37.36628908556382</coordinates>
+            </geometry>
+            <properties>
+                <id>3</id>
+                <action>0</action>
+                <last_sampled>0</last_sampled>
+            </properties>
+        </Feature>
+    </FeatureCollection>
+
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the first corner of the farm and take a picture of the tree</TaskDescription>
+        <DrivingTask>
+            <StartLocation ref="corner1"/>
+            <EndLocation ref="corner1"/>
+            <DistanceToTravel>0.0 km</DistanceToTravel>
+        </DrivingTask>
+    </CompositeTaskInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the second corner of the farm and take a picture of the tree</TaskDescription>
+        <DrivingTask>
+            <StartLocation ref="corner2"/>
+            <EndLocation ref="corner2"/>
+            <DistanceToTravel>0.0 km</DistanceToTravel>
+        </DrivingTask>
+    </CompositeTaskInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the third corner of the farm and take a picture of the tree</TaskDescription>
+        <DrivingTask>
+            <StartLocation ref="corner3"/>
+            <EndLocation ref="corner3"/>
+            <DistanceToTravel>0.0 km</DistanceToTravel>
+        </DrivingTask>
+    </CompositeTaskInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the fourth corner of the farm and take a picture of the tree</TaskDescription>
+        <DrivingTask>
+            <StartLocation ref="corner4"/>
+            <EndLocation ref="corner4"/>
+            <DistanceToTravel>0.0 km</DistanceToTravel>
+        </DrivingTask>
+    </CompositeTaskInformation>
+</MissionPlan>

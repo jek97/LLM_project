@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns="http://www.example.com/missionplan">
+    <Version>1</Version>
+    <Name>Pistachio Tree Visit and Picture Taking Mission</Name>
+    <Description>From the farm, select 5 pistachio trees in a row to visit and take a picture of 3 of them.</Description>
+    <CompositeTaskInformation>
+        <!-- Drive to start location -->
+        <TaskInformation>
+            <Name>Drive to start location</Name>
+            <Action>
+                <MoveTo>
+                    <Coordinates>
+                        <!-- Start location coordinates go here -->
+                    </Coordinates>
+                </MoveTo>
+            </Action>
+            <TaskDescription>Original request: "From the farm, select 5 pistachio trees in a row to visit and take a picture of 3 of them."</TaskDescription>
+        </TaskInformation>
+        <!-- Visit and Take Picture of Tree 1 -->
+        <TaskInformation>
+            <Name>Visit and Take Picture of Tree 1 (Pistachio)</Name>
+            <Description>Drive to the first pistachio tree, take a picture, and then move on.</Description>
+            <Action>
+                <MoveTo>
+                    <Coordinates>
+                        <!-- First tree coordinates go here -->
+                    </Coordinates>
+                </MoveTo>
+                <TakePicture>
+                    <TreeSpecification>
+                        <Type>Pistachio</Type>
+                    </TreeSpecification>
+                </TakePicture>
+            </Action>
+        </TaskInformation>
+        <!-- Visit and Take Picture of Tree 2 -->
+        <TaskInformation>
+            <Name>Visit and Take Picture of Tree 2 (Pistachio)</Name>
+            <Description>Drive to the second pistachio tree, take a picture, and then move on.</Description>
+            <Action>
+                <MoveTo>
+                    <Coordinates>
+                        <!-- Second tree coordinates go here -->
+                    </Coordinates>
+                </MoveTo>
+                <TakePicture>
+                    <TreeSpecification>
+                        <Type>Pistachio</Type>
+                    </TreeSpecification>
+                </TakePicture>
+            </Action>
+        </TaskInformation>
+        <!-- Repeat the above TaskInformation block for each tree until you have visited all 5 trees -->
+        <!-- Drive to end location -->
+        <TaskInformation>
+            <Name>Drive to end location</Name>
+            <Description>Finally, drive back to the farm.</Description>
+            <Action>
+                <MoveTo>
+                    <Coordinates>
+                        <!-- End location coordinates go here -->
+                    </Coordinates>
+                </MoveTo>
+            </Action>
+        </TaskInformation>
+    </CompositeTaskInformation>
+</Mission>

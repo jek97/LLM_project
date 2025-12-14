@@ -1,0 +1,45 @@
+Here is the generated XML file:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="path_to_your_schema.xsd">
+  <CompositeTaskInformation>
+    <!-- Task to drive to the starting point -->
+    <DrivingToPoint id="d2s" description="Starting Point"/>
+    
+    <!-- Task to take a picture of a tree at the starting point -->
+    <DrivingToPoint id="p3t" description="Middle of Field">
+      <TaskDescription>
+        <question xml:lang="en">Take a picture of a tree</question>
+        <answer xml:lang="en">The average temperature is below 33C</answer>
+        <reference>GeoJSON Reference for Tree ID = 0</reference>
+      </TaskDescription>
+    </DrivingToPoint>
+    
+    <!-- Task to take a co2 sample if the condition is met -->
+    <IfCondition id="ic1" description="Average Temperature Below 33 C">
+      <ConditionType xml:lang="en">Temperature</conditionType>
+      <Operator xml:lang="en">LessThan</operator>
+      <Value>33.0</value>
+      <TaskDescription>
+        <question xml:lang="en">Take a co2 sample</question>
+        <answer xml:lang="en"></answer>
+        <reference>GeoJSON Reference for Tree ID = 0</reference>
+      </TaskDescription>
+    </IfCondition>
+    
+    <!-- Task to drive to the next random point -->
+    <DrivingToPoint id="d2p" description="Next Random Point">
+      <TaskDescription>
+        <question xml:lang="en">Go to another random point 5 trees down</question>
+        <answer xml:lang="en"></answer>
+        <reference>GeoJSON Reference for Tree ID = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]</reference>
+      </TaskDescription>
+    </DrivingToPoint>
+    
+  </CompositeTaskInformation>
+</mission>
+```
+Note that I assumed the starting point is `id` 0 (which corresponds to the first tree in your GeoJSON file). Also, the condition "Average Temperature Below 33 C" will trigger the co2 sample task if the temperature is less than 33.0°C.
+
+Please let me know if you want to make any changes or if this meets your requirements!

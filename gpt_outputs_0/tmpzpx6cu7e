@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="your_schema_file.xsd">
+    <missionID>OrchardSamplingMission</missionID>
+    <startTime>2023-10-05T14:00:00Z</startTime>
+    <endTime/>
+    <taskDescription>Takes pictures of trees and performs CO2 or temperature readings based on initial reading.</taskDescription>
+
+    <!-- Drive to the first tree -->
+    <driveTask target="tree_0" />
+
+    <!-- Task 1: Take a picture of the first tree -->
+    <takePictureTask target="tree_0" />
+    
+    <!-- Condition to check if the initial reading is low -->
+    <condition>
+        <expression>InitialReadingLow</expression>
+        <trueTaskID>CO2_Sample1</trueTaskID>
+        <falseTaskID>Temperature_Read</falseTaskID>
+    </condition>
+
+    <!-- Task 2: Sample CO2 from the first tree if initial reading is low -->
+    <co2SampleTask target="tree_0" taskID="CO2_Sample1">
+        
+        <!-- If the CO2 sample reading is still low, sample again -->
+        <condition>
+            <expression>SampleLow</expression>
+            <trueTaskID>CO2_Sample1_Again</trueTaskID>
+            <falseTaskID/>
+        </condition>
+
+        <!-- Sample CO2 a second time if the first reading was low -->
+        <co2SampleTask target="tree_0" taskID="CO2_Sample1_Again" />
+    </co2SampleTask>
+    
+    <!-- If initial temperature reading is high, perform temperature read -->
+    <temperatureReadTask target="tree_0" />
+
+    <!-- Drive to the next tree -->
+    <driveTask target="tree_1" />
+
+    <!-- Task 3: Take a picture of the second tree -->
+    <takePictureTask target="tree_1" />
+    
+    <!-- Condition to check if the initial reading is low -->
+    <condition>
+        <expression>InitialReadingLow</expression>
+        <trueTaskID>CO2_Sample2</trueTaskID>
+        <falseTaskID/>
+    </condition>
+
+    <!-- Task 4: Sample CO2 from the second tree if initial reading is low -->
+    <co2SampleTask target="tree_1" taskID="CO2_Sample2">
+        
+        <!-- If the CO2 sample reading is still low, sample again -->
+        <condition>
+            <expression>SampleLow</expression>
+            <trueTaskID>CO2_Sample2_Again</trueTaskID>
+            <falseTaskID/>
+        </condition>
+
+        <!-- Sample CO2 a second time if the first reading was low -->
+        <co2SampleTask target="tree_1" taskID="CO2_Sample2_Again" />
+    </co2SampleTask>
+
+    <!-- End of mission -->
+    <end />
+</missionPlan>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompositeTaskInformation>
+  <TaskDescription>At the first tree, take a picture. if that picture shows low temperature, take a temperature reading. If that reading is also low, take a co2 sample. if that reading is alos low, drive to a far away tree and repeat the process. if the very first reading isn't low, drive to end</TaskDescription>
+  <Outcome>
+    <TotalDistance>Approximately 15.2 km</TotalDistance>
+  </Outcome>
+  <MissionPlan>
+    <Task id="T1">
+      <TaskType>Drive</TaskType>
+      <Destination>
+        <Latitude>37.7749</Latitude>
+        <Longitude>-122.4194</Longitude>
+      </Destination>
+      <Duration>5 minutes</Duration>
+    </Task>
+    <Task id="T2">
+      <TaskType>TakePicture</TaskType>
+      <Condition>Picture taken</Condition>
+    </Task>
+    <Task id="T3">
+      <TaskType>EvaluatePicture</TaskType>
+      <Condition>Picture taken, temperature low</Condition>
+    </Task>
+    <Task id="T4">
+      <TaskType>TakeTemperatureReading</TaskType>
+      <Condition>Temperature reading taken, temperature low</Condition>
+    </Task>
+    <Task id="T5">
+      <TaskType>TakeCO2Sample</TaskType>
+      <Condition>CO2 reading taken, CO2 reading low</Condition>
+    </Task>
+    <Task id="T6">
+      <TaskType>Drive</TaskType>
+      <Destination>
+        <Latitude>37.7833</Latitude>
+        <Longitude>-122.4167</Longitude>
+      </Destination>
+      <Duration>10 minutes</Duration>
+    </Task>
+    <Task id="T7">
+      <TaskType>TakePicture</TaskType>
+      <Condition>Picture taken</Condition>
+    </Task>
+    <Task id="T8">
+      <TaskType>EvaluatePicture</TaskType>
+      <Condition>Picture taken, temperature low</Condition>
+    </Task>
+    <Task id="T9">
+      <TaskType>TakeTemperatureReading</TaskType>
+      <Condition>Temperature reading taken, temperature low</Condition>
+    </Task>
+    <Task id="T10">
+      <TaskType>TakeCO2Sample</TaskType>
+      <Condition>CO2 reading taken, CO2 reading low</Condition>
+    </Task>
+    <Task id="T11">
+      <TaskType>Drive</TaskType>
+      <Destination>
+        <Latitude>37.7867</Latitude>
+        <Longitude>-122.4200</Longitude>
+      </Destination>
+      <Duration>15 minutes</Duration>
+    </Task>
+    <Task id="T12">
+      <TaskType>TakePicture</TaskType>
+      <Condition>Picture taken</Condition>
+    </Task>
+    <Task id="T13">
+      <TaskType>EvaluatePicture</TaskType>
+      <Condition>Picture taken, temperature low</Condition>
+    </Task>
+    <Task id="T14">
+      <TaskType>TakeTemperatureReading</TaskType>
+      <Condition>Temperature reading taken, temperature low</Condition>
+    </Task>
+    <Task id="T15">
+      <TaskType>TakeCO2Sample</TaskType>
+      <Condition>CO2 reading taken, CO2 reading low</Condition>
+    </Task>
+    <Task id="T16">
+      <TaskType>Drive</TaskType>
+      <Destination>
+        <Latitude>37.7900</Latitude>
+        <Longitude>-122.4233</Longitude>
+      </Destination>
+      <Duration>20 minutes</Duration>
+    </Task>
+    <Task id="T17">
+      <TaskType>TakePicture</TaskType>
+      <Condition>Picture taken</Condition>
+    </Task>
+    <Task id="T18">
+      <TaskType>EvaluatePicture</TaskType>
+      <Condition>Picture taken, temperature low</Condition>
+    </Task>
+    <Task id="T19">
+      <TaskType>TakeTemperatureReading</TaskType>
+      <Condition>Temperature reading taken, temperature low</Condition>
+    </Task>
+    <Task id="T20">
+      <TaskType>TakeCO2Sample</TaskType>
+      <Condition>CO2 reading taken, CO2 reading low</Condition>
+    </Task>
+    <Task id="T21">
+      <TaskType>Drive</TaskType>
+      <Destination>
+        <Latitude>37.7933</Latitude>
+        <Longitude>-122.4267</Longitude>
+      </Destination>
+      <Duration>25 minutes</Duration>
+    </Task>
+    <Task id="T22">
+      <TaskType>TakePicture</TaskType>
+      <Condition>Picture taken</Condition>
+    </Task>
+    <Task id="T23">
+      <TaskType>EvaluatePicture</TaskType>
+      <Condition>Picture taken, temperature low</Condition>
+    </Task>
+    <Task id="T24">
+      <TaskType>TakeTemperatureReading</TaskType>
+      <Condition>Temperature reading taken, temperature low</Condition>
+    </Task>
+    <Task id="T25">
+      <TaskType>TakeCO2Sample</TaskType>
+      <Condition>CO2 reading taken, CO2 reading low</Condition>
+    </Task>
+    <Task id="T26">
+      <TaskType>Drive</TaskType>
+      <Destination>
+        <Latitude>37.7967</Latitude>
+        <Longitude>-122.4300</Longitude>
+      </Destination>
+      <Duration>30 minutes</Duration>
+    </Task>
+    <Task id="T27">
+      <TaskType>TakePicture</TaskType>
+      <Condition>Picture taken</Condition>
+    </Task>
+    <Task id="T28">
+      <TaskType>EvaluatePicture</TaskType>
+      <Condition>Picture taken, temperature low</Condition>
+    </Task>
+    <Task id="T29">
+      <TaskType>TakeTemperatureReading</TaskType>
+      <Condition>Temperature reading taken, temperature low</Condition>
+    </Task>
+    <Task id="T30">
+      <TaskType>TakeCO2Sample</TaskType>
+      <Condition>CO2 reading taken, CO2 reading low</Condition>
+    </Task>
+    <Task id="T31">
+      <TaskType>Drive</TaskType>
+      <Destination>
+        <Latitude>37.8000</Latitude>
+        <Longitude>-122.4333</Longitude>
+      </Destination>
+      <Duration>35 minutes</Duration>
+    </Task>
+    <Task id="T32">
+      <TaskType>TakePicture</TaskType>
+      <Condition>Picture taken</Condition>
+    </Task>
+    <Task id="T33">
+      <TaskType>EvaluatePicture</TaskType>
+      <Condition>Picture taken, temperature low</Condition>
+    </Task>
+    <Task id="T34">
+      <TaskType>TakeTemperatureReading</TaskType>
+      <Condition>Temperature reading taken, temperature low</Condition>
+    </Task>
+    <Task id="T35">
+      <TaskType>TakeCO2Sample</TaskType>
+      <Condition>CO2 reading taken, CO2 reading low</Condition>
+    </Task>
+    <Task id="T36">
+      <TaskType>Drive</TaskType>
+      <Destination>
+        <Latitude>37.8033</Latitude>
+        <Longitude>-122.4367</Longitude>
+      </Destination>
+      <Duration>40 minutes</Duration>
+    </Task>
+    <Task id="T37">
+      <TaskType>TakePicture</TaskType>
+      <Condition>Picture taken</Condition>
+    </Task>
+    <Task id="T38">
+      <TaskType>EvaluatePicture</TaskType>
+      <Condition>Picture taken, temperature low</Condition>
+    </Task>
+    <Task id="T39">
+      <TaskType>TakeTemperatureReading</TaskType>
+      <Condition>Temperature reading taken, temperature low</Condition>
+    </Task>
+    <Task id="T40">
+      <TaskType>TakeCO2Sample</TaskType>
+      <Condition>CO2 reading taken, CO2 reading low</Condition>
+    </Task>
+    <Task id="T41">
+      <TaskType>Drive</TaskType>
+      <Destination>
+        <Latitude>37.8067</Latitude>
+        <Longitude>-122.4400</Longitude>
+      </Destination>
+      <Duration>45 minutes</Duration>
+    </Task>
+    <Task id="T42">
+      <TaskType>TakePicture</TaskType>
+      <Condition>Picture taken</Condition>
+    </Task>
+    <Task id="T43">
+      <TaskType>EvaluatePicture</TaskType>
+      <Condition>Picture taken, temperature low</Condition>
+    </Task>
+    <Task id="T44">
+      <TaskType>TakeTemperatureReading</TaskType>
+      <Condition>Temperature reading taken, temperature low</Condition>
+    </Task>
+    <Task id="T45">
+      <TaskType>TakeCO2Sample</TaskType>
+      <Condition>CO2 reading taken, CO2 reading low</Condition>
+    </Task>
+    <Task id="T46">
+      <TaskType>Drive</TaskType>
+      <Destination>
+        <Latitude>37.8100</Latitude>
+        <Longitude>-122.4433</Longitude>
+      </Destination>
+      <Duration>50 minutes</Duration>
+    </Task>
+    <Task id="T47">
+      <TaskType>TakePicture</TaskType>
+      <Condition>Picture taken</Condition>
+    </Task>
+    <Task id="T48">
+      <TaskType>EvaluatePicture</TaskType>
+      <Condition>Picture taken, temperature low</Condition>
+    </Task>
+    <Task id="T49">
+      <TaskType>TakeTemperatureReading</TaskType>
+      <Condition>Temperature reading taken, temperature low</Condition>
+    </Task>
+    <Task id="T50">
+      <TaskType>TakeCO2Sample</TaskType>
+      <Condition>CO2 reading taken, CO2 reading low</Condition>
+    </Task>
+    <Task id="T51">
+      <TaskType>Drive</TaskType>
+      <Destination>
+        <Latitude>37.8133</Latitude>
+        <Longitude>-122.4467</Longitude>
+      </Destination>
+      <Duration>55 minutes</Duration>
+    </Task>
+    <Task id="T52">
+      <TaskType>TakePicture</TaskType>
+      <Condition>Picture taken</Condition>
+    </Task>
+    <Task id="T53">
+      <TaskType>EvaluatePicture</TaskType>
+      <Condition>Picture taken, temperature low</Condition>
+    </Task>
+    <Task id="T54">
+      <TaskType>TakeTemperatureReading</TaskType>
+      <Condition>Temperature reading taken, temperature low</Condition>
+    </Task>
+    <Task id="T55">
+      <TaskType>TakeCO2Sample</TaskType>
+      <Condition>CO2 reading taken, CO2 reading low</Condition>
+    </Task>
+    <Task id="T56">
+      <TaskType>Drive</TaskType>
+      <Destination>
+        <Latitude>37.8200</Latitude>
+        <Longitude>-122.4500</Longitude>
+      </Destination>
+      <Duration>60 minutes</Duration>
+    </Task>
+    <Task id="T57">
+      <TaskType>TakePicture</TaskType>
+      <Condition>Picture taken</Condition>
+    </Task>
+    <Task id="T58">
+      <TaskType>EvaluatePicture</TaskType>
+      <Condition>Picture taken, temperature low</Condition>
+    </Task>
+    <Task id="T59">
+      <TaskType>TakeTemperatureReading</TaskType>
+      <Condition>Temperature reading taken, temperature low</Condition>
+    </Task>
+    <Task id="T60">
+      <TaskType>TakeCO2Sample</TaskType>
+      <Condition>CO2 reading taken, CO2 reading low</Condition>
+    </Task>
+  </Tasks>
+</Document>

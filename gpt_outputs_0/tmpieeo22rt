@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission>
+    <MissionName>Mission 1</MissionName>
+    <MissionDescription>Take a picture of two trees next to each other and then take two CO2 readings of those same two trees.</MissionDescription>
+    <Tasks>
+        <TaskID>1</TaskID>
+        <CompositeTaskInformation>
+            <Type>DriveToLocation</Type>
+            <DestinationLocation>
+                <Longitude>[insert longitude from GeoJSON data]</Longitude>
+                <Latitude>[insert latitude from GeoJSON data]</Latitude>
+            </DestinationLocation>
+            <TaskDescription>Drive to the specified location for task execution.</TaskDescription>
+        </CompositeTaskInformation>
+        <CompositeTaskInformation>
+            <Type>ActionAtLocation</Type>
+            <ExecutionRequirement>
+                <Preconditions>
+                    <ConditionID>1</ConditionID>
+                    <CompositeTaskInformation>
+                        <Type>DriveToLocation</Type>
+                        <DestinationLocation>
+                            <Longitude>[insert longitude from GeoJSON data]</Longitude>
+                            <Latitude>[insert latitude from GeoJSON data]</Latitude>
+                        </DestinationLocation>
+                        <TaskDescription>Drive to the specified location for task execution.</TaskDescription>
+                    </CompositeTaskInformation>
+                </Condition>
+            </ExecutionRequirement>
+            <TaskInformation>
+                <ActionType>TakePicture</ActionType>
+                <TargetEntity>Trees</TargetEntity>
+                <TaskDescription>Take a picture of two trees located at the specified GPS coordinates.</TaskDescription>
+            </TaskInformation>
+        </CompositeTaskInformation>
+        <CompositeTaskInformation>
+            <ExecutionRequirement>
+                <Preconditions>
+                    <ConditionID>1</ConditionID>
+                </Preconditions>
+            </ExecutionRequirement>
+            <TaskInformation>
+                <ActionType>CO2Measurement</ActionType>
+                <TargetEntity>Trees</TargetEntity>
+                <TaskDescription>Take CO2 readings of two trees located at the specified GPS coordinates.</TaskDescription>
+            </TaskInformation>
+        </CompositeTaskInformation>
+    </Tasks>
+</Mission>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <CompositeTaskInformation>
+        <TaskDescription>From the starting point, find a tree somewhere in the middle of the orchard and measure CO2 if low reading, go to and take 2 pictures of nearby trees. From there, measure another tree as far away as possible for CO2 and repeat the same process. Once done, take a temperature reading at any one of the northern most trees. Finally, return to end.</TaskDescription>
+        <Tasks>
+            <!-- Step 1: Find a middle tree and measure CO2 -->
+            <Task>
+                <Action>MoveTo</Action>
+                <Parameters>
+                    <Location>MiddleOfOrchard</Location>
+                </Parameters>
+            </Task>
+            <Task>
+                <Action>MeasureCO2</Action>
+                <Parameters>
+                    <TreeID>MiddleTreeID</TreeID>
+                </Parameters>
+            </Task>
+
+            <!-- Step 2: If CO2 is low, take pictures of nearby trees -->
+            <ConditionalTask>
+                <Condition>CO2LevelLow</Condition>
+                <Tasks>
+                    <Task>
+                        <Action>FindNearbyTrees</Action>
+                        <Parameters>
+                            <TreeID>MiddleTreeID</TreeID>
+                        </Parameters>
+                    </Task>
+                    <Task>
+                        <Action>TakePictures</Action>
+                        <Parameters>
+                            <NumberOfPictures>2</NumberOfPictures>
+                        </Parameters>
+                    </Task>
+                </Tasks>
+            </ConditionalTask>
+
+            <!-- Step 3: Find a far-away tree and measure CO2 -->
+            <Task>
+                <Action>MoveTo</Action>
+                <Parameters>
+                    <Location>FarAwayFromMiddle</Location>
+                </Parameters>
+            </Task>
+            <Task>
+                <Action>MeasureCO2</Action>
+                <Parameters>
+                    <TreeID>FarAwayTreeID</TreeID>
+                </Parameters>
+            </Task>
+
+            <!-- Step 4: If CO2 is low, take pictures of nearby trees -->
+            <ConditionalTask>
+                <Condition>CO2LevelLow</Condition>
+                <Tasks>
+                    <Task>
+                        <Action>FindNearbyTrees</Action>
+                        <Parameters>
+                            <TreeID>FarAwayTreeID</TreeID>
+                        </Parameters>
+                    </Task>
+                    <Task>
+                        <Action>TakePictures</Action>
+                        <Parameters>
+                            <NumberOfPictures>2</NumberOfPictures>
+                        </Parameters>
+                    </Task>
+                </Tasks>
+            </ConditionalTask>
+
+            <!-- Step 5: Take a temperature reading at the northernmost tree -->
+            <Task>
+                <Action>MoveTo</Action>
+                <Parameters>
+                    <Location>NorthernMostTree</Location>
+                </Parameters>
+            </Task>
+            <Task>
+                <Action>MeasureTemperature</Action>
+                <Parameters>
+                    <TreeID>NorthernMostTreeID</TreeID>
+                </Parameters>
+            </Task>
+
+            <!-- Step 6: Return to the starting point -->
+            <Task>
+                <Action>MoveTo</Action>
+                <Parameters>
+                    <Location>StartingPoint</Location>
+                </Parameters>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+</mission>

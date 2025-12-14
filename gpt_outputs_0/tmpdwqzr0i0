@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      This mission involves navigating the orchard, measuring CO2 levels, taking temperature readings, and capturing images of trees.
+    </TaskDescription>
+    <StartingPoint>
+      <Latitude>37.36627570632085</Latitude>
+      <Longitude>-120.42298051393493</Longitude>
+    </StartingPoint>
+  </CompositeTaskInformation>
+
+  <Task>
+    <TaskID>1</TaskID>
+    <TaskName>Navigate to Central Tree &amp; Image Capture</TaskName>
+    <Instructions>
+      <Step>1. Navigate to the tree located at Latitude: 37.36627570632085, Longitude: -120.42298051393493.</Step>
+      <Step>2. Take 2 pictures of this tree.</Step>
+    </Instructions>
+    <TargetTree>
+      <Latitude>37.36627570632085</Latitude>
+      <Longitude>-120.42298051393493</Longitude>
+    </TargetTree>
+  </Task>
+
+  <Task>
+    <TaskID>2</TaskID>
+    <TaskName>Measure CO2 at Furthest Tree</TaskName>
+    <Instructions>
+      <Step>1. Navigate to the furthest tree from the starting point.</Step>
+      <Step>2. Measure CO2 levels.</Step>
+    </Instructions>
+    <TargetTree>
+      <Latitude>37.36636077337479</Latitude>
+      <Longitude>-120.42307592599273</Longitude>
+    </TargetTree>
+  </Task>
+
+  <Task>
+    <TaskID>3</TaskID>
+    <TaskName>Temperature Reading at Northernmost Tree</TaskName>
+    <Instructions>
+      <Step>1. Navigate to the northernmost tree.</Step>
+      <Step>2. Take a temperature reading.</Step>
+    </Instructions>
+    <TargetTree>
+      <Latitude>37.36635678715399</Latitude>
+      <Longitude>-120.42299259529793</Longitude>
+    </TargetTree>
+  </Task>
+
+  <Task>
+    <TaskID>4</TaskID>
+    <TaskName>Return to Starting Point</TaskName>
+    <Instructions>
+      <Step>1. Navigate back to the starting point.</Step>
+    </Instructions>
+    <TargetTree>
+      <Latitude>37.36627570632085</Latitude>
+      <Longitude>-120.42298051393493</Longitude>
+    </TargetTree>
+  </Task>
+</MissionPlan>

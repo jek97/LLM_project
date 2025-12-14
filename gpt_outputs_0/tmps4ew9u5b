@@ -1,0 +1,64 @@
+<MissionPlan xmlns="http://example.com/mission-plan">
+    <Version>1.0</Version>
+    <TaskList>
+        <CompositeTaskInformation id="1" TaskDescription="Take a picture and gather data for the first tree as described in the original question.">
+            <DriveToLocation id="1.1">
+                <GPSReference x="<GeoJSON_longitude_of_the_first_tree>" y="<GeoJSON_latitude_of_the_first_tree>" />
+            </DriveToLocation>
+            <Task id="1.2" Type="TakePicture">
+                <GPSReference x="<GeoJSON_longitude_of_the_first_tree>" y="<GeoJSON_latitude_of_the_first_tree>" />
+            </Task>
+            <Condition id="1.3" Type="ReadingValue">
+                <Parameter Name="CO2_reading" Value="low" />
+                <IfTrue>
+                    <Task id="1.4" Type="SampleCO2">
+                        <GPSReference x="<GeoJSON_longitude_of_the_first_tree>" y="<GeoJSON_latitude_of_the_first_tree>" />
+                    </Task>
+                </IfTrue>
+            </Condition>
+            <Else>
+                <Task id="1.5" Type="TakeTemperatureReading">
+                    <GPSReference x="<GeoJSON_longitude_of_the_first_tree>" y="<GeoJSON_latitude_of_the_first_tree>" />
+                </Task>
+            </Else>
+        </CompositeTaskInformation>
+        <DriveToLocation id="2.1">
+            <GPSReference x="<GeoJSON_longitude_of_the_second_tree>" y="<GeoJSON_latitude_of_the_second_tree>" />
+        </DriveToLocation>
+        <CompositeTaskInformation id="2" TaskDescription="Take a picture and gather data for the second tree as described in the original question.">
+            <Condition id="2.2" Type="ReadingValue">
+                <Parameter Name="CO2_reading" Value="low" />
+                <IfTrue>
+                    <Task id="2.3" Type="SampleCO2">
+                        <GPSReference x="<GeoJSON_longitude_of_the_second_tree>" y="<GeoJSON_latitude_of_the_second_tree>" />
+                    </Task>
+                </IfTrue>
+            </Condition>
+            <Else>
+                <Task id="2.4" Type="TakePicture">
+                    <GPSReference x="<GeoJSON_longitude_of_the_second_tree>" y="<GeoJSON_latitude_of_the_second_tree>" />
+                </Task>
+            </Else>
+        </CompositeTaskInformation>
+        <DriveToLocation id="3.1">
+            <!-- Continue driving to another tree -->
+        </DriveToLocation>
+        <CompositeTaskInformation id="3" TaskDescription="Take a CO2 sample for the third tree as described in the original question.">
+            <Condition id="3.2" Type="ReadingValue">
+                <Parameter Name="CO2_reading" Value="low" />
+                <IfTrue>
+                    <!-- Continue driving to another tree and take another CO2 sample -->
+                </IfTrue>
+            </Condition>
+            <Else>
+                <!-- Go to end -->
+            </Else>
+        </CompositeTaskInformation>
+        <DriveToLocation id="4.1">
+            <!-- Go to end -->
+        </DriveToLocation>
+    </TaskList>
+    <Outcome>
+        The mission will cover a relatively short distance compared to the total area of the forest, given that it follows a linear path.
+    </Outcome>
+</MissionPlan>

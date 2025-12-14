@@ -1,0 +1,5 @@
+< mission-plan
+    xmlns="http://example.com/missionplan"
+  >
+    <CompositeTaskInformation
+      ...

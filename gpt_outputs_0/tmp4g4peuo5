@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PistachioMissionPlan schema="Pistachio_Row_Plan.xsd" version="1.0">
+  <CompositeTaskInformation>
+    <TaskDescription>
+      <TaskID>Mission_Pistachio_Row</TaskID>
+      <TaskName>Select and Photograph Pistachio Trees in a Row</TaskName>
+      <Description>Drive to the farm and select 5 pistachio trees in a row to visit and take a picture of 3 of them.</Description>
+      <Objective>Photograph 3 out of 5 selected pistachio trees in a row.</Objective>
+    </TaskDescription>
+    <MissionSteps>
+      <Step>
+        <StepID>Step_1</StepID>
+        <StepName>Drive to Farm Location</StepName>
+        <Instruction>Drive to the designated farm location.</Instruction>
+        <Waypoint>
+          <Latitude>37.3663</Latitude>
+          <Longitude>-120.4230</Longitude>
+        </Waypoint>
+      </Step>
+      <Step>
+        <StepID>Step_2</StepID>
+        <StepName>Identify Row of 5 Pistachio Trees</StepName>
+        <Instruction>Locate a row containing 5 pistachio trees. Prioritize rows that appear to be in a straight line. Take a photo of the row.</Instruction>
+        <Waypoint>
+          <Latitude>37.3663</Latitude>
+          <Longitude>-120.4230</Longitude>
+        </Waypoint>
+      </Step>
+      <Step>
+        <StepID>Step_3</StepID>
+        <StepName>Photograph Trees</StepName>
+        <Instruction>Select 3 of the 5 trees in the row and take a picture of each.  Ensure each picture clearly shows the tree and its surroundings.</Instruction>
+        <Waypoint>
+          <Latitude>37.3663</Latitude>
+          <Longitude>-120.4230</Longitude>
+        </Waypoint>
+      </Step>
+      <Step>
+        <StepID>Step_4</StepID>
+        <StepName>Return to Base</StepName>
+        <Instruction>Drive back to the starting location.</Instruction>
+        <Waypoint>
+          <Latitude>37.3663</Latitude>
+          <Longitude>-120.4230</Longitude>
+        </Waypoint>
+      </Step>
+    </MissionSteps>
+  </CompositeTaskInformation>
+</PistachioMissionPlan>

@@ -1,0 +1,56 @@
+Here is an example of the XML mission plan:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robust-mission-planning.com/missionplan
+             http://robust-mission-planning.com/missionplan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to tree 0 and take picture</TaskDescription>
+    <DrivingTask>
+      <StartLocation ref="tree_0"/>
+      <EndLocation ref="tree_0"/>
+      <Distance>10.2 km</Distance>
+    </DrivingTask>
+    <ActionTask>
+      <ActionType>TakePicture</ActionType>
+      <TargetLocation ref="tree_0"/>
+    </ActionTask>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to tree 1 and take co2 reading</TaskDescription>
+    <DrivingTask>
+      <StartLocation ref="tree_0"/>
+      <EndLocation ref="tree_1"/>
+      <Distance>10.3 km</Distance>
+    </DrivingTask>
+    <ActionTask>
+      <ActionType>Co2Reading</ActionType>
+      <TargetLocation ref="tree_1"/>
+    </ActionTask>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to tree 0 and take co2 reading</TaskDescription>
+    <DrivingTask>
+      <StartLocation ref="tree_1"/>
+      <EndLocation ref="tree_0"/>
+      <Distance>10.3 km</Distance>
+    </DrivingTask>
+    <ActionTask>
+      <ActionType>Co2Reading</ActionType>
+      <TargetLocation ref="tree_0"/>
+    </ActionTask>
+  </CompositeTaskInformation>
+
+  <!-- Add a comment to display the total estimated haversine distance traveled -->
+  <Outcome>
+    <!-- ... mission plan details ... -->
+    <TotalDistanceTraveled>30.5 km</TotalDistanceTraveled>
+    <!-- The total estimated haversine distance was computed using the driving task distances -->
+  </Outcome>
+</MissionPlan>
+```
+Note that I've assumed the tree IDs are stored in a separate GeoJSON file, and referenced them using the `ref` attribute. Also, I've used placeholder values for the driving distances, which will be replaced with actual values when generating the mission plan.
+
+Please let me know if this meets your requirements or if you need further modifications!

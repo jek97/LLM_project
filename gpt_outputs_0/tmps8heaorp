@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.org/missionplan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.org/missionplan http://example.org/missionplan/MissionPlan_v1.xsd">
+  <Header>
+    <!-- Include relevant information about the mission here, such as date and time, operator name, etc. -->
+  </Header>
+  <CompositeTaskInformation>
+    <TaskDescription>Generate a rectangle by taking pictures of trees at four corners: (1) Top-Left, (2) Top-Right, (3) Bottom-Right, (4) Bottom-Left</TaskDescription>
+    <TaskList>
+      <!-- Task 1: Take picture of top-left tree -->
+      <Task>
+        <TaskID>1</TaskID>
+        <Action>TakePicture</Action>
+        <Location x="{Longitude of Top-Left Tree}" y="{Latitude of Top-Left Tree}"/>
+        <!-- Optionally, include additional information about the tree (tree type, etc.) -->
+      </Task>
+      <!-- Task 2: Drive to top-right tree -->
+      <Task>
+        <Action>Drive</Action>
+        <Location x="{Longitude of Top-Right Tree}" y="{Latitude of Top-Right Tree}"/>
+      </Task>
+      <!-- Task 3: Take picture of top-right tree -->
+      <Task>
+        <Action>TakePicture</Action>
+        <Location x="{Longitude of Top-Right Tree}" y="{Latitude of Top-Right Tree}"/>
+        <!-- Optionally, include additional information about the tree (tree type, etc.) -->
+      </Task>
+      <!-- Task 4: Drive to bottom-right tree -->
+      <Task>
+        <Action>Drive</Action>
+        <Location x="{Longitude of Bottom-Right Tree}" y="{Latitude of Bottom-Right Tree}"/>
+      </Task>
+      <!-- Task 5: Take picture of bottom-right tree -->
+      <Task>
+        <Action>TakePicture</Action>
+        <Location x="{Longitude of Bottom-Right Tree}" y="{Latitude of Bottom-Right Tree}"/>
+        <!-- Optionally, include additional information about the tree (tree type, etc.) -->
+      </Task>
+      <!-- Task 6: Drive to bottom-left tree -->
+      <Task>
+        <Action>Drive</Action>
+        <Location x="{Longitude of Bottom-Left Tree}" y="{Latitude of Bottom-Left Tree}"/>
+      </Task>
+      <!-- Task 7: Take picture of bottom-left tree -->
+      <Task>
+        <Action>TakePicture</Action>
+        <Location x="{Longitude of Bottom-Left Tree}" y="{Latitude of Bottom-Left Tree}"/>
+        <!-- Optionally, include additional information about the tree (tree type, etc.) -->
+      </Task>
+      <!-- Task 8: Drive back to start location (optional) -->
+      <Task>
+        <Action>Drive</Action>
+        <Location x="{Longitude of Start Location}" y="{Latitude of Start Location}"/>
+      </Task>
+    </TaskList>
+    <!-- Optionally, include Outcome element for logging total estimated distance -->
+    <Outcome>Total estimated distance: approximately [Distance] miles</Outcome>
+  </CompositeTaskInformation>
+</MissionPlan>

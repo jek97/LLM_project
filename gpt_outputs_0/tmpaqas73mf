@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:MissionPlan xmlns:ns="http://example.com/mission-plan"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://example.com/mission-plan.xsd http://example.com/mission-plan.xsd"
+                 targetNamespace="http://example.com/mission-plan"
+                 elementFormDefault="qualified">
+    <TaskDescription>
+        <!-- your XML content here -->
+    </TaskDescription>
+</ns:MissionPlan>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ns xmlns="http://www.your-namespace.com/2023">
+    <MissionStart>
+
+        <Task>
+            <!-- Task content -->
+        </Task>
+
+        <Sub-Task>
+            <!-- Sub-Task content -->
+        </Sub-Task>
+    </MissionStart>
+</ns>

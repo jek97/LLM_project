@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <CompositeTaskInformation>
+        <TaskDescription>Visit all trees</TaskDescription>
+        <Tasks>
+            <!-- Tree 0 -->
+            <Task id="visit-tree-0">
+                <DrivingTo>
+                    <Location ref="tree-0"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="1.0" description="Recent tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 1 -->
+            <Task id="visit-tree-1">
+                <DrivingTo>
+                    <Location ref="tree-1"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.8" description="Not recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 2 -->
+            <Task id="visit-tree-2">
+                <DrivingTo>
+                    <Location ref="tree-2"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.6" description="Somewhat recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 3 -->
+            <Task id="visit-tree-3">
+                <DrivingTo>
+                    <Location ref="tree-3"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.4" description="Less recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 4 -->
+            <Task id="visit-tree-4">
+                <DrivingTo>
+                    <Location ref="tree-4"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.2" description="Least recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 5 -->
+            <Task id="visit-tree-5">
+                <DrivingTo>
+                    <Location ref="tree-5"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.8" description="Not recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 6 -->
+            <Task id="visit-tree-6">
+                <DrivingTo>
+                    <Location ref="tree-6"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.6" description="Somewhat recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 7 -->
+            <Task id="visit-tree-7">
+                <DrivingTo>
+                    <Location ref="tree-7"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.4" description="Less recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 8 -->
+            <Task id="visit-tree-8">
+                <DrivingTo>
+                    <Location ref="tree-8"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.2" description="Least recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 9 -->
+            <Task id="visit-tree-9">
+                <DrivingTo>
+                    <Location ref="tree-9"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.8" description="Not recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 10 -->
+            <Task id="visit-tree-10">
+                <DrivingTo>
+                    <Location ref="tree-10"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.6" description="Somewhat recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 11 -->
+            <Task id="visit-tree-11">
+                <DrivingTo>
+                    <Location ref="tree-11"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.4" description="Less recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 12 -->
+            <Task id="visit-tree-12">
+                <DrivingTo>
+                    <Location ref="tree-12"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.2" description="Least recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 13 -->
+            <Task id="visit-tree-13">
+                <DrivingTo>
+                    <Location ref="tree-13"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.8" description="Not recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 14 -->
+            <Task id="visit-tree-14">
+                <DrivingTo>
+                    <Location ref="tree-14"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.6" description="Somewhat recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 15 -->
+            <Task id="visit-tree-15">
+                <DrivingTo>
+                    <Location ref="tree-15"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.4" description="Less recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 16 -->
+            <Task id="visit-tree-16">
+                <DrivingTo>
+                    <Location ref="tree-16"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.2" description="Least recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 17 -->
+            <Task id="visit-tree-17">
+                <DrivingTo>
+                    <Location ref="tree-17"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.8" description="Not recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 18 -->
+            <Task id="visit-tree-18">
+                <DrivingTo>
+                    <Location ref="tree-18"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.6" description="Somewhat recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 19 -->
+            <Task id="visit-tree-19">
+                <DrivingTo>
+                    <Location ref="tree-19"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.4" description="Less recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+        </Tasks>
+    </CompositeTaskInformation>
+</MissionPlan>

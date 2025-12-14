@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plan>
+  <CompositeTaskInformation>
+    <Task id="1" type="DriveTo">
+      <TaskDescription>Drive to the northernmost tree.</TaskDescription>
+      <Waypoint id="1.1" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+    </Task>
+    <Task id="2" type="DriveTo">
+      <TaskDescription>Drive to the middle of the orchard and take a picture.</TaskDescription>
+      <Waypoint id="2.1" latitude="37.36631785560332" longitude="-120.42303004014194"/>
+    </Task>
+    <Task id="3" type="DriveTo">
+      <TaskDescription>Drive to the middle of the eastern end and take a picture of two trees next to each other.</TaskDescription>
+      <Waypoint id="3.1" latitude="37.36635640370881" longitude="-120.423044218715"/>
+      <Waypoint id="3.2" latitude="37.36635640370881" longitude="-120.423044218715"/>
+    </Task>
+  </CompositeTaskInformation>
+</Plan>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RoboticMissionPlan xmlns="http://www.example.com/RoboticMissionPlan">
+    <Header>
+        <StartTime>YYYY-MM-DDThh:mm:ss</StartTime>
+        <EndTime>YYYY-MM-DDThh:mm:ss</EndTime>
+    </Header>
+    <CompositeTaskInformation>
+        <TaskDescription>
+            Starting point, go to the middle of the field and take a picture of a tree. If its average temperature is below 33 C, take a CO2 sample. After, go to another random point 5 trees down and do the same thing (Original Question).
+        </TaskDescription>
+        <TaskList>
+            <DriveToLocation>
+                <DestinationGPSCoordinates>
+                    <!-- Insert middle of the field GPS coordinates -->
+                </DestinationGPSCoordinates>
+            </DriveToLocation>
+            <CameraAction>
+                <ImageCapture>
+                    <!-- Take a picture at the current location -->
+                </ImageCapture>
+            </CameraAction>
+            <TemperatureSensorAction>
+                <AverageTemperatureThreshold>33</AverageTemperatureThreshold>
+                <TakeSampleWhenBelowThreshold>true</TakeSampleWhenBelowThreshold>
+                <!-- If needed, insert the tree ID or other unique identifier to identify the tree for temperature and CO2 measurements -->
+            </TemperatureSensorAction>
+            <DriveToLocation>
+                <DestinationGPSCoordinates>
+                    <!-- Insert GPS coordinates of the next location (5 trees down from the current one) -->
+                </DestinationGPSCoordinates>
+            </DriveToLocation>
+            <CameraAction>
+                <ImageCapture>
+                    <!-- Take a picture at the current location -->
+                </ImageCapture>
+            </CameraAction>
+            <!-- Repeat the TemperatureSensorAction and DriveToLocation elements as needed for additional trees -->
+        </TaskList>
+    </CompositeTaskInformation>
+</RoboticMissionPlan>

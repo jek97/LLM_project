@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <name>Tree Picture Mission</name>
+    <description>Visit as many points as possible in 100 meters and take pictures of each tree.</description>
+    <tasks>
+        <task id="1">
+            <name>Start</name>
+            <type>None</type>
+            <duration>0</duration>
+            <position>
+                <latitude>37.36628908556382</latitude>
+                <longitude>-120.42302669537153</longitude>
+                <altitude>0</altitude>
+            </position>
+        </task>
+        <!-- Add more tasks here -->
+    </tasks>
+</mission>

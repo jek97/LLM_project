@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <StartPoint>
+    <Latitude>37.36627570632085</Latitude>
+    <Longitude>-120.42298051393493</Longitude>
+  </StartPoint>
+  <Tasks>
+    <Task id="1">
+      <TaskType>DriveToTree</TaskType>
+      <TargetTreeId>7</TargetTreeId>
+      <Instructions>Drive to tree with ID 7. This tree is located approximately in the middle of the orchard.</Instructions>
+    </Task>
+    <Task id="2">
+      <TaskType>MeasureCO2</TaskType>
+      <TargetTreeId>7</TargetTreeId>
+      <Instructions>Take a CO2 measurement at the target tree.</Instructions>
+    </Task>
+    <Task id="3">
+      <TaskType>TakePictures</TaskType>
+      <TargetTreeId>7</TargetTreeId>
+      <Instructions>If the CO2 reading is low, take two pictures of nearby trees.</Instructions>
+    </Task>
+    <Task id="4">
+      <TaskType>DriveToTree</TaskType>
+      <TargetTreeId>13</TargetTreeId>
+      <Instructions>Drive to the furthest tree from the starting point. This is tree with ID 13.</Instructions>
+    </Task>
+    <Task id="5">
+      <TaskType>MeasureCO2</TaskType>
+      <TargetTreeId>13</TargetTreeId>
+      <Instructions>Take a CO2 measurement at the target tree.</Instructions>
+    </Task>
+</MissionPlan>

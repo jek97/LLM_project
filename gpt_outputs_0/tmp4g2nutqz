@@ -1,0 +1,6 @@
+<m mission="1">
+  <drive_to longitude="..." latitude="..."></drive_to>
+  <picture location="..." ...></picture>
+  
+  <!-- Add more tasks as needed -->
+</m>

@@ -1,0 +1,12 @@
+<CompositeTaskInformation>
+    <TaskDescription>Original Question</TaskDescription>
+    <ActionSequence>
+        <Action>
+            <CompositeActionTask>Drive to tree location, then perform action unless multiple actions at same tree.</CompositeActionTask>
+            <GPSCoordinates>Reference from GeoJSON file</GPSCoordinates>
+            <TreeType>Specified type of tree</TreeType>
+            <Duration>Time estimate for the operation</Duration>
+        </Action>
+        <!-- Add more actions as needed -->
+    </ActionSequence>
+</CompositeTaskInformation>

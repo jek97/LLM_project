@@ -1,0 +1,23 @@
+<think>
+Alright, so the user is getting another XML validation error in their mission planning XML file. The error message says there's a "Double hyphen within comment: <!--` or `/*` at the end of the file." This suggests that there are comment tags (`<!--` or `/*`) containing double hyphens at the end of the document, which is invalid.
+
+To resolve this issue:
+
+1. **Check for Comment Tags**: Look through your XML file to ensure that any comment tags (`<!--` or `/*`) do not contain double hyphens within them.
+2. **Validate with Tools**: Use XML validators like `xml validators` to check for any unexpected content, including invalid comments at the end of the document.
+
+If you provide more details about your XML file or share it, I can offer a more specific solution to fix this issue.
+</think>
+
+It seems there's an issue with your XML file structure. The error message indicates that there is "Double hyphen within comment: <!--` or `/*` at the end of the file." This suggests that either:
+
+1. There are comment tags (`<!--` or `/*`) containing double hyphens at the end of the document.
+2. There might be trailing whitespace causing issues.
+
+To resolve this issue, follow these steps:
+
+1. **Check for Comment Tags**: Ensure there are no comment tags with invalid content (e.g., containing double hyphens) at the end of your XML file.
+
+2. **Validate with Tools**: Use XML validators like `xml validators` to check for any unexpected content beyond line 31, including comments or trailing characters.
+
+If you provide more details about your XML file or share it, I can offer a more specific solution to fix this issue.

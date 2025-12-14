@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:MissionPlan xmlns:ns="http://robotictaskrepresentation.org/schema/mission_plan.xsd"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://robotictaskrepresentation.org/schema/mission_plan.xsd 
+                                     http://robotictaskrepresentation.org/schema/mission_plan.xsd">
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://robotictaskrepresentation.org/schema/mission_plan.xsd"
+               xmlns="http://robotictaskrepresentation.org/schema/mission_plan.xsd">
+        <!-- schema definitions go here -->
+    </xs:schema>
+    
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the first tree and take a picture</TaskDescription>
+        <DrivingCommand>
+            <StartPoint>
+                <Coordinate x="0" y="0"/>
+            </StartPoint>
+            <EndPoint>
+                <Coordinate x="-120.42302289785604" y="37.36635688574164"/>
+            </EndPoint>
+        </DrivingCommand>
+    </CompositeTaskInformation>
+    <!-- more task information -->
+</ns:MissionPlan>

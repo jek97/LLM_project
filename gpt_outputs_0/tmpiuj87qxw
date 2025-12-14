@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Take a picture of two trees next to each other, then take two CO2 readings of two trees next to each other.
+    </TaskDescription>
+  </CompositeTaskInformation>
+  <Task>
+    <TaskID>1</TaskID>
+    <TaskType>ImageCapture</TaskType>
+    <TaskDescription>Capture an image of two adjacent trees.</TaskDescription>
+    <TargetID>TreePair_1</TargetID>
+    <Instructions>
+      <Step>Navigate to the location of two trees standing close together.</Step>
+      <Step>Take a photograph of the two trees.</Step>
+    </Instructions>
+  </Task>
+  <Task>
+    <TaskID>2</TaskID>
+    <TaskType>CO2Measurement</TaskType>
+    <TaskDescription>Measure the CO2 concentration of the two adjacent trees.</TaskDescription>
+    <TargetID>TreePair_1</TargetID>
+    <Instructions>
+      <Step>Position the CO2 sensor near the first tree of the pair.</Step>
+      <Step>Record the CO2 reading.</Step>
+      <Step>Repeat steps for the second tree in the pair.</Step>
+    </Instructions>
+  </Task>
+</MissionPlan>

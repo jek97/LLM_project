@@ -1,0 +1,37 @@
+ Sure! Based on your task description, I will create an XML mission plan file for you. Please find below the XML file:
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <task id="1">
+        <name>Take a picture</name>
+        <action type="Picture">
+            <input name="picture_data"/>
+            <output name="picture_result"/>
+        </action>
+    </task>
+    <task id="2">
+        <name>Check for low temperature</name>
+        <action type="Temperature">
+            <input name="temperature_data"/>
+            <output name="temperature_result"/>
+        </action>
+    </task>
+    <task id="3">
+        <name>Take a CO2 sample</name>
+        <action type="Co2Sample">
+            <input name="co2_sample_data"/>
+            <output name="co2_sample_result"/>
+        </action>
+    </task>
+    <transition from="1" to="2" on="picture_result.low_temp" />
+    <transition from="2" to="3" on="temperature_result.low_temp" />
+    <transition from="1" to="4" on="picture_result.high_temp" />
+</mission>
+```
+Explanation of the XML file:
+
+* The `<mission>` element contains all the tasks and transitions for your mission plan.
+* Three tasks are defined, each with an ID, name, and action type: `Picture`, `Temperature`, and `Co2Sample`. These actions correspond to taking a picture, checking for low temperature, and taking a CO2 sample, respectively.
+* The `<transition>` elements define the conditions under which the robot should move from one task to another. If the picture taken in Task 1 shows low temperature (picture\_result.low\_temp), the robot will transition to Task 2. Similarly, if Task 2's temperature reading is low (temperature\_result.low\_temp) and the CO2 sample in Task 3 is also low (co2\_sample\_result.low), the robot will move on to Task 4. If any of these conditions are not met, the robot will stop at the first tree.
+
+You can customize the XML file further by adding additional tasks or actions as needed, adjusting the transitions based on your requirements, and providing input and output names for each action that match the data structures used by your robotic system. 

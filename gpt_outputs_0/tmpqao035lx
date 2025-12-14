@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://example.com/mission" xmlns="http://example.com/mission">
+    <element name="Mission">
+        <complexType>
+            <sequence>
+                <element ref="MissionInformation" />
+                <element ref="CompositeTaskInformation" />
+                <element ref="Outcome" minOccurs="0" />
+            </sequence>
+        </complexType>
+    </element>
+    <!-- Define the types for the GeoJSON coordinates -->
+    <xsd:simpleType name="Coordinate">
+        <xsd:restriction base="xsd:decimal">
+            <xsd:pattern value="-?\d+(\.\d*)?" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Longitude">
+        <xsd:restriction base="Coordinate" />
+    </xsd:simpleType>
+    <xsd:simpleType name="Latitude">
+        <xsd:restriction base="Coordinate" />
+    </xsd:simpleType>
+    <!-- Define the types for the tasks -->
+    <xsd:complexType name="Task">
+        <sequence>
+            <element ref="TaskDescription" minOccurs="1" maxOccurs="1" />
+            <element ref="Tasks" minOccurs="0" maxOccurs="unbounded" />
+        </sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Tasks">
+        <sequence>
+            <element ref="DriveToLocation" minOccurs="1" maxOccurs="unbounded" />
+            <element ref="Action" minOccurs="0" maxOccurs="unbounded" />
+        </sequence>
+    </xsd:complexType>
+    <!-- Define the types for the actions -->
+    <xsd:complexType name="DriveToLocation">
+        <sequence>
+            <element ref="GPSLocation" minOccurs="1" maxOccurs="1" />
+        </sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Action">
+        <sequence>
+            <element ref="GPSLocation" minOccurs="0" maxOccurs="1" />
+            <element ref="TreeType" minOccurs="0" maxOccurs="1" />
+            <!-- Add more action-specific elements here -->
+        </sequence>
+    </xsd:complexType>
+    <xsd:simpleType name="TreeType">
+        <restriction base="xsd:string">
+            <enumeration value="Oak"/>
+            <enumeration value="Maple"/>
+            <!-- Add more tree types as needed -->
+        </restriction>
+    </xsd:simpleType>
+</xsd:schema>
+
+<Mission xmlns="http://example.com/mission">
+    <MissionInformation>
+        <RobotName>Rover123</RobotName>
+        <StartTime>2022-05-01T14:00:00Z</StartTime>
+        <EndTime>2022-05-01T16:00:00Z</EndTime>
+    </MissionInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>Generate a mission plan for Rover123 to measure the diameter of trees in the given GeoJSON file.</TaskDescription>
+        <Tasks>
+            <!-- Task 1: Drive to Tree 1 -->
+            <DriveToLocation>
+                <GPSLocation x="48.858069" y="-123.498778"/>
+            </DriveToLocation>
+            <!-- Task 2: Measure the diameter of Tree 1 and take a picture -->
+            <Action>
+                <TreeType>Oak</TreeType>
+                <!-- Add more action-specific elements here -->
+            </Action>
+            <!-- Repeat the following tasks for each tree in the GeoJSON file -->
+        </Tasks>
+    </CompositeTaskInformation>
+    <Outcome>Total estimated distance: Approximately 5 km</Outcome>
+</Mission>

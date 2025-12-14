@@ -1,0 +1,41 @@
+<mission>
+  <task>
+    <action>
+      <move_to coordinates="Tree 1 coordinates (e.g., -120.4230, 37.3663)"
+                comment="Drive to the location of Tree 1">
+        <take_picture
+          comment="Capture an image of Tree 1"
+          timestamp="current_timestamp"/>
+      </action>
+    </task>
+
+    <task>
+      <action>
+        <move_to coordinates="Tree 2 coordinates (e.g., -120.4231, 37.3663)"
+                comment="Drive to the location of Tree 2">
+          <take_picture
+            comment="Capture an image of Tree 2"
+            timestamp="current_timestamp"/>
+        </action>
+      </task>
+
+    <task>
+      <action>
+        <move_to coordinates="Tree 3 coordinates (e.g., -120.4232, 37.3663)"
+                comment="Drive to the location of Tree 3">
+          <take_co2 Reading
+            value="CO2 level at Tree 3"
+            timestamp="current_timestamp"/>
+        </action>
+      </task>
+
+    <task>
+      <action>
+        <move_to coordinates="Tree 4 coordinates (e.g., -120.4233, 37.3663)"
+                comment="Drive to the location of Tree 4">
+          <take_co2 Reading
+            value="CO2 level at Tree 4"
+            timestamp="current_timestamp"/>
+        </action>
+      </task>
+    </mission>

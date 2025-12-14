@@ -1,0 +1,3 @@
+The error message you're encountering is because the xsi:noNamespaceSchemaLocation attribute in the mission element points to a schema that does not exist or is not accessible from where you are running your XML file.
+To resolve this issue, please make sure that you have the correct schema file and provide its location in the xsi:noNamespaceSchemaLocation attribute. The schema should be a valid XSD (XML Schema Definition) file that defines the structure and data types for your XML file.
+Alternatively, you can remove the xsi:noNamespaceSchemaLocation attribute if you don't need to validate the XML against any schema.

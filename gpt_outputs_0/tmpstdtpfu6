@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<http://robustml.io/schema/mission_plan.xsd:MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robustml.io/schema/mission_plan.xsd http://robustml.io/schema/mission_plan.xsd">
+    <CompositeTaskInformation>
+        <TaskDescription>Visit all points on the farm</TaskDescription>
+        <Tasks>
+            <!-- Add tasks here -->
+        </Tasks>
+    </CompositeTaskInformation>
+</http://robustml.io/schema/mission_plan.xsd:MissionPlan>

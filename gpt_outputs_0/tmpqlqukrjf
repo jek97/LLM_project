@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <TaskList>
+        <!-- Drive to the northmost tree -->
+        <DriveToWaypoint TaskID="D_North" WaypointID="1" />
+        <!-- Take a picture at the northmost tree -->
+        <CaptureImage TaskID="I_North" TreeID="1" />
+
+        <!-- Drive to the eastmost tree -->
+        <DriveToWaypoint TaskID="D_East" WaypointID="2" />
+        <!-- Take a picture at the eastmost tree -->
+        <CaptureImage TaskID="I_East" TreeID="2" />
+
+        <!-- Drive to the southmost tree -->
+        <DriveToWaypoint TaskID="D_South" WaypointID="3" />
+        <!-- Take a picture at the southmost tree -->
+        <CaptureImage TaskID="I_South" TreeID="3" />
+
+        <!-- Drive to the westmost tree -->
+        <DriveToWaypoint TaskID="D_West" WaypointID="4" />
+        <!-- Take a picture at the westmost tree -->
+        <CaptureImage TaskID="I_West" TreeID="4" />
+    </TaskList>
+</MissionPlan>

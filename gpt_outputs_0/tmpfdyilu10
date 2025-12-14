@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="missionplan.xsd missionplan">
+  <CompositeTaskInformation>
+    <Task id="1" type="Drive">
+      <TaskDescription>Drive to the northernmost tree.</TaskDescription>
+      <Waypoint id="1.1" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+    </Task>
+    <Task id="2" type="Drive">
+      <TaskDescription>Drive to the middle of the orchard.</TaskDescription>
+      <Waypoint id="2.1" latitude="37.36631785560332" longitude="-120.42303004014194"/>
+    </Task>
+    <Task id="3" type="Drive">
+      <TaskDescription>Drive to the middle of the eastern end.</TaskDescription>
+      <Waypoint id="3.1" latitude="37.36635640370881" longitude="-120.423044218715"/>
+    </Task>
+    <Task id="4" type="Capture">
+      <TaskDescription>Capture a picture of two trees next to each other.</TaskDescription>
+      <Waypoint id="4.1" latitude="37.36635640370881" longitude="-120.423044218715"/>
+    </Task>
+  </CompositeTaskInformation>
+</MissionPlan>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission.xsd">
+    <task id="1">
+        <description>Take a picture of the first tree.</description>
+        <action type="Picture Taking"/>
+    </task>
+    <!-- ... -->
+</mission>

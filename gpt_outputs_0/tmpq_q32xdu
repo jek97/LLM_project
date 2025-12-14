@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <TaskList>
+    <Task id="1">
+      <Name>Take Picture of First Tree</Name>
+      <Description>Capture an image of the initial tree for visual documentation.</Description>
+      <Steps>
+        <Step id="1.1">Capture image</Step>
+      </Steps>
+    </Task>
+    <Task id="2">
+      <Name>Assess Tree 1 - Temperature or CO2</Name>
+      <Description>Measure temperature or CO2 level at Tree 1.</Description>
+      <Steps>
+        <Step id="2.1">Read Temperature</Step>
+        <Step id="2.2">If Temperature Low, Take CO2 Sample</Step>
+        <Step id="2.3">If CO2 Low, Take CO2 Sample Again (Confirmation)</Step>
+      </Steps>
+    </Task>
+    <Task id="3">
+      <Name>Measure Another Tree</Name>
+      <Description>Proceed to and measure another tree.</Description>
+      <Steps>
+        <Step id="3.1">Drive to next tree</Step>
+        <Step id="3.2">Measure tree</Step>
+        <Step id="3.3">Measure tree</Step>
+      </Steps>
+    </Task>
+    <Task id="4">
+      <Name>Final Destination</Name>
+      <Description>Navigate to the final destination.</Description>
+      <Steps>
+        <Step id="4.1">Drive to final destination</Step>
+      </Steps>
+    </Task>
+  </TaskList>
+</MissionPlan>

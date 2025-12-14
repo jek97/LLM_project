@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan xmlns="http://www.example.com/missionPlan"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.example.com/missionPlan http://www.example.com/missionPlan.xsd">
+
+    <missionHeader>
+        <farmName>Pistachio Orchard</farmName>
+        <plannerName>Robotic Task Generator</plannerName>
+        <dateTime>2023-04-15T12:30:00-07:00</dateTime>
+    </missionHeader>
+    <compositeTaskInformation>
+        <taskDescription>From the farm, select 5 pistachio trees in a row to visit and take a picture of 3 of them.</taskDescription>
+        <subTasks>
+            <task sequence="1">
+                <!-- Drive to Tree 1 -->
+                <moveTo location="{lat: 'coordinate_value', lon: 'coordinate_value'}">Pistachio Tree 1</moveTo>
+                <takePhoto cameraAngle="45"/>
+            </task>
+            <task sequence="2">
+                <!-- Drive to Tree 2 -->
+                <moveTo location="{lat: 'coordinate_value', lon: 'coordinate_value'}">Pistachio Tree 2</moveTo>
+                <takePhoto cameraAngle="45"/>
+            </task>
+            <task sequence="3">
+                <!-- Drive to Tree 3 -->
+                <moveTo location="{lat: 'coordinate_value', lon: 'coordinate_value'}">Pistachio Tree 3</moveTo>
+                <takePhoto cameraAngle="45"/>
+            </task>
+            <!-- Add the remaining tasks here for visiting the rest of the trees -->
+        </subTasks>
+    </compositeTaskInformation>
+    <outcome estimatedDistanceTraveled="Approx. large distance to traverse orchard">
+        The robot will traverse approximately large distances throughout this mission to complete the requested actions. A more precise estimate is not possible, but the user should expect the robot to travel over several miles within the Pistachio Orchard.
+    </outcome>
+</missionPlan>

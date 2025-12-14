@@ -1,0 +1,2 @@
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="your_namespace_prefix your_xsd_file.xsd"

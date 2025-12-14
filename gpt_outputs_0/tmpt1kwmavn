@@ -1,0 +1,117 @@
+<MissionPlan>
+  <CompositeTaskInformation>
+    <Reward>0</Reward>
+  </CompositeTaskInformation>
+
+  <Mission>
+    <Tasks>
+      <!-- Task to visit Point 19 -->
+      <Task>
+        <Action>visitPoint19</Action>
+        <Reward>0.025641</Reward>
+      </Task>
+
+      <!-- Task to visit Point 7 -->
+      <Task>
+        <Action>visitPoint7</Action>
+        <Reward>0.382716</Reward>
+      </Task>
+
+      <!-- Task to visit Point 9 -->
+      <Task>
+        <Action>visitPoint9</Action>
+        <Reward>0.456790</Reward>
+      </Task>
+
+      <!-- Task to visit Point 13 -->
+      <Task>
+        <Action>visitPoint13</Action>
+        <Reward>0.287557</Reward>
+      </Task>
+
+      <!-- Task to visit Point 14 -->
+      <Task>
+        <Action>visitPoint14</Action>
+        <Reward>0.692308</Reward>
+      </Task>
+
+      <!-- Task to visit Point 10 -->
+      <Task>
+        <Action>visitPoint10</Action>
+        <Reward>0.769231</Reward>
+      </Task>
+
+      <!-- Task to visit Point 5 -->
+      <Task>
+        <Action>visitPoint5</Action>
+        <Reward>0.846154</Reward>
+      </Task>
+
+      <!-- Task to visit Point 11 -->
+      <Task>
+        <Action>visitPoint11</Action>
+        <Reward>0.923077</Reward>
+      </Task>
+
+      <!-- Task to visit Point 18 -->
+      <Task>
+        <Action>visitPoint18</Action>
+        <Reward>0.546154</Reward>
+      </Task>
+
+      <!-- Task to visit Point 16 -->
+      <Task>
+        <Action>visitPoint16</Action>
+        <Reward>0.961539</Reward>
+      </Task>
+
+      <!-- Task to visit Point 8 -->
+      <Task>
+        <Action>visitPoint8</Action>
+        <Reward>0.423077</Reward>
+      </Task>
+
+      <!-- Task to visit Point 12 -->
+      <Task>
+        <Action>visitPoint12</Action>
+        <Reward>0.596154</Reward>
+      </Task>
+
+      <!-- Task to visit Point 6 -->
+      <Task>
+        <Action>visitPoint6</Action>
+        <Reward>0.738462</Reward>
+      </Task>
+
+      <!-- Task to visit Point 4 -->
+      <Task>
+        <Action>visitPoint4</Action>
+        <Reward>0.815385</Reward>
+      </Task>
+
+      <!-- Task to visit Point 2 -->
+      <Task>
+        <Action>visitPoint2</Action>
+        <Reward>0.692308</Reward>
+      </Task>
+
+      <!-- Task to visit Point 1 -->
+      <Task>
+        <Action>visitPoint1</Action>
+        <Reward>0.546154</Reward>
+      </Task>
+
+      <!-- Task to visit Point 3 -->
+      <Task>
+        <Action>visitPoint3</Action>
+        <Reward>0.769231</Reward>
+      </Task>
+
+      <!-- Task to return to starting point -->
+      <Task>
+        <Action>returnStart</Action>
+        <Reward>0</Reward>
+      </Task>
+    </Tasks>
+  </Mission>
+</MissionPlan>

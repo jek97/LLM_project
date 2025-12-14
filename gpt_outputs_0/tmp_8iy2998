@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <Task id="1" name="PhotoSequence">
+      <Description>Take pictures of four trees in a clockwise sequence, maximizing distance between shots.</Description>
+      <Steps>
+        <Step id="1.1" name="Drive to Tree ID 12">
+          <Instruction>Drive towards Tree ID 12 (Latitude: 37.366300703749474, Longitude: -120.42299259529793)</Instruction>
+          <Waypoint latitude="37.366300703749474" longitude="-120.42299259529793" distance="100m"/>
+        </Step>
+        <Step id="1.2" name="Take Picture - Tree 12">
+          <Instruction>Take a picture of Tree ID 12.</Instruction>
+          <CameraSettings>
+            <Resolution>800x600</Resolution>
+            <Focus>Auto</Focus>
+          </CameraSettings>
+        </Step>
+        <Step id="1.3" name="Drive to Tree ID 13">
+          <Instruction>Drive towards Tree ID 13 (Latitude: 37.36634636896467, Longitude: -120.42302669537153)</Instruction>
+          <Waypoint latitude="37.36634636896467" longitude="-120.42302669537153" distance="200m"/>
+        </Step>
+        <Step id="1.4" name="Take Picture - Tree 13">
+          <Instruction>Take a picture of Tree ID 13.</Instruction>
+          <CameraSettings>
+            <Resolution>800x600</Resolution>
+            <Focus>Auto</Focus>
+          </CameraSettings>
+        </Step>
+        <Step id="1.5" name="Drive to Tree ID 14">
+          <Instruction>Drive towards Tree ID 14 (Latitude: 37.36638236793573, Longitude: -120.4231131179666)</Instruction>
+          <Waypoint latitude="37.36638236793573" longitude="-120.4231131179666" distance="300m"/>
+        </Step>
+        <Step id="1.6" name="Take Picture - Tree 14">
+          <Instruction>Take a picture of Tree 14.</Instruction>
+          <CameraSettings>
+            <Resolution>800x600</Resolution>
+            <Focus>Auto</Focus>
+          </CameraSettings>
+        </Step>
+        <Step id="1.7" name="Drive to Tree ID 15">
+          <Instruction>Drive towards Tree ID 15 (Latitude: 37.36641101400712, Longitude: -120.42314407016538)</Instruction>
+          <Waypoint latitude="37.36641101400712" longitude="-120.42314407016538" distance="400m"/>
+        </Step>
+        <Step id="1.8" name="Take Picture - Tree 15">
+          <Instruction>Take a picture of Tree 15.</Instruction>
+          <CameraSettings>
+            <Resolution>800x600</Resolution>
+            <Focus>Auto</Focus>
+          </CameraSettings>
+        </Step>
+        <Step id="1.9" name="Drive to Tree ID 16">
+          <Instruction>Drive towards Tree ID 16 (Latitude: 37.36643759841162, Longitude: -120.42316951899144)</Instruction>
+          <Waypoint latitude="37.36643759841162" longitude="-120.42316951899144" distance="500m"/>
+        </Step>
+        <Step id="1.10" name="Take Picture - Tree 16">
+          <Instruction>Take a picture of Tree 16.</Instruction>
+          <CameraSettings>
+            <Resolution>800x600</Resolution>
+            <Focus>Auto</Focus>
+          </CameraSettings>
+        </Step>
+      </Steps>
+    </Task>
+  </Task>
+</Task>

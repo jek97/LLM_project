@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <MissionID>Orchard_Mission</MissionID>
+    <TaskDescription>From the starting point, find a tree somewhere in the middle of the orchard and measure CO2 if low reading, go to and take 2 pictures of nearby trees. From there, measure another tree as far away as possible for CO2 and repeat the same process. Once done, take a temperature reading at any one of the northern most trees. Finally, return to end.</TaskDescription>
+    <MissionSteps>
+        <!-- Step 1: Find a middle tree -->
+        <Step>
+            <ID>Step_01</ID>
+            <Action>MoveTo</Action>
+            <Target>Tree_Middle</Target>
+            <Comment>Move to the middle of the orchard.</Comment>
+        </Step>
+
+        <!-- Step 2: Measure CO2 and take pictures -->
+        <Step>
+            <ID>Step_02</ID>
+            <Action>MeasureCO2</Action>
+            <Target>Tree_Middle</Target>
+            <Comment>Measure CO2 level at the middle tree.</Comment>
+        </Step>
+
+        <Condition>
+            <Expression>CO2_Low</Expression>
+            <TrueSteps>
+                <!-- Step 3a: Take pictures of nearby trees -->
+                <Step>
+                    <ID>Step_03a</ID>
+                    <Action>TakePictures</Action>
+                    <Target>Nearby_Trees</Target>
+                    <Comment>Take 2 pictures of nearby trees.</Comment>
+                </Step>
+
+                <!-- Step 4a: Find a far tree -->
+                <Step>
+                    <ID>Step_04a</ID>
+                    <Action>MoveTo</Action>
+                    <Target>Tree_Far</Target>
+                    <Comment>Move to the farthest tree from the middle.</Comment>
+                </Step>
+
+                <!-- Step 5a: Measure CO2 and take pictures -->
+                <Step>
+                    <ID>Step_05a</ID>
+                    <Action>MeasureCO2</Action>
+                    <Target>Tree_Far</Target>
+                    <Comment>Measure CO2 level at the far tree.</Comment>
+                </Step>
+
+                <!-- Step 6a: Take pictures of nearby trees -->
+                <Step>
+                    <ID>Step_06a</ID>
+                    <Action>TakePictures</Action>
+                    <Target>Nearby_Trees_Far</Target>
+                    <Comment>Take 2 pictures of nearby trees.</Comment>
+                </Step>
+
+                <!-- Step 7a: Take temperature reading -->
+                <Step>
+                    <ID>Step_07a</ID>
+                    <Action>MeasureTemperature</Action>
+                    <Target>Northern_Most_Tree</Target>
+                    <Comment>Take a temperature reading at the northernmost tree.</Comment>
+                </Step>
+
+            </TrueSteps>
+        </Condition>
+
+        <!-- Step 3b: Take pictures of nearby trees -->
+        <Step>
+            <ID>Step_03b</ID>
+            <Action>TakePictures</Action>
+            <Target>Nearby_Trees</Target>
+            <Comment>Take 2 pictures of nearby trees.</Comment>
+        </Step>
+
+        <!-- Step 4b: Find a far tree -->
+        <Step>
+            <ID>Step_04b</ID>
+            <Action>MoveTo</Action>
+            <Target>Tree_Far</Target>
+            <Comment>Move to the farthest tree from the middle.</Comment>
+        </Step>
+
+        <!-- Step 5b: Measure CO2 and take pictures -->
+        <Step>
+            <ID>Step_05b</ID>
+            <Action>MeasureCO2</Action>
+            <Target>Tree_Far</Target>
+            <Comment>Measure CO2 level at the far tree.</Comment>
+        </Step>
+
+        <!-- Step 6b: Take pictures of nearby trees -->
+        <Step>
+            <ID>Step_06b</ID>
+            <Action>TakePictures</Action>
+            <Target>Nearby_Trees_Far</Target>
+            <Comment>Take 2 pictures of nearby trees.</Comment>
+        </Step>
+
+        <!-- Step 7b: Take temperature reading -->
+        <Step>
+            <ID>Step_07b</ID>
+            <Action>MeasureTemperature</Action>
+            <Target>Northern_Most_Tree</Target>
+            <Comment>Take a temperature reading at the northernmost tree.</Comment>
+        </Step>
+
+    </MissionSteps>
+    <End>
+        <Action>ReturnToStart</Action>
+        <Comment>Return to the starting point.</Comment>
+    </End>
+</MissionPlan>

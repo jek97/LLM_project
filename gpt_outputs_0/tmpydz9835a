@@ -1,0 +1,65 @@
+<MissionPlan xmlns="http://www.example.com/missionplan">
+    <Header>
+        <MissionName>Tree Analysis Mission</MissionName>
+        <CreatedBy>Your Robotic Platform</CreatedBy>
+        <StartTime>2023-04-15T13:30:00Z</StartTime>
+        <EndTime>2023-04-15T17:00:00Z</EndTime>
+    </Header>
+    <Tasks>
+        <CompositeTaskInformation>
+            <OriginalQuestion>Drive to first tree and take picture. If temperature is low, proceed with taking a reading and sample. Else, drive to the end.</OriginalQuestion>
+            <Tasks>
+                <ActionTask>
+                    <Action>DriveTo</Action>
+                    <Parameters>
+                        <LocationRef name="Start"/>
+                        <DestinationRef name="Tree1"/>
+                    </Parameters>
+                    <Outcome>Drive to first tree.</Outcome>
+                </ActionTask>
+                <CompositeTaskInformation>
+                    <Tasks>
+                        <CameraActionTask>
+                            <Action>TakePicture</Action>
+                            <Parameters>
+                                <SubjectRef name="Tree1"/>
+                            </Parameters>
+                        </CameraActionTask>
+                        <CompositeTaskInformation>
+                            <Tasks>
+                                <TemperatureReadingActionTask>
+                                    <Action>TakeTemperature</Action>
+                                    <Parameters>
+                                        <SubjectRef name="Tree1"/>
+                                    </Parameters>
+                                </TemperatureReadingActionTask>
+                                <CompositeTaskInformation>
+                                    <Tasks>
+                                        <CO2SamplingActionTask>
+                                            <Action>TakeCO2Sample</Action>
+                                            <Parameters>
+                                                <SubjectRef name="Tree1"/>
+                                            </Parameters>
+                                        </CO2SamplingActionTask>
+                                    </Tasks>
+                                </CompositeTaskInformation>
+                            </Tasks>
+                        </CompositeTaskInformation>
+                    </Tasks>
+                </CompositeTaskInformation>
+                <ActionTask>
+                    <Action>DriveTo</Action>
+                    <Parameters>
+                        <LocationRef name="End"/>
+                    </Parameters>
+                    <Outcome>Drive to end.</Outcome>
+                </ActionTask>
+            </Tasks>
+        </CompositeTaskInformation>
+    </Tasks>
+    <Locations>
+        <GPSLocation id="Start">Initial Location</GPSLocation>
+        <GPSLocation id="Tree1" /> <!-- replace 'Tree1' with the actual tree location -->
+        <GPSLocation id="End" /> <!-- replace 'End' with the actual end location -->
+    </Locations>
+</MissionPlan>

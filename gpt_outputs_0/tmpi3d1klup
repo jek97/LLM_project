@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <element name="mission">
+        <complexType>
+            <sequence>
+                <element name="name" type="xsd:string"/>
+                <element name="startingPoint">
+                    <complexType>
+                        <sequence>
+                            <element name="id" type="xsd:integer"/>
+                            <element name="coordinates">
+                                <complexType>
+                                    <sequence>
+                                        <element name="latitude" type="xsd:decimal"/>
+                                        <element name="longitude" type="xsd:decimal"/>
+                                    </sequence>
+                                </complexType>
+                            </element>
+                            <element name="description" type="xsd:string"/>
+                        </sequence>
+                    </complexType>
+                </element>
+                <element name="tasks">
+                    <complexType>
+                        <sequence>
+                            <element name="task" maxOccurs="unbounded">
+                                <complexType>
+                                    <sequence>
+                                        <element name="id" type="xsd:integer"/>
+                                        <element name="type" type="xsd:string"/>
+                                        <element name="target">
+                                            <complexType>
+                                                <sequence>
+                                                    <element name="id" type="xsd:integer"/>
+                                                    <element name="distance" type="xsd:integer"/>
+                                                    <element name="coordinates">
+                                                        <complexType>
+                                                            <sequence>
+                                                                <element name="latitude" type="xsd:decimal"/>
+                                                                <element name="longitude" type="xsd:decimal"/>
+                                                            </sequence>
+                                                        </complexType>
+                                                    </element>
+                                                    <element name="description" type="xsd:string"/>
+                                                </sequence>
+                                            </complexType>
+                                        </element>
+                                        <element name="preconditions">
+                                            <complexType>
+                                                <sequence>
+                                                    <element name="condition" maxOccurs="unbounded">
+                                                        <complexType>
+                                                            <sequence>
+                                                                <element name="type" type="xsd:string"/>
+                                                                <element name="value" type="xsd:string"/>
+                                                            </sequence>
+                                                        </complexType>
+                                                    </element>
+                                                </sequence>
+                                            </complexType>
+                                        </element>
+                                    </complexType>
+                                </element>
+                                    <element name="randomPoints">
+                                        <complexType>
+                                            <sequence>
+                                                <element name="point" maxOccurs="unbounded">
+                                                    <complexType>
+                                                        <sequence>
+                                                            <element name="id" type="xsd:integer"/>
+                                                            <element name="distance" type="xsd:integer"/>
+                                                            <element name="coordinates">
+                                                                <complexType>
+                                                                    <sequence>
+                                                                        <element name="latitude" type="xsd:decimal"/>
+                                                                        <element name="longitude" type="xsd:decimal"/>
+                                                                    </sequence>
+                                                                </complexType>
+                                                            </element>
+                                                        </sequence>
+                                                    </complexType>
+                                                </element>
+                                            </sequence>
+                                        </complexType>
+                                    </element>
+                                </element>
+                            </sequence>
+                        </complexType>
+                    </element>
+                </sequence>
+            </sequence>
+        </complexType>
+    </element>
+</xsd:schema>

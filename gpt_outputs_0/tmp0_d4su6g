@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robust-mission-planning.com/missionplan http://robust-mission-planning.com/missionplan.xsd">
+    <CompositeTaskInformation>
+        <TaskDescription>Take a picture of 4 trees, going clockwise from the northmost tree</TaskDescription>
+        <Sequence>
+            <DrivingTask location="https://example.com/geojson/tree1.json" action="DriveToTree"/>
+            <PictureTask location="https://example.com/geojson/tree1.json" action="TakePicture"/>
+            <DrivingTask location="https://example.com/geojson/tree2.json" action="DriveToTree"/>
+            <PictureTask location="https://example.com/geojson/tree2.json" action="TakePicture"/>
+            <DrivingTask location="https://example.com/geojson/tree3.json" action="DriveToTree"/>
+            <PictureTask location="https://example.com/geojson/tree3.json" action="TakePicture"/>
+            <DrivingTask location="https://example.com/geojson/tree4.json" action="DriveToTree"/>
+            <PictureTask location="https://example.com/geojson/tree4.json" action="TakePicture"/>
+        </Sequence>
+    </CompositeTaskInformation>
+</MissionPlan>

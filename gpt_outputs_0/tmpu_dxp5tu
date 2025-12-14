@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <name>Visit Pistachio Trees</name>
+    <description>Select 5 pistachio trees in a row and take a picture of 3 of them.</description>
+    
+    <tasks>
+        <task name="Start">
+            <action>Move to starting position</action>
+        </task>
+        
+        <task name="Visit Pistachio Trees">
+            <repeat count="5">
+                <action>Take a picture of the selected tree</action>
+            </repeat>
+            
+            <actions>
+                <action>Select next tree in row</action>
+            </actions>
+        </task>
+        
+        <task name="End">
+            <action>Move to end position</action>
+        </task>
+    </tasks>
+    
+    <waypoints>
+        <!-- Define waypoints for each tree -->
+        <waypoint id="1" x="x-coordinate" y="y-coordinate"/>
+        <waypoint id="2" x="x-coordinate" y="y-coordinate"/>
+        <waypoint id="3" x="x-coordinate" y="y-coordinate"/>
+        <waypoint id="4" x="x-coordinate" y="y-coordinate"/>
+        <waypoint id="5" x="x-coordinate" y="y-coordinate"/>
+        
+        <!-- Define starting and ending positions -->
+        <waypoint id="start" x="starting_x" y="starting_y"/>
+        <waypoint id="end" x="ending_x" y="ending_y"/>
+    </waypoints>
+    
+    <variables>
+        <!-- Define variables for the task -->
+        <variable name="selected_tree_count" value="3"/>
+        
+        <!-- Define variables for the waypoints -->
+        <variable name="current_tree_id" value="1"/>
+    </variables>
+    
+    <conditions>
+        <!-- Define conditions for the task -->
+        <condition name="is_selected_tree">
+            <expression>current_tree_id <= selected_tree_count</expression>
+        </condition>
+        
+        <condition name="is_last_tree">
+            <expression>current_tree_id = 5</expression>
+        </condition>
+    </conditions>
+    
+    <actions>
+        <!-- Define actions for the task -->
+        <action name="take_picture">
+            <expression>is_selected_tree() && !is_last_tree()</expression>
+            <code>Capture picture of current tree</code>
+        </action>
+        
+        <action name="select_next_tree">
+            <expression>current_tree_id < 5</expression>
+            <code>Increment current_tree_id by 1</code>
+        </action>
+    </actions>
+    
+    <transitions>
+        <!-- Define transitions for the task -->
+        <transition from="Start" to="Visit Pistachio Trees">
+            <condition name="is_starting_position"/>
+        </transition>
+        
+        <transition from="Visit Pistachio Trees" to="End">
+            <condition name="is_last_tree"/>
+        </transition>
+    </transitions>
+</mission>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robustmissions.schema.org/RobustMissions.xsd
+             http://robustmissions.schema.org/RobustMissions.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription xml:lang="en">Find a tree somewhere in the middle of the orchard and measure cos.</TaskDescription>
+    <DrivingTo> 
+      <GPSLocation>
+        <Latitude>37.36635688574164</Latitude>
+        <Longitude>-120.42302289785604</Longitude>
+      </GPSLocation>
+      <TreeReference>
+        <id>0</id>
+        <type>orchard_tree</type>
+        <action>measure_cos</action>
+      </TreeReference>
+    </DrivingTo>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription xml:lang="en">Take 2 pictures of nearby trees if cos reading is low.</TaskDescription>
+    <DrivingTo> 
+      <GPSLocation>
+        <Latitude>37.36635688574164</Latitude>
+        <Longitude>-120.42302289785604</Longitude>
+      </GPSLocation>
+      <TreeReference>
+        <id>0</id>
+        <type>orchard_tree</type>
+        <action>measure_cos</action>
+      </TreeReference>
+    </DrivingTo>
+    <PictureTaking>
+      <NumberOfPictures>2</NumberOfPictures>
+    </PictureTaking>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription xml:lang="en">Measure another tree as far away as possible for CO2 and repeat the same process.</TaskDescription>
+    <DrivingTo> 
+      <GPSLocation>
+        <Latitude>37.36635688574164</Latitude>
+        <Longitude>-120.42302289785604</Longitude>
+      </GPSLocation>
+      <TreeReference>
+        <id>0</id>
+        <type>orchard_tree</type>
+        <action>measure_co2</action>
+      </TreeReference>
+    </DrivingTo>
+    <PictureTaking>
+      <NumberOfPictures>2</NumberOfPictures>
+    </PictureTaking>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription xml:lang="en">Take a temperature reading at any one of the northernmost trees.</TaskDescription>
+    <DrivingTo> 
+      <GPSLocation>
+        <Latitude>37.36635688574164</Latitude>
+        <Longitude>-120.42302289785604</Longitude>
+      </GPSLocation>
+      <TreeReference>
+        <id>18</id>
+        <type>orchard_tree</type>
+        <action>take_temperature</action>
+      </TreeReference>
+    </DrivingTo>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription xml:lang="en">Return to end.</TaskDescription>
+    <DrivingTo>
+      <GPSLocation>
+        <Latitude>37.36635688574164</Latitude>
+        <Longitude>-120.42302289785604</Longitude>
+      </GPSLocation>
+      <TreeReference />
+    </DrivingTo>
+  </CompositeTaskInformation>
+</MissionPlan>

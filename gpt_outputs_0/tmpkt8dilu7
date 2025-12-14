@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<mission>
+    <task id="0">
+        <name>Take a picture of the northern most tree.</name>
+        <target>[1, 2]</target>
+        <action>take_picture</action>
+    </task>
+    <task id="1">
+        <name>Drive to the middle of the orchard.</name>
+        <target>[5, 5]</target>
+        <action>drive</action>
+    </task>
+    <task id="2">
+        <name>Take another picture.</name>
+        <target>[5, 5]</target>
+        <action>take_picture</action>
+    </task>
+    <task id="3">
+        <name>Drive to the middle of the eastern end.</name>
+        <target>[9, 6]</target>
+        <action>drive</action>
+    </task>
+    <task id="4">
+        <name>Take a picture of two trees next to each other.</name>
+        <target>[9, 6]</target>
+        <action>take_picture</action>
+    </task>
+</mission>

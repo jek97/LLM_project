@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission.xsd">
+    <Header>
+        <MissionName>Tree Inspection</MissionName>
+        <StartTime>YYYY-MM-DDTHH:MM:SS</StartTime>
+        <MissionType>Inspection</MissionType>
+        <MissionPlanner>Robot Navigator</MissionPlanner>
+    </Header>
+    <CompositeTaskInformation>
+        <!-- First task: Drive to the starting location -->
+        <Task>
+            <Type>DriveToLocation</Type>
+            <Coordinates><Latitude>Start Latitude</Latitude><Longitude>Start Longitude</Longitude></Coordinates>
+        </Task>
+        <!-- Repeat tasks of Driving to a tree location and doing actions nearby -->
+        <Task>
+            <Type>DriveToLocation</Type>
+            <Coordinates><Latitude>First Point Latitude from GeoJSON file</Latitude><Longitude>First Point Longitude from GeoJSON file</Longitude></Coordinates>
+            <TargetPoint>First Point ID from GeoJSON file</TargetPoint>
+        </Task>
+        <!-- Do action -->
+        <Task>
+            <Type>TakePicture</Type>
+            <TreeData><TreeID>1</TreeID><Species>Oak</Species></TreeData>
+        </Task>
+        <!-- Repeat previous tasks for additional trees -->
+        <!-- ... -->
+        <!-- Final task: Drive to a home location -->
+        <Task>
+            <Type>DriveToLocation</Type>
+            <Coordinates><Latitude>Home Latitude</Latitude><Longitude>Home Longitude</Longitude></Coordinates>
+        </Task>
+    </CompositeTaskInformation>
+    <!-- Added the original question in the TaskDescription element for logging purposes -->
+    <Outcome>Successfully inspected several trees and took pictures. (Estimated distance: about 10 km)</Outcome>
+</Mission>

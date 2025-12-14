@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan>
+  <startLocation>
+    <type>Point</type>
+    <coordinates>-120.42302289785604,37.36635688574164</coordinates>
+  </startLocation>
+
+  <tasks>
+    <task id="1">
+      <description>Drive to the first pistachio tree and take a picture of it</description>
+      <action type="driveToTree" locationRef="#tree1"/>
+      <pictureTaking>
+        <angles>
+          <angle>Front</angle>
+          <angle>Side</angle>
+          <angle>Back</angle>
+        </angles>
+      </pictureTaking>
+    </task>
+
+    <task id="2">
+      <description>Drive to the second pistachio tree and take a picture of it</description>
+      <action type="driveToTree" locationRef="#tree2"/>
+      <pictureTaking>
+        <angles>
+          <angle>Front</angle>
+          <angle>Side</angle>
+          <angle>Back</angle>
+        </angles>
+      </pictureTaking>
+    </task>
+
+    <!-- Add more tasks as needed -->
+  </tasks>
+
+  <endLocation>
+    <type>Point</type>
+    <coordinates>-120.42302289785604,37.36635688574164</coordinates>
+  </endLocation>
+
+  <tree1 location="https://example.com/tree1.geojson"/>
+  <tree2 location="https://example.com/tree2.geojson"/>
+
+  <!-- Add more tree locations as needed -->
+</missionPlan>

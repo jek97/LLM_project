@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/mission.xsd"
+           xmlns:tns="http://example.com/mission.xsd">
+    <xs:element name="mission" type="tns:MissionType"/>
+</xs:schema>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns="http://example.com/mission.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <MissionInfo>
+        <TaskDescription>Drive to the first pistachio tree and select it</TaskDescription>
+        <drivingToLocation>
+            <GPSLocation>
+                <latitude>37.36635688574164</latitude>
+                <longitude>-120.42302289785604</longitude>
+            </GPSLocation>
+        </drivingToLocation>
+    </MissionInfo>
+
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the second pistachio tree and select it</TaskDescription>
+        <drivingToLocation>
+            <GPSLocation>
+                <latitude>37.36631509745154</latitude>
+                <longitude>-120.42309252722157</longitude>
+            </GPSLocation>
+        </drivingToLocation>
+    </CompositeTaskInformation>
+
+    <!-- ... rest of the XML document -->
+</mission>

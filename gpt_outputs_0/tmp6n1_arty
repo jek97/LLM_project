@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns="http://www.example.com/robotics/schemas/mission">
+    <MissionName>Tree Measurement Mission</MissionName>
+    <MissionDescription>Take a picture of 2 trees next to each other and then take 2 CO2 readings of two trees next to each other.</MissionDescription>
+    <Tasks>
+        <TaskID>1</TaskID>
+        <CompositeTaskInformation>
+            <Type>DriveToLocation</Type>
+            <DestinationLocation>
+                <Longitude>[insert longitude from GeoJSON data]</Longitude>
+                <Latitude>[insert latitude from GeoJSON data]</Latitude>
+            </DestinationLocation>
+            <TaskDescription>Drive to the specified location for task execution. (Original Question: Take a picture of 2 trees next to each other and then take 2 CO2 readings of two trees next to each other)</TaskDescription>
+        </CompositeTaskInformation>
+        <CompositeTaskInformation>
+            <ExecutionRequirement>
+                <Preconditions>
+                    <ConditionID>1</ConditionID>
+                </Preconditions>
+            </ExecutionRequirement>
+            <TaskInformation>
+                <ActionType>TakePicture</ActionType>
+                <TargetEntity>Trees</TargetEntity>
+                <TaskDescription>Take a picture of the trees located at the specified GPS coordinates. (Original Question: Take a picture of 2 trees next to each other)</TaskDescription>
+            </TaskInformation>
+        </CompositeTaskInformation>
+        <CompositeTaskInformation>
+            <ExecutionRequirement>
+                <Preconditions>
+                    <ConditionID>1</ConditionID>
+                </Preconditions>
+            </ExecutionRequirement>
+            <TaskInformation>
+                <ActionType>CO2Measurement</ActionType>
+                <TargetEntity>Trees</TargetEntity>
+                <TaskDescription>Take CO2 readings of the trees located at the specified GPS coordinates. (Original Question: Take 2 CO2 readings of two trees next to each other)</TaskDescription>
+            </TaskInformation>
+        </CompositeTaskInformation>
+    </Tasks>
+    <!-- Comment out estimated distance after testing -->
+    <!-- <Outcome>Total distance traveled was approximately [insert total estimated distance] meters</Outcome> -->
+</mission>

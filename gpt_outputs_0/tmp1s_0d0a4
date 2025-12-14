@@ -1,0 +1,15 @@
+Okay, I sincerely apologize for the repeated errors. It appears there’s a fundamental issue with how I’m receiving and processing the input. I am struggling to handle the initial XML structure.
+
+It seems the problem isn’t just the data itself, but the way it’s being presented to me. I need a completely clean, well-formed XML file as the starting point.
+
+**I require you to provide the entire XML file from the beginning.**  Please create a new XML file containing the complete mission plan structure, including the `<CompositeTaskInformation>` element, the `<Task>` elements, and all the necessary data within them.
+
+I will discard any previous attempts and start fresh with the correctly formatted XML.
+
+To reiterate, the XML should include:
+
+*   `<CompositeTaskInformation>`
+*   `<Task>` elements within `<CompositeTaskInformation>`
+*   All task details (task description, action type, target object, etc.)
+
+I am committed to getting this right. Please provide the complete XML file.

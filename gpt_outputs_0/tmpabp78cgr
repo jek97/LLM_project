@@ -1,0 +1,68 @@
+It seems that the problem is with the XML declaration at the top of the file.
+
+Here's an updated version of the `robotMission.xml` file with the correct XML declaration:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<RobotMission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://robotmission.org/schemas/v2 
+                                   http://robotmission.org/schemas/v2/robotMission.xsd">
+  <TaskInformation name="DriveToTrees">
+    <precondition>None</precondition>
+    
+    <!-- Drive to a tree next to two other trees -->
+    <DrivingToTree id="1" coordinates="[-120.42302289785604, 37.36635688574164]"/>
+    <outcome><State name="Driven">Driven to tree 1</State></outcome>
+    <taskInformation>
+      <TaskDescription>
+        <!-- Task description content here -->
+      </TaskDescription>
+    </taskInformation>
+  </TaskInformation>
+  
+  <CompositeTaskInformation>
+    <!-- ... -->
+  </CompositeTaskInformation>
+</RobotMission>
+```
+Note that I also updated the schema location to point to `robotMission.xsd`, which is a separate file that defines the structure of the XML document. You will need to create this file as well.
+
+Here's an example of what `robotMission.xsd` might look like:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+  <xs:element name="RobotMission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="TaskInformation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="TaskInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DrivingToTree" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="CompositeTaskInformation">
+    <xs:complexType>
+      <!-- ... -->
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="DrivingToTree">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="IdType"/>
+        <xs:element name="coordinates" type="CoordinatesType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- ... -->
+</xs:schema>
+```
+Please note that this is just an example, and you may need to modify it to fit your specific use case.

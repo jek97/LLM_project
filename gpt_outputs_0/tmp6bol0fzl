@@ -1,0 +1,82 @@
+It seems that I need to provide a complete XML schema definition for the mission plan.
+
+Here is an example of a complete XML file using a schema:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE missionPlan SYSTEM "path/to/schema.xsd">
+<missionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="path/to/schema.xsd">
+  <compositeTaskInformation>
+    <taskDescription xml:lang="en">Go to the middle of the field and take a picture of a tree.</taskDescription>
+    <outcome>
+      <gpsLocation>-120.42302289785604, 37.36635688574164</gpsLocation>
+      <treeType>unknown</treeType>
+      <temperature>25°C</temperature>
+      <!-- Place the original question in the task description for logging -->
+      <taskDescription xml:lang="en">
+        <question>What type of tree is this?</question>
+      </taskDescription>
+    </outcome>
+  </compositeTaskInformation>
+</missionPlan>
+```
+This XML file has a `compositeTaskInformation` element that contains two child elements: `taskDescription` and `outcome`. The `outcome` element also has three child elements: `gpsLocation`, `treeType`, and `temperature`.
+
+Please note that you will need to create the schema (`.xsd`) file separately, using an XML schema definition tool. You can then use this schema definition when creating your mission plan.
+
+For example, here is a simple schema definition:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="missionPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="compositeTaskInformation" type="CompositeTaskInformation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="CompositeTaskInformation">
+    <xs:sequence>
+      <xs:element name="taskDescription" type="TaskDescription"/>
+      <xs:element name="outcome" type="Outcome"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TaskDescription">
+    <xs:sequence>
+      <xs:element name="question" type="xs:string"/>
+      <!-- Add other elements as needed -->
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Outcome">
+    <xs:sequence>
+      <xs:element name="gpsLocation" type="GPSLocation"/>
+      <xs:element name="treeType" type="TreeType"/>
+      <xs:element name="temperature" type="Temperature"/>
+      <!-- Add other elements as needed -->
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="GPSLocation">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[+-]?\d{1,3}\.\d+,\d{1,3}\.\d+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TreeType">
+    <xs:restriction base="xs:string">
+      <!-- Add valid values as needed -->
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Temperature">
+    <xs:restriction base="xs:string">
+      <!-- Add valid values as needed -->
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+```
+Please note that this is just a simple example, and you will need to adapt it to your specific use case.
+
+I hope this helps! Let me know if you have any further questions.

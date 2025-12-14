@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission.xsd">
+    <CompositeTaskInformation>
+        <TaskDescription>Take a picture of the northern most tree. Drive to the middle of the orchard and take another. Drive to the middle of the eastern end and take a picture of two trees next to each other.</TaskDescription>
+        <Tasks>
+            <!-- Task 1: Take a picture of the northern most tree -->
+            <Task>
+                <Action>TakePicture</Action>
+                <Target>
+                    <Type>Tree</Type>
+                    <Location>NorthernMost</Location>
+                </Target>
+            </Task>
+            
+            <!-- Task 2: Drive to the middle of the orchard and take another picture -->
+            <Task>
+                <Action>DriveTo</Action>
+                <Target>
+                    <Type>Location</Type>
+                    <Description>MiddleOfOrchard</Description>
+                </Target>
+                <SubTasks>
+                    <Task>
+                        <Action>TakePicture</Action>
+                        <Target>
+                            <Type>Tree</Type>
+                            <Location>MiddleOfOrchard</Location>
+                        </Target>
+                    </Task>
+                </SubTasks>
+            </Task>
+
+            <!-- Task 3: Drive to the middle of the eastern end and take a picture of two trees next to each other -->
+            <Task>
+                <Action>DriveTo</Action>
+                <Target>
+                    <Type>Location</Type>
+                    <Description>MiddleOfEasternEnd</Description>
+                </Target>
+                <SubTasks>
+                    <Task>
+                        <Action>TakePicture</Action>
+                        <Target>
+                            <Type>Trees</Type>
+                            <Location>MiddleOfEasternEnd</Location>
+                            <Quantity>2</Quantity>
+                        </Target>
+                    </Task>
+                </SubTasks>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+</mission>

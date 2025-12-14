@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RoboticMissionPlan>
+    <MissionStep id="0">
+        <Name>Take a picture of 2 trees next to each other</Name>
+        <Instructions>Capture a high-resolution image of two trees standing side by side using the robotic camera.</Instructions>
+    </MissionStep>
+    <MissionStep id="1">
+        <Name>Take 2 CO2 readings of two trees next to each other</Name>
+        <Instructions>Use the CO2 sensor to measure the CO2 levels of the two trees standing side by side, and record the measurements.</Instructions>
+    </MissionStep>
+</RoboticMissionPlan>

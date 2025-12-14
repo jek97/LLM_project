@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns="http://mission.schema.com"
+         xsi:schemaLocation="http://mission.schema.com http://mission.schema.com/mission.xsd">
+  <compositeTaskInformation>
+    <taskDescription>Visit and take pictures of as many trees within 100m radius</taskDescription>
+    <outcome>
+      Total estimated haversine distance traveled: 500 meters
+    </outcome>
+  </compositeTaskInformation>
+  <!-- ... rest of the XML remains the same ... -->

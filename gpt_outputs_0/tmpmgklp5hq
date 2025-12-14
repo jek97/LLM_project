@@ -1,0 +1,36 @@
+ I apologize for the continued issues with my previous responses. Let me provide you with an example that addresses your concerns by including a GeoJSON file reference in the mission plan and correctly formatting the XML structure:
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <robot>
+        <position x="0" y="0" heading="0"/>
+        <capability name="photography"/>
+    </robot>
+    <distance_threshold value="100"/>
+    <movementStrategy type="sequential">
+        <!-- ... your movement strategy -->
+    </movementStrategy>
+    <CompositeTaskInformation>
+        <TaskDescription>Visit as many trees as possible within 100 meters and take pictures of each tree.</TaskDescription>
+    </CompositeTaskInformation>
+    <target id="1">
+        <!-- GeoJSON file reference -->
+        <GeoJSON>
+            [
+                {"type": "Feature", "geometry": {
+                    "type": "Point",
+                    "coordinates": [120.42298051393493, 37.36628908556382]
+                }, "properties": {}},
+                {"type": "Feature", "geometry": {
+                    "type": "Point",
+                    "coordinates": [130.4332915, 37.232690]
+                }, "properties": {}},
+                <!-- ... more target points -->
+            ]
+        </GeoJSON>
+    </target>
+</mission>
+```
+In this example, the XML file starts with a declaration of the XML version and encoding, followed by a `<mission>` tag to define the root element. The mission contains the robot's position and capability information, distance threshold for sequential target visits, movement strategy settings (you can customize the strategy based on your needs), a `<CompositeTaskInformation>` element, and a list of targets to visit, where each target is represented as a GeoJSON point.
+
+Please note that I have added the GeoJSON structure as an example only, as the specific format or structure of the GeoJSON file would depend on your use case. You should adjust the `<GeoJSON>` content accordingly to include your own target points in the GeoJSON format. 

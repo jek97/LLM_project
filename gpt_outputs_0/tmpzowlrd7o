@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns="http://example.com/mission" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.com/mission http://example.com/mission.xsd">
+    <Header>
+        <StartingLocation>
+            <Latitude>37.7749</Latitude>
+            <Longitude>-122.4194</Longitude>
+        </StartingLocation>
+        <EndLocation>
+            <Latitude>37.7749</Latitude>
+            <Longitude>-122.4194</Longitude>
+        </EndLocation>
+    </Header>
+    <Tasks>
+        <CompositeTaskInformation>
+            <TaskDescription>From the starting point, go to the middle of the field and take a picture of a tree. If its average temperature is below 33 C, take a CO2 sample. After, go to another random point 5 trees down and do the same thing (Original question).</TaskDescription>
+            <Tasks>
+                <DriveToLocation>
+                    <Destination>
+                        <Latitude>37.7749</Latitude>
+                        <Longitude>-122.4194</Longitude>
+                    </Destination>
+                </DriveToLocation>
+                <TakePictureOfTree>
+                    <!-- Add tree identification or other relevant information here -->
+                </TakePictureOfTree>
+                <CheckTemperature>
+                    <!-- Add temperature sensor or other relevant information here -->
+                    <Threshold>33</Threshold>
+                </CheckTemperature>
+                <SampleCO2>
+                    <!-- Add CO2 sensor or other relevant information here -->
+                </SampleCO2>
+                <DriveToLocation>
+                    <!-- Calculate the destination based on the random point 5 trees down from the first tree -->
+                </DriveToLocation>
+                <TakePictureOfTree>
+                    <!-- Add tree identification or other relevant information here -->
+                </TakePictureOfTree>
+            </Tasks>
+        </CompositeTaskInformation>
+    </Tasks>
+    <Outcome>
+        The estimated distance for this mission is significant.
+    </Outcome>
+</Mission>

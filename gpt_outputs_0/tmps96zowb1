@@ -1,0 +1,13 @@
+<CompositeTaskInformation>
+  <TaskDescription>Generate a mission based on robotic task representation. When asked to generate a mission, create an XML file conformant to the known schema and use the GeoJSON file to provide references in the mission plan for things such as GPS location, tree type, etc.</TaskDescription>
+  <CompositeTaskInformationType>N/A</CompositeTaskInformationType>
+  <OriginalQuestion>Generate a mission based on robotic task representation.</OriginalQuestion>
+  <TaskRequirements>
+    <TaskRequirement>
+      <DriveToTree longitude="..." latitude="..."/>
+      <PerformAction action="...">
+    </TaskRequirement>
+  </TaskRequirements>
+  <TotalEstimatedDistance HaversineDistance="...">
+  </CompositeTaskInformation>
+</CompositeTaskInformation>

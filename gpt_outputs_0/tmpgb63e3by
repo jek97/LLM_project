@@ -1,0 +1,76 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema http://www.example.com/mission.xsd">
+ <name>Farm Tree Corner Photos</name>
+ <description>Take pictures of trees at the four corners of the farm.</description>
+ <startTime>2023-03-15T10:00:00Z</startTime>
+ <endTime>2023-03-15T16:00:00Z</endTime>
+ <compositeTaskInformation>
+ <taskDescription>Take pictures of trees at the four corners of the farm in any order.</taskDescription>
+ </CompositeTaskInformation>
+ <tasks>
+ <task id="1">
+ <name>Drive to Corner 1</name>
+ <description>Drive to Corner 1 and take a picture of the tree.</description>
+ <startPosition>
+ <latitude>37.774928</latitude>
+ <longitude>-122.41945</longitude>
+ </startPosition>
+ <endPosition>
+ <latitude>37.76021</latitude>
+ <longitude>-122.42085</longitude>
+ </endPosition>
+ <action>
+ <name>Drive to Corner 1</name>
+ </action>
+ </task>
+ <task id="2">
+ <name>Take picture of tree at Corner 1</name>
+ <description>Take a picture of the tree at Corner 1.</description>
+ <startPosition>
+ <latitude>37.76021</latitude>
+ <longitude>-122.42085</longitude>
+ </startPosition>
+ <endPosition>
+ <latitude>37.76021</latitude>
+ <longitude>-122.42085</longitude>
+ </endPosition>
+ <action>
+ <name>Take picture of tree at Corner 1</name>
+ </action>
+ </task>
+ <task id="3">
+ <name>Drive to Corner 2</name>
+ <description>Drive to Corner 2 and take a picture of the tree.</description>
+ <startPosition>
+ <latitude>37.76021</latitude>
+ <longitude>-122.42085</longitude>
+ </startPosition>
+ <endPosition>
+ <latitude>37.75597</latitude>
+ <longitude>-122.42963</longitude>
+ </endPosition>
+ <action>
+ <name>Drive to Corner 2</name>
+ </action>
+ </task>
+ <task id="4">
+ <name>Take picture of tree at Corner 2</name>
+ <description>Take a picture of the tree at Corner 2.</description>
+ <startPosition>
+ <latitude>37.75597</latitude>
+ <longitude>-122.42963</longitude>
+ </startPosition>
+ <endPosition>
+ <latitude>37.75597</latitude>
+ <longitude>-122.42963</longitude>
+ </endPosition>
+ <action>
+ <name>Take picture of tree at Corner 2</name>
+ </action>
+ </task>
+ <task id="5">
+ <name>Drive to Corner 3</name>
+ <description>Drive to Corner 3 and take a picture of the tree.</description>
+ <startPosition>
+ <latitude>37.75597</latitude>
+ <longitude>-122.42963</longitude>

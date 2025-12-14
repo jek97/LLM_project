@@ -1,0 +1,40 @@
+<Mission>
+    <MissionInformation>
+        <MissionName>Farm Corner Photography</MissionName>
+        <StartTime>YYYY-MM-DDTHH:MM:SS</StartTime>
+        <EndTime>YYYY-MM-DDTHH:MM:SS</EndTime>
+    </MissionInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>Farm Corner Photography - Original Question</TaskDescription>
+        <Tasks>
+            <Task>
+                <TaskID>1</TaskID>
+                <TaskName>Drive to Northwest Corner</TaskName>
+                <Location>NorthwestCorner</Location>
+                <Action>TakePicture</Action>
+            </Task>
+            <Task>
+                <TaskID>2</TaskID>
+                <TaskName>Drive to Northeast Corner</TaskName>
+                <Location>NortheastCorner</Location>
+                <Action>TakePicture</Action>
+            </Task>
+            <Task>
+                <TaskID>3</TaskID>
+                <TaskName>Drive to Southeast Corner</TaskName>
+                <Location>SoutheastCorner</Location>
+                <Action>TakePicture</Action>
+            </Task>
+            <Task>
+                <TaskID>4</TaskID>
+                <TaskName>Drive to Southwest Corner</TaskName>
+                <Location>SouthwestCorner</Location>
+                <Action>TakePicture</Action>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+    <Outcome>
+        <!-- Total estimated haversine distance traveled from start to end -->
+        The robot successfully completed the mission and took pictures of all four corners of the farm.
+    </Outcome>
+</Mission>

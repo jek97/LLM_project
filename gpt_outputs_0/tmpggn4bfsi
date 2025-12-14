@@ -1,0 +1,47 @@
+<MissionStart>
+  <Task name="Task 1">
+    <Sub-Task name="A1">
+      <Action type="Picture">Take a picture of Tree ID 01.</Action>
+    </Sub-Task>
+
+    <Condition name="C1">
+      <Check reading="CO2">Check CO2 reading at Tree ID 01.</Check>
+    </Condition>
+
+    <Response on="High Reading">
+      <Sub-Response name="S1">
+        <Action type="Sample">Take another CO2 sample at Tree ID 01.</Action>
+      </Sub-Response>
+    </Response>
+
+    <Response on="Still Low">
+      <Sub-Task name="A3">
+        <Action type="Move">Drive to Tree ID 02 after resolving CO2 issues.</Action>
+      </Sub-Task>
+    </Response>
+  </Task>
+
+  <Task name="Task T1">
+    <Sub-Task name="A2">
+      <Action type="Picture">Take a picture of Tree ID 02.</Action>
+    </Sub-Task>
+
+    <Condition name="C2">
+      <Check reading="CO2">Check CO2 reading at Tree ID 02.</Check>
+    </Condition>
+
+    <Response on="High Reading">
+      <Sub-Response name="S2">
+        <Action type="Sample">Take another CO2 sample at Tree ID 02.</Action>
+      </Sub-Response>
+    </Response>
+
+    <Response on="Still Low">
+      <Sub-Task name="A4">
+        <Action type="Move">Drive to Tree ID 03 after resolving CO2 issues.</Action>
+      </Sub-Task>
+    </Response>
+  </Task>
+
+  <!-- Repeat the pattern for Trees ID 03 and beyond -->
+</MissionStart>

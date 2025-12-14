@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <MissionID>1</MissionID>
+  <MissionName>Temperature and CO2 Sampling</MissionName>
+  <StartTime>2023-04-10T09:00:00Z</StartTime>
+  <EndTime/>
+  <MissionDescription>
+    At the first tree, take a picture. If that picture shows low temperature, take a temperature reading. If that reading is also low, take a CO2 sample. If that reading is still low, drive to a far away tree and repeat the process. If the very first reading isn't low, drive to end.
+  </MissionDescription>
+  <Tasks>
+    <Task>
+      <TaskID>1</TaskID>
+      <TaskName>Go to First Tree</TaskName>
+      <Action>DriveToTree</Action>
+      <Parameters>
+        <Parameter>
+          <Name>TreeID</Name>
+          <Value>1</Value>
+        </Parameter>
+      </Parameters>
+    </Task>
+    <Task>
+      <TaskID>2</TaskID>
+      <TaskName>Take Picture</TaskName>
+      <Action>TakePicture</Action>
+      <Parameters>
+        <Parameter>
+          <Name>TreeID</Name>
+          <Value>1</Value>
+        </Parameter>
+      </Parameters>
+    </Task>
+    <ConditionalTask>
+      <Condition>
+        <Type>ImageAnalysis</Type>
+        <Parameter>
+          <Name>TemperatureLevel</Name>
+          <Value>Low</Value>
+        </Parameter>
+      </Condition>
+      <TrueBranch>
+        <Task>
+          <TaskID>3</TaskID>
+          <TaskName>Take Temperature Reading</TaskName>
+          <Action>MeasureTemperature</Action>
+          <Parameters>
+            <Parameter>
+              <Name>TreeID</Name>
+              <Value>1</Value>
+            </Parameter>
+          </Parameters>
+        </Task>
+      </TrueBranch>
+      <FalseBranch>
+        <ConditionalTask>
+          <Condition>
+            <Type>MeasurementAnalysis</Type>
+            <Parameter>
+              <Name>TemperatureReading</Name>
+              <Value>Low</Value>
+            </Parameter>
+          </Condition>
+          <TrueBranch>
+            <Task>
+              <TaskID>4</TaskID>
+              <TaskName>Take CO2 Sample</TaskName>
+              <Action>MeasureCO2</Action>
+              <Parameters>
+                <Parameter>
+                  <Name>TreeID</Name>
+                  <Value>1</Value>
+                </Parameter>
+              </Parameters>
+            </Task>
+          </TrueBranch>
+          <FalseBranch>
+            <Task>
+              <TaskID>5</TaskID>
+              <TaskName>Go to Far Away Tree</TaskName>
+              <Action>DriveToTree</Action>
+              <Parameters>
+                <Parameter>
+                  <Name>TreeID</Name>
+                  <Value>20</Value>
+                </Parameter>
+              </Parameters>
+            </Task>
+          </FalseBranch>
+        </ConditionalTask>
+      </FalseBranch>
+    </ConditionalTask>
+  </Tasks>
+</MissionPlan>

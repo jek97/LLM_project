@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan xmlns="http://www.example.com/missionPlanSchema">
+    <MissionID>Orchard_Mission</MissionID>
+    <Version>1.0</Version>
+    <StartLocation xsi:type="xsd:string">
+        <!-- Start location GeoJSON coordinates -->
+    </StartLocation>
+    <EndLocation xsi:type="xsd:string">
+        <!-- End location GeoJSON coordinates -->
+    </EndLocation>
+    <Tasks>
+        <Task ID="1">
+            <Action Type="DriveToLocation">
+                <Destination xsi:type="GeoJSONPoint">
+                    <!-- Destination GeoJSON coordinates for the first tree -->
+                </Destination>
+            </Action>
+            <Description>Start by driving to Tree_1 (Apple) - Original question: Generate mission plan for robotic task</Description>
+        </Task>
+        <Task ID="2">
+            <CompositeTaskInformation>
+                <Action Type="TakePictures">
+                    <!-- Picture taking details -->
+                </Action>
+                <Description>Take pictures of Tree_1 (Apple) - Original question: Generate mission plan for robotic task</Description>
+            </CompositeTaskInformation>
+        </Task>
+        <Task ID="3">
+            <CompositeTaskInformation>
+                <Action Type="MeasureTreeHeight">
+                    <!-- Tree height measurement details -->
+                </Action>
+                <Description>Measure the height of Tree_1 (Apple) - Original question: Generate mission plan for robotic task</Description>
+            </CompositeTaskInformation>
+        </Task>
+        <!-- Add more tasks as necessary, each with a DriveToLocation action followed by one or more actions at that location -->
+    </Tasks>
+    <Outcome>The total distance traveled was significant. Please refer to your logbook for details.</Outcome>
+</missionPlan>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RoboticMissionPlan xmlns="http://example.com/robotics/missionplan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.com/robotics/missionplan http://example.com/robotics/missionplan/schemas/RoboticMissionPlan_v1_0.xsd">
+    <Mission>
+        <Version>1.0</Version>
+        <StartLocation>
+            <Latitude>...</Latitude>
+            <Longitude>...</Longitude>
+        </StartLocation>
+        <Tasks>
+            <CompositeTaskInformation>
+                <Question>From the starting point, go to a random tree and take a picture of it. If its average temperature is below 33 C, take a CO2 sample. After, go to another random point 5 trees down and do the same thing.</Question>
+                <TaskList>
+                    <DriveToLocation>
+                        <Destination xsi:type="RandomTree">
+                            <GPSLocation>
+                                <Latitude>...</Latitude>
+                                <Longitude>...</Longitude>
+                            </GPSLocation>
+                        </Destination>
+                    </DriveToLocation>
+                    <TakePicture>
+                        <TreeReference>
+                            <TreeID>1</TreeID>
+                            <GPSLocation>
+                                <Latitude>...</Latitude>
+                                <Longitude>...</Longitude>
+                            </GPSLocation>
+                        </TreeReference>
+                    </TakePicture>
+                    <MeasureTemperature>
+                        <TreeReference>
+                            <TreeID>1</TreeID>
+                            <GPSLocation>
+                                <Latitude>...</Latitude>
+                                <Longitude>...</Longitude>
+                            </GPSLocation>
+                        </TreeReference>
+                    </MeasureTemperature>
+                    <Condition>
+                        <ComparisonType>LessThan</ComparisonType>
+                        <Value>33.0</Value>
+                        <VariableName>AverageTemperature</VariableName>
+                    </Condition>
+                    <IfThenElse>
+                        <If>
+                            <Reference to="#MeasureTemperature"/>
+                        </If>
+                        <Then>
+                            <TakeCO2Sample>
+                                <TreeReference>
+                                    <TreeID>1</TreeID>
+                                    <GPSLocation>
+                                        <Latitude>...</Latitude>
+                                        <Longitude>...</Longitude>
+                                    </GPSLocation>
+                                </TreeReference>
+                            </TakeCO2Sample>
+                        </Then>
+                        <Else>
+                            <DriveToLocation xsi:type="RandomTree">
+                                <GPSLocation>
+                                    <Latitude>...</Latitude>
+                                    <Longitude>...</Longitude>
+                                </GPSLocation>
+                            </DriveToLocation>
+                        </Else>
+                    </IfThenElse>
+                    <TakePicture>
+                        <TreeReference>
+                            <TreeID>2</TreeID>
+                            <GPSLocation>
+                                <Latitude>...</Latitude>
+                                <Longitude>...</Longitude>
+                            </GPSLocation>
+                        </TreeReference>
+                    </TakePicture>
+                    <MeasureTemperature>
+                        <TreeReference>
+                            <TreeID>2</TreeID>
+                            <GPSLocation>
+                                <Latitude>...</Latitude>
+                                <Longitude>...</Longitude>
+                            </GPSLocation>
+                        </TreeReference>
+                    </MeasureTemperature>
+                </TaskList>
+            </CompositeTaskInformation>
+        </Tasks>
+    </Mission>
+    <Outcome>The robot will travel to multiple random trees, take pictures, measure temperatures, and possibly collect CO2 samples.</Outcome>
+</RoboticMissionPlan>

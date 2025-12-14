@@ -1,0 +1,26 @@
+TaskDescription: Mission to visit all the trees on the farm.
+```
+<CompositeTaskInformation>
+    <TaskList>
+        <Task>
+            <Type>DriveToTree</Type>
+            <Parameters>
+                <GPSLocation>-120.42302289785604, 37.366300703749474</GPSLocation>
+                <Reward>0.76</Reward>
+            </Parameters>
+        </Task>
+        <Task>
+            <Type>DriveToTree</Type>
+            <Parameters>
+                <GPSLocation>-120.42307272278255, 37.36627570632085</GPSLocation>
+                <Reward>0.91</Reward>
+            </Parameters>
+        </Task>
+        <!-- Add more tasks for the other trees -->
+    </TaskList>
+</CompositeTaskInformation>
+```
+
+This mission plan consists of a list of tasks to drive to each tree on the farm. For each task, the reward is calculated as 1 divided by the number of days since last sampled, capped at a maximum value of 1.
+Please note that this is just one possible mission plan and you can modify it based on your requirements.
+Let me know if you have any other questions or need further assistance.

@@ -1,0 +1,4 @@
+<m MissionNumber="1">
+  <DriveToLocation longitude="..." latitude="..."></DriveToLocation>
+  <!-- Add more mission tasks as needed -->
+</m>

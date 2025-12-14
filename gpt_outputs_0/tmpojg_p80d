@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+  <robot>Robot</robot>
+  <taskList>
+    <task id="1">
+      <point id="1" x="-120.42307592599273" y="37.36636077337479" reward="0.8"/>
+      <point id="2" x="-120.423044218715" y="37.36626996761184" reward="0.8"/>
+      <!-- ... other points ... -->
+    </task>
+  </taskList>
+</mission>

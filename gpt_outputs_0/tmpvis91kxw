@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdfs:Resource>
+<html xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns">
+  <rdfs:Description rdf:about="#MissionPlan">
+    <dc:title>Mission Plan</title>
+    <dc:description>A mission plan document containing all necessary tasks and parameters.</description>
+  </rdfs:Description>
+
+  <gtms:MissionPlan xmlns:gtms="http://example.com/gtmsNS" xmlns:rdfs="http://www.w3.org/1999/02/22-rdf-syntax-ns">
+    <gtms:TaskList>
+      <gtms:Task id="1">
+        <gtms:Location id="A1" coordinates="-120.42305,37.3663"/>
+        <gtms:Action>drive</gtms:Action>
+      </gtms:Task>
+
+      <!-- Repeat for each pair of adjacent trees -->
+      
+      <gtms:Task id="2">
+        <gtms:Location id="A2" coordinates="-120.42308,37.3663"/>
+        <gtms:Action>drive</gtms:Action>
+      </gtms:Task>
+
+      <gtms:Task id="3">
+        <gtms:Location id="B1" coordinates="-120.42305,37.3663"/>
+        <gtms:Action>picture_near_tree</gtms:Action>
+        <gtms:Parameters>
+          <gtms:Parameter name="number_of_pictures">2</gtms:Parameter>
+        </gtms:Parameters>
+      </gtms:Task>
+
+      <!-- Repeat for each pair of adjacent trees -->
+      
+      <gtms:Task id="4">
+        <gtms:Location id="B2" coordinates="-120.42308,37.3663"/>
+        <gtms:Action>picture_near_tree</gtms:Action>
+        <gtms:Parameters>
+          <gtms:Parameter name="number_of_pictures">2</gtms:Parameter>
+        </gtms:Parameters>
+      </gtms:Task>
+
+      <gtms:Task id="5">
+        <gtms:Location id="C1" coordinates="-120.42305,37.3663"/>
+        <gtms:Action>measure_co2</gtms:Action>
+        <gtms:Parameters>
+          <gtms:Parameter name="number_of_measurements">2</gtms:Parameter>
+        </gtms:Parameters>
+      </gtms:Task>
+
+      <!-- Repeat for each pair of adjacent trees -->
+      
+      <gtms:Task id="6">
+        <gtms:Location id="C2" coordinates="-120.42308,37.3663"/>
+        <gtms:Action>measure_co2</gtms:Action>
+        <gtms:Parameters>
+          <gtms:Parameter name="number_of_measurements">2</gtms:Parameter>
+        </gtms:Parameters>
+      </gtms:Task>
+
+      <!-- Continue for all adjacent tree pairs -->
+    </gtms:TaskList>
+
+    <gtms:MissionPlanSummary>
+      <gtms:TotalTreesVisited>6</gtms:TotalTreesVisited>
+      <gtms:TotalPicturesTaken>4</gtms:TotalPicturesTaken>
+      <gtms:TotalCO2Measurements>4</gtms:TotalCO2Measurements>
+    </gtms:MissionPlanSummary>
+  </gtms:MissionPlan>
+</html>

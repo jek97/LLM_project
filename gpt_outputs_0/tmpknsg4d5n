@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>From the starting point, find a tree somewhere in the middle of the orchard and measure cos. if low reading, go to and take 2 pictures of nearby trees. from there, measure another tree as far away as possible for co2 and repeat the same process. Once done, take a temperature reading at any one of the northern most trees. Finally, return to end.</TaskDescription>
+    <Tasks>
+      <Task>
+        <Type>MoveTo</Type>
+        <Parameters>
+          <Parameter name="latitude" value="-120.423000"/>
+          <Parameter name="longitude" value="37.366300"/>
+        </Parameters>
+      </Task>
+      <Task>
+        <Type>MeasureCO2</Type>
+        <Parameters>
+          <Parameter name="treeID" value="10"/>
+        </Parameters>
+      </Task>
+      <Task>
+        <Type>TakePictures</Type>
+        <Parameters>
+          <Parameter name="treeIDs" value="9, 11"/>
+        </Parameters>
+      </Task>
+      <Task>
+        <Type>MeasureCO2</Type>
+        <Parameters>
+          <Parameter name="treeID" value="1"/>
+        </Parameters>
+      </Task>
+      <Task>
+        <Type>TakePictures</Type>
+        <Parameters>
+          <Parameter name="treeIDs" value="2, 3"/>
+        </Parameters>
+      </Task>
+      <Task>
+        <Type>MeasureTemperature</Type>
+        <Parameters>
+          <Parameter name="treeID" value="19"/>
+        </Parameters>
+      </Task>
+      <Task>
+        <Type>MoveTo</Type>
+        <Parameters>
+          <Parameter name="latitude" value="-120.423000"/>
+          <Parameter name="longitude" value="37.366300"/>
+        </Parameters>
+      </Task>
+    </Tasks>
+  </CompositeTaskInformation>
+</MissionPlan>

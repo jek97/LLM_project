@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission>
+    <Name>OrchardNavigation</Name>
+    <Description>Tour of the orchard: take pictures at specific locations.</Description>
+    <Waypoints>
+        <!-- Northernmost tree -->
+        <Waypoint id="NorthernMantle">
+            <Coordinates lat="37.36626996761184" lon="-120.423044218715"/>
+            <Action>TakePicture</Action>
+            <Parameters>
+                <CoordinatesFrom lat="37.36626996761184" lon="-120.423044218715"/>
+            </Parameters>
+        </Waypoint>
+
+        <!-- Middle of the orchard -->
+        <Waypoint id="OrchardCenter">
+            <Coordinates lat="37.36628925328603" lon="-120.4229721172218"/>
+            <Action>Explore</Action>
+            <Parameters>
+                <CoordinatesFrom lat="37.36628925328603" lon="-120.4229721172218"/>
+            </Parameters>
+        </Waypoint>
+
+        <!-- Southernmost tree -->
+        <Waypoint id="SouthernEdge">
+            <Coordinates lat="37.3662485997777" lon="-120.4230236931114"/>
+            <Action>Document</Action>
+            <Parameters>
+                <CoordinatesFrom lat="37.3662485997777" lon="-120.4230236931114"/>
+            </Parameters>
+        </Waypoint>
+    </Waypoints>
+</Mission>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RobustMissions xmlns="http://example.com/robustmissions.schema.org/"
+                 xsi:schemaLocation="http://example.com/robustmissions.schema.org/
+                                 http://example.com/robustmissions.schema.org/RobustMissions.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription xml:lang="en">Find a tree somewhere in the middle of the orchard and measure cos.</TaskDescription>
+    <DrivingTo> 
+      <GPSLocation>
+        <Latitude>37.36635688574164</Latitude>
+        <Longitude>-120.42302289785604</Longitude>
+      </GPSLocation>
+      <TreeReference id="0" type="orchard_tree">
+        <Action action="measure_cos"/>
+      </TreeReference>
+    </DrivingTo>
+  </CompositeTaskInformation>
+  <Outcome totalEstimatedHaversineDistance="10km"> 
+    The task was completed successfully.
+  </Outcome>
+</RobustMissions>

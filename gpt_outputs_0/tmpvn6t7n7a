@@ -1,0 +1,22 @@
+ Based on your request, here is an example XML file that conforms to the known schema:
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<robotMission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <name>Tree Picture Mission</name>
+    <description>Visit as many points as possible within 100 meters and take pictures of each tree.</description>
+    <missions>
+        <mission id="1" type="TakePicture">
+            <targetId xsi:type="xsd:int">1</targetId>
+            <imageCaptureSettings xsi:type="ImageCaptureSettingsType">
+                <resolution>1024x768</resolution>
+                <depthOfField>shallow</depthOfField>
+                <focusMode>continuousAutoFocus</focusMode>
+            </imageCaptureSettings>
+        </mission>
+        <!-- Repeat for other missions -->
+    </missions>
+</robotMission>
+```
+This XML file defines a single mission with the type "TakePicture" and specifies target ID 1. You would need to add additional `<mission>` elements to define more missions, as needed to visit all of the points in your specified area. The `<imageCaptureSettings>` element can be adjusted to suit your specific requirements for image capture settings.
+
+Keep in mind that this is just an example and you may need to customize it further depending on your specific use case. 

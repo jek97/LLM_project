@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="MissionPlan.xsd">
+    <Mission>
+        <Name>Clockwise Tree Photography</Name>
+        <Objective>Take pictures of 4 trees (northmost, eastmost, southmost, and westmost) as far apart as possible.</Objective>
+
+        <!-- Northmost tree -->
+        <Action>
+            <Type>DriveTo</Type>
+            <Target>
+                <Latitude>37.36635640370881</Latitude>
+                <Longitude>-120.42303004014194</Longitude>
+            </Target>
+        </Action>
+
+        <Action>
+            <Type>TakePicture</Type>
+            <Description>Northmost tree picture.</Description>
+        </Action>
+
+        <!-- Eastmost tree -->
+        <Action>
+            <Type>DriveTo</Type>
+            <Target>
+                <Latitude>37.36630110526</Latitude>
+                <Longitude>-120.423098880110526</Longitude>
+            </Target>
+        </Action>
+
+        <Action>
+            <Type>TakePicture</Type>
+            <Description>Eastmost tree picture.</Description>
+        </Action>
+
+        <!-- Southmost tree -->
+        <Action>
+            <Type>DriveTo</Type>
+            <Target>
+                <Latitude>37.36628908556382</Latitude>
+                <Longitude>-120.42300751393493</Longitude>
+            </Target>
+        </Action>
+
+        <Action>
+            <Type>TakePicture</Type>
+            <Description>Southmost tree picture.</Description>
+        </Action>
+
+        <!-- Westmost tree -->
+        <Action>
+            <Type>DriveTo</Type>
+            <Target>
+                <Latitude>37.36628908556382</Latitude>
+                <Longitude>-120.42300751393493</Longitude>
+            </Target>
+        </Action>
+
+        <Action>
+            <Type>TakePicture</Type>
+            <Description>Westmost tree picture.</Description>
+        </Action>
+
+    </Mission>
+</MissionPlan>

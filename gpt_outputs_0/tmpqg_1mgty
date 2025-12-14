@@ -1,0 +1,24 @@
+<CompositeTaskInformation>
+  <TaskDescription>Take a picture of the northern most tree. Drive to the middle of the orchard and take another. Drive to the middle of the eastern end and take a picture of two trees next to each other.</TaskDescription>
+  <Tasks>
+    <!-- Task: Take a picture of the northern most tree -->
+    <DriveToTask>
+      <Coordinates>-120.423072, 37.366289</Coordinates>
+    </DriveToTask>
+    <TakePictureTask />
+    
+    <!-- Task: Drive to the middle of the orchard -->
+    <DriveToTask>
+      <Coordinates>-120.423026, 37.366346</Coordinates>
+    </DriveToTask>
+    <TakePictureTask />
+    
+    <!-- Task: Drive to the middle of the eastern end -->
+    <DriveToTask>
+      <Coordinates>-120.422980, 37.366289</Coordinates>
+    </DriveToTask>
+    <TakePictureTask>
+      <NumberOfPictures>2</NumberOfPictures>
+    </TakePictureTask>
+  </Tasks>
+</CompositeTaskInformation>

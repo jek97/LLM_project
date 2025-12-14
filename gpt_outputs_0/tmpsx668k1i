@@ -1,0 +1,1 @@
+The XML schema definition (XSD) file that you are using does not contain a global element named "mission". You should use an XSD file that defines this element.

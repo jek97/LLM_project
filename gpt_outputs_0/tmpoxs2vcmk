@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.org/missionplan">
+  <Header>
+    <!-- Include relevant information about the mission here, such as date and time, operator name, etc. -->
+  </Header>
+  <CompositeTaskInformation>
+    <TaskDescription>Generate a rectangle by taking pictures of trees at four corners: Top-Left, Top-Right, Bottom-Right, and Bottom-Left</TaskDescription>
+    <GeoJSONReference id="map">file:///path/to/geojson_file.geojson</GeoJSONReference>
+    <TaskList>
+      <!-- Task 1: Drive to Top-Left Tree -->
+      <Drive>
+        <From x="{LatitudeStart}" y="{LongitudeStart}"/>
+        <To x="{FeaturePropertyRef idRef="map#Top-Left" y="{FeaturePropertyVal y="{LatitudeTopLeft}"}" />
+      </Drive>
+      <Task>
+        <Action>TakePicture</Action>
+        <TargetPropertyRef idRef="map#Top-Left_treeType"/>
+      </Task>
+
+      <!-- Task 2: Drive to Top-Right Tree -->
+      <Drive>
+        <From x="{FeaturePropertyRef idRef="map#Top-Left" y="{FeaturePropertyVal y="{LatitudeTopLeft}"}" />
+        <To x="{FeaturePropertyRef idRef="map#Top-Right" y="{FeaturePropertyVal y="{LatitudeTopRight}"}" />
+      </Drive>
+      <Task>
+        <Action>TakePicture</Action>
+        <TargetPropertyRef idRef="map#Top-Right_treeType"/>
+      </Task>
+
+      <!-- Task 3: Drive to Bottom-Right Tree -->
+      <Drive>
+        <From x="{FeaturePropertyRef idRef="map#Top-Right" y="{FeaturePropertyVal y="{LatitudeTopRight}"}" />
+        <To x="{FeaturePropertyRef idRef="map#Bottom-Right" y="{FeaturePropertyVal y="{LatitudeBottomRight}"}" />
+      </Drive>
+      <Task>
+        <Action>TakePicture</Action>
+        <TargetPropertyRef idRef="map#Bottom-Right_treeType"/>
+      </Task>
+
+      <!-- Task 4: Drive to Bottom-Left Tree -->
+      <Drive>
+        <From x="{FeaturePropertyRef idRef="map#Bottom-Right" y="{FeaturePropertyVal y="{LatitudeBottomRight}"}" />
+        <To x="{FeaturePropertyRef idRef="map#Bottom-Left" y="{FeaturePropertyVal y="{LatitudeBottomLeft}"}" />
+      </Drive>
+      <Task>
+        <Action>TakePicture</Action>
+        <TargetPropertyRef idRef="map#Bottom-Left_treeType"/>
+      </Task>
+    </TaskList>
+  </CompositeTaskInformation>
+  <!-- Optionally, include Outcome element for logging total estimated distance traveled from start to end -->
+  <Outcome>Total estimated distance: approximately [Distance] miles</Outcome>
+</MissionPlan>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://example.com/mission.xsd http://example.com/mission.xsd"
+         xmlns:roboticTaskRepresentation="http://example.com/robottaskrepresentation">
+  <CompositeTaskInformation>
+    <TaskDescription>Visit all points on the farm</TaskDescription>
+    <TaskType>Deterministic</TaskType>
+  </CompositeTaskInformation>
+  <MissionPlan>
+    <Task id="1" type="DriveToLocation">
+      <LocationReference ref="#0"/>
+      <TaskParameters>
+        <Parameter name="action">Visit</Parameter>
+        <Parameter name="reward">0.0</Parameter> <!-- minimum reward, will be updated later -->
+        <Parameter name="haversineDistance">0.0</Parameter>
+        <Parameter name="lastSampledDays">0</Parameter>
+      </TaskParameters>
+    </Task>
+    <Task id="2" type="DriveToLocation">
+      <LocationReference ref="#1"/>
+      <TaskParameters>
+        <Parameter name="action">Visit</Parameter>
+        <Parameter name="reward">0.0</Parameter> <!-- minimum reward, will be updated later -->
+        <Parameter name="haversineDistance">0.0</Parameter>
+        <Parameter name="lastSampledDays">0</Parameter>
+      </TaskParameters>
+    </Task>
+    ...
+  </MissionPlan>
+</roboticTaskRepresentation:Mission>

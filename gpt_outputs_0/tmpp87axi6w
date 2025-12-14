@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robustml.io/schema/mission_plan.xsd http://robustml.io/schema/mission_plan.xsd">
+    <CompositeTaskInformation>
+        <TaskDescription>Visit all points on the farm</TaskDescription>
+        <Tasks>
+            <Task id="1" type="DriveToTreeAndAction">
+                <DrivingParameters>
+                    <GPSLocation ref="point_0"/>
+                </DrivingParameters>
+                <ActionParameters>
+                    <Reward>0.0</Reward>
+                </ActionParameters>
+            </Task>
+            <Task id="2" type="DriveToTreeAndAction">
+                <DrivingParameters>
+                    <GPSLocation ref="point_1"/>
+                </DrivingParameters>
+                <ActionParameters>
+                    <Reward calculate="true">0.0</Reward>
+                </ActionParameters>
+            </Task>
+            <Task id="3" type="DriveToTreeAndAction">
+                <DrivingParameters>
+                    <GPSLocation ref="point_2"/>
+                </DrivingParameters>
+                <ActionParameters>
+                    <Reward calculate="true">0.0</Reward>
+                </ActionParameters>
+            </Task>
+            <Task id="4" type="DriveToTreeAndAction">
+                <DrivingParameters>
+                    <GPSLocation ref="point_3"/>
+                </DrivingParameters>
+                <ActionParameters>
+                    <Reward calculate="true">0.0</Reward>
+                </ActionParameters>
+            </Task>
+            <Task id="5" type="DriveToTreeAndAction">
+                <DrivingParameters>
+                    <GPSLocation ref="point_4"/>
+                </DrivingParameters>
+                <ActionParameters>
+                    <Reward calculate="true">0.0</Reward>
+                </ActionParameters>
+            </Task>
+            <Task id="6" type="DriveToTreeAndAction">
+                <DrivingParameters>
+                    <GPSLocation ref="point_5"/>
+                </DrivingParameters>
+                <ActionParameters>
+                    <Reward calculate="true">0.0</Reward>
+                </ActionParameters>
+            </Task>
+            <Task id="7" type="DriveToTreeAndAction">
+                <DrivingParameters>
+                    <GPSLocation ref="point_6"/>
+                </DrivingParameters>
+                <ActionParameters>
+                    <Reward calculate="true">0.0</Reward>
+                </ActionParameters>
+            </Task>
+            <Task id="8" type="DriveToTreeAndAction">
+                <DrivingParameters>
+                    <GPSLocation ref="point_7"/>
+                </DrivingParameters>
+                <ActionParameters>
+                    <Reward calculate="true">0.0</Reward>
+                </ActionParameters>
+            </Task>
+            <Task id="9" type="DriveToTreeAndAction">
+                <DrivingParameters>
+                    <GPSLocation ref="point_8"/>
+                </DrivingParameters>
+                <ActionParameters>
+                    <Reward calculate="true">0.0</Reward>
+                </ActionParameters>
+            </Task>
+            <Task id="10" type="DriveToTreeAndAction">
+                <DrivingParameters>
+                    <GPSLocation ref="point_9"/>
+                </DrivingParameters>
+                <ActionParameters>
+                    <Reward calculate="true">0.0</Reward>
+                </ActionParameters>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+</MissionPlan>

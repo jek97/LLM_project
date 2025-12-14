@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE MissionPlan SYSTEM "mission_schema_v1.0.xsd">
+<MissionPlan>
+  <Version>1.0</Version>
+  <Schema>mission_schema_v1.0.xsd</Schema>
+  <TaskList>
+    <Task ID="001">
+      <OperationType>Picture taking</OperationType>
+      <Target>Tree at the Northwest corner of the farm</Target>
+      <Comment>Take a picture of the tree at the Northwest corner of the farm</Comment>
+    </Task>
+    <Task ID="002">
+      <OperationType>Picture taking</OperationType>
+      <Target>Tree at the Northeast corner of the farm</Target>
+      <Comment>Take a picture of the tree at the Northeast corner of the farm</Comment>
+    </Task>
+    <Task ID="003">
+      <OperationType>Picture taking</OperationType>
+      <Target>Tree at the Southwest corner of the farm</Target>
+      <Comment>Take a picture of the tree at the Southwest corner of the farm</Comment>
+    </Task>
+    <Task ID="004">
+      <OperationType>Picture taking</OperationType>
+      <Target>Tree at the Southeast corner of the farm</Target>
+      <Comment>Take a picture of the tree at the Southeast corner of the farm</Comment>
+    </Task>
+  </TaskList>
+</MissionPlan>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns="http://www.example.com/mission">
+    <MissionInformation>
+        <MissionID>1</MissionID>
+        <StartTime>2023-04-01T09:00:00Z</StartTime>
+        <EndTime>2023-04-01T17:00:00Z</EndTime>
+    </MissionInformation>
+    <TaskList>
+        <!-- Drive to the first tree -->
+        <DriveToLocation ID="1">
+            <StartLocation X="[Latitude of starting point]" Y="[Longitude of starting point]"/>
+            <EndLocation X="[Latitude of first tree]" Y="[Longitude of first tree]"/>
+        </DriveToLocation>
+        <!-- Take a picture of the first tree -->
+        <Task ID="2">
+            <ActionType>TakePicture</ActionType>
+            <TreeID>1</TreeID>
+        </Task>
+        <!-- Check if CO2 reading is low for the first tree -->
+        <Reading ID="3" Type="CO2 Reading">
+            <TreeID>1</TreeID>
+        </Reading>
+        <!-- If CO2 reading is low, take a sample -->
+        <Task ID="4" xsi:if="(Reading/@Result = 'low')">
+            <ActionType>TakeSample</ActionType>
+            <TreeID>1</TreeID>
+        </Task>
+        <!-- Otherwise, take a temperature reading -->
+        <Task ID="5" xsi:if="(Reading/@Result != 'low')">
+            <ActionType>TemperatureReading</ActionType>
+            <TreeID>1</TreeID>
+        </Task>
+        <!-- Drive to the second tree -->
+        <DriveToLocation ID="6">
+            <StartLocation X="[Latitude of first tree]" Y="[Longitude of first tree]"/>
+            <EndLocation X="[Latitude of second tree]" Y="[Longitude of second tree]"/>
+        </DriveToLocation>
+        <!-- Take a picture of the second tree -->
+        <Task ID="7">
+            <ActionType>TakePicture</ActionType>
+            <TreeID>2</TreeID>
+        </Task>
+        <!-- Check if CO2 reading is low for the second tree -->
+        <Reading ID="8" Type="CO2 Reading">
+            <TreeID>2</TreeID>
+        </Reading>
+        <!-- If CO2 reading is low, take a sample -->
+        <Task ID="9" xsi:if="(Reading/@Result = 'low')">
+            <ActionType>TakeSample</ActionType>
+            <TreeID>2</TreeID>
+        </Task>
+    </TaskList>
+    <CompositeTaskInformation>
+        <OriginalQuestion>Generate a mission plan for a robot to perform tasks at two trees</OriginalQuestion>
+    </CompositeTaskInformation>
+    <Outcome>The robot will travel approximately [Estimated Distance] miles during this mission.</Outcome>
+</Mission>

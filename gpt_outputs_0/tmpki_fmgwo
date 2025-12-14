@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Take a picture of 4 trees going clockwise from the north most tree, making the distances between the images as great as possible.
+    </TaskDescription>
+    <TaskSequence>
+      <Task id="1">
+        <Action>NavigateTo</Action>
+        <TargetLocation>
+          <Latitude>37.36635678715399</Latitude>
+          <Longitude>-120.42299259529793</Longitude>
+        </TargetLocation>
+      </Task>
+      <Task id="2">
+        <Action>CaptureImage</Action>
+        <ImageDescription>Tree 1 - Northernmost location</ImageDescription>
+      </Task>
+      <Task id="3">
+        <Action>NavigateTo</Action>
+        <TargetLocation>
+          <Latitude>37.36636077337479</Latitude>
+          <Longitude>-120.42307592599273</Longitude>
+        </TargetLocation>
+      </Task>
+      <Task id="4">
+        <Action>CaptureImage</Action>
+        <ImageDescription>Tree 2 - Easternmost location</ImageDescription>
+      </Task>
+      <Task id="5">
+        <Action>NavigateTo</Action>
+        <TargetLocation>
+          <Latitude>37.36635678715399</Latitude>
+          <Longitude>-120.423044218715</Longitude>
+        </TargetLocation>
+      </Task>
+      <Task id="6">
+        <Action>CaptureImage</Action>
+        <ImageDescription>Tree 3 - Southernmost location</ImageDescription>
+      </Task>
+      <Task id="7">
+        <Action>NavigateTo</Action>
+        <TargetLocation>
+          <Latitude>37.36636077337479</Latitude>
+          <Longitude>-120.4230246791031</Longitude>
+        </TargetLocation>
+      </Task>
+      <Task id="8">
+        <Action>CaptureImage</Action>
+        <ImageDescription>Tree 4 - Westernmost location</ImageDescription>
+      </Task>
+    </TaskSequence>
+  </CompositeTaskInformation>
+</MissionPlan>

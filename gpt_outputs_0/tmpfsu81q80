@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan">
+    <CompositeTaskInformation>
+        <TaskDescription>Generate Mission Plan for all points on the farm</TaskDescription>
+    </CompositeTaskInformation>
+    <CompositeTaskList>
+        <!-- Task 1: Drive to Point 0 -->
+        <DriveToLocation>
+            <LocationReference>Point_0</LocationReference>
+        </DriveToLocation>
+        <DoAction>
+            <ActionType>VisitTree</ActionType>
+            <Reward>0.5 - (LastSampled_0 / 365)</Reward> <!-- Adjust the multiplier as needed to make the reward more or less sensitive to last sampled -->
+        </DoAction>
+
+        <!-- Task 2: Drive from Point 0 to Point 1 -->
+        <DriveToLocation>
+            <LocationReference>Point_1</LocationReference>
+        </DriveToLocation>
+        <DoAction>
+            <ActionType>VisitTree</ActionType>
+            <Reward>0.5 - (LastSampled_1 / 365)</Reward>
+        </DoAction>
+
+        <!-- Continue this pattern for all points -->
+
+        <!-- Last Task: Drive back to the starting location -->
+        <DriveToLocation>
+            <LocationReference>StartingLocation</LocationReference>
+        </DriveToLocation>
+    </CompositeTaskList>
+    <Outcome>Estimated Haversine distance traveled: <DistanceValue>TBD</DistanceValue> miles</Outcome> <!-- Replace TBD with the actual calculated value -->
+</MissionPlan>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Take pictures of trees at the four corners of the farm.
+    </TaskDescription>
+    <Goal>
+      Capture images at the following coordinates:
+      -120.42300386899338, 37.366300703749474
+      -120.42302669537153, 37.36634636896467
+      -120.423044218715, 37.36626996761184
+      -120.42307592599273, 37.3662730362294
+    </Goal>
+  </CompositeTaskInformation>
+  <Task>
+    <TaskID>1</TaskID>
+    <TaskType>Image Capture</TaskType>
+    <Location>
+      <Latitude>37.366300703749474</Latitude>
+      <Longitude>-120.42300386899338</Longitude>
+      <Action>Take picture</Action>
+    </Location>
+  </Task>
+  <Task>
+    <TaskID>2</TaskID>
+    <TaskType>Image Capture</TaskType>
+    <Location>
+      <Latitude>37.36634636896467</Latitude>
+      <Longitude>-120.42302669537153</Longitude>
+      <Action>Take picture</Action>
+    </Location>
+  </Task>
+  <Task>
+    <TaskID>3</TaskID>
+    <TaskType>Image Capture</TaskType>
+    <Location>
+      <Latitude>37.36626996761184</Latitude>
+      <Longitude>-120.423044218715</Longitude>
+      <Action>Take picture</Action>
+    </Location>
+  </Task>
+  <Task>
+    <TaskID>4</TaskID>
+    <TaskType>Image Capture</TaskType>
+    <Location>
+      <Latitude>37.3662730362294</Latitude>
+      <Longitude>-120.42307592599273</Longitude>
+      <Action>Take picture</Action>
+    </Location>
+  </Task>
+</MissionPlan>

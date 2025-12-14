@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:MissionPlan xmlns:ns="http://example.com/missionplan">
+  <CompositeTaskInformation>
+    <TaskDescription>Move to Northmost Tree and Take Picture</TaskDescription>
+    <Outcome>
+      <DriveToLocation geographicLocation="{http://www.opengis.net/def geo/2009/02/geometries}Point(-120.42302289785604,37.36635688574164)">
+        <EstimatedDistanceTraveled>0 km</EstimatedDistanceTraveled>
+      </DriveToLocation>
+    </Outcome>
+    <TakePicture />
+  </CompositeTaskInformation>
+  
+  <CompositeTaskInformation>
+    <TaskDescription>Move to Eastmost Tree and Take Picture</TaskDescription>
+    <Outcome>
+      <DriveToLocation geographicLocation="{http://www.opengis.net/def geo/2009/02/geometries}Point(-120.42309252722157,37.36631509745154)">
+        <EstimatedDistanceTraveled>0 km</EstimatedDistanceTraveled>
+      </DriveToLocation>
+    </Outcome>
+    <TakePicture />
+  </CompositeTaskInformation>
+  
+  <CompositeTaskInformation>
+    <TaskDescription>Move to Southmost Tree and Take Picture</TaskDescription>
+    <Outcome>
+      <DriveToLocation geographicLocation="{http://www.opengis.net/def geo/2009/02/geometries}Point(-120.4230350832969,37.36635015674898)">
+        <EstimatedDistanceTraveled>0 km</EstimatedDistanceTraveled>
+      </DriveToLocation>
+    </Outcome>
+    <TakePicture />
+  </CompositeTaskInformation>
+  
+  <CompositeTaskInformation>
+    <TaskDescription>Move to Westmost Tree and Take Picture</TaskDescription>
+    <Outcome>
+      <DriveToLocation geographicLocation="{http://www.opengis.net/def geo/2009/02/geometries}Point(-120.42301043689258,37.36630655255463)">
+        <EstimatedDistanceTraveled>0 km</EstimatedDistanceTraveled>
+      </DriveToLocation>
+    </Outcome>
+    <TakePicture />
+  </CompositeTaskInformation>
+</ns:MissionPlan>

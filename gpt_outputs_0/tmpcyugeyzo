@@ -1,0 +1,17 @@
+<mission>
+  <task>
+    <driveToCoordinates lat=" northernmost_tree_y-coordinate " lon=" northernmost_tree_x-coordinate " />
+    <takePicture />
+  </task>
+
+  <task>
+    <calculateMidpoint x1=" orchard_x1 " y1=" orchard_y1 " x2=" orchard_x2 " y2=" orchard_y2 " midpointX="midpointX" midpointY="midpointY" />
+    <takePictureAtCoordinates lat="midpointY" lon="midpointX" />
+  </task>
+
+  <task>
+    <findEasternmostTree x="easternmost_tree_x" y="easternmost_tree_y" />
+    <calculateMiddleBetweenTrees eastTreeX="treeA_x" eastTreeY="treeA_y" westTreeX="treeB_x" westTreeY="treeB_y" middleX="middleX" middleY="middleY" />
+    <takePictureOfTwoTreesAtCoordinates lat1="middleY" lon1="middleX" lat2="anotherMiddleY" lon2="anotherMiddleX" />
+  </task>
+</mission>

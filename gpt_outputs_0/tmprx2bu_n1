@@ -1,0 +1,6 @@
+<TaskRequirements>
+  <TaskRequirement>
+    <DriveToTree longitude="..." latitude="..."/>
+    <PerformAction action="...">
+  </TaskRequirement>
+</TaskRequirements>

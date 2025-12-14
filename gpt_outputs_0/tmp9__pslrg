@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>Generate a mission to visit as many points as possible within 100 meters, taking a picture of each tree.  This plan prioritizes visiting all points within range.</TaskDescription>
+    <TaskList>
+      <Task id="1">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="WP1" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="2">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="WP2" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="3">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="WP3" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="4">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="WP4" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="5">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="WP5" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="6">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="WP6" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="7">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="WP7" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="8">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="WP8" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="9">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="WP9" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="10">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="WP10" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="11">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="WP11" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="12">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="WP12" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="13">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="WP13" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="14">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="WP14" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+      <Task id="15">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="WP15" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+        <PictureTask>Take picture of tree</PictureTask>
+      </Task>
+    </TaskList>
+  </TaskList>
+</TaskList>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>
+</Task>

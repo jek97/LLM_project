@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="mission.xsd">
+  <task name="Start Mission" type="move">
+    <target>
+      <location id="10" />
+    </target>
+  </task>
+
+  <!-- Measure CO2 and take pictures -->
+  <task name="Measure CO2 and Take Pictures" type="measure_and_take_pictures">
+    <sensor>CO2</sensor>
+    <threshold>low</threshold>
+    <nearby_trees>
+      <tree id="12" />
+      <tree id="13" />
+    </nearby_trees>
+  </task>
+
+  <!-- Find the northernmost tree and take a temperature reading -->
+  <task name="Measure Temperature" type="measure_temperature">
+    <sensor>Temperature</sensor>
+    <target_tree id="16" />
+  </task>
+
+  <!-- Return to starting point -->
+  <task name="Return Home" type="move">
+    <target>
+      <location id="0" />
+    </target>
+  </task>
+</mission>

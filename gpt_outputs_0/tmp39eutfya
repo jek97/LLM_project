@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://example.com/robotic_mission_plan"
+           targetNamespace="http://example.com/robotic_mission_plan"
+           elementFormDefault="qualified">
+
+  <xs:element name="mission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CompositeTaskInformation" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

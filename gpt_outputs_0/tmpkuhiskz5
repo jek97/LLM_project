@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <TaskInformation>
+        <TaskID>1</TaskID>
+        <TaskName>Simple Task</TaskName>
+    </TaskInformation>
+</mission>

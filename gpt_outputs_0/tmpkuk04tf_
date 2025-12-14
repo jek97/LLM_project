@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.com/missionplan MissionPlan.xsd">
+  <Tasks>
+    <Task id="1" TaskType="DriveTo">
+      <Destination>
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42298051393493</Longitude>
+      </Destination>
+      <Instructions>Drive to the specified coordinates.</Instructions>
+    </Task>
+    <Task id="2" TaskType="TakePhoto">
+      <Instructions>Take a photograph.</Instructions>
+    </Task>
+  </Tasks>
+</MissionPlan>

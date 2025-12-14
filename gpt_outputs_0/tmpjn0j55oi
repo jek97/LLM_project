@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="mission">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="description" type="xs:string"/>
+                <xs:element name="tasks">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Tasks -->
+                            <xs:element name="task" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="id" type="xs:integer"/>
+                                        <xs:element name="name" type="xs:string"/>
+                                        <xs:element name="reward" type="xs:decimal"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission.xsd">
+    <name>Farm Visit Mission</name>
+    <description>A mission to visit all points in the orchard and calculate rewards based on last sampled values.</description>
+    <tasks>
+        <!-- Task 1: Visit Point 1 -->
+        <task id="1">
+            <name>Visit Point 1</name>
+            <reward>0.8</reward>
+        </task>
+        
+        <!-- Task 2: Visit Point 2 -->
+        <task id="2">
+            <name>Visit Point 2</name>
+            <reward>0.7</reward>
+        </task>
+        
+        <!-- Task 3: Visit Point 3 -->
+        <task id="3">
+            <name>Visit Point 3</name>
+            <reward>0.6</reward>
+        </task>
+        
+        <!-- Task 4: Visit Point 4 -->
+        <task id="4">
+            <name>Visit Point 4</name>
+            <reward>0.5</reward>
+        </task>
+        
+        <!-- Task 5: Visit Point 5 -->
+        <task id="5">
+            <name>Visit Point 5</name>
+            <reward>0.4</reward>
+        </task>
+        
+        <!-- Task 6: Visit Point 6 -->
+        <task id="6">
+            <name>Visit Point 6</name>
+            <reward>0.3</reward>
+        </task>
+        
+        <!-- Task 7: Visit Point 7 -->
+        <task id="7">
+            <name>Visit Point 7</name>
+            <reward>0.2</reward>
+        </task>
+        
+        <!-- Task 8: Visit Point 8 -->
+        <task id="8">
+            <name>Visit Point 8</name>
+            <reward>0.1</reward>
+        </task>
+    </tasks>
+</mission>

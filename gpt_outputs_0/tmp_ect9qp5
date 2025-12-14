@@ -1,0 +1,1 @@
+The error message you're encountering is because the xsi:noNamespaceSchemaLocation attribute in the mission element points to a schema that does not exist or is not accessible from where you are running your XML file.

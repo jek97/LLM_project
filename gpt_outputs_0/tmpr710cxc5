@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://example.com/missionplan.xsd 
+              http://example.com/missionplan.xsd">
+    <CompositeTaskInformation>
+        <TaskDescription>Visit all trees</TaskDescription>
+        <Tasks>
+            <!-- Tree 0 -->
+            <Task id="visit-tree-0">
+                <DrivingTo>
+                    <Location ref="tree-0"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="1.0" description="Recent tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 1 -->
+            <Task id="visit-tree-1">
+                <DrivingTo>
+                    <Location ref="tree-1"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.8" description="Somewhat recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+            <!-- Tree 2 -->
+            <Task id="visit-tree-2">
+                <DrivingTo>
+                    <Location ref="tree-2"/>
+                </DrivingTo>
+                <Action />
+                <Reward>
+                    <RewardValue value="0.6" description="Less recently sampled tree visit reward"/>
+                </Reward>
+            </Task>
+
+        </Tasks>
+    </CompositeTaskInformation>
+</MissionPlan>

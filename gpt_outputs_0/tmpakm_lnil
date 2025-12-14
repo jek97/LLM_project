@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="missionPlan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="DrivingTask" type="DrivingTaskType"/>
+                <xs:element name="ActionTask" type="ActionTaskType"/>
+                <xs:element name="CompositeTaskInformation" type="CompositeTaskInformationType"/>
+                <xs:element name="Outcome" type="OutcomeType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="DrivingTaskType">
+        <xs:sequence>
+            <xs:element name="ref" type="xs:string"/>
+            <xs:element name="startLocation">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="lat" type="xs:decimal"/>
+                        <xs:element name="lon" type="xs:decimal"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="endLocation">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="lat" type="xs:decimal"/>
+                        <xs:element name="lon" type="xs:decimal"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="distance" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ActionTaskType">
+        <xs:sequence>
+            <xs:element name="ref" type="xs:string"/>
+            <xs:element name="actionType" type="xs:string"/>
+            <xs:element name="targetLocation">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="lat" type="xs:decimal"/>
+                        <xs:element name="lon" type="xs:decimal"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="CompositeTaskInformationType">
+        <xs:sequence>
+            <xs:element name="taskDescription" type="xs:string"/>
+            <xs:element name="DrivingTask" type="DrivingTaskType"/>
+            <xs:element name="ActionTask" type="ActionTaskType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="OutcomeType">
+        <xs:sequence>
+            <xs:element name="totalDistanceTraveled" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="schema.xsd">
+    <DrivingTask ref="drive_to_tree_0"/>
+    <ActionTask ref="take_picture_at_tree_0"/>
+    <CompositeTaskInformation>
+        <taskDescription>Drive to tree 1 and take co2 reading</taskDescription>
+        <DrivingTask ref="drive_to_tree_1"/>
+        <ActionTask ref="take_co2_reading_at_tree_1"/>
+    </CompositeTaskInformation>
+    <Outcome>
+        <totalDistanceTraveled>30.5 km</totalDistanceTraveled>
+    </Outcome>
+</missionPlan>

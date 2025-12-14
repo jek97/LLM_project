@@ -1,0 +1,20 @@
+<mission>
+    <task id="0">
+        <type>Picture</type>
+        <target>1</target>
+        <nextTask id="1">
+            <type>TemperatureReading</type>
+            <nextTask id="2" if="low_temperature">
+                <type>CO2Sample</type>
+                <nextTask id="3" if="low_co2">
+                    <type>Drive to a far away tree</type>
+                </nextTask>
+            </nextTask>
+        </nextTask>
+    </task>
+    <if condition="not low_temperature">
+        <nextTask id="4">
+            <type>Drive to end</type>
+        </nextTask>
+    </if>
+</mission>

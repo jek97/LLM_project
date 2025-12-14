@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Mission SYSTEM "http://robotic-task-representation.org/mission/mission.xsd">
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://robotic-task-representation.org/mission/4.0 
+   http://robotic-task-representation.org/mission/mission.xsd">
+  <TaskInformation>
+    <!-- Task to take picture of the northernmost tree -->
+    <CompositeTaskInformation>
+      <name>TakePictureAtNorthernmostTree</name>
+      <description>Drive to the location of the northernmost tree and take a picture.</description>
+      <type>CameraAction</type>
+      <precondition>None</precondition>
+      <outcome>
+        <DrivingAction name="DriveToLocation" type="Navigation"/>
+        <PictureTakingAction>TakePicture</PictureTakingAction>
+        <log>
+          <TaskDescription>Take picture at tree with id 0, action 0</TaskDescription>
+        </log>
+        Total estimated haversine distance: 500 km
+      </outcome>
+    </CompositeTaskInformation>
+
+    <!-- Drive to the middle of the orchard -->
+    <DrivingAction name="DriveToMiddleOfOrchard" type="Navigation"/>
+    
+    <!-- Task to take picture at the location -->
+    <CompositeTaskInformation>
+      <name>TakePictureAtLocation</name>
+      <description>Drive to the location and take a picture.</description>
+      <type>CameraAction</type>
+      <precondition>Must arrive at middle of orchard</precondition>
+      <outcome>
+        <DrivingAction name="StopAtLocation" type="Navigation"/>
+        <PictureTakingAction>TakePicture</PictureTakingAction>
+        <log>
+          <TaskDescription>Take picture at tree with id 6, action 0</TaskDescription>
+        </log>
+      </outcome>
+    </CompositeTaskInformation>
+
+    <!-- Task to take pictures of two trees next to each other -->
+    <CompositeTaskInformation>
+      <name>TakePicturesOfAdjacentTrees</name>
+      <description>Drive to the eastern end of the orchard and take pictures of two trees next to each other.</description>
+      <type>CameraAction</type>
+      <precondition>Must arrive at eastern end of orchard</precondition>
+      <outcome>
+        <DrivingAction name="StopAtLocation" type="Navigation"/>
+        <PictureTakingAction>TakePicturesOfAdjacentTrees</PictureTakingAction>
+        <log>
+          <TaskDescription>Take picture at trees with ids 14 and 15, actions 0 and 1</TaskDescription>
+        </log>
+      </outcome>
+    </CompositeTaskInformation>
+
+  </TaskInformation>
+</Mission>

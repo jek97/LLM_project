@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns="http://www.example.com/robotics/mission">
+    <MissionInformation>
+        <MissionName>Tree Inspection Mission</MissionName>
+        <StartTime>YYYY-MM-DDTHH:MM:SS</StartTime>
+        <EndTime>YYYY-MM-DDTHH:MM:SS</EndTime>
+    </MissionInformation>
+    <CompositeTaskInformation>
+        <!-- Task 1: Drive to the first tree -->
+        <Task>
+            <TaskID>1</TaskID>
+            <TaskName>Drive to Tree 1 (Northwest)</TaskName>
+            <Location xsi:type="Point">
+                <longitude>-87.654321</longitude>
+                <latitude>41.390234</latitude>
+            </Location>
+            <Action>DriveToLocation</Action>
+            <TaskDescription>Original question: Inspect the health of Tree 1 (Northwest).</TaskDescription>
+        </Task>
+        <!-- Task 2: Inspect Tree 1 -->
+        <Task>
+            <TaskID>2</TaskID>
+            <TaskName>Inspect Tree 1 (Northwest)</TaskName>
+            <Location xsi:type="Point">
+                <longitude>-87.654321</longitude>
+                <latitude>41.390234</latitude>
+            </Location>
+            <Action>InspectTree</Action>
+        </Task>
+        <!-- Repeat for other trees -->
+        <!-- ... -->
+    </CompositeTaskInformation>
+    <Outcome>
+        The robot successfully completed the mission and inspected all specified trees. The total estimated distance traveled was significant, but not shown here.
+    </Outcome>
+</Mission>

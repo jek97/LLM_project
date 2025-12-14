@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns="http://robotics.com/missionPlanSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://robotics.com/missionPlanSchema missionPlanSchema.xsd">
+    <RobotDetails>
+        <!-- Add robot details here if necessary -->
+    </RobotDetails>
+    <MissionID>TreePictureMission</MissionID>
+    <StartLocation>
+        <Latitude>37.366300703749474</Latitude>
+        <Longitude>-120.42299259529793</Longitude>
+    </StartLocation>
+    <Tasks>
+        <!-- Original Question here -->
+        <CompositeTaskInformation>
+            <TaskDescription>Going clockwise from the north most tree, take a picture of 4 trees.</TaskDescription>
+            <Subtasks>
+                <!-- Drive to and take a picture of the north most tree -->
+                <DriveToLocation>
+                    <Latitude>37.366300703749474</Latitude>
+                    <Longitude>-120.42299259529793</Longitude>
+                </DriveToLocation>
+                <TakePicture>
+                    <TreeType>Oak</TreeType>
+                </TakePicture>
+                <!-- Drive to and take a picture of the east most tree -->
+                <DriveToLocation>
+                    <!-- Target GPS coordinates for the east most tree -->
+                </DriveToLocation>
+                <TakePicture>
+                    <TreeType>Maple</TreeType>
+                </TakePicture>
+                <!-- Drive to and take a picture of the south most tree -->
+                <DriveToLocation>
+                    <!-- Target GPS coordinates for the south most tree -->
+                </DriveToLocation>
+                <TakePicture>
+                    <TreeType>Cherry</TreeType>
+                </TakePicture>
+                <!-- Drive to and take a picture of the west most tree -->
+                <DriveToLocation>
+                    <!-- Target GPS coordinates for the west most tree -->
+                </DriveToLocation>
+                <TakePicture>
+                    <TreeType>Pine</TreeType>
+                </TakePicture>
+            </Subtasks>
+        </CompositeTaskInformation>
+    </Tasks>
+    <Outcome>
+        This mission will cover a significant amount of ground, visiting the north, east, south, and west most trees. (Estimated distance: XX miles)
+    </Outcome>
+</Mission>

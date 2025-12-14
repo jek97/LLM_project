@@ -1,0 +1,5 @@
+<MissionPlan>
+    <CompositeTaskInformation TaskDescription="Your task description here">
+        <!-- Tasks go here -->
+    </CompositeTaskInformation>
+</MissionPlan>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Select 5 pistachio trees in a row and take a picture of 3 of them.
+      <OriginalTask>Farm Task: Select 5 pistachio trees in a row and take a picture of 3 of them.</OriginalTask>
+    </TaskDescription>
+    <MissionDuration>PT15M</MissionDuration>
+  </CompositeTaskInformation>
+
+  <Tasks>
+    <Task id="1">
+      <TaskType>Navigation</TaskType>
+      <Waypoint id="1.1" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+      <Waypoint id="1.2" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+      <Waypoint id="1.3" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+      <Waypoint id="1.4" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+      <Waypoint id="1.5" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+      <Waypoint id="1.6" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+      <Instruction>Navigate to the first five pistachio trees in a row.</Instruction>
+    </Task>
+    <Task id="2">
+      <TaskType>ImageCapture</TaskType>
+      <Waypoint id="2.1" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+      <Waypoint id="2.2" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+      <Waypoint id="2.3" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+      <Waypoint id="2.4" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+      <Waypoint id="2.5" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+      <Waypoint id="2.6" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+      <Instruction>Take a picture of 3 of the trees in the row.</Instruction>
+    </Task>
+  </Tasks>
+</MissionPlan>

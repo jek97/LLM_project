@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mission SYSTEM "mission.dtd" [<!ENTITY mission_public "-//MyCompany//DTD MyMission 1.0//EN">]>
+<mission_public>
+    <task id="1">
+        <description>Take a picture of the first tree.</description>
+        <action type="Picture Taking"/>
+    </task>
+    <!-- ... -->
+</mission_public>

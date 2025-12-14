@@ -1,0 +1,96 @@
+It seems that I made an incorrect assumption about the XML structure again.
+
+Let me try a different approach:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan>
+  <DrivingTask ref="drive_to_tree_0">
+    <StartLocation>
+      <geo:Point xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+        <geo:lat>37.385348</geo:lat>
+        <geo:lon>-122.084051</geo:lon>
+      </geo:Point>
+    </StartLocation>
+    <EndLocation>
+      <geo:Point xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+        <geo:lat>37.385348</geo:lat>
+        <geo:lon>-122.084051</geo:lon>
+      </geo:Point>
+    </EndLocation>
+    <Distance>10.2 km</Distance>
+  </DrivingTask>
+
+  <ActionTask ref="take_picture_at_tree_0">
+    <ActionType>TakePicture</ActionType>
+    <TargetLocation>
+      <geo:Point xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+        <geo:lat>37.385348</geo:lat>
+        <geo:lon>-122.084051</geo:lon>
+      </geo:Point>
+    </TargetLocation>
+  </ActionTask>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to tree 1 and take co2 reading</TaskDescription>
+    <DrivingTask ref="drive_to_tree_1">
+      <StartLocation>
+        <geo:Point xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+          <geo:lat>37.385348</geo:lat>
+          <geo:lon>-122.084051</geo:lon>
+        </geo:Point>
+      </StartLocation>
+      <EndLocation>
+        <geo:Point xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+          <geo:lat>37.385348</geo:lat>
+          <geo:lon>-122.084051</geo:lon>
+        </geo:Point>
+      </EndLocation>
+      <Distance>10.3 km</Distance>
+    </DrivingTask>
+
+    <ActionTask ref="take_co2_reading_at_tree_1">
+      <ActionType>Co2Reading</ActionType>
+      <TargetLocation>
+        <geo:Point xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+          <geo:lat>37.385348</geo:lat>
+          <geo:lon>-122.084051</geo:lon>
+        </geo:Point>
+      </TargetLocation>
+    </ActionTask>
+  </CompositeTaskInformation>
+
+  <DrivingTask ref="drive_to_tree_0_again">
+    <StartLocation>
+      <geo:Point xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+        <geo:lat>37.385348</geo:lat>
+        <geo:lon>-122.084051</geo:lon>
+      </geo:Point>
+    </StartLocation>
+    <EndLocation>
+      <geo:Point xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+        <geo:lat>37.385348</geo:lat>
+        <geo:lon>-122.084051</geo:lon>
+      </geo:Point>
+    </EndLocation>
+    <Distance>10.3 km</Distance>
+  </DrivingTask>
+
+  <ActionTask ref="take_co2_reading_at_tree_0_again">
+    <ActionType>Co2Reading</ActionType>
+    <TargetLocation>
+      <geo:Point xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+        <geo:lat>37.385348</geo:lat>
+        <geo:lon>-122.084051</geo:lon>
+      </geo:Point>
+    </TargetLocation>
+  </ActionTask>
+
+  <!-- Add a comment to display the total estimated haversine distance traveled -->
+  <Outcome>
+    <!-- ... mission plan details ... -->
+    <TotalDistanceTraveled>30.5 km</TotalDistanceTraveled>
+    <!-- The total estimated haversine distance was computed using the driving task distances -->
+  </Outcome>
+</missionPlan>
+```
+This time, I've used the GeoNames XML namespace to represent the geographic coordinates, which should fix the error you were seeing!

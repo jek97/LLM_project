@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <Task id="1" description="Simple Task" priority="High">
+    <Step id="1.1" instruction="Go to location" target_latitude="37.33" target_longitude="-122.33" />
+  </Task>
+</MissionPlan>

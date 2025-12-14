@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <TaskSequence>
+        <Task id="1">
+            <TaskType>Navigation</TaskType>
+            <Instruction>Navigate to tree with ID 14.</Instruction>
+            <TargetTreeId>14</TargetTreeId>
+        </Task>
+        <Task id="2">
+            <TaskType>Measurement</TaskType>
+            <Instruction>Measure CO2 level at tree 14.</Instruction>
+            <TargetTreeId>14</TargetTreeId>
+        </Task>
+        <Task id="3">
+            <TaskType>Decision</TaskType>
+            <Instruction>If CO2 reading is low, proceed to nearby trees and take 2 pictures.</Instruction>
+            <Condition>CO2 reading is below a threshold.</Condition>
+        </Task>
+        <Task id="4">
+            <TaskType>Navigation</TaskType>
+            <Instruction>Navigate to the farthest tree from the starting point.</Instruction>
+            <Condition>CO2 reading is low.</Condition>
+        </Task>
+        <Task id="5">
+            <TaskType>Measurement</TaskType>
+            <Instruction>Measure CO2 level at the farthest tree.</Instruction>
+            <TargetTreeId>15</TargetTreeId>
+        </Task>
+        <Task id="6">
+            <TaskType>Measurement</TaskType>
+            <Instruction>Take a temperature reading at the northernmost tree.</Instruction>
+            <TargetTreeId>17</TargetTreeId>
+        </Task>
+        <Task id="7">
+            <TaskType>Navigation</TaskType>
+            <Instruction>Return to the starting point.</Instruction>
+        </Task>
+    </TaskSequence>
+</MissionPlan>

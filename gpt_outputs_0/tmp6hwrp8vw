@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Robotic mission to collect environmental data across the orchard, focusing on CO2 levels and temperature.
+    </TaskDescription>
+    <StartingPoint>
+      <Latitude>37.36627570632085</Latitude>
+      <Longitude>-120.42298051393493</Longitude>
+    </StartingPoint>
+  </CompositeTaskInformation>
+  <Tasks>
+    <Task id="1">
+      <TaskType>Navigation</TaskType>
+      <Waypoint id="1.1">
+        <Latitude>37.366304880110526</Latitude>
+        <Longitude>-120.4230246791031</Longitude>
+      </Waypoint>
+      <Instruction>Navigate to the waypoint.  Measure CO2.</Instruction>
+    </Task>
+    <Task id="2">
+      <TaskType>Measurement</TaskType>
+      <MeasurementType>CO2</MeasurementType>
+      <Instruction>Record CO2 reading.</Instruction>
+    </Task>
+    <Task id="3">
+      <TaskType>Navigation</TaskType>
+      <Waypoint id="3.1">
+        <Latitude>37.36636077337479</Latitude>
+        <Longitude>-120.42307592599273</Longitude>
+      </Waypoint>
+      <Instruction>Navigate to the waypoint.  Measure CO2.</Instruction>
+    </Task>
+    <Task id="4">
+      <TaskType>Measurement</TaskType>
+      <MeasurementType>CO2</MeasurementType>
+      <Instruction>Record CO2 reading.</Instruction>
+    </Task>
+    <Task id="5">
+      <TaskType>Navigation</TaskType>
+      <Waypoint id="5.1">
+        <Latitude>37.36631785560332</Latitude>
+        <Longitude>-120.42303004014194</Longitude>
+      </Waypoint>
+      <Instruction>Navigate to the waypoint. Take a temperature reading.</Instruction>
+    </Task>
+    <Task id="6">
+      <TaskType>Measurement</TaskType>
+      <MeasurementType>Temperature</MeasurementType>
+      <Instruction>Record temperature reading.</Instruction>
+    </Task>
+    <Task id="7">
+      <TaskType>Navigation</TaskType>
+      <Waypoint id="7.1">
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42298051393493</Longitude>
+      </Waypoint>
+      <Instruction>Return to the starting point.</Instruction>
+    </Task>
+  </Tasks>
+</MissionPlan>

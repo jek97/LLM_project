@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <MissionID>Orchard_Mission_1</MissionID>
+    <StartTime>2023-04-01T10:00:00Z</StartTime>
+    <EndTime>2023-04-01T10:30:00Z</EndTime>
+    <Tasks>
+        <!-- Task 1: Go to the middle of the field and take a picture -->
+        <Task>
+            <TaskID>Task_1</TaskID>
+            <Description>Go to the middle of the field and take a picture of a tree</Description>
+            <StartTime>2023-04-01T10:00:00Z</StartTime>
+            <EndTime>2023-04-01T10:15:00Z</EndTime>
+            <Actions>
+                <Action>
+                    <ActionID>Action_1_1</ActionID>
+                    <Type>DriveToLocation</Type>
+                    <TargetLocation>MiddleOfField</TargetLocation>
+                </Action>
+                <Action>
+                    <ActionID>Action_1_2</ActionID>
+                    <Type>TakePicture</Type>
+                    <TargetObject>TreeInMiddleOfField</TargetObject>
+                </Action>
+            </Actions>
+        </Task>
+
+        <!-- Task 2: Check the temperature of the tree and take a CO2 sample if below 33°C -->
+        <Task>
+            <TaskID>Task_2</TaskID>
+            <Description>Check the temperature of the tree and take a CO2 sample if below 33°C</Description>
+            <StartTime>2023-04-01T10:15:00Z</StartTime>
+            <EndTime>2023-04-01T10:30:00Z</EndTime>
+            <Actions>
+                <Action>
+                    <ActionID>Action_2_1</ActionID>
+                    <Type>CheckTemperature</Type>
+                    <TargetObject>TreeInMiddleOfField</TargetObject>
+                    <Condition>Below 33°C</Condition>
+                    <Consequence>TakeCO2Sample</Consequence>
+                </Action>
+            </Actions>
+        </Task>
+
+        <!-- Task 3: Go to another random point 5 trees down and repeat the process -->
+        <Task>
+            <TaskID>Task_3</TaskID>
+            <Description>Go to another random point 5 trees down and repeat the process</Description>
+            <StartTime>2023-04-01T10:30:00Z</StartTime>
+            <EndTime>2023-04-01T11:00:00Z</EndTime>
+            <Actions>
+                <Action>
+                    <ActionID>Action_3_1</ActionID>
+                    <Type>DriveToLocation</Type>
+                    <TargetLocation>RandomPoint5TreesDown</TargetLocation>
+                </Action>
+                <Action>
+                    <ActionID>Action_3_2</ActionID>
+                    <Type>TakePicture</Type>
+                    <TargetObject>TreeAtRandomPoint5TreesDown</TargetObject>
+                </Action>
+            </Actions>
+        </Task>
+
+        <!-- Task 4: Check the temperature of the tree and take a CO2 sample if below 33°C -->
+        <Task>
+            <TaskID>Task_4</TaskID>
+            <Description>Check the temperature of the tree and take a CO2 sample if below 33°C</Description>
+            <StartTime>2023-04-01T11:00:00Z</StartTime>
+            <EndTime>2023-04-01T11:30:00Z</EndTime>
+            <Actions>
+                <Action>
+                    <ActionID>Action_4_1</ActionID>
+                    <Type>CheckTemperature</Type>
+                    <TargetObject>TreeAtRandomPoint5TreesDown</TargetObject>
+                    <Condition>Below 33°C</Condition>
+                    <Consequence>TakeCO2Sample</Consequence>
+                </Action>
+            </Actions>
+        </Task>
+    </Tasks>
+</MissionPlan>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/misisonplan"
+           elementFormDefault="qualified">
+
+  <xs:element name="MissionPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="MissionID"/>
+        <xs:element type="xs:string" name="MissionName"/>
+        <xs:element type="xs:dateTime" name="StartDate"/>
+        <xs:element type="xs:dateTime" name="EndDate"/>
+        <xs:element type="xs:string" name="MissionStatus"/>
+        <xs:element ref="TaskList"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TaskList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Task"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Task">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="TaskID"/>
+        <xs:element type="xs:string" name="TaskName"/>
+        <xs:element type="xs:dateTime" name="StartDate"/>
+        <xs:element type="xs:dateTime" name="EndDate"/>
+        <xs:element ref="Location"/>
+        <xs:element ref="SensorList"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Location">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:decimal" name="Latitude"/>
+        <xs:element type="xs:decimal" name="Longitude"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="SensorList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Camera"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Camera"/>
+
+</xs:schema>

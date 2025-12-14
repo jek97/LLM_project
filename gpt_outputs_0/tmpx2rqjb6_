@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="inline_schema.xsd">
+
+  <xsd:schema attributeFormDefault="unqualified"
+              elementFormDefault="qualified"
+              targetNamespace="http://example.com/mission"
+              xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Define the mission structure -->
+    <xsd:element name="mission">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element name="task" maxOccurs="unbounded">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="target" minOccurs="0">
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element name="location" type="xsd:string" />
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="type" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:element>
+
+  </xsd:schema>
+
+  <!-- Start Mission -->
+  <task name="Start Mission" type="move">
+    <target>
+      <location id="10" />
+    </target>
+  </task>
+
+  <!-- Measure CO2 and take pictures -->
+  <task name="Measure CO2 and Take Pictures" type="measure_and_take_pictures">
+    <sensor>CO2</sensor>
+    <threshold>low</threshold>
+    <nearby_trees>
+      <tree id="12" />
+      <tree id="13" />
+    </nearby_trees>
+  </task>
+
+  <!-- Find the northernmost tree and take a temperature reading -->
+  <task name="Measure Temperature" type="measure_temperature">
+    <sensor>Temperature</sensor>
+    <target_tree id="16" />
+  </task>
+
+  <!-- Return to starting point -->
+  <task name="Return Home" type="move">
+    <target>
+      <location id="0" />
+    </target>
+  </task>
+</mission>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan" xsi:schemaLocation="http://example.com/missionplan http://example.com/missionplan_schema.xsd">
+    <Header>
+        <StartLocation>
+            <!-- Replace with actual coordinates -->
+            <Latitude>37.7749</Latitude>
+            <Longitude>-122.4194</Longitud
+e>
+        </StartLocation>
+        <EndLocation>
+            <!-- Replace with actual coordinates -->
+            <Latitude>37.7750</Latitude>
+            <Longitude>-122.4186</Longitude>
+        </EndLocation>
+    </Header>
+    <CompositeTaskInformation>
+        <TaskDescription>Take a picture of the first tree, then measure its height and diameter, and finally check if it's a Redwood tree. Then move to the second tree and repeat the process.</TaskDescription>
+        <Tasks>
+            <!-- Task 1: First Tree -->
+            <Task>
+                <DriveTo>
+                    <Coordinates>
+                        <!-- Replace with actual coordinates from GeoJSON -->
+                        37.7750, -122.4186
+                    </Coordinates>
+                </DriveTo>
+                <Action>
+                    <TakePicture>
+                        <TreeType>Redwood</TreeType>
+                    </TakePicture>
+                </Action>
+                <Action>
+                    <MeasureHeight></MeasureHeight>
+                </Action>
+                <Action>
+                    <MeasureDiameter></MeasureDiameter>
+                </Action>
+                <Action>
+                    <CheckTreeType>
+                        <TreeType>Redwood</TreeType>
+                    </CheckTreeType>
+                </Action>
+            </Task>
+            <!-- Task 2: Second Tree -->
+            <Task>
+                <DriveTo>
+                    <Coordinates>
+                        <!-- Replace with actual coordinates from GeoJSON -->
+                        37.7751, -122.4187
+                    </Coordinates>
+                </DriveTo>
+                <Action>
+                    <TakePicture>
+                        <TreeType>Sequoia</TreeType>
+                    </TakePicture>
+                </Action>
+                <Action>
+                    <MeasureHeight></MeasureHeight>
+                </Action>
+                <Action>
+                    <MeasureDiameter></MeasureDiameter>
+                </Action>
+                <Action>
+                    <CheckTreeType>
+                        <TreeType>Sequoia</TreeType>
+                    </CheckTreeType>
+                </Action>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+    <!-- Outcome element is optional and can be included if possible -->
+    <Outcome>Estimated distance traveled: [distance in miles]</Outcome>
+</MissionPlan>

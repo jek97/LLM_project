@@ -1,0 +1,21 @@
+ Here is an example of an XML mission plan that conforms to the known schema, using the GeoJSON file provided for task location references:
+```php
+<mission>
+    <title>Picture and CO2 Readings</title>
+    <tasks>
+        <task id="1" type="Take Picture">
+            <target>[12.345, 678.90]</target>
+        </task>
+        <task id="2" type="Take CO2 Reading">
+            <target>[23.678, 456.123]</target>
+        </task>
+        <task id="3" type="Take Picture">
+            <target>[23.678, 456.123]</target>
+        </task>
+        <task id="4" type="Take CO2 Reading">
+            <target>[23.679, 456.124]</target>
+        </task>
+    </tasks>
+</mission>
+```
+Please note that this is just an example and the tasks, their sequence, and the target coordinates can be adjusted to fit your specific requirements. 

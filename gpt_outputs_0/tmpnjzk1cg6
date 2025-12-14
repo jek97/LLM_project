@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <Task id="1" type="Drive">
+        <TaskDescription>Drive to tree ID 19 (Northmost tree)</TaskDescription>
+        <Waypoint x="-120.42300386899338" y="37.36635678715399"/>
+    </Task>
+</MissionPlan>

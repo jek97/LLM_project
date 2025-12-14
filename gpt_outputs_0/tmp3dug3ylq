@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://schemas.roboticmissionplan.com/mission-plan.xsd 
+                                 http://schemas.roboticmissionplan.com/mission-plan.xsd">
+    <CompositeTaskInformation>
+        <TaskDescription>This is a test mission.</TaskDescription>
+        <TaskType>Sequential</TaskType>
+        <Tasks>
+            <Task>
+                <TaskDescription>Go to the middle of the field and take a picture of a tree.</TaskDescription>
+                <Type>DrivingToTreeAndTakingPicture</Type>
+                <Preconditions>
+                    <Precondition>Start</Precondition>
+                </Preconditions>
+                <Outcomes>
+                    <Outcome>
+                        <Description>Arrived at the middle of the field.</Description>
+                        <Action>
+                            <TaskDescription>Take a picture of a tree.</TaskDescription>
+                            <Type>TakingPicture</Type>
+                        </Action>
+                        <Conditional>
+                            <Condition>
+                                <Type>AverageTemperatureBelowThreshold</Type>
+                                <Value>33.0</Value>
+                            </Condition>
+                        </Conditional>
+                    </Outcome>
+                </Outcomes>
+            </Task>
+            <Task>
+                <TaskDescription>Go to another random point 5 trees down and do the same thing.</TaskDescription>
+                <Type>DrivingToTreeAndTakingPicture</Type>
+                <Preconditions>
+                    <Precondition>PreviousTaskCompleted</Precondition>
+                </Preconditions>
+                <Outcomes>
+                    <Outcome>
+                        <Description>Arrived at another random point 5 trees down.</Description>
+                        <Action>
+                            <TaskDescription>Take a picture of a tree.</TaskDescription>
+                            <Type>TakingPicture</Type>
+                        </Action>
+                        <Conditional>
+                            <Condition>
+                                <Type>AverageTemperatureBelowThreshold</Type>
+                                <Value>33.0</Value>
+                            </Condition>
+                        </Conditional>
+                    </Outcome>
+                </Outcomes>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+</MissionPlan>

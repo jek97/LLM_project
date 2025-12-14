@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <Task id="1" description="Take pictures of 4 trees clockwise from the north most tree, maximizing location distance between each photo." priority="high">
+      <Instruction>Drive North to Tree ID 14.</Instruction>
+      <Instruction>Take picture of Tree ID 14.</Instruction>
+      <Instruction>Drive East to Tree ID 17.</Instruction>
+      <Instruction>Take picture of Tree ID 17.</Instruction>
+      <Instruction>Drive South to Tree ID 10.</Instruction>
+      <Instruction>Take picture of Tree ID 10.</Instruction>
+      <Instruction>Drive West to Tree ID 19.</Instruction>
+      <Instruction>Take picture of Tree ID 19.</Instruction>
+    </Task>
+  </CompositeTaskInformation>
+</MissionPlan>

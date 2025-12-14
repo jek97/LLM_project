@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="Mission">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="MissionInformation" type="MissionInformationType"/>
+                <xsd:element name="TaskPlan" type="TaskPlanType"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <!-- Define types for the Mission, TaskPlan, and sub-elements -->
+    <xsd:complexType name="MissionInformationType">
+        <xsd:sequence>
+            <xsd:element name="MissionName" type="xsd:string"/>
+            <xsd:element name="StartTime" type="xsd:dateTime"/>
+            <xsd:element name="EndTime" type="xsd:dateTime"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="TaskPlanType">
+        <xsd:complexContent>
+            <xsd:extension base="xsd:anyType">
+                <xsd:attribute name="taskID" type="xsd:string"/>
+                <xsd:sequence>
+                    <xsd:element ref="DriveToLocationType" maxOccurs="unbounded"/>
+                    <xsd:element ref="CameraTaskType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="Co2ReadingType" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <!-- Define sub-elements' types -->
+    <xsd:element name="DriveToLocation" type="DriveToLocationType"/>
+    <xsd:element name="CameraTask" type="CameraTaskType"/>
+    <xsd:element name="Co2Reading" type="Co2ReadingType"/>
+</xsd:schema>
+
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <MissionInformation>
+        <MissionName>TreePictureAndCO2Readings</MissionName>
+        <StartTime>YYYY-MM-DDTHH:MM:SS</StartTime>
+        <EndTime>YYYY-MM-DDTHH:MM:SS</EndTime>
+    </MissionInformation>
+    <TaskPlan taskID="1">
+        <!-- Task 1: Drive to the location -->
+        <DriveToLocation>
+            <Location>
+                <Latitude>LATITUDE</Latitude>
+                <Longitude>LONGITUDE</Longitude>
+            </Location>
+        </DriveToLocation>
+        <!-- Task 2: Take a picture of the first tree -->
+        <CameraTask>
+            <ImageType>Picture</ImageType>
+            <Target>
+                <Latitude>LATITUDE</Latitude>
+                <Longitude>LONGITUDE</Longitude>
+            </Target>
+            <TreeDetails>
+                <TreeType>TREE_TYPE</TreeType>
+            </TreeDetails>
+        </CameraTask>
+        <!-- Task 3: Drive to the second tree location -->
+        <DriveToLocation>
+            <Location>
+                <Latitude>LATITUDE</Latitude>
+                <Longitude>LONGITUDE</Longitude>
+            </Location>
+        </DriveToLocation>
+        <!-- Task 4: Take another picture of the second tree -->
+        <CameraTask>
+            <ImageType>Picture</ImageType>
+            <Target>
+                <Latitude>LATITUDE</Latitude>
+                <Longitude>LONGITUDE</Longitude>
+            </Target>
+            <TreeDetails>
+                <TreeType>TREE_TYPE</TreeType>
+            </TreeDetails>
+        </CameraTask>
+        <!-- Task 5: Perform CO2 reading on the second tree -->
+        <Co2Reading>
+            <TreeDetails>
+                <TreeType>TREE_TYPE</TreeType>
+            </TreeDetails>
+        </Co2Reading>
+    </TaskPlan>
+</Mission>

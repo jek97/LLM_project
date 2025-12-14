@@ -1,0 +1,38 @@
+<MissionPlan xmlns="http://example.com/missionplan">
+    <Mission>
+        <Name>Farm Corner Photography</Name>
+        <Description>Take pictures of trees at the four corners of the farm in any order.</Description>
+        <CompositeTaskInformation>
+            <TaskDescription>Original Question: Take pictures of trees at the four corners of the farm in any order.</TaskDescription>
+            <Tasks>
+                <Task>
+                    <Name>Corner 1</Name>
+                    <Action>TakePicture</Action>
+                    <Location>
+                        <Latitude>37.36628908556382</Latitude>
+                        <Longitude>-120.42298051393493</Longitude>
+                    </Location>
+                </Task>
+                <!-- Repeat the following Task block for each corner of the farm -->
+                <Task>
+                    <Name>Corner 2</Name>
+                    <Action>TakePicture</Action>
+                    <Location>
+                        <Latitude>37.36636077337479</Latitude>
+                        <Longitude>-120.42307592599273</Longitude>
+                    </Location>
+                </Task>
+                <!-- ... -->
+                <Task>
+                    <Name>Corner 4</Name>
+                    <Action>TakePicture</Action>
+                    <Location>
+                        <Latitude>37.3662730362294</Longitude>
+                        <Longitude>-120.42301417901265</Longitude>
+                    </Location>
+                </Task>
+            </Tasks>
+        </CompositeTaskInformation>
+        <Outcome>The robot will travel to the four corners of the farm and take pictures at each location. The total distance traveled is estimated to be significant.</Outcome>
+    </Mission>
+</MissionPlan>

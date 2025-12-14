@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <Tasks>
+    <Task id="1">
+      <Instruction>Navigate to tree ID 14.</Instruction>
+    </Task>
+  </Tasks>
+</MissionPlan>

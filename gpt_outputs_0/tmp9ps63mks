@@ -1,0 +1,22 @@
+<mission>
+    <action id="1">
+        <type>TakePicture</type>
+        <target>Northern most tree</target>
+    </action>
+    <action id="2">
+        <type>DriveToLocation</type>
+        <destination>Middle of the orchard</destination>
+    </action>
+    <action id="3">
+        <type>TakePicture</type>
+        <target>Random tree in the middle of the orchard</target>
+    </action>
+    <action id="4">
+        <type>DriveToLocation</type>
+        <destination>Middle of the eastern end</destination>
+    </action>
+    <action id="5">
+        <type>TakePicture</type>
+        <target>Two trees next to each other</target>
+    </action>
+</mission>

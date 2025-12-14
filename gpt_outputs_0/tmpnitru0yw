@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTask id="Task1" name="CO2 Readings - Adjacent Trees">
+    <Task id="Task1.1" name="Navigate to Tree 1">
+      <Action type="Move" target="Tree 1" description="Navigate to the first tree." />
+    </Task>
+    <Task id="Task1.2" name="Take CO2 Reading - Tree 1">
+      <Action type="Read" target="Tree 1" unit="CO2" description="Take a CO2 reading from the first tree." />
+    </Task>
+    <Task id="Task1.3" name="Navigate to Tree 2">
+      <Action type="Move" target="Tree 2" description="Navigate to the second tree." />
+    </Task>
+    <Task id="Task1.4" name="Take CO2 Reading - Tree 2">
+      <Action type="Read" target="Tree 2" unit="CO2" description="Take a CO2 reading from the second tree." />
+    </Task>
+  </CompositeTask>
+</MissionPlan>

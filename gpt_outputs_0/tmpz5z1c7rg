@@ -1,0 +1,80 @@
+<MissionPlan xmlns="http://www.example.com/missionplan" xsi:schemaLocation="http://www.example.com/missionplan missionplan.xsd">
+    <Header>
+        <MissionName>Tree Analysis Mission</MissionName>
+        <CreatedBy>Your Robotic Platform</CreatedBy>
+        <StartTime>2023-04-15T13:30:00Z</StartTime>
+        <EndTime>2023-04-15T17:00:00Z</EndTime>
+    </Header>
+    <Tasks>
+        <!-- Start Task 1 -->
+        <CompositeTaskInformation>
+            <OriginalQuestion>Drive to first tree and take picture.</OriginalQuestion>
+            <Tasks>
+                <ActionTask>
+                    <Action>DriveTo</Action>
+                    <Parameters>
+                        <LocationRef name="Start"/>
+                        <DestinationRef name="Tree1"/>
+                    </Parameters>
+                    <Outcome>Drive to first tree (approx. 2km).</Outcome>
+                </ActionTask>
+                <!-- Start Subtask 1.1 -->
+                <CameraActionTask>
+                    <Action>TakePicture</Action>
+                    <Parameters>
+                        <SubjectRef name="Tree1"/>
+                    </Parameters>
+                    <Outcome>Capture picture of tree #1.</Outcome>
+                </CameraActionTask>
+            </Tasks>
+        </CompositeTaskInformation>
+        <!-- Start Task 2 -->
+        <CompositeTaskInformation>
+            <OriginalQuestion>Take temperature and CO2 reading from the same tree if its temperature is low.</OriginalQuestion>
+            <Conditional>
+                <Condition>TemperatureReading(Tree1) < TempThreshhold</Condition>
+                <Then>
+                    <Tasks>
+                        <!-- Start Subtask 2.1 -->
+                        <TemperatureReadingActionTask>
+                            <Action>TakeTemperature</Action>
+                            <Parameters>
+                                <SubjectRef name="Tree1"/>
+                            </Parameters>
+                            <Outcome>Take temperature reading of tree #1.</Outcome>
+                        </TemperatureReadingActionTask>
+                        <!-- Start Subtask 2.2 -->
+                        <CO2SamplingActionTask>
+                            <Action>TakeCO2Sample</Action>
+                            <Parameters>
+                                <SubjectRef name="Tree1"/>
+                            </Parameters>
+                            <Outcome>Take CO2 sample from tree #1.</Outcome>
+                        </CO2SamplingActionTask>
+                    </Tasks>
+                </Then>
+                <Else>
+                    <Tasks>
+                        <!-- Start Subtask 3.1 -->
+                        <DriveToTask>
+                            <Action>DriveTo</Action>
+                            <Parameters>
+                                <DestinationRef name="End"/>
+                            </Parameters>
+                            <Outcome>Drive to end (approx. 1km).</Outcome>
+                        </DriveToTask>
+                    </Tasks>
+                </Else>
+            </Conditional>
+        </CompositeTaskInformation>
+    </Tasks>
+    <!-- Add more tasks if needed -->
+    <Locations>
+        <!-- replace 'Start' with the actual starting location -->
+        <GPSLocation id="Start" x="longitude" y="latitude"/>
+        <!-- replace 'Tree1' and other tree IDs with their respective locations and type data, etc. -->
+        <GPSLocation id="Tree1" x="longitude" y="latitude"/>
+        <!-- replace 'End' with the actual ending location -->
+        <GPSLocation id="End" x="longitude" y="latitude"/>
+    </Locations>
+</MissionPlan>

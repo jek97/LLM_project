@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="path/to/your/MissionPlan.xsd">
+    <CompositeTaskInformation>
+        <!-- TaskDescription goes here -->
+        <TaskDescription>Original question or task description</TaskDescription>
+        <!-- Other elements go here -->
+    </CompositeTaskInformation>
+    <!-- Additional mission details go here -->
+</MissionPlan>

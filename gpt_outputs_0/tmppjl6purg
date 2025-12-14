@@ -1,0 +1,7 @@
+I'm sorry to hear that there was an error. The XML file should start with a start tag and the first character should be '<'.
+Here's an example of a properly formatted XML file:
+```
+<root>
+    <element>Value</element>
+</root>
+```

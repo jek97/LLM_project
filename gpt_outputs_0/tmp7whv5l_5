@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<mission xmlns="...">
+    <CompositeTaskInformation>
+        <TaskDescription>Take pictures of trees to collect data for environmental monitoring.</TaskDescription>
+    </CompositeTaskInformation>
+
+    < missionType>
+        <DiscreteContinuousAction>
+            <action name="Take Initial Picture">
+                <task name="Take Picture at Tree 1" type="driving">
+                    <sensor type="Temperature">25°C</sensor>
+                    <sensor type="CO2">900 ppm</sensor>
+                </task>
+                <action name="Move to Tree 2">Drive to Tree 2's location and take another picture.</action>
+            </DiscreteContinuousAction>
+        </missionType>
+
+        <!-- Other tasks as needed -->
+    </mission>
+</xml>

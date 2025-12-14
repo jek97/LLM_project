@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <CompositeTaskInformation>
+        <!-- Task description -->
+        <TaskDescription>From the farm, select 5 pistachio trees in a row to visit and take a picture of 3 of them.</TaskDescription>
+
+        <!-- Drive to the first tree -->
+        <DriveToWaypoint>
+            <WaypointID>0</WaypointID>
+            <ActionType>Drive</ActionType>
+        </DriveToWaypoint>
+
+        <!-- Take a picture of the first tree -->
+        <TakePicture>
+            <TreeID>0</TreeID>
+            <ActionType>Photo</ActionType>
+        </TakePicture>
+
+        <!-- Drive to the second tree -->
+        <DriveToWaypoint>
+            <WaypointID>1</WaypointID>
+            <ActionType>Drive</ActionType>
+        </DriveToWaypoint>
+
+        <!-- Take a picture of the second tree -->
+        <TakePicture>
+            <TreeID>1</TreeID>
+            <ActionType>Photo</ActionType>
+        </TakePicture>
+
+        <!-- Drive to the third tree -->
+        <DriveToWaypoint>
+            <WaypointID>2</WaypointID>
+            <ActionType>Drive</ActionType>
+        </DriveToWaypoint>
+
+        <!-- Take a picture of the third tree -->
+        <TakePicture>
+            <TreeID>2</TreeID>
+            <ActionType>Photo</ActionType>
+        </TakePicture>
+
+        <!-- Drive to the fourth tree -->
+        <DriveToWaypoint>
+            <WaypointID>3</WaypointID>
+            <ActionType>Drive</ActionType>
+        </DriveToWaypoint>
+
+        <!-- Take a picture of the fourth tree -->
+        <TakePicture>
+            <TreeID>3</TreeID>
+            <ActionType>Photo</ActionType>
+        </TakePicture>
+
+        <!-- Drive to the fifth tree -->
+        <DriveToWaypoint>
+            <WaypointID>4</WaypointID>
+            <ActionType>Drive</ActionType>
+        </DriveToWaypoint>
+
+        <!-- Take a picture of the fifth tree -->
+        <TakePicture>
+            <TreeID>4</TreeID>
+            <ActionType>Photo</ActionType>
+        </TakePicture>
+
+    </CompositeTaskInformation>
+</MissionPlan>

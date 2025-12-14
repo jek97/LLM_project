@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <Mission>
+        <Name>Visit All Points</Name>
+        <Description>Visits all points in the orchard and assigns a reward based on last sampled.</Description>
+        <Tasks>
+            <!-- Task for point 1 -->
+            <Task>
+                <ID>1</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>1</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.95</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 2 -->
+            <Task>
+                <ID>2</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>2</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.90</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 3 -->
+            <Task>
+                <ID>3</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>3</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.85</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 4 -->
+            <Task>
+                <ID>4</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>4</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.80</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 5 -->
+            <Task>
+                <ID>5</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>5</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.75</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 6 -->
+            <Task>
+                <ID>6</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>6</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.70</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 7 -->
+            <Task>
+                <ID>7</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>7</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.65</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 8 -->
+            <Task>
+                <ID>8</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>8</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.60</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 9 -->
+            <Task>
+                <ID>9</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>9</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.55</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 10 -->
+            <Task>
+                <ID>10</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>10</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.50</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 11 -->
+            <Task>
+                <ID>11</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>11</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.45</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 12 -->
+            <Task>
+                <ID>12</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>12</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.40</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 13 -->
+            <Task>
+                <ID>13</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>13</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.35</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 14 -->
+            <Task>
+                <ID>14</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>14</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.30</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 15 -->
+            <Task>
+                <ID>15</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>15</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.25</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 16 -->
+            <Task>
+                <ID>16</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>16</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.20</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 17 -->
+            <Task>
+                <ID>17</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>17</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.15</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 18 -->
+            <Task>
+                <ID>18</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>18</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.10</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 19 -->
+            <Task>
+                <ID>19</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>19</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.05</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+            <!-- Task for point 20 -->
+            <Task>
+                <ID>20</ID>
+                <Type>VisitPoint</Type>
+                <Parameters>
+                    <Parameter>
+                        <Name>PointID</Name>
+                        <Value>20</Value>
+                    </Parameter>
+                    <Parameter>
+                        <Name>Reward</Name>
+                        <Value>0.00</Value>
+                    </Parameter>
+                </Parameters>
+            </Task>
+
+        </Tasks>
+    </Mission>
+</Missions>

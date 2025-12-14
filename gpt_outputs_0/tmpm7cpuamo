@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <MissionInformation>
+        <MissionId>1</MissionId>
+        <MissionName>Tree Corner Inspection</MissionName>
+        <TaskDescription>Viewing this farm as a rectangle, take pictures of trees at the four corners in any order.</TaskDescription>
+    </MissionInformation>
+    <SequenceOfTasks>
+        <!-- Tasks go here -->
+    </SequenceOfTasks>
+    <EndTime>2023-04-05T16:39:58.000Z</EndTime>
+</Plan>

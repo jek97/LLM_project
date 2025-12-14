@@ -1,0 +1,10 @@
+<MissionPlan>
+    <Task>
+        <task_id>basic_task</task_id>
+        <action>observe</action>
+        <location>
+            <latitude>34.0522</latitude>
+            <longitude>-118.2437</longitude>
+        </location>
+    </Task>
+</MissionPlan>

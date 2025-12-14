@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robotic-mission-planning.com:MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                        xsi:schemaLocation="http://robotic-mission-planning.com/schema/mission_plan.xsd 
+                                        http://robotic-mission-planning.com/schema/mission_plan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Take a picture of the northern most tree</TaskDescription>
+    <DrivingTask>
+      <DriveTo>
+        <GPSLocation>
+          <latitude>37.36635688574164</latitude>
+          <longitude>-120.42302289785604</longitude>
+        </GPSLocation>
+      </DriveTo>
+    </DrivingTask>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to the middle of the orchard and take another picture</TaskDescription>
+    <DrivingTask>
+      <DriveTo>
+        <GPSLocation>
+          <latitude>37.36635688574164</latitude>
+          <longitude>-120.42309252722157</longitude>
+        </GPSLocation>
+      </DriveTo>
+    </DrivingTask>
+    <PictureTask>
+      <TakePicture />
+    </PictureTask>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to the middle of the eastern end and take a picture of two trees next to each other</TaskDescription>
+    <DrivingTask>
+      <DriveTo>
+        <GPSLocation>
+          <latitude>37.36631509745154</latitude>
+          <longitude>-120.4230350832969</longitude>
+        </GPSLocation>
+      </DriveTo>
+    </DrivingTask>
+    <PictureTask>
+      <TakePicture />
+    </PictureTask>
+  </CompositeTaskInformation>
+
+</robotic-mission-planning.com:MissionPlan>

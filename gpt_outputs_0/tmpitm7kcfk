@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Select 5 pistachio trees in a row and take a picture of 3 of them.
+      <OriginalTask>Select 5 pistachio trees in a row to visit and take a picture of 3 of them.</OriginalTask>
+    </TaskDescription>
+    <MissionSteps>
+      <Step id="1">
+        <Action>Navigate to Tree 1</Action>
+        <Location>Point: (-120.42300386899338, 37.366300703749474)</Location>
+        <Instruction>Drive to the first pistachio tree in the row.</Instruction>
+      </Step>
+      <Step id="2">
+        <Action>Take Picture</Action>
+        <Location>Point: (-120.42300386899338, 37.366300703749474)</Location>
+        <Instruction>Take a picture of the first tree.</Instruction>
+      </Step>
+      <Step id="3">
+        <Action>Navigate to Tree 2</Action>
+        <Location>Point: (-120.4230246791031, 37.366304880110526)</Location>
+        <Instruction>Drive to the second pistachio tree in the row.</Instruction>
+      </Step>
+      <Step id="4">
+        <Action>Take Picture</Action>
+        <Location>Point: (-120.4230246791031, 37.366304880110526)</Location>
+        <Instruction>Take a picture of the second tree.</Instruction>
+      </Step>
+      <Step id="5">
+        <Action>Navigate to Tree 3</Action>
+        <Location>Point: (-120.423044218715, 37.36626996761184)</Location>
+        <Instruction>Drive to the third pistachio tree in the row.</Instruction>
+      </Step>
+      <Step id="6">
+        <Action>Take Picture</Action>
+        <Location>Point: (-120.423044218715, 37.36626996761184)</Location>
+        <Instruction>Take a picture of the third tree.</Instruction>
+      </Step>
+      <Step id="7">
+        <Action>Navigate to Tree 4</Action>
+        <Location>Point: (-120.42307592599273, 37.36636077337479)</Location>
+        <Instruction>Drive to the fourth pistachio tree in the row.</Instruction>
+      </Step>
+      <Step id="8">
+        <Action>Take Picture</Action>
+        <Location>Point: (-120.42307592599273, 37.36636077337479)</Location>
+        <Instruction>Take a picture of the fourth tree.</Instruction>
+      </Step>
+      <Step id="9">
+        <Action>Navigate to Tree 5</Action>
+        <Location>Point: (-120.42302669537153, 37.36634636896467)</Location>
+        <Instruction>Drive to the fifth pistachio tree in the row.</Instruction>
+      </Step>
+      <Step id="10">
+        <Action>Take Picture</Action>
+        <Location>Point: (-120.42302669537153, 37.36634636896467)</Location>
+        <Instruction>Take a picture of the fifth tree.</Instruction>
+      </Step>
+    </MissionSteps>
+  </CompositeTaskInformation>
+</MissionPlan>

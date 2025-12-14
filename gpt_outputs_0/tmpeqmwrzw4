@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GeoJSON xmlns="http://www.opengis.net/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <TimeInstant>
+        <time>2023-01-01T00:00:00Z</time>
+    </TimeInstant>
+    
+    <FeatureCollection xmlns="">
+        <featureMember xsi:type="Feature">
+            <Feature>
+                <TimeInstant>
+                    <time>2023-01-01T00:00:00Z</time>
+                </TimeInstant>
+                <gml:Name xmlns="http://www.opengis.net/gml">North most tree</gml:Name>
+                <gml:Point gml:id="point_1">
+                    <coordinates xmlns="http://www.w3.org/2001/XMLSchema-instance" ref="point"/>
+                </gml:Point>
+            </Feature>
+        </featureMember>
+        
+        <featureMember xsi:type="Feature">
+            <Feature>
+                <TimeInstant>
+                    <time>2023-01-01T00:00:00Z</time>
+                </TimeInstant>
+                <gml:Name xmlns="http://www.opengis.net/gml">East most tree</gml:Name>
+                <gml:Point gml:id="point_2">
+                    <coordinates xmlns="http://www.w3.org/2001/XMLSchema-instance" ref="point"/>
+                </gml:Point>
+            </Feature>
+        </featureMember>
+        
+        <featureMember xsi:type="Feature">
+            <Feature>
+                <TimeInstant>
+                    <time>2023-01-01T00:00:00Z</time>
+                </TimeInstant>
+                <gml:Name xmlns="http://www.opengis.net/gml">South most tree</gml:Name>
+                <gml:Point gml:id="point_3">
+                    <coordinates xmlns="http://www.w3.org/2001/XMLSchema-instance" ref="point"/>
+                </gml:Point>
+            </Feature>
+        </featureMember>
+        
+        <featureMember xsi:type="Feature">
+            <Feature>
+                <TimeInstant>
+                    <time>2023-01-01T00:00:00Z</time>
+                </TimeInstant>
+                <gml:Name xmlns="http://www.opengis.net/gml">West most tree</gml:Name>
+                <gml:Point gml:id="point_4">
+                    <coordinates xmlns="http://www.w3.org/2001/XMLSchema-instance" ref="point"/>
+                </gml:Point>
+            </Feature>
+        </featureMember>
+        
+        <TimeInstant>
+            <time>2023-01-01T00:00:00Z</time>
+        </TimeInstant>
+    </FeatureCollection>
+    
+</GeoJSON>

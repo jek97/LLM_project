@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>Robotic orchard exploration and data collection.</TaskDescription>
+    <StartingPoint>
+      <Latitude>37.36635640370881</Latitude>
+      <Longitude>-120.42300386899338</Longitude>
+    </StartingPoint>
+  </CompositeTaskInformation>
+
+  <Tasks>
+    <Task id="1">
+      <TaskType>Navigation</TaskType>
+      <Goal>
+        <Latitude>37.36631785560332</Latitude>
+        <Longitude>-120.42303004014194</Latitude>
+      </Goal>
+      <Instructions>Navigate to the tree at coordinates 37.36631785560332, -120.42303004014194.</Instructions>
+    </Task>
+    <Task id="2">
+      <TaskType>Measurement</TaskType>
+      <Goal>
+        <Latitude>37.36631785560332</Latitude>
+        <Longitude>-120.42303004014194</Latitude>
+      </Goal>
+      <Instructions>Measure CO2 reading at the target location. If the reading is low, take two pictures of nearby trees and return to the initial location to repeat.</Instructions>
+    </Task>
+    <Task id="3">
+      <TaskType>Navigation</TaskType>
+      <Goal>
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42307272278255</Latitude>
+      </Goal>
+      <Instructions>Navigate to the tree at coordinates 37.36627570632085, -120.42307272278255.</Instructions>
+    </Task>
+    <Task id="4">
+      <TaskType>Measurement</TaskType>
+      <Goal>
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42307272278255</Latitude>
+      </Goal>
+      <Instructions>Measure CO2 reading at the target location. If the reading is low, take two pictures of nearby trees and return to the initial location to repeat.</Instructions>
+    </Task>
+     <Task id="5">
+      <TaskType>Measurement</TaskType>
+      <Goal>
+        <Latitude>37.36626996761184</Latitude>
+        <Longitude>-120.42298051393493</Latitude>
+      </Goal>
+      <Instructions>Take a temperature reading at the target location.</Instructions>
+    </Task>
+    <Task id="6">
+      <TaskType>Navigation</TaskType>
+      <Goal>
+        <Latitude>37.36635640370881</Latitude>
+        <Longitude>-120.42300386899338</Longitude>
+      </Goal>
+      <Instructions>Navigate back to the starting point.</Instructions>
+    </Task>
+  </Tasks>
+</MissionPlan>

@@ -1,0 +1,42 @@
+<mission>
+  <CompositeTaskInformation>
+    <TaskDescription>Take pictures of trees at the four corners of the farm</TaskDescription>
+    <MissionPlan>
+      <!-- Drive to the top-left corner and take a picture -->
+      <DriveToWaypoint>
+        <Waypoint>
+          <latitude>-120.4230685</latitude>
+          <longitude>37.3663692</longitude>
+        </Waypoint>
+        <Action>TakePicture</Action>
+      </DriveToWaypoint>
+
+      <!-- Drive to the top-right corner and take a picture -->
+      <DriveToWaypoint>
+        <Waypoint>
+          <latitude>-120.4229865</latitude>
+          <longitude>37.3663692</longitude>
+        </Waypoint>
+        <Action>TakePicture</Action>
+      </DriveToWaypoint>
+
+      <!-- Drive to the bottom-left corner and take a picture -->
+      <DriveToWaypoint>
+        <Waypoint>
+          <latitude>-120.4230685</latitude>
+          <longitude>37.3662592</longitude>
+        </Waypoint>
+        <Action>TakePicture</Action>
+      </DriveToWaypoint>
+
+      <!-- Drive to the bottom-right corner and take a picture -->
+      <DriveToWaypoint>
+        <Waypoint>
+          <latitude>-120.4229865</latitude>
+          <longitude>37.3662592</longitude>
+        </Waypoint>
+        <Action>TakePicture</Action>
+      </DriveToWaypoint>
+    </MissionPlan>
+  </CompositeTaskInformation>
+</mission>

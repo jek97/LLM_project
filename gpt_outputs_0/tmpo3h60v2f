@@ -1,0 +1,11 @@
+<task name="TakePicturesIfNecessary">
+    <if>CO2_value < 50</if>
+        <moveFromCoordinate>[middle_tree_coordinates]</moveFromCoordinate>
+        <moveToCoordinate>[nearby_tree_coordinates_1]</moveToCoordinate>
+        <!-- Capture first picture -->
+        <takePicture orientation="NORTHWEST" id="pic1"/>
+        
+        <!-- Capture second picture -->
+        <takePicture orientation="Northeast" id="Northeast pic2"/>
+    </if>
+</task>

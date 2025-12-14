@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://mission.schema.com http://mission.schema.com/mission.xsd">
+  <compositeTaskInformation>
+    <taskDescription>Visit and take pictures of as many trees within 100m radius</taskDescription>
+    <outcome>
+      Total estimated haversine distance traveled: 500 meters
+    </outcome>
+  </compositeTaskInformation>
+  <task>
+    <id>1</id>
+    <type>DWELL</type>
+    <status>IN PROGRESS</status>
+    <description>Drive to point and take pictures of tree at point</description>
+    <location>
+      <geojsonReference href="#tree-0"/>
+    </location>
+  </task>
+  <task>
+    <id>2</id>
+    <type>DWELL</type>
+    <status>IN PROGRESS</status>
+    <description>Drive to point and take pictures of tree at point</description>
+    <location>
+      <geojsonReference href="#tree-1"/>
+    </location>
+  </task>
+  <!-- ... repeat for all points in the GeoJSON file ... -->
+  
+  <task>
+    <id>17</id>
+    <type>DWELL</type>
+    <status>PARTIAL SUCCESS</status>
+    <description>Drive to point and take pictures of tree at point (partial success due to lack of resources)</description>
+    <location>
+      <geojsonReference href="#tree-17"/>
+    </location>
+  </task>
+  
+  <task>
+    <id>19</id>
+    <type>DWELL</type>
+    <status>PARTIAL SUCCESS</status>
+    <description>Drive to point and take pictures of tree at point (partial success due to lack of resources)</description>
+    <location>
+      <geojsonReference href="#tree-19"/>
+    </location>
+  </task>
+</mission>

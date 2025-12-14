@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:MissionPlan xmlns:ns="http://robotic-mission-planning.com/schema/mission_plan.xsd">
+  <ns:CompositeTaskInformation>
+    <ns:TaskDescription>Drive to the middle of the orchard and take another picture</ns:TaskDescription>
+    <ns:DrivingTask>
+      <ns:DriveTo>
+        <ns:GPSLocation>
+          <ns:latitude>37.36635688574164</ns:latitude>
+          <ns:longitude>-120.42302289785604</ns:longitude>
+        </ns:GPSLocation>
+      </ns:DriveTo>
+    </ns:DrivingTask>
+  </ns:CompositeTaskInformation>
+
+  <ns:CompositeTaskInformation>
+    <ns:TaskDescription>Drive to the middle of the eastern end and take a picture of two trees next to each other</ns:TaskDescription>
+    <ns:DrivingTask>
+      <ns:DriveTo>
+        <ns:GPSLocation>
+          <ns:latitude>37.36631509745154</ns:latitude>
+          <ns:longitude>-120.4230350832969</ns:longitude>
+        </ns:GPSLocation>
+      </ns:DriveTo>
+    </ns:DrivingTask>
+  </ns:CompositeTaskInformation>
+
+  <ns:CompositeTaskInformation>
+    <ns:TaskDescription>Drive to the middle of the orchard and take another picture</ns:TaskDescription>
+    <ns:DrivingTask>
+      <ns:DriveTo>
+        <ns:GPSLocation>
+          <ns:latitude>37.36635688574164</ns:latitude>
+          <ns:longitude>-120.42302289785604</ns:longitude>
+        </ns:GPSLocation>
+      </ns:DriveTo>
+    </ns:DrivingTask>
+  </ns:CompositeTaskInformation>
+
+</ns:MissionPlan>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://example.com/mission-plan.xsd MissionPlan.xsd">
+    <TaskDescription>
+        <id>DriveToCorner1</id>
+        <type>Destination</type>
+        <description>Determine GPS location of first corner</description>
+        <outcome>
+            <GPSLocation lat="37.36635688574164" lon="-120.42302289785604"/>
+            <TaskReference taskID="TakePicture1"/>
+        </outcome>
+    </TaskDescription>
+
+    <TaskDescription>
+        <id>DriveToCorner2</id>
+        <type>Destination</type>
+        <description>Determine GPS location of second corner</description>
+        <outcome>
+            <GPSLocation lat="37.36631509745154" lon="-120.42309252722157"/>
+            <TaskReference taskID="TakePicture2"/>
+        </outcome>
+    </TaskDescription>
+
+    <TaskDescription>
+        <id>DriveToCorner3</id>
+        <type>Destination</type>
+        <description>Determine GPS location of third corner</description>
+        <outcome>
+            <GPSLocation lat="37.36635015674898" lon="-120.4230350832969"/>
+            <TaskReference taskID="TakePicture3"/>
+        </outcome>
+    </TaskDescription>
+
+    <TaskDescription>
+        <id>DriveToCorner4</id>
+        <type>Destination</type>
+        <description>Determine GPS location of fourth corner</description>
+        <outcome>
+            <GPSLocation lat="37.366300236834725" lon="-120.42308819251039"/>
+            <TaskReference taskID="TakePicture4"/>
+        </outcome>
+    </TaskDescription>
+
+    <TaskDescription>
+        <id>DriveToTree1</id>
+        <type>VisitTree</type>
+        <description>Determine tree type at first corner GPS location</description>
+        <outcome>
+            <TreeType>Apple</TreeType>
+            <TaskReference taskID="TakePicture5"/>
+        </outcome>
+    </TaskDescription>
+
+    <TaskDescription>
+        <id>DriveToTree2</id>
+        <type>VisitTree</type>
+        <description>Determine tree type at second corner GPS location</description>
+        <outcome>
+            <TreeType>Orange</TreeType>
+            <TaskReference taskID="TakePicture6"/>
+        </outcome>
+    </TaskDescription>
+
+    <TaskDescription>
+        <id>DriveToTree3</id>
+        <type>VisitTree</type>
+        <description>Determine tree type at third corner GPS location</description>
+        <outcome>
+            <TreeType>Apple</TreeType>
+            <TaskReference taskID="TakePicture7"/>
+        </outcome>
+    </TaskDescription>
+
+    <TaskDescription>
+        <id>DriveToTree4</id>
+        <type>VisitTree</type>
+        <description>Determine tree type at fourth corner GPS location</description>
+        <outcome>
+            <TreeType>Orange</TreeType>
+            <TaskReference taskID="TakePicture8"/>
+        </outcome>
+    </TaskDescription>
+
+    <!-- Take pictures of trees at corners -->
+    <TaskDescription>
+        <id>TakePicture1</id>
+        <type>Document</type>
+        <description>Take picture of first corner tree</description>
+    </TaskDescription>
+
+    <TaskDescription>
+        <id>TakePicture2</id>
+        <type>Document</type>
+        <description>Take picture of second corner tree</description>
+    </TaskDescription>
+
+    <TaskDescription>
+        <id>TakePicture3</id>
+        <type>Document</type>
+        <description>Take picture of third corner tree</description>
+    </TaskDescription>
+
+    <TaskDescription>
+        <id>TakePicture4</id>
+        <type>Document</type>
+        <description>Take picture of fourth corner tree</description>
+    </TaskDescription>
+
+    <TaskDescription>
+        <id>TakePicture5</id>
+        <type>Document</type>
+        <description>Take picture of first corner tree type</description>
+    </TaskDescription>
+
+    <TaskDescription>
+        <id>TakePicture6</id>
+        <type>Document</type>
+        <description>Take picture of second corner tree type</description>
+    </TaskDescription>
+
+    <TaskDescription>
+        <id>TakePicture7</id>
+        <type>Document</type>
+        <description>Take picture of third corner tree type</description>
+    </TaskDescription>
+
+    <TaskDescription>
+        <id>TakePicture8</id>
+        <type>Document</type>
+        <description>Take picture of fourth corner tree type</description>
+    </TaskDescription>
+</MissionPlan>

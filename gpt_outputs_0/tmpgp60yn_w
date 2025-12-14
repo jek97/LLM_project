@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <Tasks>
+    <Task id="1">
+      <TaskType>Drive</TaskType>
+      <Waypoint>
+        <Latitude>40.7128</Latitude>
+        <Longitude>-74.0060</Longitude>
+      </Waypoint>
+    </Task>
+    <Task id="2">
+      <TaskType>Photograph</TaskType>
+      <Waypoint>
+        <Latitude>40.7128</Latitude>
+        <Longitude>-74.0060</Longitude>
+      </Waypoint>
+    </Task>
+  </Tasks>
+</MissionPlan>

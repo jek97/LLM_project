@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Robotic mission to assess tree conditions, measuring CO2 and temperature, and taking photographic evidence.
+    </TaskDescription>
+    <StartingPoint>
+      <Latitude>37.36627570632085</Latitude>
+      <Longitude>-120.42298051393493</Longitude>
+    </StartingPoint>
+  </CompositeTaskInformation>
+  <Tasks>
+    <Task id="1">
+      <TaskType>Navigation</TaskType>
+      <Instruction>Navigate to the tree with the furthest distance from the starting point.</Instruction>
+      <TargetTreeId>15</TargetTreeId>
+    </Task>
+    <Task id="2">
+      <TaskType>Measurement</TaskType>
+      <Instruction>Measure CO2 at the target tree.</Instruction>
+      <TargetTreeId>15</TargetTreeId>
+    </Task>
+    <Task id="3">
+      <TaskType>Photography</TaskType>
+      <Instruction>Take two pictures of the tree.</Instruction>
+      <TargetTreeId>15</TargetTreeId>
+    </Task>
+    <Task id="4">
+      <TaskType>Navigation</TaskType>
+      <Instruction>Navigate to the northernmost tree.</Instruction>
+      <TargetTreeId>17</TargetTreeId>
+    </Task>
+    <Task id="5">
+      <TaskType>Measurement</TaskType>
+      <Instruction>Take a temperature reading at the target tree.</Instruction>
+      <TargetTreeId>17</TargetTreeId>
+    </Task>
+    <Task id="6">
+      <TaskType>Navigation</TaskType>
+      <Instruction>Return to end.</Instruction>
+    </Task>
+  </Tasks>
+</MissionPlan>

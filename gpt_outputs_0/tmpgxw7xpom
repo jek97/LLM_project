@@ -1,0 +1,37 @@
+ I apologize for the confusion. It seems that there was an issue with the XML file format. Here is a corrected version of the XML file:
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <starting_point>
+        <latitude>37.366289</latitude>
+        <longitude>-120.42298051393493</longitude>
+        <altitude>0</altitude>
+    </starting_point>
+    <mission_steps>
+        <step>
+            <action>Move to the middle of the field</action>
+            <destination>
+                <latitude>37.366289</latitude>
+                <longitude>-120.42298051393493</longitude>
+                <altitude>0</altitude>
+            </destination>
+        </step>
+        <step>
+            <action>Take a picture of a tree</action>
+            <condition>
+                <expression>Average temperature is below 33 C</expression>
+            </condition>
+        </step>
+        <step>
+            <action>Take a CO2 sample</action>
+        </step>
+        <step>
+            <action>Move to another random point (5 trees down)</action>
+            <destination>
+                <expression>Randomly selected point within the field, at least 5 trees away from the starting point</expression>
+            </destination>
+        </step>
+    </mission_steps>
+</mission>
+```
+This corrected XML file should work as expected. Please let me know if you have any further questions or concerns. 

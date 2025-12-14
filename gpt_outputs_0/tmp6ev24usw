@@ -1,0 +1,55 @@
+It seems that the XML parser is still expecting a start tag (`<`) at the beginning of the file. Here is the corrected version:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robust-mission-planning.com/mission-plan.xsd
+             http://robust-mission-planning.com/mission-plan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to the middle of the field and take a picture of a tree.</TaskDescription>
+    <DrivingLocation>
+      <GPSLocation>
+        <latitude>37.36635688574164</latitude>
+        <longitude>-120.42302289785604</longitude>
+      </GPSLocation>
+    </DrivingLocation>
+  </CompositeTaskInformation>
+
+  <Outcome>
+    <DrivingDistance>0 km</DrivingDistance>
+    <ActionDescription>Take a picture of a tree.</ActionDescription>
+    <Condition>
+      <TemperatureThreshold>33 C</TemperatureThreshold>
+    </Condition>
+    <AdditionalActions>
+      <TakeCO2Sample/>
+    </AdditionalActions>
+  </Outcome>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to another random point 5 trees down and take a picture of a tree.</TaskDescription>
+    <DrivingLocation>
+      <GPSLocation>
+        <latitude>37.36631509745154</latitude>
+        <longitude>-120.42309252722157</longitude>
+      </GPSLocation>
+    </DrivingLocation>
+  </CompositeTaskInformation>
+
+  <Outcome>
+    <DrivingDistance>0 km</DrivingDistance>
+    <ActionDescription>Take a picture of a tree.</ActionDescription>
+    <Condition>
+      <TemperatureThreshold>33 C</TemperatureThreshold>
+    </Condition>
+    <AdditionalActions>
+      <TakeCO2Sample/>
+    </AdditionalActions>
+  </Outcome>
+
+  <!-- Randomly select another point 5 trees down -->
+  <RandomPointSelection>
+    <TreeID>6</TreeID>
+  </RandomPointSelection>
+</missionPlan>
+```
+I changed the root element from `<MissionPlan>` to just `<missionPlan>`. This should fix the error and allow the XML file to be parsed correctly.

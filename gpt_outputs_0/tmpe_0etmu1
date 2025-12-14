@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/missionPlan"
+           elementFormDefault="qualified">
+
+  <xs:element name="missionPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="startLocation" type="StartLocationType"/>
+        <xs:element name="tasks" type="TasksType"/>
+        <xs:element name="endLocation" type="EndLocationType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="StartLocationType">
+    <xs:sequence>
+      <xs:element name="type" type="xs:string"/>
+      <xs:element name="coordinates" type="CoordinatesType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CoordinatesType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" use="required" type="xs:string"/>
+        <xs:attribute name="coordinates" use="required" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="TasksType">
+    <xs:sequence>
+      <xs:element name="task" maxOccurs="unbounded" type="TaskType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TaskType">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="action" type="ActionType"/>
+      <xs:element name="pictureTaking" type="PictureTakingType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ActionType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" use="required" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="PictureTakingType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" use="required" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="EndLocationType">
+    <xs:sequence>
+      <xs:element name="type" type="xs:string"/>
+      <xs:element name="coordinates" type="CoordinatesType"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

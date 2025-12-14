@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Task: Photograph orchard corners.
+      Objective: Capture images of the orchard at each of the four corners as defined by the provided GeoJSON data.
+      Priority: High
+    </TaskDescription>
+    <ExecutionSequence>
+      <Step id="1">
+        <Action>Navigate to Tree ID 12</Action>
+        <Location>-120.42300386899338, 37.366300703749474</Location>
+        <Instruction>Take a photograph of the tree at this location.</Instruction>
+      </Step>
+      <Step id="2">
+        <Action>Navigate to Tree ID 19</Action>
+        <Location>-120.42299259529793, 37.36635678715399</Location>
+        <Instruction>Take a photograph of the tree at this location.</Instruction>
+      </Step>
+      <Step id="3">
+        <Action>Navigate to Tree ID 1</Action>
+        <Location>-120.42300386899338, 37.366300703749474</Location>
+        <Instruction>Take a photograph of the tree at this location.</Instruction>
+      </Step>
+      <Step id="4">
+        <Action>Navigate to Tree ID 18</Action>
+        <Location>-120.42307592599273, 37.36636077337479</Location>
+        <Instruction>Take a photograph of the tree at this location.</Instruction>
+      </Step>
+    </ExecutionSequence>
+  </CompositeTaskInformation>
+</MissionPlan>

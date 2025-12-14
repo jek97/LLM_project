@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <VisitSequence>
+        <TreeID>1</TreeID>
+        <Action><ActionType>visit</ActionType></Action>
+        <Photograph><TreeID>1</TreeID></Photograph>
+    </VisitSequence>
+
+    <VisitSequence>
+        <TreeID>2</TreeID>
+        <Action><ActionType>visit</ActionType></Action>
+        <Photograph><TreeID>2</TreeID></Photograph>
+    </VisitSequence>
+
+    <VisitSequence>
+        <TreeID>3</TreeID>
+        <Action><ActionType>visit</ActionType></Action>
+        <Photograph><TreeID>3</TreeID></Photograph>
+    </VisitSequence>
+
+    <VisitSequence>
+        <TreeID>4</TreeID>
+        <Action><ActionType>visit</ActionType></Action>
+        <Photograph><TreeID>5</TreeID></Photograph>
+    </VisitSequence>
+
+    <VisitSequence>
+        <TreeID>6</TreeID>
+        <Action><ActionType>visit</ActionType></Action>
+        <Photograph><TreeID>7</TreeID></Photograph>
+    </VisitSequence>
+</MissionPlan>

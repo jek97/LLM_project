@@ -1,0 +1,54 @@
+<Mission>
+  <Header>
+    <Name>Farm Tree Corner Picture Taking Mission</Name>
+    <Version>1.0</Version>
+    <Author>Robotic Mission Planner</Author>
+    <Date>2023-03-15</Date>
+  </Header>
+  <Tasks>
+    <CompositeTaskInformation>
+      <TaskDescription>Start at the top left corner of the farm and take a picture of the tree.</TaskDescription>
+      <SubTasks>
+        <DriveToLocation>
+          <Destination>38.9062,-77.1459</Destination>
+        </DriveToLocation>
+        <TakePicture>
+          <SubjectType>Tree</SubjectType>
+        </TakePicture>
+      </SubTasks>
+    </CompositeTaskInformation>
+    <CompositeTaskInformation>
+      <TaskDescription>Move to the top right corner of the farm and take a picture of the tree.</TaskDescription>
+      <SubTasks>
+        <DriveToLocation>
+          <Destination>38.9062,-77.1459</Destination>
+        </DriveToLocation>
+        <TakePicture>
+          <SubjectType>Tree</SubjectType>
+        </TakePicture>
+      </SubTasks>
+    </CompositeTaskInformation>
+    <CompositeTaskInformation>
+      <TaskDescription>Move to the bottom left corner of the farm and take a picture of the tree.</TaskDescription>
+      <SubTasks>
+        <DriveToLocation>
+          <Destination>38.9062,-77.1459</Destination>
+        </DriveToLocation>
+        <TakePicture>
+          <SubjectType>Tree</SubjectType>
+        </TakePicture>
+      </SubTasks>
+    </CompositeTaskInformation>
+    <CompositeTaskInformation>
+      <TaskDescription>Move to the bottom right corner of the farm and take a picture of the tree.</TaskDescription>
+      <SubTasks>
+        <DriveToLocation>
+          <Destination>38.9062,-77.1459</Destination>
+        </DriveToLocation>
+        <TakePicture>
+          <SubjectType>Tree</SubjectType>
+        </TakePicture>
+      </SubTasks>
+    </CompositeTaskInformation>
+  </Tasks>
+</Mission>

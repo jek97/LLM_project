@@ -1,0 +1,11 @@
+Okay, I understand. This error message indicates that the XML structure I'm generating doesn't conform to the expected schema. Specifically, it's missing a root element, which is essential for XML documents.
+
+I need you to provide me with the following information to generate a valid XML mission plan:
+
+1.  **The Task Description:**  Please paste the text of the original question you want me to use as the `TaskDescription` within the `CompositeTaskInformation` element. This is the core of the mission.
+
+2.  **The GeoJSON Data:** Please provide the GeoJSON data that contains the locations of the trees, GPS coordinates, and other relevant features.  This data will be referenced within the XML mission plan.
+
+Once you provide me with these two pieces of information, I will generate the XML mission plan, ensuring it's well-formed and conforms to the expected schema.  I will also include the estimated haversine distance traveled in a comment within the `Outcome` element.
+
+Let's start with the Task Description. Please paste the original question here.

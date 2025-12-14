@@ -1,0 +1,6 @@
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="geos_features.xsd">
+    <gml:Point gml:id="P1">
+        <!-- ... -->
+    </gml:Point>
+    <!-- ... -->
+</mission>

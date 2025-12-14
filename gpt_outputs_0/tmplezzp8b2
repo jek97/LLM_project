@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compositeTaskInformation xmlns="http://robotictask.org/schemas/taskDescription.xsd"
+                            xsi:schemaLocation="http://robotictask.org/schemas/taskDescription.xsd 
+                                                http://robotictask.org/schemas/taskDescription.xsd">
+  <missionPlan>
+    <!-- rest of the document -->
+  </missionPlan>
+</compositeTaskInformation>

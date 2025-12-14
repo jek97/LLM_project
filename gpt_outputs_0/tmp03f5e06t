@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <task name="Drive to Tree 1">
+        <location id="0" />
+    </task>
+    <task name="Take Picture">
+        <tree id="0" />
+    </task>
+    <task name="Drive to Tree 2">
+        <location id="1" />
+    </task>
+    <task name="Take Picture">
+        <tree id="1" />
+    </task>
+    <task name="Drive to Tree 3">
+        <location id="2" />
+    </task>
+    <task name="Take Picture">
+        <tree id="2" />
+    </task>
+</mission>

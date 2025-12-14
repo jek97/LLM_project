@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      This mission involves driving to a specific tree, taking a photo, and potentially collecting a CO2 sample based on temperature.  A second location is then visited and the same actions are repeated.
+    </TaskDescription>
+    <StartLocation>
+      <Latitude>37.36627570632085</Latitude>
+      <Longitude>-120.42298051393493</Longitude>
+    </StartLocation>
+  </CompositeTaskInformation>
+  <Tasks>
+    <Task id="1">
+      <TaskType>DriveToLocation</TaskType>
+      <Destination>
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42300386899338</Longitude>
+      </Destination>
+      <Action>TakePhoto</Action>
+    </Task>
+    <Task id="2">
+      <TaskType>EvaluateTemperature</TaskType>
+      <Condition>Temperature < 33</Condition>
+      <Action>CollectCO2Sample</Action>
+    </Task>
+    <Task id="3">
+      <TaskType>DriveToLocation</TaskType>
+      <Destination>
+        <Latitude>37.36635640370881</Latitude>
+        <Longitude>-120.423044218715</Longitude>
+      </Destination>
+      <Action>TakePhoto</Action>
+    </Task>
+    <Task id="4">
+      <TaskType>EvaluateTemperature</TaskType>
+      <Condition>Temperature < 33</Condition>
+      <Action>CollectCO2Sample</Action>
+    </Task>
+  </Tasks>
+</MissionPlan>

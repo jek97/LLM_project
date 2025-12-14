@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://www.example.com/missionplan">
+    <MissionStartTime>2023-04-01T09:00:00Z</MissionStartTime>
+    <MissionEndTime>2023-04-01T17:00:00Z</MissionEndTime>
+    <Waypoints>
+        <!-- Calculate rewards based on last sampled -->
+        <Waypoint>
+            <ID>1</ID>
+            <Coordinates>
+                <Latitude>-120.42300386899338</Latitude>
+                <Longitude>37.366300703749474</Longitude>
+            </Coordinates>
+            <TaskParameters>
+                <TaskID>VisitPoint</TaskID>
+                <Parameter>
+                    <Name>Reward</Name>
+                    <Value>0.85</Value>
+                </Parameter>
+            </TaskParameters>
+        </Waypoint>
+        <!-- Additional waypoints would follow here -->
+    </Waypoints>
+</MissionPlan>

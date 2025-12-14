@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plan>
+  <TaskList>
+    <Task id="1">
+      <Name>Initial Tree Assessment</Name>
+      <Description>Take a picture of the first tree.</Description>
+      <InstructionSet>
+        <Step>Capture Image</Step>
+      </InstructionSet>
+    </Task>
+    <Task id="2">
+      <Name>Assess Tree 1 - Read Data</Name>
+      <Description>If the reading is low, take a CO2 sample. Otherwise, take a temperature reading.</Description>
+      <InstructionSet>
+        <Step>Read Tree Data</Step>
+        <Step>If CO2 Low, Take CO2 Sample</Step>
+        <Step>If Temperature Low, Take Temperature Reading</Step>
+      </InstructionSet>
+    </Task>
+    <Task id="3">
+      <Name>Measure Tree 2</Name>
+      <Description>Measure another tree, a different one by taking a picture.</Description>
+      <InstructionSet>
+        <Step>Capture Image</Step>
+      </InstructionSet>
+    </Task>
+    <Task id="4">
+      <Name>Assess Tree 2 - Read Data</Name>
+      <Description>If the reading is low, take a CO2 sample. if that reading is low, sample co2 again to confirm.</Description>
+      <InstructionSet>
+        <Step>Read Tree Data</Step>
+        <Step>If CO2 Low, Take CO2 Sample</Step>
+        <Step>If CO2 Low, Take CO2 Sample Again</Step>
+      </InstructionSet>
+    </Task>
+    <Task id="5">
+      <Name>Continue to Next Tree</Name>
+      <Description>If still low, continue driving to another tree and take another co2 sample.</Description>
+      <InstructionSet>
+        <Step>Drive to Next Tree</Step>
+        <Step>Take CO2 Sample</Step>
+      </InstructionSet>
+    </Task>
+    <Task id="6">
+      <Name>Final Destination</Name>
+      <Description>Finally, go to end.</Description>
+      <InstructionSet>
+        <Step>Navigate to Final Destination</Step>
+      </InstructionSet>
+    </Task>
+  </TaskList>
+</Plan>

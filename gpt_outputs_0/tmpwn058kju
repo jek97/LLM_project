@@ -1,0 +1,86 @@
+It looks like the XML parser is expecting a start tag (`<`) but didn't find one. This could be due to the fact that the XML file doesn't have a proper declaration or namespace prefix.
+
+Here's an updated version of the XML file with a proper declaration and namespace prefix:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<m:MissionPlan xmlns:m="http://robotictaskrepresentation.org/schemas/missionplan.xsd"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://robotictaskrepresentation.org/schemas/missionplan.xsd 
+                                   http://robotictaskrepresentation.org/schemas/missionplan.xsd">
+  <m:CompositeTaskInformation>
+    <m:tasks>
+      <m:TaskDescription xml:lang="en">Drive to tree with id 0</m:TaskDescription>
+      <m:DrivingToTree>
+        <treeId>0</treeId>
+      </m:DrivingToTree>
+      <m:ActionType>
+        <actionTypeCode>DetermineTemperature</actionTypeCode>
+        <description>Take a picture of the temperature reading</description>
+      </m:ActionType>
+    </m:tasks>
+    
+    <m:TaskDescription xml:lang="en">Analyze picture to determine if temperature is low</m:TaskDescription>
+    <m:CompositeTaskInformation>
+      <m:tasks>
+        <m:TaskDescription xml:lang="en">Drive to tree with id 0</m:TaskDescription>
+        <m:DrivingToTree>
+          <treeId>0</treeId>
+        </m:DrivingToTree>
+        <m:ActionType>
+          <actionTypeCode>DetermineTemperature</actionTypeCode>
+          <description>Analyze picture to determine if temperature is low</description>
+        </m:ActionType>
+      </m:tasks>
+      
+      <!-- Conditional outcome -->
+      <m:ConditionalOutcome>
+        <m:outcomeTypeCode>LowTemperature</m:outcomeTypeCode>
+        <m:nextTask>
+          <m:TaskDescription xml:lang="en">Take a co2 sample</m:TaskDescription>
+          <m:CompositeTaskInformation>
+            <m:tasks>
+              <m:TaskDescription xml:lang="en">Drive to tree with id 0</m:TaskDescription>
+              <m:DrivingToTree>
+                <treeId>0</treeId>
+              </m:DrivingToTree>
+              <m:ActionType>
+                <actionTypeCode>DetermineCO2</actionTypeCode>
+                <description>Take a co2 sample</description>
+              </m:ActionType>
+            </m:tasks>
+          </m:CompositeTaskInformation>
+        </m:nextTask>
+      </m:ConditionalOutcome>
+      
+      <!-- Outcome -->
+      <m:Outcome>
+        <m:outcomeTypeCode>HighTemperature</m:outcomeTypeCode>
+        <m:distanceTraveled>0 km</m:distanceTraveled>
+      </m:Outcome>
+    </m:CompositeTaskInformation>
+  </m:CompositeTaskInformation>
+  
+  <!-- Repeat process -->
+  <m:TaskDescription xml:lang="en">Drive to far away tree and repeat</m:TaskDescription>
+  <m:DrivingToTree>
+    <treeId>farAwayTree</treeId>
+  </m:DrivingToTree>
+  <m:ActionType>
+    <actionTypeCode>DetermineTemperature</actionTypeCode>
+    <description>Analyze picture to determine if temperature is low</description>
+  </m:ActionType>
+  
+  <!-- Continue repeating until low temperature reading -->
+  <m:ConditionalOutcome>
+    <m:outcomeTypeCode>LowTemperature</m:outcomeTypeCode>
+    <m:nextTask>
+      <!-- Repeat process -->
+    </m:nextTask>
+  </m:ConditionalOutcome>
+  <m:Outcome>
+    <m:outcomeTypeCode>EndMission</m:outcomeTypeCode>
+    <m:distanceTraveled><?xml:decimal value="10" xmlns:xsd="http://www.w3.org/2001/XMLSchema" /> km</m:distanceTraveled>
+  </m:Outcome>
+</m:MissionPlan>
+```
+This version includes the proper namespace prefix (`m`) and a declaration for the XML document. Please try saving this as an XML file to see if it resolves your error issue!

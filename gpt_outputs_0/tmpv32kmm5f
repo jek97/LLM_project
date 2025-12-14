@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Robotic mission to visit all points within 100 meters, taking a picture of each tree encountered.
+    </TaskDescription>
+    <TaskSequence>
+      <Task id="Task1">
+        <Action>NavigateTo</Action>
+        <Waypoint id="Waypoint1" latitude="37.36627570632085" longitude="-120.42300386899338"/>
+        <PictureTask>Take Picture</PictureTask>
+      </Task>
+      <Task id="Task2">
+        <Action>NavigateTo</Action>
+        <Waypoint id="Waypoint2" latitude="37.36626996761184" longitude="-120.42298051393493"/>
+        <PictureTask>Take Picture</PictureTask>
+      </Task>
+      <Task id="Task3">
+        <Action>NavigateTo</Action>
+        <Waypoint id="Waypoint3" latitude="37.3662730362294" longitude="-120.42301417901265"/>
+        <PictureTask>Take Picture</PictureTask>
+      </Task>
+      <Task id="Task4">
+        <Action>NavigateTo</Action>
+        <Waypoint id="Waypoint4" latitude="37.36628908556382" longitude="-120.42307592599273"/>
+        <PictureTask>Take Picture</PictureTask>
+      </Task>
+      <Task id="Task5">
+        <Action>NavigateTo</Action>
+        <Waypoint id="Waypoint5" latitude="37.366300703749474" longitude="-120.423044218715"/>
+        <PictureTask>Take Picture</PictureTask>
+      </Task>
+      <Task id="Task6">
+        <Action>NavigateTo</Action>
+        <Waypoint id="Waypoint6" latitude="37.36631785560332" longitude="-120.42303004014194"/>
+        <PictureTask>Take Picture</PictureTask>
+      </Task>
+      <Task id="Task7">
+        <Action>NavigateTo</Action>
+        <Waypoint id="Waypoint7" latitude="37.36635640370881" longitude="-120.42302669537153"/>
+        <PictureTask>Take Picture</PictureTask>
+      </Task>
+      <Task id="Task8">
+        <Action>NavigateTo</Action>
+        <Waypoint id="Waypoint8" latitude="37.36635678715399" longitude="-120.42299259529793"/>
+        <PictureTask>Take Picture</PictureTask>
+      </Task>
+      <Task id="Task9">
+        <Action>NavigateTo</Action>
+        <Waypoint id="Waypoint9" latitude="37.36634636896467" longitude="-120.4230246791031"/>
+        <PictureTask>Take Picture</PictureTask>
+      </Task>
+      <Task id="Task10">
+        <Action>NavigateTo</Action>
+        <Waypoint id="Waypoint10" latitude="37.36631785560332" longitude="-120.42303004014194"/>
+        <PictureTask>Take Picture</PictureTask>
+      </Task>
+    </CompositeTaskInformation>
+</MissionPlan>

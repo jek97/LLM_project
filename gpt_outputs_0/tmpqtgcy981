@@ -1,0 +1,395 @@
+ Certainly! Here is a sample XML mission plan that visits all the points in your orchard, with reward parameters based on the number of days since the last sampling:
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<mission name="Farm Visit Mission">
+    <robot id="my_robot">
+        <sensor name="camera" type="visual"/>
+        <sensor name="LiDAR" type="lidar"/>
+        <sensor name="GPS" type="gps"/>
+    </robot>
+    
+    <tasks>
+        <task id="visit_orchard">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">1</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point2">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">2</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point3">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">3</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point4">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">4</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point5">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">5</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point6">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">6</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point7">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">7</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point8">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">8</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point9">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">9</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point10">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">10</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point11">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">11</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point12">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">12</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point13">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">13</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point14">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">14</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point15">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">15</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point16">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">16</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point17">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">17</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point18">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">18</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point19">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">19</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point20">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">20</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point21">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">21</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point22">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">22</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point23">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">23</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point24">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">24</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point25">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">25</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression>
+                    0.5 * (lastSampled - MIN_DAYS) / (MAX_DAYS - MIN_DAYS)
+                </rewardExpression>
+            </rewardFunction>
+        </task>
+        
+        <!-- Add tasks for each of the points in your orchard -->
+        <task id="visit_point26">
+            <action id="move_to_point">
+                <params>
+                    <param name="pointId">26</param>
+                </params>
+            </action>
+            <rewardFunction>
+                <!-- Calculate the reward based on last sampled -->
+                <rewardExpression

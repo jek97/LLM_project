@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mission PUBLIC "-//MyCompany//DTD MyMission 1.0//EN" "mission.dtd">
+<mission>
+    <task id="1">
+        <description>Take a picture of the first tree.</description>
+        <action type="Picture Taking"/>
+    </task>
+    <task id="2">
+        <description>If the reading is low, take a co2 sample.</description>
+        <conditional>
+            <condition actionIdRef="3" conditionType="ReadingComparison"/>
+        </conditional>
+        <action type="Co2 Sampling"/>
+    </task>
+    <task id="3">
+        <description>If the reading is low, sample co2 again to confirm.</description>
+        <conditional>
+            <condition actionIdRef="4" conditionType="ReadingComparison"/>
+        </conditional>
+        <action type="Co2 Sampling"/>
+    </task>
+    <task id="4">
+        <description>If still low, continue driving to another tree and take another co2 sample.</description>
+        <conditional>
+            <condition actionIdRef="5" conditionType="ReadingComparison"/>
+        </conditional>
+        <action type="Co2 Sampling"/>
+    </task>
+    <task id="5">
+        <description>Take a picture of another tree, a different one.</description>
+        <action type="Picture Taking"/>
+    </task>
+</mission>

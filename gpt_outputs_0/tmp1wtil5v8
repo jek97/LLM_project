@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan">
+    <CompositeTaskInformation>
+        <TaskDescription>Visit multiple trees within 100 meters and take pictures of each tree (Original Question)</TaskDescription>
+        <Tasks>
+            <Task id="T1">
+                <DriveToLocation x="{longitude}" y="{latitude}"/>
+                <Action type="TakePicture">
+                    <TreeType>{tree_type}</TreeType>
+                </Action>
+            </Task>
+        </Tasks>
+        <!-- Repeat the following block for each tree within the 100-meter radius -->
+        <Tasks>
+            <Task id="T2">
+                <DriveToLocation x="{longitude}" y="{latitude}"/>
+                <Action type="TakePicture">
+                    <TreeType>{tree_type}</TreeType>
+                </Action>
+            </Task>
+        </Tasks>
+        <!-- End of repeating block -->
+    </CompositeTaskInformation>
+    <Outcome>The robot successfully visited multiple trees within a 100-meter radius and took pictures of each tree.</Outcome>
+</MissionPlan>

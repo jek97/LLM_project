@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RobotMissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="RoboticMissionPlan.xsd">
+    <MissionDetails>
+        <MissionName>TreePictureMission</MissionName>
+        <StartTime>2023-04-01T08:00:00Z</StartTime>
+        <EndTime>2023-04-01T17:00:00Z</EndTime>
+    </MissionDetails>
+    <RobotDetails>
+        <RobotName>ExplorerBot</RobotName>
+        <MaxSpeed>5.0</MaxSpeed>
+        <BatteryCapacity>100</BatteryCapacity>
+    </RobotDetails>
+    <CompositeTaskInformation>
+        <TaskDescription>Visit as many trees as possible within a 100-meter radius and take pictures of each tree.</TaskDescription>
+        <Tasks>
+            <Task>
+                <TaskName>DriveToStart</TaskName>
+                <TaskDetails>
+                    <Location x="{start_longitude}" y="{start_latitude}"/>
+                </TaskDetails>
+            </Task>
+            <Task>
+                <TaskName>TakePicture</TaskName>
+                <TaskDetails>
+                    <TreeType>Unknown</TreeType>
+                    <Location x="{tree_longitude}" y="{tree_latitude}"/>
+                </TaskDetails>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+    <MissionArea>
+        <!-- Replace this with the actual GPS coordinates of the starting point -->
+        <StartLocation x="{start_longitude}" y="{start_latitude}"/>
+    </MissionArea>
+</RobotMissionPlan>

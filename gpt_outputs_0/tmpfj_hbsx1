@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      This mission involves driving to a specific tree to take a photo and collect a CO2 sample if the temperature is below 33C.  A second, randomized location is then visited to repeat the process.
+    </TaskDescription>
+    <StartLocation>
+      <Latitude>37.36627570632085</Latitude>
+      <Longitude>-120.42298051393493</Longitude>
+    </StartLocation>
+  </CompositeTaskInformation>
+  <Tasks>
+    <Task id="1">
+      <TaskType>DriveTo</TaskType>
+      <Destination>
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42298051393493</Longitude>
+      </Destination>
+      <Instructions>Drive to the specified coordinates (middle of the field).</Instructions>
+    </Task>
+    <Task id="2">
+      <TaskType>TakePhoto</TaskType>
+      <Destination>
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42298051393493</Longitude>
+      </Destination>
+      <Instructions>Take a photograph of the tree at the designated location.</Instructions>
+    </Task>
+    <Task id="3">
+      <TaskType>TemperatureCheck</TaskType>
+      <Destination>
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42298051393493</Longitude>
+      </Destination>
+      <Instructions>Measure the temperature. If the average temperature is below 33C, proceed to the next step.</Instructions>
+    </Task>
+    <Task id="4">
+      <TaskType>CollectCO2Sample</TaskType>
+      <Destination>
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42298051393493</Longitude>
+      </Destination>
+      <Instructions>Collect a CO2 sample.</Instructions>
+    </Task>
+    <Task id="5">
+      <TaskType>DriveTo</TaskType>
+      <Destination>
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42298051393493</Longitude>
+      </Destination>
+      <Instructions>Drive 5 trees down from the previous location.</Instructions>
+    </Task>
+    <Task id="6">
+      <TaskType>RepeatSteps</TaskType>
+      <Instructions>Repeat steps 2-6 from the initial location.</Instructions>
+    </Task>
+  </Tasks>
+</MissionPlan>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:uuid:123e4567-e89b-12d3-a456-426655440000"
+           xmlns="urn:uuid:123e4567-e89b-12d3-a456-426655440000"
+           elementFormDefault="qualified">
+
+    <xs:element name="Mission">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="CompositeTaskInformation"/>
+                <xs:element ref="Sequence"/>
+                <xs:element ref="EndLocation"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CompositeTaskInformation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Repeat"/>
+                <!-- ... other tasks and conditions ... -->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Sequence">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Task 1 -->
+                <xs:element ref="DriveToTree"/>
+                <xs:element ref="TaskDescription"/>
+                <xs:element ref="DrivingStatus"/>
+                
+                <!-- ... other tasks and conditions ... -->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Repeat">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="name" type="xs:string"/>
+                    <xs:attribute name="test" type="xs:string"/>
+                </xs:extension>
+            </xs:simpleContent>
+            <xs:sequence>
+                <!-- Task inside the loop -->
+                <xs:element ref="TaskDescription"/>
+                
+                <!-- Check if task should be repeated -->
+                <xs:element ref="When"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="DrivingToTree">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="name" type="xs:string"/>
+                    <xs:attribute name="test" type="xs:string"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

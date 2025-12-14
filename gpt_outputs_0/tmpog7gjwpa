@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <CompositeTaskInformation>
+        <TaskDescription>At the first tree, take a picture. If that picture shows low temperature, take a temperature reading. If that reading is also low, take a CO2 sample. If that reading is still low, drive to a far-away tree and repeat the process. If the very first reading isn't low, drive to end.</TaskDescription>
+        <Tasks>
+            <!-- First Tree -->
+            <Task>
+                <Type>GoTo</Type>
+                <Parameters>
+                    <TreeID>1</TreeID>
+                </Parameters>
+            </Task>
+            <Task>
+                <Type>TakePicture</Type>
+                <Parameters>
+                    <TreeID>1</TreeID>
+                </Parameters>
+            </Task>
+            <!-- Check Picture for Low Temperature -->
+            <ConditionalCheck>
+                <Condition>
+                    <Expression>
+                        <Type>TemperatureLowInPicture</Type>
+                    </Expression>
+                </Condition>
+                <TrueTasks>
+                    <!-- Take Temperature Reading -->
+                    <Task>
+                        <Type>TakeTemperatureReading</Type>
+                        <Parameters>
+                            <TreeID>1</TreeID>
+                        </Parameters>
+                    </Task>
+                    <!-- Check Temperature Reading for Low Value -->
+                    <ConditionalCheck>
+                        <Condition>
+                            <Expression>
+                                <Type>TemperatureLow</Type>
+                            </Expression>
+                        </Condition>
+                        <TrueTasks>
+                            <!-- Take CO2 Sample -->
+                            <Task>
+                                <Type>TakeCO2Sample</Type>
+                                <Parameters>
+                                    <TreeID>1</TreeID>
+                                </Parameters>
+                            </Task>
+                        </TrueTasks>
+                        <FalseTasks>
+                            <!-- Drive to Far-Away Tree -->
+                            <Task>
+                                <Type>GoTo</Type>
+                                <Parameters>
+                                    <TreeID>20</TreeID>
+                                </Parameters>
+                            </Task>
+                            <!-- Repeat Process -->
+                            <RepeatTask>
+                                <Task>
+                                    <Type>GoTo</Type>
+                                    <Parameters>
+                                        <TreeID>1</TreeID>
+                                    </Parameters>
+                                </Task>
+                                <Task>
+                                    <Type>TakePicture</Type>
+                                    <Parameters>
+                                        <TreeID>1</TreeID>
+                                    </Parameters>
+                                </Task>
+                                <!-- Check Picture for Low Temperature -->
+                                <ConditionalCheck>
+                                    <Condition>
+                                        <Expression>
+                                            <Type>TemperatureLowInPicture</Type>
+                                        </Expression>
+                                    </Condition>
+                                    <TrueTasks>
+                                        <!-- Take Temperature Reading -->
+                                        <Task>
+                                            <Type>TakeTemperatureReading</Type>
+                                            <Parameters>
+                                                <TreeID>1</TreeID>
+                                            </Parameters>
+                                        </Task>
+                                        <!-- Check Temperature Reading for Low Value -->
+                                        <ConditionalCheck>
+                                            <Condition>
+                                                <Expression>
+                                                    <Type>TemperatureLow</Type>
+                                                </Expression>
+                                            </Condition>
+                                            <TrueTasks>
+                                                <!-- Take CO2 Sample -->
+                                                <Task>
+                                                    <Type>TakeCO2Sample</Type>
+                                                    <Parameters>
+                                                        <TreeID>1</TreeID>
+                                                    </Parameters>
+                                                </Task>
+                                            </TrueTasks>
+                                        </ConditionalCheck>
+                                    </TrueTasks>
+                                </ConditionalCheck>
+                            </RepeatTask>
+                        </FalseTasks>
+                    </ConditionalCheck>
+                </TrueTasks>
+            </ConditionalCheck>
+            <!-- If Temperature is not Low, Drive to End -->
+            <ConditionalCheck>
+                <Condition>
+                    <Expression>
+                        <Type>TemperatureLow</Type>
+                    </Expression>
+                </Condition>
+                <FalseTasks>
+                    <Task>
+                        <Type>GoToEnd</Type>
+                    </Task>
+                </FalseTasks>
+            </ConditionalCheck>
+        </Tasks>
+    </CompositeTaskInformation>
+</MissionPlan>

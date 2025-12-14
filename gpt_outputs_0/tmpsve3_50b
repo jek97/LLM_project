@@ -1,0 +1,10 @@
+<task>
+  <action>
+    <move_to coordinates="Tree 1 coordinates"
+                comment="Drive to the location of Tree 1">
+      <take_picture
+        comment="Capture an image of Tree 1"
+        timestamp="current_timestamp"/>
+    </action>
+  </task>
+</mission>

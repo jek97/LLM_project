@@ -1,0 +1,32 @@
+<mission>
+    <name>Tree Picture and CO2 Sample</name>
+    <startingPoint id="1">
+        <coordinates>x,y</coordinates>
+        <description>Starting point where the robot begins its mission.</description>
+    </startingPoint>
+    <tasks>
+        <task id="1" type="Picture and CO2 Sample">
+            <target id="4" distance="10">
+                <coordinates>x,y</coordinates>
+                <description>Middle of the field where the robot takes a picture of a tree and checks its average temperature.</description>
+            </target>
+            <preconditions>
+                <condition type="Temperature" value="33"/>
+            </preconditions>
+        </task>
+    </tasks>
+    <randomPoints id="1-5">
+        <point id="4" distance="10">
+            <coordinates>x,y</coordinates>
+        </point>
+        <point id="9" distance="10">
+            <coordinates>x,y</coordinates>
+        </point>
+        <point id="14" distance="10">
+            <coordinates>x,y</coordinates>
+        </point>
+        <point id="20" distance="10">
+            <coordinates>x,y</coordinates>
+        </point>
+    </randomPoints>
+</mission>

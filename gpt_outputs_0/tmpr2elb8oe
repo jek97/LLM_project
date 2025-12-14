@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="mission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="start"/>
+        <xs:element ref="steps" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element ref="actions"/>
+        <xs:element ref="targets"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="start">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="position">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="x" type="xsd:double"/>
+              <xs:element name="y" type="xsd:double"/>
+              <xs:element name="z" type="xsd:double"/>
+              <xs:element name="heading" type="xsd:float"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="steps">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="step" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="step">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="action" minOccurs="1"/>
+        <xs:element ref="target" minOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="actions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="action" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="action">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="description"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="targets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="target" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="target">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="position">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="x" type="xsd:double"/>
+              <xs:element name="y" type="xsd:double"/>
+              <xs:element name="z" type="xsd:double"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:simpleType name="float">
+    <xs:restriction base="xsd:float"/>
+  </xs:simpleType>
+  
+  <xs:simpleType name="double">
+    <xs:restriction base="xsd:double"/>
+  </xs:simpleType>
+</xs:schema>

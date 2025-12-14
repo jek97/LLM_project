@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <Task id="1">
+    <Action>DriveTo</Action>
+    <Destination>
+      <Latitude>37.36631785560332</Latitude>
+      <Longitude>-120.4045</Longitude>
+    </Destination>
+  </Task>
+</MissionPlan>

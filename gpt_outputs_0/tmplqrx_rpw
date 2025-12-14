@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+  <TaskDescription>
+    Original Question: "Measure the height of the oak tree, then collect a leaf sample, then photograph the tree."
+    TaskName: "Measure Oak Tree"
+    Action: "Measure Height"
+    TargetObject: "Oak Tree"
+  </TaskDescription>
+
+  <TaskDescription>
+    Original Question: "Collect a leaf sample from the maple tree."
+    TaskName: "Collect Maple Leaf Sample"
+    Action: "Collect Leaf Sample"
+    TargetObject: "Maple Tree"
+  </TaskDescription>
+
+  <TaskDescription>
+    Original Question: "Photograph the oak tree."
+    TaskName: "Photograph Oak Tree"
+    Action: "Photograph"
+    TargetObject: "Oak Tree"
+  </TaskDescription>
+</mission>

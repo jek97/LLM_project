@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission>
+  <Task id="1" type="Capture" location="Tree1"/>
+  <Task id="2" type="Measurement" unit="CO2"/>
+</Mission>

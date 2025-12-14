@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <name xmlns="">Pistachio Tree Visiting</name>
+    <description xmlns="">Visit 5 pistachio trees in a row and take pictures of 3 of them.</description>
+    
+    <!-- Define the starting position -->
+    <position xmlns="">
+        <latitude xmlns="">37.819666</latitude>
+        <longitude xmlns="">-122.0349088</longitude>
+    </position>
+    
+    <!-- Define the waypoints -->
+    <waypoints xmlns="">
+        <!-- Pistachio Tree 1 -->
+        <waypoint id="1">
+            <type xmlns="">PictureTaking</type>
+            <description xmlns="">Visit and take a picture of the first pistachio tree.</description>
+            <coordinates xmlns="">
+                <latitude xmlns="">37.8196666</latitude>
+                <longitude xmlns="">-122.0349088</longitude>
+            </coordinates>
+        </waypoint>
+        
+        <!-- Pistachio Tree 2 -->
+        <waypoint id="2">
+            <type xmlns="">PictureTaking</type>
+            <description xmlns="">Visit and take a picture of the second pistachio tree.</description>
+            <coordinates xmlns="">
+                <latitude xmlns="">37.8196666</latitude>
+                <longitude xmlns="">-122.0349088</longitude>
+            </coordinates>
+        </waypoint>
+        
+        <!-- Pistachio Tree 3 -->
+        <waypoint id="3">
+            <type xmlns="">PictureTaking</type>
+            <description xmlns="">Visit and take a picture of the third pistachio tree.</description>
+            <coordinates xmlns="">
+                <latitude xmlns="">37.8196666</latitude>
+                <longitude xmlns="">-122.0349088</longitude>
+            </coordinates>
+        </waypoint>
+        
+        <!-- Pistachio Tree 4 -->
+        <waypoint id="4">
+            <type xmlns="">PictureTaking</type>
+            <description xmlns="">Visit and take a picture of the fourth pistachio tree.</description>
+            <coordinates xmlns="">
+                <latitude xmlns="">37.8196666</latitude>
+                <longitude xmlns="">-122.0349088</longitude>
+            </coordinates>
+        </waypoint>
+        
+        <!-- Pistachio Tree 5 -->
+        <waypoint id="5">
+            <type xmlns="">PictureTaking</type>
+            <description xmlns="">Visit and take a picture of the fifth pistachio tree.</description>
+            <coordinates xmlns="">
+                <latitude xmlns="">37.8196666</latitude>
+                <longitude xmlns="">-122.0349088</longitude>
+            </coordinates>
+        </waypoint>
+    </waypoints>
+    
+    <!-- Define the sequencing of waypoints -->
+    <sequence xmlns="">
+        1,2,3,4,5
+    </sequence>
+</mission>

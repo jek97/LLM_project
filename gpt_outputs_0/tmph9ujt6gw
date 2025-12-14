@@ -1,0 +1,26 @@
+ Apologies for that. Here is the corrected XML file:
+
+<Mission>
+<Header>
+<ID>Tree-Picture-Mission</ID>
+<TotalEstimatedDistance>100</TotalEstimatedDistance>
+</Header>
+<Body>
+
+<!-- Define points to visit -->
+<Point id="0">-120.42307592599273, 37.36636077337479</Point>
+<Point id="1">-120.42303004014194, 37.36631785560332</Point>
+<Point id="2">-120.42307272278255, 37.36627570632085</Point>
+<Point id="3">-120.42298051393493, 37.36628908556382</Point>
+<Point id="4">-120.42301417901265, 37.3662730362294</Point>
+<Point id="5">-120.423044218715, 37.36626996761184</Point>
+<Point id="6">-120.42302669537153, 37.36634636896467</Point>
+<Point id="7">-120.42300386899338, 37.366300703749474</Point>
+<Point id="8">-120.42298051393493, 37.36628908556382</Point>
+<Point id="9">-120.42301417901265, 37.3662730362294</Point>
+<Point id="10">-120.42307592599273, 37.36636077337479</Point>
+
+</Body>
+</Mission>
+
+This corrected XML file should not produce any errors and will execute the same mission as the previous one. 

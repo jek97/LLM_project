@@ -1,0 +1,38 @@
+Here is an example of a mission plan XML document based on the provided GeoJSON:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robotic-mission-plan schema.xsd"
+             xmlns="http://robotic-mission-plan.com">
+  <MissionName>Orchard Visit</MissionName>
+  <CompositeTaskInformation>
+    <TaskDescription xml:lang="en-US">Visit orchard and take pictures of trees in 100m radius.</TaskDescription>
+    <TaskType>DriveToTreeAndTakePicture</TaskType>
+    <TreeId>1</TreeId>
+    <Radius>100</Radius>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription xml:lang="en-US">Visit orchard and take pictures of trees in 100m radius.</TaskDescription>
+    <TaskType>DriveToTreeAndTakePicture</TaskType>
+    <TreeId>2</TreeId>
+    <Radius>100</Radius>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription xml:lang="en-US">Visit orchard and take pictures of trees in 100m radius.</TaskDescription>
+    <TaskType>DriveToTreeAndTakePicture</TaskType>
+    <TreeId>3</TreeId>
+    <Radius>100</Radius>
+  </CompositeTaskInformation>
+  <!-- Add more CompositeTaskInformation elements as needed -->
+  
+  <Outcome>
+    <TaskDescription xml:lang="en-US">Completed orchard visit.</TaskDescription>
+    <EstimatedDistanceTraveled>1500m</EstimatedDistanceTraveled>
+  </Outcome>
+</MissionPlan>
+```
+Note that I've assumed a `DriveToTreeAndTakePicture` task type, which will drive to the specified tree and take pictures. You may need to modify this based on your specific robotic capabilities.
+
+Also, since there are many trees in the orchard, I've used CompositeTaskInformation elements to group multiple tasks together. Each element represents a visit to a single tree, with the same task type and radius.
+
+The Outcome section provides an estimated total distance traveled for the mission.

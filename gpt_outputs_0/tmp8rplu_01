@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://mission.schema.com http://localhost/mission.xsd"
+     xmlns:msc="http://mission.schema.com">
+  <compositeTaskInformation>
+    <taskDescription>Visit and take pictures of as many trees within 100m radius</taskDescription>
+    <outcome>
+      Total estimated haversine distance traveled: 500 meters
+    </outcome>
+  </compositeTaskInformation>
+  <missionStatus>IN PROGRESS</missionStatus>
+  
+  <!-- List of tasks -->
+  <tasks xmlns="http://mission.schema.com">
+    <task id="1">
+      <type>DWELL</type>
+      <description>Drive to point and take pictures of tree at point</description>
+      <location>
+        <geojsonReference href="#tree-0"/>
+      </location>
+    </task>
+    
+    <!-- ... repeat for all tasks ... -->
+    
+    <task id="17">
+      <type>DWELL</type>
+      <status>PARTIAL SUCCESS</status>
+      <description>Drive to point and take pictures of tree at point (partial success due to lack of resources)</description>
+      <location>
+        <geojsonReference href="#tree-17"/>
+      </location>
+    </task>
+    
+    <!-- ... repeat for all tasks ... -->
+  </tasks>
+</root>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Take pictures of trees at the four corners of the farm.
+    </TaskDescription>
+    <ExecutionOrder>
+      <Task id="1">
+        <Action>NavigateTo</Action>
+        <TargetId>1</TargetId>
+        <Waypoint>
+          <Latitude>37.36635640370881</Latitude>
+          <Longitude>-120.42300386899338</Longitude>
+        </Waypoint>
+      </Task>
+      <Task id="2">
+        <Action>TakePicture</Action>
+      </Task>
+      <Task id="3">
+        <Action>NavigateTo</Action>
+        <TargetId>2</TargetId>
+        <Waypoint>
+          <Latitude>37.366300703749474</Latitude>
+          <Longitude>-120.42302669537153</Longitude>
+        </Waypoint>
+      </Task>
+      <Task id="4">
+        <Action>TakePicture</Action>
+      </Task>
+      <Task id="5">
+        <Action>NavigateTo</Action>
+        <TargetId>3</TargetId>
+        <Waypoint>
+          <Latitude>37.36627570632085</Latitude>
+          <Longitude>-120.42307272278255</Longitude>
+        </Waypoint>
+      </Task>
+      <Task id="6">
+        <Action>TakePicture</Action>
+      </Task>
+      <Task id="7">
+        <Action>NavigateTo</Action>
+        <TargetId>4</TargetId>
+        <Waypoint>
+          <Latitude>37.36635678715399</Latitude>
+          <Longitude>-120.42299259529793</Longitude>
+        </Waypoint>
+      </Task>
+      <Task id="8">
+        <Action>TakePicture</Action>
+      </Task>
+    </ExecutionOrder>
+  </CompositeTaskInformation>
+</MissionPlan>

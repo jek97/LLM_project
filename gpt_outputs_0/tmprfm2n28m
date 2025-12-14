@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RoboticMission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission_plan.xsd">
+    <Mission>
+        <MissionInformation>
+            <MissionName>Tree Picture and CO2 Reading Mission</MissionName>
+            <StartTime>YYYY-MM-DDThh:mm:ss</StartTime>
+            <EndTime>YYYY-MM-DDThh:mm:ss</EndTime>
+        </MissionInformation>
+        <CompositeTaskInformation>
+            <TaskDescription>Take a picture of 2 trees next to each other and then take 2 co2 readings of two trees next to each other. (Original Question)</TaskDescription>
+            <Tasks>
+                <Task>
+                    <TaskName>Drive to Tree Location 1</TaskName>
+                    <Location>
+                        <Latitude>{{location.coordinates[1]}}</Latitude>
+                        <Longitude>{{location.coordinates[0]}}</Longitude>
+                    </Location>
+                    <Actions>
+                        <Action>
+                            <ActionType>Drive</ActionType>
+                            <Destination>
+                                <Latitude>{{destination.coordinates[1]}}</Latitude>
+                                <Longitude>{{destination.coordinates[0]}}</Longitude>
+                            </Destination>
+                        </Action>
+                    </Actions>
+                </Task>
+                <Task>
+                    <TaskName>Take Picture of Tree 1</TaskName>
+                    <Location>
+                        <Latitude>{{location.coordinates[1]}}</Latitude>
+                        <Longitude>{{location.coordinates[0]}}</Longitude>
+                    </Location>
+                    <Actions>
+                        <Action>
+                            <ActionType>TakePicture</ActionType>
+                            <TreeID>TREE_ID_1</TreeID>
+                        </Action>
+                    </Actions>
+                </Task>
+                <Task>
+                    <TaskName>Take CO2 Reading of Tree 1</TaskName>
+                    <Location>
+                        <Latitude>{{location.coordinates[1]}}</Latitude>
+                        <Longitude>{{location.coordinates[0]}}</Longitude>
+                    </Location>
+                    <Actions>
+                        <Action>
+                            <ActionType>TakeCO2Reading</ActionType>
+                            <TreeID>TREE_ID_1</TreeID>
+                        </Action>
+                    </Actions>
+                </Task>
+                <!-- Repeat the above pattern for Tree Location 2 -->
+            </Tasks>
+        </CompositeTaskInformation>
+        <Outcome>
+            <!-- Comment the total estimated haversine distance traveled from start to end here -->
+        </Outcome>
+    </Mission>
+</RoboticMission>

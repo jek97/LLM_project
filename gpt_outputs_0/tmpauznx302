@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns="http://www.example.com/robotics/schemas/mission">
+    <MissionName>Tree Measurement Mission</MissionName>
+    <MissionDescription>Take a picture of oak trees and then take CO2 readings. Drive to the specified locations first.</MissionDescription>
+    <Tasks>
+        <!-- Task 1: Drive to Location 1 -->
+        <TaskID>1</TaskID>
+        <Location x="48.859237" y="-123.460941">Drive to Oak Tree 1</Location>
+        <CompositeTaskInformation>
+            <Type>DriveToLocation</Type>
+            <!-- Drive to Location 1 -->
+        </CompositeTaskInformation>
+
+        <!-- Task 2: Take Picture of Tree 1 -->
+        <TaskID>2</TaskID>
+        <Location x="48.859237" y="-123.460941">Oak Tree 1</Location>
+        <CompositeTaskInformation>
+            <Type>TakePicture</Type>
+            <!-- Take picture of Oak Tree 1 -->
+        </CompositeTaskInformation>
+
+        <!-- Task 3: Drive to Location 2 -->
+        <TaskID>3</TaskID>
+        <Location x="48.859273" y="-123.460909">Drive to Oak Tree 2</Location>
+        <CompositeTaskInformation>
+            <Type>DriveToLocation</Type>
+            <!-- Drive to Location 2 -->
+        </CompositeTaskInformation>
+
+        <!-- Task 4: Take CO2 Reading of Tree 2 -->
+        <TaskID>4</TaskID>
+        <Location x="48.859273" y="-123.460909">Oak Tree 2</Location>
+        <CompositeTaskInformation>
+            <Type>CO2Measurement</Type>
+            <!-- Take CO2 reading of Oak Tree 2 -->
+        </CompositeTaskInformation>
+    </Tasks>
+    <!-- Comment out estimated distance after testing -->
+    <Outcome>Total distance traveled was approximately [estimated distance] meters.</Outcome>
+</mission>

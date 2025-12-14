@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://yourproject.com/missionplan" version="1.0">
+  <Task name="TestTask" description="Simple Test Task"/>
+</MissionPlan>

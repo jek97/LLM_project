@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan>
+    <task id="1">
+        <name>Drive to Tree &amp; Photograph</name>
+        <instruction>Drive to the middle of the field and take a picture of a tree.</instruction>
+        <location>Middle of the Field</location>
+        <action>Take Photograph</action>
+    </task>
+</missionPlan>

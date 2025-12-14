@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      <!-- Original Task Description Here -->
+      This task requires driving to several trees and taking measurements.
+    </TaskDescription>
+    <Outcome>
+      <!-- Estimated total distance traveled here -->
+      Estimated total distance traveled: 15.2 km
+    </Outcome>
+  </CompositeTaskInformation>
+  <Task id="task1">
+    <Action type="Drive">
+      <Destination>
+        <Latitude>34.0522</Latitude>
+        <Longitude>-118.2437</Longitude>
+      </Destination>
+    </Action>
+    <Action type="Measure">
+      <TreeType>Oak</TreeType>
+      <Measurement>Diameter: 30 cm</Measurement>
+    </Action>
+  </Task>
+  <Task id="task2">
+    <Action type="Drive">
+      <Destination>
+        <Latitude>34.0600</Latitude>
+        <Longitude>-118.2500</Longitude>
+      </Destination>
+    </Action>
+    <Action type="CollectSample">
+      <TreeType>Pine</TreeType>
+    </Action>
+  </Task>
+</MissionPlan>

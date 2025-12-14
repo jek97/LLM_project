@@ -1,0 +1,28 @@
+Here is the XML mission plan:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robust-mission-planning.org/missionplan
+             http://robust-mission-planning.org/missionplan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Start Mission</TaskDescription>
+    <Outcome>
+      <DrivingToTree location="[-120.42302289785604, 37.36635688574164]"/>
+      <TakePicture action="take_picture" />
+      <If condition="picture_quality == 'low'">
+        <TakeTemperatureReading />
+        <If condition="temperature_reading == 'low'">
+          <TakeCO2Sample />
+          <DrivingToFarAwayTree location="[-120.42309252722157, 37.36631509745154]"/>
+        </If>
+      </If>
+      <Else>
+        <DrivingToEnd location="[-120.42309252722157, 37.36631509745154]"/>
+      </Else>
+    </Outcome>
+  </CompositeTaskInformation>
+</MissionPlan>
+```
+Note that I've used the `DrivingToTree` and `DrivingToEnd` tasks to drive to the first tree and end of the mission respectively. The `TakePicture`, `TakeTemperatureReading`, and `TakeCO2Sample` tasks are assumed to be part of a larger task representation.
+
+Also, please note that this is just one possible way to represent this mission plan in XML, and there may be other valid representations depending on the specific requirements of your robotic system.

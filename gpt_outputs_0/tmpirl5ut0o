@@ -1,0 +1,20 @@
+   <?xml version="1.0"?>
+   <root xmlns="http://example.com/miMissionSchema-1">
+     <Mission>
+       <missionType>
+         <!-- Define various actions here -->
+         <!-- Example: -->
+         <DiscreteContinuousAction>
+           <action name="TakePicture">
+             <task name="TakePicturesDuringSurvey" type="driving">
+               <sensor type="Temperature">25°C</sensor>
+               <sensor type="CO2">900 ppm</sensor>
+             </task>
+           </action>
+         </DiscreteContinuousAction>
+       </missionType>
+
+       <!-- Add more action types as needed -->
+     </Mission>
+   </root>
+   

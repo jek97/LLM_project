@@ -1,0 +1,57 @@
+<MissionPlan xmlns="http://example.com/mission-planning">
+  <MissionDescription>
+    Robotic Mission for Tree Analysis
+  </MissionDescription>
+
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Original Request: At the first tree, take a picture. If that picture shows low temperature, take a temperature reading. If that reading is also low, take a CO2 sample. If that reading is also low, drive to a far away tree and repeat the process. If the very first reading isn't low, drive to end.
+    </TaskDescription>
+
+    <Tasks>
+      <DriveToLocation>
+        <StartPosition>
+          <Latitude>Start Latitude</Latitude>
+          <Longitude>Start Longitude</Longitude>
+        </StartPosition>
+        <!-- Add a navigation element to reach the first tree -->
+      </DriveToLocation>
+
+      <TakePicture>
+        <TreeInformation>
+          <!-- Provide the information about the tree where the picture will be taken -->
+        </TreeInformation>
+      </TakePicture>
+
+      <MeasureTemperature>
+        <TreeInformation>
+          <!-- Provide the information about the tree where the temperature will be measured -->
+        </TreeInformation>
+      </MeasureTemperature>
+
+      <MeasureCO2>
+        <TreeInformation>
+          <!-- Provide the information about the tree where the CO2 sample will be taken -->
+        </TreeInformation>
+      </MeasureCO2>
+
+      <DriveToLocation>
+        <!-- Add a navigation element to reach the next tree (if necessary) -->
+      </DriveToLocation>
+
+      <!-- Repeat the above three tasks for each additional tree -->
+
+      <DriveToLocation>
+        <StartPosition>
+          <Latitude>End Latitude</Latitude>
+          <Longitude>End Longitude</Longitude>
+        </StartPosition>
+        <!-- Add a navigation element to reach the end point -->
+      </DriveToLocation>
+    </Tasks>
+  </CompositeTaskInformation>
+
+  <Outcome>
+    The mission was successful in completing all tasks. The robot traveled a significant distance during this mission.
+  </Outcome>
+</MissionPlan>

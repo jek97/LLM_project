@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+< MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="missionPlan.xsd">
+    < TaskDescription>Take picture of 4 trees</TaskDescription>
+    < CompositeTaskInformation>
+        < Tasks>
+            < Task >
+                < Name >Visit Tree 1</ Name >
+                < Description >Drive to Northmost tree and take picture.</ DriveToTree id="0"> 
+                    <DrivingLocation>Georss:location(-120.42302289785604,37.36635688574164)</DrivingLocation>
+                    < GeoRSS location=-120.42302289785604 latitude=37.36635688574164 / > 
+                </ DriveToTree >
+            </ Task >
+            < Task >
+                < Name >Visit Tree 2</ Name >
+                < Description >Drive to Eastmost tree and take picture.</ DriveToTree id="1"> 
+                    <DrivingLocation>Georss:location(-120.42309252722157,37.36631509745154)</DrivingLocation>
+                    < GeoRSS location=-120.42309252722157 latitude=37.36631509745154 / > 
+                </ DriveToTree >
+            </ Task >
+            < Task >
+                < Name >Visit Tree 3</ Name >
+                < Description >Drive to Southmost tree and take picture.</ DriveToTree id="2"> 
+                    <DrivingLocation>Georss:location(-120.4230350832969,37.36635015674898)</DrivingLocation>
+                    < GeoRSS location=-120.4230350832969 latitude=37.36635015674898 / > 
+                </ DriveToTree >
+            </ Task >
+            < Task >
+                < Name >Visit Tree 4</ Name >
+                < Description >Drive to Westmost tree and take picture.</ DriveToTree id="3"> 
+                    <DrivingLocation>Georss:location(-120.42308819251039,37.366300236834725)</DrivingLocation>
+                    < GeoRSS location=-120.42308819251039 latitude=37.366300236834725 / > 
+                </ DriveToTree >
+            </ Task >
+        </ Tasks>
+    </ CompositeTaskInformation>
+</ MissionPlan>

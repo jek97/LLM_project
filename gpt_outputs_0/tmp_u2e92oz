@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Analyze tree health and document species at specific locations.
+    </TaskDescription>
+    <Outcome>
+      Successfully completed all tree analysis tasks.
+    </Outcome>
+  </CompositeTaskInformation>
+  <Task id="T1">
+    <TaskName>Drive to Oak Tree 1</TaskName>
+    <TaskType>Drive</TaskType>
+    <GeoJSONReference>
+      <LocationType>Tree</LocationType>
+      <Latitude>34.0522</Latitude>
+      <Longitude>-118.2437</Longitude>
+    </GeoJSONReference>
+    <Action>
+      <ActionType>Tree Health Assessment</ActionType>
+      <Details>Record tree diameter, height, and overall health.</Details>
+    </Action>
+  </Task>
+  <Task id="T2">
+    <TaskName>Drive to Pine Tree 2</TaskName>
+    <TaskType>Drive</TaskType>
+    <GeoJSONReference>
+      <LocationType>Tree</LocationType>
+      <Latitude>34.0600</Latitude>
+      <Longitude>-118.2500</Longitude>
+    </GeoJSONReference>
+    <Action>
+      <ActionType>Tree Species Identification</ActionType>
+      <Details>Identify the pine species and note any signs of disease.</Details>
+    </Action>
+  </Task>
+  <!-- Estimated total distance traveled: Approximately 15.2 km -->
+</MissionPlan>

@@ -1,0 +1,31 @@
+<think>
+Alright, so I need to help create an XML mission plan based on what the user described. Let me start by understanding the task.
+
+The user wants to generate a mission that involves several steps:
+
+1. **Start at a specific location**.
+2. **Drive to multiple trees** for actions.
+3. **Take pictures of trees**.
+4. **Measure temperature and CO2 levels** based on certain conditions.
+5. **Log outcomes** with distances traveled.
+
+First, I need to parse the provided GeoJSON data to identify all the tree coordinates. The user mentioned "the middle of the field" as a starting point, so I should find which tree is closest to that location.
+
+Next, from this starting point, the mission requires moving to the midpoint between two trees 5 trees down the list. So, after identifying the first target, I need to determine positions for subsequent points by averaging coordinates of five consecutive trees in the list.
+
+For each target point, the robot needs to:
+
+- Drive there and take a picture.
+- If temperature is below 33°C at that tree, measure CO2 levels.
+
+I should also calculate the total distance traveled between each pair of consecutive points to accurately report this in the mission plan.
+
+Finally, I'll structure all this information into an XML format as specified, ensuring all necessary fields like Mission ID, Start Point, Target Points, Actions, and Outcomes are included with appropriate data.
+</think>
+
+To assist you further, could you please specify:
+
+1. **The starting point coordinates** (latitude/longitude) from which the mission begins.
+2. Whether "the middle of the field" corresponds to a specific tree or an average position.
+
+Once I have this information, I can help structure the XML mission plan accordingly.

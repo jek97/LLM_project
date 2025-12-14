@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskSequence>
+      <Task id="1">
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="2">
+        <Action>Evaluate Picture for Low Temperature</Action>
+        <Dependency>1</Dependency>
+      </Task>
+      <Task id="3">
+        <Action>Take Temperature Reading</Action>
+        <Dependency>2</Dependency>
+      </Task>
+      <Task id="4">
+        <Action>Take CO2 Sample</Action>
+        <Dependency>3</Dependency>
+      </Task>
+    </TaskSequence>
+  </CompositeTaskInformation>
+</MissionPlan>

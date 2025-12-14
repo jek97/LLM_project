@@ -1,0 +1,34 @@
+The problem is that we have added extra elements and attributes outside of the namespace declaration. Let's try to clean up the XML.
+
+```xml}
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:Mission xmlns:ns="http://example.com/mission.xsd"
+             xsi:schemaLocation="http://example.com/mission.xsd http://example.com/mission.xsd#"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CompositeTaskInformation>
+    <!-- composite task information -->
+    <TaskDescription xml:lang="en-US">Drive to the northern most tree and take a picture</TaskDescription>
+    <DrivingAction>
+      <StartLocation ref="#tree_18"/>
+      <EndLocation ref="#eastern_middle_point"/>
+      <Distance unit="kilometers">0.01</Distance>
+    </DrivingAction>
+    <TaskDescription xml:lang="en-US">Take another task</TaskDescription>
+  </CompositeTaskInformation>
+
+  <!-- composite task information -->
+  <CompositeTaskInformation id="2">
+    <TaskDescription xml:lang="en-US">Another driving action</TaskDescription>
+    <DrivingAction>
+      <StartLocation ref="#tree_20"/>
+      <EndLocation ref="#eastern_middle_point_2"/>
+      <Distance unit="kilometers">0.02</Distance>
+    </DrivingAction>
+  </CompositeTaskInformation>
+
+  <!-- tree locations -->
+  <Tree id="3" x="4" y="5"/>
+</ns:Mission>
+```
+
+In this updated version, we've removed the extra elements and attributes outside of the namespace declaration. We can now use the `xsi:schemaLocation` attribute to specify the schema location for our XML document.

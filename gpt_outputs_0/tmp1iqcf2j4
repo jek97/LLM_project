@@ -1,0 +1,53 @@
+It seems like the issue is that I'm trying to print the XML output directly to the console, which doesn't work as expected.
+
+Instead, I'll modify the code to write the XML output to a file. Here's an updated version of the Java class:
+```java
+import org.json.JSONObject;
+import org.json.JsonParser;
+
+public class MissionPlanGenerator {
+    public static void main(String[] args) throws Exception {
+        // Load GeoJSON file
+        String geoJsonFile = "path/to/geojson/file.geojson";
+        JSONObject geoJsonData = new JSONObject(new JsonParser().parse(geoJsonFile));
+
+        // Generate XML file
+        generateXml(geoJsonData, "output.xml");
+    }
+
+    public static void generateXml(JSONObject geoJsonData) throws Exception {
+        // Create XML output stream
+        java.io.FileWriter writer = new java.io.FileWriter("output.xml");
+
+        // Write XML header
+        writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+
+        // Write root element
+        writer.write("<MissionPlan>\n");
+
+        // Add CompositeTaskInformation element
+        writer.write("  <CompositeTaskInformation>\n");
+
+        // Add task elements
+        for (int i = 0; i < geoJsonData.getJSONArray("features").length(); i++) {
+            JSONObject feature = geoJsonData.getJSONArray("features").getJSONObject(i);
+            writer.write("    <Task>\n");
+            writer.write("      <Name>" + feature.getString("properties.name") + "</Name>\n");
+            writer.write("      <Description>" + feature.getString("properties.description") + "</Description>\n");
+            writer.write("    </Task>\n");
+        }
+
+        // Close CompositeTaskInformation element
+        writer.write("  </CompositeTaskInformation>\n");
+
+        // Close root element
+        writer.write("</MissionPlan>\n");
+
+        // Flush output stream
+        writer.close();
+    }
+}
+```
+This version of the Java class writes the XML output to a file named "output.xml". You can modify the filename as needed.
+
+Please note that this code still assumes that you have GeoJSON data in the format I provided earlier. If your data is in a different format, you may need to adjust the code accordingly.

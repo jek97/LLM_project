@@ -1,0 +1,43 @@
+<Mission xmlns="http://www.example.com/robotics/mission" version="1.0">
+    <Header>
+        <MissionName>Farm Corner Photography Mission</MissionName>
+        <CreatedBy>Robotic Mission Planner</CreatedBy>
+        <CreationDate>2023-05-15T14:30:00Z</CreationDate>
+    </Header>
+    <CompositeTaskInformation>
+        <TaskDescription>Originally requested to take pictures of trees at the four corners of the farm in any order.</TaskDescription>
+        <Tasks>
+            <!-- Task 1: Drive to and take a picture of tree at corner A -->
+            <DriveToLocation>
+                <GPSLocation x="{GeoJSON coordinates for corner A}" y="{GeoJSON coordinates for corner A}"/>
+                <Action>
+                    <TakePicture/>
+                </Action>
+            </DriveToLocation>
+
+            <!-- Task 2: Drive to and take a picture of tree at corner B -->
+            <DriveToLocation>
+                <GPSLocation x="{GeoJSON coordinates for corner B}" y="{GeoJSON coordinates for corner B}"/>
+                <Action>
+                    <TakePicture/>
+                </Action>
+            </DriveToLocation>
+
+            <!-- Task 3: Drive to and take a picture of tree at corner C -->
+            <DriveToLocation>
+                <GPSLocation x="{GeoJSON coordinates for corner C}" y="{GeoJSON coordinates for corner C}"/>
+                <Action>
+                    <TakePicture/>
+                </Action>
+            </DriveToLocation>
+
+            <!-- Task 4: Drive to and take a picture of tree at corner D -->
+            <DriveToLocation>
+                <GPSLocation x="{GeoJSON coordinates for corner D}" y="{GeoJSON coordinates for corner D}"/>
+                <Action>
+                    <TakePicture/>
+                </Action>
+            </DriveToLocation>
+        </Tasks>
+    </CompositeTaskInformation>
+</Mission>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:MissionPlan xmlns:ns="http://robotictaskrepresentation.org/schema/mission_plan.xsd"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://robotictaskrepresentation.org/schema/mission_plan.xsd 
+                                     http://robotictaskrepresentation.org/schema/mission_plan.xsd">
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the first tree and take a picture</TaskDescription>
+        <DrivingCommand>
+            <StartPoint>
+                <Coordinate x="0" y="0"/>
+            </StartPoint>
+            <EndPoint>
+                <Coordinate x="-120.42302289785604" y="37.36635688574164"/>
+            </EndPoint>
+        </DrivingCommand>
+    </CompositeTaskInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the second tree and take a picture</TaskDescription>
+        <DrivingCommand>
+            <StartPoint>
+                <Coordinate x="-120.42309252722157" y="37.36631509745154"/>
+            </StartPoint>
+            <EndPoint>
+                <Coordinate x="-120.4230350832969" y="37.36635015674898"/>
+            </EndPoint>
+        </DrivingCommand>
+    </CompositeTaskInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the third tree and take a picture</TaskDescription>
+        <DrivingCommand>
+            <StartPoint>
+                <Coordinate x="-120.42308819251039" y="37.366300236834725"/>
+            </StartPoint>
+            <EndPoint>
+                <Coordinate x="-120.42301043689258" y="37.36630655255463"/>
+            </EndPoint>
+        </DrivingCommand>
+    </CompositeTaskInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the fourth tree and take a picture</TaskDescription>
+        <DrivingCommand>
+            <StartPoint>
+                <Coordinate x="-120.42306783300766" y="37.366308661662266"/>
+            </StartPoint>
+            <EndPoint>
+                <Coordinate x="-120.423044218715" y="37.36626996761184"/>
+            </EndPoint>
+        </DrivingCommand>
+    </CompositeTaskInformation>
+    <Outcome>
+        <TotalEstimatedDistance>0.5 km</TotalEstimatedDistance>
+        <TaskDescriptions>
+            <TaskDescription>Drive to the first tree and take a picture</TaskDescription>
+            <TaskDescription>Drive to the second tree and take a picture</TaskDescription>
+            <TaskDescription>Drive to the third tree and take a picture</TaskDescription>
+            <TaskDescription>Drive to the fourth tree and take a picture</TaskDescription>
+        </TaskDescriptions>
+    </Outcome>
+</ns:MissionPlan>

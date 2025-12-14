@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="MissionPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CompositeTaskInformation" type="xs:string"/>
+        <xs:element name="DrivingTask" type="xs:string"/>
+        <xs:element name="DriveTo" type="xs:string"/>
+        <xs:element name="GPSLocation">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="latitude" type="xs:decimal"/>
+              <xs:element name="longitude" type="xs:decimal"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

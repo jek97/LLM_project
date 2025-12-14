@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+< xmlns="http://robotictask.org/schemas/taskDescription.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://robotictask.org/schemas/taskDescription.xsd 
+                        http://robotictask.org/schemas/taskDescription.xsd">
+
+  <MissionPlan>
+    <!-- rest of the document -->
+  </MissionPlan>
+</xmlns:xsi>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:tns="http://robotictask.org/schemas/taskDescription.xsd"
+            targetNamespace="http://robotictask.org/schemas/taskDescription.xsd">
+
+  <tns:CompositeTaskInformation>
+    <!-- rest of the document -->
+  </tns:CompositeTaskInformation>
+
+</xs:schema>

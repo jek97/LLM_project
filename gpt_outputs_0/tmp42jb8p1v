@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionSteps>
+  <Step id="1">
+    <Action>Navigate to Tree 1</Action>
+    <TargetID>12</TargetID>
+    <Instructions>Navigate to the pistachio tree with ID 12.</Instructions>
+  </Step>
+  <Step id="2">
+    <Action>Take Picture</Action>
+    <TargetID>12</TargetID>
+    <Instructions>Take a picture of the pistachio tree with ID 12.</Instructions>
+  </Step>
+  <Step id="3">
+    <Action>Navigate to Tree 2</Action>
+    <TargetID>13</TargetID>
+    <Instructions>Navigate to the pistachio tree with ID 13.</Instructions>
+  </Step>
+  <Step id="4">
+    <Action>Take Picture</Action>
+    <TargetID>13</TargetID>
+    <Instructions>Take a picture of the pistachio tree with ID 13.</Instructions>
+  </Step>
+  <Step id="5">
+    <Action>Navigate to Tree 3</Action>
+    <TargetID>14</TargetID>
+    <Instructions>Navigate to the pistachio tree with ID 14.</Instructions>
+  </Step>
+  <Step id="6">
+    <Action>Take Picture</Action>
+    <TargetID>14</TargetID>
+    <Instructions>Take a picture of the pistachio tree with ID 14.</Instructions>
+  </Step>
+  <Step id="7">
+    <Action>Navigate to Tree 4</Action>
+    <TargetID>15</TargetID>
+    <Instructions>Navigate to the pistachio tree with ID 15.</Instructions>
+  </Step>
+  <Step id="8">
+    <Action>Take Picture</Action>
+    <TargetID>15</TargetID>
+    <Instructions>Take a picture of the pistachio tree with ID 15.</Instructions>
+  </Step>
+  <Step id="9">
+    <Action>Navigate to Tree 5</Action>
+    <TargetID>16</TargetID>
+    <Instructions>Navigate to the pistachio tree with ID 16.</Instructions>
+  </Step>
+  <Step id="10">
+    <Action>Take Picture</Action>
+    <TargetID>16</TargetID>
+    <Instructions>Take a picture of the pistachio tree with ID 16.</Instructions>
+  </Step>
+</MissionSteps>

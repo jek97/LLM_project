@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://example.com/missionplan missionplan.xsd">
+  <Steps>
+    <Step id="1">
+      <Action>Drive to Tree ID 12</Action>
+    </Step>
+    <Step id="2">
+      <Action>Take Picture</Action>
+    </Step>
+  </Steps>
+</MissionPlan>

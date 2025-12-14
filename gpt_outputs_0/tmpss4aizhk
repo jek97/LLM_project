@@ -1,0 +1,35 @@
+It seems that we need to add a `<?xml version="1.0" encoding="UTF-8"?>` declaration at the beginning of the document.
+
+Here is the updated XML:
+
+```xml}
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:Mission xmlns:ns="http://example.com/mission.xsd"
+             xsi:schemaLocation="http://example.com/mission.xsd http://example.com/mission.xsd#"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CompositeTaskInformation>
+    <!-- composite task information -->
+    <TaskDescription xml:lang="en-US">Drive to the northern most tree and take a picture</TaskDescription>
+    <DrivingAction>
+      <StartLocation ref="#tree_18"/>
+      <EndLocation ref="#eastern_middle_point"/>
+      <Distance unit="kilometers">0.01</Distance>
+    </DrivingAction>
+  </CompositeTaskInformation>
+
+  <!-- composite task information -->
+  <CompositeTaskInformation id="2">
+    <TaskDescription xml:lang="en-US">Another driving action</TaskDescription>
+    <DrivingAction>
+      <StartLocation ref="#tree_20"/>
+      <EndLocation ref="#eastern_middle_point_2"/>
+      <Distance unit="kilometers">0.02</Distance>
+    </DrivingAction>
+  </CompositeTaskInformation>
+
+  <!-- tree locations -->
+  <ns:Tree id="3" x="4" y="5"/>
+</ns:Mission>
+```
+
+This should now be a valid XML document.

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<m:MissionPlan xmlns:m="http://example.com/missionplan">
+    <Task>
+        <Subtask action="TakePicture">Take picture of first tree</Subtask>
+
+        <!-- Location where measurements will be taken -->
+        <Coordinates>START Point Coordinates</Coordinates>
+
+        <!-- Core measurement task -->
+        <MeasureTemperatureOrCO2 action="Measure">
+            Measure temperature at first tree location
+        </MeasureTemperatureOrCO2>
+
+        <!-- Check for specific conditions -->
+        <CheckReadings>
+            <!-- Conditions for taking CO2 samples -->
+            <If condition="Temperature is Low">
+                <Action>Take Temperature Reading</Action>
+            </If>
+
+            <If condition="CO2 Level is Low">
+                <SampleCO2>Record CO2 Sample at First Tree</SampleCO2>
+                <!-- Additional sampling logic here -->
+            </If>
+        </CheckReadings>
+
+        <!-- Move to next tree location -->
+        <MoveToNextTree coordinates="NEXT Point Coordinates">
+            <!-- Movement to next tree location -->
+        </MoveToNextTree>
+    </Task>
+
+    <!-- Repeat the above structure for additional trees -->
+    <RepeatUntilEnd>
+        <!-- Continue tasks until all trees are measured -->
+    </RepeatUntilEnd>
+</m:MissionPlan>

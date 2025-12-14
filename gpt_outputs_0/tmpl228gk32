@@ -1,0 +1,152 @@
+It seems like the issue is with the XML declaration at the top of the file.
+
+Here's an updated version of the XML file with a correct XML declaration:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE missionPlan SYSTEM "missionPlan.xsd">
+<missionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://roboticmissionplan.xsd
+             http://roboticmissionplan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Take picture of northernmost tree</TaskDescription>
+    <DrivingTask>
+      <DriveTo>
+        <GPSLocation>
+          <Latitude>37.36635688574164</Latitude>
+          <Longitude>-120.42302289785604</Longitude>
+        </GPSLocation>
+      </DriveTo>
+    </DrivingTask>
+    <ActionTask>
+      <TakePicture />
+    </ActionTask>
+  </CompositeTaskInformation>
+
+  <!-- Add references to GeoJSON files for each tree -->
+  <ReferenceTree id="1">
+    <GeoJSONReference>https://example.com/tree1.geojson</GeoJSONReference>
+  </ReferenceTree>
+  <ReferenceTree id="2">
+    <GeoJSONReference>https://example.com/tree2.geojson</GeoJSONReference>
+  </ReferenceTree>
+
+  <!-- Add logging information -->
+  <LoggingInformation>
+    <TaskDescription>Take picture of northernmost tree</TaskDescription>
+    <Outcome>Total estimated haversine distance traveled: 0.00 km</Outcome>
+  </LoggingInformation>
+  <LoggingInformation>
+    <TaskDescription>Take picture of middle of orchard</TaskDescription>
+    <Outcome>Total estimated haversine distance traveled: 0.00 km</Outcome>
+  </LoggingInformation>
+  <LoggingInformation>
+    <TaskDescription>Take picture of eastern end middle and two trees next to each other</TaskDescription>
+    <Outcome>Total estimated haversine distance traveled: 0.00 km</Outcome>
+  </LoggingInformation>
+
+</missionPlan>
+```
+However, I noticed that the `xsi:schemaLocation` attribute is referencing the same schema location as the root element (`http://roboticmissionplan.xsd`). This might cause an issue.
+
+To fix this, you can try changing the `xsi:schemaLocation` attribute to reference a different schema location, such as:
+```
+<CompositeTaskInformation>
+  <TaskDescription>Take picture of northernmost tree</TaskDescription>
+  <DrivingTask>
+    <DriveTo>
+      <GPSLocation>
+        <Latitude>37.36635688574164</Latitude>
+        <Longitude>-120.42302289785604</Longitude>
+      </GPSLocation>
+    </DriveTo>
+  </DrivingTask>
+  <ActionTask>
+    <TakePicture />
+  </ActionTask>
+</CompositeTaskInformation>
+
+<!-- ... rest of the XML remains the same ... -->
+```
+And then, in your `missionPlan.xsd` file, you can define the schema for the root element (`<missionPlan>`) separately from the schema for the inner elements (`<CompositeTaskInformation>`).
+
+Here's an example of what your `missionPlan.xsd` file might look like:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="missionPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CompositeTaskInformation" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Define schema for CompositeTaskInformation -->
+  <xs:element name="CompositeTaskInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TaskDescription" type="xs:string"/>
+        <xs:element name="DrivingTask" maxOccurs="unbounded"/>
+        <xs:element name="ActionTask" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Define schema for DrivingTask -->
+  <xs:element name="DrivingTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DriveTo" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Define schema for DriveTo -->
+  <xs:element name="DriveTo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="GPSLocation" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Define schema for GPSLocation -->
+  <xs:element name="GPSLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Latitude" type="xs:decimal"/>
+        <xs:element name="Longitude" type="xs:decimal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Define schema for ActionTask -->
+  <xs:element name="ActionTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TakePicture" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Define schema for ReferenceTree -->
+  <xs:element name="ReferenceTree">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="GeoJSONReference" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Define schema for LoggingInformation -->
+  <xs:element name="LoggingInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TaskDescription" type="xs:string"/>
+        <xs:element name="Outcome" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+```
+Please try this updated version and let me know if you still encounter any errors.

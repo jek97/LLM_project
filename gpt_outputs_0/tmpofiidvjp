@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE MissionPlan SYSTEM "mission_schema_v1.0.xsd">
+<MissionPlan>
+  <Version>1.0</Version>
+  <Schema>mission_schema_v1.0.xsd</Schema>
+  <TaskList>
+    <!-- Your GeoJSON data -->
+    <GeoJSON>
+      <!-- Replace the content with your actual GeoJSON string -->
+      <FeatureCollection>
+        <feature type="Point">
+          <geometry>
+            <coordinates>
+              <!-- List of coordinates representing the farm -->
+            </coordinates>
+          </geometry>
+        </feature>
+      </FeatureCollection>
+    </GeoJSON>
+    
+    <!-- Tasks using GeoJSON data -->
+    <Task ID="001">
+      <OperationType>Picture taking</OperationType>
+      <Target>Tree at the Northwest corner of the farm</Target>
+      <Comment>Take a picture of the tree at the Northwest corner of the farm</Comment>
+      <!-- Include GeoJSON data here -->
+      <GeometryReference ID="001-northwest">
+        <!-- Replace with the corresponding GeoJSON object ID -->
+        <ReferenceData>your_reference_data</ReferenceData>
+      </GeometryReference>
+    </Task>
+    
+    <Task ID="002">
+      <OperationType>Picture taking</OperationType>
+      <Target>Tree at the Northeast corner of the farm</Target>
+      <Comment>Take a picture of the tree at the Northeast corner of the farm</Comment>
+      <!-- Include GeoJSON data here -->
+      <GeometryReference ID="002-northeast">
+        <!-- Replace with the corresponding GeoJSON object ID -->
+        <ReferenceData>your_reference_data</ReferenceData>
+      </GeometryReference>
+    </Task>
+    
+    <Task ID="003">
+      <OperationType>Picture taking</OperationType>
+      <Target>Tree at the Southwest corner of the farm</Target>
+      <Comment>Take a picture of the tree at the Southwest corner of the farm</Comment>
+      <!-- Include GeoJSON data here -->
+      <GeometryReference ID="003-southwest">
+        <!-- Replace with the corresponding GeoJSON object ID -->
+        <ReferenceData>your_reference_data</ReferenceData>
+      </GeometryReference>
+    </Task>
+    
+    <Task ID="004">
+      <OperationType>Picture taking</OperationType>
+      <Target>Tree at the Southeast corner of the farm</Target>
+      <Comment>Take a picture of the tree at the Southeast corner of the farm</Comment>
+      <!-- Include GeoJSON data here -->
+      <GeometryReference ID="004-southeast">
+        <!-- Replace with the corresponding GeoJSON object ID -->
+        <ReferenceData>your_reference_data</ReferenceData>
+      </GeometryReference>
+    </Task>
+  </TaskList>
+  
+  <!-- Total estimated distance traveled from start to end -->
+  <Outcome>Total estimated distance traveled: XYZ</Outcome>
+</MissionPlan>

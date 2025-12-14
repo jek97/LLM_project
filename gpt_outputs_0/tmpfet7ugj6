@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://example.com/robotic_mission_plan"
+           targetNamespace="http://example.com/robotic_mission_plan"
+           elementFormDefault="qualified">
+
+  <tns:element name="mission">
+    <tns:complexType>
+      <tns:sequence>
+        <tns:element name="CompositeTaskInformation" type="tns:CompositeTaskInformation"/>
+      </tns:sequence>
+    </tns:complexType>
+  </tns:element>
+
+</xs:schema>

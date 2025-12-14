@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskSequence>
+      <Task id="1">
+        <Action>NavigateTo</Action>
+        <TargetID>1</TargetID>
+      </Task>
+      <Task id="2">
+        <Action>TakePicture</Action>
+        <TargetID>2</TargetID>
+      </Task>
+    </TaskSequence>
+  </CompositeTaskInformation>
+</MissionPlan>

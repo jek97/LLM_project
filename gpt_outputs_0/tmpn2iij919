@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <name>Pistachio Tree Photography Mission</name>
+    <task name="Visit Pistachio Trees">
+        <sequence>
+            <!-- Visit the first pistachio tree -->
+            <visit location="Farm"/>
+            <moveTo location="Pistachio Tree 1"/>
+            <takePicture/>
+            
+            <!-- Move to the next two trees and take a picture of each -->
+            <moveTo location="Pistachio Tree 2"/>
+            <takePicture/>
+            <moveTo location="Pistachio Tree 3"/>
+            <takePicture/>
+            <moveTo location="Pistachio Tree 4"/>
+            <takePicture/>
+            
+            <!-- Return to the farm -->
+            <returnTo>Farm</returnTo>
+        </sequence>
+    </task>
+</mission>

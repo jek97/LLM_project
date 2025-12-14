@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission_plan.xsd">
+  <Version>1.0</Version>
+  <TaskInformation>
+    <CompositeTaskInformation>
+      <TaskDescription>Request for mission plan to collect data from Tree A (40.7128,-74.0060)</TaskDescription>
+      <SubTasks>
+        <SubTaskInformation>
+          <Action xsi:type="DriveToLocation">
+            <Destination xsi:type="GPSLocation">
+              <Latitude>40.7128</Latitude>
+              <Longitude>-74.0060</Longitude>
+            </Destination>
+          </Action>
+        </SubTaskInformation>
+        <SubTaskInformation>
+          <Action xsi:type="CollectData">
+            <TreeType>A</TreeType>
+          </Action>
+        </SubTaskInformation>
+      </SubTasks>
+    </CompositeTaskInformation>
+  </TaskInformation>
+  <Outcome>The robot has successfully completed the mission covering approximately 123 meters.</Outcome>
+</MissionPlan>

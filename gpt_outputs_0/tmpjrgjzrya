@@ -1,0 +1,62 @@
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission_schema.xsd">
+  <Header>
+    <Name>Orchard Photography Mission</Name>
+    <Author>Your Name Here</Author>
+    <CreatedDate>2023-03-27T15:46:02-05:00</CreatedDate>
+  </Header>
+
+  <MissionInformation>
+    <!-- Original question -->
+    <TaskDescription>Take a picture of the northern most tree. Drive to the middle of the orchard and take another. Drive to the middle of the eastern end and take a picture of two trees next to each other.</TaskDescription>
+  </MissionInformation>
+
+  <CompositeTaskInformation>
+    <Task taskId="1">
+      <Action>
+        <Movement type="Drive" distance="0.0" angle="0.0"/>
+      </Action>
+      <ImageTaking positionRef="P0_1" treeIDRef="1" orientation="North"/>
+    </Task>
+
+    <Task taskId="2">
+      <Action>
+        <Movement type="Drive" distance="X_1_to_Center" angle="0.0"/>
+      </Action>
+      <ImageTaking positionRef="P1_1" treeIDRef="0"/>
+    </Task>
+
+    <Task taskId="3">
+      <Action>
+        <Movement type="Drive" distance="Y_Center_to_EasternEnd" angle="90.0"/>
+      </Action>
+      <ImageTaking positionRef="P2_1, 2" treeIDRef="0"/>
+    </Task>
+  </CompositeTaskInformation>
+
+  <!-- Place the original question somewhere in Outcome if possible -->
+  <Outcome>Mission successfully completed: took pictures of the northern most tree, center and eastern end trees. (Distance traveled estimated to be substantial.)</Outcome>
+
+  <GeoPositionInfo>
+    <GPS positionRef="P0" latitude="LATITUDE_START" longitude="LONGITUDE_START" />
+  </GeoPositionInfo>
+
+  <!-- GeoJSON tree data -->
+  <Tree>
+    <TreeID ref="1">
+      <NorthernLatitude>NORTHERNMOST_LATITUDE</NorthernLatitude>
+      <NorthernLongitude>NORTHERNMOST_LONGITUDE</NorthernLongitude>
+      <!-- other tree properties -->
+    </TreeID>
+  </Tree>
+  <!-- ... rest of tree data for all trees in orchard -->
+
+  <GeoPositionInfo>
+    <GPS positionRef="P1" latitude="CENTER_LATITUDE" longitude="CENTER_LONGITUDE" />
+  </GeoPositionInfo>
+
+  <!-- Geometric center of the orchard (calculate this first and then populate) -->
+
+  <GeoPositionInfo>
+    <GPS positionRef="P2" latitude="EASTERNEND_LATITUDE" longitude="EASTERNEND_LONGITUDE" />
+  </GeoPositionInfo>
+</Mission>

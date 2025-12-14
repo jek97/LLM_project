@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:msc="http://mission.schema.com">
+  <compositeTaskInformation msc:"http://mission.schema.com/compositeTaskInformation"/>
+  
+  <!-- ... -->
+</root>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="mission_plan.xsd">
+  <compositeTaskInformation>
+    <taskDescription>Viewing this farm as a rectangle, take pictures of trees at the four corners of the farm in any order.</taskDescription>
+    <tasks>
+      <!-- Drive to tree with id=0 -->
+      <driveToWaypoint>
+        <waypointId>0</waypointId>
+      </driveToWaypoint>
+      <!-- Take picture -->
+      <takePicture />
+
+      <!-- Drive to tree with id=12 -->
+      <driveToWaypoint>
+        <waypointId>12</waypointId>
+      </driveToWaypoint>
+      <!-- Take picture -->
+      <takePicture />
+
+      <!-- Drive to tree with id=18 -->
+      <driveToWaypoint>
+        <waypointId>18</waypointId>
+      </driveToWaypoint>
+      <!-- Take picture -->
+      <takePicture />
+
+      <!-- Drive to tree with id=6 -->
+      <driveToWaypoint>
+        <waypointId>6</waypointId>
+      </driveToWaypoint>
+      <!-- Take picture -->
+      <takePicture />
+    </tasks>
+  </compositeTaskInformation>
+</missionPlan>

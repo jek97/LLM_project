@@ -1,0 +1,81 @@
+<Mission>
+    <MissionInformation>
+        <MissionName>Temperature and CO2 Monitoring Mission</MissionName>
+        <StartTime>YYYY-MM-DDTHH:MM:SS</StartTime>
+        <EndTime>YYYY-MM-DDTHH:MM:SS</EndTime>
+    </MissionInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>Original Question: At the first tree, take a picture. If that picture shows low temperature, take a temperature reading. If that reading is also low, take a CO2 sample. If that reading is also low, drive to a far away tree and repeat the process. If the very first reading isn't low, drive to end.</TaskDescription>
+        <Tasks>
+            <Task>
+                <TaskID>1</TaskID>
+                <TaskName>Drive to Initial Tree Location</TaskName>
+                <TaskType>Driving</TaskType>
+                <Location>
+                    <Latitude>LATITUDE_FROM_GEOJSON</Latitude>
+                    <Longitude>LONGITUDE_FROM_GEOJSON</Longitude>
+                </Location>
+            </Task>
+            <Task>
+                <TaskID>2</TaskID>
+                <TaskName>Take Picture at Initial Tree</TaskName>
+                <TaskType>Image Capture</TaskType>
+                <Location>
+                    <Latitude>LATITUDE_FROM_GEOJSON</Latitude>
+                    <Longitude>LONGITUDE_FROM_GEOJSON</Longitude>
+                </Location>
+            </Task>
+            <Task>
+                <TaskID>3</TaskID>
+                <TaskName>Check Temperature at Initial Tree</TaskName>
+                <TaskType>Temperature Reading</TaskType>
+                <Location>
+                    <Latitude>LATITUDE_FROM_GEOJSON</Latitude>
+                    <Longitude>LONGITUDE_FROM_GEOJSON</Longitude>
+                </Location>
+            </Task>
+            <!-- Repeat the following tasks if the temperature and CO2 readings are low -->
+            <Task>
+                <TaskID>4</TaskID>
+                <TaskName>Check CO2 at Initial Tree</TaskName>
+                <TaskType>CO2 Reading</TaskType>
+                <Location>
+                    <Latitude>LATITUDE_FROM_GEOJSON</Latitude>
+                    <Longitude>LONGITUDE_FROM_GEOJSON</Longitude>
+                </Location>
+            </Task>
+            <!-- If the temperature and CO2 readings are low, repeat the following tasks -->
+            <Task>
+                <TaskID>5</TaskID>
+                <TaskName>Drive to Next Tree Location</TaskName>
+                <TaskType>Driving</TaskType>
+                <!-- Comment the total estimated haversine distance traveled from start to end here -->
+            </Task>
+            <Task>
+                <TaskID>6</TaskID>
+                <TaskName>Take Picture at Next Tree</TaskName>
+                <TaskType>Image Capture</TaskType>
+                <!-- Location of the next tree from GeoJSON -->
+            </Task>
+            <Task>
+                <TaskID>7</TaskID>
+                <TaskName>Check Temperature at Next Tree</TaskName>
+                <TaskType>Temperature Reading</TaskType>
+                <!-- Location of the next tree from GeoJSON -->
+            </Task>
+            <!-- Repeat the following tasks if the temperature and CO2 readings are low at the next tree -->
+            <Task>
+                <TaskID>8</TaskID>
+                <TaskName>Check CO2 at Next Tree</TaskName>
+                <TaskType>CO2 Reading</TaskType>
+                <!-- Location of the next tree from GeoJSON -->
+            </Task>
+            <!-- If the temperature and CO2 readings are not low, drive to end -->
+            <Task>
+                <TaskID>9</TaskID>
+                <TaskName>Drive to End Location</TaskName>
+                <TaskType>Driving</TaskType>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+</Mission>

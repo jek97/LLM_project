@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns="http://www.w3.org/2005/xpath-frames" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <robot>Robot</robot>
+  <taskList xsi:type="xsd:arrayType">
+    <TaskInformation>
+      <id>1</id>
+      <CompositeTaskInformation>
+        <TaskDescription>Drive to tree and collect leaves</TaskDescription>
+      </CompositeTaskInformation>
+    </TaskInformation>
+  </taskList>
+</mission>

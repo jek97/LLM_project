@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>Viewing this farm as a rectangle, take pictures of trees at the four corners of the farm in any order.</TaskDescription>
+    <Tasks>
+      <!-- Drive to tree with id=0 -->
+      <DriveToWaypoint>
+        <WaypointId>0</WaypointId>
+      </DriveToWaypoint>
+      <!-- Take picture -->
+      <TakePicture />
+
+      <!-- Drive to tree with id=12 -->
+      <DriveToWaypoint>
+        <WaypointId>12</WaypointId>
+      </DriveToWaypoint>
+      <!-- Take picture -->
+      <TakePicture />
+
+      <!-- Drive to tree with id=18 -->
+      <DriveToWaypoint>
+        <WaypointId>18</WaypointId>
+      </DriveToWaypoint>
+      <!-- Take picture -->
+      <TakePicture />
+
+      <!-- Drive to tree with id=6 -->
+      <DriveToWaypoint>
+        <WaypointId>6</WaypointId>
+      </DriveToWaypoint>
+      <!-- Take picture -->
+      <TakePicture />
+    </Tasks>
+  </CompositeTaskInformation>
+</MissionPlan>

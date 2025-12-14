@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan>
+    <task id="1">
+        <name>Take Photo</name>
+        <instruction>Take a photo.</instruction>
+    </task>
+</missionPlan>

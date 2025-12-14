@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/mission.xsd"
+           xmlns:tns="http://example.com/mission.xsd">
+    <xs:element name="mission" type="tns:MissionType"/>
+</xs:schema>

@@ -1,0 +1,21 @@
+<Mission>
+  <StartPoint coordinates="0,0">
+    <GoFromStartToTree id="1">
+      <MeasureCO2AtTree id="1" lowReading="true">
+        <TakeTwoPictures nearbyTrees="TreeA_Pictures">
+      </MeasureCO2AtTree>
+    </GoFromStartToTree>
+
+    <GoFromStartToTree id="3">
+      <MeasureCO2AtTree id="3" lowReading="false">
+        <TakeTwoPictures nearbyTrees="TreeB_Pictures">
+      </MeasureCO2AtTree>
+    </GoFromStartToTree>
+
+    <FindNorthernmostTree northernmostTree="TreeC">
+      <RecordTemperature temperatureValue="25.5">
+        <ReturnToEndpoint endpointCoordinates="30,45"/>
+      </RecordTemperature>
+    </FindNorthernmostTree>
+  </StartPoint>
+</Mission>

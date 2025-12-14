@@ -1,0 +1,36 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.com/namespace">
+  <xs:element name="CompositeTaskInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TaskDescription" type="xs:string"/>
+        <xs:element name="Tasks" type="TasksType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="TasksType">
+    <xs:sequence maxOccurs="unbounded">
+      <xs:choice>
+        <xs:element name="DriveToWaypoint" type="DriveToWaypointType"/>
+        <xs:element name="Action" type="ActionType"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DriveToWaypointType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="WaypointId" type="xs:int" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="ActionType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="ActionType" type="xs:string" use="required"/>
+        <xs:attribute name="TreeType" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:schema>

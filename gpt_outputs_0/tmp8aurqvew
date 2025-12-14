@@ -1,0 +1,12 @@
+This is incredibly frustrating, and I apologize for the repeated errors. It’s clear that there’s a persistent issue with the input file’s structure. The error “Start tag expected, '<' not found” on line 2 strongly suggests that the GeoJSON file is being included incorrectly within the XML structure.
+
+I suspect the way you're providing the GeoJSON data is the root cause.  I need to understand *how* you're combining the task description and the GeoJSON.
+
+**To help me resolve this, please provide the following information *clearly*:**
+
+1.  **The Task Description:** (Paste the *entire* text of the task description here).
+2.  **How you are combining the Task Description and GeoJSON:**  Specifically, *how* are you including the GeoJSON data within the XML structure? Are you pasting it directly into the XML, or are you using a separate file?  Please describe the exact process.
+
+I need this information to understand how to correctly integrate the data.  I'm going to try a different approach to building the XML, but I need your input to ensure it's correct.
+
+Let's work together to get this right.  Please provide the requested information as clearly as possible.

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <MissionID>Orchard_Mission</MissionID>
+    <Version>1.0</Version>
+    <StartTime>YYYY-MM-DDThh:mm:ss</StartTime>
+    <EndTime>YYYY-MM-DDThh:mm:ss</EndTime>
+    <Status>InProgress</Status>
+    <TaskInformation>
+        <CompositeTaskInformation ID="1">
+            <TaskID>1</TaskID>
+            <TaskType>DriveToLocation</TaskType>
+            <TaskDescription>Starting point, find a tree somewhere in the middle of the orchard (GeoJSON: [longitude], [latitude])</TaskDescription>
+        </CompositeTaskInformation>
+        <CompositeTaskInformation ID="2">
+            <TaskID>2</TaskID>
+            <TaskType>MeasureCosine</TaskType>
+            <TaskDescription>Measure cosine at the current location (GeoJSON: [longitude], [latitude])</TaskDescription>
+        </CompositeTaskInformation>
+        <CompositeTaskInformation ID="3">
+            <TaskID>3</TaskID>
+            <TaskType>TakePictures</TaskType>
+            <TaskDescription>If cosine is low, take 2 pictures of nearby trees (GeoJSON: [longitude], [latitude])</TaskDescription>
+        </CompositeTaskInformation>
+        <CompositeTaskInformation ID="4">
+            <TaskID>4</TaskID>
+            <TaskType>DriveToLocation</TaskType>
+            <TaskDescription>Find another tree as far away as possible for CO2 (GeoJSON: [longitude], [latitude])</TaskDescription>
+        </CompositeTaskInformation>
+        <CompositeTaskInformation ID="5">
+            <TaskID>5</TaskID>
+            <TaskType>MeasureCO2</TaskType>
+            <TaskDescription>Measure CO2 at the current location (GeoJSON: [longitude], [latitude])</TaskDescription>
+        </CompositeTaskInformation>
+        <CompositeTaskInformation ID="6">
+            <TaskID>6</TaskID>
+            <TaskType>DriveToLocation</TaskType>
+            <TaskDescription>Find another tree with low cosine (GeoJSON: [longitude], [latitude])</TaskDescription>
+        </CompositeTaskInformation>
+        <CompositeTaskInformation ID="7">
+            <TaskID>7</TaskID>
+            <TaskType>TakePictures</TaskType>
+            <TaskDescription>Take 2 pictures of the selected tree (GeoJSON: [longitude], [latitude])</TaskDescription>
+        </CompositeTaskInformation>
+        <CompositeTaskInformation ID="8">
+            <TaskID>8</TaskID>
+            <TaskType>DriveToLocation</TaskType>
+            <TaskDescription>Find a northern most tree and take a temperature reading (GeoJSON: [longitude], [latitude])</TaskDescription>
+        </CompositeTaskInformation>
+        <CompositeTaskInformation ID="9">
+            <TaskID>9</TaskID>
+            <TaskType>TakeTemperatureReading</TaskType>
+            <TaskDescription>Take a temperature reading at the current location (GeoJSON: [longitude], [latitude])</TaskDescription>
+        </CompositeTaskInformation>
+        <CompositeTaskInformation ID="10">
+            <TaskID>10</TaskID>
+            <TaskType>DriveToLocation</TaskType>
+            <TaskDescription>Return to the starting point (GeoJSON: [longitude], [latitude])</TaskDescription>
+        </CompositeTaskInformation>
+    </TaskInformation>
+    <Outcome>
+        <!-- Total estimated haversine distance traveled from start to end -->
+        The mission was successful.
+    </Outcome>
+</Mission>

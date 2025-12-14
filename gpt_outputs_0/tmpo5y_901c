@@ -1,0 +1,38 @@
+It seems like there is still an issue with generating a valid XML file.
+
+Let me try to provide a more basic example that generates a single task in the XML format:
+```python
+import xml.etree.ElementTree as ET
+
+# Create the root element
+root = ET.Element("Task")
+
+# Add driving point task
+driving_point_task = ET.SubElement(root, "DrivingPoint")
+ET.SubElement(driving_point_task, "description").text = "Drive to location"
+ET.SubElement(driving_point_task, "reference").text = "https://www.geojson.org/properties.xml"
+
+# Create the composite task information element
+composite_task_info = ET.SubElement(root, "CompositeTaskInformation")
+
+# Add driving point task if necessary
+driving_point_task_if_condition = ET.SubElement(composite_task_info, "DrivingPoint")
+ET.SubElement(driving_point_task_if_condition, "description").text = "Drive to location"
+ET.SubElement(driving_point_task_if_condition, "reference").text = "https://www.geojson.org/properties.xml"
+
+# Add IfCondition task if necessary
+if_condition = ET.SubElement(composite_task_info, "IfCondition")
+ET.SubElement(if_condition, "description").text = "Temperature is below 33 C"
+ET.SubElement(if_condition, "conditionType").text = "Temperature"
+ET.SubElement(if_condition, "operator").text = "LessThan"
+ET.SubElement(if_condition, "value").text = str(33.0)
+
+# Create the ElementTree object
+tree = ET.ElementTree(root)
+
+# Write the XML file
+tree.write("output.xml", xml_declaration=True)
+```
+This should generate a valid XML file with no syntax errors.
+
+Please note that this is just an example, and you will need to modify it to fit your specific requirements.

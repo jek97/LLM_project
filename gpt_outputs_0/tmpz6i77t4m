@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <MissionName>Farm Visit - All Points</MissionName>
+  <TotalDistance>1787.68</TotalDistance>
+  <TotalTimeEstimate>60</TotalTimeEstimate>
+  <Tasks>
+    <Task id="1">
+      <Waypoint id="1" latitude="37.36636077337479" longitude="-120.42307592599273" reward="0.85"/>
+      <Description>Visit Point 18</Description>
+    </Task>
+    <Task id="2">
+      <Waypoint id="2" latitude="37.36636077337479" longitude="-120.42307592599273" reward="0.85"/>
+      <Description>Visit Point 1</Description>
+    </Task>
+    <Task id="3">
+      <Waypoint id="3" latitude="37.36631785560332" longitude="-120.42303004014194" reward="0.78"/>
+      <Description>Visit Point 10</Description>
+    </Task>
+    <Task id="4">
+      <Waypoint id="4" latitude="37.366300703749474" longitude="-120.42300386899338" reward="0.65"/>
+      <Description>Visit Point 12</Description>
+    </Task>
+    <Task id="5">
+      <Waypoint id="5" latitude="37.36634636896467" longitude="-120.42302669537153" reward="0.92"/>
+      <Description>Visit Point 13</Description>
+    </Task>
+    <Task id="6">
+      <Waypoint id="6" latitude="37.366304880110526" longitude="-120.4230246791031" reward="0.58"/>
+      <Description>Visit Point 14</Description>
+    </Task>
+    <Task id="7">
+      <Waypoint id="7" latitude="37.36626996761184" longitude="-120.42298051393493" reward="0.42"/>
+      <Description>Visit Point 15</Description>
+    </Task>
+    <Task id="8">
+      <Waypoint id="8" latitude="37.36628908556382" longitude="-120.42299259529793" reward="0.31"/>
+      <Description>Visit Point 16</Description>
+    </Task>
+    <Task id="9">
+      <Waypoint id="9" latitude="37.3662730362294" longitude="-120.42301417901265" reward="0.21"/>
+      <Description>Visit Point 17</Description>
+    </Task>
+    <Task id="10">
+      <Waypoint id="10" latitude="37.36635678715399" longitude="-120.42299259529793" reward="0.15"/>
+      <Description>Visit Point 19</Description>
+    </Task>
+    <Task id="11">
+      <Waypoint id="11" latitude="37.36631785560332" longitude="-120.42303004014194" reward="0.92"/>
+      <Description>Visit Point 10</Description>
+    </Task>
+    <Task id="12">
+      <Waypoint id="12" latitude="37.36636077337479" longitude="-120.42307592599273" reward="0.85"/>
+      <Description>Visit Point 1</Description>
+    </Task>
+    <Task id="13">
+      <Waypoint id="13" latitude="37.36635678715399" longitude="-120.42298051393493" reward="0.78"/>
+      <Description>Visit Point 15</Description>
+    </Task>
+    <Task id="14">
+      <Waypoint id="14" latitude="37.36631785560332" longitude="-120.42303004014194" reward="0.65"/>
+      <Description>Visit Point 10</Description>
+    </Task>
+    <Task id="15">
+      <Waypoint id="15" latitude="37.36636077337479" longitude="-120.42307592599273" reward="0.92"/>
+      <Description>Visit Point 1</Description>
+    </Task>
+  </Tasks>
+</Tasks>

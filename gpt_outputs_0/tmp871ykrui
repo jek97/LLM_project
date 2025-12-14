@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://example.com/mission.xsd mission.xsd">
+    <CompositeTaskInformation>
+        <!-- Task to repeat until result is not low -->
+        <Repeat name="co2Sample" test="@resultIsLow">
+            <!-- Task inside the loop -->
+            <TaskDescription xml:lang="en">Take a co2 sample.</TaskDescription>
+            <Co2Sample/>
+            
+            <!-- Check if task should be repeated -->
+            <When test="@repeat">
+                <TaskDescription xml:lang="en">Repeat this task.</TaskDescription>
+                <DrivingStatus totalEstimatedHaversineDistanceFromStart="Xkm" />
+            </When>
+        </Repeat>
+        
+        <!-- Task to take a picture of another tree -->
+        <TaskDescription xml:lang="en">Measure another tree, a different one by taking a picture.</TaskDescription>
+        <DriveToTree locationURI="https://example.com/orchard/1.json"/>
+        
+        <!-- Check if task should be repeated -->
+        <When test="@repeat">
+            <TaskDescription xml:lang="en">Repeat this task.</TaskDescription>
+            <DrivingStatus totalEstimatedHaversineDistanceFromStart="Xkm" />
+        </When>
+    </CompositeTaskInformation>
+    
+    <!-- Define the sequence of tasks to repeat until condition is met -->
+    <Sequence>
+        <DriveToTree locationURI="https://example.com/orchard/0.json"/>
+        
+        <TaskDescription xml:lang="en">Take a picture of the first tree.</TaskDescription>
+        <DrivingStatus totalEstimatedHaversineDistanceFromStart="0km" />
+        <TakePicture locationURI="https://example.com/orchard/0.json"/>
+        
+        <!-- Define the condition to check if resultIsLow -->
+        <Condition expression="@resultIsLow"/>
+    </Sequence>
+    
+    <!-- Use an external function (XSLT) to repeat task -->
+    <ExternalFunction name="RepeatCo2Sample">
+        <XslFunction select="{local-name()}" />
+    </ExternalFunction>
+    
+    <EndLocation locationURI="https://example.com/orchard/4.json"/>
+</Mission>

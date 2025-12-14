@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Select 5 pistachio trees in a row and take a picture of 3 of them.
+      Target Trees: 12, 13, 14, 15, 16
+    </TaskDescription>
+    <TaskSequence>
+      <Task id="1">
+        <TaskType>NavigateTo</TaskType>
+        <TargetID>12</TargetID>
+        <Instruction>Navigate to tree ID 12.</Instruction>
+      </Task>
+      <Task id="2">
+        <TaskType>TakePicture</TaskType>
+        <TargetID>12</TargetID>
+        <Instruction>Take a picture of tree ID 12.</Instruction>
+      </Task>
+      <Task id="3">
+        <TaskType>NavigateTo</TaskType>
+        <TargetID>13</TargetID>
+        <Instruction>Navigate to tree ID 13.</Instruction>
+      </Task>
+      <Task id="4">
+        <TaskType>TakePicture</TaskType>
+        <TargetID>13</TargetID>
+        <Instruction>Take a picture of tree ID 13.</Instruction>
+      </Task>
+      <Task id="5">
+        <TaskType>NavigateTo</TaskType>
+        <TargetID>14</TargetID>
+        <Instruction>Navigate to tree ID 14.</Instruction>
+      </Task>
+      <Task id="6">
+        <TaskType>TakePicture</TaskType>
+        <TargetID>14</TargetID>
+        <Instruction>Take a picture of tree ID 14.</Instruction>
+      </Task>
+      <Task id="7">
+        <TaskType>NavigateTo</TaskType>
+        <TargetID>15</TargetID>
+        <Instruction>Navigate to tree ID 15.</Instruction>
+      </Task>
+      <Task id="8">
+        <TaskType>TakePicture</TaskType>
+        <TargetID>15</TargetID>
+        <Instruction>Take a picture of tree ID 15.</Instruction>
+      </Task>
+      <Task id="9">
+        <TaskType>NavigateTo</TaskType>
+        <TargetID>16</TargetID>
+        <Instruction>Navigate to tree ID 16.</Instruction>
+      </Task>
+      <Task id="10">
+        <TaskType>TakePicture</TaskType>
+        <TargetID>16</TargetID>
+        <Instruction>Take a picture of tree ID 16.</Instruction>
+      </Task>
+    </TaskSequence>
+  </CompositeTaskInformation>
+</MissionPlan>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.com/mission">
+    <xs:element name="mission">
+        <xs:complexType>
+            <!-- ... -->
+        </xs:complexType>
+    </xs:element>
+    <!-- ... -->
+</xs:schema>
+
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <task id="0">
+        <type>Picture</type>
+        <target>1</target>
+        <!-- ... -->
+    </task>
+</mission>

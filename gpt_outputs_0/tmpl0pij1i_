@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+  <name>Farm Visit - All Points</name>
+  <objective>Visit all points on the farm, prioritizing those sampled more recently.</objective>
+  <waypoints>
+    <!-- Task 1: Visit Point 12 -->
+    <task id="1">
+      <waypoint id="12" latitude="37.366300703749474" longitude="-120.42299259529793"/>
+      <reward>0.85</reward>
+      <description>Sample Point 12 - High last_sampled value.</description>
+    </task>
+
+    <!-- Task 2: Visit Point 13 -->
+    <task id="2">
+      <waypoint id="13" latitude="37.36634636896467" longitude="-120.42302669537153"/>
+      <reward>0.70</reward>
+      <description>Sample Point 13 - Medium last_sampled value.</description>
+    </task>
+
+    <!-- Task 3: Visit Point 14 -->
+    <task id="3">
+      <waypoint id="14" latitude="37.366304880110526" longitude="-120.4230246791031"/>
+      <reward>0.60</reward>
+      <description>Sample Point 14 - Medium last_sampled value.</description>
+    </task>
+
+    <!-- Task 4: Visit Point 15 -->
+    <task id="4">
+      <waypoint id="15" latitude="37.366299259529793" longitude="-120.42299259529793"/>
+      <reward>0.50</reward>
+      <description>Sample Point 15 - Low last_sampled value.</description>
+    </task>
+
+    <!-- Task 5: Visit Point 16 -->
+    <task id="5">
+      <waypoint id="16" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+      <reward>0.40</reward>
+      <description>Sample Point 16 - Low last_sampled value.</description>
+    </task>
+
+    <!-- Task 6: Visit Point 17 -->
+    <task id="6">
+      <waypoint id="17" latitude="37.36634636896467" longitude="-120.42302669537153"/>
+      <reward>0.30</reward>
+      <description>Sample Point 17 - Low last_sampled value.</description>
+    </task>
+
+    <!-- Task 8: Visit Point 19 -->
+    <task id="8">
+      <waypoint id="19" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+      <reward>0.10</reward>
+      <description>Sample Point 19 - Low last_sampled value.</description>
+    </task>
+  </waypoints>
+</mission>

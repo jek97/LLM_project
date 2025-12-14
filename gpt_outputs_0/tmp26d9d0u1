@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission.xsd">
+    <CompositeTaskInformation>
+        <!-- You are a mission planner that generates navigational XML mission plans based on robotic task representation -->
+        <TaskDescription>Generate a mission for orchard exploration based on the provided GeoJSON data.</TaskDescription>
+
+        <!-- Drive to starting point -->
+        <DriveToGpsCoordinates lat="37.3663048801105" lon="-120.4229925952979">Starting point</DriveToGpsCoordinates>
+
+        <!-- Loop through each tree in the GeoJSON file -->
+        <ForEachTree>
+            <!-- Drive to tree location -->
+            <DriveToGpsCoordinates lat="{@lat}" lon="{@lon}">Tree: {treeId}</DriveToGpsCoordinates>
+
+            <!-- Perform multiple actions at each tree if needed -->
+            <DoActionsForTree>
+                <TreeMeasureCos />
+                <TakePictures />
+                <TreeMeasureCo2 />
+                <TreeMeasureTemperature />
+            </DoActionsForTree>
+        </ForEachTree>
+
+        <!-- Drive back to starting point -->
+        <DriveToGpsCoordinates lat="37.3663048801105" lon="-120.4229925952979">Starting point</DriveToGpsCoordinates>
+    </CompositeTaskInformation>
+    <Outcome>Successfully completed the orchard exploration mission based on the provided GeoJSON data. Mission covered a considerable distance across the orchard.</Outcome>
+</MissionPlan>

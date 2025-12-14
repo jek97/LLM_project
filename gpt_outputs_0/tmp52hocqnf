@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>Visit as many points as possible within 100 meters, taking a picture of each tree.</TaskDescription>
+    <TaskSequence>
+      <Task id="Task1">
+        <TaskType>Navigation</TaskType>
+        <TargetNodeId>12</TargetNodeId>
+        <DistanceTolerance>100</DistanceTolerance>
+        <PictureTask>Take a picture of the tree.</PictureTask>
+      </Task>
+      <Task id="Task2">
+        <TaskType>Navigation</TaskType>
+        <TargetNodeId>13</TargetNodeId>
+        <DistanceTolerance>100</DistanceTolerance>
+        <PictureTask>Take a picture of the tree.</PictureTask>
+      </Task>
+      <Task id="Task3">
+        <TaskType>Navigation</TaskType>
+        <TargetNodeId>14</TargetNodeId>
+        <DistanceTolerance>100</DistanceTolerance>
+        <PictureTask>Take a picture of the tree.</PictureTask>
+      </Task>
+      <Task id="Task4">
+        <TaskType>Navigation</TaskType>
+        <TargetNodeId>15</TargetNodeId>
+        <DistanceTolerance>100</DistanceTolerance>
+        <PictureTask>Take a picture of the tree.</PictureTask>
+      </Task>
+      <Task id="Task5">
+        <TaskType>Navigation</TaskType>
+        <TargetNodeId>16</TargetNodeId>
+        <DistanceTolerance>100</DistanceTolerance>
+        <PictureTask>Take a picture of the tree.</PictureTask>
+      </Task>
+      <Task id="Task6">
+        <TaskType>Navigation</TaskType>
+        <TargetNodeId>17</TargetNodeId>
+        <DistanceTolerance>100</DistanceTolerance>
+        <PictureTask>Take a picture of the tree.</PictureTask>
+      </Task>
+      <Task id="Task7">
+        <TaskType>Navigation</TaskType>
+        <TargetNodeId>18</TargetNodeId>
+        <DistanceTolerance>100</DistanceTolerance>
+        <PictureTask>Take a picture of the tree.</PictureTask>
+      </Task>
+      <Task id="Task8">
+        <TaskType>Navigation</TaskType>
+        <TargetNodeId>19</TargetNodeId>
+        <DistanceTolerance>100</DistanceTolerance>
+        <PictureTask>Take a picture of the tree.</PictureTask>
+      </Task>
+    </TaskSequence>
+  </CompositeTaskInformation>
+</MissionPlan>

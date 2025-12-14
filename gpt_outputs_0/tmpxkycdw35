@@ -1,0 +1,7 @@
+<mission xmlns="http://example.com/mission">
+  <task id="1" xmlns="http://example.com/task">
+    <!-- Task content -->
+    <move fromPoint="..." toPoint="..."/>
+    <takepicture point="...">
+  </task>
+</mission>

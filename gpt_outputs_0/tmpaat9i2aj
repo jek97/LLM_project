@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GeoJSON xmlns="http://www.opengis.net/gml">
+    <TimeInstant>
+        <time>2023-01-01T00:00:00Z</time>
+    </TimeInstant>
+    
+    <FeatureCollection xmlns="">
+        <featureMember gml:id="1">
+            <Feature>
+                <TimeInstant>
+                    <time>2023-01-01T00:00:00Z</time>
+                </TimeInstant>
+                <gml:Name>North most tree</gml:Name>
+                <gml:Point gml:id="point_1">
+                    <coordinates xmlns="http://www.w3.org/2001/XMLSchema-instance" ref="point"/>
+                </gml:Point>
+            </Feature>
+        </featureMember>
+        
+        <featureMember gml:id="2">
+            <Feature>
+                <TimeInstant>
+                    <time>2023-01-01T00:00:00Z</time>
+                </TimeInstant>
+                <gml:Name>East most tree</gml:Name>
+                <gml:Point gml:id="point_2">
+                    <coordinates xmlns="http://www.w3.org/2001/XMLSchema-instance" ref="point"/>
+                </gml:Point>
+            </Feature>
+        </featureMember>
+        
+        <featureMember gml:id="3">
+            <Feature>
+                <TimeInstant>
+                    <time>2023-01-01T00:00:00Z</time>
+                </TimeInstant>
+                <gml:Name>South most tree</gml:Name>
+                <gml:Point gml:id="point_3">
+                    <coordinates xmlns="http://www.w3.org/2001/XMLSchema-instance" ref="point"/>
+                </gml:Point>
+            </Feature>
+        </featureMember>
+        
+        <featureMember gml:id="4">
+            <Feature>
+                <TimeInstant>
+                    <time>2023-01-01T00:00:00Z</time>
+                </TimeInstant>
+                <gml:Name>West most tree</gml:Name>
+                <gml:Point gml:id="point_4">
+                    <coordinates xmlns="http://www.w3.org/2001/XMLSchema-instance" ref="point"/>
+                </gml:Point>
+            </Feature>
+        </featureMember>
+        
+        <TimeInstant>
+            <time>2023-01-01T00:00:00Z</time>
+        </TimeInstant>
+    </FeatureCollection>
+    
+</GeoJSON>

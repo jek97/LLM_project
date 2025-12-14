@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <CompositeTaskInformation>
+        <TaskDescription></TaskDescription>
+        <!-- Add other CompositeTaskInformation elements here if needed -->
+    </CompositeTaskInformation>
+    <GeoData></GeoData>
+    <Outcome></Outcome>
+</MissionPlan>

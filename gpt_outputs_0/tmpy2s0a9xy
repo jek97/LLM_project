@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompositeTaskInformation>
+  <TaskDescription>Navigate to tree location #1 and take pictures.</TaskDescription>
+  <MissionTasks>
+    <!-- Mission tasks go here -->
+  </MissionTasks>
+</CompositeTaskInformation>

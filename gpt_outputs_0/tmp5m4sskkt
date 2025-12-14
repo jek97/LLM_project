@@ -1,0 +1,32 @@
+<mmission_plan>
+  <!-- Mission plan content -->
+  
+</mmission_plan>
+
+<check_temperature id="temp Reading">
+  <temperature reading="tempValue">tempValue</temperature>
+  
+  <if_low_temp>
+    <check_co2 id="CO2 Reading">
+      <co2 reading="co2Value">co2Value</co2>
+      
+      <if_both_low>
+        <drive_to_far id="far_tree" coordinates="latFar, lngFar"/>
+        
+        <!-- Repeat the process from the far tree -->
+        <start_at_tree id="1" coordinates="lat1, lng1"/>
+        
+        <!-- Continue with the same actions as above -->
+        <take_picture />
+        
+        <!-- Add conditions and further actions here -->
+      </if_both_low>
+    </check_co2>
+    
+    <!-- If CO2 is not low or temperature is not low -->
+  </if_low_temp>
+  
+</check_temperature>
+
+<!-- If temperature is not low -->
+<if_not_low_temp/>

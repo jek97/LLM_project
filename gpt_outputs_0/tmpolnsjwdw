@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MISSION>
+  <Mission_Summary>
+    <Mission_Number>1</Mission_Number>
+    <Mission_Date>2023-10-05</Mission_Date>
+    <Mission_Time>14:30:00</Mission_Time>
+  </Mission_Summary>
+  <Mission_Objective>
+    From the farm, select 5 pistachio trees in a row and take pictures of 3 of them.
+  </Mission_Objective>
+  <Starting_Point>
+    <Coordinates>-120.423068</Coordinates> <!-- Starting coordinates from the farm -->
+    <Altitude>100</Altitude> <!-- Altitude above sea level -->
+  </Starting_Point>
+  <Mission_Tasks>
+    <Task_LatLnges>
+      <Waypoint>
+        <Coordinates>-120.423068, 37.366356</Coordinates>
+        <Distance uom="meters">0</Distance>
+        <Time Estimate="0">minutes</Time>
+        <Notes></Notes>
+      </Waypoint>
+
+      <!-- Task 1: Visit the first tree -->
+      <Waypoint>
+        <Coordinates>-120.423056, 37.366284</Coordinates>
+        <Distance uom="meters">Distance from starting point to this tree</Distance>
+        <Time Estimate="Time taken to travel between points in minutes">minutes</Time>
+        <Notes></Notes>
+      </Waypoint>
+
+      <!-- Task 2: Visit the second tree -->
+      <Waypoint>
+        <Coordinates>-120.423044, 37.366212</Coordinates>
+        <Distance uom="meters">Distance from previous point to this tree</Distance>
+        <Time Estimate="Time taken to travel between points in minutes">minutes</Time>
+        <Notes></Notes>
+      </Waypoint>
+
+      <!-- Task 3: Visit the third tree -->
+      <Waypoint>
+        <Coordinates>-120.423032, 37.366140</Coordinates>
+        <Distance uom="meters">Distance from previous point to this tree</Distance>
+        <Time Estimate="Time taken to travel between points in minutes">minutes</Time>
+        <Notes></Notes>
+      </Waypoint>
+
+      <!-- Task 4: Visit the fourth tree -->
+      <Waypoint>
+        <Coordinates>-120.423020, 37.366068</Coordinates>
+        <Distance uom="meters">Distance from previous point to this tree</Distance>
+        <Time Estimate="Time taken to travel between points in minutes">minutes</Time>
+        <Notes></Notes>
+      </Waypoint>
+
+      <!-- Task 5: Visit the fifth tree -->
+      <Waypoint>
+        <Coordinates>-120.423008, 37.366000</Coordinates>
+        <Distance uom="meters">Distance from previous point to this tree</Distance>
+        <Time Estimate="Time taken to travel between points in minutes">minutes</Time>
+        <Notes></Notes>
+      </Waypoint>
+
+      <!-- Task 5: Take pictures of the third tree -->
+      <Waypoint>
+        <Coordinates>-120.423008, 37.366000</Coordinates>
+        <Distance uom="meters">Distance from previous point to this tree</Distance>
+        <Time Estimate="Time taken to travel between points in minutes">minutes</Time>
+        <Notes></Notes>
+      </Waypoint>
+
+      <!-- Task 5: Return to the farm -->
+      <Waypoint>
+        <Coordinates>-120.423068, 37.366356</Coordinates>
+        <Distance uom="meters">Total distance traveled in this mission</Distance>
+        <Time Estimate="Total time taken for this mission">minutes</Time>
+        <Notes></Notes>
+      </Waypoint>
+    </Task_LatLnges>
+
+    <Task_List>
+      <!-- Task 1: Visit the first tree and take a picture -->
+      <Task>
+        <Description>Visit the first tree in the selected row of trees.</Description>
+        <Waypoints>
+          <Waypoint Coordinates="-120.423056, 37.366284" />
+          <!-- Optional: Include waypoints for other actions -->
+        </Waypoints>
+        <Distance uom="meters">Calculate distance using Haversine formula</Distance>
+      </Task>
+
+      <!-- Task 2: Visit the second tree and take a picture -->
+      <Task>
+        <Description>Visit the second tree in the selected row of trees.</Description>
+        <Waypoints>
+          <Waypoint Coordinates="-120.423044, 37.366212" />
+        </Waypoints>
+        <Distance uom="meters">Calculate distance using Haversine formula</Distance>
+      </Task>
+
+      <!-- Task 3: Visit the third tree and take a picture -->
+      <Task>
+        <Description>Visit the third tree in the selected row of trees.</Description>
+        <Waypoints>
+          <Waypoint Coordinates="-120.423032, 37.366140" />
+        </Waypoints>
+        <Distance uom="meters">Calculate distance using Haversine formula</Distance>
+      </Task>
+
+      <!-- Task 4: Visit the fourth tree -->
+      <Task>
+        <Description>Visit the fourth tree in the selected row of trees.</Description>
+        <Waypoints>
+          <Waypoint Coordinates="-120.423020, 37.366068" />
+        </Waypoints>
+        <Distance uom="meters">Calculate distance using Haversine formula</Distance>
+      </Task>
+
+      <!-- Task 5: Visit the fifth tree -->
+      <Task>
+        <Description>Visit the fifth tree in the selected row of trees.</Description>
+        <Waypoints>
+          <Waypoint Coordinates="-120.423008, 37.366000" />
+        </Waypoints>
+        <Distance uom="meters">Calculate distance using Haversine formula</Distance>
+      </Task>
+
+    </Task_List>
+  </Mission_Tasks>
+</MISSION>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<default namespace xmlns*="http://example.com/mission/1.0">
+
+<task name="Capture Northmost Tree">
+  <coordinates>
+    <x>-120.42305</x>
+    <y>37.36638</y>
+  </coordinates>
+</task>
+
+<task name="Capture Eastmost Tree">
+  <coordinates>
+    <x>-120.42295</x>
+    <y>37.36645</y>
+  </coordinates>
+</task>
+
+<task name="Capture Southmost Tree">
+  <coordinates>
+    <x>-120.42315</x>
+    <y>37.36630</y>
+  </coordinates>
+</task>
+
+<task name="Capture Westmost Tree">
+  <coordinates>
+    <x>-120.42310</x>
+    <y>37.36650</y>
+  </coordinates>
+</task>
+
+<missionDetails>
+  <startDateTime>2023-10-01T12:00:00Z</startDateTime>
+  <endDateTime>2023-10-01T16:00:00Z</endDateTime>
+  <duration>4 hours</duration>
+</missionDetails>
+
+</default xmlns*="http://example.com/mission/1.0">

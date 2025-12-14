@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roboticstask:RobotMission xmlns="http://roboticstask.org/schema/CompositeTaskInformation.xsd"
+   xsi:schemaLocation="http://roboticstask.org/schema/CompositeTaskInformation 
+   http://roboticstask.org/schema/CompositeTaskInformation.xsd" id="farmMission">

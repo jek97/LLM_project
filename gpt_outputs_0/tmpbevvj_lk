@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+  <name>Farm Visit - All Points</name>
+  <waypoints>
+    <task id="1" latitude="37.366300703749474" longitude="-120.42299259529793"/>
+  </waypoints>
+</mission>

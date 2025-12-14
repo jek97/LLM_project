@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan">
+    <Header>
+        <Version>1.0</Version>
+        <Author>Robotic Mission Planner</Author>
+        <Date>YYYY-MM-DDThh:mm:ssZ</Date>
+    </Header>
+    <CompositeTaskInformation>
+        <TaskDescription>Generate mission plan to visit all points on the farm.</TaskDescription>
+        <Tasks>
+            <!-- Tasks for each point -->
+            <Task id="1">
+                <TaskType>DriveToLocation</TaskType>
+                <Parameters>
+                    <Parameter name="destination" type="GPSLocation">
+                        <Value xsi:type="Point">
+                            <longitude>-120.4230XXX</longitude>
+                            <latitude>37.366XXX</latitude>
+                        </Value>
+                    </Parameter>
+                </Parameters>
+                <Reward>0.5 - (last_sampled / MAX_LAST_SAMPLED)</Reward>
+            </Task>
+            <!-- Repeat for each point -->
+        </Tasks>
+    </CompositeTaskInformation>
+</MissionPlan>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:grs="http://www.w3.org/2007/xg/om"
+             xsi:schemaLocation="http://org roboticmissions.org/xsd/MissionPlan.xsd"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+             xsi:noNamespaceSchemaLocation="missionPlan.xsd">
+    <TaskDescription>Take picture of 4 trees</TaskDescription>
+    <CompositeTaskInformation>
+        <Tasks>
+            <Task>
+                <grs:location xml:lang="en" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+                              xmlns:xlink="http://www.w3.org/1999/xlink">-120.42302289785604 37.36635688574164</grs:location>
+                <Name>Visit Tree 1</Name>
+                <Description>Drive to Northmost tree and take picture.</DriveToTree id="0">
+                    <DrivingLocation>grs:location(-120.42302289785604,37.36635688574164)</DrivingLocation>
+                </DriveToTree>
+            </Task>
+            <Task>
+                <grs:location xml:lang="en" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+                              xmlns:xlink="http://www.w3.org/1999/xlink">-120.42309252722157 37.36631509745154</grs:location>
+                <Name>Visit Tree 2</Name>
+                <Description>Drive to Eastmost tree and take picture.</DriveToTree id="1">
+                    <DrivingLocation>grs:location(-120.42309252722157,37.36631509745154)</DrivingLocation>
+                </DriveToTree>
+            </Task>
+            <Task>
+                <grs:location xml:lang="en" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+                              xmlns:xlink="http://www.w3.org/1999/xlink">-120.4230350832969 37.36635015674898</grs:location>
+                <Name>Visit Tree 3</Name>
+                <Description>Drive to Southmost tree and take picture.</DriveToTree id="2">
+                    <DrivingLocation>grs:location(-120.4230350832969,37.36635015674898)</DrivingLocation>
+                </DriveToTree>
+            </Task>
+            <Task>
+                <grs:location xml:lang="en" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+                              xmlns:xlink="http://www.w3.org/1999/xlink">-120.42308819251039 37.366300236834725</grs:location>
+                <Name>Visit Tree 4</Name>
+                <Description>Drive to Westmost tree and take picture.</DriveToTree id="3">
+                    <DrivingLocation>grs:location(-120.42308819251039,37.366300236834725)</DrivingLocation>
+                </DriveToTree>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+</MissionPlan>

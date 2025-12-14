@@ -1,0 +1,55 @@
+ I apologize for the mistake in my previous response. Here is the corrected XML file for your mission plan:
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <starting_point>
+        <x>0</x>
+        <y>0</y>
+    </starting_point>
+    <tasks>
+        <task id="1">
+            <name>Measure cos.</name>
+            <destination>
+                <x>4</x>
+                <y>4</y>
+            </destination>
+        </task>
+        <task id="2">
+            <name>Take pictures of nearby trees.</name>
+            <destination>
+                <x>6</x>
+                <y>6</y>
+            </destination>
+        </task>
+        <task id="3">
+            <name>Measure another tree as far away as possible for co2.</name>
+            <destination>
+                <x>10</x>
+                <y>10</y>
+            </destination>
+        </task>
+        <task id="4">
+            <name>Take pictures of nearby trees.</name>
+            <destination>
+                <x>8</x>
+                <y>8</y>
+            </destination>
+        </task>
+        <task id="5">
+            <name>Take a temperature reading at any one of the northern most trees.</name>
+            <destination>
+                <x>12</x>
+                <y>12</y>
+            </destination>
+        </task>
+        <task id="6">
+            <name>Return to end.</name>
+            <destination>
+                <x>0</x>
+                <y>0</y>
+            </destination>
+        </task>
+    </tasks>
+</mission>
+```
+I hope this helps. Let me know if you have any further questions or concerns. 

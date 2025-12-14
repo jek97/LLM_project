@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://example.com/robotic_mission_plan.xsd">
+  <CompositeTaskInformation>
+    <tasks>
+      <TaskDescription xml:lang="en-US">Take a picture of the first tree</TaskDescription>
+      <DrivingTask startLocation="${trees[0].geometry.coordinates}" drivingTime="1" />
+      <CameraAction cameraId="camera1" actionType="takePicture" />
+    </TaskDescription>
+
+    <TaskDescription xml:lang="en-US">If reading is low, take a CO2 sample. Otherwise, take a temperature reading</TaskDescription>
+    <DrivingTask startLocation="${trees[0].geometry.coordinates}" drivingTime="0" />
+    <SensorAction sensorId="sensor1" actionType="readValue" value="${trees[0].properties.reading}" />
+    <If>
+      <Condition value="${trees[0].properties.reading} &lt; 20">
+        <TaskDescription xml:lang="en-US">Take a CO2 sample</TaskDescription>
+        <DrivingTask startLocation="${trees[0].geometry.coordinates}" drivingTime="0" />
+        <SensorAction sensorId="sensor2" actionType="sampleCO2" />
+      </Condition>
+      <Otherwise>
+        <TaskDescription xml:lang="en-US">Take a temperature reading</TaskDescription>
+        <DrivingTask startLocation="${trees[0].geometry.coordinates}" drivingTime="0" />
+        <SensorAction sensorId="sensor1" actionType="readTemperature" />
+      </Otherwise>
+    </If>
+
+    <!-- Repeat process for each tree -->
+    <Repeat maxIter="10">
+      <TaskDescription xml:lang="en-US">Measure another tree, a different one</TaskDescription>
+      <DrivingTask startLocation="${trees[n].geometry.coordinates}" drivingTime="1" />
+      <CameraAction cameraId="camera1" actionType="takePicture" />
+      <If>
+        <Condition value="${trees[n].properties.reading} &lt; 20">
+          <TaskDescription xml:lang="en-US">Sample CO2</TaskDescription>
+          <DrivingTask startLocation="${trees[n].geometry.coordinates}" drivingTime="0" />
+          <SensorAction sensorId="sensor2" actionType="sampleCO2" />
+        </Condition>
+        <Otherwise>
+          <!-- Repeat the process if CO2 reading is low -->
+          <If>
+            <Condition value="${trees[n].properties.reading} &lt; 20">
+              <TaskDescription xml:lang="en-US">Sample CO2 again to confirm</TaskDescription>
+              <DrivingTask startLocation="${trees[n].geometry.coordinates}" drivingTime="0" />
+              <SensorAction sensorId="sensor2" actionType="sampleCO2Again" />
+            </Condition>
+          </If>
+        </Otherwise>
+      </If>
+    </Repeat>
+
+    <!-- Final task: Go to end -->
+    <TaskDescription xml:lang="en-US">Go to end</TaskDescription>
+    <DrivingTask startLocation="${trees[ trees.length - 1].geometry.coordinates}" drivingTime="0" />
+  </TaskDescription>
+</CompositeTaskInformation>
+</mission>

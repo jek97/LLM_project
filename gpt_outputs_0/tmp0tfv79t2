@@ -1,0 +1,43 @@
+It seems like the issue persists.
+
+Let me try to simplify the code and provide a minimal example that generates an XML file with some basic tasks.
+
+```python
+import xml.etree.ElementTree as ET
+from geojson import load
+
+class MissionPlan:
+    def __init__(self):
+        self.root = ET.Element('missionPlan')
+
+    def add_task(self, task_description):
+        task = ET.SubElement(self.root, 'task')
+        task.set('xml:lang', 'en')
+        task.append(ET.fromstring(task_description))
+
+def load_geojson_file(file_path):
+    return load(file_path)
+
+def main():
+    mission_plan = MissionPlan()
+
+    geojson_data = load_geojson_file('path_to_your_geojson_file.json')
+
+    driving_to_tree1 = 'treeId=0'
+    action_type1 = 'DetermineTemperature'
+
+    task_description1 = '<m:TaskDescription xml:lang="en">Drive to tree with id 0</m:TaskDescription>'
+
+    mission_plan.add_task(task_description1)
+
+    tree = ET.ElementTree(mission_plan.root)
+    tree.write('mission_plan.xml')
+
+if __name__ == '__main__':
+    main()
+```
+Please replace `'path_to_your_geojson_file.json'` with the actual path to your GeoJSON file.
+
+This code creates a `MissionPlan` class that generates an XML file with a single task. The `load_geojson_file` function loads a GeoJSON file and returns its data as a Python object. The `main` function adds a task to the mission plan and writes the XML file to disk when you run it.
+
+If this code still doesn't work, please provide me with more information about your error message and the content of your GeoJSON file. I'll be happy to help you further.

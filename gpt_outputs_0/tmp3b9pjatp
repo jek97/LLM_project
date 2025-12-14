@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan xmlns="http://www.example.com/missionPlan"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.example.com/missionPlan http://www.example.com/missionPlan.xsd">
+
+    <missionHeader>
+        <farmName>Pistachio Orchard</farmName>
+        <plannerName>Mission Planner 1.0</plannerName>
+        <dateTime>2023-04-15T12:30:00-07:00</dateTime>
+    </missionHeader>
+    <compositeTaskInformation>
+        <taskDescription>Requested mission to visit 5 pistachio trees in a row and take pictures of 3 of them from the original question.</taskDescription>
+        <subTasks>
+            <task sequence="1">
+                <moveTo location="{lat: 'coordinate_value', lon: 'coordinate_value'}">Pistachio Tree 1</moveTo>
+                <takePhoto cameraAngle="45"/>
+            </task>
+            <!-- Add the remaining tasks here for the rest of the tree visits -->
+        </subTasks>
+    </compositeTaskInformation>
+    <outcome estimatedDistanceTraveled="large_distance"/>
+</missionPlan>

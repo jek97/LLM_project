@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan">
+  <Task id="1" name="Initial Assessment" Description="Take a picture of the first tree.">
+  </Task>
+</MissionPlan>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission_plan_schema.xsd">
+    <Mission>
+        <Name>Visit and photograph pistachio trees</Name>
+        <Description>{Original Question}</Description>
+
+        <!-- Loop through the first 5 pistachio trees -->
+        <CompositeTaskInformation>
+            <LoopFromTo startIndex="1" endIndex="5">
+                <!-- Drive to the tree location -->
+                <DriveToLocation TaskID="{{LoopIndex}}">
+                    <TreeType xsi:type="Pistachio">
+                        <!-- Use the index to select the correct tree -->
+                        <Id>{{LoopIndex}</Id>
+                    </TreeType>
+                    <Location xsi:type="GPS">
+                        <!-- The GPS location should be obtained from the GeoJSON file -->
+                        <Latitude>Tree Latitude {{LoopIndex}</Latitude>
+                        <Longitude>Tree Longitude {{LoopIndex}</Longitude>
+                    </Location>
+                </DriveToLocation>
+
+                <!-- Take a picture of the tree if it's within the selected range -->
+                <Task ID="{{LoopIndex}}">
+                    <TakePicture>
+                        <TreeType xsi:type="Pistachio">
+                            <Id>{{LoopIndex}</Id>
+                        </TreeType>
+                    </TakePicture>
+                </Task>
+            </LoopFromTo>
+        </CompositeTaskInformation>
+
+        <!-- Estimate the total distance traveled -->
+        <Outcome>The estimated travel distance was significant.</Outcome>
+    </Mission>
+</MissionPlan>

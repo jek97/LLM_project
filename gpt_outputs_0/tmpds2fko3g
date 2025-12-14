@@ -1,0 +1,26 @@
+ Here is an example XML file for your mission plan:
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <name>Orchard Exploration</name>
+    <description>Exploring the orchard and taking pictures of trees.</description>
+    <tasks>
+        <task id="1">
+            <name>Take a picture of the northern most tree</name>
+            <location>[Northern most tree coordinates]</location>
+            <action>Take a picture</action>
+        </task>
+        <task id="2">
+            <name>Drive to the middle of the orchard</name>
+            <location>[Middle of the orchard coordinates]</location>
+            <action>Drive to location</action>
+        </task>
+        <task id="3">
+            <name>Take a picture of two trees next to each other</name>
+            <location>[Eastern end middle coordinates]</location>
+            <action>Take a picture</action>
+        </task>
+    </tasks>
+</mission>
+```
+Please replace the `[Northern most tree coordinates]`, `[Middle of the orchard coordinates]`, and `[Eastern end middle coordinates]` with the actual coordinates of the trees you want to take pictures of. 

@@ -1,0 +1,15 @@
+<mission>
+  <task name="Drive to location">
+    <action type="drive" duration="30 seconds"/>
+  </task>
+  
+  <task name="Take pictures of two trees next to each other">
+    <action type="take_picture" target="tree1"/>
+    <action type="take_picture" target="tree2"/>
+  </task>
+  
+  <task name="Take CO2 readings of two trees next to each other">
+    <action type="measure_co2" target="tree1"/>
+    <action type="measure_co2" target="tree2"/>
+  </task>
+</mission>

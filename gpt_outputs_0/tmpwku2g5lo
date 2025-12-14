@@ -1,0 +1,13 @@
+ <!-- Mission Plan XML -->
+ <MissionPlan>
+   <CompositeTaskInformation>
+     <TaskDescription element="..."/ original_question="..." />
+     <GeographicLocation id="..." lat="..." lon="...">
+       <!-- Include any additional geographic references here -->
+     </GeographicLocation>
+     <TreeReference type="..." treeId="...">
+       <!-- Ensure all required attributes are present -->
+     </TreeReference>
+   </CompositeTaskInformation>
+   <!-- Other mission components -->
+ </MissionPlan>

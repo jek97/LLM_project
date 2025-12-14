@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan">
+    <Header>
+        <StartLocation>
+            <!-- Replace with actual coordinates -->
+            <Latitude>37.7749</Latitude>
+            <Longitude>-122.4194</Longitude>
+        </StartLocation>
+        <EndLocation>
+            <!-- Replace with actual coordinates -->
+            <Latitude>37.7749</Latitude>
+            <Longitude>-122.4194</Longitude>
+        </EndLocation>
+    </Header>
+    <CompositeTaskInformation>
+        <TaskDescription>
+            Original Question: Take a picture of the first tree. If the reading is low, take a CO2 sample. Otherwise, take a temperature reading. Then, measure another tree, a different one by taking a picture. If it's low, sample CO2. If that reading is low, sample CO2 again to confirm. If still low, continue driving to another tree and take another CO2 sample. Finally, go to end.
+        </TaskDescription>
+        <Tasks>
+            <Task id="1">
+                <Action id="1.1">
+                    <Type>Drive</Type>
+                    <Destination>
+                        <!-- Replace with actual tree coordinates -->
+                        <Latitude>37.7749</Latitude>
+                        <Longitude>-122.4194</Longitude>
+                    </Destination>
+                </Action>
+                <Action id="1.2">
+                    <Type>TakePicture</Type>
+                    <Subject>
+                        <!-- Replace with actual tree coordinates -->
+                        <Latitude>37.7749</Latitude>
+                        <Longitude>-122.4194</Longitude>
+                    </Subject>
+                </Action>
+                <Action id="1.3">
+                    <Type>Reading</Type>
+                    <Subject>
+                        <!-- Replace with actual tree coordinates -->
+                        <Latitude>37.7749</Latitude>
+                        <Longitude>-122.4194</Longitude>
+                    </Subject>
+                </Action>
+                <!-- Add more actions as needed -->
+            </Task>
+            <!-- Add more tasks as necessary -->
+        </Tasks>
+    </CompositeTaskInformation>
+    <Outcome>
+        <!-- Comment the total estimated haversine distance traveled from start to end here -->
+        This mission involves a moderate amount of travel.
+    </Outcome>
+</MissionPlan>

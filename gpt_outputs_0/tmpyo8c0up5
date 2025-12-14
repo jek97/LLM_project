@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ns="http://example.com/mission.xsd">
+  <xs:element name="Mission">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- composite task information -->
+        <xs:element name="CompositeTaskInformation" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="CompositeTaskInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- task description -->
+        <xs:element name="TaskDescription" maxOccurs="unbounded"/>
+        <!-- driving action -->
+        <xs:element name="DrivingAction" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TaskDescription">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="xml:lang" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="DrivingAction">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- start location -->
+        <xs:element name="StartLocation" maxOccurs="1"/>
+        <!-- end location -->
+        <xs:element name="EndLocation" maxOccurs="1"/>
+        <!-- distance -->
+        <xs:element name="Distance" type="DistanceType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Distance">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="unit" type="DistanceUnitType"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:enum name="DistanceUnitType">
+    <xs:value>kilometers</xs:value>
+  </xs:enum>
+
+  <!-- tree locations -->
+  <xs:element name="Tree" maxOccurs="unbounded"/>
+  <xs:complexType name="TreeType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="id" type="xs:string"/>
+        <xs:attribute name="x" type="xs:integer"/>
+        <xs:attribute name="y" type="xs:integer"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+</xs:schema>
+
+<ns:Mission xmlns:ns="http://example.com/mission.xsd">
+  <!-- composite task information -->
+  <ns:CompositeTaskInformation id="1"/>
+  <!-- composite task information -->
+  <ns:CompositeTaskInformation id="2"/>
+  
+  <!-- tree locations -->
+  <ns:Tree id="3" x="4" y="5"/>
+</ns:Mission>

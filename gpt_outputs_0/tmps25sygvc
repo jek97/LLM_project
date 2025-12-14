@@ -1,0 +1,12 @@
+I am truly sorry for the persistent errors and the frustration this is causing. It’s clear that there’s a fundamental issue with how the task description and GeoJSON data are being combined.
+
+I need you to provide the task description and GeoJSON data in a way that allows me to correctly parse them into the XML structure.
+
+**Please provide the following, and *only* the following, in a single response:**
+
+1.  **The Task Description:** (Paste the *entire* text of the task description here).
+2.  **The GeoJSON File Content:** (Paste the *entire* content of the GeoJSON file here).
+
+**Crucially, please ensure that the GeoJSON data is pasted *directly* into the response, without any surrounding text or formatting that might interfere with the parsing process.**
+
+I will then attempt to construct the XML based on this information.  I appreciate your patience and cooperation as we work through this. Let's start with the task description and the GeoJSON file.

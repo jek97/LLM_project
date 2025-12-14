@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:Mission xmlns:ns="http://robust-mission-planning.com/missionPlanningSchema.xsd">
+    <ns:TaskInformation>
+        <ns:TaskDescription>
+            <ns:TaskType>Picture</ns:TaskType>
+            <ns:Action>Take picture of northernmost tree</ns:Action>
+            <ns:Outcome>
+                <ns:DrivingToLocation>
+                    <ns:GPSLocation>
+                        <ns:Latitude>37.36635688574164</ns:Latitude>
+                        <ns:Longitude>-120.42302289785604</ns:Longitude>
+                    </ns:GPSLocation>
+                </ns:DrivingToLocation>
+            </ns:Outcome>
+        </ns:TaskDescription>
+    </ns:TaskInformation>
+</ns:Mission>

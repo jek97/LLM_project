@@ -1,0 +1,22 @@
+ Sure, here is the XML mission plan based on your task description:
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <name>Tree Picture and CO2 Readings</name>
+    <tasks>
+        <task id="1">
+            <name>Take a picture of 2 trees next to each other</name>
+            <location>[INSERT LOCATION OF THE TREES]</location>
+            <type>Camera</type>
+        </task>
+        <task id="2">
+            <name>Take 2 CO2 readings of two trees next to each other</name>
+            <location>[INSERT LOCATION OF THE TREES]</location>
+            <type>CO2 Sensor</type>
+        </task>
+    </tasks>
+</mission>
+```
+Please replace `[INSERT LOCATION OF THE TREES]` with the actual location of the trees you want to take a picture of and measure CO2 levels.
+
+Let me know if you have any questions or need further assistance. 

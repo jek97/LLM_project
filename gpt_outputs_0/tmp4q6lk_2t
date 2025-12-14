@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      This mission requires the robot to drive to a row of 5 pistachio trees, select 3 of them, and take a picture of each.
+    </TaskDescription>
+    <EstimatedTotalDistance>Approximately 500 meters</EstimatedTotalDistance>
+  </CompositeTaskInformation>
+
+  <Task>
+    <TaskID>1</TaskID>
+    <TaskType>Navigation</TaskType>
+    <TaskDescription>Navigate to the row of 5 pistachio trees.</TaskDescription>
+    <TargetID>1</TargetID>
+    <Instructions>
+      1. Locate the row of 5 pistachio trees.  This row begins at coordinates approximately -120.42299259529793, 37.36635678715399.
+      2. Maintain a safe driving speed and navigate directly to the starting point of the row.
+    </Instructions>
+  </Task>
+
+  <Task>
+    <TaskID>2</TaskID>
+    <TaskType>Selection</TaskType>
+    <TaskDescription>Select 3 pistachio trees from the row.</TaskDescription>
+    <TargetID>2</TargetID>
+    <Instructions>
+      1.  Once at the row of 5 trees, visually inspect the trees.
+      2.  Choose 3 trees to photograph.  Prioritize trees that appear healthy and representative.
+    </Instructions>
+  </Task>
+
+  <Task>
+    <TaskID>3</TaskID>
+    <TaskType>Photography</TaskType>
+    <TaskDescription>Take a picture of each of the selected trees.</TaskDescription>
+    <TargetID>3</TargetID>
+    <Instructions>
+      1.  Position the robot to obtain a clear, high-quality photograph of the first selected tree.
+      2.  Take the photograph.
+      3.  Repeat steps 1 &amp; 2 for the remaining two selected trees.
+    </Instructions>
+  </Task>
+
+</MissionPlan>

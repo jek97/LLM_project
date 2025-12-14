@@ -1,0 +1,26 @@
+<mission>
+  <task type="picture">
+    <instruction>Take a picture of tree number 4.</instruction>
+    <waypoints>
+      <!-- North most -->
+      <wp_id>1</wp_id>
+      <wp_id>2</wp_id>
+      <wp_id>3</wp_id>
+
+      <!-- East most -->
+      <wp_id>4</wp_id>
+      <wp_id>5</wp_id>
+      <wp_id>6</wp_id>
+
+      <!-- South most -->
+      <wp_id>7</wp_id>
+      <wp_id>8</wp_id>
+      <wp_id>9</wp_id>
+
+      <!-- West most -->
+      <wp_id>10</wp_id>
+      <wp_id>11</wp_id>
+      <wp_id>12</wp_id>
+    </waypoints>
+  </task>
+</mission>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robust-mission-planning.com/missionplan 
+             http://robust-mission-planning.com/missionplan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Find a tree somewhere in the middle of the orchard and measure cos.</TaskDescription>
+    <DrivingTask>
+      <LocationRef>orchard-start</LocationRef>
+      <Action>DriveToTree</Action>
+      <TreeId>5</TreeId>
+    </DrivingTask>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription>Take 2 pictures of nearby trees if cos. is low reading.</TaskDescription>
+    <DrivingTask>
+      <LocationRef>tree-5</LocationRef>
+      <Action>DriveToTree</Action>
+      <TreeId>4</TreeId>
+    </DrivingTask>
+    <PictureTakingTask>
+      <TreeId>4</TreeId>
+      <NumberOfPictures>2</NumberOfPictures>
+    </PictureTakingTask>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription>Measure another tree as far away as possible for CO2 and repeat the same process.</TaskDescription>
+    <DrivingTask>
+      <LocationRef>tree-4</LocationRef>
+      <Action>DriveToTree</Action>
+      <TreeId>10</TreeId>
+    </DrivingTask>
+    <CompositeTaskInformation>
+      <TaskDescription>Take 2 pictures of nearby trees if cos. is low reading.</TaskDescription>
+      <DrivingTask>
+        <LocationRef>tree-10</LocationRef>
+        <Action>DriveToTree</Action>
+        <TreeId>9</TreeId>
+      </DrivingTask>
+      <PictureTakingTask>
+        <TreeId>9</TreeId>
+        <NumberOfPictures>2</NumberOfPictures>
+      </PictureTakingTask>
+    </CompositeTaskInformation>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription>Measure another tree as far away as possible for CO2 and repeat the same process.</TaskDescription>
+    <DrivingTask>
+      <LocationRef>tree-9</LocationRef>
+      <Action>DriveToTree</Action>
+      <TreeId>15</TreeId>
+    </DrivingTask>
+    <CompositeTaskInformation>
+      <TaskDescription>Take 2 pictures of nearby trees if cos. is low reading.</TaskDescription>
+      <DrivingTask>
+        <LocationRef>tree-15</LocationRef>
+        <Action>DriveToTree</Action>
+        <TreeId>14</TreeId>
+      </DrivingTask>
+      <PictureTakingTask>
+        <TreeId>14</TreeId>
+        <NumberOfPictures>2</NumberOfPictures>
+      </PictureTakingTask>
+    </CompositeTaskInformation>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription>Measure another tree as far away as possible for CO2 and repeat the same process.</TaskDescription>
+    <DrivingTask>
+      <LocationRef>tree-14</LocationRef>
+      <Action>DriveToTree</Action>
+      <TreeId>16</TreeId>
+    </DrivingTask>
+    <CompositeTaskInformation>
+      <TaskDescription>Take 2 pictures of nearby trees if cos. is low reading.</TaskDescription>
+      <DrivingTask>
+        <LocationRef>tree-16</LocationRef>
+        <Action>DriveToTree</Action>
+        <TreeId>17</TreeId>
+      </DrivingTask>
+      <PictureTakingTask>
+        <TreeId>17</TreeId>
+        <NumberOfPictures>2</NumberOfPictures>
+      </PictureTakingTask>
+    </CompositeTaskInformation>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription>Measure temperature reading at any one of the northernmost trees.</TaskDescription>
+    <DrivingTask>
+      <LocationRef>tree-17</LocationRef>
+      <Action>TakeTemperatureReading</Action>
+    </DrivingTask>
+  </CompositeTaskInformation>
+  <CompositeTaskInformation>
+    <TaskDescription>Return to end.</TaskDescription>
+    <DrivingTask>
+      <LocationRef>orchard-end</LocationRef>
+      <Action>DriveToEnd</Action>
+    </DrivingTask>
+  </CompositeTaskInformation>
+</MissionPlan>

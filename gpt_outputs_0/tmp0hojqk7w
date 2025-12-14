@@ -1,0 +1,22 @@
+<mission>
+  <tasks>
+    <task id="0" name="Take a picture of the northern most tree">
+      <coordinates latitude="37.366269" longitude="-120.42307272278255" />
+      <image>northern_most_tree.jpg</image>
+    </task>
+    <task id="1" name="Drive to the middle of the orchard">
+      <coordinates latitude="37.366304880110526" longitude="-120.42306776645295" />
+    </task>
+    <task id="2" name="Take another picture">
+      <coordinates latitude="37.366269" longitude="-120.42307272278255" />
+      <image>middle_of_orchard.jpg</image>
+    </task>
+    <task id="3" name="Drive to the middle of the eastern end">
+      <coordinates latitude="37.36636077337479" longitude="-120.42308605043777" />
+    </task>
+    <task id="4" name="Take a picture of two trees next to each other">
+      <coordinates latitude="37.36636077337479" longitude="-120.42308605043777" />
+      <image>eastern_trees.jpg</image>
+    </task>
+  </tasks>
+</mission>

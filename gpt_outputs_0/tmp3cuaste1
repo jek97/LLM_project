@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="mission">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="task" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="task">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="location">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="latitude" type="xs:decimal"/>
+                            <xs:element name="longitude" type="xs:decimal"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+<mission>
+    <task id="1">
+        <name>Take a picture of the northern most tree</name>
+        <location>
+            <latitude>37.36635640370881</latitude>
+            <longitude>-120.42304700637999</longitude>
+        </location>
+    </task>
+    <task id="2">
+        <name>Drive to the middle of the orchard and take another picture</name>
+        <location>
+            <latitude>37.366304880110526</latitude>
+            <longitude>-120.4230246791031</longitude>
+        </location>
+    </task>
+    <task id="3">
+        <name>Drive to the middle of the eastern end and take a picture of two trees next to each other</name>
+        <location>
+            <latitude>37.36628908556382</latitude>
+            <longitude>-120.42307592599273</longitude>
+        </location>
+    </task>
+</mission>

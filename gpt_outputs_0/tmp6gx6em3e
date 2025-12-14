@@ -1,0 +1,35 @@
+<mission>
+  <name>Rectangle Tree Photography Mission</name>
+  
+  <tasks>
+    <!-- Task to move from Start Point to Corner A -->
+    <task id="1">
+      <type>MOVE</type>
+      <fromPoint>(-120.4230875691628, 37.3663891552979)</fromPoint>
+      <toPoint>(-120.4230875691628, 37.3663891552979)</toPoint>
+      <duration>10</duration>
+    </task>
+
+    <!-- Task to take picture at Corner A -->
+    <task id="2">
+      <type>TAKEPICTURE</type>
+      <point>(-120.4230875691628, 37.3663891552979)</point>
+    </task>
+
+    <!-- Task to move from Corner A to Corner B -->
+    <task id="3">
+      <type>MOVE</type>
+      <fromPoint>(-120.4230875691628, 37.3663891552979)</fromPoint>
+      <toPoint>(-120.4230875691628, 37.3663891552979)</toPoint>
+      <duration>10</duration>
+    </task>
+
+    <!-- Task to take picture at Corner B -->
+    <task id="4">
+      <type>TAKEPICTURE</type>
+      <point>(-120.4230875691628, 37.3663891552979)</point>
+    </task>
+
+    <!-- Repeat similar tasks for Corners C and D -->
+  </tasks>
+</mission>

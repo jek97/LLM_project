@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mms:Mission
+    xmlns:mms="http://www.heliom.com/schemas/2014"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.heliom.com/schemas/2014 http://www.heliom.com/mml/MiMML.xsd">
+    <mms:Name>NASA-MMS Mission</mms:Name>
+    <mms:Type>High-Priority</mms:Type>
+    <mms:Coordinate>45.5236,-73.1854</mms:Coordinate>
+    <!-- Other mission details -->
+</mms:Mission>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://example.com/mission">
+
+    <xsd:include schemaLocation="https://raw.githubusercontent.com/opengeospatial/geosparql-sdk/master/src/main/resources/jsonld/geojson-1.0.xsd" />
+
+    <xsd:element name="Mission">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="MissionInformation"/>
+                <xsd:element ref="TaskPlan" minOccurs="1" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!-- Incorporate the GeoJSON schema -->
+
+    <xsd:element name="MissionInformation">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="StartLocation" />
+                <xsd:element ref="EndLocation" />
+                <xsd:element ref="EstimatedDistance" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="StartLocation">
+        <xsd:complexType>
+            <xsd:attribute name="type" type="xsd:string" use="required"/>
+            <xsd:attribute name="coordinates" type="geojson-Point"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="EndLocation">
+        <xsd:complexType>
+            <xsd:attribute name="type" type="xsd:string" use="required"/>
+            <xsd:attribute name="coordinates" type="geojson-Point"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="EstimatedDistance">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:positiveInteger"/>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <!-- Define TaskPlan and its child elements -->
+
+    <xsd:element name="TaskPlan">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="CompositeTask" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="CompositeTask">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="DriveTo"/>
+                <xsd:element ref="Action" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="DriveTo">
+        <xsd:complexType>
+            <xsd:attribute name="destination" type="geojson-Point"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="Action">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="TreeIdentification" minOccurs="0"/>
+                <xsd:element ref="OriginalQuestion"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TreeIdentification">
+        <xsd:complexType>
+            <xsd:attribute name="treeType" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="OriginalQuestion" type="xsd:string"/>
+
+</xsd:schema>

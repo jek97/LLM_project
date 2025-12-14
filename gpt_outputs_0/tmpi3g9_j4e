@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://example.com/mission.xsd http://example.com/mission.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Visit all points on the farm</TaskDescription>
+    <TaskType>Deterministic</TaskType>
+  </CompositeTaskInformation>
+  <MissionPlan>
+    <Task id="1" type="DriveToLocation">
+      <LocationReference ref="#0"/>
+      <TaskParameters>
+        <Parameter name="action">Visit</Parameter>
+        <Parameter name="reward">0.0</Parameter> <!-- minimum reward, will be updated later -->
+        <Parameter name="haversineDistance">0.0</Parameter>
+        <Parameter name="lastSampledDays">0</Parameter>
+      </TaskParameters>
+    </Task>
+    <Task id="2" type="DriveToLocation">
+      <LocationReference ref="#1"/>
+      <TaskParameters>
+        <Parameter name="action">Visit</Parameter>
+        <Parameter name="reward">0.0</Parameter> <!-- minimum reward, will be updated later -->
+        <Parameter name="haversineDistance">0.0</Parameter>
+        <Parameter name="lastSampledDays">10</Parameter>
+      </TaskParameters>
+    </Task>
+    <Task id="3" type="DriveToLocation">
+      <LocationReference ref="#2"/>
+      <TaskParameters>
+        <Parameter name="action">Visit</Parameter>
+        <Parameter name="reward">0.0</Parameter> <!-- minimum reward, will be updated later -->
+        <Parameter name="haversineDistance">0.0</Parameter>
+        <Parameter name="lastSampledDays">201</Parameter>
+      </TaskParameters>
+    </Task>
+    <Task id="4" type="DriveToLocation">
+      <LocationReference ref="#3"/>
+      <TaskParameters>
+        <Parameter name="action">Visit</Parameter>
+        <Parameter name="reward">0.0</Parameter> <!-- minimum reward, will be updated later -->
+        <Parameter name="haversineDistance">0.0</Parameter>
+        <Parameter name="lastSampledDays">159</Parameter>
+      </TaskParameters>
+    </Task>
+    <Task id="5" type="DriveToLocation">
+      <LocationReference ref="#4"/>
+      <TaskParameters>
+        <Parameter name="action">Visit</Parameter>
+        <Parameter name="reward">0.0</Parameter> <!-- minimum reward, will be updated later -->
+        <Parameter name="haversineDistance">0.0</Parameter>
+        <Parameter name="lastSampledDays">287</Parameter>
+      </TaskParameters>
+    </Task>
+    <Task id="6" type="DriveToLocation">
+      <LocationReference ref="#5"/>
+      <TaskParameters>
+        <Parameter name="action">Visit</Parameter>
+        <Parameter name="reward">0.0</Parameter> <!-- minimum reward, will be updated later -->
+        <Parameter name="haversineDistance">0.0</Parameter>
+        <Parameter name="lastSampledDays">312</Parameter>
+      </TaskParameters>
+    </Task>
+    <Task id="7" type="DriveToLocation">
+      <LocationReference ref="#6"/>
+      <TaskParameters>
+        <Parameter name="action">Visit</Parameter>
+        <Parameter name="reward">0.0</Parameter> <!-- minimum reward, will be updated later -->
+        <Parameter name="haversineDistance">0.0</Parameter>
+        <Parameter name="lastSampledDays">180</Parameter>
+      </TaskParameters>
+    </Task>
+    <Task id="8" type="DriveToLocation">
+      <LocationReference ref="#7"/>
+      <TaskParameters>
+        <Parameter name="action">Visit</Parameter>
+        <Parameter name="reward">0.0</Parameter> <!-- minimum reward, will be updated later -->
+        <Parameter name="haversineDistance">0.0</Parameter>
+        <Parameter name="lastSampledDays">309</Parameter>
+      </TaskParameters>
+    </Task>
+    <Task id="9" type="DriveToLocation">
+      <LocationReference ref="#8"/>
+      <TaskParameters>
+        <Parameter name="action">Visit</Parameter>
+        <Parameter name="reward">0.0</Parameter> <!-- minimum reward, will be updated later -->
+        <Parameter name="haversineDistance">0.0</Parameter>
+        <Parameter name="lastSampledDays">29</Parameter>
+      </TaskParameters>
+    </Task>
+    <Task id="10" type="DriveToLocation">
+      <LocationReference ref="#9"/>
+      <TaskParameters>
+        <Parameter name="action">Visit</Parameter>
+        <Parameter name="reward">0.0</Parameter> <!-- minimum reward, will be updated later -->
+        <Parameter name="haversineDistance">0.0</Parameter>
+        <Parameter name="lastSampledDays">187</Parameter>
+      </TaskParameters>
+    </Task>
+    <Task id="11" type="DriveToLocation">
+      <LocationReference ref="#10"/>
+      <TaskParameters>
+        <Parameter name="action">Visit</Parameter>
+        <Parameter name="reward">0.0</Parameter> <!-- minimum reward, will be updated later -->
+        <Parameter name="haversineDistance">0.0</Parameter>
+        <Parameter name="lastSampledDays">67</Parameter>
+      </TaskParameters>
+    </Task>
+    <Task id="12" type="DriveToLocation">
+      <LocationReference ref="#11"/>
+      <TaskParameters>
+        <Parameter name="action">Visit</Parameter>
+        <Parameter name="reward">0.0</Parameter> <!-- minimum reward, will be updated later -->
+        <Parameter name="haversineDistance">0.0</Parameter>
+        <Parameter name="lastSampledDays">312</Parameter>
+      </TaskParameters>
+    </Task>
+  </MissionPlan>
+</Mission>

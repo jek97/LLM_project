@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mission SYSTEM "mission.dtd">
+<mission>
+  <name>Orchard Inspection Mission</name>
+  
+  <!-- Composite Task Description -->
+  <composite task_description="Perform inspection of orchard points within 100 meters, ignoring predefined start and end points. Drive to each point, capture images as needed." created_date="YYYY-MM-DD" modified_date="YYYY-MM-DD"/>
+  
+  <start_point>STARTPOINT_001</start_point>
+  <end_point>ENDPOINT_001</end_point>
+  
+  <points_to_visit>
+    <!-- Filtered Start/End Points -->
+    <point id="STARTPOINT_001">STARTPOINT_001</point>
+    
+    <!-- Eligible Trees -->
+    <point id="TREE_001" longitude="-123.456" latitude="45.678">
+      <coordinates>TREE_001</coordinates>
+      <description>TREE_001</description>
+      <image_capture image_number="1" image_capture_counter="0"/>
+    </point>
+
+    <!-- Repeat for other eligible trees -->
+  </points_to_visit
+  
+  <actions>
+    <action name="Drive to Point of Visit" id="DRIVE_TO_POINT_OF_VISIT">
+      <parameters>
+        <coordinate>POINT_OF_VISIT</coordinate>
+      </parameters>
+      <image_capture image_number="1"/>
+    </action>
+
+    <!-- Repeat for other actions -->
+  </actions>
+  
+  <!-- Mission completion information -->
+  <mission_completion_counter>0</mission_completion_counter>
+  <total_mission_completion>0</total_mission_completion>
+</mission>

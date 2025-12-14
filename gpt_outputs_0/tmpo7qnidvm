@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="urn:mission_plan">
+    <element name="mission" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <complexType>
+            <sequence>
+                <element name="name" type="xsd:string"/>
+                <element name="startingPoint">
+                    <complexType>
+                        <sequence>
+                            <element name="id" type="xsd:integer"/>
+                            <element name="coordinates">
+                                <complexType>
+                                    <sequence>
+                                        <element name="latitude" type="xsd:decimal"/>
+                                        <element name="longitude" type="xsd:decimal"/>
+                                    </sequence>
+                                </complexType>
+                            </element>
+                            <element name="description" type="xsd:string"/>
+                        </sequence>
+                    </complexType>
+                </startingPoint>
+                <tasks>
+                    <task id="1">
+                        <type>Picture a tree</type>
+                        <target id="2">
+                            <coordinates>
+                                <latitude>40.7569</latitude>
+                                <longitude>-73.9836</longitude>
+                            </coordinates>
+                            <description>A tree in the city park</description>
+                        </target>
+                        <preconditions>
+                            <condition type="weather" value="clear"/>
+                            <condition type="temperature" value="cool"/>
+                        </preconditions>
+                    </task>
+                </tasks>
+                <randomPoints>
+                    <point id="3">
+                        <coordinates>
+                            <latitude>40.7569</latitude>
+                            <longitude>-73.9836</longitude>
+                        </coordinates>
+                    </point>
+                </randomPoints>
+            </sequence>
+        </complexType>
+    </element>
+</xsd:schema>

@@ -1,0 +1,19 @@
+<Mission>
+  <Task id="1">
+    <Location type="Tree" id="1">
+      <Activity type="Take a Picture"/>
+      <IfCondition>
+        <LowTemperatureCondition/>
+      </IfCondition>
+      <Then>
+        <Activity type="Take a Temperature Reading"/>
+      </Then>
+      <ElseIf>
+        <CO2LevelCondition/>
+      </ElseIf>
+      <Else>
+        <Activity type="Drive to the End"/>
+      </ElseIf>
+    </Location>
+  </Task>
+</Mission>

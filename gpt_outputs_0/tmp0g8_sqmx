@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://www.example.com/missionplan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.com/missionplan missionplan.xsd">
+    <Header>
+        <!-- Define any additional details like MissionName, CreatedBy, StartTime, and EndTime here -->
+    </Header>
+    <Tasks>
+        <!-- Create a task with a CompositeTaskInformation element to represent the parent action (driving to location) and child tasks (task descriptions) -->
+        <CompositeTaskInformation>
+            <OriginalQuestion>Drive to first tree and take picture.</OriginalQuestion>
+            <Tasks>
+                <!-- Define a DriveTo task for moving towards the GPSLocation -->
+                <ActionTask>
+                    <Action>DriveTo</Action>
+                    <Parameters>
+                        <DestinationRef xsi:type="GPSLocation" idRef="Tree1"/>
+                    </Parameters>
+                    <!-- Include an Outcome for the action, such as estimated distance or destination name -->
+                    <Outcome>Drive to tree #1 (approx. 2km).</Outcome>
+                </ActionTask>
+                <!-- Define a CameraActionTask (e.g., TakePicture) as a child task of the parent action -->
+                <CameraActionTask>
+                    <Action>TakePicture</Action>
+                    <Parameters>
+                        <SubjectRef xsi:type="GPSLocation" idRef="Tree1"/>
+                    </Parameters>
+                    <!-- Define an Outcome for the child task -->
+                    <Outcome>Capture picture of tree #1.</Outcome>
+                </CameraActionTask>
+            </Tasks>
+        </CompositeTaskInformation>
+        <!-- Add more tasks if needed, using CompositeTaskInformation elements with parent actions and child tasks -->
+    </Tasks>
+    <!-- Define the GPSLocations using GeoJSON format as referenced by IDRef attributes in previous tasks. Replace the longitude and latitude values according to your needs -->
+    <GPSLocations>
+        <FeatureCollection>
+            <Feature id="Start">
+                <Geometry>
+                    <Point>
+                        <coordinates>-87.6298, 41.8889</coordinates> <!-- Start coordinates -->
+                    </Point>
+                </Geometry>
+            </Feature>
+            <Feature id="Tree1">
+                <Geometry>
+                    <Point>
+                        <coordinates>-87.6301, 41.8925</coordinates> <!-- Tree 1 coordinates -->
+                    </Point>
+                </Geometry>
+            </Feature>
+            <!-- Add more GPSLocations for other trees or locations if needed -->
+        </FeatureCollection>
+    </GPSLocations>
+</MissionPlan>

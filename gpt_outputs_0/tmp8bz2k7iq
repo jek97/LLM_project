@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RoboticMissionPlan xmlns:xlink="http://www.w3.org/1999/xlink">
+  <Definitions>
+    <!-- Define different tree types -->
+    <FeatureType style="tree">
+      <PropertyName>type</PropertyName>
+      <PropertyValue xlink:href="#OakTreeType"/>
+      <!-- Add more property definitions for other tree types if necessary -->
+    </FeatureType>
+    <PropertyType id="OakTreeType">
+      <!-- Define properties specific to oak trees -->
+      <Title>Oak Tree</Title>
+      <!-- Add more property definitions as needed -->
+    </PropertyType>
+  </Definitions>
+  <TaskPlan>
+    <CompositeTaskInformation>
+      <!-- Place the original question in the TaskDescription element for logging -->
+      <TaskDescription>Visit oak trees and take pictures of them.</TaskDescription>
+      <SubTasks>
+        <!-- Drive to the starting location -->
+        <DriveToLocation xlink:href="#startingPoint"/>
+
+        <!-- Loop through each oak tree within the specified distance -->
+        <LoopBegin loopName="oakTrees">
+          <!-- Check if there is an oak tree within the given distance -->
+          <Condition>
+            <PropertyName>features</PropertyName>
+            <Operator>contains</Operator>
+            <Value>
+              <Element xlink:href="#OakTree" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+            </Value>
+          </Condition>
+          <!-- Loop through each feature with the OakTree id -->
+          <LoopVariable name="oakFeature">
+            <!-- Get the properties of the current oak tree feature -->
+            <Variable>
+              <PropertyName>properties</PropertyName>
+              <VariableRef name="oakFeature"/>
+            </Variable>
+            <!-- Drive to the location of the current oak tree -->
+            <DriveToLocation xlink:href="#{oakFeature/geometry/coordinates}"/>
+
+            <!-- Take a picture of the current oak tree -->
+            <TakePictureOfTree type="oak"/>
+          </LoopVariable>
+        </LoopEnd>
+      </SubTasks>
+    </CompositeTaskInformation>
+  </TaskPlan>
+  <Outcome>Visited oak trees and took pictures of them. Estimated total distance traveled: [Distance] miles.</Outcome>
+</RoboticMissionPlan>

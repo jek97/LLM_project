@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<mission>
+    <CompositeTaskInformation>
+        <TaskDescription element="Original question" line="298"/>
+        <!-- Other composite task information -->
+        <GeoJSONReference>
+            <Coordinates>
+                <!-- Ensure all coordinates are correctly nested and referenced -->
+            </Coordinates>
+        </GeoJSONReference>
+        <!-- Additional task references as needed -->
+    </CompositeTaskInformation>
+</mission>

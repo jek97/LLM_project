@@ -1,0 +1,50 @@
+<MissionPlan>
+    <Task>
+        <Subtask>Take picture of first tree</Subtask>
+        <PicturePoint>
+            <Coordinates>${BeginPoint}</Coordinates>
+        </PicturePoint>
+    </Task>
+
+    <Task>
+        <MeasureTemperatureOrCO2>
+            <TreeLocation>${FirstTreeLocation}</TreeLocation>
+        </MeasureTemperatureOrCO2>
+
+        <CheckReadings>
+            <IfCondition>
+                <TemperatureReading>${TemperatureReading}</TemperatureReading>
+                <IsLow>True</IsLow>
+                <Action>Taking Temperature Measurement</Action>
+            </IfCondition>
+            
+            <IfCondition>
+                <CO2Reading>${CO2Reading}</CO2Reading>
+                <IsLow>True</IsLow>
+                <Action>Taking CO2 Sample</Action>
+            </IfCondition>
+        </CheckReadings>
+
+        <!-- If CO2 reading is low, take multiple samples -->
+        <Loop>
+            <SampleCO2>
+                <Coordinates>${NextPoint}</Coordinates>
+            </SampleCO2>
+            
+            <IfCondition>
+                <CO2Reading>${CO2ReadingAfterSample}</CO2Reading>
+                <IsLow>True</IsLow>
+                <Action>Confirm CO2 Reading</Action>
+            </IfCondition>
+        </Loop>
+
+        <!-- If CO2 is still low, move to next tree -->
+        <MoveToNextTree>
+            <Coordinates>${SecondTreeLocation}</Coordinates>
+        </MoveToNextTree>
+    </Task>
+
+    <RepeatUntilEnd>
+        <!-- Repeat the above steps for each tree -->
+    </RepeatUntilEnd>
+</MissionPlan>

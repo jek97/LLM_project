@@ -1,0 +1,21 @@
+ <CompositeTask>
+<TaskDescription>Take pictures of trees at the four corners of the farm</TaskDescription>
+<Tasks>
+<Task name="Drive to corner1">
+<Subtask name="Drive to location1"></Subtask>
+<Subtask name="Take picture"></Subtask>
+</Task>
+<Task name="Drive to corner2">
+<Subtask name="Drive to location2"></Subtask>
+<Subtask name="Take picture"></Subtask>
+</Task>
+<Task name="Drive to corner3">
+<Subtask name="Drive to location3"></Subtask>
+<Subtask name="Take picture"></Subtask>
+</Task>
+<Task name="Drive to corner4">
+<Subtask name="Drive to location4"></Subtask>
+<Subtask name="Take picture"></Subtask>
+</Task>
+</Tasks>
+</CompositeTask> 

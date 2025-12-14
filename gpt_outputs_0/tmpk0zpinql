@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Task>
+  <TaskType>DriveToTarget</TaskType>
+  <Target>
+    <Latitude>37.36627570632085</Latitude>
+    <Longitude>-120.42298051393493</Longitude>
+  </Target>
+  <Action>TakePhotograph</Action>
+</Task>

@@ -1,0 +1,28 @@
+ I apologize for the error. It seems that there is an issue with the XML declaration. Please try this updated XML file:
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <starting_point>0</starting_point>
+    <destination>9</destination>
+    <activity type="photo">
+        <description>Take a picture of a tree.</description>
+    </activity>
+    <activity type="temperature">
+        <description>Check the average temperature of the tree.</description>
+    </activity>
+    <activity type="sample">
+        <description>Collect CO2 samples if the temperature is below 33°C.</description>
+    </activity>
+    <destination>14</destination>
+    <activity type="photo">
+        <description>Take a picture of a tree.</description>
+    </activity>
+    <activity type="temperature">
+        <description>Check the average temperature of the tree.</description>
+    </activity>
+    <activity type="sample">
+        <description>Collect CO2 samples if the temperature is below 33°C.</description>
+    </activity>
+</mission>
+```
+This XML file should work without errors. Please let me know if you have any further issues. 

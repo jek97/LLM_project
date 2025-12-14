@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RoboticMissions:MissionPlan xmlns="http://org/RoboticMissions.org/xsd/MissionPlan.xsd"
+             xsi:schemaLocation="http://org/RoboticMissions.org/xsd/MissionPlan.xsd"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <TaskDescription>Take picture of 4 trees</TaskDescription>
+    <CompositeTaskInformation>
+        <Tasks>
+            <Task id="0">
+                <Name>Visit Tree 1</Name>
+                <DrivingToTree grs:xlink="http://www.w3.org/2007/xg/om#Location" xml:lang="en">
+                    <grs:location>-120.42302289785604 37.36635688574164</grs:location>
+                </DrivingToTree>
+            </Task>
+            <Task id="1">
+                <Name>Visit Tree 2</Name>
+                <DrivingToTree grs:xlink="http://www.w3.org/2007/xg/om#Location" xml:lang="en">
+                    <grs:location>-120.42309252722157 37.36631509745154</grs:location>
+                </DrivingToTree>
+            </Task>
+            <Task id="2">
+                <Name>Visit Tree 3</Name>
+                <DrivingToTree grs:xlink="http://www.w3.org/2007/xg/om#Location" xml:lang="en">
+                    <grs:location>-120.4230350832969 37.36635015674898</grs:location>
+                </DrivingToTree>
+            </Task>
+            <Task id="3">
+                <Name>Visit Tree 4</Name>
+                <DrivingToTree grs:xlink="http://www.w3.org/2007/xg/om#Location" xml:lang="en">
+                    <grs:location>-120.42308819251039 37.366300236834725</grs:location>
+                </DrivingToTree>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+</RoboticMissions:MissionPlan>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns="http://www.example.com/missionPlanSchema"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.example.com/missionPlanSchema missionPlan.xsd">
+    <MissionID>Orchard_Mission</MissionID>
+    <Version>1.0</Version>
+    <StartTime>YYYY-MM-DDThh:mm:ss</StartTime>
+    <EndTime>YYYY-MM-DDThh:mm:ss</EndTime>
+    <Status>InProgress</Status>
+    <TaskInformation>
+        <!-- Start by driving to the tree in the middle of the orchard -->
+        <CompositeTaskInformation ID="1">
+            <TaskID>1</TaskID>
+            <TaskType>DriveToLocation</TaskType>
+            <TaskDescription>Starting point, find a tree somewhere in the middle of the orchard (GeoJSON: [longitude], [latitude]) - Original question: Generate mission plan for robotic task</TaskDescription>
+        </CompositeTaskInformation>
+        <!-- If cosine is low at this location, take pictures of nearby trees -->
+        <CompositeTaskInformation ID="2">
+            <TaskID>2</TaskID>
+            <TaskType>MeasureCosine</TaskType>
+            <TaskDescription>Measure cosine at the current location (GeoJSON: [longitude], [latitude]) - Original question: Generate mission plan for robotic task</TaskDescription>
+        </CompositeTaskInformation>
+        <CompositeTaskInformation ID="3">
+            <TaskID>3</TaskID>
+            <TaskType>ConditionalTask</TaskType>
+            <ConditionExpression>If(cosine &lt; threshold, 'continue', 'exit')</ConditionExpression>
+            <TaskDescription>If cosine is low, take 2 pictures of nearby trees (GeoJSON: [longitude], [latitude]) - Original question: Generate mission plan for robotic task</TaskDescription>
+        </CompositeTaskInformation>
+        <!-- Drive to another tree as far away as possible for CO2 -->
+        <CompositeTaskInformation ID="4">
+            <TaskID>4</TaskID>
+            <TaskType>DriveToLocation</TaskType>
+            <TaskDescription>Find another tree as far away as possible for CO2 (GeoJSON: [longitude], [latitude]) - Original question: Generate mission plan for robotic task</TaskDescription>
+        </CompositeTaskInformation>
+        <!-- Measure CO2 at this location -->
+        <CompositeTaskInformation ID="5">
+            <TaskID>5</TaskID>
+            <TaskType>MeasureCO2</TaskType>
+            <TaskDescription>Measure CO2 at the current location (GeoJSON: [longitude], [latitude]) - Original question: Generate mission plan for robotic task</TaskDescription>
+        </CompositeTaskInformation>
+        <!-- Repeat the process of finding a tree with low cosine and taking pictures -->
+        <CompositeTaskInformation ID="6">
+            <TaskID>6</TaskID>
+            <TaskType>ConditionalTask</TaskType>
+            <ConditionExpression>If(cosine &lt; threshold, 'continue', 'exit')</ConditionExpression>
+            <TaskDescription>Repeat the process of finding a tree with low cosine and taking pictures - Original question: Generate mission plan for robotic task</TaskDescription>
+        </CompositeTaskInformation>
+    </TaskInformation>
+    <Outcome>The total distance traveled was significant. Please refer to your logbook for details.</Outcome>
+</Mission>

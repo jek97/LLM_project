@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RobotMission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.com/schemas/mission.xsd">
+  <Header>
+    <Title>Orchard Tree Inspection Mission</Title>
+    <Description>Inspect and gather data from various tree types in the orchard.</Description>
+  </Header>
+  <MissionBody>
+    <!-- Task 1: Drive to the Apple Tree -->
+    <CompositeTaskInformation id="Task1">
+      <TaskDescription>Origin at (0,0). Drive to the Apple Tree and gather data about tree health and type.</TaskDescription>
+      <Tasks>
+        <DriveToGPSLocation>
+          <FromGPSLocation x="0" y="0"/>
+          <DestinationGPSLocation x="[Apple Tree's longitude]" y="[Apple Tree's latitude]"/>
+        </DriveToGPSLocation>
+        <InspectTreeType>
+          <TreeSpecies>Apple</TreeSpecies>
+        </InspectTreeType>
+        <EvaluateTreeHealth>
+        </EvaluateTreeHealth>
+      </Tasks>
+    </CompositeTaskInformation>
+
+    <!-- Task 2: Drive to the Cherry Tree -->
+    <CompositeTaskInformation id="Task2">
+      <TaskDescription>Drive to the Cherry Tree and gather data about tree health and type.</TaskDescription>
+      <Tasks>
+        <DriveToGPSLocation>
+          <FromGPSLocation x="[Apple Tree's longitude, latitude]"/>
+          <DestinationGPSLocation x="[Cherry Tree's longitude]" y="[Cherry Tree's latitude]"/>
+        </DriveToGPSLocation>
+        <InspectTreeType>
+          <TreeSpecies>Cherry</TreeSpecies>
+        </InspectTreeType>
+        <EvaluateTreeHealth>
+        </EvaluateTreeHealth>
+      </Tasks>
+    </CompositeTaskInformation>
+
+    <!-- ... more tasks for other tree types and actions ... -->
+  </MissionBody>
+  <Outcome>Estimated total distance traveled: [Total estimated Haversine distance]</Outcome>
+</RobotMission>

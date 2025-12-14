@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns="http://example.com/mission" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.com/mission http://example.com/mission_schema.xsd">
+    <MissionInformation>
+        <StartLocation coordinates="-87.95018978424166,-43.04916994209851" />
+        <EndLocation coordinates="-87.95034567890123,-43.04948790123456" />
+        <EstimatedDistance>10</EstimatedDistance>
+    </MissionInformation>
+    <TaskPlan>
+        <!-- Drive to tree for action -->
+        <DriveTo location="-87.95034567890123,-43.04948790123456" />
+        <!-- Perform task on the identified tree -->
+        <CompositeTaskInformation>
+            <ActionAtLocation location="-87.95034567890123,-43.04948790123456">
+                <TaskDescription>What is the type of this tree? (Original question: Please identify the tree type.)</TaskDescription>
+            </ActionAtLocation>
+        </CompositeTaskInformation>
+    </TaskPlan>
+    <Outcome>
+        <!-- Estimate total distance traveled from start to end without showing how you computed it -->
+        <TotalDistance>Approximately 10 meters (estimated)</TotalDistance>
+    </Outcome>
+</Mission>

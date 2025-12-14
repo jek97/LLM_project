@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan.xsd"
+             targetNamespace="http://example.com/missionplan.xsd">
+    <CompositeTaskInformation>
+        <!-- ... -->

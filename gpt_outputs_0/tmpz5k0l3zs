@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<mission>
+    <mission_overview>Visit all points on the farm, prioritizing trees with older sampling dates.</mission_overview>
+
+    <!-- Task 1: Collect samples from the northernmost trees -->
+    <task name="Sample Collection - Northern Region">
+        <visit_points>
+            <point task_number="1" tree_id="1" reward="0.4986" poi="Tree ID 1, Location N-12S"> <!-- Reward = 1 / (112 + 1) -->
+            <point task_number="2" tree_id="5" reward="0.1739" poi="Tree ID 5, Location N-24S"> <!-- Reward = 1 / (24 + 1) -->
+            <point task_number="3" tree_id="6" reward="0.3846" poi="Tree ID 6, Location N-36S"> <!-- Reward = 1 / (36 + 1) -->
+        </visit_points>
+    </task>
+
+    <!-- Task 2: Conduct soil analysis in the eastern region -->
+    <task name="Soil Analysis - Eastern Region">
+        <visit_points>
+            <point task_number="4" tree_id="7" reward="0.6358" poi="Tree ID 7, Location E-12S"> <!-- Reward = 1 / (12 + 1) -->
+            <point task_number="5" tree_id="9" reward="0.4167" poi="Tree ID 9, Location E-24S"> <!-- Reward = 1 / (24 + 1) -->
+            <point task_number="6" tree_id="11" reward="0.5385" poi="Tree ID 11, Location E-36S"> <!-- Reward = 1 / (36 + 1) -->
+        </visit_points>
+    </task>
+
+    <!-- Task 3: Check for pest infestations in the southern region -->
+    <task name="Pest Inspection - Southern Region">
+        <visit_points>
+            <point task_number="7" tree_id="2" reward="0.6458" poi="Tree ID 2, Location S-12W"> <!-- Reward = 1 / (12 + 1) -->
+            <point task_number="8" tree_id="3" reward="0.6923" poi="Tree ID 3, Location S-24W"> <!-- Reward = 1 / (24 + 1) -->
+            <point task_number="9" tree_id="4" reward="0.7692" poi="Tree ID 4, Location S-36W"> <!-- Reward = 1 / (36 + 1) -->
+        </visit_points>
+    </task>
+
+    <!-- Task 4: Watering the trees in the central region -->
+    <task name="Watering - Central Region">
+        <visit_points>
+            <point task_number="10" tree_id="8" reward="0.2500" poi="Tree ID 8, Location C-12N"> <!-- Reward = 1 / (12 + 1) -->
+            <point task_number="11" tree_id="10" reward="0.4762" poi="Tree ID 10, Location C-24N"> <!-- Reward = 1 / (24 + 1) -->
+            <point task_number="12" tree_id="13" reward="0.5882" poi="Tree ID 13, Location C-36N"> <!-- Reward = 1 / (36 + 1) -->
+        </visit_points>
+    </task>
+
+    <!-- Task 5: Conduct comprehensive health assessment -->
+    <task name="Health Assessment - Mixed Region">
+        <visit_points>
+            <point task_number="13" tree_id="14" reward="0.2907" poi="Tree ID 14, Location M-12W"> <!-- Reward = 1 / (12 + 1) -->
+            <point task_number="14" tree_id="15" reward="0.3684" poi="Tree ID 15, Location M-24W"> <!-- Reward = 1 / (24 + 1) -->
+            <point task_number="15" tree_id="16" reward="0.7143" poi="Tree ID 16, Location M-36W"> <!-- Reward = 1 / (36 + 1) -->
+        </visit_points>
+    </task>
+
+    <!-- Mission Duration -->
+    <mission_duration>10 days</mission_duration>
+
+    <!-- Mission Status Update -->
+    <status_update>Mission complete: All trees visited with rewards assigned based on last sampled date.</status_update>
+</mission>

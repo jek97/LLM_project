@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan">
+  <CompositeTask id="1">
+    <Task id="1" name="Take Pictures of Trees">
+      <SubTask id="1" name="Drive to Northmost Tree">
+        <Waypoint x="120.42300386899338" y="37.36628908556382" />
+      </SubTask>
+      <SubTask id="2" name="Take Picture 1">
+        <Action type="ImageCapture">
+          <Target x="120.42300386899338" y="37.36628908556382" description="Picture 1 - Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42300386899338" y="37.36628908556382" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.42302669537153" y="37.366300703749474" description="Picture 2 - South of Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.42302669537153" y="37.366300703749474" description="Picture 2 - South of Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.42302669537153" y="37.366300703749474" description="Picture 2 - South of Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.42302669537153" y="37.366300703749474" description="Picture 2 - South of Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.42302669537153" y="37.366300703749474" description="Picture 2 - South of Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.42302669537153" y="37.366300703749474" description="Picture 2 - South of Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.42302669537153" y="37.366300703749474" description="Picture 2 - South of Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.42302669537153" y="37.366300703749474" description="Picture 2 - South of Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.42302669537153" y="37.366300703749474" description="Picture 2 - South of Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.42302669537153" y="37.366300703749474" description="Picture 2 - South of Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.42302669537153" y="37.366300703749474" description="Picture 2 - South of Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.42302669537153" y="37.366300703749474" description="Picture 2 - South of Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.42302669537153" y="37.366300703749474" description="Picture 2 - South of Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.42302669537153" y="37.366300703749474" description="Picture 2 - South of Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.42302669537153" y="37.366300703749474" description="Picture 2 - South of Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.42302669537153" y="37.366300703749474" description="Picture 2 - South of Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.42302669537153" y="37.366300703749474" description="Picture 2 - South of Northmost Tree" />
+        </Action>
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="3" name="Drive to Second Tree">
+        <Waypoint x="120.42302669537153" y="37.366300703749474" />
+      </SubTask>
+      <SubTask id="4" name="Take Picture 2">
+        <Action type="ImageCapture">
+          <Target x="120.423026695

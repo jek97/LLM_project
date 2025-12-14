@@ -1,0 +1,67 @@
+It seems that the XSLT transformation I provided earlier is still not working correctly.
+
+Let me try a different approach. Instead of generating the XML file manually, we can create a Python script that uses an XML library to generate the XML file based on a predefined schema.
+
+Here is an example of how you could write a Python script to generate the XML file:
+```python
+import xml.etree.ElementTree as ET
+from random import choices
+
+# Define the input data (geojson reference and task information)
+locations = {
+    "starting_point": (52.5207, 13.4050),
+    "middle_field": (52.5222, 13.4074),
+    "next_random_point": (52.5228, 13.4095)
+}
+
+tree_ids = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+
+# Create the root element
+root = ET.Element("mission")
+
+# Add the CompositeTaskInformation element
+composite_task_info = ET.SubElement(root, "CompositeTaskInformation")
+
+# Add driving point tasks
+driving_point_tasks = []
+for location in locations:
+    if location == "starting_point":
+        task_id = ET.SubElement(composite_task_info, "DrivingToPoint")
+        ET.SubElement(task_id, "description").text = f"Starting Point"
+        ET.SubElement(task_id, "reference").text = f"GeoJSON Reference for Location = {locations[location]}"
+        driving_point_tasks.append((task_id, locations[location]))
+    elif location == "middle_field":
+        task_id = ET.SubElement(composite_task_info, "DrivingToPoint")
+        ET.SubElement(task_id, "description").text = f"Middle of Field"
+        ET.SubElement(task_id, "reference").text = f"GeoJSON Reference for Location = {locations[location]} and Tree ID = 1"
+        driving_point_tasks.append((task_id, locations[location]))
+    elif location == "next_random_point":
+        task_id = ET.SubElement(composite_task_info, "DrivingToPoint")
+        tree_ids_for_point = choices(tree_ids, k=5)
+        reference_text = f"GeoJSON Reference for Location = {locations[location]} and Tree ID = {' , '.join(map(str, tree_ids_for_point))}"
+        ET.SubElement(task_id, "description").text = f"Next Random Point"
+        ET.SubElement(task_id, "reference").text = reference_text
+        driving_point_tasks.append((task_id, locations[location]))
+
+# Add IfCondition task if necessary
+if len(locations) > 2:
+    condition_task = ET.SubElement(composite_task_info, "IfCondition")
+    condition_task_id = ET.SubElement(condition_task, "DrivingToPoint")
+    condition_task_description = ET.SubElement(condition_task_id, "description")
+    condition_task_description.text = "Average Temperature Below 33 C"
+    condition_task_condition_type = ET.SubElement(condition_task_id, "conditionType")
+    condition_task_condition_type.text = "Temperature"
+    condition_task_operator = ET.SubElement(condition_task_id, "operator")
+    condition_task_operator.text = "LessThan"
+    condition_task_value = ET.SubElement(condition_task_id, "value")
+    condition_task_value.text = str(33.0)
+
+# Create the ElementTree object
+tree = ET.ElementTree(root)
+
+# Write the XML file
+tree.write("output.xml")
+```
+This Python script will generate an XML file with the desired structure and content.
+
+Please note that this is just one way to solve the problem, and there may be other approaches that are more suitable for your specific use case.

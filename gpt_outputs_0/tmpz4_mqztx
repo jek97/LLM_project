@@ -1,0 +1,7 @@
+Okay, this is a critical error – the XML parser is immediately encountering a problem at the very beginning of the file. The most likely cause is that the XML file is missing the root element declaration.
+
+XML documents *must* start with a single root element.  This element contains all other elements within the document.
+
+I need you to re-generate the XML file, and this time, **make sure the first line of the file is `<mission>`**.  This will enclose the entire mission plan within the root element.
+
+Please provide the task description again, and I will create the XML mission plan with the corrected root element.

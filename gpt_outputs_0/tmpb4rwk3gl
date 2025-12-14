@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<declare xmlns="http://www.yourcompany.com/missionplan">
+    <MISSIONPLAN type="string" />
+    <!-- Mission plan elements -->
+    <TreeType type="string" />
+    <TreeID type="integer" />
+    <!-- Add other mission plan element declarations here -->
+</declare>
+<MISSIONPLAN>
+    <!-- Your mission plan content here -->
+</MISSIONPLAN>

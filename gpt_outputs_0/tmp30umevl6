@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTask id="Task1">
+    <Task name="Take Pictures of Trees">
+      <Waypoint id="WP1" latitude="37.36636077337479" longitude="-120.42307592599273" description="Northmost Tree - Initial Photo"/>
+      <Waypoint id="WP2" latitude="37.36636077337479" longitude="-120.42307592599273" description="Eastmost Tree - Photo 2"/>
+      <Waypoint id="WP3" latitude="37.36636077337479" longitude="-120.42302669537153" description="Southmost Tree - Photo 3"/>
+      <Waypoint id="WP4" latitude="37.36635640370881" longitude="-120.42299259529793" description="Westmost Tree - Final Photo"/>
+    </Task>
+  </CompositeTask>
+</MissionPlan>

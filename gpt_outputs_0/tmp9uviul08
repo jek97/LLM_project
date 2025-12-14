@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <name>Pistachio Tree Picture Taking</name>
+    <description>Visit 5 pistachio trees in a row and take pictures of 3 of them.</description>
+    <tasks>
+        <task id="1">
+            <name>Start at the farm</name>
+            <action>Drive to the starting point of the mission</action>
+        </task>
+        <task id="2">
+            <name>Visit Pistachio Tree 1</name>
+            <action>Take a picture of the tree</action>
+            <location>
+                <latitude>37.7749</latitude>
+                <longitude>-122.4194</longitude>
+            </location>
+        </task>
+        <!-- Repeat for other tasks -->
+    </tasks>
+</mission>

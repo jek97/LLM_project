@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>Viewing this farm as a rectangle, take pictures of trees at the four corners of the farm in any order.</TaskDescription>
+  </CompositeTaskInformation>
+  <Task>
+    <TaskID>1</TaskID>
+    <TaskType>DriveToLocation</TaskType>
+    <TaskName>Drive to North-West Corner</TaskName>
+    <Location>
+      <GPS>
+        <Latitude>48.8584</Latitude>
+        <Longitude>-122.7598</Longitude>
+      </GPS>
+    </Location>
+    <Action>
+      <ActionType>TakePicture</ActionType>
+      <Description>Take a picture of the tree at the North-West corner.</Description>
+    </Action>
+  </Task>
+  <Task>
+    <TaskID>2</TaskID>
+    <TaskType>DriveToLocation</TaskType>
+    <TaskName>Drive to North-East Corner</TaskName>
+    <Location>
+      <GPS>
+        <Latitude>48.8615</Latitude>
+        <Longitude>-122.7450</Longitude>
+      </GPS>
+    </Location>
+    <Action>
+      <ActionType>TakePicture</ActionType>
+      <Description>Take a picture of the tree at the North-East corner.</Description>
+    </Action>
+  </Task>
+  <Task>
+    <TaskID>3</TaskID>
+    <TaskType>DriveToLocation</TaskType>
+    <TaskName>Drive to South-East Corner</TaskName>
+    <Location>
+      <GPS>
+        <Latitude>48.8530</Latitude>
+        <Longitude>-122.7485</Longitude>
+      </GPS>
+    </Location>
+    <Action>
+      <ActionType>TakePicture</ActionType>
+      <Description>Take a picture of the tree at the South-East corner.</Description>
+    </Action>
+  </Task>
+  <Task>
+    <TaskID>4</TaskID>
+    <TaskType>DriveToLocation</TaskType>
+    <TaskName>Drive to South-West Corner</TaskName>
+    <Location>
+      <GPS>
+        <Latitude>48.8470</Latitude>
+        <Longitude>-122.7530</Longitude>
+      </GPS>
+    </Location>
+    <Action>
+      <ActionType>TakePicture</ActionType>
+      <Description>Take a picture of the tree at the South-West corner.</Description>
+    </Action>
+  </Task>
+</MissionPlan>

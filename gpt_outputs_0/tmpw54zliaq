@@ -1,0 +1,77 @@
+It seems that I forgot to include the opening `<MissionPlan>` tag at the beginning of the XML file.
+
+Here is the corrected version:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robust-mission-planning.org/missionplan
+             http://robust-mission-planning.org/missionplan.xsd">
+  <MissionPlanInfo>
+    <!-- Mission plan information will go here -->
+  </MissionPlanInfo>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Start the mission</TaskDescription>
+    <DrivingToTree>
+      <TreeReference>
+        <GeoJSONReference>
+          <id>0</id>
+          <type>Point</type>
+          <coordinates>-120.42302289785604, 37.36635688574164</coordinates>
+        </GeoJSONReference>
+      </TreeReference>
+    </DrivingToTree>
+    <ActionSequence>
+      <TaskDescription>Take picture of first tree</TaskDescription>
+      <Outcome>
+        <TaskDescription>Take picture of first tree</TaskDescription>
+        <EstimatedHaversineDistanceFromStartToEnd>0.01 km</EstimatedHaversineDistanceFromStartToEnd>
+      </Outcome>
+    </ActionSequence>
+  </CompositeTaskInformation>
+
+  <!-- Add more CompositeTaskInformation elements for each task -->
+
+  <DrivingToTree>
+    <TreeReference>
+      <GeoJSONReference>
+        <id>2</id>
+        <type>Point</type>
+        <coordinates>-120.42306789012345, 37.36656789067890</coordinates>
+      </GeoJSONReference>
+    </TreeReference>
+  </DrivingToTree>
+
+  <ActionSequence>
+    <TaskDescription>Continue driving to another tree and take another CO2 sample if reading is low</TaskDescription>
+    <Outcome>
+      <TaskDescription>Continue driving to another tree and take another CO2 sample if reading is low</TaskDescription>
+      <EstimatedHaversineDistanceFromStartToEnd>0.03 km</EstimatedHaversineDistanceFromStartToEnd>
+    </Outcome>
+  </ActionSequence>
+
+  <!-- Add more CompositeTaskInformation elements for each task -->
+
+  <DrivingToTree>
+    <TreeReference>
+      <GeoJSONReference>
+        <id>19</id>
+        <type>Point</type>
+        <coordinates>-120.42299259529793, 37.36635678715399</coordinates>
+      </GeoJSONReference>
+    </TreeReference>
+  </DrivingToTree>
+
+  <ActionSequence>
+    <TaskDescription>Finalize the mission by going to the end</TaskDescription>
+    <Outcome>
+      <TaskDescription>Finalize the mission by going to the end</TaskDescription>
+      <EstimatedHaversineDistanceFromStartToEnd>0.04 km</EstimatedHaversineDistanceFromStartToEnd>
+    </Outcome>
+  </ActionSequence>
+
+</MissionPlan>
+```
+This should fix the error and allow you to parse the XML file correctly.
+
+Note: I also added a `TaskDescription` element for logging, as per your request.

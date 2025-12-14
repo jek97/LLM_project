@@ -1,0 +1,45 @@
+<Mission xmlns="http://www.example.com/robotics/mission"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xsi:schemaLocation="http://www.example.com/robotics/mission http://www.example.com/robotics/mission_schema.xsd">
+    <CompositeTaskInformation>
+        <!-- Original question -->
+        <TaskDescription>Going clockwise from the north most tree, take a picture of 4 trees. Meaning, go north most, east most, south most, west most. Make sure the pictures are as far apart as possible, location-wise.</TaskDescription>
+        <Tasks>
+            <!-- Task 1: Drive to the northernmost tree -->
+            <Task>
+                <TaskID>1</TaskID>
+                <ActionType>Drive</ActionType>
+                <StartLocation>
+                    <GPS>
+                        <Latitude>37.36635678715399</Latitude>
+                        <Longitude>-120.42299259529793</Longitude>
+                    </GPS>
+                </StartLocation>
+                <EndLocation xlink:href="#T1_End"/>
+            </Task>
+            <!-- Task 2: Take a picture of the northernmost tree -->
+            <Task>
+                <TaskID>2</TaskID>
+                <ActionType>TakePicture</ActionType>
+                <StartLocation xlink:href="#T1_End"/>
+                <EndLocation/>
+            </Task>
+            <!-- Task 3: Drive to the easternmost tree -->
+            <Task>
+                <TaskID>3</TaskID>
+                <ActionType>Drive</ActionType>
+                <StartLocation xlink:href="#T2_End"/>
+                <EndLocation xlink:href="#T3_End"/>
+            </Task>
+            <!-- Task 4: Take a picture of the easternmost tree -->
+            <Task>
+                <TaskID>4</TaskID>
+                <ActionType>TakePicture</ActionType>
+                <StartLocation xlink:href="#T3_End"/>
+                <EndLocation/>
+            </Task>
+            <!-- Repeat the above pattern for the remaining tasks -->
+        </Tasks>
+    </CompositeTaskInformation>
+    <Outcome>The mission was successful. The robot traveled a reasonable distance and captured images of the specified trees in the desired order.</Outcome>
+</Mission>

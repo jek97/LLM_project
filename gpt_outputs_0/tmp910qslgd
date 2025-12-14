@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema namespace="http://example.com/mission_schema" mixed="true">
+  <xs:element name="mission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="task" nillable="true">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="1" name="id" type="xs:string"/>
+              <xs:element minOccurs="0" maxOccurs="1" name="location" type="xs:string"/>
+              <xs:element minOccurs="0" maxOccurs="1" name="action" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</schema>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+  <task id="1" location="(-120.42300386899338, 37.366300703749474)" action="sample"/>
+  <task id="2" location="(-120.42302669537153, 37.36634636896467)" action="inspect"/>
+  <task id="3" location="(-120.4230246791031, 37.366304880110526)" action="collect"/>
+  <task id="4" location="(-120.423044218715, 37.36626996761184)" action="analyze"/>
+  <task id="5" location="(-120.42298051393493, 37.36628908556382)" action="report"/>
+  <task id="6" location="(-120.42301417901265, 37.3662730362294)" action="confirm"/>
+  <task id="7" location="(-120.42307592599273, 37.36636077337479)" action="record"/>
+  <task id="8" location="(-120.42307592599273, 37.36636077337479)" action="verify"/>
+  <task id="9" location="(-120.42300386899338, 37.366300703749474)" action="terminate"/>
+</mission>

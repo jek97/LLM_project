@@ -1,0 +1,34 @@
+<Mission xmlns="http://example.com/mission-plan" xmlns:vocab="http://purl.ieee.org/NS/dcterms#" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://example.com/mission-plan" elementFormDefault="qualified">
+    <TaskDescription>Drive to GPS Location 1, Inspect Oak Tree (Task: Drive and Inspect), Repeat for Pine and Maple Trees</TaskDescription>
+    <Version>1.0</Version>
+    <MissionName>Tree Inspection Mission Plan</MissionName>
+    <StartLocation>
+        <Latitude>51.493676</Latitude>
+        <Longitudue>-0.298387</Longitudute>
+    </StartLocation>
+    <EndLocation>
+        <Latitude>51.493676</Latitude>
+        <Longitudue>-0.298387</Longitudute>
+    </EndLocation>
+    <!-- Add as many CompositeTaskInformation elements as required -->
+    <TaskInformation>
+        <CompositeTaskInformation>
+            <DriveTo>
+                <Location>
+                    <Latitude>51.493687</Latitude>
+                    <Longitudue>-0.298386</Longitudute>
+                </Location>
+            </DriveTo>
+            <ActionInformation>
+                <TreeType>Oak</TreeType>
+                <Task>Inspect Tree</Task> <!-- Include any other relevant information or actions here -->
+                <!-- Place the original question in the TaskDescription element of the CompositeTaskInformation element for logging -->
+            </ActionInformation>
+        </CompositeTaskInformation>
+        <!-- Add more CompositeTaskInformation elements as required, repeating the pattern shown above -->
+    </TaskInformation>
+    <Outcome>
+        <!-- Optional, but useful for logging total estimated haversine distance traveled from start to end (don't show how you computed it) -->
+        <TotalDistance>1.23</TotalDistance>
+    </Outcome>
+</Mission>

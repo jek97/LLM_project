@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      This mission plan focuses on orchard monitoring, specifically targeting low temperature and CO2 levels. The agent will begin at the first tree, take a picture. If the picture indicates a low temperature, a temperature reading will be taken. If the temperature reading is also low, a CO2 sample will be taken. If that reading is alos low, drive to a far away tree and repeat the process. If the very first reading isn't low, drive to end
+    </TaskDescription>
+    <ExecutionSequence>
+      <Step id="1">
+        <Action>Drive to Tree 1 (ID: 1)</Action>
+        <Goal>Reach the tree represented by ID 1.</Goal>
+      </Step>
+      <Step id="2">
+        <Action>Take Picture</Action>
+        <Goal>Capture an image of Tree 1 to assess temperature.</Goal>
+      </Step>
+      <Step id="3">
+        <Condition>Picture indicates low temperature</Condition>
+        <Action>Take Temperature Reading</Action>
+        <Goal>Obtain a precise temperature measurement at Tree 1.</Goal>
+      </Step>
+      <Step id="4">
+        <Condition>Temperature Reading is Low</Condition>
+        <Action>Take CO2 Sample</Action>
+        <Goal>Collect a CO2 measurement for analysis at Tree 1.</Goal>
+      </Step>
+      <Step id="5">
+        <Condition>Temperature Reading and CO2 Reading are Low</Condition>
+        <Action>Drive to Far Away Tree</Action>
+        <Goal>Reach a different tree to check temperature.</Goal>
+      </Step>
+      <Step id="6">
+        <Condition>No Low Readings Detected</Condition>
+        <Action>Drive to End Point</Action>
+        <Goal>Complete the mission by travelling to the destination.</Goal>
+      </Step>
+    </ExecutionSequence>
+  </CompositeTaskInformation>
+</MissionPlan>

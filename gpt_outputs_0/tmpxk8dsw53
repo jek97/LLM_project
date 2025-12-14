@@ -1,0 +1,105 @@
+It seems that the problem is with the XML namespace.
+
+Let's try creating a new file called `robotMission.xsd` with the following content:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+  <xs:element name="RobotMission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="TaskInformation"/>
+        <xs:element ref="CompositeTaskInformation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="TaskInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DrivingToTree" minOccurs="0" maxOccurs="unbounded"/>
+        <!-- ... -->
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="CompositeTaskInformation">
+    <xs:complexType>
+      <!-- ... -->
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="DrivingToTree">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="IdType"/>
+        <xs:element name="coordinates" type="CoordinatesType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- ... -->
+</xs:schema>
+```
+And a new file called `DrivingToTree.xsd` with the following content:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+  <xs:element name="id" type="IdType"/>
+  <xs:element name="coordinates" type="CoordinatesType"/>
+</xs:schema>
+```
+And a new file called `IdType.xsd` with the following content:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+  <xs:element name="id" type="xs:integer"/>
+</xs:schema>
+```
+And a new file called `CoordinatesType.xsd` with the following content:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+  <xs:element name="latitude" type="LatitudeType"/>
+  <xs:element name="longitude" type="LongitudeType"/>
+</xs:schema>
+```
+And new files `LatitudeType.xsd` and `LongitudeType.xsd` with the following content:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+  <xs:element name="latitude" type="xs:integer"/>
+</xs:schema>
+```
+
+Please note that the exact structure and schema definitions will depend on your specific requirements.
+
+Now, let's create a new file called `robotMission.xml` with the following content:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<RobotMission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://robotmission.org/schemas/v2 
+                                   http://robotmission.org/schemas/v2/robotMission.xsd">
+  <TaskInformation name="DriveToTrees">
+    <precondition>None</precondition>
+    
+    <!-- Drive to a tree next to two other trees -->
+    <DrivingToTree id="1" coordinates="-120.42302289785604,37.36635688574164"/>
+    <outcome><State name="Driven">Driven to tree 1</State></outcome>
+    <taskInformation>
+      <TaskDescription>
+        <!-- Task description content here -->
+      </TaskDescription>
+    </taskInformation>
+  </TaskInformation>
+  
+  <CompositeTaskInformation>
+    <!-- ... -->
+  </CompositeTaskInformation>
+</RobotMission>
+```
+This should resolve the error you were seeing.

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:msc="http://mission.schema.com">
+  <compositeTaskInformation>
+    <taskDescription>Visit and take pictures of as many trees within 100m radius</taskDescription>
+    <outcome>
+      <totalEstimatedHaversineDistanceTraveled>500 meters</totalEstimatedHaversineDistanceTraveled>
+    </outcome>
+  </compositeTaskInformation>
+  <missionStatus>IN PROGRESS</missionStatus>
+  
+  <!-- List of tasks -->
+  <tasks xmlns:msc="http://mission.schema.com">
+    <task id="1" msc:type="DWELL">
+      <description>Drive to point and take pictures of tree at point</description>
+      <location>
+        <geojsonReference href="#tree-0"/>
+      </location>
+    </task>
+    
+    <!-- ... repeat for all tasks ... -->
+    
+    <task id="17" msc:type="DWELL">
+      <status>PARTIAL SUCCESS</status>
+      <description>Drive to point and take pictures of tree at point (partial success due to lack of resources)</description>
+      <location>
+        <geojsonReference href="#tree-17"/>
+      </location>
+    </task>
+    
+    <!-- ... repeat for all tasks ... -->
+  </tasks>
+</root>

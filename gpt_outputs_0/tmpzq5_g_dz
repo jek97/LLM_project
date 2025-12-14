@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <Task id="1">
+      <TaskDescription>Drive to tree ID 1 and take a CO2 reading.</TaskDescription>
+      <Goal>Tree ID: 1</Goal>
+      <Action>Take CO2 Reading</Action>
+    </Task>
+    <Task id="2">
+      <TaskDescription>Drive to tree ID 2 and take a CO2 reading.</TaskDescription>
+      <Goal>Tree ID: 2</Goal>
+      <Action>Take CO2 Reading</Action>
+    </Task>
+  </CompositeTaskInformation>
+</MissionPlan>

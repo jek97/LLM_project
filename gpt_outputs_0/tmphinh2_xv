@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robotictask.org/schemas/taskDescription.xsd 
+                     http://robotictask.org/schemas/taskDescription.xsd">
+  <CompositeTaskInformation>
+    <Name>Orchard Mission</Name>
+    <Description>Robotic task for inspecting trees in the orchard</Description>
+    <Tasks>
+      <!-- Start at the first tree -->
+      <TaskInformation>
+        <Type>GoToTree</Type>
+        <TreeId>0</TreeId>
+        <Coordinates>
+          <x>-120.42302289785604</x>
+          <y>37.36635688574164</y>
+        </Coordinates>
+        <Description>The robot starts at the first tree.</Description>
+      </TaskInformation>
+      
+      <!-- Take a picture of the tree -->
+      <TaskInformation>
+        <Type>TakePicture</Type>
+        <TreeId>0</TreeId>
+        <Coordinates>
+          <x>-120.42302289785604</x>
+          <y>37.36635688574164</y>
+        </Coordinates>
+        <Description>The robot takes a picture of the tree.</Description>
+      </TaskInformation>
+      
+      <!-- Check if the temperature reading is low -->
+      <TaskInformation>
+        <Type>CheckTemperatureReading</Type>
+        <TreeId>0</TreeId>
+        <Coordinates>
+          <x>-120.42302289785604</x>
+          <y>37.36635688574164</y>
+        </Coordinates>
+        <Description>The robot checks if the temperature reading is low.</Description>
+        <Outcome>
+          <If>LowTemperature</If>
+          <Then>
+            <!-- Take a co2 sample -->
+            <TaskInformation>
+              <Type>TakeCo2Sample</Type>
+              <TreeId>0</TreeId>
+              <Coordinates>
+                <x>-120.42302289785604</x>
+                <y>37.36635688574164</y>
+              </Coordinates>
+              <Description>The robot takes a co2 sample.</Description>
+            </TaskInformation>
+          </Then>
+        </Outcome>
+      </TaskInformation>
+    </Tasks>
+  </CompositeTaskInformation>
+</MissionPlan>

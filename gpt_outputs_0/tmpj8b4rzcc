@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.example.com/mission.xsd mission.xsd">
+    <MissionInfo>
+        <TaskDescription>Drive to the first pistachio tree and select it</TaskDescription>
+        <drivingToLocation>
+            <GPSLocation>
+                <latitude>37.36635688574164</latitude>
+                <longitude>-120.42302289785604</longitude>
+            </GPSLocation>
+        </drivingToLocation>
+    </MissionInfo>
+
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the second pistachio tree and select it</TaskDescription>
+        <drivingToLocation>
+            <GPSLocation>
+                <latitude>37.36631509745154</latitude>
+                <longitude>-120.42309252722157</longitude>
+            </GPSLocation>
+        </drivingToLocation>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the third pistachio tree and select it</TaskDescription>
+        <drivingToLocation>
+            <GPSLocation>
+                <latitude>37.36635015674898</latitude>
+                <longitude>-120.4230350832969</longitude>
+            </GPSLocation>
+        </drivingToLocation>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the fourth pistachio tree and select it</TaskDescription>
+        <drivingToLocation>
+            <GPSLocation>
+                <latitude>37.366300236834725</latitude>
+                <longitude>-120.42308819251039</longitude>
+            </GPSLocation>
+        </drivingToLocation>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the fifth pistachio tree and select it</TaskDescription>
+        <drivingToLocation>
+            <GPSLocation>
+                <latitude>37.36632114247575</latitude>
+                <longitude>-120.42308272918532</longitude>
+            </GPSLocation>
+        </drivingToLocation>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription>Take a picture of the first selected pistachio tree</TaskDescription>
+        <drivingToLocation>
+            <GPSLocation>
+                <latitude>37.36635688574164</latitude>
+                <longitude>-120.42302289785604</longitude>
+            </GPSLocation>
+        </drivingToLocation>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription>Take a picture of the second selected pistachio tree</TaskDescription>
+        <drivingToLocation>
+            <GPSLocation>
+                <latitude>37.36631509745154</latitude>
+                <longitude>-120.42309252722157</longitude>
+            </GPSLocation>
+        </drivingToLocation>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription>Take a picture of the third selected pistachio tree</TaskDescription>
+        <drivingToLocation>
+            <GPSLocation>
+                <latitude>37.36635015674898</latitude>
+                <longitude>-120.4230350832969</longitude>
+            </GPSLocation>
+        </drivingToLocation>
+    </CompositeTaskInformation>
+
+    <CompositeTaskInformation>
+        <TaskDescription>Drive back to the farm</TaskDescription>
+        <drivingToLocation>
+            <GPSLocation>
+                <latitude>37.36635688574164</latitude>
+                <longitude>-120.42302289785604</longitude>
+            </GPSLocation>
+        </drivingToLocation>
+    </CompositeTaskInformation>
+
+</mission>

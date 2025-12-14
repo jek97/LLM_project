@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <Task id="1">
+    <TaskType>Drive</TaskType>
+    <Instruction>Drive to the center of the field.</Instruction>
+  </Task>
+  <Task id="2">
+    <TaskType>Observe</TaskType>
+    <Instruction>Observe the flora and fauna.</Instruction>
+  </Task>
+</MissionPlan>

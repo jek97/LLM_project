@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation=". MissionPlan.xsd">
+  <MissionID>1</MissionID>
+  <MissionName>Tree Monitoring Mission</MissionName>
+  <StartDate>2023-04-01T00:00:00Z</StartDate>
+  <EndDate>2023-04-01T05:00:00Z</EndDate>
+  <MissionStatus>Not Started</MissionStatus>
+
+  <TaskList>
+    <!-- Define tasks here -->
+    <Task>
+      <TaskID>1</TaskID>
+      <TaskName>Take Picture of Tree</TaskName>
+      <StartDate>2023-04-01T00:05:00Z</StartDate>
+      <EndDate>2023-04-01T00:10:00Z</EndDate>
+      <Location>
+        <Latitude>47.6568</Latitude>
+        <Longitude>-122.3281</Longitude>
+      </Location>
+      <SensorList>
+        <Camera/>
+      </SensorList>
+    </Task>
+  </TaskList>
+</MissionPlan>

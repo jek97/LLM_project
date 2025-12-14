@@ -1,0 +1,26 @@
+ I apologize for the error in my previous response. Please find below the corrected XML code that represents your mission:
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission>
+    <Task name="Take a picture of the first tree">
+        <Step name="Picture taken" status="Completed"/>
+        <Step name="Take a CO2 sample" status="In Progress"/>
+    </Task>
+    <Task name="Measure another tree" condition="CO2 reading is low">
+        <Step name="Picture taken" status="Completed"/>
+        <Step name="Take a CO2 sample" status="In Progress"/>
+        <Step name="Confirm CO2 reading by taking another CO2 sample" status="Not Started"/>
+    </Task>
+    <Task name="Continue driving to another tree and take another CO2 sample">
+        <Step name="Picture taken" status="Completed"/>
+        <Step name="Take a CO2 sample" status="In Progress"/>
+    </Task>
+    <Task name="Go to end">
+        <Step name="CO2 reading is low" condition="CO2 reading is low">
+            <Step name="Take another CO2 sample" status="Not Started"/>
+        </Step>
+        <Step name="End reached" status="Completed"/>
+    </Task>
+</Mission>
+```
+I hope this resolves the issue. Please let me know if you have any further questions or concerns. 

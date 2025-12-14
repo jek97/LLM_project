@@ -13,6 +13,8 @@ from gpt_interface import GPTInterface
 from network_interface import NetworkInterface
 from ollama_interface import OllamaInterface
 
+logging.getLogger("httpx").setLevel(logging.ERROR)
+logging.getLogger("httpcore").setLevel(logging.ERROR)
 
 class OllamaPlanner:
     def __init__(
@@ -44,8 +46,8 @@ class OllamaPlanner:
         if (model == "gpt"):
             self.logger.debug("Using GPT model")
             # init gpt interface
-            self.gpt: GPTInterface = GPTInterface(self.logger, token_path, max_tokens, temperature)
-            self.gpt.init_context(self.schema_path, self.farm_layout)
+            #self.gpt: GPTInterface = GPTInterface(self.logger, token_path, max_tokens, temperature)
+            #self.gpt.init_context(self.schema_path, self.farm_layout)
             self.gpt_flag = True # set flag for the correct initialization and future question
 
         else:
@@ -172,7 +174,7 @@ def read_inputs(file_path):
     return quoted_strings
 
 def write_log(file_path, log):
-    with open(file_path, "w") as file:
+    with open(file_path, "a") as file:
         file.write(log)
 
     return
@@ -185,10 +187,12 @@ def write_log(file_path, log):
 )
 def main(config: str):
     log_file_path = "./app/gpt_outputs/ollama_outputs.txt"
-    models = ["gemma3:4b", "gemma3:4b", "deepseek-r1:7b", "llama3.2:3b", "misral:7b",  "qwen2.5-coder:7b", "llava:7b", "llava:7b"]
-    multimodals_models = [True, False, False, False, False, False, True, False]
+    # models = ["gemma3:4b", "gemma3:4b", "deepseek-r1:7b", "llama3.2:3b", "mistral",  "qwen2.5-coder:7b", "llava:7b", "llava:7b"]
+    # multimodals_models = [True, False, False, False, False, False, True, False]
+    models = ["mistral"]
+    multimodals_models = [False]
     inputs = read_inputs("./app/inputs.txt")
-    temp = [0, 0.25, 0.5, 0.75, 1.0]
+    temp = [0]
     for m, mode in zip(models, multimodals_models):
         for t in temp:
             with open(config, "r") as file:
@@ -213,7 +217,7 @@ def main(config: str):
                     mode
                 )
                 if m == "gpt":
-                    mp.configure_network(config_yaml["host"], int(config_yaml["port"]))
+                    #mp.configure_network(config_yaml["host"], int(config_yaml["port"]))
                     logger.debug("Using GPT model")
             except yaml.YAMLError as exc:
                 logger.error(f"Improper YAML config: {exc}")

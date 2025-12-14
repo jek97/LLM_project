@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission.xsd">
+    <Header>
+        <MissionName>Tree Inspection</MissionName>
+        <StartTime>YYYY-MM-DDTHH:MM:SS</StartTime>
+        <MissionType>Inspection</MissionType>
+        <MissionPlanner>RobotNavigator</MissionPlanner>
+    </Header>
+    <CompositeTaskInformation>
+        <Description>Ignoring start and end points, visit as many points as possible within 100 meters and take pictures of each tree.</Description>
+        <!-- First task: Drive to the starting location -->
+        <Task>
+            <Type>DriveToLocation</Type>
+            <Coordinates><Latitude>Start Latitude</Latitude><Longitude>Start Longitude</Longitude></Coordinates>
+        </Task>
+        <!-- Repeat tasks of Driving to a location, and taking pictures of the trees nearby -->
+        <Task>
+            <Type>DriveToLocation</Type>
+            <Coordinates><Latitude>First Point Latitude from GeoJSON file</Latitude><Longitude>First Point Longitude from GeoJSON file</Longitude></Coordinates>
+            <TargetPoint>First Point ID from GeoJSON file</TargetPoint>
+        </Task>
+        <!-- Take Picture -->
+        <Task>
+            <Type>TakePicture</Type>
+            <Coordinates><Latitude>First Point Latitude from GeoJSON file</Latitude><Longitude>First Point Longitude from GeoJSON file</Longitude></Coordinates>
+        </Task>
+        <!-- Repeat previous Tasks -->
+        <!-- ... -->
+        <!-- Final task: Drive to a home location -->
+        <Task>
+            <Type>DriveToLocation</Type>
+            <Coordinates><Latitude>Home Latitude</Latitude><Longitude>Home Longitude</Longitude></Coordinates>
+        </Task>
+    </CompositeTaskInformation>
+    <!-- Added the original question in the TaskDescription for logging purposes -->
+    <Outcome>Successfully inspected several trees within a certain radius. (Estimated distance: about 10 km)</Outcome>
+</Mission>

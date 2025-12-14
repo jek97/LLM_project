@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.example.com/mission">
+    <task id="0">
+        <type>Picture</type>
+        <target>1</target>
+        <!-- ... -->
+    </task>
+</mission>

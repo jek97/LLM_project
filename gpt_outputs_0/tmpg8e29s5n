@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns="http://yournamespace">
+  <Header>
+    <MissionID>TreeAnalysis</MissionID>
+    <Timestamp>2023-05-19T12:45:00Z</Timestamp>
+  </Header>
+  <MissionInformation>
+    <Question>Requested by User to analyze trees in the field</Question>
+  </MissionInformation>
+  <CompositeTaskInformation>
+    <TaskDescription>Requested by User: Analyze trees in the field</TaskDescription>
+    <DriveToLocation xsi:type="GPSLocation">
+      <Latitude>[latitude of start location from GeoJSON]</Latitude>
+      <Longitude>[longitude of start location from GeoJSON]</Longitude>
+    </DriveToLocation>
+    <Task xsi:type="CameraTask">
+      <TaskID>TakeFirstPicture</TaskID>
+      <Tree xsi:type="GPSLocation">
+        <Latitude>[latitude of first tree from GeoJSON]</Latitude>
+        <Longitude>[longitude of first tree from GeoJSON]</Longitude>
+      </Tree>
+    </Task>
+    <Condition xsi:type="ComparisonCondition">
+      <Value1 xsi:type="CO2Level">[CO2 level reading of the first tree]</Value1>
+      <LowerThan>
+        <Value>[lower threshold for CO2 level in ppm]</Value>
+      </LowerThan>
+    </Condition>
+    <IfTrueThenElse>
+      <Then>
+        <Task xsi:type="CO2SamplingTask">
+          <Tree xsi:type="GPSLocation">
+            <Latitude>[latitude of first tree from GeoJSON]</Latitude>
+            <Longitude>[longitude of first tree from GeoJSON]</Longitude>
+          </Tree>
+        </Task>
+      </Then>
+      <Else>
+        <Task xsi:type="TemperatureReadingTask">
+          <Tree xsi:type="GPSLocation">
+            <Latitude>[latitude of first tree from GeoJSON]</Latitude>
+            <Longitude>[longitude of first tree from GeoJSON]</Longitude>
+          </Tree>
+        </Task>
+      </Else>
+    </IfTrueThenElse>
+    <DriveToLocation xsi:type="GPSLocation">
+      <!-- Comment out the lat/lon values to keep this information hidden in the XML -->
+      <!-- <Latitude>[latitude of next tree from GeoJSON]</Latitude>
+      <Longitude>[longitude of next tree from GeoJSON]</Longitude> -->
+    </DriveToLocation>
+    <Task xsi:type="CameraTask">
+      <Tree xsi:type="GPSLocation">
+        <!-- Comment out the lat/lon values to keep this information hidden in the XML -->
+        <!-- <Latitude>[latitude of second tree from GeoJSON]</Latitude>
+        <Longitude>[longitude of second tree from GeoJSON]</Longitude> -->
+      </Tree>
+    </Task>
+    <Condition xsi:type="ComparisonCondition">
+      <Value1 xsi:type="CO2Level">[CO2 level reading of the second tree]</Value1>
+      <LowerThan>
+        <Value>[lower threshold for CO2 level in ppm]</Value>
+      </LowerThan>
+    </Condition>
+    <IfTrueThenElse>
+      <Then>
+        <Task xsi:type="CO2SamplingTask">
+          <Tree xsi:type="GPSLocation">
+            <!-- Comment out the lat/lon values to keep this information hidden in the XML -->
+            <!-- <Latitude>[latitude of second tree from GeoJSON]</Latitude>
+            <Longitude>[longitude of second tree from GeoJSON]</Longitude> -->
+          </Tree>
+        </Task>
+      </Then>
+      <Else>
+        <Condition xsi:type="ComparisonCondition">
+          <Value1 xsi:type="CO2Level">[CO2 level reading of the second tree (confirmation)]</Value1>
+          <LowerThan>
+            <Value>[lower threshold for CO2 level in ppm]</Value>
+          </LowerThan>
+        </Condition>
+      </Else>
+    </IfTrueThenElse>
+    <!-- Continue the sequence as necessary -->
+  </CompositeTaskInformation>
+  <DriveToLocation xsi:type="GPSLocation">
+    <Latitude>[latitude of end location from GeoJSON]</Latitude>
+    <Longitude>[longitude of end location from GeoJSON]</Longitude>
+  </DriveToLocation>
+</Mission>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<br:CompositeTaskInformation xmlns:br="http://example.com/roboticschema">
+  <TaskDescription>Viewing this farm as a rectangle, take pictures of trees at the four corners of the farm in any order.</TaskDescription>
+  <Outcome>
+    <MissionPlan>
+      <Task id="1">
+        <TaskType>Drive</TaskType>
+        <Waypoint type="GPS">
+          <Latitude>40.7128</Latitude>
+          <Longitude>-74.0060</Longitude>
+        </Waypoint>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="2">
+        <TaskType>Drive</TaskType>
+        <Waypoint type="GPS">
+          <Latitude>40.7145</Latitude>
+          <Longitude>-74.0080</Longitude>
+        </Waypoint>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="3">
+        <TaskType>Drive</TaskType>
+        <Waypoint type="GPS">
+          <Latitude>40.7112</Latitude>
+          <Longitude>-74.0070</Longitude>
+        </Waypoint>
+        <Action>Take Picture</Action>
+      </Task>
+      <Task id="4">
+        <TaskType>Drive</TaskType>
+        <Waypoint type="GPS">
+          <Latitude>40.7130</Latitude>
+          <Longitude>-74.0085</Longitude>
+        </Waypoint>
+        <Action>Take Picture</Action>
+      </Task>
+    </MissionPlan>
+    <TotalDistance>Approximately 2.5 miles traveled.</TotalDistance>
+  </Outcome>
+</br:CompositeTaskInformation>

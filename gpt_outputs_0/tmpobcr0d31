@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      This mission plan instructs a robotic agent to assess tree conditions. The agent will initially approach the first tree, take a picture, and evaluate the picture for low temperature. If the picture indicates low temperature, the agent will take a temperature reading. If the temperature reading is low, the agent will take a CO2 sample. If the reading is also low, the agent will drive to a far away tree and repeat the process. If the initial reading is not low, the agent will drive to the designated endpoint.
+    </TaskDescription>
+    <Steps>
+      <Step id="1">
+        <Action>Drive to Tree ID 12</Action>
+        <Priority>1</Priority>
+      </Step>
+      <Step id="2">
+        <Action>Take Picture</Action>
+        <Priority>1</Priority>
+      </Step>
+      <Step id="3">
+        <Condition>Picture indicates low temperature</Condition>
+        <Action>Take Temperature Reading</Action>
+        <Priority>1</Priority>
+      </Step>
+      <Step id="4">
+        <Condition>Temperature Reading is low</Condition>
+        <Action>Take CO2 Sample</Action>
+        <Priority>1</Priority>
+      </Step>
+      <Step id="5">
+        <Condition>CO2 Reading is low</Condition>
+        <Action>Drive to Tree ID 19</Action>
+        <Priority>1</Priority>
+      </Step>
+      <Step id="6">
+        <Condition>No low readings</Condition>
+        <Action>Drive to Endpoint</Action>
+        <Priority>1</Priority>
+      </Step>
+    </Steps>
+  </CompositeTaskInformation>
+</MissionPlan>

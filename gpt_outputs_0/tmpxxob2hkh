@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to the first pistachio tree and take a picture of it</TaskDescription>
+    <DrivingToTree>
+      <Location>
+        <type>Point</type>
+        <coordinates>-120.42302289785604,37.36635688574164</coordinates>
+      </Location>
+    </DrivingToTree>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to the second pistachio tree and take a picture of it</TaskDescription>
+    <DrivingToTree>
+      <Location>
+        <type>Point</type>
+        <coordinates>-120.42309252722157,37.36631509745154</coordinates>
+      </Location>
+    </DrivingToTree>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to the third pistachio tree and take a picture of it</TaskDescription>
+    <DrivingToTree>
+      <Location>
+        <type>Point</type>
+        <coordinates>-120.4230350832969,37.36635015674898</coordinates>
+      </Location>
+    </DrivingToTree>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to the fourth pistachio tree and take a picture of it</TaskDescription>
+    <DrivingToTree>
+      <Location>
+        <type>Point</type>
+        <coordinates>-120.42308272918532,37.36632114247575</coordinates>
+      </Location>
+    </DrivingToTree>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to the fifth pistachio tree and take a picture of it</TaskDescription>
+    <DrivingToTree>
+      <Location>
+        <type>Point</type>
+        <coordinates>-120.42301043689258,37.36630655255463</coordinates>
+      </Location>
+    </DrivingToTree>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Take a picture of the first pistachio tree from multiple angles</TaskDescription>
+    <PictureTaking>
+      <Angles>
+        <Angle>Front</Angle>
+        <Angle>Side</Angle>
+        <Angle>Back</Angle>
+      </Angles>
+    </PictureTaking>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Take a picture of the second pistachio tree from multiple angles</TaskDescription>
+    <PictureTaking>
+      <Angles>
+        <Angle>Front</Angle>
+        <Angle>Side</Angle>
+        <Angle>Back</Angle>
+      </Angles>
+    </PictureTaking>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Take a picture of the third pistachio tree from multiple angles</TaskDescription>
+    <PictureTaking>
+      <Angles>
+        <Angle>Front</Angle>
+        <Angle>Side</Angle>
+        <Angle>Back</Angle>
+      </Angles>
+    </PictureTaking>
+  </CompositeTaskInformation>
+
+</missionPlan>

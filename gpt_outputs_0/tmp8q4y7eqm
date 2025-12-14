@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompositeTaskInformation>
+    <MissionPlan>
+        <!-- Task description -->
+        <TaskDescription>From the starting point, go to the middle of the field and take a picture of a tree. If its average temperature is below 33 C, take a CO2 sample. After that, go to another random point 5 trees down and do the same thing.</TaskDescription>
+
+        <!-- Task sequence -->
+        <Task>
+            <Step>Move to starting point</Step>
+            <Action>DriveTo</Action>
+            <Parameters>
+                <Latitude>0</Latitude>
+                <Longitude>0</Longitude>
+            </Parameters>
+        </Task>
+
+        <Task>
+            <Step>Find the middle of the field</Step>
+            <Action>FindMiddleOfField</Action>
+        </Task>
+
+        <Task>
+            <Step>Identify a tree</Step>
+            <Action>IdentifyTree</Action>
+            <Parameters>
+                <DistanceThreshold>5 meters</DistanceThreshold>
+            </Parameters>
+        </Task>
+
+        <Task>
+            <Step>Take a picture of the identified tree</Step>
+            <Action>TakePicture</Action>
+            <Parameters>
+                <Location>Current Location</Location>
+            </Parameters>
+        </Task>
+
+        <Task>
+            <Step>Measure temperature of the identified tree</Step>
+            <Action>MeasureTemperature</Action>
+            <Parameters>
+                <TreeID>Identified Tree ID</TreeID>
+            </Parameters>
+        </Task>
+
+        <Condition>
+            <Expression>
+                <LeftOperand>Temperature</LeftOperand>
+                <Operator><</Operator>
+                <RightOperand>33 C</RightOperand>
+            </Expression>
+            <TrueTaskSequence>
+                <Task>
+                    <Step>Take a CO2 sample from the identified tree</Step>
+                    <Action>SampleCO2</Action>
+                    <Parameters>
+                        <TreeID>Identified Tree ID</TreeID>
+                    </Parameters>
+                </Task>
+            </TrueTaskSequence>
+        </Condition>
+
+        <Task>
+            <Step>Move 5 trees down from the identified tree</Step>
+            <Action>MoveForward</Action>
+            <Parameters>
+                <Distance>10 meters (assuming each tree is approximately 5 meters apart)</Distance>
+            </Parameters>
+        </Task>
+
+        <!-- Repeat the above tasks for the new location -->
+    </MissionPlan>
+</CompositeTaskInformation>

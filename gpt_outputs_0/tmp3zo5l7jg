@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+  <task name="Take Picture">
+    <action>DriveTo</action>
+    <target id="1"/>
+    <action>TakePicture</action>
+    <target id="2"/>
+  </task>
+  <task name="Measure CO2">
+    <action>DriveTo</action>
+    <target id="3"/>
+    <action>MeasureCO2</action>
+    <target id="4"/>
+  </task>
+</mission>

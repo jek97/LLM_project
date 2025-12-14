@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompositeTaskInformation>
+  <TaskDescription>
+    [Paste Task Description Here]
+  </TaskDescription>
+  <GeoJSON>
+    [Paste GeoJSON Content Here]
+  </GeoJSON>
+</CompositeTaskInformation>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan">
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Robotic mission to assess tree conditions and environmental factors.
+    </TaskDescription>
+    <StartingPoint>
+      <Latitude>37.366300703749474</Latitude>
+      <Longitude>-120.42299259529793</Longitude>
+    </StartingPoint>
+  </CompositeTaskInformation>
+  <Tasks>
+    <Task id="1">
+      <TaskType>Navigation</TaskType>
+      <Instruction>Navigate to the tree with the furthest distance from the starting point.</Instruction>
+      <TargetTreeId>15</TargetTreeId>
+    </Task>
+    <Task id="2">
+      <TaskType>Measurement</TaskType>
+      <Instruction>Measure CO2 level at the target tree.</Instruction>
+      <TargetTreeId>15</TargetTreeId>
+    </Task>
+    <Task id="3">
+      <TaskType>Measurement</TaskType>
+      <Instruction>If CO2 reading is low, take 2 pictures of nearby trees.</Instruction>
+      <Condition>CO2 reading is below a predefined threshold.</Condition>
+      <Action>Take 2 pictures of nearby trees.</Action>
+    </Task>
+    <Task id="4">
+      <TaskType>Measurement</TaskType>
+      <Instruction>Measure CO2 level at the target tree.</Instruction>
+      <TargetTreeId>16</TargetTreeId>
+    </Task>
+    <Task id="5">
+      <TaskType>TemperatureReading</TaskType>
+      <Instruction>Take a temperature reading at the northernmost tree.</Instruction>
+      <TargetTreeId>17</TargetTreeId>
+    </Task>
+    <Task id="6">
+      <TaskType>Navigation</TaskType>
+      <Instruction>Return to the starting point.</Instruction>
+    </Task>
+  </Tasks>
+</MissionPlan>

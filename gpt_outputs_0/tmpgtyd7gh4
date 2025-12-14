@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <MissionName>Farm Visit - All Points</MissionName>
+  <MissionDuration>60</MissionDuration>  <!-- Estimated duration in minutes -->
+  <Tasks>
+    <Task id="1">
+      <TaskName>Visit Point 1 (ID: 1)</TaskName>
+      <GeoPoint>
+        <Latitude>37.36635678715399</Latitude>
+        <Longitude>-120.42299259529793</Longitude>
+      </GeoPoint>
+      <Reward>0.85</Reward> <!-- High reward due to relatively recent sample -->
+    </Task>
+    <Task id="2">
+      <TaskName>Visit Point 2 (ID: 2)</TaskName>
+      <GeoPoint>
+        <Latitude>37.366300703749474</Latitude>
+        <Longitude>-120.42300386899338</Longitude>
+      </GeoPoint>
+      <Reward>0.70</Reward>
+    </Task>
+    <Task id="3">
+      <TaskName>Visit Point 3 (ID: 3)</TaskName>
+      <GeoPoint>
+        <Latitude>37.36634636896467</Latitude>
+        <Longitude>-120.42302669537153</Longitude>
+      </GeoPoint>
+      <Reward>0.60</Reward>
+    </Task>
+    <Task id="4">
+      <TaskName>Visit Point 4 (ID: 4)</TaskName>
+      <GeoPoint>
+        <Latitude>37.366300703749474</Latitude>
+        <Longitude>-120.4230246791031</Longitude>
+      </GeoPoint>
+      <Reward>0.50</Reward>
+    </Task>
+    <Task id="5">
+      <TaskName>Visit Point 5 (ID: 5)</TaskName>
+      <GeoPoint>
+        <Latitude>37.36626996761184</Latitude>
+        <Longitude>-120.42298051393493</Longitude>
+      </GeoPoint>
+      <Reward>0.40</Reward>
+    </Task>
+    <Task id="6">
+      <TaskName>Visit Point 6 (ID: 6)</TaskName>
+      <GeoPoint>
+        <Latitude>37.36628908556382</Latitude>
+        <Longitude>-120.42298051393493</Longitude>
+      </GeoPoint>
+      <Reward>0.30</Reward>
+    </Task>
+    <Task id="7">
+      <TaskName>Visit Point 7 (ID: 7)</TaskName>
+      <GeoPoint>
+        <Latitude>37.36636077337479</Latitude>
+        <Longitude>-120.42307592599273</Longitude>
+      </GeoPoint>
+      <Reward>0.20</Reward>
+    </Task>
+    <Task id="8">
+      <TaskName>Visit Point 8 (ID: 8)</TaskName>
+      <GeoPoint>
+        <Latitude>37.36635678715399</Latitude>
+        <Longitude>-120.42301417901265</Longitude>
+      </GeoPoint>
+      <Reward>0.10</Reward>
+    </Task>
+    <Task id="9">
+      <TaskName>Visit Point 9 (ID: 9)</TaskName>
+      <GeoPoint>
+        <Latitude>37.36635640370881</Latitude>
+        <Longitude>-120.423044218715</Longitude>
+      </GeoPoint>
+      <Reward>0.05</Reward>
+    </Task>
+    <Task id="10">
+      <TaskName>Visit Point 10 (ID: 10)</TaskName>
+      <GeoPoint>
+        <Latitude>37.366300703749474</Latitude>
+        <Longitude>-120.4230246791031</Longitude>
+      </GeoPoint>
+      <Reward>0.03</Reward>
+    </Task>
+    <Task id="11">
+      <TaskName>Visit Point 11 (ID: 11)</TaskName>
+      <GeoPoint>
+        <Latitude>37.36634636896467</Latitude>
+        <Longitude>-120.42302669537153</Longitude>
+      </GeoPoint>
+      <Reward>0.02</Reward>
+    </Task>
+    <Task id="12">
+      <TaskName>Visit Point 12 (ID: 12)</TaskName>
+      <GeoPoint>
+        <Latitude>37.366300703749474</Latitude>
+        <Longitude>-120.4230246791031</Longitude>
+      </GeoPoint>
+      <Reward>0.01</Reward>
+    </Task>
+  </Tasks>
+</MissionPlan>

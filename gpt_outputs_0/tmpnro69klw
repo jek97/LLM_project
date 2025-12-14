@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robust-mission-planning:MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robust-mission-planning.com/mission-plan.xsd 
+                                 http://robust-mission-planning.com/mission-plan.xsd"
+             xmlns:robust-mission-planning="http://robust-mission-planning.com/mission-plan.xsd">
+    <robust-mission-planning:CompositeTaskInformation>
+        <robust-mission-planning:TaskDescription>Start</robust-mission-planning:TaskDescription>
+        <robust-mission-planning:DrivingToTree>
+            <robust-mission-planning:TreeReference>
+                <robust-mission-planning:GeoJSONReference>
+                    <id>1</id>
+                    <type>Feature</type>
+                    <properties>
+                        <action>0</action>
+                        <last_sampled>10</last_sampled>
+                    </properties>
+                    <geometry>
+                        <type>Point</type>
+                        <coordinates>-120.42309252722157, 37.36631509745154</coordinates>
+                    </geometry>
+                </robust-mission-planning:GeoJSONReference>
+            </robust-mission-planning:TreeReference>
+        </robust-mission-planning:DrivingToTree>
+    </robust-mission-planning:CompositeTaskInformation>
+
+    <!-- ... rest of the XML file remains the same ... -->
+
+</robust-mission-planning:MissionPlan>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <Task id="1" description="Visit and photograph each tree within 100m radius." priority="High">
+      <Step id="1.1" instruction="Navigate to tree ID 12." target_latitude="37.366300703749474" target_longitude="-120.42300386899338"/>
+      <Step id="1.2" instruction="Take photo of tree." action="Capture Image"/>
+      <Step id="1.3" instruction="Navigate to tree ID 13." target_latitude="37.36634636896467" target_longitude="-120.42302669537153"/>
+      <Step id="1.4" instruction="Take photo of tree." action="Capture Image"/>
+      <Step id="1.5" instruction="Navigate to tree ID 14." target_latitude="37.366304880110526" target_longitude="-120.4230246791031"/>
+      <Step id="1.6" instruction="Take photo of tree." action="Capture Image"/>
+      <Step id="1.7" instruction="Navigate to tree ID 15." target_latitude="37.36626996761184" target_longitude="-120.423044218715"/>
+      <Step id="1.8" instruction="Take photo of tree." action="Capture Image"/>
+      <Step id="1.9" instruction="Navigate to tree ID 16." target_latitude="37.36628908556382" target_longitude="-120.42301417901265"/>
+      <Step id="1.10" instruction="Take photo of tree." action="Capture Image"/>
+      <Step id="1.11" instruction="Navigate to tree ID 17." target_latitude="37.36632542147133" target_longitude="-120.42303339464545"/>
+      <Step id="1.12" instruction="Take photo of tree." action="Capture Image"/>
+      <Step id="1.13" instruction="Navigate to tree ID 18." target_latitude="37.36631350818414" target_longitude="-120.42302880995383"/>
+      <Step id="1.14" instruction="Take photo of tree." action="Capture Image"/>
+      <Step id="1.15" instruction="Navigate to tree ID 19." target_latitude="37.36630569393837" target_longitude="-120.42302236542184"/>
+      <Step id="1.16" instruction="Take photo of tree." action="Capture Image"/>
+    </Task>
+  </CompositeTaskInformation>
+</MissionPlan>

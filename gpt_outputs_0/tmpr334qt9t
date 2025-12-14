@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="MissionPlan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CompositeTaskInformation" type="CompositeTaskInformationType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="CompositeTaskInformationType">
+        <xs:sequence>
+            <xs:element name="TaskDescription" type="xs:string"/>
+            <xs:element name="Tasks" type="TasksType"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="TasksType">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="Task">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="DrivingToPoint" type="DrivingToPointType"/>
+                        <xs:element name="SampleAction" type="SampleActionType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="DrivingToPointType">
+        <xs:sequence>
+            <xs:element name="PointRef" type="xs:ID"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="PointRefType">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="[a-zA-Z0-9]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="SampleActionType">
+        <xs:sequence>
+            <xs:element name="Reward" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

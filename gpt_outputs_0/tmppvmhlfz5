@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://myrobot.com/schemas/missionPlan MissionPlan.xsd">
+    <MissionInfo>
+        <MissionName>PictureTour</MissionName>
+        <MissionDescription>(Original Question: Going clockwise from the north most tree, take a picture of 4 trees. Make sure the pictures are as far apart as possible, locationwise)</MissionDescription>
+    </MissionInfo>
+    <!-- Task block for initial instructions -->
+    <CompositeTaskInformation>
+        <TaskDescription>(Original Question: Receive initial instructions to tour and take pictures of 4 trees in a clockwise direction)</TaskDescription>
+        <DrivingAndPictureTakingTask>
+            <TaskNumber>1</TaskNumber>
+            <!-- Drive to the northmost tree -->
+            <DriveToLocation>
+                <Latitude>37.36635678715399</Latitude>
+                <Longitude>-120.42299259529793</Longitude>
+            </DriveToLocation>
+            <!-- Take a picture of the tree at this location -->
+            <PictureTakingAction>
+                <TaskNumber>1</TaskNumber>
+                <TreeID>1</TreeID>
+            </PictureTakingAction>
+        </DrivingAndPictureTakingTask>
+        <!-- Repeat the following blocks for the remaining trees in a clockwise direction -->
+        <DrivingAndPictureTakingTask>
+            <TaskNumber>2</TaskNumber>
+            <!-- Drive to the next tree on the clockwise path -->
+            <DriveToLocation>
+                <Latitude>37.36628908556382</Latitude>
+                <Longitude>-120.42307592599273</Longitude>
+            </DriveToLocation>
+            <!-- Take a picture of the tree at this location -->
+            <PictureTakingAction>
+                <TaskNumber>2</TaskNumber>
+                <TreeID>2</TreeID>
+            </PictureTakingAction>
+        </DrivingAndPictureTakingTask>
+        <!-- ... -->
+    </CompositeTaskInformation>
+    <!-- Summary of the mission result, including an estimated Haversine distance -->
+    <Outcome>Successfully completed the tour and took pictures of 4 trees in a clockwise direction. (Estimated total distance traveled: XYZ)</Outcome>
+</Mission>

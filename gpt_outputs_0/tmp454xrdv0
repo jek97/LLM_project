@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <TaskList>
+        <Task id="1">
+            <Name>Take Picture of First Tree</Name>
+            <Description>Capture an image of the initial tree for visual documentation.</Description>
+            <Steps>
+                <Step id="1.1">Capture image</Step>
+            </Steps>
+        </Task>
+    </TaskList>
+</MissionPlan>

@@ -1,0 +1,64 @@
+<mission xmlns="http://www.w3.org/2005/xpath-frames" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="">
+  <name>Picture four trees</name>
+  <description>Take a picture of the tree at each cardinal direction: north, east, south, and west.</description>
+  
+  <!-- Define the initial position -->
+  <initialPosition>
+    <latitude>37.36635640370881</latitude>
+    <longitude>-120.42304700637999</longitude>
+    <altitude>0</altitude>
+  </initialPosition>
+  
+  <!-- Define the positions of the trees -->
+  <trees xsi:type="array">
+    <tree>
+      <idRef xsi:type="integer">1</idRef>
+      <latitude>37.366289085563826</latitude>
+      <longitude>-120.4230246791031</longitude>
+      <altitude xsi:type="float">0</altitude>
+    </tree>
+    <tree>
+      <idRef xsi:type="integer">2</idRef>
+      <latitude>37.36634636896467</latitude>
+      <longitude>-120.42301417901265</longitude>
+      <altitude xsi:type="float">0</altitude>
+    </tree>
+    <tree>
+      <idRef xsi:type="integer">3</idRef>
+      <latitude>37.36626996761184</latitude>
+      <longitude>-120.42301417901265</longitude>
+      <altitude xsi:type="float">0</altitude>
+    </tree>
+    <tree>
+      <idRef xsi:type="integer">4</idRef>
+      <latitude>37.36635678715399</latitude>
+      <longitude>-120.42302669537153</longitude>
+      <altitude xsi:type="float">0</altitude>
+    </tree>
+  </trees>
+  
+  <!-- Define the mission sequence -->
+  <sequence>
+    <task type="take_picture">
+      <target idRef="1"/>
+    </task>
+    <task type="take_picture">
+      <target idRef="2"/>
+    </task>
+    <task type="take_picture">
+      <target idRef="3"/>
+    </task>
+    <task type="take_picture">
+      <target idRef="4"/>
+    </task>
+  </sequence>
+  
+  <!-- Define the constraints for the mission -->
+  <constraints>
+    <!-- The robot must maintain a safe distance from the trees -->
+    <constraint type="distance" minDistance="100" maxDistance="200"/>
+    <!-- The robot must not enter any prohibited areas -->
+    <constraint type="prohibited_area"/>
+  </constraints>
+  
+</mission>

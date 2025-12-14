@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="mission_plan.xsd">
+    <CompositeTaskInformation>
+        <Task Action="DriveToTree" TargetTreeIndex="0"/>
+        <Task Action="TakePicture"/>
+        <ConditionalTask Condition="TemperatureIsLow">
+            <TrueBranch>
+                <Task Action="MeasureTemperature"/>
+                <ConditionalTask Condition="TemperatureIsLow">
+                    <TrueBranch>
+                        <Task Action="TakeCO2Sample"/>
+                    </TrueBranch>
+                    <FalseBranch>
+                        <Task Action="DriveToEnd"/>
+                    </FalseBranch>
+                </ConditionalTask>
+            </TrueBranch>
+            <FalseBranch>
+                <Task Action="DriveToFarAwayTree"/>
+                <Task Action="TakePicture"/>
+                <ConditionalTask Condition="TemperatureIsLow">
+                    <TrueBranch>
+                        <Task Action="MeasureTemperature"/>
+                        <ConditionalTask Condition="TemperatureIsLow">
+                            <TrueBranch>
+                                <Task Action="TakeCO2Sample"/>
+                            </TrueBranch>
+                            <FalseBranch>
+                                <Task Action="DriveToEnd"/>
+                            </FalseBranch>
+                        </ConditionalTask>
+                    </TrueBranch>
+                </ConditionalTask>
+            </FalseBranch>
+        </ConditionalTask>
+    </CompositeTaskInformation>
+</MissionPlan>

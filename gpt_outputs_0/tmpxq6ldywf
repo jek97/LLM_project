@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan">
+  <CompositeTaskInformation>
+    <TaskDescription>An error occurred: Element 'MissionPlan': No matching global declaration available for the validation root.</TaskDescription>
+  </CompositeTaskInformation>
+  <Task>
+    <TaskType>Drive</TaskType>
+    <Destination>
+      <Latitude>34.0522</Latitude>
+      <Longitude>-118.2437</Longitude>
+    </Destination>
+  </Task>
+  <Task>
+    <TaskType>Inspect</TaskType>
+    <TreeType>Oak</TreeType>
+  </Task>
+</MissionPlan>

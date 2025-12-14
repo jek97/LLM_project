@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/missionplan"
+           xmlns="http://example.com/missionplan">
+
+  <!-- Define the MissionPlan element -->
+  <xs:element name="MissionPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="MissionID" type="xs:string"/>
+        <xs:element name="MissionName" type="xs:string"/>
+        <xs:element name="StartTime" type="xs:dateTime"/>
+        <xs:element name="EndTime" type="xs:dateTime" minOccurs="0"/>
+        <xs:element name="MissionDescription" type="xs:string"/>
+        <xs:element name="Tasks">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:choice maxOccurs="unbounded">
+                <xs:element ref="Task"/>
+                <xs:element ref="ConditionalTask"/>
+              </xs:choice>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Define the Task element -->
+  <xs:element name="Task">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TaskID" type="xs:string"/>
+        <xs:element name="TaskName" type="xs:string"/>
+        <xs:element name="Action" type="xs:string"/>
+        <xs:element name="Parameters" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Parameter" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Name" type="xs:string"/>
+                    <xs:element name="Value" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Define the ConditionalTask element -->
+  <xs:element name="ConditionalTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Condition">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Type" type="xs:string"/>
+              <xs:element name="Parameter">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Name" type="xs:string"/>
+                    <xs:element name="Value" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:choice>
+          <xs:element ref="TrueBranch"/>
+          <xs:element ref="FalseBranch"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Define the TrueBranch element -->
+  <xs:element name="TrueBranch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element ref="Task"/>
+          <xs:element ref="ConditionalTask"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Define the FalseBranch element -->
+  <xs:element name="FalseBranch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element ref="Task"/>
+          <xs:element ref="ConditionalTask"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

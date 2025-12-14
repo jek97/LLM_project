@@ -1,0 +1,8 @@
+<MissionPlan>
+    <CompositeTaskInformation>
+        <!-- TaskDescription goes here -->
+        <TaskDescription>Original question or task description</TaskDescription>
+        <!-- Other elements go here -->
+    </CompositeTaskInformation>
+    <!-- Additional mission details go here -->
+</MissionPlan>

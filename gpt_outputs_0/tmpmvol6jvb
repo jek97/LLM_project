@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://example.com/mission">
+
+    <xsd:include schemaLocation="https://raw.githubusercontent.com/opengeospatial/geosparql-sdk/master/src/main/resources/jsonld/geojson-1.0.xsd" />
+
+    <xsd:element name="Mission">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="MissionInformation"/>
+                <xsd:element ref="TaskPlan" minOccurs="1" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!-- Incorporate the GeoJSON schema -->
+
+    <xsd:element name="MissionInformation">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="StartLocation" />
+                <xsd:element ref="EndLocation" />
+                <xsd:element ref="EstimatedDistance" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="StartLocation">
+        <xsd:complexType>
+            <xsd:attribute name="type" type="xsd:string" use="required"/>
+            <xsd:attribute name="coordinates" type="geojson-Point"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="EndLocation">
+        <xsd:complexType>
+            <xsd:attribute name="type" type="xsd:string" use="required"/>
+            <xsd:attribute name="coordinates" type="geojson-Point"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="EstimatedDistance">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:nonNegativeInteger">
+                <!-- Add a constraint for an upper limit if needed -->
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <xsd:element name="TaskPlan">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element ref="DriveTo" />
+                    <xsd:element ref="ActionAtLocation" />
+                </xsd:choice>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="DriveTo">
+        <xsd:complexType>
+            <xsd:attribute name="location" type="geojson-Point" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="ActionAtLocation">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="TaskDescription" />
+            </xsd:sequence>
+            <xsd:attribute name="location" type="geojson-Point" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TaskDescription">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <!-- Add a constraint for maximum length if needed -->
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <xsd:element name="Outcome">
+        <xsd:complexType>
+            <xsd:sequence>
+                <!-- Add other relevant elements as needed -->
+                <xsd:element ref="TotalDistance" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TotalDistance">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <!-- Add a constraint for maximum length if needed -->
+            </xsd:restriction>
+        </xsd:simpleType>    </xsd:schema>

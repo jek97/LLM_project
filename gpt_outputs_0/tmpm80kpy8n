@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission.xsd">
+    <CompositeTaskInformation>
+        <TaskDescription>Create an orchard exploration mission based on the GeoJSON data provided.</TaskDescription>
+        <SequentialTasks>
+            <!-- Drive to starting point -->
+            <DriveToGpsCoordinates lat="37.3663048801105" lon="-120.4229925952979">Starting point</DriveToGpsCoordinates>
+
+            <!-- TreeMeasureCos action for tree 1 -->
+            <TreeMeasureCos>
+                <TargetTreeId>1</TargetTreeId>
+            </TreeMeasureCos>
+            <TakePictures>
+                <TargetTreeId>1</TargetTreeId>
+            </TakePictures>
+
+            <!-- Drive to next location -->
+            <DriveToGpsCoordinates lat="N/A" lon="N/A">Next location</DriveToGpsCoordinates>
+
+            <!-- TreeMeasureCo2 action for tree 2 -->
+            <TreeMeasureCo2>
+                <TargetTreeId>2</TargetTreeId>
+            </TreeMeasureCo2>
+            <TakePictures>
+                <TargetTreeId>2</TargetTreeId>
+            </TakePictures>
+
+            <!-- Drive to next location -->
+            <DriveToGpsCoordinates lat="N/A" lon="N/A">Next location</DriveToGpsCoordinates>
+
+            <!-- TreeMeasureTemperature action for tree 3 -->
+            <TreeMeasureTemperature>
+                <TargetTreeId>3</TargetTreeId>
+            </TreeMeasureTemperature>
+            <TakePictures>
+                <TargetTreeId>3</TargetTreeId>
+            </TakePictures>
+
+            <!-- Drive back to starting point -->
+            <DriveToGpsCoordinates lat="37.3663048801105" lon="-120.4229925952979">Starting point</DriveToGpsCoordinates>
+        </SequentialTasks>
+    </CompositeTaskInformation>
+    <Outcome>Successfully completed the orchard exploration mission based on the provided GeoJSON data. Mission covered considerable distance across the orchard.</Outcome>
+</MissionPlan>

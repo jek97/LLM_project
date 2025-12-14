@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompositeTaskInformation>
+  <TaskDescription>Drive to tree 1.</TaskDescription>
+  <GeoJSON>{ "type": "FeatureCollection", "features": [] }</GeoJSON>
+</CompositeTaskInformation>

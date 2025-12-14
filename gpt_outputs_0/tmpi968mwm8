@@ -1,0 +1,48 @@
+It seems like the XSLT transformation is still not working correctly.
+
+To generate a valid XML file, I will try again from scratch. Here is an example of what the corrected XML file might look like:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription xml:lang="en">Take picture of first tree</TaskDescription>
+    <DrivingTo>0.00 km</DrivingTo>
+    <Outcome>
+      <Action xml:lang="en">TakePicture</Action>
+      <LocationRef featureId="0">
+        <GeoJSONFeature>
+          <geometry type="Point">
+            <coordinates>-122.084051 47.620261</coordinates>
+          </geometry>
+          <properties>
+            <treeType>Quaking Aspen</treeType>
+          </properties>
+        </GeoJSONFeature>
+      </LocationRef>
+      <!-- Add estimated haversine distance from start -->
+      <EstimatedHaversineDistanceFromStart>0.00 km</EstimatedHaversineDistanceFromStart>
+    </Outcome>
+  </CompositeTaskInformation>
+  <DrivingTo>0.00 km</DrivingTo>
+  <Outcome>
+    <Action xml:lang="en">CollectSample</Action>
+    <LocationRef featureId="1">
+      <GeoJSONFeature>
+        <geometry type="Point">
+          <coordinates>-122.084051 47.620261</coordinates>
+        </geometry>
+        <properties>
+          <treeType>Quaking Aspen</treeType>
+        </properties>
+      </GeoJSONFeature>
+    </LocationRef>
+    <!-- Add estimated haversine distance from start -->
+    <EstimatedHaversineDistanceFromStart>0.00 km</EstimatedHaversineDistanceFromStart>
+  </Outcome>
+</MissionPlan>
+```
+This XML file includes two driving tasks and two outcome sections, with the same location data for both.
+
+Please note that I've included the estimated haversine distance from start in both outcome sections.
+
+Please let me know if this is what you're looking for!

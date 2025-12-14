@@ -1,0 +1,26 @@
+<TaskDescription>
+    Robotic mission to measure CO2, temperature, and take pictures of trees.
+</TaskDescription>
+<StartingPoint>
+    <Latitude>37.36627570632085</Latitude>
+    <Longitude>-120.42298051393493</Longitude>
+</StartingPoint>
+<Tasks>
+    <Task id="1">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="1.1">
+            <Latitude>37.366304880110526</Latitude>
+            <Longitude>-120.4230246791031</Longitude>
+            <Action>Execute</Action>
+        </Waypoint>
+    </Task>
+    <Task id="2">
+        <TaskType>Measurement</TaskType>
+        <MeasurementType>CO2</MeasurementType>
+        <Waypoint id="2.1">
+            <Latitude>37.366304880110526</Latitude>
+            <Longitude>-120.4230246791031</Longitude>
+            <Action>Execute</Action>
+        </Waypoint>
+    </Task>
+</Tasks>

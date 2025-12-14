@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="missionplan.xsd">
+    <CompositeTaskInformation>
+        <!-- From the starting point, find a tree somewhere in the middle of the orchard and measure cos. If low reading, go to and take 2 pictures of nearby trees. From there, measure another tree as far away as possible for co2. If low reading, go to and take pictures of nearby trees again. Finally, drive to a northernmost tree and take pictures before returning to the starting point. -->
+        <TaskDescription>Navigate through an orchard and perform various tasks based on sensor readings</TaskDescription>
+        <SubTasks>
+            <DriveToLocation>
+                <Start>
+                    <GPSLocation x="0" y="0"/>
+                </Start>
+                <End>
+                    <GPSLocation x="123456789" y="123456789"/>
+                </End>
+            </DriveToLocation>
+            <MeasureCosine>
+                <TreeType>Oak</TreeType>
+            </MeasureCosine>
+            <If Condition="CosineReading &lt; LowThreshold">
+                <SubTasks>
+                    <DriveToLocation>
+                        <Start>
+                            <!-- Current location -->
+                        </Start>
+                        <End>
+                            <!-- Location of the nearest tree -->
+                        </End>
+                    </DriveToLocation>
+                    <TakePictures>
+                        <TreeType>Oak</TreeType>
+                    </TakePictures>
+                </SubTasks>
+            </If>
+            <DriveToLocation>
+                <Start>
+                    <!-- Location of the nearest tree -->
+                </Start>
+                <End>
+                    <!-- Location of a tree with the maximum distance from the starting point for CO2 measurement -->
+                </End>
+            </DriveToLocation>
+            <MeasureCO2>
+                <TreeType>Oak</TreeType>
+            </MeasureCO2>
+            <If Condition="CO2Reading &lt; LowThreshold">
+                <SubTasks>
+                    <DriveToLocation>
+                        <Start>
+                            <!-- Location of the tree with the maximum distance for CO2 measurement -->
+                        </Start>
+                        <End>
+                            <!-- Location of a nearby tree -->
+                        </End>
+                    </DriveToLocation>
+                    <TakePictures>
+                        <TreeType>Oak</TreeType>
+                    </TakePictures>
+                </SubTasks>
+            </If>
+            <DriveToLocation>
+                <Start>
+                    <!-- Location of a nearby tree -->
+                </Start>
+                <End>
+                    <!-- Location of a northernmost tree -->
+                </End>
+            </DriveToLocation>
+            <TakePictures>
+                <TreeType>Oak</TreeType>
+            </TakePictures>
+        </SubTasks>
+    </CompositeTaskInformation>
+    <!-- Outcome element can be added here if desired -->
+</MissionPlan>

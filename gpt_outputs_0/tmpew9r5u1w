@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="mission_plan.xsd">
+    <CompositeTaskInformation>
+        <TaskDescription>Visit all points on the farm</TaskDescription>
+        <Tasks>
+            <Task id="0" name="Drive to point 0 and sample it">
+                <DrivingToPoint>
+                    <PointRef ref="0"/>
+                </DrivingToPoint>
+                <SampleAction>
+                    <Reward>1.0</Reward>
+                </SampleAction>
+            </Task>
+            <Task id="1" name="Drive to point 1 and sample it">
+                <DrivingToPoint>
+                    <PointRef ref="1"/>
+                </DrivingToPoint>
+                <SampleAction>
+                    <Reward>1.0 - (10 / 365)</Reward>
+                </SampleAction>
+            </Task>
+            <Task id="2" name="Drive to point 2 and sample it">
+                <DrivingToPoint>
+                    <PointRef ref="2"/>
+                </DrivingToPoint>
+                <SampleAction>
+                    <Reward>1.0 - (201 / 365)</Reward>
+                </SampleAction>
+            </Task>
+            <Task id="3" name="Drive to point 3 and sample it">
+                <DrivingToPoint>
+                    <PointRef ref="3"/>
+                </DrivingToPoint>
+                <SampleAction>
+                    <Reward>1.0 - (159 / 365)</Reward>
+                </SampleAction>
+            </Task>
+            <Task id="4" name="Drive to point 4 and sample it">
+                <DrivingToPoint>
+                    <PointRef ref="4"/>
+                </DrivingToPoint>
+                <SampleAction>
+                    <Reward>1.0 - (153 / 365)</Reward>
+                </SampleAction>
+            </Task>
+            <Task id="5" name="Drive to point 5 and sample it">
+                <DrivingToPoint>
+                    <PointRef ref="5"/>
+                </DrivingToPoint>
+                <SampleAction>
+                    <Reward>1.0 - (120 / 365)</Reward>
+                </SampleAction>
+            </Task>
+            <Task id="6" name="Drive to point 6 and sample it">
+                <DrivingToPoint>
+                    <PointRef ref="6"/>
+                </DrivingToPoint>
+                <SampleAction>
+                    <Reward>1.0 - (67 / 365)</Reward>
+                </SampleAction>
+            </Task>
+            <Task id="7" name="Drive to point 7 and sample it">
+                <DrivingToPoint>
+                    <PointRef ref="7"/>
+                </DrivingToPoint>
+                <SampleAction>
+                    <Reward>1.0 - (287 / 365)</Reward>
+                </SampleAction>
+            </Task>
+            <Task id="8" name="Drive to point 8 and sample it">
+                <DrivingToPoint>
+                    <PointRef ref="8"/>
+                </DrivingToPoint>
+                <SampleAction>
+                    <Reward>1.0 - (312 / 365)</Reward>
+                </SampleAction>
+            </Task>
+            <Task id="9" name="Drive to point 9 and sample it">
+                <DrivingToPoint>
+                    <PointRef ref="9"/>
+                </DrivingToPoint>
+                <SampleAction>
+                    <Reward>1.0 - (180 / 365)</Reward>
+                </SampleAction>
+            </Task>
+            <Task id="10" name="Drive to point 10 and sample it">
+                <DrivingToPoint>
+                    <PointRef ref="10"/>
+                </DrivingToPoint>
+                <SampleAction>
+                    <Reward>1.0 - (309 / 365)</Reward>
+                </SampleAction>
+            </Task>
+            <Task id="11" name="Drive to point 11 and sample it">
+                <DrivingToPoint>
+                    <PointRef ref="11"/>
+                </DrivingToPoint>
+                <SampleAction>
+                    <Reward>1.0 - (29 / 365)</Reward>
+                </SampleAction>
+            </Task>
+        </Tasks>
+    </CompositeTaskInformation>
+</MissionPlan>

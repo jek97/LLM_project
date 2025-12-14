@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="geos_features.xsd">
+    <gml:Point gml:id="1">
+        <gml3:coordinates xmlns:geos="http://example.com/geos" xsi:schemaLocation="geos_features.xsd">
+            <gml3:coord>0</gml3:coord>
+            <gml3:coord>0</gml3:coord>
+        </gml3:coordinates>
+    </gml:Point>
+    <!-- ... -->
+</mission>

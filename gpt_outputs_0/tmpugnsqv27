@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Robotic mission to assess tree conditions and CO2 levels, culminating in a temperature reading.
+    </TaskDescription>
+    <StartingPoint>
+      <Latitude>37.36627570632085</Latitude>
+      <Longitude>-120.42298051393493</Longitude>
+    </StartingPoint>
+  </CompositeTaskInformation>
+  <Tasks>
+    <Task id="1">
+      <TaskType>Navigation</TaskType>
+      <Instruction>Navigate to tree with ID 14.  This tree is located approximately midway through the orchard.</Instruction>
+      <TargetTreeId>14</TargetTreeId>
+    </Task>
+    <Task id="2">
+      <TaskType>Measurement</TaskType>
+      <Instruction>Upon reaching tree ID 14, perform a CO2 measurement. If the reading is low, proceed to the nearest trees and take 2 pictures of nearby trees.</Instruction>
+      <TargetTreeId>14</TargetTreeId>
+    </Task>
+    <Task id="3">
+      <TaskType>Navigation</TaskType>
+      <Instruction>Navigate to the furthest tree from the starting point for CO2 measurement.</Instruction>
+      <TargetTreeId>19</TargetTreeId>
+    </Task>
+    <Task id="4">
+      <TaskType>Measurement</TaskType>
+      <Instruction>Perform a CO2 measurement at the furthest tree. If the reading is low, take 2 pictures of nearby trees.</Instruction>
+      <TargetTreeId>19</TargetTreeId>
+    </Task>
+    <Task id="5">
+      <TaskType>Navigation</TaskType>
+      <Instruction>Navigate to the northernmost tree.</Instruction>
+      <TargetTreeId>17</TargetTreeId>
+    </Task>
+    <Task id="6">
+      <TaskType>Measurement</TaskType>
+      <Instruction>Take a temperature reading at the northernmost tree.</Instruction>
+      <TargetTreeId>17</TargetTreeId>
+    </Task>
+    <Task id="7">
+      <TaskType>Navigation</TaskType>
+      <Instruction>Return to the starting point.</Instruction>
+      <TargetTreeId>1</TargetTreeId>
+    </Task>
+  </Tasks>
+</MissionPlan>

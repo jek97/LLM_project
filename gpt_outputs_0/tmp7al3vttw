@@ -1,0 +1,47 @@
+It seems like the issue is with the GeoJSON references in the XML output.
+
+Here's an updated example that generates a valid XML file without using GeoJSON references:
+```python
+import xml.etree.ElementTree as ET
+from random import choices
+
+# Create the root element
+root = ET.Element("CompositeTask")
+
+# Add driving point task if necessary
+driving_point_task_if_condition = ET.SubElement(root, "DrivingPoint")
+ET.SubElement(driving_point_task_if_condition, "description").text = "Drive to location"
+ET.SubElement(driving_point_task_if_condition, "outcome").set("haversineDistance", str(3.5) + " km")
+
+# Create the outcome element
+outcome_element = ET.SubElement(root, "Outcome")
+outcome_element.set("description", "Do task")
+
+# Add IfCondition task if necessary
+if_condition = ET.SubElement(outcome_element, "IfCondition")
+ET.SubElement(if_condition, "conditionType").text = "Temperature"
+ET.SubElement(if_condition, "operator").text = "LessThan"
+ET.SubElement(if_condition, "value").text = str(33.0)
+
+# Create the outcome element for driving to location
+driving_outcome_element = ET.SubElement(outcome_element, "DrivingOutcome")
+driving_outcome_element.set("description", "Drive to location")
+
+# Add task description and tree type reference
+task_description_element = ET.SubElement(driving_outcome_element, "TaskDescription")
+ET.SubElement(task_description_element, "Description").text = "Perform some action on the tree"
+ET.SubElement(task_description_element, "TreeTypeReference").set("tree_type_id", str(choices(range(1, 10))))
+
+# Create the ElementTree object
+tree = ET.ElementTree(root)
+
+# Write the XML file with a pretty-printed output
+xml_string = ET.tostring(tree.getroot(), encoding="unicode")
+print(xml_string)
+
+with open("output.xml", "w") as f:
+    f.write("<CompositeTask>\n" + xml_string + "\n</CompositeTask>")
+```
+This should generate a valid XML file without any syntax errors.
+
+Please note that this is just an example, and you will need to modify it to fit your specific requirements.

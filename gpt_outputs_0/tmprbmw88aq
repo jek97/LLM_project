@@ -1,0 +1,33 @@
+ Here's an example XML file for your mission plan:
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <name>Picture Taking Mission</name>
+    <description>Take pictures of 4 trees in the given order.</description>
+    <steps>
+        <step id="1">
+            <name>Start at North most tree</name>
+            <action>Move to North most tree</action>
+        </step>
+        <step id="2">
+            <name>Take picture of East most tree</name>
+            <action>Take picture of East most tree</action>
+        </step>
+        <step id="3">
+            <name>Move to South most tree</name>
+            <action>Move to South most tree</action>
+        </step>
+        <step id="4">
+            <name>Take picture of West most tree</name>
+            <action>Take picture of West most tree</action>
+        </step>
+        <step id="5">
+            <name>Move back to North most tree</name>
+            <action>Move back to North most tree</action>
+        </step>
+    </steps>
+</mission>
+```
+This XML file defines a mission with 5 steps. The first step is to start at the North most tree, and then take pictures of the East most tree, South most tree, West most tree, and finally move back to the North most tree. Each step has an id, name, and action associated with it.
+
+Please note that this XML file only defines the structure of your mission plan and does not include any specific details about the actions or the robot's capabilities. You will need to provide additional information about how the robot should move and take pictures in order for this XML file to be used by a robotics system. 

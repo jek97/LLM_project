@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <Task id="1">
+    <Action>Take Picture</Action>
+  </Task>
+  <Task id="2">
+    <Action>Evaluate Picture</Action>
+  </Task>
+  <Task id="3">
+    <Action>Read Temperature</Action>
+  </Task>
+</MissionPlan>

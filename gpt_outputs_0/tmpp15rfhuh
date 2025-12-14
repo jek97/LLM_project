@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <Task id="1">
+      <TaskDescription>Take a picture of the northern most tree.</TaskDescription>
+      <Waypoint id="1.1" latitude="37.36636077337479" longitude="-120.42307592599273"/>
+    </Task>
+    <Task id="2">
+      <TaskDescription>Drive to the middle of the orchard and take another.</TaskDescription>
+      <Waypoint id="2.1" latitude="37.36631785560332" longitude="-120.42303004014194"/>
+    </Task>
+    <Task id="3">
+      <TaskDescription>Drive to the middle of the eastern end and take a picture of two trees next to each other.</TaskDescription>
+      <Waypoint id="3.1" latitude="37.36635640370881" longitude="-120.423044218715"/>
+      <Waypoint id="3.2" latitude="37.36635640370881" longitude="-120.423044218715"/>
+    </Task>
+  </CompositeTaskInformation>
+</MissionPlan>

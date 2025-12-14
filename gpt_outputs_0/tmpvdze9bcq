@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="MissionPlan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="MissionID" type="xs:string"/>
+                <xs:element name="StartTime" type="xs:dateTime"/>
+                <xs:element name="EndTime" type="xs:dateTime"/>
+                <xs:element name="Tasks">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Task" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="TaskID" type="xs:string"/>
+                                        <xs:element name="Description" type="xs:string"/>
+                                        <xs:element name="StartTime" type="xs:dateTime"/>
+                                        <xs:element name="EndTime" type="xs:dateTime"/>
+                                        <xs:element name="Actions">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Action" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="ActionID" type="xs:string"/>
+                                                                <xs:element name="Type" type="xs:string"/>
+                                                                <xs:element name="TargetObject" type="xs:string" minOccurs="0"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="mission_plan.xsd">
+    <MissionID>ExampleMission</MissionID>
+    <StartTime>2023-10-01T09:00:00Z</StartTime>
+    <EndTime>2023-10-01T17:00:00Z</EndTime>
+    <Tasks>
+        <Task>
+            <TaskID>Task1</TaskID>
+            <Description>Go to a random point and take a picture</Description>
+            <StartTime>2023-10-01T09:00:00Z</StartTime>
+            <EndTime>2023-10-01T09:30:00Z</EndTime>
+            <Actions>
+                <Action>
+                    <ActionID>Action1</ActionID>
+                    <Type>DriveToLocation</Type>
+                    <TargetObject>RandomPoint5TreesDown</TargetObject>
+                </Action>
+                <Action>
+                    <ActionID>Action2</ActionID>
+                    <Type>TakePicture</Type>
+                    <TargetObject>TreeAtRandomPoint5TreesDown</TargetObject>
+                </Action>
+            </Actions>
+        </Task>
+    </Tasks>
+</MissionPlan>

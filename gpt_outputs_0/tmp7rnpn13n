@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan">
+    <Mission>
+        <Name>Tree Inspection Mission</Name>
+        <Description>Inspect trees of specified types at the given locations.</Description>
+        <CompositeTaskInformation>
+            <!-- Task for Drive to Tree Type 1 - Location 1 -->
+            <Task>
+                <Name>Drive to Tree Type 1 - Location 1</Name>
+                <Action>DriveToLocation</Action>
+                <Location>
+                    <Latitude>37.36628908556382</Latitude>
+                    <Longitude>-120.42298051393493</Longitude>
+                </Location>
+            </Task>
+            <!-- Task for Inspect Tree Type 1 at Location 1 -->
+            <Task>
+                <Name>InspectTree - Tree Type 1, Location 1</Name>
+                <Action>InspectTree</Action>
+                <Location>
+                    <Latitude>37.36628908556382</Latitude>
+                    <Longitude>-120.42298051393493</Longitude>
+                </Location>
+                <TreeType>Oak</TreeType>
+            </Task>
+            <!-- Repeat the following Task block for each tree inspection task -->
+            <Task>
+                <Name>Drive to Tree Type 1 - Location 2</Name>
+                <Action>DriveToLocation</Action>
+                <Location>
+                    <Latitude>37.36636077337479</Latitude>
+                    <Longitude>-120.42307592599273</Longitude>
+                </Location>
+            </Task>
+            <Task>
+                <Name>InspectTree - Tree Type 1, Location 2</Name>
+                <Action>InspectTree</Action>
+                <Location>
+                    <Latitude>37.36636077337479</Latitude>
+                    <Longitude>-120.42307592599273</Longitude>
+                </Location>
+                <TreeType>Oak</TreeType>
+            </Task>
+            <!-- ... -->
+        </CompositeTaskInformation>
+        <Outcome>The robot will travel to the specified locations, inspect trees of given types, and perform other necessary actions. The total distance traveled is estimated to be significant.</Outcome>
+    </Mission>
+</MissionPlan>

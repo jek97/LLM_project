@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="mission.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Take a picture of the first tree. If the reading is low, take a CO2 sample. Otherwise, take a temperature reading. Then, measure another tree, a different one by taking a picture. If it's low, sample CO2. If that reading is low, sample CO2 again to confirm. If still low, continue driving to another tree and take another CO2 sample. Finally, go to end.</TaskDescription>
+    <Tasks>
+      <Task>
+        <Type>TakePicture</Type>
+        <TargetTreeIndex>0</TargetTreeIndex>
+      </Task>
+      <Task>
+        <Type>MeasureReading</Type>
+        <TargetTreeIndex>0</TargetTreeIndex>
+        <ActionIfLow>SampleCO2</ActionIfLow>
+        <ActionIfHigh>TakeTemperatureReading</ActionIfHigh>
+      </Task>
+      <Task>
+        <Type>TakePicture</Type>
+        <TargetTreeIndex>1</TargetTreeIndex>
+      </Task>
+      <Task>
+        <Type>MeasureReading</Type>
+        <TargetTreeIndex>1</TargetTreeIndex>
+        <ActionIfLow>SampleCO2</ActionIfLow>
+        <ActionIfHigh>ConfirmCO2Sample</ActionIfHigh>
+      </Task>
+      <Task>
+        <Type>SampleCO2</Type>
+        <TargetTreeIndex>1</TargetTreeIndex>
+        <Repeat>true</Repeat>
+      </Task>
+      <Task>
+        <Type>DriveToNextTree</Type>
+      </Task>
+      <Task>
+        <Type>SampleCO2</Type>
+        <TargetTreeIndex>2</TargetTreeIndex>
+      </Task>
+    </Tasks>
+  </CompositeTaskInformation>
+</mission>

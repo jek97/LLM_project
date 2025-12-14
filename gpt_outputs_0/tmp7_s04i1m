@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmlns:missionplan="http://example.com/missionplan" xmlns="http://example.com/missionplan">
+  <CompositeTaskInformation>
+    <TaskDescription>
+      This mission involves driving to a tree, taking a photograph, and potentially collecting a CO2 sample based on temperature.  A second, randomized location will be visited for the same actions.
+    </TaskDescription>
+    <StartLocation>
+      <Latitude>37.36627570632085</Latitude>
+      <Longitude>-120.42298051393493</Longitude>
+    </StartLocation>
+  </CompositeTaskInformation>
+  <Tasks>
+    <Task id="1">
+      <TaskType>DriveToTarget</TaskType>
+      <Target>
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42300386899338</Longitude>
+      </Target>
+      <Action>TakePhotograph</Action>
+    </Task>
+    <Task id="2">
+      <TaskType>EvaluateTemperature</TaskType>
+      <Condition>
+        <TemperatureThreshold>33</TemperatureThreshold>
+        <Unit>Celsius</Unit>
+      </Condition>
+      <Action>CollectCO2Sample</Action>
+    </Task>
+    <Task id="3">
+      <TaskType>DriveToRandomPoint</TaskType>
+      <Offset>
+        <Distance>5</Distance>
+        <Unit>Trees</Unit>
+      </Offset>
+      <Action>TakePhotograph</Action>
+    </Task>
+    <Task id="4">
+      <TaskType>EvaluateTemperature</TaskType>
+      <Condition>
+        <TemperatureThreshold>33</TemperatureThreshold>
+        <Unit>Celsius</Unit>
+      </Condition>
+      <Action>CollectCO2Sample</Action>
+    </Task>
+  </Tasks>
+</MissionPlan>

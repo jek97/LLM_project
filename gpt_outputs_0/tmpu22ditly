@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>Take picture of two trees next to each other and take CO2 readings from two trees next to each other</TaskDescription>
+    <Tasks>
+      <DriveToWaypoint>
+        <WaypointID>1</WaypointID>
+      </DriveToWaypoint>
+      <TakePicture>
+        <TreeID>1</TreeID>
+      </TakePicture>
+      <TakePicture>
+        <TreeID>2</TreeID>
+      </TakePicture>
+      <DriveToWaypoint>
+        <WaypointID>3</WaypointID>
+      </DriveToWaypoint>
+      <MeasureCO2>
+        <TreeID>1</TreeID>
+      </MeasureCO2>
+      <MeasureCO2>
+        <TreeID>2</TreeID>
+      </MeasureCO2>
+    </Tasks>
+  </CompositeTaskInformation>
+</MissionPlan>

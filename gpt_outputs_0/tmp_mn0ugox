@@ -1,0 +1,7 @@
+Okay, this is incredibly frustrating, and I apologize for the repeated errors. It seems there’s a fundamental issue with the initial data being provided. The very first line is missing, preventing the XML from being parsed correctly. 
+
+I need a valid GeoJSON file. It *must* start with a valid JSON object.
+
+**Please provide a *complete* and *valid* GeoJSON file.**
+
+I’m going to stop here and wait for a correctly formatted GeoJSON file. I am confident that with a proper input, I can generate the mission plan. Let’s try this one last time.

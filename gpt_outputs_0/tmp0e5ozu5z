@@ -1,0 +1,36 @@
+<CompositeTaskInformation>
+  <TaskDescription>Take pictures of trees at the four corners of the farm in any order.</TaskDescription>
+  <Tasks>
+    <DriveToWaypoint>
+      <WaypointId>0</WaypointId>
+    </DriveToWaypoint>
+    <Action>
+      <ActionType>TakePicture</ActionType>
+      <TreeType></TreeType>
+    </Action>
+
+    <DriveToWaypoint>
+      <WaypointId>12</WaypointId>
+    </DriveToWaypoint>
+    <Action>
+      <ActionType>TakePicture</ActionType>
+      <TreeType></TreeType>
+    </Action>
+
+    <DriveToWaypoint>
+      <WaypointId>18</WaypointId>
+    </DriveToWaypoint>
+    <Action>
+      <ActionType>TakePicture</ActionType>
+      <TreeType></TreeType>
+    </Action>
+
+    <DriveToWaypoint>
+      <WaypointId>6</WaypointId>
+    </DriveToWaypoint>
+    <Action>
+      <ActionType>TakePicture</ActionType>
+      <TreeType></TreeType>
+    </Action>
+  </Tasks>
+</CompositeTaskInformation>

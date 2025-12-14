@@ -1,0 +1,7 @@
+<missions>
+  <mission id="my_mission">
+    <tasks>
+      <!-- Repeat Task IDs and names from your previous message -->
+    </tasks>
+  </mission>
+</missions>

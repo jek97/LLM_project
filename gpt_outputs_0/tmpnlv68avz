@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <MissionID>OrchardSamplingMission</MissionID>
+    <StartTime>2023-10-05T14:00:00Z</StartTime>
+    <EndTime/>
+    <MissionDescription>Takes pictures of trees and performs CO2 or temperature readings based on initial reading.</MissionDescription>
+    
+    <Task>
+        <TaskID>Tree1_Picture</TaskID>
+        <Type>TakePicture</Type>
+        <Parameters>
+            <Parameter>
+                <Key>Target</Key>
+                <Value>tree_0</Value>
+            </Parameter>
+        </Parameters>
+    </Task>
+
+    <Condition>
+        <Expression>InitialReadingLow</Expression>
+        <NextTaskID>CO2_Sample1</NextTaskID>
+        <ElseTaskID>Temperature_Read</ElseTaskID>
+    </Condition>
+
+    <Task>
+        <TaskID>CO2_Sample1</TaskID>
+        <Type>SampleCO2</Type>
+        <Parameters>
+            <Parameter>
+                <Key>Target</Key>
+                <Value>tree_0</Value>
+            </Parameter>
+        </Parameters>
+    </Task>
+
+    <Condition>
+        <Expression>SampleLow</Expression>
+        <NextTaskID>CO2_Sample1_Again</NextTaskID>
+        <ElseTaskID>Temperature_Read</ElseTaskID>
+    </Condition>
+
+    <Task>
+        <TaskID>CO2_Sample1_Again</TaskID>
+        <Type>SampleCO2</Type>
+        <Parameters>
+            <Parameter>
+                <Key>Target</Key>
+                <Value>tree_0</Value>
+            </Parameter>
+        </Parameters>
+    </Task>
+
+    <Condition>
+        <Expression>StillLow</Expression>
+        <NextTaskID>DriveToNextTree</NextTaskID>
+        <ElseTaskID/>
+    </Condition>
+
+    <Task>
+        <TaskID>DriveToNextTree</TaskID>
+        <Type>Drive</Type>
+        <Parameters>
+            <Parameter>
+                <Key>Target</Key>
+                <Value>tree_1</Value>
+            </Parameter>
+        </Parameters>
+    </Task>
+
+    <Task>
+        <TaskID>Tree2_Picture</TaskID>
+        <Type>TakePicture</Type>
+        <Parameters>
+            <Parameter>
+                <Key>Target</Key>
+                <Value>tree_1</Value>
+            </Parameter>
+        </Parameters>
+    </Task>
+
+    <Condition>
+        <Expression>InitialReadingLow</Expression>
+        <NextTaskID>CO2_Sample2</NextTaskID>
+        <ElseTaskID>Temperature_Read</ElseTaskID>
+    </Condition>
+
+    <Task>
+        <TaskID>CO2_Sample2</TaskID>
+        <Type>SampleCO2</Type>
+        <Parameters>
+            <Parameter>
+                <Key>Target</Key>
+                <Value>tree_1</Value>
+            </Parameter>
+        </Parameters>
+    </Task>
+
+    <Condition>
+        <Expression>SampleLow</Expression>
+        <NextTaskID>CO2_Sample2_Again</NextTaskID>
+        <ElseTaskID/>
+    </Condition>
+
+    <Task>
+        <TaskID>CO2_Sample2_Again</TaskID>
+        <Type>SampleCO2</Type>
+        <Parameters>
+            <Parameter>
+                <Key>Target</Key>
+                <Value>tree_1</Value>
+            </Parameter>
+        </Parameters>
+    </Task>
+
+    <Condition>
+        <Expression>FinalReadingsLow</Expression>
+        <NextTaskID/>
+        <ElseTaskID/>
+    </Condition>
+
+    <End/>
+</MissionPlan>

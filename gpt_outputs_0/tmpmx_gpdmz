@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns="...">
+    <CompositeTaskInformation>
+        <TaskDescription>
+            <!-- Original question or task description here -->
+        </TaskDescription>
+        <Outcome>
+            <!-- Estimated haversine distance here -->
+        </Outcome>
+    </CompositeTaskInformation>
+</mission>

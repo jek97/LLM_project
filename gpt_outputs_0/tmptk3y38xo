@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/01/rdf-schema"
+             xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+             xmlns="your_namespace_here">
+  <your_namespace_here:mission>
+    <tasks>
+      <!-- Add tasks as needed -->
+    </tasks>
+  </your_namespace_here:mission>
+</rdf:RDF>

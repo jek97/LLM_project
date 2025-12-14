@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns="http://robotics.com/missionPlanSchema">
+    <RobotDetails>
+        <!-- Add robot details here if necessary -->
+    </RobotDetails>
+    <MissionID>TreePictureMission</MissionID>
+    <StartLocation>
+        <Latitude>37.366300703749474</Latitude>
+        <Longitude>-120.42299259529793</Longitude>
+    </StartLocation>
+    <Tasks>
+        <CompositeTaskInformation>
+            <Question>Going clockwise from the north most tree, take a picture of 4 trees.</Question>
+            <Subtasks>
+                <DriveToLocation>
+                    <TargetGPS>
+                        <Latitude>37.366300703749474</Latitude>
+                        <Longitude>-120.42299259529793</Longitudue>
+                    </TargetGPS>
+                </DriveToLocation>
+                <TakePicture>
+                    <TreeInformation>
+                        <!-- Add tree information here if necessary -->
+                    </TreeInformation>
+                </TakePicture>
+                <DriveToLocation>
+                    <TargetGPS>
+                        <!-- Target GPS coordinates for the east most tree -->
+                    </TargetGPS>
+                </DriveToLocation>
+                <TakePicture>
+                    <TreeInformation>
+                        <!-- Add tree information here if necessary -->
+                    </TreeInformation>
+                </TakePicture>
+                <DriveToLocation>
+                    <TargetGPS>
+                        <!-- Target GPS coordinates for the south most tree -->
+                    </TargetGPS>
+                </DriveToLocation>
+                <TakePicture>
+                    <TreeInformation>
+                        <!-- Add tree information here if necessary -->
+                    </TreeInformation>
+                </TakePicture>
+                <DriveToLocation>
+                    <TargetGPS>
+                        <!-- Target GPS coordinates for the west most tree -->
+                    </TargetGPS>
+                </DriveToLocation>
+                <TakePicture>
+                    <TreeInformation>
+                        <!-- Add tree information here if necessary -->
+                    </TreeInformation>
+                </TakePicture>
+            </Subtasks>
+        </CompositeTaskInformation>
+    </Tasks>
+    <Outcome>
+        <!-- Estimate total distance traveled here, but don't show the calculation method -->
+        This mission will cover a significant amount of ground as we visit the north, east, south, and west most trees.
+    </Outcome>
+</Mission>

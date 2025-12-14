@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://robust-mission-planning.com/missionplan.xsd http://robust-mission-planning.com/missionplan.xsd">
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the first corner of the farm and take a picture of the tree</TaskDescription>
+        <DrivingTask>
+            <StartLocation ref="corner1"/>
+            <EndLocation ref="corner1"/>
+            <DistanceToTravel>0.0 km</DistanceToTravel>
+        </DrivingTask>
+    </CompositeTaskInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the second corner of the farm and take a picture of the tree</TaskDescription>
+        <DrivingTask>
+            <StartLocation ref="corner2"/>
+            <EndLocation ref="corner2"/>
+            <DistanceToTravel>0.0 km</DistanceToTravel>
+        </DrivingTask>
+    </CompositeTaskInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the third corner of the farm and take a picture of the tree</TaskDescription>
+        <DrivingTask>
+            <StartLocation ref="corner3"/>
+            <EndLocation ref="corner3"/>
+            <DistanceToTravel>0.0 km</DistanceToTravel>
+        </DrivingTask>
+    </CompositeTaskInformation>
+    <CompositeTaskInformation>
+        <TaskDescription>Drive to the fourth corner of the farm and take a picture of the tree</TaskDescription>
+        <DrivingTask>
+            <StartLocation ref="corner4"/>
+            <EndLocation ref="corner4"/>
+            <DistanceToTravel>0.0 km</DistanceToTravel>
+        </DrivingTask>
+    </CompositeTaskInformation>
+
+    <!-- FeatureCollection is not part of the MissionPlan schema -->
+    <!-- However, we can add a separate XML file for the feature collection if needed -->
+
+    <!-- Alternatively, we can use an XSLT to transform the feature collection into a format that can be used with the MissionPlan schema -->
+</MissionPlan>

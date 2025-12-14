@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:br="http://example.com/roboticschema"
+           targetNamespace="http://example.com/roboticschema"
+           elementFormDefault="qualified">
+  <xs:element name="br:CompositeTaskInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="br:TaskDescription" type="string" />
+        <xs:element name="br:Outcome">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="br:MissionPlan">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="br:Task" maxOccurs="4">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="br:TaskType" type="string"/>
+                          <xs:element name="br:Waypoint" type="string"/>
+                          <xs:element name="br:Action" type="string"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="br:TotalDistance" type="string"/>
+            </xs:element>
+          </xs:complexType>
+        </xs:element>
+      </xs:complexType>
+    </xs:element>
+</xs:schema>

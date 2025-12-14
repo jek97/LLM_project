@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <Task id="1">
+        <Name>Go to the middle of the field and take a picture of a tree</Name>
+        <Coordinates>[-120.423044218715, 37.36626996761184]</Coordinates>
+    </Task>
+    <Task id="2">
+        <Name>Take a co2 sample if the average temperature is below 33 C</Name>
+        <Conditions>
+            <TemperatureCondition lowerLimit="33" />
+        </Conditions>
+        <Actions>
+            <Co2SamplingAction />
+        </Actions>
+    </Task>
+    <Task id="3">
+        <Name>Go to another random point 5 trees down and do the same thing</Name>
+        <NavigationStrategy>Random waypoint</NavigationStrategy>
+        <NumberOfWaypoints>5</NumberOfWaypoints>
+        <Tasks>
+            <RepeatedTask id="2" />
+        </Tasks>
+    </Task>
+</MissionPlan>

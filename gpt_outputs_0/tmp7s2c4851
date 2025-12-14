@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Identification>
+        <Name>Robotic Fruit Collection Mission</Name>
+        <Description>Visit all the trees on the farm, prioritize points sampled longer ago.</Description>
+        <Author>Robot Planner</Author>
+        <Version>1.0</Version>
+    </Identification>
+    <Parameters>
+        <TimeResolution>60s</TimeResolution>
+    </Parameters>
+    <CompositeTaskInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SequentialTask">
+        <StartPosition>
+            <Latitude>...</Latitude>
+            <Longitude>...</Longitude>
+        </StartPosition>
+        <!-- Original Question -->
+        <TaskDescription>Visit all points in GeoJSON file, prioritize points sampled longer ago.</TaskDescription>
+        <Tasks>
+            <CompositeTaskInformation xsi:type="SequentialTask">
+                <TaskReference TaskName="DriveToLocation" />
+                <TaskReference TaskName="CheckTreeSample" />
+                <!-- Visit tree with the highest reward -->
+                <PositionList>
+                    <Position>
+                        <Latitude>...</Latitude>
+                        <Longitude>...</Longitude>
+                    </Position>
+                </PositionList>
+            </CompositeTaskInformation>
+            <!-- Other tasks for each point in the GeoJSON file -->
+        </Tasks>
+    </CompositeTaskInformation>
+</Mission>

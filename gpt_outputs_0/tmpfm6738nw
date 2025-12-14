@@ -1,0 +1,59 @@
+ <Mission>
+<Header>
+<Name>Orchard Mission</Name>
+<StartTime>2023-03-15T09:00:00Z</StartTime>
+<EndTime>2023-03-15T17:00:00Z</EndTime>
+</Header>
+<Tasks>
+<Task id="1">
+<Name>Take a picture of the first tree</Name>
+<Action type="Picture">
+<Parameters>
+<Parameter name="Camera" value="Front Camera"/>
+</Parameters>
+</Action>
+</Task>
+<Task id="2">
+<Name>Check temperature at the first tree</Name>
+<Action type="Temperature Reading">
+<Parameters>
+<Parameter name="Thermometer" value="Digital Thermometer"/>
+</Parameters>
+</Action>
+</Task>
+<Task id="3">
+<Name>Take a co2 sample at the first tree</Name>
+<Action type="Co2 Sample">
+<Parameters>
+<Parameter name="Sensor" value="Co2 Sensor"/>
+</Parameters>
+</Action>
+</Task>
+<Task id="4">
+<Name>Drive to a far away tree if temperature and co2 are low</Name>
+<Action type="Drive">
+<Parameters>
+<Parameter name="Distance" value="50 meters"/>
+</Parameters>
+</Action>
+</Task>
+<Task id="5">
+<Name>Repeat the process at a far away tree if temperature and co2 are low</Name>
+<Action type="Picture">
+<Parameters>
+<Parameter name="Camera" value="Front Camera"/>
+</Parameters>
+</Action>
+<Action type="Temperature Reading">
+<Parameters>
+<Parameter name="Thermometer" value="Digital Thermometer"/>
+</Parameters>
+</Action>
+<Action type="Co2 Sample">
+<Parameters>
+<Parameter name="Sensor" value="Co2 Sensor"/>
+</Parameters>
+</Action>
+</Task>
+</Tasks>
+</Mission> 

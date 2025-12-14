@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://myrobot.com/schemas/missionPlan MissionPlan.xsd">
+    <MissionInfo>
+        <!-- Original Question: Going clockwise from the north most tree, take a picture of 4 trees. Make sure the pictures are as far apart as possible, location-wise -->
+        <MissionName>PictureTour</MissionName>
+        <MissionDescription></MissionDescription>
+    </MissionInfo>
+    <!-- CompositeTaskInformation for initial instructions -->
+    <CompositeTaskInformation>
+        <!-- Original Question: Receive initial instructions to tour and take pictures of 4 trees in a clockwise direction -->
+        <TaskDescription>(Original Question: Going clockwise from the north most tree, take a picture of 4 trees. Make sure the pictures are as far apart as possible, location-wise)</TaskDescription>
+        <!-- Drive to the northmost tree and take a picture -->
+        <DrivingAndPictureTakingTask>
+            <TaskNumber>1</TaskNumber>
+            <DriveToLocation>
+                <!-- GPS coordinates from GeoJSON file -->
+                <Latitude>37.36635678715399</Latitude>
+                <Longitude>-120.42299259529793</Longitude>
+            </DriveToLocation>
+            <!-- Take a picture of the tree at this location -->
+            <PictureTakingAction>
+                <!-- Tree ID from GeoJSON file -->
+                <TreeID>1</TreeID>
+            </PictureTakingAction>
+        </DrivingAndPictureTakingTask>
+        <!-- Repeat for the next trees in a clockwise direction -->
+        <DrivingAndPictureTakingTask>
+            <TaskNumber>2</TaskNumber>
+            <DriveToLocation>
+                <!-- GPS coordinates from GeoJSON file -->
+                <Latitude>37.36628908556382</Latitude>
+                <Longitude>-120.42307592599273</Longitude>
+            </DriveToLocation>
+            <!-- Take a picture of the tree at this location -->
+            <PictureTakingAction>
+                <!-- Tree ID from GeoJSON file -->
+                <TreeID>2</TreeID>
+            </PictureTakingAction>
+        </DrivingAndPictureTakingTask>
+        <!-- ... -->
+    </CompositeTaskInformation>
+    <!-- Summary of the mission result, including estimated total distance traveled from start to end somewhere in the Outcome, but don't show how you computed it -->
+    <Outcome>Successfully completed the tour and took pictures of 4 trees in a clockwise direction. (Total estimated distance: XYZ)</Outcome>
+</Mission>

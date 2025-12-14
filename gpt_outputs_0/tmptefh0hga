@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <Tasks>
+    <Task id="1">
+      <Action>DriveTo</Action>
+      <Destination>
+        <Latitude>37.36631785560332</Latitude>
+        <Longitude>-120.42303004014194</Longitude>
+      </Destination>
+      <Objective>Photograph a tree</Objective>
+    </Task>
+    <Task id="2">
+      <Condition>
+        <TemperatureLessThan>33</TemperatureLessThan>
+      </Condition>
+      <Action>CollectSample</Action>
+      <Objective>Take CO2 sample</Objective>
+    </Task>
+    <Task id="3">
+      <Action>DriveTo</Action>
+      <Destination>
+        <Latitude>37.36635640370881</Latitude>
+        <Longitude>-120.42300386899338</Longitude>
+      </Destination>
+      <Objective>Photograph a tree</Objective>
+    </Task>
+    <Task id="4">
+        <Condition>
+            <DistanceLessThan>5</DistanceLessThan>
+        </Condition>
+        <Action>TakeSample</Action>
+        <Objective>Take CO2 sample</Objective>
+    </Task>
+  </Tasks>
+</MissionPlan>

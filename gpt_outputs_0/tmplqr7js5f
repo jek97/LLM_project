@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <Task id="1" type="DriveTo">
+      <TaskDescription>Drive to tree ID 1.</TaskDescription>
+      <TargetID>1</TargetID>
+      <Waypoint>
+        <Latitude>37.36635640370881</Latitude>
+        <Longitude>-120.42300386899338</Longitude>
+      </Waypoint>
+    </Task>
+    <Task id="2" type="CO2Reading">
+      <TaskDescription>Take a CO2 reading at tree ID 1.</TaskDescription>
+      <TargetID>1</TargetID>
+    </Task>
+    <Task id="3" type="DriveTo">
+      <TaskDescription>Drive to tree ID 2.</TaskDescription>
+      <TargetID>2</TargetID>
+      <Waypoint>
+        <Latitude>37.36631785560332</Latitude>
+        <Longitude>-120.42303004014194</Longitude>
+      </Waypoint>
+    </Task>
+    <Task id="4" type="CO2Reading">
+      <TaskDescription>Take a CO2 reading at tree ID 2.</TaskDescription>
+      <TargetID>2</TargetID>
+    </Task>
+  </CompositeTaskInformation>
+</MissionPlan>

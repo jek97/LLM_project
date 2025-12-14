@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ns xmlns="http://www.your-namespace.com/2023">
+    <elementsws>elementsws:ElementType</elementsws>
+    <MissionStart>
+
+        <Task taskType="ns">
+            <!-- Task content -->
+        </Task>
+
+        <Sub-Task subTaskType="ns">
+            <!-- Sub-Task content -->
+        </Sub-Task>
+
+    </MissionStart>
+</ns>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan>
+  <DrivingTask>
+    <StartLocation ref="tree_0"/>
+    <EndLocation ref="tree_0"/>
+    <DistanceToTravel>0.0 km</DistanceToTravel>
+  </DrivingTask>
+  <TaskDescription>Drive to tree 1 and take a picture</TaskDescription>
+  <DrivingTask>
+    <StartLocation ref="tree_1"/>
+    <EndLocation ref="tree_1"/>
+    <DistanceToTravel>0.0 km</DistanceToTravel>
+  </DrivingTask>
+  <DrivingTask>
+    <StartLocation ref="tree_2"/>
+    <EndLocation ref="tree_2"/>
+    <DistanceToTravel>0.0 km</DistanceToTravel>
+  </DrivingTask>
+  <SensorTask>
+    <Co2ReadingTask>
+      <StartLocation ref="tree_2"/>
+      <EndLocation ref="tree_3"/>
+      <DistanceToTravel>0.0 km</DistanceToTravel>
+    </Co2ReadingTask>
+    <Co2ReadingTask>
+      <StartLocation ref="tree_3"/>
+      <EndLocation ref="tree_4"/>
+      <DistanceToTravel>0.0 km</DistanceToTravel>
+    </Co2ReadingTask>
+  </SensorTask>
+  <TaskDescription>Drive to tree 2 and take two Co2 readings of trees next to each other</TaskDescription>
+</missionPlan>

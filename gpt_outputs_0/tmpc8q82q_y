@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <MissionID>Orchard_Mission_23</MissionID>
+    <TaskDescription>From the starting point, find a tree somewhere in the middle of the orchard and measure CO2 if low reading, go to and take 2 pictures of nearby trees. From there, measure another tree as far away as possible for CO2 and repeat the same process. Once done, take a temperature reading at any one of the northernmost trees. Finally, return to end.</TaskDescription>
+    <Waypoints>
+        <!-- Start -->
+        <Waypoint>
+            <ID>Start</ID>
+            <Latitude>37.366310</Latitude>
+            <Longitude>-120.423000</Longitude>
+            <ActionType>MoveTo</ActionType>
+        </Waypoint>
+
+        <!-- Move to a tree somewhere in the middle of the orchard -->
+        <Waypoint>
+            <ID>MiddleTree</ID>
+            <Latitude>37.366285</Latitude>
+            <Longitude>-120.423020</Longitude>
+            <ActionType>MeasureCO2</ActionType>
+        </Waypoint>
+
+        <!-- Take 2 pictures of nearby trees if CO2 reading is low -->
+        <Waypoint>
+            <ID>PicturesNearbyTrees</ID>
+            <Latitude>37.366285</Latitude>
+            <Longitude>-120.423020</Longitude>
+            <ActionType>TakePictures</ActionType>
+        </Waypoint>
+
+        <!-- Move to a tree as far away as possible for CO2 -->
+        <Waypoint>
+            <ID>FarTree</ID>
+            <Latitude>37.366260</Latitude>
+            <Longitude>-120.423040</Longitude>
+            <ActionType>MeasureCO2</ActionType>
+        </Waypoint>
+
+        <!-- Repeat the same process -->
+        <Waypoint>
+            <ID>PicturesNearbyTreesFar</ID>
+            <Latitude>37.366260</Latitude>
+            <Longitude>-120.423040</Longitude>
+            <ActionType>TakePictures</ActionType>
+        </Waypoint>
+
+        <!-- Take a temperature reading at any one of the northernmost trees -->
+        <Waypoint>
+            <ID>NorthernmostTree</ID>
+            <Latitude>37.366355</Latitude>
+            <Longitude>-120.423005</Longitude>
+            <ActionType>MeasureTemperature</ActionType>
+        </Waypoint>
+
+        <!-- Return to end -->
+        <Waypoint>
+            <ID>End</ID>
+            <Latitude>37.366310</Latitude>
+            <Longitude>-120.423000</Longitude>
+            <ActionType>MoveTo</ActionType>
+        </Waypoint>
+    </Waypoints>
+</MissionPlan>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      An error occurred: Element 'mission': No matching global declaration available for the validation root.
+    </TaskDescription>
+    <TaskInformation>
+      <TaskID>1</TaskID>
+      <TaskName>Visit Oak Tree and Collect Sample</TaskName>
+      <TaskPriority>1</TaskPriority>
+    </TaskInformation>
+  </CompositeTaskInformation>
+
+  <DriveTask>
+    <Destination>
+      <Latitude>40.7128</Latitude>
+      <Longitude>-74.0060</Longitude>
+      <GeoJSONReference>tree_data.geojson</GeoJSONReference>
+    </Destination>
+    <DriveDistance>0.5</DriveDistance>
+  </DriveTask>
+
+  <ActionTask>
+    <TaskType>Collect Sample</TaskType>
+    <GeoJSONReference>tree_data.geojson</GeoJSONReference>
+  </ActionTask>
+
+  <Outcome>
+    Total Estimated Haversine Distance Traveled: Approximately 1.2 kilometers.
+  </Outcome>
+</mission>

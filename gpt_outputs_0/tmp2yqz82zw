@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robust-mission-planning:MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                   xsi:schemaLocation="http://robust-mission-planning.com/mission-plan.xsd"
+                                   xmlns:robust-mission-planning="http://robust-mission-planning.com/mission-plan.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to tree 0 and take a picture</TaskDescription>
+    <DrivingTask>
+      <StartLocation ref="tree_0"/>
+      <EndLocation ref="tree_0"/>
+      <DistanceToTravel>0.0 km</DistanceToTravel>
+    </DrivingTask>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to tree 1 and take a picture</TaskDescription>
+    <DrivingTask>
+      <StartLocation ref="tree_1"/>
+      <EndLocation ref="tree_1"/>
+      <DistanceToTravel>0.0 km</DistanceToTravel>
+    </DrivingTask>
+  </CompositeTaskInformation>
+
+  <CompositeTaskInformation>
+    <TaskDescription>Drive to tree 2 and take two Co2 readings of trees next to each other</TaskDescription>
+    <DrivingTask>
+      <StartLocation ref="tree_2"/>
+      <EndLocation ref="tree_2"/>
+      <DistanceToTravel>0.0 km</DistanceToTravel>
+    </DrivingTask>
+    <SensorTask>
+      <Co2ReadingTask>
+        <StartLocation ref="tree_2"/>
+        <EndLocation ref="tree_3"/>
+        <DistanceToTravel>0.0 km</DistanceToTravel>
+      </Co2ReadingTask>
+      <Co2ReadingTask>
+        <StartLocation ref="tree_3"/>
+        <EndLocation ref="tree_4"/>
+        <DistanceToTravel>0.0 km</DistanceToTravel>
+      </Co2ReadingTask>
+    </SensorTask>
+  </CompositeTaskInformation>
+
+</robust-mission-planning:MissionPlan>

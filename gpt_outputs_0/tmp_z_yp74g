@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      <TaskName>Farm Corner Photo Survey</TaskName>
+      <TaskDescription>Take pictures of trees at the four corners of the farm.  The farm is roughly rectangular, and the corners are defined by the GeoJSON points.  The order of corner visits is not specified, so any order is acceptable. </TaskDescription>
+    </TaskDescription>
+    <ExecutionOrder>
+      <Step id="1">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="waypoint_1">
+          <Latitude>37.36635640370881</Latitude>
+          <Longitude>-120.42299259529793</Longitude>
+        </Waypoint>
+        <Duration>60</Duration>
+      </Step>
+      <Step id="2">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="waypoint_2">
+          <Latitude>37.36631785560332</Latitude>
+          <Longitude>-120.42303004014194</Longitude>
+        </Waypoint>
+        <Duration>60</Duration>
+      </Step>
+      <Step id="3">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="waypoint_3">
+          <Latitude>37.366300703749474</Latitude>
+          <Longitude>-120.42300386899338</Longitude>
+        </Waypoint>
+        <Duration>60</Duration>
+      </Step>
+      <Step id="4">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="waypoint_4">
+          <Latitude>37.36626996761184</Latitude>
+          <Longitude>-120.42298051393493</Longitude>
+        </Waypoint>
+        <Duration>60</Duration>
+      </Step>
+    </ExecutionOrder>
+  </CompositeTaskInformation>
+</MissionPlan>

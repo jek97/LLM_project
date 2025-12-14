@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <CompositeTaskInformation>
+        <TaskDescription>
+            Select 5 pistachio trees in a row to visit and take a picture of 3 of them.
+            <OriginalTask>Select 5 pistachio trees in a row to visit and take a picture of 3 of them.</OriginalTask>
+        </TaskDescription>
+        <Steps>
+            <Step id="1">
+                <Action>NavigateTo</Action>
+                <Target>Pistachio Tree 1</Target>
+            </Step>
+            <Step id="2">
+                <Action>TakePicture</Action>
+                <Target>Pistachio Tree 1</Target>
+            </Step>
+            <Step id="3">
+                <Action>NavigateTo</Action>
+                <Target>Pistachio Tree 2</Target>
+            </Step>
+            <Step id="4">
+                <Action>TakePicture</Action>
+                <Target>Pistachio Tree 2</Target>
+            </Step>
+            <Step id="5">
+                <Action>NavigateTo</Action>
+                <Target>Pistachio Tree 3</Target>
+            </Step>
+            <Step id="6">
+                <Action>TakePicture</Action>
+                <Target>Pistachio Tree 3</Target>
+            </Step>
+            <Step id="7">
+                <Action>NavigateTo</Action>
+                <Target>Pistachio Tree 4</Target>
+            </Step>
+            <Step id="8">
+                <Action>TakePicture</Action>
+                <Target>Pistachio Tree 4</Target>
+            </Step>
+            <Step id="9">
+                <Action>NavigateTo</Action>
+                <Target>Pistachio Tree 5</Target>
+            </Step>
+            <Step id="10">
+                <Action>TakePicture</Action>
+                <Target>Pistachio Tree 5</Target>
+            </Step>
+        </Steps>
+    </CompositeTaskInformation>
+</MissionPlan>

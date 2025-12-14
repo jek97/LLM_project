@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<declare xmlns="http://www.yourcompany.com/missionplan">
+    <MISSIONPLAN type="string" />
+</declare>
+<MISSIONPLAN>
+    <!-- Mission plan elements here -->
+</MISSIONPLAN>
+<!-- Remove any trailing comments or signatures -->

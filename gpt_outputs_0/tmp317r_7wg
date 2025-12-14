@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.example.com/multiagent-mission-planningxsd 
+         http://www.example.com/multiagent-mission-planningxsd/multiagent-mission-planning.xsd">
+  <CompositeTaskInformation>
+    <!-- Mission description -->
+    <MissionDescription>Tree Harvesting Mission</MissionDescription>
+
+    <!-- Task descriptions for each action -->
+    <TaskDescriptions>
+      <!-- Driving to a tree and harvesting it -->
+      <TaskDescription xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:schemaLocation="http://www.example.com/task-descriptionxsd 
+                      http://www.example.com/task-descriptionxsd/task-description.xsd">
+        <id>drive-and-harvest</id>
+        <description>Drive to a tree and harvest it.</description>
+        <type>DrivingAndHarvestingTask</type>
+
+        <!-- GPS coordinates of the location -->
+        <LocationReference>
+          <GeoJSON>
+            <Point>
+              <coordinates>-122.084051,37.385348</coordinates>
+            </Point>
+          </GeoJSON>
+        </LocationReference>
+
+        <!-- Tree type and other relevant information -->
+        <TreeType>PinOak</TreeType>
+        <Height>20</Height>
+        <Diameter>30</Diameter>
+
+        <!-- Log the task description -->
+        <TaskDescriptionInfo>
+          <TaskDescription>Drive to a tree and harvest it.</TaskDescription>
+          <CompositeTaskInformationReference href="#drive-and-harvest"/>
+        </TaskDescriptionInfo>
+      </TaskDescription>
+
+      <!-- Driving to multiple trees and harvesting them -->
+      <TaskDescription xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:schemaLocation="http://www.example.com/task-descriptionxsd 
+                      http://www.example.com/task-descriptionxsd/task-description.xsd">
+        <id>drive-and-harvest-multiple</id>
+        <description>Drive to multiple trees and harvest them.</description>
+        <type>DrivingAndHarvestingTask</type>
+
+        <!-- GPS coordinates of the locations -->
+        <Locations>
+          <LocationReference>
+            <GeoJSON>
+              <Point>
+                <coordinates>-122.084051,37.385348</coordinates>
+              </Point>
+            </GeoJSON>
+          </LocationReference>
+          <LocationReference>
+            <GeoJSON>
+              <Point>
+                <coordinates>-122.084101,37.385378</coordinates>
+              </Point>
+            </GeoJSON>
+          </LocationReference>
+        </Locations>
+
+        <!-- Tree types and other relevant information -->
+        <Trees>
+          <Tree>
+            <TreeType>PinOak</TreeType>
+            <Height>20</Height>
+            <Diameter>30</Diameter>
+          </Tree>
+          <Tree>
+            <TreeType>RedMaple</TreeType>
+            <Height>25</Height>
+            <Diameter>35</Diameter>
+          </Tree>
+        </Trees>
+
+        <!-- Log the task description -->
+        <TaskDescriptionInfo>
+          <TaskDescription>Drive to multiple trees and harvest them.</TaskDescription>
+          <CompositeTaskInformationReference href="#drive-and-harvest-multiple"/>
+        </TaskDescriptionInfo>
+      </TaskDescription>
+    </TaskDescriptions>
+
+    <!-- Outcome information -->
+    <Outcome>
+      <!-- GPS coordinates of the end location -->
+      <LocationReference>
+        <GeoJSON>
+          <Point>
+            <coordinates>-122.084151,37.385378</coordinates>
+          </Point>
+        </GeoJSON>
+      </LocationReference>
+
+      <!-- Estimated total distance traveled -->
+      <EstimatedDistanceTravelled>10.5 km</EstimatedDistanceTravelled>
+
+      <!-- Log the outcome information -->
+      <OutcomeInfo>
+        <CompositeTaskInformationReference href="#drive-and-harvest-multiple"/>
+        <TotalEstimatedHaversineDistanceTraveled/>
+      </OutcomeInfo>
+    </Outcome>
+  </CompositeTaskInformation>
+</mission>

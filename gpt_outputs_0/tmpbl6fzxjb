@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mMissionPlan>
+  <!-- Mission plan content goes here -->
+  
+</mMissionPlan>
+
+<!-- Repeat the process from the far tree -->
+$start_at_tree id="1" coordinates="lat1, lng1"/>
+<!-- Continue with the same actions as above -->
+<take_picture />
+<!-- Add conditions and further actions here -->
+</if_both_low>
+</check_co2>
+</check_temperature>
+
+<!-- If temperature is not low -->
+<if_not_low_temp/>

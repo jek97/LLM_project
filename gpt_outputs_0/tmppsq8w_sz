@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Robotic mission to visit as many points as possible within 100 meters, taking a picture of each tree.
+    </TaskDescription>
+    <TaskList>
+      <Task id="1">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="W1">
+          <Latitude>37.36627570632085</Latitude>
+          <Longitude>-120.42307272278255</Longitude>
+          <Distance>100</Distance>
+        </Waypoint>
+      </Task>
+      <Task id="2">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="W2">
+          <Latitude>37.36627570632085</Latitude>
+          <Longitude>-120.42307272278255</Longitude>
+          <Distance>100</Distance>
+        </Waypoint>
+      </Task>
+      <Task id="3">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="W3">
+          <Latitude>37.36627570632085</Latitude>
+          <Longitude>-120.42307272278255</Longitude>
+          <Distance>100</Distance>
+        </Waypoint>
+      </Task>
+      <Task id="4">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="W4">
+          <Latitude>37.36627570632085</Latitude>
+          <Longitude>-120.42307272278255</Longitude>
+          <Distance>100</Distance>
+        </Waypoint>
+      </Task>
+      <Task id="5">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="W5">
+          <Latitude>37.36627570632085</Latitude>
+          <Longitude>-120.42307272278255</Longitude>
+          <Distance>100</Distance>
+        </Waypoint>
+      </Task>
+      <Task id="6">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="W6">
+          <Latitude>37.36627570632085</Latitude>
+          <Longitude>-120.42307272278255</Longitude>
+          <Distance>100</Distance>
+        </Waypoint>
+      </Task>
+      <Task id="7">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="W7">
+          <Latitude>37.36627570632085</Latitude>
+          <Longitude>-120.42307272278255</Longitude>
+          <Distance>100</Distance>
+        </Waypoint>
+      </Task>
+      <Task id="8">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="W8">
+          <Latitude>37.36627570632085</Latitude>
+          <Longitude>-120.42307272278255</Longitude>
+          <Distance>100</Distance>
+        </Waypoint>
+      </Task>
+    </TaskList>
+  </TaskList>
+</MissionPlan>

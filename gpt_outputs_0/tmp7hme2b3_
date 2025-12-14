@@ -1,0 +1,9 @@
+   <MissionPlan>
+     <VisitSequence>
+       <TreeID>...</TreeID>
+       <Action>
+         <Photograph>...</Photograph>
+       </Action>
+     </VisitSequence>
+   </MissionPlan>
+   

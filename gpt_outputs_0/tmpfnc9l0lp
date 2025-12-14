@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="MissionPlan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CompositeTaskInformation" type="CompositeTaskInformationType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="CompositeTaskInformationType">
+        <xs:sequence>
+            <xs:element name="TaskDescription" type="string"/>
+            <xs:element name="Tasks" type="TasksType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TasksType">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="Task"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TaskType">
+        <xs:sequence>
+            <xs:element name="TaskDescription" type="string"/>
+            <xs:element name="Action" type="ActionType"/>
+            <xs:element name="Preconditions" type="PreconditionsType"/>
+            <xs:element name="Outcomes" type="OutcomesType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="TaskDescriptionType">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="ActionType">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:complexType name="PreconditionsType">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="Precondition"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="OutcomesType">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="Outcome"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PreconditionType">
+        <xs:simpleContent>
+            <xs:extension base="string">
+                <xs:attribute name="name" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="OutcomeType">
+        <xs:simpleContent>
+            <xs:extension base="string">
+                <xs:attribute name="description" type="xs:string"/>
+                <xs:attribute name="action" type="ActionType"/>
+                <xs:attribute name="conditional" type="ConditionalType"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="ConditionalType">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+</xs:schema>

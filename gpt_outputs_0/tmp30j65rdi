@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <Task id="1" type="Drive">
+      <TaskDescription>Drive to Tree ID 19</TaskDescription>
+      <Waypoint x=" -120.42300386899338" y="37.36635678715399" />
+    </Task>
+    <Task id="2" type="CaptureImage">
+      <TaskDescription>Take picture of Tree ID 19</TaskDescription>
+      <TargetTreeId>19</TargetTreeId>
+    </Task>
+    <Task id="3" type="Drive">
+      <TaskDescription>Drive to Tree ID 17</TaskDescription>
+      <Waypoint x=" -120.42301417901265" y="37.3662730362294" />
+    </Task>
+    <Task id="4" type="CaptureImage">
+      <TaskDescription>Take picture of Tree ID 17</TaskDescription>
+      <TargetTreeId>17</TargetTreeId>
+    </Task>
+    <Task id="5" type="Drive">
+      <TaskDescription>Drive to Tree ID 16</TaskDescription>
+      <Waypoint x=" -120.42298051393493" y="37.366300703749474" />
+    </Task>
+    <Task id="6" type="CaptureImage">
+      <TaskDescription>Take picture of Tree ID 16</TaskDescription>
+      <TargetTreeId>16</TargetTreeId>
+    </Task>
+    <Task id="7" type="Drive">
+      <TaskDescription>Drive to Tree ID 15</TaskDescription>
+      <Waypoint x=" -120.42300386899338" y="37.366300703749474" />
+    </Task>
+    <Task id="8" type="CaptureImage">
+      <TaskDescription>Take picture of Tree ID 15</TaskDescription>
+      <TargetTreeId>15</TargetTreeId>
+    </Task>
+    <Task id="9" type="Drive">
+      <TaskDescription>Drive to Tree ID 14</TaskDescription>
+      <Waypoint x=" -120.42298051393493" y="37.36627570632085" />
+    </Task>
+    <Task id="10" type="CaptureImage">
+      <TaskDescription>Take picture of Tree ID 14</TaskDescription>
+      <TargetTreeId>14</TargetTreeId>
+    </Task>
+    <Task id="11" type="Drive">
+      <TaskDescription>Drive to Tree ID 13</TaskDescription>
+      <Waypoint x=" -120.42301417901265" y="37.36627570632085" />
+    </Task>
+    <Task id="12" type="CaptureImage">
+      <TaskDescription>Take picture of Tree ID 13</TaskDescription>
+      <TargetTreeId>13</TargetTreeId>
+    </Task>
+    <Task id="13" type="Drive">
+      <TaskDescription>Drive to Tree ID 12</TaskDescription>
+      <Waypoint x=" -120.42298051393493" y="37.366300703749474" />
+    </Task>
+    <Task id="14" type="CaptureImage">
+      <TaskDescription>Take picture of Tree ID 12</TaskDescription>
+      <TargetTreeId>12</TargetTreeId>
+    </Task>
+    <Task id="15" type="Drive">
+      <TaskDescription>Drive to Tree ID 11</TaskDescription>
+      <Waypoint x=" -120.42301417901265" y="37.36627570632085" />
+    </Task>
+    <Task id="16" type="CaptureImage">
+      <TaskDescription>Take picture of Tree ID 11</TaskDescription>
+      <TargetTreeId>11</TargetTreeId>
+    </Task>
+  </Workflow>

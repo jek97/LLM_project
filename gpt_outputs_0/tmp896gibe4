@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:uuid:123e4567-e89b-12d3-a456-426655440000"
+           xmlns="urn:uuid:123e4567-e89b-12d3-a456-426655440000"
+           elementFormDefault="qualified">
+
+    <xsd:element name="Mission">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="CompositeTaskInformation"/>
+                <xsd:element ref="Sequence"/>
+                <xsd:element ref="EndLocation"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="CompositeTaskInformation">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="Repeat"/>
+                <!-- ... other tasks and conditions ... -->
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="Sequence">
+        <xsd:complexType>
+            <xsd:sequence>
+                <!-- Task 1 -->
+                <xsd:element ref="DriveToTree"/>
+                <xsd:element ref="TaskDescription"/>
+                <xsd:element ref="DrivingStatus"/>
+                
+                <!-- ... other tasks and conditions ... -->
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="Repeat">
+        <xsd:complexType>
+            <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                    <xsd:attribute name="name" type="xsd:string"/>
+                    <xsd:attribute name="test" type="xsd:string"/>
+                </xsd:extension>
+            </xsd:simpleContent>
+            <xsd:sequence>
+                <!-- Task inside the loop -->
+                <xsd:element ref="TaskDescription"/>
+                
+                <!-- Check if task should be repeated -->
+                <xsd:element ref="When"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="DriveToTree">
+        <xsd:complexType>
+            <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                    <xsd:attribute name="name" type="xsd:string"/>
+                    <xsd:attribute name="test" type="xsd:string"/>
+                </xsd:extension>
+            </xsd:simpleContent>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>

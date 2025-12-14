@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="geos_features.xsd"
+             xmlns:gml="http://www.opengis.net/gml" xmlns:gml3="http://www.opengis.net/gml/3.2">
+    <task id="1">
+        <description>Take a picture of the first tree.</description>
+        <action type="Picture Taking">
+            <gml:Point gml:id="1">
+                <gml3:coordinates xmlns:geos="http://example.com/geos">
+                    <gml3:coord>0</gml3:coord>
+                    <gml3:coord>0</gml3:coord>
+                </gml3:coordinates>
+            </gml:Point>
+        </action>
+    </task>
+    <!-- ... -->
+</mission>

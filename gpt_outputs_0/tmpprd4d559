@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns="http://example.com/mission">
+    <MissionInformation>
+        <StartLocation coordinates="-87.95018978424166,-43.04916994209851" />
+        <EndLocation coordinates="-87.95034567890123,-43.04948790123456" />
+        <EstimatedDistance>10</EstimatedDistance>
+    </MissionInformation>
+    <TaskPlan>
+        <!-- Drive to tree for action -->
+        <DriveTo location="-87.95034567890123,-43.04948790123456" />
+        <!-- Perform task on the identified tree -->
+        <CompositeTaskInformation>
+            <ActionAtLocation location="-87.95034567890123,-43.04948790123456">
+                <TaskDescription>What is the type of this tree? (Original question: Please identify the tree type.)</TaskDescription>
+                <!-- Other tasks can be added here -->
+            </ActionAtLocation>
+        </CompositeTaskInformation>
+    </TaskPlan>
+    <Outcome>
+        <!-- Estimate total distance traveled from start to end without showing the computation method -->
+        <TotalDistance>Approximately 10 meters (estimated)</TotalDistance>
+    </Outcome>
+</Mission>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+  <task id="1">
+    <name>Measure Oak Tree</name>
+    <location>37.77,-122.50</location>
+  </task>
+</mission>

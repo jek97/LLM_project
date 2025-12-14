@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Task id="1">
+  <TaskName>Analyze Oak Tree - Location 1</TaskName>
+  <Action>Drive to GPS Coordinates: 34.0522, -118.2437</Action>
+  <Action>Inspect Tree - Oak</Action>
+  <GeoJSONReference>
+    <Type>Tree</Type>
+    <Species>Oak</Species>
+    <Location>34.0522, -118.2437</Location>
+  </GeoJSONReference>
+</Task>

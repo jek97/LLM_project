@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/missionPlan.xsd"
+           elementFormDefault="qualified">
+  <xs:element name="missionPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CompositeTaskInformation" type="CompositeTaskInformationType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="file:///path/to/missionPlan.xsd">
+  <CompositeTaskInformation>
+    <!-- Define the elements and attributes of your mission plan -->
+    <TaskDescription>Take a picture of two trees next to each other</TaskDescription>
+    <Action>
+      <DriveToTree>
+        <TreeID>6</TreeID>
+        <GPSLatitude>37.366308661662266</GPSLatitude>
+        <GPSLongitude>-120.42306783300766</GPSLongitude>
+      </DriveToTree>
+    </Action>
+  </CompositeTaskInformation>
+
+  <!-- Add more CompositeTaskInformation elements as needed -->
+
+</missionPlan>

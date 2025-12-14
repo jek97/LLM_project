@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RobotMissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="robot_mission_plan.xsd">
+    <MissionName>TreePictureMission</MissionName>
+    <StartTime>YYYY-MM-DDTHH:MM:SSZ</StartTime>
+    <EndTime>YYYY-MM-DDTHH:MM:SSZ</EndTime>
+    <RobotDetails>
+        <RobotName>ExplorerBot</RobotName>
+        <MaxSpeed>5.0</MaxSpeed>
+        <BatteryCapacity>100</BatteryCapacity>
+    </RobotDetails>
+    <CompositeTaskInformation>
+        <TaskDescription>Visit as many trees as possible within a 100-meter radius and take pictures of each tree.</TaskDescription>
+        <!-- Loop through tasks for each tree -->
+        <Tasks>
+            {% for tree in geojson.features %}
+                <Task>
+                    <!-- Drive to the tree -->
+                    <TaskName>DriveToTree{{ loop.index }}</TaskName>
+                    <Location x="{{ tree.geometry.coordinates[0] }}" y="{{ tree.geometry.coordinates[1] }}"/>
+                </Task>
+                <Task>
+                    <!-- Take picture and move to the next tree -->
+                    <TaskName>TakePicture{{ loop.index }}</TaskName>
+                    <TreeType>{{ tree.properties.tree_type }}</TreeType>
+                    <Action>TakePicture</Action>
+                </Task>
+                {% if not loop.last %}
+                    <!-- Move to the next tree -->
+                    <Task>
+                        <TaskName>DriveToNextTree{{ loop.index }}</TaskName>
+                        <Location x="{{ tree.geometry.coordinates[2] }}" y="{{ tree.geometry.coordinates[3] }}"/>
+                    </Task>
+                {% endif %}
+            {% endfor %}
+        </Tasks>
+    </CompositeTaskInformation>
+    <!-- Include an Outcome element somewhere in the mission plan to provide a brief summary of the mission -->
+    <Outcome>Estimated distance traveled: [Distance] meters. Completed [NumberOfTrees] tree(s) and took [NumberOfPictures] picture(s).</Outcome>
+</RobotMissionPlan>

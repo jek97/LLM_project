@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission_plan>
+  <!-- Your XML content goes here -->
+  <task_id>T1</task_id>
+  <!-- Other task elements -->
+</mission_plan>

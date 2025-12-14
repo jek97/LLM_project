@@ -1,0 +1,4 @@
+CompositeTaskInformation
+    <TaskDescription ...>
+        <TaskExecutionOrder ...
+            <ActionToTreeAndPerformAction treeType="..." />

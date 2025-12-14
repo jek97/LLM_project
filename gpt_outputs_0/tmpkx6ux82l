@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan xmlns="http://www.example.com/missionPlan"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.example.com/missionPlan http://www.example.com/missionPlan.xsd">
+
+    <missionHeader>
+        <farmName>Pistachio Orchard</farmName>
+        <plannerName>Robotic Task Generator</plannerName>
+        <dateTime>2023-04-15T12:30:00-07:00</dateTime>
+    </missionHeader>
+    <compositeTaskInformation>
+        <taskDescription>Generate a mission to prune 5 pistachio trees of type 'Medium' based on GPS coordinates. This mission was requested by [Requestor Name].</taskDescription>
+        <subTasks>
+            <task sequence="1">
+                <!-- Drive to Tree 1 -->
+                <moveTo location="{lat: 'coordinate_value', lon: 'coordinate_value'}" gpsReference="Tree 1">Drive to and prepare for pruning on a Medium pistachio tree.</moveTo>
+                <prune type="Medium"/>
+            </task>
+            <!-- Add tasks for additional trees here -->
+        </subTasks>
+    </compositeTaskInformation>
+    <outcome estimatedDistanceTraveled="Approx. large distance to traverse orchard">
+        The robot will traverse approximately large distances throughout this mission to prune the specified Medium pistachio trees based on their GPS coordinates. A more precise estimate is not possible, but the user should expect the robot to travel over several miles within the Pistachio Orchard. This estimated distance has been calculated based on GPS coordinates and the Haversine formula for finding the shortest path between two points.
+    </outcome>
+</missionPlan>

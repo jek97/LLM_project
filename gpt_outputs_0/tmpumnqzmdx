@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://example.com/mission.xsd mission.xsd">
+    <CompositeTaskInformation>
+        <TaskDescription xml:lang="en">Take a picture of the first tree.</TaskDescription>
+        <DriveToTree locationURI="https://example.com/orchard/0.json"/>
+        
+        <TaskDescription xml:lang="en">If the reading is low, take a co2 sample. Otherwise, take a temperature reading.</TaskDescription>
+        <DrivingStatus totalEstimatedHaversineDistanceFromStart="0km" />
+        <TakePicture locationURI="https://example.com/orchard/0.json"/>
+        
+        <TaskDescription xml:lang="en">Measure another tree, a different one by taking a picture.</TaskDescription>
+        <DriveToTree locationURI="https://example.com/orchard/1.json"/>
+        
+        <TaskDescription xml:lang="en">If it's low, sample co2. If that reading is low, sample co2 again to confirm.</TaskDescription>
+        <DrivingStatus totalEstimatedHaversineDistanceFromStart="0km" />
+        <TakePicture locationURI="https://example.com/orchard/1.json"/>
+        
+        <RepeatTask name="co2Sample" untilResultIsNotLow/>
+        <TaskDescription xml:lang="en">Continue driving to another tree and take another co2 sample.</TaskDescription>
+        <DriveToTree locationURI="https://example.com/orchard/2.json"/>
+        <DrivingStatus totalEstimatedHaversineDistanceFromStart="Xkm" />
+        
+        <TaskDescription xml:lang="en">Take a picture of the final tree.</TaskDescription>
+        <DriveToTree locationURI="https://example.com/orchard/3.json"/>
+        <TakePicture locationURI="https://example.com/orchard/3.json"/>
+    </CompositeTaskInformation>
+    
+    <EndLocation locationURI="https://example.com/orchard/4.json"/>
+</Mission>

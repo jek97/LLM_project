@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <Task id="1" type="Drive">
+      <TaskDescription>Drive to tree ID 19 (Northmost tree)</TaskDescription>
+      <Waypoint x=" -120.42300386899338" y=" 37.36635678715399" />
+    </Task>
+    <Task id="2" type="CaptureImage">
+      <TaskDescription>Take a picture of tree ID 19</TaskDescription>
+      <Waypoint x=" -120.42300386899338" y=" 37.36635678715399" />
+    </Task>
+
+    <Task id="3" type="Drive">
+      <TaskDescription>Drive to tree ID 10 (Eastmost tree)</TaskDescription>
+      <Waypoint x=" -120.42303004014194" y=" 37.36631785560332" />
+    </Task>
+    <Task id="4" type="CaptureImage">
+      <TaskDescription>Take a picture of tree ID 10</TaskDescription>
+      <Waypoint x=" -120.42303004014194" y=" 37.36631785560332" />
+    </Task>
+
+    <Task id="5" type="Drive">
+      <TaskDescription>Drive to tree ID 16 (Southmost tree)</TaskDescription>
+      <Waypoint x=" -120.42298051393493" y=" 37.36628908556382" />
+    </Task>
+    <Task id="6" type="CaptureImage">
+      <TaskDescription>Take a picture of tree ID 16</TaskDescription>
+      <Waypoint x=" -120.42298051393493" y=" 37.36628908556382" />
+    </Task>
+
+    <Task id="7" type="Drive">
+      <TaskDescription>Drive to tree ID 14 (Westmost tree)</TaskDescription>
+      <Waypoint x=" -120.4230246791031" y=" 37.366304880110526" />
+    </Task>
+    <Task id="8" type="CaptureImage">
+      <TaskDescription>Take a picture of tree ID 14</TaskDescription>
+      <Waypoint x=" -120.4230246791031" y=" 37.366304880110526" />
+    </Task>
+  </CompositeTaskInformation>
+</MissionPlan>

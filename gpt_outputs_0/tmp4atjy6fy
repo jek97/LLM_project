@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="MissionPlan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="MissionID" type="xs:string"/>
+                <xs:element name="TaskDescription" type="xs:string"/>
+                <xs:element name="Waypoints">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" ref="Waypoint"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Waypoint">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ID" type="xs:string"/>
+                <xs:element name="Latitude" type="xs:decimal"/>
+                <xs:element name="Longitude" type="xs:decimal"/>
+                <xs:element name="ActionType" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="mission_plan.xsd">
+    <MissionID>Orchard_Mission_23</MissionID>
+    <TaskDescription>From the starting point, find a tree somewhere in the middle of the orchard and measure CO2 if low reading, go to and take 2 pictures of nearby trees. From there, measure another tree as far away as possible for CO2 and repeat the same process. Once done, take a temperature reading at any one of the northernmost trees. Finally, return to end.</TaskDescription>
+    <Waypoints>
+        <!-- Start -->
+        <Waypoint>
+            <ID>Start</ID>
+            <Latitude>37.366310</Latitude>
+            <Longitude>-120.423000</Longitude>
+            <ActionType>MoveTo</ActionType>
+        </Waypoint>
+
+        <!-- Move to a tree somewhere in the middle of the orchard -->
+        <Waypoint>
+            <ID>MiddleTree</ID>
+            <Latitude>37.366285</Latitude>
+            <Longitude>-120.423020</Longitude>
+            <ActionType>MeasureCO2</ActionType>
+        </Waypoint>
+
+        <!-- Take 2 pictures of nearby trees if CO2 reading is low -->
+        <Waypoint>
+            <ID>PicturesNearbyTrees</ID>
+            <Latitude>37.366285</Latitude>
+            <Longitude>-120.423020</Longitude>
+            <ActionType>TakePictures</ActionType>
+        </Waypoint>
+
+        <!-- Move to a tree as far away as possible for CO2 -->
+        <Waypoint>
+            <ID>FarTree</ID>
+            <Latitude>37.366350</Latitude>
+            <Longitude>-120.423100</Longitude>
+            <ActionType>MeasureCO2</ActionType>
+        </Waypoint>
+
+        <!-- Take 2 pictures of nearby trees if CO2 reading is low -->
+        <Waypoint>
+            <ID>PicturesFarTree</ID>
+            <Latitude>37.366350</Latitude>
+            <Longitude>-120.423100</Longitude>
+            <ActionType>TakePictures</ActionType>
+        </Waypoint>
+
+        <!-- Take a temperature reading at any one of the northernmost trees -->
+        <Waypoint>
+            <ID>NorthernmostTree</ID>
+            <Latitude>37.366355</Latitude>
+            <Longitude>-120.423005</Longitude>
+            <ActionType>MeasureTemperature</ActionType>
+        </Waypoint>
+
+        <!-- Return to end -->
+        <Waypoint>
+            <ID>End</ID>
+            <Latitude>37.366310</Latitude>
+            <Longitude>-120.423000</Longitude>
+            <ActionType>MoveTo</ActionType>
+        </Waypoint>
+    </Waypoints>
+</MissionPlan>

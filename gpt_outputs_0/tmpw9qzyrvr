@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orchard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <location id="northernmost">
+    <coordinates x="Northernmost x coordinate" y="Northernmost y coordinate"/>
+    <image imageName="Image1.jpg"/>
+  </location>
+  
+  <location id="middle_of_the_orchard">
+    <coordinates x="Middle of the orchard x coordinate" y="Middle of the orchard y coordinate"/>
+    <image imageName="Image2.jpg"/>
+  </location>
+  
+  <location id="eastern_end">
+    <coordinates x="Eastern end x coordinate" y="Eastern end y coordinate"/>
+    <image imageName="Image3.jpg"/>
+  </location>
+</orchard>

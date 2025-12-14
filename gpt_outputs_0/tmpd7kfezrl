@@ -1,0 +1,14 @@
+<!-- Incorrect -->
+<MissionPlan>
+    <CompositeTaskInformation>
+        <TaskDescription>At the first tree, take a picture and record temperature.</TaskDescription>
+        <Tasks>
+            <Task>
+                <Type>Picure</Type>
+                <Parameters>
+                    <Parameter name="Location">First Tree</Parameter>
+                </Parameters>
+            Task
+        </Tasks>
+    CompositeTaskInformation>
+</MissionPlan>

@@ -1,0 +1,50 @@
+<mission>
+    <name>Robotic Mission Plan</name>
+    <description>This is a sample mission plan for taking pictures, measuring temperature and CO2 levels, and collecting samples.</description>
+    <steps>
+        <step id="1">
+            <name>Take picture of first tree</name>
+            <action>TakePicture</action>
+        </step>
+        <step id="2">
+            <name>Measure temperature and CO2 levels of the first tree</name>
+            <action>MeasureTemperatureAndCO2Levels</action>
+            <decision point="10">
+                <condition name="TemperatureLevel" operator="Low">
+                    <action>Take CO2 Sample</action>
+                </condition>
+                <else>
+                    <action>Take Temperature Reading</action>
+                </else>
+            </decision>
+        </step>
+        <step id="3">
+            <name>Measure another tree, a different one by taking a picture</name>
+            <action>TakePicture</action>
+            <decision point="10">
+                <condition name="TemperatureLevel" operator="Low">
+                    <action>Take CO2 Sample</action>
+                </condition>
+                <else>
+                    <action>Take Temperature Reading</action>
+                </else>
+            </decision>
+        </step>
+        <step id="4">
+            <name>Verify low CO2 levels by taking another CO2 sample</name>
+            <action>Take CO2 Sample</action>
+            <decision point="10">
+                <condition name="CO2Level" operator="Low">
+                    <action>Take Another CO2 Sample</action>
+                </condition>
+                <else>
+                    <action>Continue Driving to another tree and take a CO2 sample</action>
+                </else>
+            </decision>
+        </step>
+        <step id="5">
+            <name>End of mission</name>
+            <action>EndMission</action>
+        </step>
+    </steps>
+</mission>

@@ -1,0 +1,74 @@
+ I apologize for the mistake. Here is the corrected XML file:
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <MissionInformation>
+        <MissionName>Farm Tree Corner Photos</MissionName>
+    </MissionInformation>
+    <TaskList>
+        <CompositeTaskInformation>
+            <TaskDescription>Take pictures of trees at the four corners of the farm in any order.</TaskDescription>
+        </CompositeTaskInformation>
+        <TaskList>
+            <DriveToLocation>
+                <StartPosition>
+                    <Latitude>37.7749</Latitude>
+                    <Longitude>-122.4194</Longitude>
+                </StartPosition>
+                <EndPosition>
+                    <Latitude>37.8056</Latitude>
+                    <Longitude>-122.4194</Longitude>
+                </EndPosition>
+            </DriveToLocation>
+            <TakePicture>
+                <SubjectType>Tree</SubjectType>
+            </TakePicture>
+        </TaskList>
+        <TaskList>
+            <DriveToLocation>
+                <StartPosition>
+                    <Latitude>37.8056</Latitude>
+                    <Longitude>-122.4194</Longitude>
+                </StartPosition>
+                <EndPosition>
+                    <Latitude>37.8338</Latitude>
+                    <Longitude>-122.4194</Longitude>
+                </EndPosition>
+            </DriveToLocation>
+            <TakePicture>
+                <SubjectType>Tree</SubjectType>
+            </TakePicture>
+        </TaskList>
+        <TaskList>
+            <DriveToLocation>
+                <StartPosition>
+                    <Latitude>37.8338</Latitude>
+                    <Longitude>-122.4194</Longitude>
+                </StartPosition>
+                <EndPosition>
+                    <Latitude>37.8620</Latitude>
+                    <Longitude>-122.4194</Longitude>
+                </EndPosition>
+            </DriveToLocation>
+            <TakePicture>
+                <SubjectType>Tree</SubjectType>
+            </TakePicture>
+        </TaskList>
+        <TaskList>
+            <DriveToLocation>
+                <StartPosition>
+                    <Latitude>37.8620</Latitude>
+                    <Longitude>-122.4194</Longitude>
+                </StartPosition>
+                <EndPosition>
+                    <Latitude>37.8902</Latitude>
+                    <Longitude>-122.4194</Longitude>
+                </EndPosition>
+            </DriveToLocation>
+            <TakePicture>
+                <SubjectType>Tree</SubjectType>
+            </TakePicture>
+        </TaskList>
+    </TaskList>
+</Mission>
+``` 

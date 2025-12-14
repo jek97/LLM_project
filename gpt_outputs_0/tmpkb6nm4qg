@@ -1,0 +1,22 @@
+<mission>
+  <starting_point>Starting point</starting_point>
+  <task name="Find a tree in the middle of the orchard">
+    <action>Drive to a tree in the middle of the orchard</action>
+  </task>
+  <task name="Measure cos.">
+    <action>Take a cos reading at the chosen tree</action>
+  </task>
+  <task name="Take 2 pictures of nearby trees">
+    <action>Drive to and take 2 pictures of nearby trees</action>
+  </task>
+  <task name="Measure another tree as far away as possible for co2">
+    <action>Drive to the chosen tree and take a co2 reading</action>
+  </task>
+  <task name="Repeat the same process">
+    <action>Choose another tree in the middle of the orchard and repeat the process</action>
+  </task>
+  <task name="Take a temperature reading at any one of the northern most trees">
+    <action>Drive to the chosen tree and take a temperature reading</action>
+  </task>
+  <end_point>End point</end_point>
+</mission>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <TaskSequence>
+        <Task id="1">
+            <TaskType>Navigation</TaskType>
+            <Description>Navigate to Tree 7</Description>
+            <TargetTreeId>7</TargetTreeId>
+        </Task>
+        <Task id="2">
+            <TaskType>DataCollection</TaskType>
+            <Description>Measure CO2 at Tree 7</Description>
+            <MeasurementType>CO2</MeasurementType>
+            <TargetTreeId>7</TargetTreeId>
+        </Task>
+        <Task id="3">
+            <TaskType>Navigation</TaskType>
+            <Description>Navigate to Tree 16</Description>
+            <TargetTreeId>16</TargetTreeId>
+        </Task>
+        <Task id="4">
+            <TaskType>DataCollection</TaskType>
+            <Description>Measure CO2 at Tree 16</Description>
+            <MeasurementType>CO2</MeasurementType>
+            <TargetTreeId>16</TargetTreeId>
+        </Task>
+        <Task id="5">
+            <TaskType>Navigation</TaskType>
+            <Description>Navigate to Tree 18</Description>
+            <TargetTreeId>18</TargetTreeId>
+        </Task>
+        <Task id="6">
+            <TaskType>DataCollection</TaskType>
+            <Description>Take Temperature Reading at Tree 18</Description>
+            <MeasurementType>Temperature</MeasurementType>
+            <TargetTreeId>18</TargetTreeId>
+        </Task>
+        <Task id="7">
+            <TaskType>Navigation</TaskType>
+            <Description>Return to Start</Description>
+            <TargetTreeId>1</TargetTreeId>
+        </Task>
+    </TaskSequence>
+</MissionPlan>

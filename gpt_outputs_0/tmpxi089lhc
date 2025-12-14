@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.example.com/missionplan http://example.com/schema/missionplan.xsd">
+
+  <CompositeTaskInformation>
+    <MissionID>1</MissionID>
+    <TaskDescription>Visit as many points as possible within 100 meters and take pictures of each tree.</TaskDescription>
+    <StartTime>2023-04-01T10:00:00Z</StartTime>
+    <EndTime>2023-04-01T12:00:00Z</EndTime>
+  </CompositeTaskInformation>
+
+  <RoutePoints>
+    <RoutePoint id="2">
+      <Latitude>-12.345678</Latitude>
+      <Longitude>98.765432</Longitude>
+      <Altitude>10</Altitude>
+      <TaskType>Photograph</TaskType>
+      <DistanceLimit>100</DistanceLimit>
+    </RoutePoint>
+
+    <RoutePoint id="3">
+      <Latitude>-12.345789</Latitude>
+      <Longitude>98.765345</Longitude>
+      <Altitude>10</Altitude>
+      <TaskType>Photograph</TaskType>
+      <DistanceLimit>100</DistanceLimit>
+    </RoutePoint>
+
+    <!-- Add more route points here as needed, ensuring they are within 100 meters of each other -->
+
+    <RoutePoint id="20">
+      <Latitude>-12.345000</Latitude>
+      <Longitude>98.765000</Longitude>
+      <Altitude>10</Altitude>
+      <TaskType>Photograph</TaskType>
+      <DistanceLimit>100</DistanceLimit>
+    </RoutePoint>
+  </RoutePoints>
+
+</MissionPlan>

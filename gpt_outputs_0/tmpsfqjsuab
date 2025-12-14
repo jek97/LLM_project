@@ -1,0 +1,8 @@
+     <TreeReference id="..." type="...">
+       <!-- Tree attributes -->
+     </TreeReference>
+     
+     <TaskDescription lat="..." lon="...">
+       <!-- Task attributes -->
+     </TaskDescription>
+     

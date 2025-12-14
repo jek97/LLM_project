@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      From the farm, select 5 pistachio trees in a row to visit and take a picture of 3 of them.
+      This task requires navigating to a specific row of trees and then selecting three trees within that row for image capture.
+    </TaskDescription>
+    <TaskSequence>
+      <Task id="1">
+        <TaskType>Navigation</TaskType>
+        <Destination>PistachioRow_0</Destination>
+        <Instructions>Navigate to the first row of pistachio trees.</Instructions>
+      </Task>
+      <Task id="2">
+        <TaskType>TreeSelection</TaskType>
+        <TreeSelectionCriteria>WithinPistachioRow_0, Select 3 trees</TreeSelectionCriteria>
+        <Instructions>Select 3 pistachio trees within the identified row.</Instructions>
+      </Task>
+      <Task id="3">
+        <TaskType>ImageCapture</TaskType>
+        <TargetTrees>Tree_1, Tree_2, Tree_3</TargetTrees>
+        <Instructions>Capture an image of the selected three trees.</Instructions>
+      </Task>
+    </TaskSequence>
+  </CompositeTaskInformation>
+</MissionPlan>

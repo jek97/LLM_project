@@ -1,0 +1,62 @@
+<MissionPlan>
+    <CompositeTaskInformation>
+        <TaskDescription>Going clockwise from the northmost tree, take a picture of 4 trees (north, east, south, west). Ensure the pictures are as far apart as possible in location.</TaskDescription>
+        <Tasks>
+            <!-- Drive to the northmost tree -->
+            <DriveToWaypoint>
+                <WaypointID>1</WaypointID>
+                <WaypointName>Northmost Tree</WaypointName>
+                <Latitude>37.36635640370881</Latitude>
+                <Longitude>-120.42303004014194</Longitude>
+            </DriveToWaypoint>
+
+            <!-- Take a picture -->
+            <TakePicture>
+                <Description>Northmost Tree Picture</Description>
+                <Timestamp>2022-05-01T10:00:00Z</Timestamp>
+            </TakePicture>
+
+            <!-- Drive to the eastmost tree -->
+            <DriveToWaypoint>
+                <WaypointID>2</WaypointID>
+                <WaypointName>Eastmost Tree</WaypointName>
+                <Latitude>37.36631785560332</Latitude>
+                <Longitude>-120.42307272278255</Longitude>
+            </DriveToWaypoint>
+
+            <!-- Take a picture -->
+            <TakePicture>
+                <Description>Eastmost Tree Picture</Description>
+                <Timestamp>2022-05-01T10:10:00Z</Timestamp>
+            </TakePicture>
+
+            <!-- Drive to the southmost tree -->
+            <DriveToWaypoint>
+                <WaypointID>3</WaypointID>
+                <WaypointName>Southmost Tree</WaypointName>
+                <Latitude>37.36627570632085</Latitude>
+                <Longitude>-120.42303004014194</Longitude>
+            </DriveToWaypoint>
+
+            <!-- Take a picture -->
+            <TakePicture>
+                <Description>Southmost Tree Picture</Description>
+                <Timestamp>2022-05-01T10:20:00Z</Timestamp>
+            </TakePicture>
+
+            <!-- Drive to the westmost tree -->
+            <DriveToWaypoint>
+                <WaypointID>4</WaypointID>
+                <WaypointName>Westmost Tree</WaypointName>
+                <Latitude>37.36631785560332</Latitude>
+                <Longitude>-120.42307272278255</Longitude>
+            </DriveToWaypoint>
+
+            <!-- Take a picture -->
+            <TakePicture>
+                <Description>Westmost Tree Picture</Description>
+                <Timestamp>2022-05-01T10:30:00Z</Timestamp>
+            </TakePicture>
+        </Tasks>
+    </CompositeTaskInformation>
+</MissionPlan>

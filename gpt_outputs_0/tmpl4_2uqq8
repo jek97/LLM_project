@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RoboticMissionPlan xmlns="http://example.com/robotics/missionplan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.com/robotics/missionplan http://example.com/robotics/missionplan/schemas/RoboticMissionPlan_v1_0.xsd">
+    <Mission>
+        <Version>1.0</Version>
+        <StartLocation>
+            <Latitude>...</Latitude>
+            <Longitude>...</Longitude>
+        </StartLocation>
+        <Tasks>
+            <!-- Task 1: Drive to a random oak tree and take pictures of the leaves -->
+            <CompositeTaskInformation>
+                <Question>Drive to a random oak tree and take pictures of the leaves.</Question>
+                <TaskList>
+                    <DriveToLocation xsi:type="RandomTree">
+                        <TreeType>Oak</TreeType>
+                    </DriveToLocation>
+                    <TakePictures>
+                        <TreeReference>
+                            <GeoJSONReference xsi:type="Point"/>
+                        </TreeReference>
+                    </TakePictures>
+                </TaskList>
+            </CompositeTaskInformation>
+            <!-- Task 2: Drive to a random maple tree and measure its diameter -->
+            <CompositeTaskInformation>
+                <Question>Drive to a random maple tree and measure its diameter.</Question>
+                <TaskList>
+                    <DriveToLocation xsi:type="RandomTree">
+                        <TreeType>Maple</TreeType>
+                    </DriveToLocation>
+                    <MeasureDiameter>
+                        <TreeReference>
+                            <GeoJSONReference xsi:type="Point"/>
+                        </TreeReference>
+                    </MeasureDiameter>
+                </TaskList>
+            </CompositeTaskInformation>
+            <!-- Add more tasks as needed -->
+        </Tasks>
+        <Outcome>The estimated distance traveled from start to end is approximately [distance] meters.</Outcome>
+    </Mission>
+</RoboticMissionPlan>

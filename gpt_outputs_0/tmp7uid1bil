@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.example.com/mission.xsd http://example.com/mission.xsd">
+  <CompositeTaskInformation>
+    <TaskDescription>Visit all points on the farm</TaskDescription>
+    <tasks>
+      <task id="1" type="DriveToTree">
+        <parameters>
+          <parameter name="treeId">1</parameter>
+          <parameter name="action">0</parameter>
+          <parameter name="lastSampled">10</parameter>
+          <parameter name="reward">0.2</parameter>
+        </parameters>
+      </task>
+      <task id="2" type="DriveToTree">
+        <parameters>
+          <parameter name="treeId">2</parameter>
+          <parameter name="action">0</parameter>
+          <parameter name="lastSampled">201</parameter>
+          <parameter name="reward">1.0</parameter>
+        </parameters>
+      </task>
+      <task id="3" type="DriveToTree">
+        <parameters>
+          <parameter name="treeId">3</parameter>
+          <parameter name="action">0</parameter>
+          <parameter name="lastSampled">159</parameter>
+          <parameter name="reward">0.4</parameter>
+        </parameters>
+      </task>
+      <task id="4" type="DriveToTree">
+        <parameters>
+          <parameter name="treeId">4</parameter>
+          <parameter name="action">0</parameter>
+          <parameter name="lastSampled">153</parameter>
+          <parameter name="reward">0.6</parameter>
+        </parameters>
+      </task>
+      <task id="5" type="DriveToTree">
+        <parameters>
+          <parameter name="treeId">5</parameter>
+          <parameter name="action">0</parameter>
+          <parameter name="lastSampled">120</parameter>
+          <parameter name="reward">0.8</parameter>
+        </parameters>
+      </task>
+      <task id="6" type="DriveToTree">
+        <parameters>
+          <parameter name="treeId">6</parameter>
+          <parameter name="action">0</parameter>
+          <parameter name="lastSampled">75</parameter>
+          <parameter name="reward">1.0</parameter>
+        </parameters>
+      </task>
+      <task id="7" type="DriveToTree">
+        <parameters>
+          <parameter name="treeId">7</parameter>
+          <parameter name="action">0</parameter>
+          <parameter name="lastSampled">287</parameter>
+          <parameter name="reward">0.2</parameter>
+        </parameters>
+      </task>
+      <task id="8" type="DriveToTree">
+        <parameters>
+          <parameter name="treeId">8</parameter>
+          <parameter name="action">0</parameter>
+          <parameter name="lastSampled">312</parameter>
+          <parameter name="reward">1.0</parameter>
+        </parameters>
+      </task>
+      <task id="9" type="DriveToTree">
+        <parameters>
+          <parameter name="treeId">9</parameter>
+          <parameter name="action">0</parameter>
+          <parameter name="lastSampled">180</parameter>
+          <parameter name="reward">0.4</parameter>
+        </parameters>
+      </task>
+      <task id="10" type="DriveToTree">
+        <parameters>
+          <parameter name="treeId">10</parameter>
+          <parameter name="action">0</parameter>
+          <parameter name="lastSampled">309</parameter>
+          <parameter name="reward">0.6</parameter>
+        </parameters>
+      </task>
+      <task id="11" type="DriveToTree">
+        <parameters>
+          <parameter name="treeId">11</parameter>
+          <parameter name="action">0</parameter>
+          <parameter name="lastSampled">29</parameter>
+          <parameter name="reward">1.0</parameter>
+        </parameters>
+      </task>
+    </tasks>
+  </CompositeTaskInformation>
+</mission>

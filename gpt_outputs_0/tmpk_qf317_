@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+    <MissionID>mission_1</MissionID>
+    <MissionName>Select Pistachio Trees</MissionName>
+    <TaskDescription>From the farm, select 5 pistachio trees in a row to visit and take a picture of 3 of them.</TaskDescription>
+    <StartLocation latitude="-120.42302289785604" longitude="37.36631785560332"/>
+    <Tasks>
+        <!-- Task 1: Go to tree 1 -->
+        <Task>
+            <TaskID>task_1</TaskID>
+            <Action>DriveToLocation</Action>
+            <Parameters latitude="-120.42302289785604" longitude="37.36631785560332"/>
+        </Task>
+
+        <!-- Task 2: Take a picture -->
+        <Task>
+            <TaskID>task_2</TaskID>
+            <Action>TakePicture</Action>
+        </Task>
+
+        <!-- Task 3: Go to tree 2 -->
+        <Task>
+            <TaskID>task_3</TaskID>
+            <Action>DriveToLocation</Action>
+            <Parameters latitude="-120.42307592599273" longitude="37.36636077337479"/>
+        </Task>
+
+        <!-- Task 4: Take a picture -->
+        <Task>
+            <TaskID>task_4</TaskID>
+            <Action>TakePicture</Action>
+        </Task>
+
+        <!-- Task 5: Go to tree 3 -->
+        <Task>
+            <TaskID>task_5</TaskID>
+            <Action>DriveToLocation</Action>
+            <Parameters latitude="-120.423044218715" longitude="37.36626996761184"/>
+        </Task>
+
+        <!-- Task 6: Take a picture -->
+        <Task>
+            <TaskID>task_6</TaskID>
+            <Action>TakePicture</Action>
+        </Task>
+    </Tasks>
+    <EndLocation latitude="-120.42302289785604" longitude="37.36631785560332"/>
+</MissionPlan>

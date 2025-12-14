@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<http://robotic-mission-planning.com/schema/mission_plan.xsd:MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                        xsi:schemaLocation="http://robotic-mission-planning.com/schema/mission_plan.xsd 
+                                        http://robotic-mission-planning.com/schema/mission_plan.xsd">
+  <http://robotic-mission-planning.com/schema/mission_plan.xsd:CompositeTaskInformation>
+    <http://robotic-mission-planning.com/schema/mission_plan.xsd:TaskDescription>Take a picture of the northern most tree</http://robotic-mission-planning.com/schema/mission_plan.xsd:TaskDescription>
+    <http://robotic-mission-planning.com/schema/mission_plan.xsd:DrivingTask>
+      <http://robotic-mission-planning.com/schema/mission_plan.xsd:DriveTo>
+        <http://robotic-mission-planning.com/schema/mission_plan.xsd:GPSLocation>
+          <http://robotic-mission-planning.com/schema/mission_plan.xsd:latitude>37.36635688574164</http://robotic-mission-planning.com/schema/mission_plan.xsd:latitude>
+          <http://robotic-mission-planning.com/schema/mission_plan.xsd:longitude>-120.42302289785604</http://robotic-mission-planning.com/schema/mission_plan.xsd:longitude>
+        </http://robotic-mission-planning.com/schema/mission_plan.xsd:GPSLocation>
+      </http://robotic-mission-planning.com/schema/mission_plan.xsd:DriveTo>
+    </http://robotic-mission-planning.com/schema/mission_plan.xsd:DrivingTask>
+  </http://robotic-mission-planning.com/schema/mission_plan.xsd:CompositeTaskInformation>
+
+  <http://robotic-mission-planning.com/schema/mission_plan.xsd:CompositeTaskInformation>
+    <http://robotic-mission-planning.com/schema/mission_plan.xsd:TaskDescription>Drive to the middle of the orchard and take another picture</http://robotic-mission-planning.com/schema/mission_plan.xsd:TaskDescription>
+    <http://robotic-mission-planning.com/schema/mission_plan.xsd:DrivingTask>
+      <http://robotic-mission-planning.com/schema/mission_plan.xsd:DriveTo>
+        <http://robotic-mission-planning.com/schema/mission_plan.xsd:GPSLocation>
+          <http://robotic-mission-planning.com/schema/mission_plan.xsd:latitude>37.36635688574164</http://robotic-mission-planning.com/schema/mission_plan.xsd:latitude>
+          <http://robotic-mission-planning.com/schema/mission_plan.xsd:longitude>-120.42309252722157</http://robotic-mission-planning.com/schema/mission_plan.xsd:longitude>
+        </http://robotic-mission-planning.com/schema/mission_plan.xsd:GPSLocation>
+      </http://robotic-mission-planning.com/schema/mission_plan.xsd:DriveTo>
+    </http://robotic-mission-planning.com/schema/mission_plan.xsd:DrivingTask>
+  </http://robotic-mission-planning.com/schema/mission_plan.xsd:CompositeTaskInformation>
+
+  <http://robotic-mission-planning.com/schema/mission_plan.xsd:CompositeTaskInformation>
+    <http://robotic-mission-planning.com/schema/mission_plan.xsd:TaskDescription>Drive to the middle of the eastern end and take a picture of two trees next to each other</http://robotic-mission-planning.com/schema/mission_plan.xsd:TaskDescription>
+    <http://robotic-mission-planning.com/schema/mission_plan.xsd:DrivingTask>
+      <http://robotic-mission-planning.com/schema/mission_plan.xsd:DriveTo>
+        <http://robotic-mission-planning.com/schema/mission_plan.xsd:GPSLocation>
+          <http://robotic-mission-planning.com/schema/mission_plan.xsd:latitude>37.36631509745154</http://robotic-mission-planning.com/schema/mission_plan.xsd:latitude>
+          <http://robotic-mission-planning.com/schema/mission_plan.xsd:longitude>-120.4230350832969</http://robotic-mission-planning.com/schema/mission_plan.xsd:longitude>
+        </http://robotic-mission-planning.com/schema/mission_plan.xsd:GPSLocation>
+      </http://robotic-mission-planning.com/schema/mission_plan.xsd:DriveTo>
+    </http://robotic-mission-planning.com/schema/mission_plan.xsd:DrivingTask>
+  </http://robotic-mission-planning.com/schema/mission_plan.xsd:CompositeTaskInformation>
+
+</http://robotic-mission-planning.com/schema/mission_plan.xsd:MissionPlan>

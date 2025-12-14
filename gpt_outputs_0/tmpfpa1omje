@@ -1,0 +1,10 @@
+ Thank you for providing more information. It seems that there is an issue with the start tag of your XML file.
+
+Please make sure that the first line of your XML file starts with a `<?xml` declaration followed by a closing bracket `?>`. Here's an example:
+```php
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:robotics:missionPlan" xmlns="urn:robotics:missionPlan">
+    <!-- your schema definition here -->
+</xs:schema>
+```
+In addition, please make sure that you have closed all tags properly in your XML file. Check for any unclosed tags or missing `</tag>` endings in your file. If there are no issues with the formatting and encoding, could you provide me with more details about the error message so I can better understand the issue? 

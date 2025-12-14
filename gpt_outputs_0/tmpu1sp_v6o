@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="missionplan.xsd">
+    <CompositeTaskInformation>
+        <!-- From the starting point, find a tree somewhere in the middle of the orchard and measure cos. If low reading, go to and take 2 pictures of nearby trees. From there, measure another tree as far away as possible for co2 and repeat the same process. Once done, take a temperature reading at any one of the northernmost trees. Finally, return to end. -->
+        <TaskDescription>Original question</TaskDescription>
+        <SubTasks>
+            <!-- Drive to the middle tree -->
+            <DriveToLocation>
+                <Start>
+                    <GeoJSON>
+                        <Point>
+                            <coordinates>-122.4194,37.7749</coordinates>
+                        </Point>
+                    </GeoJSON>
+                </Start>
+                <End>
+                    <!-- Middle tree coordinates -->
+                    <GeoJSON>
+                        <Point>
+                            <coordinates>[Middle tree longitude], [Middle tree latitude]</coordinates>
+                        </Point>
+                    </GeoJSON>
+                </End>
+            </DriveToLocation>
+            <!-- Measure cos at the middle tree -->
+            <MeasureCos>
+                <TreeType>[Middle tree type]</TreeType>
+            </MeasureCos>
+            <!-- If low reading, go to and take 2 pictures of nearby trees -->
+            <If condition="cos_reading_low">
+                <Then>
+                    <!-- Drive to a nearby tree -->
+                    <DriveToLocation>
+                        <Start>
+                            <!-- Middle tree coordinates -->
+                            <GeoJSON>
+                                <Point>
+                                    <coordinates>[Middle tree longitude], [Middle tree latitude]</coordinates>
+                                </Point>
+                            </GeoJSON>
+                        </Start>
+                        <End>
+                            <!-- Nearby tree coordinates -->
+                            <GeoJSON>
+                                <Point>
+                                    <coordinates>[Nearby tree longitude], [Nearby tree latitude]</coordinates>
+                                </Point>
+                            </GeoJSON>
+                        </End>
+                    </DriveToLocation>
+                    <!-- Take pictures of the nearby tree -->
+                    <TakePictures>
+                        <TreeType>[Nearby tree type]</TreeType>
+                    </TakePictures>
+                </Then>
+            </If>
+            <!-- Drive to another tree as far away as possible for co2 measurement -->
+            <DriveToLocation>
+                <Start>
+                    <!-- Nearby tree coordinates -->
+                    <GeoJSON>
+                        <Point>
+                            <coordinates>[Nearby tree longitude], [Nearby tree latitude]</coordinates>
+                        </Point>
+                    </GeoJSON>
+                </Start>
+                <End>
+                    <!-- Far tree coordinates -->
+                    <GeoJSON>
+                        <Point>
+                            <coordinates>[Far tree longitude], [Far tree latitude]</coordinates>
+                        </Point>
+                    </GeoJSON>
+                </End>
+            </DriveToLocation>
+            <!-- Measure co2 at the far tree -->
+            <MeasureCo2>
+                <TreeType>[Far tree type]</TreeType>
+            </MeasureCo2>
+            <!-- If low reading, go to and take 2 pictures of nearby trees -->
+            <If condition="co2_reading_low">
+                <Then>
+                    <!-- Drive to a nearby tree -->
+                    <DriveToLocation>
+                        <Start>
+                            <!-- Far tree coordinates -->
+                            <GeoJSON>
+                                <Point>
+                                    <coordinates>[Far tree longitude], [Far tree latitude]</coordinates>
+                                </Point>
+                            </GeoJSON>
+                        </Start>
+                        <End>
+                            <!-- Nearby tree coordinates -->
+                            <GeoJSON>
+                                <Point>
+                                    <coordinates>[Nearby tree longitude], [Nearby tree latitude]</coordinates>
+                                </Point>
+                            </GeoJSON>
+                        </End>
+                    </DriveToLocation>
+                    <!-- Take pictures of the nearby tree -->
+                    <TakePictures>
+                        <TreeType>[Nearby tree type]</TreeType>
+                    </TakePictures>
+                </Then>
+            </If>
+            <!-- Drive to a northernmost tree -->
+            <DriveToLocation>
+                <Start>
+                    <!-- Far tree coordinates -->
+                    <GeoJSON>
+                        <Point>
+                            <coordinates>[Far tree longitude], [Far tree latitude]</coordinates>
+                        </Point>
+                    </GeoJSON>
+                </Start>
+                <End>
+                    <!-- Northernmost tree coordinates -->
+                    <GeoJSON>
+                        <Point>
+                            <coordinates>[Northernmost tree longitude], [Northernmost tree latitude]</coordinates>
+                        </Point>
+                    </GeoJSON>
+                </End>
+            </DriveToLocation>
+            <!-- Take pictures of the northernmost tree -->
+            <TakePictures>
+                <TreeType>[Northernmost tree type]</TreeType>
+            </TakePictures>
+        </If>
+        </If>
+    </If>
+</If>
+
+In this mission, the robot will navigate to multiple locations based on sensor readings and take pictures of specific trees. The mission is structured using If-Then statements to handle different scenarios based on the sensor readings.
+
+The robot will start at a known location (not specified in the mission) and navigate to the first tree for measuring cos. If the reading is low, it will go to a nearby tree and take pictures. After that, it will move to another tree for co2 measurement. If the co2 reading is also low, it will go to a nearby tree and take pictures again. Finally, it will navigate to a northernmost tree and take pictures before returning to its starting location.
+
+The mission uses nested If-Then statements to handle multiple conditions and actions based on sensor readings. The robot's actions are clearly defined, making the mission easy to understand and implement.

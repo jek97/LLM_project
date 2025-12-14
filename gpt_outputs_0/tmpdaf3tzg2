@@ -1,0 +1,8 @@
+<m Missions>
+  <m MissionNumber="1">
+    <DriveToLocation longitude="..." latitude="..."></DriveToLocation>
+    <!-- Add more mission elements -->
+  </m>
+
+  <!-- Repeat for additional missions -->
+</m>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xlink="http://www.w3.org/1999/xlink">
+    <CompositeTaskInformation>
+        <TaskDescription>Request from user: Go to the middle of the field and take a picture of a tree. If its average temperature is below 33 C, take a CO2 sample. After, go to another random point 5 trees down and do the same thing.</TaskDescription>
+        <Tasks>
+            <!-- Drive to the first tree -->
+            <DriveToLocation>
+                <StartLocation>
+                    <Latitude>...</Latitude>
+                    <Longitude>...</Longitude>
+                </StartLocation>
+                <EndLocation xlink:href="geolocation1.geojson" />
+            </DriveToLocation>
+            <!-- Take a picture of the first tree -->
+            <TakePicture>
+                <TreeType xlink:href="tree_type1.txt" />
+                <GPSLocation xlink:href="geolocation1.geojson" />
+            </TakePicture>
+            <!-- Measure temperature of the first tree -->
+            <MeasureTemperature>
+                <GPSLocation xlink:href="geolocation1.geojson" />
+            </MeasureTemperature>
+            <!-- Check if average temperature is below 33 C -->
+            <Condition>
+                <ComparisonOperator>lessThan</ComparisonOperator>
+                <Value>33</Value>
+                <Variable>AverageTemperature</Variable>
+            </Condition>
+            <!-- If true, take a CO2 sample -->
+            <IfThenElse>
+                <If>
+                    <ReferenceTask="MeasureTemperature" />
+                </If>
+                <Then>
+                    <TakeCO2Sample>
+                        <GPSLocation xlink:href="geolocation1.geojson" />
+                    </TakeCO2Sample>
+                </Then>
+            </IfThenElse>
+            <!-- Drive to the second tree -->
+            <DriveToLocation>
+                <StartLocation xlink:href="geolocation1.geojson" />
+                <EndLocation xlink:href="geolocation2.geojson" />
+            </DriveToLocation>
+            <!-- Take a picture of the second tree -->
+            <TakePicture>
+                <TreeType xlink:href="tree_type2.txt" />
+                <GPSLocation xlink:href="geolocation2.geojson" />
+            </TakePicture>
+            <!-- Measure temperature of the second tree -->
+            <MeasureTemperature>
+                <GPSLocation xlink:href="geolocation2.geojson" />
+            </MeasureTemperature>
+            <!-- Check if average temperature is below 33 C -->
+            <Condition>
+                <ComparisonOperator>lessThan</ComparisonOperator>
+                <Value>33</Value>
+                <Variable>AverageTemperature</Variable>
+            </Condition>
+            <!-- If true, take a CO2 sample -->
+            <IfThenElse>
+                <If>
+                    <ReferenceTask="MeasureTemperature" />
+                </If>
+                <Then>
+                    <TakeCO2Sample>
+                        <GPSLocation xlink:href="geolocation2.geojson" />
+                    </TakeCO2Sample>
+                </Then>
+            </IfThenElse>
+        </Tasks>
+        <!-- Comment the total estimated haversine distance traveled from start to end -->
+        <Outcome>Total estimated distance: [distance in meters]</Outcome>
+    </CompositeTaskInformation>
+</Mission>

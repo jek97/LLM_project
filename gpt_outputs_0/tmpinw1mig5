@@ -1,0 +1,67 @@
+<Mission>
+    <MissionInformation>
+        <MissionName>TreePictureMission</MissionName>
+        <StartTime>2023-04-15T10:00:00Z</StartTime>
+        <EndTime>2023-04-15T11:00:00Z</EndTime>
+    </MissionInformation>
+    <TaskList>
+        <CompositeTaskInformation>
+            <TaskID>1</TaskID>
+            <TaskDescription>Drive to the northern most tree and take a picture of it.</TaskDescription>
+            <SubTasks>
+                <DriveToLocation>
+                    <GPSLocation>
+                        <!-- Use GeoJSON data to provide GPS coordinates -->
+                        <Latitude>...</Latitude>
+                        <Longitude>...</Longitude>
+                    </GPSLocation>
+                </DriveToLocation>
+                <TakePicture>
+                    <TreeID>1</TreeID>
+                </TakePicture>
+            </SubTasks>
+        </CompositeTaskInformation>
+        <CompositeTaskInformation>
+            <TaskID>2</TaskID>
+            <TaskDescription>Drive to the middle of the orchard and take a picture of two trees next to each other.</TaskDescription>
+            <SubTasks>
+                <DriveToLocation>
+                    <!-- Use GeoJSON data to provide GPS coordinates -->
+                    <GPSLocation>
+                        <Latitude>...</Latitude>
+                        <Longitude>...</Longitude>
+                    </GPSLocation>
+                </DriveToLocation>
+                <TakePicture>
+                    <TreeID>3</TreeID>
+                </TakePicture>
+                <TakePicture>
+                    <TreeID>4</TreeID>
+                </TakePicture>
+            </SubTasks>
+        </CompositeTaskInformation>
+        <CompositeTaskInformation>
+            <TaskID>3</TaskID>
+            <TaskDescription>Drive to the middle of the eastern end and take a picture of two trees next to each other.</TaskDescription>
+            <SubTasks>
+                <DriveToLocation>
+                    <!-- Use GeoJSON data to provide GPS coordinates -->
+                    <GPSLocation>
+                        <Latitude>...</Latitude>
+                        <Longitude>...</Longitude>
+                    </GPSLocation>
+                </DriveToLocation>
+                <TakePicture>
+                    <TreeID>5</TreeID>
+                </TakePicture>
+                <TakePicture>
+                    <TreeID>6</TreeID>
+                </TakePicture>
+            </SubTasks>
+        </CompositeTaskInformation>
+    </TaskList>
+    <Outcome>
+        <!-- Comment the total estimated haversine distance traveled from start to end -->
+        The robot successfully completed its mission and took pictures of the specified trees.
+    </Outcome>
+</Mission>

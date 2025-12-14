@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns="http://example.com/schemas/mission">
+  <name>Exploring Tree Health and Temperature</name>
+  
+  <!-- Add any additional elements you may need here -->
+  
+  <tasks>
+    <task id="task1">
+      <name>Task One</name>
+      <description>Task description for Task One.</description>
+      <CompositeElement name="Composite Task 1">
+        <TaskActivity activityName="Drive to tree location"/>
+        <TaskActivity activityName="Perform tree health assessment"/>
+        <TaskActivity activityName="Measure tree temperature"/>
+      </CompositeElement>
+    </task>
+    <task id="task2">
+      <name>Task Two</name>
+      <description>Task description for Task Two.</description>
+      <CompositeElement name="Composite Task 2">
+        <TaskActivity activityName="Drive to tree location"/>
+        <TaskActivity activityName="Perform tree health assessment"/>
+        <TaskActivity activityName="Measure tree temperature"/>
+      </CompositeElement>
+    </task>
+  </tasks>
+  
+  <!-- Add any additional elements you may need here -->
+</mission>

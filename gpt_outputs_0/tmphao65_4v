@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<nsInfo xmlns="http://example.com/missionplan">
+    <nsmap version="2.0" encoding="UTF-8">
+        <nsmap:ns "ns1" prefix=" missionplan">
+            <nsmap:namespace>http://example.com/missionplan</nsmap:namespace>
+        </nsmap:ns>
+    </nsmap>
+</nsInfo>

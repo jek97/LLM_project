@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission>
+    <task>
+        <description>
+            Original Question: "Measure the height of the oak tree, then collect a leaf sample, then photograph the tree."
+            TaskName: "Measure Oak Tree"
+            Action: "Measure Height"
+            TargetObject: "Oak Tree"
+        </description>
+    </task>
+</mission>

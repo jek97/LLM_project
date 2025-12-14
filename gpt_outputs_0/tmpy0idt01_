@@ -1,0 +1,78 @@
+Okay, I understand. The error message indicates a problem with the XML structure, specifically an unexpected end of a tag within the `TaskDescription` element. This usually means there's an unclosed tag, a missing closing tag, or an incorrect nesting of tags.
+
+To help me generate the correct XML mission plan, I need the following information:
+
+1.  **The Robotic Task Representation:**  Please provide the data that defines the tasks the robot needs to perform. This should be in a structured format (e.g., JSON, CSV, or a similar format) that clearly outlines each task, including:
+    *   Task ID
+    *   Task Description (what the robot needs to do)
+    *   Location (GPS coordinates - latitude, longitude)
+    *   Object Type (e.g., "tree", "bench", "flowerbed", "sign")
+    *   Action (e.g., "measure_height", "take_photo", "collect_sample")
+    *   Priority (optional, to indicate task order)
+
+2.  **The GeoJSON File:**  Please provide the GeoJSON file that contains the spatial data (e.g., tree locations, object locations, etc.).  This file will be referenced within the XML mission plan.
+
+Once I have these two pieces of information, I will generate the XML mission plan according to the schema and incorporate the GeoJSON references.
+
+**Example of the kind of data I need (as JSON):**
+
+```json
+[
+  {
+    "task_id": "T1",
+    "task_description": "Drive to the large oak tree and measure its height.",
+    "location": {
+      "latitude": 34.0522,
+      "longitude": -118.2437
+    },
+    "object_type": "tree",
+    "action": "measure_height",
+    "priority": 1
+  },
+  {
+    "task_id": "T2",
+    "task_description": "Drive to the bench near the flowerbed and take a photo.",
+    "location": {
+      "latitude": 34.0530,
+      "longitude": -118.2440
+    },
+    "object_type": "bench",
+    "action": "take_photo",
+    "priority": 2
+  }
+]
+```
+
+**Example of the kind of GeoJSON I need:**
+
+```json
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-118.2437, 34.0522]
+      },
+      "properties": {
+        "name": "Large Oak Tree",
+        "tree_type": "oak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-118.2440, 34.0530]
+      },
+      "properties": {
+        "name": "Bench",
+        "material": "wood"
+      }
+    }
+  ]
+}
+```
+
+**Please provide me with the Robotic Task Representation and the GeoJSON file, and I will generate the XML mission plan.**

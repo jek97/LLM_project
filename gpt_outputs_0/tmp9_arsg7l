@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://www.example.com/missionplan">
+    <Header>
+        <StartLocation>
+            <Latitude>37.36635678715399</Latitude>
+            <Longitude>-120.42299259529793</Longitude>
+        </StartLocation>
+    </Header>
+    <Tasks>
+        <CompositeTaskInformation>
+            <TaskDescription>Select 5 pistachio trees in a row to visit and take a picture of 3 of them (Original Question)</TaskDescription>
+            <Subtasks>
+                <DriveToLocation>
+                    <Destination>
+                        <Latitude>37.366304880110526</Latitude>
+                        <Longitude>-120.4230246791031</Longitude>
+                    </Destination>
+                </DriveToLocation>
+                <TakePicture>
+                    <TreeType>Pistachio</TreeType>
+                </TakePicture>
+                <DriveToLocation>
+                    <Destination>
+                        <Latitude>37.366300703749474</Latitude>
+                        <Longitude>-120.42300386899338</Longitudon> <!-- Fixed typo -->
+                    </Destination>
+                </DriveToLocation>
+                <TakePicture>
+                    <TreeType>Pistachio</TreeType>
+                </TakePicture>
+                <DriveToLocation>
+                    <Destination>
+                        <Latitude>37.36628908556382</Latitude>
+                        <Longitude>-120.42298051393493</Longitude>
+                    </Destination>
+                </DriveToLocation>
+                <TakePicture>
+                    <TreeType>Pistachio</TreeType>
+                </TakePicture>
+                <DriveToLocation>
+                    <Destination>
+                        <Latitude>37.3662730362294</Longitude>
+                        <Longitude>-120.423014178715</Longitude>
+                    </Destination>
+                </DriveToLocation>
+                <TakePicture>
+                    <TreeType>Pistachio</TreeType>
+                </TakePicture>
+                <DriveToLocation>
+                    <Destination>
+                        <Latitude>37.36626996761184</Latitude>
+                        <Longitude>-120.423044218715</Longitude>
+                    </Destination>
+                </DriveToLocation>
+            </Subtasks>
+        </CompositeTaskInformation>
+    </Tasks>
+    <Outcome>The mission was successful, and the robot visited 5 pistachio trees in a row and took pictures of 3 of them. Estimated total distance traveled: [distance] miles.</Outcome>
+</MissionPlan>

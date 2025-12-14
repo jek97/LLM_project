@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      <TaskName>Farm Corner Photo Survey</TaskName>
+      <TaskDescription>Take pictures of trees at the four corners of the farm.  This task involves navigating to each corner and capturing an image of the dominant tree at that location.</TaskDescription>
+    </TaskDescription>
+  </CompositeTaskInformation>
+  <Tasks>
+    <Task id="1">
+      <TaskName>Navigate to Corner 1</TaskName>
+      <TaskType>Navigation</TaskType>
+      <Waypoint>
+        <Latitude>37.36635678715399</Latitude>
+        <Longitude>-120.42299259529793</Longitude>
+      </Waypoint>
+      <ImageCapture>
+        <ImageName>Corner_1_Tree.jpg</ImageName>
+        <Description>Image of tree at corner 1.</Description>
+      </ImageCapture>
+    </Task>
+    <Task id="2">
+      <TaskName>Navigate to Corner 2</TaskName>
+      <TaskType>Navigation</TaskType>
+      <Waypoint>
+        <Latitude>37.36635678715399</Latitude>
+        <Longitude>-120.42300386899338</Longitude>
+      </Waypoint>
+      <ImageCapture>
+        <ImageName>Corner_2_Tree.jpg</ImageName>
+        <Description>Image of tree at corner 2.</Description>
+      </ImageCapture>
+    </Task>
+    <Task id="3">
+      <TaskName>Navigate to Corner 3</TaskName>
+      <TaskType>Navigation</TaskType>
+      <Waypoint>
+        <Latitude>37.36631785560332</Latitude>
+        <Longitude>-120.42307272278255</Longitude>
+      </Waypoint>
+      <ImageCapture>
+        <ImageName>Corner_3_Tree.jpg</ImageName>
+        <Description>Image of tree at corner 3.</Description>
+      </ImageCapture>
+    </Task>
+    <Task id="4">
+      <TaskName>Navigate to Corner 4</TaskName>
+      <TaskType>Navigation</TaskType>
+      <Waypoint>
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42307592599273</Longitude>
+      </Waypoint>
+      <ImageCapture>
+        <ImageName>Corner_4_Tree.jpg</ImageName>
+        <Description>Image of tree at corner 4.</Description>
+      </ImageCapture>
+    </Task>
+  </Tasks>
+</MissionPlan>

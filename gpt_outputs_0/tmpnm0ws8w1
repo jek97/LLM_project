@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompositeTaskInformation>
+    <TaskDescription>What is your answer?</TaskDescription>
+    <CompositeTask InformationID="123456">Example Mission</CompositeTask>
+    
+    <!-- Include GeoJSON reference here -->
+    <GeoJSONReference Name="test.geojson" />
+    
+    <Tasks>
+        <!-- Task structure with movement and actions -->
+        <Task id="1">
+            <DriveTo TreeID="12345" LocationLatitude="40.712826" LocationLongitude="-74.006015"/>
+            <MeasureDistance DistanceMeters="100"/>
+        </Task>
+        
+        <!-- Add more tasks as needed -->
+    </Tasks>
+</CompositeTaskInformation>

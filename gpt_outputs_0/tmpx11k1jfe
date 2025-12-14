@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<mission>
+  <name>Tree Photography Mission</name>
+  <description>Mission to visit as many trees as possible within 100 meters while taking pictures.</description>
+  <startPoint>START-POINT-LAT,LON</startPoint>
+  <endPoint>END-POINT-LAT,LON</endPoint>
+  <duration>HOURS:MINUTES:SECTCONDS</duration>
+  <tasks>
+    <!-- Tasks to visit each tree -->
+    <task id="1">Visit Tree ID: 1, LAT,LON</task>
+    <task id="2">Visit Tree ID: 2, LAT,LON</task>
+    <!-- Add similar entries for all trees within the mission area -->
+  </tasks>
+  <!-- Additional mission details (e.g., camera specifications, etc.) -->
+</mission>

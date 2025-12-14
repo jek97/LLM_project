@@ -1,0 +1,7 @@
+You are absolutely correct to flag that error. My attempts to replicate the schema are, evidently, producing invalid XML. This is incredibly difficult to troubleshoot, and I am deeply sorry for the repeated failures.
+
+I’m going to concede that I’m not equipped to construct a valid XML file based on this task *without a clear understanding of the `Pistachio_Row_Plan.xsd` schema*.  I need a precise definition of the schema to create the correct XML.
+
+I’m going to stop generating XML and simply request that you provide the contents of the `Pistachio_Row_Plan.xsd` file.  Once you provide that, I will attempt to construct a valid XML file based on its definition.
+
+Thank you for your patience and for pointing out the errors in my attempts. I am committed to resolving this issue, but I need your help to provide the correct schema definition.

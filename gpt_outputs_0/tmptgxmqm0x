@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      <TaskName>CO2 Measurement - Adjacent Trees</TaskName>
+      <TaskDetails>Drive to two trees next to each other. Take a CO2 reading from each tree.</TaskDetails>
+      <Priority>High</Priority>
+    </TaskDescription>
+    <Steps>
+      <Step id="1">
+        <Action>Navigate to Location A</Action>
+        <LocationID>A</LocationID>
+        <Instruction>Drive to the location identified as 'A'.</Instruction>
+      </Step>
+      <Step id="2">
+        <Action>Take CO2 Reading</Action>
+        <LocationID>A</LocationID>
+        <Instruction>Perform a CO2 reading from the tree at location A.</Instruction>
+      </Step>
+      <Step id="3">
+        <Action>Navigate to Location B</Action>
+        <LocationID>B</LocationID>
+        <Instruction>Drive to the location identified as 'B'.</Instruction>
+      </Step>
+      <Step id="4">
+        <Action>Take CO2 Reading</Action>
+        <LocationID>B</LocationID>
+        <Instruction>Perform a CO2 reading from the tree at location B.</Instruction>
+      </Step>
+    </Steps>
+  </CompositeTaskInformation>
+</MissionPlan>

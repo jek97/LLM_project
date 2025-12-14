@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns="http://example.com/missionFormat">
+    <missionId>OrchardCO2Mission</missionId>
+    <missionType>ROBOTIC</missionType>
+    <duration>120</duration>
+    <numberOfParticipants>1</numberOfParticipants>
+    <platform>NanoBot-Robot</platform>
+
+    <sequence>
+        <!-- Task 1: Start at the starting point -->
+        <task name="StartAtStartingPoint">
+            <moveFromCoordinate>0,0</moveFromCoordinate>
+            <moveToCoordinate>0,0</moveToCoordinate>
+        </task>
+
+        <!-- Task 2: Find a tree in the middle of the orchard -->
+        <task name="MeasureCO2AtMiddleTree">
+            <moveFromCoordinate>0,0</moveFromCoordinate>
+            <moveToCoordinate>[middle_tree_coordinates]</moveToCoordinate>
+            <takeMeasurement type="CO2">[CO2_value]</takeMeasurement>
+        </task>
+
+        <!-- Task 3: If CO2 reading is low, take two nearby pictures -->
+        <task name="TakePicturesIfNecessary">
+            <if>CO2_value < 50</if>
+                <moveFromCoordinate>[middle_tree_coordinates]</moveFromCoordinate>
+                <moveToCoordinate>[nearby_tree_coordinates_1]</moveToCoordinate>
+                <!-- Capture first picture -->
+                <takePicture orientation="NORTHWEST" id="pic1"/>
+                
+                <!-- Capture second picture -->
+                <takePicture orientation="Northeast" id="pic2"/>
+            </if>
+        </task>
+
+        <!-- Task 4: Move to another tree as far away as possible for CO2 measurement -->
+        <task name="MeasureCO2AtFarTree">
+            <moveFromCoordinate>[current_position]</moveFromCoordinate>
+            <findFarthestTree distance="max_distance" coordinates="far_tree_coordinates"/>
+            <moveToCoordinate>far_tree_coordinates</moveToCoordinate>
+            <takeMeasurement type="CO2">[new_CO2_value]</takeMeasurement>
+        </task>
+
+        <!-- Task 5: Take a temperature reading at the northernmost tree -->
+        <task name="TakeTemperatureReading">
+            <findNorthernmostTree coordinates="northernmost_tree_coordinates"/>
+            <moveToCoordinate>northernmost_tree_coordinates</moveToCoordinate>
+            <takeMeasurement type="TEMPERATURE">[temperature_value]</takeMeasurement>
+        </task>
+
+        <!-- Task 6: Return to the endpoint -->
+        <task name="ReturnToEndpoint">
+            <moveFromCoordinate>[last_measurement_position]</moveFromCoordinate>
+            <moveToCoordinate>0,0</moveToCoordinate>
+        </task>
+    </sequence>
+</mission>

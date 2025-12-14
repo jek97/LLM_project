@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="your_namespace_prefix your_xsd_file.xsd">
+    <MissionName>Tree CO2 and Temperature Sampling Mission</MissionName>
+    <StartLocation>
+        <Latitude>37.7749</Latitude>
+        <Longitude>-122.4194</Longitude>
+    </StartLocation>
+    <Tasks>
+        <CompositeTaskInformation>
+            <TaskDescription>Drive to the first tree, take a picture of it, measure CO2 and temperature, then drive to the second tree, repeat the process.</TaskDescription>
+            <SubTasks>
+                <DriveToLocation>
+                    <!-- GeoJSON data for the first tree -->
+                    {
+                      "type": "Point",
+                      "coordinates": [
+                        37.7749,
+                        -122.4194
+                      ]
+                    }
+                </DriveToLocation>
+                <TakePicture>
+                    <TreeType>Oak</TreeType>
+                </TakePicture>
+                <MeasureCO2>
+                    <!-- No condition provided, assuming it's always measured -->
+                </MeasureCO2>
+                <TakeTemperatureReading>
+                    <!-- No condition provided, assuming it's always measured -->
+                </TakeTemperatureReading>
+                <DriveToLocation>
+                    <!-- GeoJSON data for the second tree -->
+                    {
+                      "type": "Point",
+                      "coordinates": [
+                        37.7750,
+                        -122.4195
+                      ]
+                    }
+                </DriveToLocation>
+                <TakePicture>
+                    <TreeType>Maple</TreeType>
+                </TakePicture>
+                <MeasureCO2>
+                    <!-- No condition provided, assuming it's always measured -->
+                </MeasureCO2>
+                <TakeTemperatureReading>
+                    <!-- No condition provided, assuming it's always measured -->
+                </TakeTemperatureReading>
+            </SubTasks>
+        </CompositeTaskInformation>
+    </Tasks>
+    <Outcome>The robot traveled approximately X miles from start to end, completing the mission successfully.</Outcome>
+</Mission>

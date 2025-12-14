@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns="http://example.com/missionplan">
+  <Tasks>
+    <Task id="1" TaskType="DriveTo">
+      <Destination>
+        <Latitude>37.36627570632085</Latitude>
+        <Longitude>-120.42298051393493</Longitude>
+      </Destination>
+      <Instructions>Drive to the specified coordinates.</Instructions>
+    </Task>
+  </Tasks>
+</MissionPlan>

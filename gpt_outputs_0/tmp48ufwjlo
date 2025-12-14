@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://robottask.xsd 
+         http://robottask.xsd">
+    <TaskDescription>Visit Pistachio Trees</TaskDescription>
+    <CompositeTaskInformation>
+        <TaskList>
+            <Task id="pistachioTreeSelection" description="Select 5 pistachio trees in a row">
+                <DrivingTo>
+                    <LocationRef refId="orchard"/>
+                </DrivingTo>
+                <Actions>
+                    <Action id="selectTrees" description="Select pistachio trees in a row">
+                        <DrivingTo>
+                            <LocationRef refId="firstTree"/>
+                        </DrivingTo>
+                        <DrivingTo>
+                            <LocationRef refId="secondTree"/>
+                        </DrivingTo>
+                        <DrivingTo>
+                            <LocationRef refId="thirdTree"/>
+                        </DrivingTo>
+                    </Action>
+                </Actions>
+            </Task>
+        </TaskList>
+    </CompositeTaskInformation>
+    <Outcome>
+        Visited 3 pistachio trees in a row
+        Total estimated haversine distance: 
+    </Outcome>
+</mission>
+
+<FeatureCollection id="orchard" type="FeatureCollection">
+    <Feature id="orchard" geometry="Point" coordinates="-120.42302289785604,37.36635688574164"/>
+    <Feature id="firstTree" geometry="Point" coordinates="-120.42309252722157,37.36631509745154"/>
+    <Feature id="secondTree" geometry="Point" coordinates="-120.4230350832969,37.36635015674898"/>
+    <Feature id="thirdTree" geometry="Point" coordinates="-120.42308819251039,37.366300236834725"/>
+</FeatureCollection>

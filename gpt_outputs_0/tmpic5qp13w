@@ -1,0 +1,9 @@
+Okay, I apologize for the repeated errors. This confirms a fundamental issue – the XML document was not properly formatted at the beginning.  It seems I was generating an incomplete XML structure.
+
+To help me create the mission plan, please provide the following:
+
+1.  **The Task Description:**  Please paste the full text of the `TaskDescription` element.  This is the core instruction for the robot.
+
+2.  **The GeoJSON File:**  Please paste the content of the GeoJSON file.
+
+I will now generate the XML based on your input. Let's start with the Task Description. Please paste it here.

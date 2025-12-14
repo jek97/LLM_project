@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns="http://example.com/mission" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.com/mission http://example.com/mission.xsd">
+    <CompositeTaskInformation>
+        <!-- Original question -->
+        <TaskDescription>Drive to specific trees, water them, and take pictures of their trunks</TaskDescription>
+        <Tasks>
+            <Task>
+                <Action>DriveToLocation</Action>
+                <Location>
+                    <Latitude>37.7749</Latitude>
+                    <Longitude>-122.4194</Longitude>
+                </Location>
+            </Task>
+            <Task>
+                <Action>WaterTree</Action>
+                <TreeType>Oak</TreeType>
+                <Location>
+                    <Latitude>37.7750</Latitude>
+                    <Longitude>-122.4188</Longitude>
+                </Location>
+            </Task>
+            <Task>
+                <Action>TakePicture</Action>
+                <TreeType>Oak</TreeType>
+                <Location>
+                    <Latitude>37.7750</Latitude>
+                    <Longitude>-122.4188</Longitude>
+                </Location>
+            </Task>
+            <!-- More tasks can be added here... -->
+        </Tasks>
+    </CompositeTaskInformation>
+    <!-- Outcome element is optional and can be included if needed -->
+    <Outcome>The robot will travel approximately 50 meters to reach the trees, water them, and take pictures of their trunks</Outcome>
+</Mission>

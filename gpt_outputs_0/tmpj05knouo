@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="missionplan.xsd">
+    <CompositeTaskInformation>
+        <!-- From the starting point, find a tree somewhere in the middle of the orchard and measure cos. If low reading, go to and take 2 pictures of nearby trees. From there, measure another tree as far away as possible for co2 and repeat the same process. Once done, take a temperature reading at any one of the northernmost trees. Finally, return to end. -->
+        <TaskDescription>Original question</TaskDescription>
+        <SubTasks>
+            <!-- Drive to the middle tree -->
+            <DriveToLocation>
+                <Start>
+                    <Latitude>37.7749</Latitude>
+                    <Longitude>-122.4194</Longitude>
+                </Start>
+                <End>
+                    <!-- Middle tree coordinates -->
+                    <Latitude>37.7749 + (random value between -0.005 and 0.005)</Latitude>
+                    <Longitude>-122.4194 + (random value between -0.005 and 0.005)</Longitud>
+                </End>
+            </DriveToLocation>
+            <!-- Measure cos at the middle tree -->
+            <MeasureCos>
+                <TreeID>Middle Tree</TreeID>
+            </MeasureCos>
+            <!-- Take pictures of nearby trees -->
+            <TakePictures>
+                <TreeID>Nearby Trees (2)</TreeID>
+            </TakePictures>
+            <!-- Drive to the far tree -->
+            <DriveToLocation>
+                <Start>
+                    <!-- Middle tree coordinates -->
+                    <Latitude>37.7749 + (random value between -0.005 and 0.005)</Latitude>
+                    <Longitude>-122.4194 + (random value between -0.005 and 0.005)</Longitud>
+                </Start>
+                <End>
+                    <!-- Far tree coordinates -->
+                    <Latitude>37.7749 + (random value between -0.01 and 0.01)</Latitude>
+                    <Longitude>-122.4194 + (random value between -0.01 and 0.01)</Longitud>
+                </End>
+            </DriveToLocation>
+            <!-- Measure co2 at the far tree -->
+            <MeasureCo2>
+                <TreeID>Far Tree</TreeID>
+            </MeasureCo2>
+            <!-- Take pictures of nearby trees -->
+            <TakePictures>
+                <TreeID>Nearby Trees (2)</TreeID>
+            </TakePictures>
+            <!-- Drive to a northernmost tree -->
+            <DriveToLocation>
+                <Start>
+                    <!-- Far tree coordinates -->
+                    <Latitude>37.7749 + (random value between -0.01 and 0.01)</Latitude>
+                    <Longitude>-122.4194 + (random value between -0.01 and 0.01)</Longitud>
+                </Start>
+                <End>
+                    <!-- Northernmost tree coordinates -->
+                    <Latitude>37.7749 + (random value between 0.005 and 0.015)</Latitude>
+                    <Longitude>-122.4194 + (random value between -0.005 and 0.005)</Longitud>
+                </End>
+            </DriveToLocation>
+            <!-- Take a temperature reading at the northernmost tree -->
+            <TakeTemperature>
+                <TreeID>Northernmost Tree</TreeID>
+            </TakeTemperature>
+        </SubTasks>
+    </CompositeTaskInformation>
+    <Outcome>Completed mission with success. Estimated distance traveled: [Distance in meters]</Outcome>
+</MissionPlan>

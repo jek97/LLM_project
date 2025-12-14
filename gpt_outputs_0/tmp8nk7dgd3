@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionPlan xmlns="http://example.com/missionPlan">
+    <DrivingTask ref="drive_to_tree_0">
+        <startLocation>
+            <lat>37.385348</lat>
+            <lon>-122.084051</lon>
+        </startLocation>
+        <endLocation>
+            <lat>37.385348</lat>
+            <lon>-122.084051</lon>
+        </endLocation>
+        <distance>10.2 km</distance>
+    </DrivingTask>
+
+    <ActionTask ref="take_picture_at_tree_0">
+        <actionType>TakePicture</actionType>
+        <targetLocation>
+            <lat>37.385348</lat>
+            <lon>-122.084051</lon>
+        </targetLocation>
+    </ActionTask>
+
+    <CompositeTaskInformation>
+        <taskDescription>Drive to tree 1 and take co2 reading</taskDescription>
+        <DrivingTask ref="drive_to_tree_1">
+            <startLocation>
+                <lat>37.385348</lat>
+                <lon>-122.084051</lon>
+            </startLocation>
+            <endLocation>
+                <lat>37.385348</lat>
+                <lon>-122.084051</lon>
+            </endLocation>
+            <distance>10.3 km</distance>
+        </DrivingTask>
+
+        <ActionTask ref="take_co2_reading_at_tree_1">
+            <actionType>Co2Reading</actionType>
+            <targetLocation>
+                <lat>37.385348</lat>
+                <lon>-122.084051</lon>
+            </targetLocation>
+        </ActionTask>
+    </CompositeTaskInformation>
+
+    <DrivingTask ref="drive_to_tree_0_again">
+        <startLocation>
+            <lat>37.385348</lat>
+            <lon>-122.084051</lon>
+        </startLocation>
+        <endLocation>
+            <lat>37.385348</lat>
+            <lon>-122.084051</lon>
+        </endLocation>
+        <distance>10.3 km</distance>
+    </DrivingTask>
+
+    <ActionTask ref="take_co2_reading_at_tree_0_again">
+        <actionType>Co2Reading</actionType>
+        <targetLocation>
+            <lat>37.385348</lat>
+            <lon>-122.084051</lon>
+        </targetLocation>
+    </ActionTask>
+
+    <!-- Add a comment to display the total estimated haversine distance traveled -->
+    <Outcome>
+        <totalDistanceTraveled>30.5 km</totalDistanceTraveled>
+        <!-- The total estimated haversine distance was computed using the driving task distances -->
+    </Outcome>
+</missionPlan>

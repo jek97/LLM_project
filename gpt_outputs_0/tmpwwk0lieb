@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <CompositeTaskInformation>
+    <TaskDescription>
+      Select 5 pistachio trees in a row to visit and take a picture of 3 of them.
+      <OriginalTask>Farm Task: Select 5 pistachio trees in a row to visit and take a picture of 3 of them.</OriginalTask>
+    </TaskDescription>
+    <Tasks>
+      <Task id="1">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="1.1" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+        <Waypoint id="1.2" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+        <Waypoint id="1.3" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+        <Waypoint id="1.4" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+        <Waypoint id="1.5" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+        <Waypoint id="1.6" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+        <Instruction>Navigate to the second pistachio tree in the row.</Instruction>
+      </Task>
+      <Task id="2">
+        <TaskType>ImageCapture</TaskType>
+        <Waypoint id="2.1" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+        <Instruction>Take a picture of the next 3 pistachio trees in the row.</Instruction>
+      </Task>
+      <Task id="3">
+        <TaskType>Navigation</TaskType>
+        <Waypoint id="3.1" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+        <Waypoint id="3.2" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+        <Waypoint id="3.3" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+        <Waypoint id="3.4" latitude="37.36627570632085" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+        <Waypoint id="3.5" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+        <Waypoint id="3.6" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+        <Instruction>Navigate to the third pistachio tree in the row.</Instruction>
+      </Task>
+      <Task id="4">
+        <TaskType>ImageCapture</TaskType>
+        <Waypoint id="4.1" latitude="37.36627570632085" longitude="-120.42307272278255"/>
+        <Instruction>Take a picture of the final 3 pistachio trees in the row.</Instruction>
+      </Task>
+    </Tasks>
+  </CompositeTaskInformation>
+</MissionPlan>

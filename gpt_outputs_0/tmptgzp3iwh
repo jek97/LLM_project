@@ -1,0 +1,96 @@
+<Mission xmlns="mission_schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mission_schema.xsd">
+  <Header>
+    <Name>Orchard Photography Mission</Name>
+    <Author>Your Name Here</Author>
+    <CreatedDate>2023-03-27T15:46:02-05:00</CreatedDate>
+  </Header>
+
+  <MissionInformation>
+    <!-- Original question -->
+    <TaskDescription>Take a picture of the northernmost tree. Drive to the middle of the orchard and take another. Drive to the eastern end and take pictures of three trees.</TaskDescription>
+  </MissionInformation>
+
+  <CompositeTaskInformation>
+    <!-- Task 1: Drive to northernmost tree, take picture -->
+    <Task taskId="1">
+      <Action>
+        <Movement type="Drive" distance="0.0" angle="0.0"/>
+      </Action>
+      <ImageTaking positionRef="P0_1" treeTypeRef="TreeType-NorthernMost"/>
+    </Task>
+
+    <!-- Task 2: Drive to the center, take picture -->
+    <Task taskId="2">
+      <Action>
+        <Movement type="Drive" distance="X_0_to_Center" angle="0.0"/>
+      </Action>
+      <ImageTaking positionRef="P1_1" treeTypeRef="TreeType-Center"/>
+    </Task>
+
+    <!-- Task 3: Drive to the eastern end, take pictures of three trees -->
+    <Task taskId="3">
+      <Action>
+        <Movement type="Drive" distance="Y_Center_to_EasternEnd" angle="90.0"/>
+      </Action>
+      <ImageTaking positionRef="P2_1, P2_2, P2_3" treeTypeRef="TreeType-EasternEnd"/>
+    </Task>
+  </CompositeTaskInformation>
+
+  <!-- GeoJSON tree data -->
+  <GPS coordinateSystem="WGS84">
+    <!-- NorthernMost Tree -->
+    <Point latitude="NORTHERNMOST_LATITUDE" longitude="NORTHERNMOST_LONGITUDE"/>
+    <!-- Center Tree -->
+    <Point latitude="CENTER_LATITUDE" longitude="CENTER_LONGITUDE"/>
+    <!-- EasternEnd Trees -->
+    <MultiPoint>
+      <Point latitude="EASTERNEND_TREE1_LATITUDE" longitude="EASTERNEND_TREE1_LONGITUDE"/>
+      <Point latitude="EASTERNEND_TREE2_LATITUDE" longitude="EASTERNEND_TREE2_LONGITUDE"/>
+      <Point latitude="EASTERNEND_TREE3_LATITUDE" longitude="EASTERNEND_TREE3_LONGITUDE"/>
+    </MultiPoint>
+  </GPS>
+
+  <!-- Tree Types -->
+  <TreeTypes>
+    <TreeType id="TreeType-NorthernMost">
+      <Name>Northernmost Tree</Name>
+    </TreeType>
+    <TreeType id="TreeType-Center">
+      <Name>Center Tree</Name>
+    </TreeType>
+    <TreeType id="TreeType-EasternEnd">
+      <Name>Eastern End Trees</Name>
+    </TreeType>
+  </TreeTypes>
+
+  <!-- Actions -->
+  <Actions>
+    <Action id="Movement">
+      <Name>Movement</Name>
+      <Description>Moves the robot to a specified GPS point.</Description>
+      <Input>distance, angle</Input>
+      <Output>currentPosition</Output>
+    </Action>
+    <Action id="ImageTaking">
+      <Name>ImageTaking</Name>
+      <Description>Takes an image of the tree at the specified GPS location.</Description>
+      <Input>position, treeType</Input>
+      <Output>image</Output>
+    </Action>
+  </Actions>
+
+  <!-- Outputs -->
+  <Outputs>
+    <Output id="1">
+      <Name>Current Position</Name>
+      <Description>The current position of the robot.</Description>
+    </Output>
+    <Output id="2">
+      <Name>Image</Name>
+      <Description>An image of the tree taken by the robot.</Description>
+    </Output>
+  </Outputs>
+
+  <!-- Outcome -->
+  <Outcome>The mission was successfully completed. The estimated total distance traveled from start to end is significant but acceptable.</Outcome>
+</Mission>

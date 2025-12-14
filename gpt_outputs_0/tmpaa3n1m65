@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:Mission xmlns:ns="http://example.com/mission.xsd"
+             xsi:schemaLocation="http://example.com/mission.xsd http://example.com/mission.xsd">
+  <!-- Mission information -->
+</ns:Mission>

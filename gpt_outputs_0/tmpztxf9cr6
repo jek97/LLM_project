@@ -1,0 +1,5 @@
+<task>
+    <!-- Some content -->
+    <anotherElement/>
+    <!-- This should be closed first -->
+</task>

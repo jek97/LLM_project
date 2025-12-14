@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="missionplan.xsd">
+    <CompositeTaskInformation>
+        <!-- Original question -->
+        <TaskDescription>From the starting point, find a tree somewhere in the middle of the orchard and measure cos. If low reading, go to and take 2 pictures of nearby trees. From there, measure another tree as far away as possible for co2 and repeat the same process. Once done, take a temperature reading at any one of the northernmost trees. Finally, return to end.</TaskDescription>
+        <SubTasks>
+            <!-- ... -->
+        </SubTasks>
+    </CompositeTaskInformation>
+    <!-- ... -->
+</MissionPlan>

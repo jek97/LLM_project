@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rmp:RoboticMissionPlan xmlns:rmp="http://www.example.com/RoboticMissionPlan">
+    <rmp:Header>
+        <rmp:StartTime>YYYY-MM-DDThh:mm:ss</rmp:StartTime>
+        <rmp:EndTime>YYYY-MM-DDThh:mm:ss</rmp:EndTime>
+    </rmp:Header>
+    <rmp:CompositeTaskInformation>
+        <!-- ... (the rest of the XML remains the same) -->
+    </rmp:CompositeTaskInformation>
+</rmp:RoboticMissionPlan>

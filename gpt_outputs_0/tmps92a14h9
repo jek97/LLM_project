@@ -1,0 +1,44 @@
+<missionplan xmlns="http://example.com/missionplan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.com/missionplan http://example.com/missionplan.xsd">
+    <CompositeTaskInformation>
+        <TaskDescription>Generate mission plan based on GeoJSON provided</TaskDescription>
+        <Tasks>
+            <DriveToLocation>
+                <StartLocation>
+                    <Latitude>37.7749</Latitude>
+                    <Longitude>-122.4194</Longitude>
+                </StartLocation>
+                <EndLocation>
+                    <Latitude>37.7750</Latitude>
+                    <Longitude>-122.4189</Longitude>
+                </EndLocation>
+            </DriveToLocation>
+            <TakePicture>
+                <TreeType>Northern most tree</TreeType>
+            </TakePicture>
+            <DriveToLocation>
+                <StartLocation>
+                    <Latitude>37.7750</Latitude>
+                    <Longitude>-122.4189</Longitude>
+                </StartLocation>
+                <EndLocation>
+                    <Latitude>37.7750</Latitude>
+                    <Longitude>-122.4149</Longitudon>
+                </EndLocation>
+            </DriveToLocation>
+            <TakePicture>
+                <TreeType>Two trees next to each other in the eastern end</TreeType>
+            </TakePicture>
+            <DriveToLocation>
+                <StartLocation>
+                    <Latitude>37.7750</Latitude>
+                    <Longitude>-122.4149</Longitudon>
+                </StartLocation>
+                <EndLocation>
+                    <Latitude>37.7749</Latitude>
+                    <Longitude>-122.4194</Longitude>
+                </EndLocation>
+            </DriveToLocation>
+        </Tasks>
+    </CompositeTaskInformation>
+    <Outcome>Mission completed successfully. Total distance traveled was significant.</Outcome>
+</missionplan>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://example.org/missionplanner"
+             xsi:schemaLocation="http://example.org/missionplanner MissionPlan_v1.0.xsd">
+    <Version>1.0</Version>
+    <!-- Include the original question in TaskDescription -->
+    <MissionDescription xsi:type="string">From the starting point, navigate to TreeA (coordinates: [longitude, latitude]), measure cos and CO2. From there, drive to TreeB (coordinates: [longitude, latitude]), take two pictures, and measure cos again. Then, navigate to TreeC (coordinates: [longitude, latitude]), take a temperature reading, and return to the starting point.</MissionDescription>
+    <TaskInformation>
+        <CompositeTaskInformation>
+            <!-- Include original question in TaskDescription element -->
+            <TaskDescription xsi:type="string">From the starting point, navigate to TreeA (coordinates: [longitude, latitude]), measure cos and CO2. From there, drive to TreeB (coordinates: [longitude, latitude]), take two pictures, and measure cos again. Then, navigate to TreeC (coordinates: [longitude, latitude]), take a temperature reading, and return to the starting point.</TaskDescription>
+            <SubTasks>
+                <!-- Include subtasks here -->
+                <SubTaskInformation>
+                    <Action xsi:type="string">Navigate</Action>
+                    <Goal xsi:type="GeoPoint">[longitude, latitude]</Goal>
+                    <Parameters>
+                        <!-- Include any additional parameters here -->
+                    </Parameters>
+                </SubTaskInformation>
+                <SubTaskInformation>
+                    <Action xsi:type="string">MeasureCos</Action>
+                    <Goal xsi:type="GeoPoint">[longitude, latitude]</Goal>
+                    <Parameters>
+                        <!-- Include any additional parameters here -->
+                    </Parameters>
+                </SubTaskInformation>
+                <SubTaskInformation>
+                    <Action xsi:type="string">MeasureCo2</Action>
+                    <Goal xsi:type="GeoPoint">[longitude, latitude]</Goal>
+                    <Parameters>
+                        <!-- Include any additional parameters here -->
+                    </Parameters>
+                </SubTaskInformation>
+                <SubTaskInformation>
+                    <Action xsi:type="string">TakePictures</Action>
+                    <Goal xsi:type="GeoPoint">[longitude, latitude]</Goal>
+                    <Parameters>
+                        <!-- Include any additional parameters here -->
+                    </Parameters>
+                </SubTaskInformation>
+                <SubTaskInformation>
+                    <Action xsi:type="string">MeasureCos</Action>
+                    <Goal xsi:type="GeoPoint">[longitude, latitude]</Goal>
+                    <Parameters>
+                        <!-- Include any additional parameters here -->
+                    </Parameters>
+                </SubTaskInformation>
+                <SubTaskInformation>
+                    <Action xsi:type="string">TakeTemperatureReading</Action>
+                    <Goal xsi:type="GeoPoint">[longitude, latitude]</Goal>
+                    <Parameters>
+                        <!-- Include any additional parameters here -->
+                    </Parameters>
+                </SubTaskInformation>
+            </SubTasks>
+        </CompositeTaskInformation>
+    </TaskInformation>
+    <!-- Add any other relevant information like tree types, GPS coordinates etc. in separate elements below -->
+</MissionPlan>

@@ -1,0 +1,23 @@
+<mission xmlns="http://example.com/MissionFormat">
+    <name>farm-trees-mission</name>
+    <type> photograph </type>
+    <description>Photograph trees at the four corners of the farm.</description>
+
+    <task list=" photograph-trees-at-corners">
+        <task id="1" type=" photograph-tree">
+            <tree id="19"></tree>
+        </task>
+
+        <task id="2" type=" photograph-tree">
+            <tree id="16"></tree>
+        </task>
+
+        <task id="3" type=" photographs-tree">
+            <tree id="5"></tree>
+        </task>
+
+        <task id="4" type=" photographs-tree">
+            <tree id="7"></tree>
+        </task>
+    </task list>
+</mission>

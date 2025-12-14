@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MissionPlan>
+  <TaskDescription>Drive to the first tree and take a picture</TaskDescription>
+  <DrivingCommand>
+    <StartPoint>
+      <Latitude>37.36635688574164</Latitude>
+      <Longitude>-120.42302289785604</Longitude>
+    </StartPoint>
+    <EndPoint>
+      <Coordinate x="-120.4230350832969" y="37.36635688574164"/>
+    </EndPoint>
+  </DrivingCommand>
+  <TaskDescription>Drive to the second tree and take a picture</TaskDescription>
+  <DrivingCommand>
+    <StartPoint>
+      <Latitude>37.36631509745154</Latitude>
+      <Longitude>-120.42309252722157</Longitude>
+    </StartPoint>
+    <EndPoint>
+      <Coordinate x="-120.4230350832969" y="37.36635688574164"/>
+    </EndPoint>
+  </DrivingCommand>
+</MissionPlan>
